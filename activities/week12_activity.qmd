@@ -1,0 +1,500 @@
+---
+title: "Week 12 In-Class Activity"
+---
+
+# Week 12 — In-Class Timed Activity
+
+# ECN 4199 — Industrial Data Analytics
+
+---
+
+# Activity Information
+
+| Item | Details |
+|---|---|
+| Week | Week 12 |
+| Topic | NLP, Text Analytics, and Generative AI |
+| Marks | 5 Marks |
+| Duration | 1 Hour |
+| Attempts | One Attempt Only |
+| Access | Lecturer Passcode Required |
+
+---
+
+# Instructions
+
+1. Open the Week 12 live notebook.
+2. Save a copy to your Google Drive.
+3. Complete all required tasks.
+4. Answer all interpretation questions.
+5. Submit before the activity closes.
+
+---
+
+# Important Reminder
+
+This activity tests:
+
+- NLP intuition
+- text preprocessing
+- tokenization
+- sentiment analysis
+- generative AI understanding
+- AI hallucinations
+- critical interpretation
+
+This week is NOT about blindly trusting AI systems.
+
+This week is about critically using AI tools responsibly.
+
+---
+
+# Task 1 — Understanding Text as Data
+
+## Objective
+
+Understand structured vs unstructured data.
+
+---
+
+## Questions
+
+### Question 1
+
+What is the difference between:
+
+- structured data
+- unstructured data
+
+?
+
+---
+
+### Question 2
+
+Why is text data harder to analyze than numerical data?
+
+---
+
+### Question 3
+
+Give one example of text data used in economics.
+
+---
+
+# Task 2 — Load and Clean Text Data
+
+## Objective
+
+Prepare text for analysis.
+
+---
+
+## Instructions
+
+Load dataset and clean text.
+
+---
+
+## Expected Structure
+
+```python
+import pandas as pd
+import re
+
+data = pd.read_csv("economic_news.csv")
+
+data["Clean_Text"] = data["Article"].str.lower()
+
+data["Clean_Text"] = data["Clean_Text"].apply(
+    lambda x: re.sub(r"[^\w\s]", "", x)
+)
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Why do analysts convert text to lowercase?
+
+---
+
+### Question 2
+
+Why is punctuation often removed?
+
+---
+
+### Question 3
+
+Can excessive cleaning remove meaningful information?
+
+Explain briefly.
+
+---
+
+# Task 3 — Tokenization
+
+## Objective
+
+Split text into tokens.
+
+---
+
+## Instructions
+
+Tokenize first article.
+
+---
+
+## Example Structure
+
+```python
+tokens = data["Clean_Text"][0].split()
+
+tokens
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What is tokenization?
+
+---
+
+### Question 2
+
+Why do NLP systems operate on tokens instead of entire paragraphs?
+
+---
+
+### Question 3
+
+Can tokenization affect interpretation quality?
+
+---
+
+# Task 4 — Word Frequency Analysis
+
+## Objective
+
+Identify dominant themes.
+
+---
+
+## Instructions
+
+Count most frequent words.
+
+---
+
+## Example Structure
+
+```python
+from collections import Counter
+
+Counter(tokens).most_common(10)
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Which words appear most frequently?
+
+---
+
+### Question 2
+
+Do frequent words necessarily imply importance?
+
+---
+
+### Question 3
+
+What economic themes appear dominant?
+
+---
+
+# Task 5 — Sentiment Analysis
+
+## Objective
+
+Estimate sentiment in economic text.
+
+---
+
+## Instructions
+
+Perform sentiment analysis.
+
+---
+
+## Example Structure
+
+```python
+from textblob import TextBlob
+
+blob = TextBlob(data["Clean_Text"][0])
+
+blob.sentiment
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Does the article appear positive or negative?
+
+---
+
+### Question 2
+
+Can sentiment analysis misunderstand context or sarcasm?
+
+---
+
+### Question 3
+
+Why should economists be cautious when interpreting automated sentiment scores?
+
+---
+
+# Task 6 — Generative AI and Prompting
+
+## Objective
+
+Understand AI prompting and hallucinations.
+
+---
+
+## Instructions
+
+Try two prompts.
+
+---
+
+## Weak Prompt
+
+```text
+Explain inflation.
+```
+
+---
+
+## Better Prompt
+
+```text
+Explain inflation in Sri Lanka after 2021 using simple language for undergraduate economics students.
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Which prompt produced better output?
+
+---
+
+### Question 2
+
+Why does prompt quality matter?
+
+---
+
+### Question 3
+
+Can generative AI produce false information confidently?
+
+---
+
+# Task 7 — AI Hallucinations and Bias
+
+## Objective
+
+Critically evaluate AI systems.
+
+---
+
+## Questions
+
+### Question 1
+
+What is an AI hallucination?
+
+---
+
+### Question 2
+
+Why can AI-generated content appear convincing even when incorrect?
+
+---
+
+### Question 3
+
+Why must economists verify AI-generated outputs carefully?
+
+---
+
+# Reflection Question
+
+Write a short paragraph answering:
+
+```text
+Why should economists critically evaluate AI-generated outputs instead of treating them as objective truth?
+```
+
+Your answer should include:
+
+- hallucinations
+- bias
+- verification
+- misinformation
+- ethical concerns
+
+---
+
+# Mini Quiz
+
+## Question 1
+
+What does NLP stand for?
+
+A. Neural Logic Processing  
+B. Natural Language Processing  
+C. Numerical Learning Prediction  
+D. Neural Linguistic Programming  
+
+---
+
+## Question 2
+
+What is tokenization?
+
+A. Creating graphs  
+B. Splitting text into units  
+C. Forecasting inflation  
+D. Installing libraries  
+
+---
+
+## Question 3
+
+Can generative AI hallucinate?
+
+A. Yes  
+B. No  
+
+---
+
+## Question 4
+
+Should AI-generated outputs always be verified?
+
+A. Yes  
+B. No  
+
+---
+
+# Submission Instructions
+
+Before submitting:
+
+1. Save notebook properly.
+2. Rename notebook using:
+
+```text
+Week12_IndexNumber_Name.ipynb
+```
+
+Example:
+
+```text
+Week12_2024BA12345_Perera.ipynb
+```
+
+3. Set notebook sharing to:
+
+```text
+Anyone with the link → Viewer
+```
+
+---
+
+# Submission Link
+
+[Submit Week 12 Activity](PASTE_WEEK12_SUBMISSION_LINK_HERE)
+
+---
+
+# Passcode Access
+
+The lecturer will provide the passcode during the lecture.
+
+Students without the correct passcode cannot access the submission form.
+
+---
+
+# Common Errors
+
+## Problem 1 — Blind Trust in AI Outputs
+
+Generative AI may confidently produce false information.
+
+---
+
+## Problem 2 — Over-Cleaning Text
+
+Excessive preprocessing may remove meaningful context.
+
+---
+
+## Problem 3 — Misinterpreting Sentiment Scores
+
+Sentiment models often fail with:
+
+- sarcasm
+- nuanced language
+- cultural context
+
+---
+
+## Problem 4 — Treating Word Frequency as Meaning
+
+Frequent words do NOT automatically imply importance.
+
+---
+
+## Problem 5 — Ignoring Ethical Concerns
+
+AI systems affect:
+
+- misinformation
+- labor markets
+- inequality
+- academic integrity
+
+---
+
+# Academic Integrity
+
+Students may use lecture materials and course notes.
+
+However:
+
+- copied answers are not allowed
+- copied notebooks are not allowed
+- AI-generated answers without understanding are unacceptable
+
+Students are responsible for all submitted work.

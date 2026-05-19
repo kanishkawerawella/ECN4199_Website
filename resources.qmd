@@ -1,0 +1,315 @@
+---
+title: "Resources"
+---
+
+# ECN 4199 — Learning Resources
+
+This page contains selected resources to support **ECN 4199: Industrial Data Analytics**.
+
+Use these resources when you need extra help with:
+
+- Python
+- Google Colab
+- pandas
+- data visualization
+- machine learning
+- forecasting
+- NLP and generative AI
+
+Do not try to watch everything.
+
+Use resources strategically.
+
+---
+
+# 1. How to Use This Page
+
+Each resource is linked to a specific part of the course.
+
+| Course Area | Use These Resources When |
+|---|---|
+| Google Colab | You are struggling to open or run notebooks |
+| Python Basics | You are confused about variables, lists, loops, or functions |
+| pandas | You are working with datasets |
+| Visualization | You are creating graphs |
+| Machine Learning | You are learning prediction, classification, or clustering |
+| Forecasting | You are working with time-series data |
+| NLP and AI | You are working with text and generative AI |
+
+---
+
+# 2. Google Colab
+
+Google Colab is the main coding environment used in the first part of this course.
+
+## Recommended Video
+
+[Google Colab Beginner Tutorial](https://www.youtube.com/watch?v=JJYZ3OE_lGo)
+
+Use this if you are confused about:
+
+- opening notebooks
+- running code cells
+- saving notebooks
+- using Colab in the browser
+
+## Alternative Beginner Tutorial
+
+[Getting Started with Python in Google Colab](https://www.youtube.com/watch?v=jZAhmF30S4M)
+
+Use this if you want a newer beginner-friendly introduction.
+
+---
+
+# 3. Python Fundamentals
+
+Python is the core programming language used in this course.
+
+## Recommended Full Beginner Course
+
+[Learn Python — Full Course for Beginners](https://www.youtube.com/watch?v=rfscVS0vtbw)
+
+Use this for:
+
+- variables
+- data types
+- lists
+- loops
+- functions
+- beginner syntax
+
+## Python for Data Science
+
+[Python for Data Science — Course for Beginners](https://www.youtube.com/watch?v=LHBE6Q9XlzI)
+
+Use this when you want a broader introduction to Python for data analysis.
+
+---
+
+# 4. pandas for Data Handling
+
+pandas is the main Python library for working with datasets.
+
+## Recommended Playlist
+
+[Corey Schafer — Pandas Tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTsWmV9i9c58mdDCSskIFdDS)
+
+Use this for:
+
+- importing datasets
+- DataFrames
+- selecting columns
+- filtering rows
+- cleaning data
+- handling missing values
+
+## Specific Data Cleaning Video
+
+[Python Pandas Tutorial — Cleaning Data](https://www.youtube.com/watch?v=KdmPHEnPJPs)
+
+Use this for Week 4.
+
+---
+
+# 5. Data Visualization
+
+Visualization is essential for understanding and communicating economic patterns.
+
+## Matplotlib Playlist
+
+[Corey Schafer — Matplotlib Tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_)
+
+Use this for:
+
+- line graphs
+- bar charts
+- scatter plots
+- labels
+- figure customization
+
+## Full Matplotlib Tutorial
+
+[Matplotlib Full Course](https://www.youtube.com/watch?v=wB9C0Mz9gSo)
+
+Use this if you want a longer explanation.
+
+---
+
+# 6. Machine Learning Concepts
+
+Machine learning is introduced from Week 8 onward.
+
+## Recommended Conceptual Channel
+
+[StatQuest with Josh Starmer](https://www.youtube.com/c/joshstarmer)
+
+Use this for simple explanations of:
+
+- regression
+- logistic regression
+- decision trees
+- random forests
+- PCA
+- K-means clustering
+
+## StatQuest Machine Learning Playlist
+
+[StatQuest Machine Learning Playlist](https://www.youtube.com/playlist?list=PLblh5JKOoLUIcdlgu78MnlATeyx4cEVeR)
+
+Use this when you need conceptual clarity before coding.
+
+---
+
+# 7. scikit-learn
+
+scikit-learn is used for machine learning models.
+
+## Full Practical Course
+
+[Machine Learning with Python and Scikit-Learn](https://www.youtube.com/watch?v=hDKCxebp88A)
+
+Use this for:
+
+- train/test split
+- linear regression
+- classification
+- model evaluation
+- machine learning workflows
+
+---
+
+# 8. Classification, Clustering, and PCA
+
+These topics appear in Weeks 9 and 10.
+
+## StatQuest Topics
+
+Use StatQuest for:
+
+- logistic regression
+- decision trees
+- random forests
+- K-means clustering
+- PCA
+
+[StatQuest Video Index](https://statquest.org/video-index/)
+
+This is useful when you need a specific topic quickly.
+
+---
+
+# 9. Time Series Forecasting
+
+Forecasting is covered in Week 11.
+
+## Beginner Time Series Forecasting Course
+
+[Time Series Forecasting in Python — Tutorial for Beginners](https://www.youtube.com/watch?v=fxx_E0ojKrc)
+
+Use this for:
+
+- time series data
+- baseline forecasts
+- ARIMA intuition
+- forecasting workflow
+
+## Written Companion Resource
+
+[Learn Time Series Forecasting in Python](https://www.freecodecamp.org/news/learn-time-series-forecasting-in-python/)
+
+Use this if you prefer a written explanation.
+
+---
+
+# 10. NLP and Generative AI
+
+Week 12 introduces text analytics and generative AI.
+
+## Suggested Search Topics
+
+Use these search phrases carefully:
+
+```text
+Python NLP beginner tutorial
+TextBlob sentiment analysis tutorial
+Natural Language Processing for beginners
+Prompt engineering for beginners
+```
+
+Important:
+
+Do not blindly trust AI-generated explanations.
+
+Always verify:
+
+- facts
+- code
+- citations
+- economic interpretation
+
+---
+
+# 11. Official Documentation
+
+Official documentation is useful when you want precise syntax.
+
+| Tool | Documentation |
+|---|---|
+| Python | [Python Documentation](https://docs.python.org/3/) |
+| pandas | [pandas Documentation](https://pandas.pydata.org/docs/) |
+| matplotlib | [Matplotlib Documentation](https://matplotlib.org/stable/) |
+| Plotly | [Plotly Python Documentation](https://plotly.com/python/) |
+| scikit-learn | [scikit-learn Documentation](https://scikit-learn.org/stable/) |
+| statsmodels | [statsmodels Documentation](https://www.statsmodels.org/stable/index.html) |
+| Google Colab | [Google Colab FAQ](https://research.google.com/colaboratory/faq.html) |
+
+---
+
+# 12. Recommended Learning Strategy
+
+Do not watch resources passively.
+
+For every video:
+
+1. Open your notebook
+2. Type the code yourself
+3. Change the numbers
+4. Break the code intentionally
+5. Fix the error
+6. Write one economic interpretation
+
+Passive watching does not build skill.
+
+---
+
+# 13. Minimum Resource Path
+
+If you are falling behind, follow this minimum path:
+
+| Week | Resource |
+|---|---|
+| Week 1–2 | Google Colab tutorial |
+| Week 3 | Python beginner course |
+| Week 4 | pandas playlist |
+| Week 5–6 | Matplotlib and Plotly documentation |
+| Week 7–10 | StatQuest |
+| Week 11 | Time series forecasting tutorial |
+| Week 12 | NLP + AI guide |
+
+---
+
+# 14. Important Warning
+
+Do not confuse watching tutorials with learning.
+
+You learn by:
+
+- writing code
+- making mistakes
+- debugging
+- interpreting results
+- explaining findings in economic language
+
+The goal of this course is not to become a YouTube learner.
+
+The goal is to become an economist who can use computational tools critically.

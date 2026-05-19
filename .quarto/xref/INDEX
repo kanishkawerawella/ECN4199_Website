@@ -1,0 +1,110 @@
+{
+  "index.qmd": {
+    "index.html": "f95ead60"
+  },
+  "about.qmd": {
+    "about.html": "ce08e0f7"
+  },
+  "lectures/week1.qmd": {
+    "week1.html": "6ef030d1"
+  },
+  "notebooks.qmd": {
+    "notebooks.html": "97a8ffb8"
+  },
+  "roadmap.qmd": {
+    "roadmap.html": "827ed41e"
+  },
+  "datasets.qmd": {
+    "datasets.html": "a8c4d898"
+  },
+  "setup.qmd": {
+    "setup.html": "2d25505d"
+  },
+  "submissions.qmd": {
+    "submissions.html": "621ccc41"
+  },
+  "lectures/week2.qmd": {
+    "week2.html": "3b6e2b1e"
+  },
+  "lectures/week3.qmd": {
+    "week3.html": "3b1af2b7"
+  },
+  "lectures/week4.qmd": {
+    "week4.html": "bf2ddb63"
+  },
+  "lectures/week8.qmd": {
+    "week8.html": "bf25bb52"
+  },
+  "lectures/week9.qmd": {
+    "week9.html": "af2d4f7f"
+  },
+  "lectures/week7.qmd": {
+    "week7.html": "167e20f5"
+  },
+  "lectures/week6.qmd": {
+    "week6.html": "182abfcf"
+  },
+  "lectures/week5.qmd": {
+    "week5.html": "024cd6e4"
+  },
+  "lectures/week12.qmd": {
+    "week12.html": "e5c8fa4f"
+  },
+  "lectures/week13.qmd": {
+    "week13.html": "7b3692d5"
+  },
+  "lectures/week11.qmd": {
+    "week11.html": "55ae71fe"
+  },
+  "lectures/week10.qmd": {
+    "week10.html": "9348f2c5"
+  },
+  "resources.qmd": {
+    "resources.html": "9adc4aaa"
+  },
+  "assignments.qmd": {
+    "assignments.html": "f2840365"
+  },
+  "project.qmd": {
+    "project.html": "3ea6c961"
+  },
+  "activities/week1_activity.qmd": {
+    "week1_activity.html": "8ecf55b6"
+  },
+  "activities/week3_activity.qmd": {
+    "week3_activity.html": "8bb831fa"
+  },
+  "activities/week4_activity.qmd": {
+    "week4_activity.html": "49d12473"
+  },
+  "activities/week5_activity.qmd": {
+    "week5_activity.html": "fab5e98f"
+  },
+  "activities/week2_activity.qmd": {
+    "week2_activity.html": "5879c56d"
+  },
+  "activities/week12_activity.qmd": {
+    "week12_activity.html": "30435b45"
+  },
+  "activities/week8_activity.qmd": {
+    "week8_activity.html": "60f0089b"
+  },
+  "activities/week9_activity.qmd": {
+    "week9_activity.html": "66718398"
+  },
+  "activities/week13_activity.qmd": {
+    "week13_activity.html": "cfeeda60"
+  },
+  "activities/week7_activity.qmd": {
+    "week7_activity.html": "ac46fa5d"
+  },
+  "activities/week6_activity.qmd": {
+    "week6_activity.html": "f1fef250"
+  },
+  "activities/week11_activity.qmd": {
+    "week11_activity.html": "687bdc03"
+  },
+  "activities/week10_activity.qmd": {
+    "week10_activity.html": "ae989135"
+  }
+}

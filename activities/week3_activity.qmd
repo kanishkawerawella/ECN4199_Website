@@ -1,0 +1,421 @@
+---
+title: "Week 3 In-Class Activity"
+---
+
+# Week 3 — In-Class Timed Activity
+
+# ECN 4199 — Industrial Data Analytics
+
+---
+
+# Activity Information
+
+| Item | Details |
+|---|---|
+| Week | Week 3 |
+| Topic | Python Fundamentals and Computational Thinking |
+| Marks | 5 Marks |
+| Duration | 1 Hour |
+| Attempts | One Attempt Only |
+| Access | Lecturer Passcode Required |
+
+---
+
+# Instructions
+
+1. Open the Week 3 live notebook.
+2. Save a copy to your Google Drive.
+3. Complete all required tasks.
+4. Answer all interpretation questions.
+5. Submit before the activity closes.
+
+---
+
+# Important Reminder
+
+This activity tests:
+
+- variables
+- data types
+- lists
+- conditional logic
+- loops
+- functions
+- computational reasoning
+
+The goal is NOT memorisation.
+
+The goal is to think computationally.
+
+---
+
+# Task 1 — Variables and Data Types
+
+## Objective
+
+Create and understand variables.
+
+---
+
+## Instructions
+
+Create variables for:
+
+- inflation
+- GDP growth
+- exchange rate
+- country name
+
+Use appropriate data types.
+
+---
+
+## Example Structure
+
+```python
+inflation = 46.4
+country = "Sri Lanka"
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What is the difference between:
+
+```text
+integer
+```
+
+and
+
+```text
+float
+```
+
+?
+
+---
+
+### Question 2
+
+Why are variables useful in economic analysis?
+
+---
+
+# Task 2 — Lists and Economic Data
+
+## Objective
+
+Store multiple observations using lists.
+
+---
+
+## Instructions
+
+Create a list containing GDP growth rates for four years.
+
+Example:
+
+```python
+gdp_growth = [3.5, 5.2, -7.8, 2.1]
+```
+
+---
+
+## Tasks
+
+Calculate:
+
+- average GDP growth
+- maximum GDP growth
+- minimum GDP growth
+
+---
+
+## Questions
+
+### Question 1
+
+Which year appears to represent a recession?
+
+### Question 2
+
+Why are lists useful for economists?
+
+---
+
+# Task 3 — Conditional Logic
+
+## Objective
+
+Use Python to automate classification.
+
+---
+
+## Instructions
+
+Write conditional logic using the following rules:
+
+| Inflation Rate | Classification |
+|---|---|
+| Below 5 | Low inflation |
+| Between 5 and 15 | Moderate inflation |
+| Above 15 | High inflation |
+
+---
+
+## Example Structure
+
+```python
+inflation = 12
+```
+
+---
+
+## Question
+
+Why is conditional logic important in economics and policy analysis?
+
+---
+
+# Task 4 — Loops and Automation
+
+## Objective
+
+Automate repetitive tasks.
+
+---
+
+## Instructions
+
+Create a loop that checks each GDP growth value.
+
+Rules:
+
+- positive value → “Positive growth”
+- negative value → “Recession year”
+
+---
+
+## Example Structure
+
+```python
+for growth in gdp_growth:
+```
+
+---
+
+## Question
+
+Why are loops important when working with large datasets?
+
+---
+
+# Task 5 — Functions and Reusable Code
+
+## Objective
+
+Create reusable analytical tools.
+
+---
+
+## Instructions
+
+Create a function that calculates percentage change.
+
+Formula:
+
+```text
+[(new - old) / old] × 100
+```
+
+---
+
+## Example Structure
+
+```python
+def growth_rate(old, new):
+```
+
+---
+
+## Apply Function To
+
+- GDP
+- CPI
+- exchange rate
+
+---
+
+## Question
+
+Why do professional programmers use functions instead of rewriting code repeatedly?
+
+---
+
+# Reflection Question
+
+Write a short paragraph answering:
+
+```text
+Why should economists understand programming logic even when AI tools can generate code automatically?
+```
+
+Your answer should include:
+
+- verification
+- interpretation
+- logical reasoning
+- limitations of AI-generated code
+
+---
+
+# Mini Quiz
+
+## Question 1
+
+Which data type stores decimal values?
+
+A. Integer  
+B. Float  
+C. String  
+D. Boolean  
+
+---
+
+## Question 2
+
+What does a loop mainly do?
+
+A. Deletes variables  
+B. Repeats tasks  
+C. Creates graphs  
+D. Saves files  
+
+---
+
+## Question 3
+
+What does `len()` do?
+
+A. Creates variables  
+B. Measures internet speed  
+C. Counts items  
+D. Imports libraries  
+
+---
+
+## Question 4
+
+What is the purpose of a function?
+
+A. Repeat reusable logic  
+B. Delete datasets  
+C. Install Python  
+D. Upload files  
+
+---
+
+# Submission Instructions
+
+Before submitting:
+
+1. Save notebook properly.
+2. Rename notebook using:
+
+```text
+Week03_IndexNumber_Name.ipynb
+```
+
+Example:
+
+```text
+Week03_2024BA12345_Perera.ipynb
+```
+
+3. Set notebook sharing to:
+
+```text
+Anyone with the link → Viewer
+```
+
+---
+
+# Submission Link
+
+[Submit Week 3 Activity](PASTE_WEEK3_SUBMISSION_LINK_HERE)
+
+---
+
+# Passcode Access
+
+The lecturer will provide the passcode during the lecture.
+
+Students without the correct passcode cannot access the submission form.
+
+---
+
+# Common Errors
+
+## Problem 1 — Indentation Errors
+
+Wrong:
+
+```python
+if inflation > 10:
+print("High inflation")
+```
+
+Correct:
+
+```python
+if inflation > 10:
+    print("High inflation")
+```
+
+---
+
+## Problem 2 — Forgetting Colon
+
+Wrong:
+
+```python
+if inflation > 10
+```
+
+Correct:
+
+```python
+if inflation > 10:
+```
+
+---
+
+## Problem 3 — Confusing = and ==
+
+`=` assigns value.
+
+`==` checks equality.
+
+---
+
+## Problem 4 — Undefined Variables
+
+Using variables before creating them.
+
+---
+
+# Academic Integrity
+
+Students may use lecture materials and course notes.
+
+However:
+
+- copied answers are not allowed
+- copied notebooks are not allowed
+- AI-generated answers without understanding are unacceptable
+
+Students are responsible for all submitted work.

@@ -1,0 +1,549 @@
+---
+title: "Week 11 In-Class Activity"
+---
+
+# Week 11 — In-Class Timed Activity
+
+# ECN 4199 — Industrial Data Analytics
+
+---
+
+# Activity Information
+
+| Item | Details |
+|---|---|
+| Week | Week 11 |
+| Topic | Forecasting and Time Series Analytics |
+| Marks | 5 Marks |
+| Duration | 1 Hour |
+| Attempts | One Attempt Only |
+| Access | Lecturer Passcode Required |
+
+---
+
+# Instructions
+
+1. Open the Week 11 live notebook.
+2. Save a copy to your Google Drive.
+3. Complete all required tasks.
+4. Answer all interpretation questions.
+5. Submit before the activity closes.
+
+---
+
+# Important Reminder
+
+This activity tests:
+
+- time series thinking
+- forecasting intuition
+- moving averages
+- train/test forecasting logic
+- forecast evaluation
+- ARIMA intuition
+- interpretation of uncertainty
+
+This week is NOT about predicting the future perfectly.
+
+This week is about disciplined forecasting under uncertainty.
+
+---
+
+# Task 1 — Understanding Time Series Data
+
+## Objective
+
+Understand time series structure.
+
+---
+
+## Questions
+
+### Question 1
+
+What is the difference between:
+
+- cross-sectional data
+- time series data
+
+?
+
+---
+
+### Question 2
+
+Give one example of time series data in economics.
+
+---
+
+### Question 3
+
+Why does time ordering matter in forecasting?
+
+---
+
+# Task 2 — Load and Visualize Time Series Data
+
+## Objective
+
+Visualize inflation over time.
+
+---
+
+## Instructions
+
+Load the dataset and create line graph.
+
+---
+
+## Expected Structure
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = pd.read_csv("inflation_timeseries.csv")
+
+plt.figure(figsize=(10,5))
+
+plt.plot(data["Date"],
+         data["Inflation"])
+
+plt.title("Inflation Over Time")
+plt.xlabel("Date")
+plt.ylabel("Inflation")
+
+plt.show()
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Does the series show an upward or downward trend?
+
+---
+
+### Question 2
+
+Are there crisis periods or sharp spikes?
+
+---
+
+### Question 3
+
+Why is visualization important before forecasting?
+
+---
+
+# Task 3 — Create Moving Average
+
+## Objective
+
+Smooth short-run fluctuations.
+
+---
+
+## Instructions
+
+Create a 3-period moving average.
+
+---
+
+## Example Structure
+
+```python
+data["MA_3"] = data["Inflation"].rolling(window=3).mean()
+```
+
+---
+
+## Visualize Actual and Moving Average
+
+```python
+plt.plot(data["Inflation"],
+         label="Actual")
+
+plt.plot(data["MA_3"],
+         label="Moving Average")
+
+plt.legend()
+
+plt.show()
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What does the moving average do?
+
+---
+
+### Question 2
+
+Does smoothing help identify long-run trends?
+
+---
+
+### Question 3
+
+Can smoothing hide important crisis signals?
+
+Explain briefly.
+
+---
+
+# Task 4 — Train/Test Split for Forecasting
+
+## Objective
+
+Understand proper forecasting evaluation.
+
+---
+
+## Instructions
+
+Split dataset into:
+
+- training data
+- testing data
+
+---
+
+## Example Structure
+
+```python
+train = data.iloc[:-12]
+
+test = data.iloc[-12:]
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Why should forecasting models train on earlier periods only?
+
+---
+
+### Question 2
+
+Why is random train-test splitting dangerous for time series forecasting?
+
+---
+
+### Question 3
+
+Can future information influence past training?
+
+---
+
+# Task 5 — Estimate Forecasting Model
+
+## Objective
+
+Estimate simple ARIMA model.
+
+---
+
+## Instructions
+
+Estimate ARIMA forecasting model.
+
+---
+
+## Example Structure
+
+```python
+from statsmodels.tsa.arima.model import ARIMA
+
+model = ARIMA(train["Inflation"],
+              order=(1,1,1))
+
+model_fit = model.fit()
+```
+
+---
+
+## Generate Forecast
+
+```python
+forecast = model_fit.forecast(steps=12)
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What is forecasting trying to estimate?
+
+---
+
+### Question 2
+
+Does forecasting produce certainty?
+
+---
+
+### Question 3
+
+Why might forecasts fail during crises?
+
+---
+
+# Task 6 — Evaluate Forecast Accuracy
+
+## Objective
+
+Measure forecast error.
+
+---
+
+## Instructions
+
+Calculate Mean Absolute Error (MAE).
+
+---
+
+## Example Structure
+
+```python
+from sklearn.metrics import mean_absolute_error
+
+mean_absolute_error(test["Inflation"],
+                    forecast)
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What does forecast error measure?
+
+---
+
+### Question 2
+
+Does low error guarantee future forecasting success?
+
+---
+
+### Question 3
+
+Why should policymakers remain cautious even with historically accurate forecasts?
+
+---
+
+# Task 7 — Visualize Actual vs Forecast
+
+## Objective
+
+Compare predictions with reality.
+
+---
+
+## Instructions
+
+Create graph comparing:
+
+- actual inflation
+- forecast inflation
+
+---
+
+## Example Structure
+
+```python
+plt.figure(figsize=(10,5))
+
+plt.plot(test["Inflation"].values,
+         label="Actual")
+
+plt.plot(forecast.values,
+         label="Forecast")
+
+plt.legend()
+
+plt.show()
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Did the forecast capture the overall trend?
+
+---
+
+### Question 2
+
+Did the forecast miss shocks or turning points?
+
+---
+
+### Question 3
+
+Why is perfect forecasting impossible?
+
+---
+
+# Reflection Question
+
+Write a short paragraph answering:
+
+```text
+Why should economists remain cautious even when forecasting models appear highly accurate historically?
+```
+
+Your answer should include:
+
+- uncertainty
+- structural breaks
+- crises
+- limitations of historical data
+- false confidence
+
+---
+
+# Mini Quiz
+
+## Question 1
+
+What is forecasting?
+
+A. Discovering objective truth  
+B. Estimating future values  
+C. Deleting time series  
+D. Installing models  
+
+---
+
+## Question 2
+
+What does a moving average mainly do?
+
+A. Increases volatility  
+B. Smooths fluctuations  
+C. Deletes variables  
+D. Creates clusters  
+
+---
+
+## Question 3
+
+Should future data influence model training?
+
+A. Yes  
+B. No  
+
+---
+
+## Question 4
+
+Do forecasts produce certainty?
+
+A. Yes  
+B. No  
+
+---
+
+# Submission Instructions
+
+Before submitting:
+
+1. Save notebook properly.
+2. Rename notebook using:
+
+```text
+Week11_IndexNumber_Name.ipynb
+```
+
+Example:
+
+```text
+Week11_2024BA12345_Perera.ipynb
+```
+
+3. Set notebook sharing to:
+
+```text
+Anyone with the link → Viewer
+```
+
+---
+
+# Submission Link
+
+[Submit Week 11 Activity](PASTE_WEEK11_SUBMISSION_LINK_HERE)
+
+---
+
+# Passcode Access
+
+The lecturer will provide the passcode during the lecture.
+
+Students without the correct passcode cannot access the submission form.
+
+---
+
+# Common Errors
+
+## Problem 1 — Random Train-Test Splits
+
+Time series forecasting must preserve chronological order.
+
+---
+
+## Problem 2 — Blind Trust in Forecasts
+
+Forecasts are uncertain estimates, not certainty.
+
+---
+
+## Problem 3 — Ignoring Structural Breaks
+
+Forecasting models often fail during:
+
+- crises
+- wars
+- pandemics
+- policy regime changes
+
+---
+
+## Problem 4 — Overcomplicated Models
+
+Complex models may overfit historical patterns.
+
+---
+
+## Problem 5 — Misinterpreting Low Forecast Error
+
+Good historical performance does NOT guarantee future success.
+
+---
+
+# Academic Integrity
+
+Students may use lecture materials and course notes.
+
+However:
+
+- copied answers are not allowed
+- copied notebooks are not allowed
+- AI-generated answers without understanding are unacceptable
+
+Students are responsible for all submitted work.

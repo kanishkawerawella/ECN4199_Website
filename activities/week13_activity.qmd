@@ -1,0 +1,612 @@
+---
+title: "Week 13 In-Class Activity"
+---
+
+# Activity Information
+
+| Item | Details |
+|---|---|
+| Week | Week 13 |
+| Topic | Capstone Integration and End-to-End Analytics Workflows |
+| Marks | 5 Marks |
+| Duration | 1 Hour |
+| Attempts | One Attempt Only |
+| Access | Lecturer Passcode Required |
+
+---
+
+# Instructions
+
+1. Open the Week 13 live notebook.
+2. Save a copy to your Google Drive.
+3. Complete all required tasks.
+4. Answer all interpretation questions.
+5. Submit before the activity closes.
+
+---
+
+# Important Reminder
+
+This activity tests:
+
+- integrated analytical thinking
+- workflow design
+- problem formulation
+- data cleaning
+- visualization
+- model interpretation
+- AI-assisted workflows
+- reproducibility
+- ethical reasoning
+
+This final week is NOT about:
+
+```text
+running isolated code snippets
+```
+
+This week is about:
+
+```text
+thinking like a professional analyst
+```
+
+---
+
+# Task 1 — Formulating an Economic Question
+
+## Objective
+
+Develop a meaningful analytical question.
+
+---
+
+## Instructions
+
+Write one clear analytical question using economic or business data.
+
+---
+
+## Weak Example
+
+```text
+Use AI on data.
+```
+
+---
+
+## Better Example
+
+```text
+Can macroeconomic indicators help forecast inflation instability in Sri Lanka?
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Why is problem formulation important?
+
+---
+
+### Question 2
+
+Can sophisticated models rescue vague analytical questions?
+
+---
+
+### Question 3
+
+What makes an analytical question useful?
+
+---
+
+# Task 2 — Building an Analytics Workflow
+
+## Objective
+
+Understand the structure of analytical pipelines.
+
+---
+
+## Instructions
+
+Arrange the following stages in correct order:
+
+- visualization
+- data cleaning
+- model evaluation
+- problem formulation
+- modeling
+- communication
+
+---
+
+## Question
+
+Why can weak data cleaning damage the entire workflow?
+
+---
+
+# Task 3 — Load and Inspect Dataset
+
+## Objective
+
+Prepare dataset for integrated analysis.
+
+---
+
+## Instructions
+
+Load dataset and inspect structure.
+
+---
+
+## Expected Structure
+
+```python
+import pandas as pd
+
+data = pd.read_csv("macro_project_data.csv")
+
+data.head()
+
+data.info()
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Are there missing values?
+
+---
+
+### Question 2
+
+Which variables appear numerical?
+
+---
+
+### Question 3
+
+Why should analysts inspect data before modeling?
+
+---
+
+# Task 4 — Exploratory Visualization
+
+## Objective
+
+Explore relationships visually.
+
+---
+
+## Instructions
+
+Create scatter plot using:
+
+- Exchange Rate
+- Inflation
+
+---
+
+## Example Structure
+
+```python
+import matplotlib.pyplot as plt
+
+plt.scatter(data["Exchange_Rate"],
+            data["Inflation"])
+
+plt.xlabel("Exchange Rate")
+plt.ylabel("Inflation")
+
+plt.show()
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Do the variables appear related?
+
+---
+
+### Question 2
+
+Are there unusual observations?
+
+---
+
+### Question 3
+
+Why is visualization important before modeling?
+
+---
+
+# Task 5 — Build Predictive Model
+
+## Objective
+
+Estimate simple predictive system.
+
+---
+
+## Instructions
+
+Estimate regression model.
+
+---
+
+## Example Structure
+
+```python
+from sklearn.linear_model import LinearRegression
+
+X = data[["Exchange_Rate"]]
+
+y = data["Inflation"]
+
+model = LinearRegression()
+
+model.fit(X, y)
+```
+
+---
+
+## Generate Predictions
+
+```python
+predictions = model.predict(X)
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What relationship does the model estimate?
+
+---
+
+### Question 2
+
+Does prediction automatically imply causality?
+
+---
+
+### Question 3
+
+What factors besides exchange rate may affect inflation?
+
+---
+
+# Task 6 — Evaluate Model Performance
+
+## Objective
+
+Evaluate predictive quality critically.
+
+---
+
+## Instructions
+
+Calculate Mean Absolute Error.
+
+---
+
+## Example Structure
+
+```python
+from sklearn.metrics import mean_absolute_error
+
+mean_absolute_error(y,
+                    predictions)
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What does prediction error measure?
+
+---
+
+### Question 2
+
+Does low error guarantee reliable future performance?
+
+---
+
+### Question 3
+
+Why should policymakers remain cautious even with accurate models?
+
+---
+
+# Task 7 — AI-Assisted Workflow Reflection
+
+## Objective
+
+Critically evaluate AI-supported analytics.
+
+---
+
+## Questions
+
+### Question 1
+
+How can generative AI assist analysts?
+
+---
+
+### Question 2
+
+Can AI-generated outputs contain errors?
+
+---
+
+### Question 3
+
+Why must economists verify AI-generated analysis carefully?
+
+---
+
+# Task 8 — Reproducibility and Documentation
+
+## Objective
+
+Understand professional analytical standards.
+
+---
+
+## Questions
+
+### Question 1
+
+What does reproducibility mean?
+
+---
+
+### Question 2
+
+Why are comments and documentation important?
+
+---
+
+### Question 3
+
+Why is undocumented analysis difficult to trust?
+
+---
+
+# Task 9 — Ethics and Economic Analytics
+
+## Objective
+
+Reflect on ethical responsibility.
+
+---
+
+## Questions
+
+### Question 1
+
+Can analytics systems reinforce inequality?
+
+---
+
+### Question 2
+
+Can dashboards or AI systems mislead policymakers?
+
+---
+
+### Question 3
+
+Why does responsible analytics require ethical reasoning?
+
+---
+
+# Reflection Question
+
+Write a short paragraph answering:
+
+```text
+How can economists balance technological capability with critical judgment and ethical responsibility?
+```
+
+Your answer should include:
+
+- uncertainty
+- interpretation
+- ethics
+- AI systems
+- policy implications
+
+---
+
+# Mini Quiz
+
+## Question 1
+
+What is the first stage of an analytics workflow?
+
+A. Modeling  
+B. Visualization  
+C. Problem formulation  
+D. Forecasting  
+
+---
+
+## Question 2
+
+What does reproducibility allow?
+
+A. Faster internet  
+B. Verification and transparency  
+C. Automatic forecasting  
+D. Perfect predictions  
+
+---
+
+## Question 3
+
+Can AI-generated outputs contain errors?
+
+A. Yes  
+B. No  
+
+---
+
+## Question 4
+
+Does good analytics require only programming?
+
+A. Yes  
+B. No  
+
+---
+
+## Question 5
+
+Can technically accurate models still produce harmful outcomes?
+
+A. Yes  
+B. No  
+
+---
+
+# Submission Instructions
+
+Before submitting:
+
+1. Save notebook properly.
+2. Rename notebook using:
+
+```text
+Week13_IndexNumber_Name.ipynb
+```
+
+Example:
+
+```text
+Week13_2024BA12345_Perera.ipynb
+```
+
+3. Set notebook sharing to:
+
+```text
+Anyone with the link → Viewer
+```
+
+---
+
+# Submission Link
+
+[Submit Week 13 Activity](PASTE_WEEK13_SUBMISSION_LINK_HERE)
+
+---
+
+# Passcode Access
+
+The lecturer will provide the passcode during the lecture.
+
+Students without the correct passcode cannot access the submission form.
+
+---
+
+# Common Errors
+
+## Problem 1 — Overcomplicated Analysis
+
+Complexity does NOT guarantee insight.
+
+---
+
+## Problem 2 — Weak Problem Formulation
+
+Poor questions produce poor analysis.
+
+---
+
+## Problem 3 — Blind Trust in AI Outputs
+
+AI-generated analysis requires verification.
+
+---
+
+## Problem 4 — Ignoring Uncertainty
+
+All models contain assumptions and limitations.
+
+---
+
+## Problem 5 — Weak Communication
+
+Strong analysis can fail if communicated poorly.
+
+---
+
+# Final Reflection
+
+Over this semester, you learned:
+
+- Python
+- data analytics
+- visualization
+- machine learning
+- forecasting
+- NLP
+- AI systems
+
+But the most important lesson is:
+
+```text
+computational thinking
+```
+
+Modern economists increasingly operate in a world shaped by:
+
+- algorithms
+- automation
+- AI systems
+- data-driven decision-making
+
+Your responsibility is not merely to:
+
+- run code
+- build models
+- generate predictions
+
+Your responsibility is to:
+
+- think critically
+- communicate honestly
+- recognize uncertainty
+- evaluate ethics
+- interpret responsibly
+
+---
+
+# Academic Integrity
+
+Students may use lecture materials and course notes.
+
+However:
+
+- copied answers are not allowed
+- copied notebooks are not allowed
+- AI-generated answers without understanding are unacceptable
+
+Students are responsible for all submitted work.

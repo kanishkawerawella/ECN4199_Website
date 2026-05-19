@@ -1,0 +1,44 @@
+project:
+  type: website
+
+website:
+  title: "ECN 4199 - Industrial Data Analytics"
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+      - href: roadmap.qmd
+        text: Course Roadmap
+
+      - href: notebooks.qmd
+        text: Live Notebooks
+
+      - href: assignments.qmd
+        text: Assignments
+
+      - href: project.qmd
+        text: Final Project
+
+      - href: resources.qmd
+        text: Resources
+
+  page-footer:
+    left: |
+      Developed and maintained by Kanishka Werawella  
+      Department of Economics, University of Colombo
+
+    right: |
+      ECN 4199 — Industrial Data Analytics  
+      Academic Year 2026/27
+
+format:
+  html:
+    theme:
+      - journal
+      - styles.scss
+    toc: true
+    toc-depth: 3
+    smooth-scroll: true
+    page-layout: full

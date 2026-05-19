@@ -1,0 +1,110 @@
+---
+title: "ECN 4199 - Industrial Data Analytics"
+---
+
+# Introduction
+
+Welcome to the course website for **ECN 4199: Industrial Data Analytics**.
+
+This course introduces students to:
+
+- Python programming
+- data analytics
+- data visualisation
+- machine learning
+- forecasting
+- AI tools for economics and business
+- interactive dashboards
+- text analytics
+
+The course is designed for students with little or no prior programming experience.
+
+You are not expected to become a computer scientist.
+
+You are expected to become an economist who can work effectively with modern data tools.
+
+---
+
+# How This Website Works
+
+This website is the main learning platform for the course.
+
+Each week, students should:
+
+1. Read the weekly lesson page
+2. Open the live coding notebook
+3. Follow the lecture activity
+4. Complete the self-assessment
+5. Submit the weekly task
+
+---
+
+# Course Learning Progression
+
+| Weeks | Focus |
+|---|---|
+| Weeks 1–3 | Python foundations |
+| Weeks 4–6 | Data handling and visualisation |
+| Weeks 7–9 | Regression and machine learning |
+| Weeks 10–11 | Clustering and forecasting |
+| Week 12 | AI and text analytics |
+| Week 13 | Final integrated project |
+
+---
+
+# Course Workflow
+
+## During lectures
+
+Students will use:
+
+- this website
+- Google Colab notebooks
+- datasets provided on the website
+
+## After lectures
+
+Students will complete:
+
+- coding exercises
+- self-assessment tasks
+- mini projects
+- interpretation activities
+
+---
+
+# Important Note
+
+This course focuses on practical analytical thinking.
+
+The objective is not memorising code.
+
+The objective is learning how to:
+
+- solve problems with data
+- interpret evidence
+- communicate findings
+- use AI critically and responsibly
+
+---
+
+# Navigation Guide
+
+Use the navigation menu at the top of the website:
+
+- **Course Roadmap** → overall course structure
+- **Setup Guide** → how to use Colab and Python tools
+- **Week 1** → first lecture materials
+- **Datasets** → datasets for practical exercises
+- **Notebooks** → live coding notebooks
+- **Submissions** → assignment and notebook submissions
+
+---
+
+# Recommended Starting Point
+
+Students should begin with:
+
+1. Setup Guide
+2. Week 1 lesson
+3. Week 1 live notebook

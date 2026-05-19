@@ -1,0 +1,521 @@
+---
+title: "Week 9 In-Class Activity"
+---
+
+# Week 9 — In-Class Timed Activity
+
+# ECN 4199 — Industrial Data Analytics
+
+---
+
+# Activity Information
+
+| Item | Details |
+|---|---|
+| Week | Week 9 |
+| Topic | Classification Models and Economic Decision Systems |
+| Marks | 5 Marks |
+| Duration | 1 Hour |
+| Attempts | One Attempt Only |
+| Access | Lecturer Passcode Required |
+
+---
+
+# Instructions
+
+1. Open the Week 9 live notebook.
+2. Save a copy to your Google Drive.
+3. Complete all required tasks.
+4. Answer all interpretation questions.
+5. Submit before the activity closes.
+
+---
+
+# Important Reminder
+
+This activity tests:
+
+- classification intuition
+- logistic regression
+- probability interpretation
+- confusion matrices
+- false positives and false negatives
+- classification evaluation
+- ethical reasoning
+
+This week is NOT about blindly maximizing accuracy.
+
+This week is about understanding how classification systems affect real-world decisions.
+
+---
+
+# Task 1 — Understanding Classification Problems
+
+## Objective
+
+Distinguish regression and classification problems.
+
+---
+
+## Questions
+
+### Question 1
+
+Which of the following is a classification problem?
+
+A.
+
+```text
+Predict inflation rate
+```
+
+B.
+
+```text
+Predict whether a household is poor
+```
+
+---
+
+### Question 2
+
+Why is poverty prediction a classification problem?
+
+---
+
+### Question 3
+
+Give one example of a classification problem in economics or public policy.
+
+---
+
+# Task 2 — Load Dataset and Define Variables
+
+## Objective
+
+Prepare data for classification modeling.
+
+---
+
+## Instructions
+
+Load the dataset and define:
+
+- features
+- target variable
+
+---
+
+## Expected Structure
+
+```python
+import pandas as pd
+
+data = pd.read_csv("poverty_data.csv")
+
+X = data[["Education",
+          "Income",
+          "Household_Size"]]
+
+y = data["Poor"]
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What is the target variable?
+
+---
+
+### Question 2
+
+Why are education and income useful predictors of poverty?
+
+---
+
+### Question 3
+
+Can poor feature selection reduce classification quality?
+
+Explain briefly.
+
+---
+
+# Task 3 — Train Logistic Regression Model
+
+## Objective
+
+Train first classification model.
+
+---
+
+## Instructions
+
+Split the data and estimate logistic regression.
+
+---
+
+## Example Structure
+
+```python
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.2,
+    random_state=42
+)
+
+model = LogisticRegression()
+
+model.fit(X_train, y_train)
+```
+
+---
+
+## Generate Predictions
+
+```python
+predictions = model.predict(X_test)
+```
+
+---
+
+## Generate Probabilities
+
+```python
+probabilities = model.predict_proba(X_test)
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What is the difference between:
+
+```python
+predict()
+```
+
+and
+
+```python
+predict_proba()
+```
+
+?
+
+---
+
+### Question 2
+
+Why are probabilities often more informative than simple categories?
+
+---
+
+### Question 3
+
+Does classification produce certainty?
+
+Explain briefly.
+
+---
+
+# Task 4 — Confusion Matrix
+
+## Objective
+
+Evaluate classification performance.
+
+---
+
+## Instructions
+
+Generate confusion matrix.
+
+---
+
+## Example Structure
+
+```python
+from sklearn.metrics import confusion_matrix
+
+confusion_matrix(y_test, predictions)
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What is a false positive?
+
+---
+
+### Question 2
+
+What is a false negative?
+
+---
+
+### Question 3
+
+Which error may be more serious in poverty targeting systems?
+
+Explain briefly.
+
+---
+
+# Task 5 — Accuracy, Precision, and Recall
+
+## Objective
+
+Evaluate model quality critically.
+
+---
+
+## Instructions
+
+Calculate:
+
+- accuracy
+- precision
+- recall
+
+---
+
+## Questions
+
+### Question 1
+
+Why can accuracy alone be misleading?
+
+---
+
+### Question 2
+
+Why might recall matter more than accuracy in welfare targeting?
+
+---
+
+### Question 3
+
+Can highly accurate models still be unfair?
+
+Explain briefly.
+
+---
+
+# Task 6 — Decision Tree Classification
+
+## Objective
+
+Compare different classification approaches.
+
+---
+
+## Instructions
+
+Train classification tree.
+
+---
+
+## Example Structure
+
+```python
+from sklearn.tree import DecisionTreeClassifier
+
+tree = DecisionTreeClassifier()
+
+tree.fit(X_train, y_train)
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Which model appears easier to interpret?
+
+---
+
+### Question 2
+
+Which model may overfit more easily?
+
+---
+
+### Question 3
+
+Why can complex classification systems become dangerous in policy settings?
+
+---
+
+# Reflection Question
+
+Write a short paragraph answering:
+
+```text
+Why should economists critically evaluate classification systems even when prediction accuracy appears high?
+```
+
+Your answer should include:
+
+- fairness
+- uncertainty
+- false negatives
+- policy consequences
+- ethical concerns
+
+---
+
+# Mini Quiz
+
+## Question 1
+
+What does classification predict?
+
+A. Continuous values  
+B. Categories  
+C. Graph colors  
+D. Missing values  
+
+---
+
+## Question 2
+
+What does logistic regression mainly estimate?
+
+A. Exact certainty  
+B. Probabilities  
+C. Website layouts  
+D. Histograms  
+
+---
+
+## Question 3
+
+What is a false negative?
+
+A. Predict positive when actually negative  
+B. Predict negative when actually positive  
+C. Perfect prediction  
+D. Prediction error equal to zero  
+
+---
+
+## Question 4
+
+Can accurate models still produce unfair outcomes?
+
+A. Yes  
+B. No  
+
+---
+
+# Submission Instructions
+
+Before submitting:
+
+1. Save notebook properly.
+2. Rename notebook using:
+
+```text
+Week09_IndexNumber_Name.ipynb
+```
+
+Example:
+
+```text
+Week09_2024BA12345_Perera.ipynb
+```
+
+3. Set notebook sharing to:
+
+```text
+Anyone with the link → Viewer
+```
+
+---
+
+# Submission Link
+
+[Submit Week 9 Activity](PASTE_WEEK9_SUBMISSION_LINK_HERE)
+
+---
+
+# Passcode Access
+
+The lecturer will provide the passcode during the lecture.
+
+Students without the correct passcode cannot access the submission form.
+
+---
+
+# Common Errors
+
+## Problem 1 — Treating Probabilities as Certainty
+
+A probability of:
+
+```text
+0.51
+```
+
+does NOT imply certainty.
+
+---
+
+## Problem 2 — Blind Trust in Accuracy
+
+High accuracy may still hide:
+
+- unfair predictions
+- poor recall
+- harmful exclusion
+
+---
+
+## Problem 3 — Ignoring Ethical Consequences
+
+Classification systems affect:
+
+- welfare access
+- loans
+- employment
+- policy targeting
+
+---
+
+## Problem 4 — Overfitting Classification Trees
+
+Very complex trees may memorize training data instead of learning general patterns.
+
+---
+
+## Problem 5 — Confusing Prediction with Fairness
+
+Accurate predictions do NOT automatically imply fair decisions.
+
+---
+
+# Academic Integrity
+
+Students may use lecture materials and course notes.
+
+However:
+
+- copied answers are not allowed
+- copied notebooks are not allowed
+- AI-generated answers without understanding are unacceptable
+
+Students are responsible for all submitted work.

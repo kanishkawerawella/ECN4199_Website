@@ -1,0 +1,182 @@
+---
+title: "Setup Guide"
+---
+
+# Introduction
+
+This page explains how students should use the tools in this course.
+
+The course is designed so that students can begin coding immediately without installing Python on their computers.
+
+---
+
+# Main Tools Used in This Course
+
+| Tool | Purpose |
+|---|---|
+| Course Website | Weekly lessons and instructions |
+| Google Colab | Running Python code |
+| Google Drive | Saving notebooks |
+| Python | Programming language |
+| AI Tools | Analytical support and coding assistance |
+
+---
+
+# Recommended Workflow
+
+Each week, students should follow this process:
+
+1. Open the course website
+2. Read the weekly lesson
+3. Open the live notebook
+4. Run the code step by step
+5. Complete the self-assessment
+6. Submit the notebook link
+
+---
+
+# What Is Google Colab?
+
+Google Colab is a cloud-based coding environment.
+
+It allows students to run Python directly in the browser.
+
+This means:
+
+- no installation required
+- works on most computers
+- notebooks save automatically
+- easy sharing with lecturers
+
+---
+
+# How To Open a Notebook
+
+Each weekly page contains a notebook link.
+
+Example:
+
+```text
+Open Week 1 Live Notebook
+```
+
+Clicking the link opens the notebook in Google Colab.
+
+---
+
+# How To Run Python Code
+
+Python code appears inside code cells.
+
+Example:
+
+```python
+print("Hello Economics")
+```
+
+To run a code cell:
+
+- click inside the cell
+- press:
+  
+```text
+Shift + Enter
+```
+
+---
+
+# How To Save Your Work
+
+Google Colab automatically saves notebooks to your Google Drive.
+
+Students should:
+
+1. Rename the notebook
+2. Save changes regularly
+3. Keep notebooks organized in folders
+
+---
+
+# Suggested Folder Structure
+
+Students should create folders like this in Google Drive:
+
+```text
+Industrial_Data_Analytics/
+│
+├── Week_01/
+├── Week_02/
+├── Datasets/
+├── Assignments/
+└── Final_Project/
+```
+
+---
+
+# Common Beginner Problems
+
+## Problem 1: Notebook will not run
+
+Possible reasons:
+
+- internet connection issue
+- Google account not signed in
+- notebook permissions issue
+
+---
+
+## Problem 2: Code gives an error
+
+Possible reasons:
+
+- spelling mistake
+- missing quotation marks
+- incorrect indentation
+- variable name mismatch
+
+---
+
+## Problem 3: Notebook not saving
+
+Possible reasons:
+
+- Google Drive storage issue
+- internet disconnected
+- notebook opened in view-only mode
+
+---
+
+# Important Advice
+
+Do not panic when code produces errors.
+
+Errors are a normal part of programming.
+
+Even experienced programmers constantly debug their code.
+
+Learning to identify and fix problems is part of the learning process.
+
+---
+
+# Optional Local Installation
+
+Students may later install:
+
+- Python
+- Anaconda
+- VS Code
+
+However, this is NOT required for the first weeks of the course.
+
+We will first focus on learning concepts and analytical thinking.
+
+---
+
+# Minimum Requirements
+
+Students need:
+
+- internet connection
+- browser
+- Google account
+- willingness to experiment and learn

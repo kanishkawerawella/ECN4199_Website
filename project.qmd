@@ -1,0 +1,512 @@
+---
+title: "Final Project"
+---
+
+# ECN 4199 — Final Project
+
+# Industrial Data Analytics Final Project
+
+The final project is the capstone component of:
+
+```text
+ECN 4199 — Industrial Data Analytics
+```
+
+This project carries:
+
+```text
+35 marks
+```
+
+---
+
+# Purpose of the Project
+
+This project integrates the full range of concepts covered throughout the semester.
+
+Students are expected to:
+
+- formulate a meaningful analytical question
+- work with real-world data
+- clean and prepare datasets
+- perform computational analysis
+- generate visualizations and/or predictive systems
+- interpret findings critically
+- communicate insights professionally
+
+The purpose is NOT merely to:
+
+- run code
+- generate graphs
+- maximize model accuracy
+
+The purpose is to demonstrate the ability to:
+
+```text
+think computationally about economic and business problems
+```
+
+---
+
+# Expected Project Components
+
+Each final project should contain the following sections.
+
+---
+
+# 1. Project Title
+
+The title should clearly reflect:
+
+- the analytical objective
+- the dataset/problem
+- the economic or business context
+
+---
+
+# 2. Problem Statement
+
+Students must clearly explain:
+
+- the analytical question
+- why the question matters
+- the economic/business relevance
+- the objective of the project
+
+Weak example:
+
+```text
+Using AI on economic data.
+```
+
+Better example:
+
+```text
+Can macroeconomic indicators help forecast inflation instability in Sri Lanka?
+```
+
+---
+
+# 3. Dataset Description
+
+Students must explain:
+
+- source of data
+- variables used
+- time period
+- unit of observation
+- limitations of the dataset
+
+---
+
+# Examples of Data Sources
+
+| Source | Examples |
+|---|---|
+| Central Bank of Sri Lanka | Inflation, reserves, exchange rate |
+| World Bank | Development indicators |
+| IMF | Macroeconomic indicators |
+| Kaggle | Business datasets |
+| Survey Data | Household or labour datasets |
+| News Data | NLP projects |
+
+Students must properly acknowledge all datasets used.
+
+---
+
+# 4. Data Cleaning and Preprocessing
+
+Students are expected to:
+
+- clean datasets
+- handle missing values
+- preprocess variables
+- document transformations
+
+Examples:
+
+- removing missing values
+- converting date formats
+- renaming variables
+- scaling variables
+- cleaning text data
+
+Poor preprocessing leads to:
+
+- unreliable analysis
+- unstable models
+- misleading conclusions
+
+---
+
+# 5. Exploratory Data Analysis
+
+Students must explore the data before modelling.
+
+Expected components:
+
+| Task | Example |
+|---|---|
+| Summary statistics | Mean, median, variance |
+| Visualization | Line graphs, scatter plots |
+| Pattern identification | Trends, outliers |
+| Correlation analysis | Variable relationships |
+
+Students must interpret graphs and outputs economically.
+
+Simply producing graphs without explanation is insufficient.
+
+---
+
+# 6. Modelling and Analytics
+
+Students should apply appropriate analytical techniques.
+
+Possible methods:
+
+| Topic | Example Methods |
+|---|---|
+| Regression | Linear regression |
+| Classification | Logistic regression |
+| Clustering | K-Means |
+| Forecasting | ARIMA |
+| NLP | Sentiment analysis |
+| Dashboarding | Interactive visualization |
+
+Students must explain:
+
+- why a method was chosen
+- how the method works conceptually
+- limitations of the approach
+
+Using very complex models without understanding them is discouraged.
+
+A simple model with strong interpretation is better than:
+
+```text
+complex code without understanding
+```
+
+---
+
+# 7. Results and Interpretation
+
+Students must explain:
+
+- major findings
+- patterns observed
+- predictive performance
+- economic/business meaning
+
+Outputs alone are NOT analysis.
+
+Interpretation is essential.
+
+Weak interpretation:
+
+```text
+Model accuracy = 92%.
+```
+
+Better interpretation:
+
+```text
+The model predicts inflation reasonably well during stable periods, though performance weakens during crisis periods.
+```
+
+---
+
+# 8. Critical Reflection and Limitations
+
+Students must critically evaluate:
+
+- weaknesses of the model
+- limitations of the dataset
+- forecasting uncertainty
+- ethical concerns
+- assumptions made
+
+Every project MUST contain a limitations section.
+
+Examples of limitations:
+
+- small sample size
+- missing data
+- model instability
+- overfitting
+- AI hallucinations
+- structural breaks
+
+---
+
+# 9. Ethical Reflection
+
+Students should discuss ethical implications where relevant.
+
+| Area | Ethical Concern |
+|---|---|
+| Classification | Bias and exclusion |
+| AI systems | Hallucinations and misinformation |
+| Forecasting | False certainty |
+| Dashboards | Misleading communication |
+
+Analytics systems affect:
+
+- policy
+- firms
+- labour markets
+- households
+- public understanding
+
+Ethical responsibility matters.
+
+---
+
+# 10. Reproducibility and Documentation
+
+Projects should be reproducible.
+
+Students are expected to:
+
+- organize files clearly
+- comment code properly
+- explain analytical steps
+- use readable variable names
+
+Example:
+
+```python
+# Load inflation dataset
+inflation = pd.read_csv("inflation.csv")
+```
+
+Professional analytics requires:
+
+- transparency
+- documentation
+- reproducibility
+
+---
+
+# Deliverables
+
+Students must submit the following:
+
+| Item | Required |
+|---|---|
+| Final notebook (.ipynb) | Yes |
+| Project report | Yes |
+| Dataset(s) used | Yes |
+| Visualizations | Yes |
+| Presentation slides | If required by lecturer |
+
+---
+
+# Notebook Requirements
+
+Students must:
+
+1. Save notebook in Google Drive
+2. Set sharing to:
+
+```text
+Anyone with the link → Viewer
+```
+
+3. Submit the notebook link
+
+---
+
+# Notebook Naming Convention
+
+Use:
+
+```text
+FinalProject_IndexNumber_Name.ipynb
+```
+
+Example:
+
+```text
+FinalProject_2024BA12345_Perera.ipynb
+```
+
+---
+
+# Suggested Project Topics
+
+Students may choose one of the following broad areas.
+
+---
+
+## 1. Macroeconomic Forecasting
+
+Possible projects:
+
+- inflation forecasting
+- exchange rate forecasting
+- reserve adequacy analysis
+- GDP growth forecasting
+
+---
+
+## 2. Labour Market Analytics
+
+Possible projects:
+
+- unemployment prediction
+- labour force participation analysis
+- gender wage gap analytics
+- education and employment outcomes
+
+---
+
+## 3. Business Analytics
+
+Possible projects:
+
+- customer segmentation
+- demand forecasting
+- sales analytics dashboards
+- firm performance prediction
+
+---
+
+## 4. NLP and AI Projects
+
+Possible projects:
+
+- sentiment analysis of economic news
+- AI-assisted policy analysis
+- economic narrative tracking
+- central bank speech analysis
+
+---
+
+## 5. Development and Policy Analytics
+
+Possible projects:
+
+- poverty prediction
+- welfare targeting systems
+- household vulnerability analysis
+- district-level development dashboard
+
+---
+
+# Important Recommendation
+
+Choose a topic that:
+
+- genuinely interests you
+- has available data
+- can be completed realistically within the semester
+- allows meaningful economic interpretation
+
+Do not choose a topic only because it sounds technically advanced.
+
+---
+
+# Marking Scheme
+
+| Component | Marks |
+|---|---:|
+| Problem formulation and motivation | 5 |
+| Data handling and preprocessing | 5 |
+| Exploratory analysis and visualization | 5 |
+| Modelling and analytical workflow | 8 |
+| Interpretation and critical reasoning | 7 |
+| Reproducibility, presentation, and professionalism | 5 |
+| Total | 35 |
+
+---
+
+# Common Mistakes to Avoid
+
+## Problem 1 — Overly Ambitious Projects
+
+Do not attempt extremely large projects beyond the course scope.
+
+---
+
+## Problem 2 — Blind Use of AI Tools
+
+AI-generated code must be:
+
+- understood
+- verified
+- interpreted critically
+
+---
+
+## Problem 3 — Weak Interpretation
+
+Graphs and outputs without interpretation are insufficient.
+
+---
+
+## Problem 4 — Poor Documentation
+
+Unreadable notebooks reduce project quality.
+
+---
+
+## Problem 5 — Ignoring Limitations
+
+Every model and dataset has limitations.
+
+---
+
+# Academic Integrity
+
+Students may use:
+
+- lecture materials
+- documentation
+- AI tools for support
+
+However:
+
+- plagiarism is not allowed
+- copied projects are not allowed
+- submitting code without understanding is unacceptable
+- AI-generated content must be critically verified
+
+Students are responsible for all submitted work.
+
+---
+
+# Final Reflection
+
+The goal of this project is not merely to:
+
+- write code
+- maximize model accuracy
+- generate dashboards
+
+The goal is to demonstrate the ability to:
+
+```text
+apply computational thinking to meaningful economic and business problems
+```
+
+Strong projects combine:
+
+- analytical reasoning
+- technical skills
+- economic interpretation
+- communication
+- critical judgment
+- ethical awareness
+
+---
+
+# Submission Link
+
+[Submit Final Project](PASTE_FINAL_PROJECT_SUBMISSION_LINK_HERE)
+
+---
+
+# Deadlines
+
+Project deadlines and presentation schedules will be announced separately.

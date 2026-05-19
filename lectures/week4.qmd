@@ -1,0 +1,943 @@
+---
+title: "Week 4 — Working with Real Economic Data Using Pandas"
+---
+
+# Week 4 — Data Handling, Cleaning, and Manipulation with Pandas
+
+Weeks 1–3 built:
+
+- computational confidence
+- Python fundamentals
+- programming logic
+
+Now students begin real data analysis.
+
+This is one of the most important weeks in the entire course.
+
+Why?
+
+Because in real-world economics:
+
+```text
+data is almost never clean
+```
+
+Professional economists spend enormous amounts of time:
+
+- cleaning data
+- restructuring data
+- handling missing values
+- checking consistency
+- merging datasets
+- creating variables
+
+Poor data handling destroys analysis long before models matter.
+
+---
+
+# 1. Learning Objectives
+
+By the end of this week, students should be able to:
+
+- understand what a dataframe is
+- inspect datasets carefully
+- select rows and columns
+- filter observations
+- create new variables
+- sort datasets
+- identify missing values
+- clean datasets
+- merge datasets
+- prepare data for analysis
+
+---
+
+# 2. What Is a DataFrame?
+
+A dataframe is one of the most important concepts in data science.
+
+A dataframe is:
+
+```text
+a table of data organised into rows and columns
+```
+
+It is similar to:
+
+- Excel spreadsheets
+- STATA datasets
+- SQL tables
+
+But it is much more powerful.
+
+---
+
+# Example DataFrame
+
+| Year | Inflation | GDP_Growth | Exchange_Rate |
+|---|---|---|---|
+| 2020 | 4.6 | -3.6 | 185 |
+| 2021 | 6.0 | 3.7 | 200 |
+| 2022 | 46.4 | -7.8 | 360 |
+
+---
+
+# Why DataFrames Matter
+
+Dataframes allow us to:
+
+- analyze large datasets
+- create variables
+- filter observations
+- summarize statistics
+- prepare data for machine learning
+
+---
+
+# 3. Importing Data with Pandas
+
+We use pandas to import datasets.
+
+---
+
+# Import Pandas
+
+```python
+import pandas as pd
+```
+
+---
+
+# Read CSV File
+
+```python
+data = pd.read_csv("sri_lanka_macro.csv")
+```
+
+---
+
+# Display DataFrame
+
+```python
+data
+```
+
+Important idea:
+
+```text
+data is now a dataframe object
+```
+
+Everything we do this week uses this dataframe.
+
+---
+
+# 4. Understanding Rows and Columns
+
+Rows represent observations.
+
+Columns represent variables.
+
+---
+
+# Example
+
+| Structure | Meaning |
+|---|---|
+| One row | One observation |
+| One column | One variable |
+
+---
+
+# Display Columns
+
+```python
+data.columns
+```
+
+---
+
+# Display Number of Rows and Columns
+
+```python
+data.shape
+```
+
+Example output:
+
+```text
+(10, 4)
+```
+
+Meaning:
+
+- 10 rows
+- 4 columns
+
+---
+
+# 5. Inspecting Data
+
+Before analyzing data, economists inspect it carefully.
+
+Never blindly trust a dataset.
+
+---
+
+# Display First Rows
+
+```python
+data.head()
+```
+
+---
+
+# Display Last Rows
+
+```python
+data.tail()
+```
+
+---
+
+# Dataset Information
+
+```python
+data.info()
+```
+
+This shows:
+
+- variable names
+- number of observations
+- missing values
+- data types
+
+---
+
+# Summary Statistics
+
+```python
+data.describe()
+```
+
+---
+
+# Important Warning
+
+Many students immediately start analysis without checking:
+
+- missing values
+- strange values
+- incorrect data types
+
+That is bad practice.
+
+---
+
+# 6. Selecting Columns and Rows
+
+We often work with specific variables.
+
+---
+
+# Select One Column
+
+```python
+data["Inflation"]
+```
+
+---
+
+# Select Multiple Columns
+
+```python
+data[["Inflation", "GDP_Growth"]]
+```
+
+---
+
+# Select Rows Using Position
+
+```python
+data.iloc[0]
+```
+
+---
+
+# Select Rows Using Labels
+
+```python
+data.loc[0]
+```
+
+---
+
+# Example
+
+```python
+data.loc[0:2]
+```
+
+Displays first three rows.
+
+---
+
+# 7. Filtering Data
+
+Filtering allows us to select observations satisfying conditions.
+
+This is extremely important in economics.
+
+---
+
+# Example: High Inflation Years
+
+```python
+high_inflation = data[data["Inflation"] > 10]
+
+high_inflation
+```
+
+---
+
+# Example: Negative GDP Growth
+
+```python
+recession_years = data[data["GDP_Growth"] < 0]
+
+recession_years
+```
+
+---
+
+# Example: Multiple Conditions
+
+```python
+data[(data["Inflation"] > 10) & (data["GDP_Growth"] < 0)]
+```
+
+---
+
+# Why Filtering Matters
+
+Economists frequently analyze:
+
+- recession periods
+- poor households
+- vulnerable firms
+- high-inflation episodes
+- specific regions
+
+Filtering isolates relevant observations.
+
+---
+
+# 8. Creating New Variables
+
+Much of economics involves constructing new indicators.
+
+---
+
+# Example: Real Wage Index
+
+```python
+data["Real_Wage_Index"] = data["Nominal_Wage"] / data["CPI"] * 100
+```
+
+---
+
+# Example: Exchange Rate Change
+
+```python
+data["Exchange_Rate_Change"] = data["Exchange_Rate"].pct_change() * 100
+```
+
+---
+
+# Example: Inflation Category
+
+```python
+data["High_Inflation"] = data["Inflation"] > 10
+```
+
+---
+
+# Important Idea
+
+Data science is often about:
+
+```text
+transforming raw data into meaningful variables
+```
+
+---
+
+# 9. Sorting Data
+
+Sorting helps identify:
+
+- largest values
+- smallest values
+- rankings
+- trends
+
+---
+
+# Sort by Inflation
+
+```python
+data.sort_values(by="Inflation")
+```
+
+---
+
+# Sort Descending
+
+```python
+data.sort_values(by="Inflation", ascending=False)
+```
+
+---
+
+# Example
+
+Find highest inflation year.
+
+```python
+data.sort_values(by="Inflation", ascending=False).head(1)
+```
+
+---
+
+# 10. Missing Values
+
+Real datasets often contain missing values.
+
+Examples:
+
+- survey non-response
+- unavailable statistics
+- reporting errors
+- data collection problems
+
+---
+
+# Example Dataset
+
+| Year | Inflation |
+|---|---|
+| 2020 | 4.6 |
+| 2021 | NaN |
+| 2022 | 46.4 |
+
+`NaN` means missing value.
+
+---
+
+# Check Missing Values
+
+```python
+data.isnull()
+```
+
+---
+
+# Count Missing Values
+
+```python
+data.isnull().sum()
+```
+
+---
+
+# Drop Missing Values
+
+```python
+data.dropna()
+```
+
+---
+
+# Important Warning
+
+Dropping missing values blindly can create bias.
+
+Economists must think carefully.
+
+---
+
+# 11. Cleaning Data
+
+Data cleaning is one of the most important skills in analytics.
+
+Bad data produces misleading conclusions.
+
+---
+
+# Example: Rename Variables
+
+```python
+data.rename(columns={"GDP Growth": "GDP_Growth"})
+```
+
+---
+
+# Example: Remove Duplicates
+
+```python
+data.drop_duplicates()
+```
+
+---
+
+# Example: Convert Variable Type
+
+```python
+data["Inflation"] = data["Inflation"].astype(float)
+```
+
+---
+
+# Important Lesson
+
+Professional analysis requires:
+
+- careful inspection
+- consistency
+- reproducibility
+
+---
+
+# 12. Grouping and Aggregation
+
+Economists often summarize data by groups.
+
+Examples:
+
+- average income by district
+- inflation by region
+- unemployment by gender
+
+---
+
+# Example Dataset
+
+| District | Income |
+|---|---|
+| Colombo | 100 |
+| Galle | 80 |
+| Colombo | 120 |
+
+---
+
+# Group and Calculate Average
+
+```python
+data.groupby("District")["Income"].mean()
+```
+
+---
+
+# Important Aggregation Functions
+
+| Function | Purpose |
+|---|---|
+| mean() | Average |
+| sum() | Total |
+| max() | Maximum |
+| min() | Minimum |
+| count() | Count observations |
+
+---
+
+# 13. Merging Datasets
+
+Real-world analysis often combines multiple datasets.
+
+Examples:
+
+- inflation data
+- labour force data
+- trade data
+- household surveys
+
+---
+
+# Example Dataset A
+
+| Year | Inflation |
+|---|---|
+| 2020 | 4.6 |
+
+---
+
+# Example Dataset B
+
+| Year | GDP_Growth |
+|---|---|
+| 2020 | -3.6 |
+
+---
+
+# Merge Datasets
+
+```python
+merged_data = pd.merge(data1, data2, on="Year")
+```
+
+---
+
+# Why Merging Matters
+
+Modern economics depends heavily on combining data sources.
+
+---
+
+# 14. Open the Week 4 Live Notebook
+
+Replace placeholder below:
+
+[Open Week 4 Live Notebook — Save a Copy Before Editing](PASTE_WEEK4_COLAB_LINK_HERE)
+
+---
+
+# 15. Download the Dataset
+
+Replace placeholder below:
+
+[Download Macroeconomic Dataset](PASTE_DATASET_LINK_HERE)
+
+---
+
+# 16. Live Coding Session
+
+## Step 1 — Import Pandas
+
+```python
+import pandas as pd
+```
+
+---
+
+## Step 2 — Read Dataset
+
+```python
+data = pd.read_csv("sri_lanka_macro.csv")
+```
+
+---
+
+## Step 3 — Inspect Dataset
+
+```python
+data.head()
+data.info()
+data.describe()
+```
+
+---
+
+## Step 4 — Filter High Inflation Years
+
+```python
+data[data["Inflation"] > 10]
+```
+
+---
+
+## Step 5 — Create New Variable
+
+```python
+data["Exchange_Rate_Change"] = data["Exchange_Rate"].pct_change() * 100
+```
+
+---
+
+## Step 6 — Check Missing Values
+
+```python
+data.isnull().sum()
+```
+
+---
+
+## Step 7 — Sort Dataset
+
+```python
+data.sort_values(by="Inflation", ascending=False)
+```
+
+---
+
+## Step 8 — Interpretation Questions
+
+Ask students:
+
+- Which year had highest inflation?
+- Which year had largest depreciation?
+- Were recession years associated with inflation spikes?
+- What problems exist in the dataset?
+
+---
+
+# 17. Interactive Mini Quiz
+
+## Question 1
+
+```python
+answer = input("What is a dataframe? A/B/C/D : ")
+
+if answer.upper() == "C":
+    print("Correct! A dataframe is a table of data.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 2
+
+```python
+answer = input("Which function displays first rows? ")
+
+if answer.lower() == "head()":
+    print("Correct!")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 3
+
+```python
+answer = input("What does dropna() do? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! It removes missing values.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+# 18. Self-Assessment Activity
+
+Students should complete the following tasks.
+
+---
+
+## Task 1 — Import Dataset
+
+Import dataset using pandas.
+
+---
+
+## Task 2 — Display Information
+
+Display:
+
+- first 5 rows
+- summary statistics
+- variable names
+
+---
+
+## Task 3 — Filter Data
+
+Filter:
+
+- years with inflation above 10
+- years with negative GDP growth
+
+---
+
+## Task 4 — Create Variables
+
+Create:
+
+- exchange rate growth variable
+- inflation category variable
+
+---
+
+## Task 5 — Sort Dataset
+
+Sort dataset by:
+
+- inflation
+- GDP growth
+
+---
+
+## Task 6 — Check Data Problems
+
+Check:
+
+- missing values
+- duplicate rows
+
+---
+
+## Task 7 — Interpretation
+
+Write short interpretation:
+
+```text
+What economic patterns do you observe in the dataset?
+```
+
+---
+
+# 19. Submission Instructions
+
+Submit:
+
+- completed notebook
+- cleaned dataset
+- filtering outputs
+- created variables
+- interpretation paragraph
+
+---
+
+# File Naming Convention
+
+```text
+Week4_YourName.ipynb
+```
+
+---
+
+# Submission Link
+
+Replace placeholder below:
+
+[Submit Week 4 Work](PASTE_SUBMISSION_LINK_HERE)
+
+---
+
+# 20. Common Errors
+
+## Problem 1 — Wrong Column Name
+
+Error:
+
+```text
+KeyError
+```
+
+Possible causes:
+
+- spelling mistake
+- incorrect capitalization
+
+---
+
+## Problem 2 — Forgetting Brackets
+
+Wrong:
+
+```python
+data["Inflation" > 10]
+```
+
+Correct:
+
+```python
+data[data["Inflation"] > 10]
+```
+
+---
+
+## Problem 3 — Confusing Parentheses and Brackets
+
+Dataframes use:
+
+```text
+square brackets []
+```
+
+Functions use:
+
+```text
+parentheses ()
+```
+
+---
+
+## Problem 4 — Forgetting Assignment
+
+Wrong:
+
+```python
+data.dropna()
+```
+
+without saving result.
+
+Better:
+
+```python
+data = data.dropna()
+```
+
+---
+
+## Problem 5 — Misinterpreting Missing Values
+
+`NaN` does NOT mean zero.
+
+It means:
+
+```text
+information is unavailable
+```
+
+That distinction matters.
+
+---
+
+# 21. AI Reflection Question
+
+AI can help clean datasets automatically.
+
+However:
+
+- AI may remove important observations
+- AI may misclassify variables
+- AI may fail to detect economic inconsistencies
+
+Reflection question:
+
+```text
+Why must economists inspect datasets carefully even when AI tools automate cleaning?
+```
+
+---
+
+# 22. Key Takeaways
+
+By the end of Week 4, students should understand:
+
+- what a dataframe is
+- how to inspect datasets
+- how to select variables
+- how to filter observations
+- how to create variables
+- how to clean data
+- how to handle missing values
+- how to merge datasets
+
+---
+
+# 23. Before Week 5
+
+Before next week, students should:
+
+- rerun all Week 4 code
+- practice filtering datasets
+- practice creating variables
+- review missing value handling
+- complete submission

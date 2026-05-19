@@ -1,0 +1,496 @@
+---
+title: "Week 8 In-Class Activity"
+---
+
+# Week 8 — In-Class Timed Activity
+
+# ECN 4199 — Industrial Data Analytics
+
+---
+
+# Activity Information
+
+| Item | Details |
+|---|---|
+| Week | Week 8 |
+| Topic | Introduction to Machine Learning for Economics |
+| Marks | 5 Marks |
+| Duration | 1 Hour |
+| Attempts | One Attempt Only |
+| Access | Lecturer Passcode Required |
+
+---
+
+# Instructions
+
+1. Open the Week 8 live notebook.
+2. Save a copy to your Google Drive.
+3. Complete all required tasks.
+4. Answer all interpretation questions.
+5. Submit before the activity closes.
+
+---
+
+# Important Reminder
+
+This activity tests:
+
+- machine learning intuition
+- supervised learning
+- prediction workflows
+- training/testing split
+- overfitting understanding
+- model evaluation
+- economic interpretation
+
+This week is NOT about AI hype.
+
+This week is about understanding how predictive systems actually work.
+
+---
+
+# Task 1 — Features and Target Variables
+
+## Objective
+
+Understand supervised learning structure.
+
+---
+
+## Instructions
+
+Suppose we want to predict household income using:
+
+- education
+- age
+- experience
+
+---
+
+## Define:
+
+### Features
+
+### Target variable
+
+---
+
+## Example Structure
+
+```python
+X = data[["Education",
+          "Age",
+          "Experience"]]
+
+y = data["Income"]
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What is the difference between features and target variables?
+
+---
+
+### Question 2
+
+Why is feature selection important?
+
+---
+
+### Question 3
+
+Can bad features reduce prediction quality?
+
+Explain briefly.
+
+---
+
+# Task 2 — Split Training and Testing Data
+
+## Objective
+
+Understand why ML models must be evaluated on unseen data.
+
+---
+
+## Instructions
+
+Split the dataset into:
+
+- training data
+- testing data
+
+---
+
+## Expected Structure
+
+```python
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.2,
+    random_state=42
+)
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Why should testing data remain separate from training data?
+
+---
+
+### Question 2
+
+What might happen if we test on training data?
+
+---
+
+### Question 3
+
+Why is prediction on unseen data important?
+
+---
+
+# Task 3 — Train Linear Regression Model
+
+## Objective
+
+Train first ML prediction model.
+
+---
+
+## Instructions
+
+Train linear regression model.
+
+---
+
+## Expected Structure
+
+```python
+from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+
+model.fit(X_train, y_train)
+```
+
+---
+
+## Generate Predictions
+
+```python
+predictions = model.predict(X_test)
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What is the purpose of model training?
+
+---
+
+### Question 2
+
+What does prediction mean in machine learning?
+
+---
+
+### Question 3
+
+Does accurate prediction automatically imply causality?
+
+---
+
+# Task 4 — Evaluate Prediction Error
+
+## Objective
+
+Measure model performance.
+
+---
+
+## Instructions
+
+Calculate Mean Absolute Error (MAE).
+
+---
+
+## Example Structure
+
+```python
+from sklearn.metrics import mean_absolute_error
+
+mean_absolute_error(y_test, predictions)
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What does prediction error measure?
+
+---
+
+### Question 2
+
+Does lower error usually imply better prediction?
+
+---
+
+### Question 3
+
+Why is accuracy alone not enough for policy analysis?
+
+---
+
+# Task 5 — Decision Tree Model
+
+## Objective
+
+Compare different ML models.
+
+---
+
+## Instructions
+
+Train decision tree model.
+
+---
+
+## Example Structure
+
+```python
+from sklearn.tree import DecisionTreeRegressor
+
+tree = DecisionTreeRegressor()
+
+tree.fit(X_train, y_train)
+
+tree_predictions = tree.predict(X_test)
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Which model appears more flexible?
+
+---
+
+### Question 2
+
+Which model may overfit more easily?
+
+---
+
+### Question 3
+
+Why can highly complex models become dangerous?
+
+---
+
+# Task 6 — Compare Models
+
+## Objective
+
+Critically compare prediction systems.
+
+---
+
+## Instructions
+
+Compare:
+
+- Linear Regression
+- Decision Tree
+
+---
+
+## Questions
+
+### Question 1
+
+Which model is easier to interpret?
+
+---
+
+### Question 2
+
+Which model may predict better?
+
+---
+
+### Question 3
+
+Why might economists still prefer simpler models sometimes?
+
+---
+
+# Reflection Question
+
+Write a short paragraph answering:
+
+```text
+Why should economists remain skeptical even when machine learning models achieve high prediction accuracy?
+```
+
+Your answer should include:
+
+- overfitting
+- interpretability
+- causality
+- ethical concerns
+- limitations of prediction
+
+---
+
+# Mini Quiz
+
+## Question 1
+
+What is the primary focus of machine learning?
+
+A. Causality only  
+B. Prediction and pattern recognition  
+C. Website design  
+D. Manual calculation  
+
+---
+
+## Question 2
+
+Why do we split training and testing data?
+
+A. To increase internet speed  
+B. To avoid data loss  
+C. To evaluate prediction on unseen data  
+D. To create graphs  
+
+---
+
+## Question 3
+
+What is overfitting?
+
+A. Model memorizes training data too closely  
+B. Dataset becomes smaller  
+C. Predictions disappear  
+D. Variables become missing  
+
+---
+
+## Question 4
+
+Does high prediction accuracy automatically imply good economic theory?
+
+A. Yes  
+B. No  
+
+---
+
+# Submission Instructions
+
+Before submitting:
+
+1. Save notebook properly.
+2. Rename notebook using:
+
+```text
+Week08_IndexNumber_Name.ipynb
+```
+
+Example:
+
+```text
+Week08_2024BA12345_Perera.ipynb
+```
+
+3. Set notebook sharing to:
+
+```text
+Anyone with the link → Viewer
+```
+
+---
+
+# Submission Link
+
+[Submit Week 8 Activity](PASTE_WEEK8_SUBMISSION_LINK_HERE)
+
+---
+
+# Passcode Access
+
+The lecturer will provide the passcode during the lecture.
+
+Students without the correct passcode cannot access the submission form.
+
+---
+
+# Common Errors
+
+## Problem 1 — Data Leakage
+
+Using testing data during training produces misleadingly high performance.
+
+---
+
+## Problem 2 — Blind Trust in Accuracy
+
+High prediction accuracy does NOT automatically imply:
+
+- causality
+- fairness
+- robustness
+
+---
+
+## Problem 3 — Ignoring Economic Interpretation
+
+Machine learning identifies patterns.
+
+It does NOT automatically explain economic mechanisms.
+
+---
+
+## Problem 4 — Overfitting
+
+Very complex models may perform well in training but fail in real-world prediction.
+
+---
+
+## Problem 5 — Weak Features
+
+Poor input variables produce poor predictions.
+
+---
+
+# Academic Integrity
+
+Students may use lecture materials and course notes.
+
+However:
+
+- copied answers are not allowed
+- copied notebooks are not allowed
+- AI-generated answers without understanding are unacceptable
+
+Students are responsible for all submitted work.

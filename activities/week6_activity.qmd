@@ -1,0 +1,418 @@
+---
+title: "Week 6 In-Class Activity"
+---
+
+# Week 6 — In-Class Timed Activity
+
+# ECN 4199 — Industrial Data Analytics
+
+---
+
+# Activity Information
+
+| Item | Details |
+|---|---|
+| Week | Week 6 |
+| Topic | Interactive Dashboards and Data Storytelling |
+| Marks | 5 Marks |
+| Duration | 1 Hour |
+| Attempts | One Attempt Only |
+| Access | Lecturer Passcode Required |
+
+---
+
+# Instructions
+
+1. Open the Week 6 live notebook.
+2. Save a copy to your Google Drive.
+3. Complete all required tasks.
+4. Answer all interpretation questions.
+5. Submit before the activity closes.
+
+---
+
+# Important Reminder
+
+This activity tests:
+
+- interactive visualization
+- dashboard design
+- Plotly usage
+- data storytelling
+- interpretation
+- economic communication
+
+The goal is NOT to create decorative dashboards.
+
+The goal is to communicate economic insights clearly and analytically.
+
+---
+
+# Task 1 — Create Interactive Inflation Graph
+
+## Objective
+
+Build an interactive inflation trend graph.
+
+---
+
+## Instructions
+
+Create an interactive Plotly line graph showing inflation over time.
+
+---
+
+## Expected Structure
+
+```python
+import pandas as pd
+import plotly.express as px
+
+data = pd.read_csv("sri_lanka_macro.csv")
+
+fig = px.line(data,
+              x="Year",
+              y="Inflation",
+              title="Inflation Trends")
+
+fig.show()
+```
+
+---
+
+## Questions
+
+### Question 1
+
+When does inflation increase sharply?
+
+---
+
+### Question 2
+
+What economic conditions might explain this increase?
+
+---
+
+### Question 3
+
+Why are interactive graphs useful compared to static graphs?
+
+---
+
+# Task 2 — Interactive GDP Growth Bar Chart
+
+## Objective
+
+Compare GDP growth visually.
+
+---
+
+## Instructions
+
+Create an interactive bar chart for GDP growth.
+
+---
+
+## Example Structure
+
+```python
+fig = px.bar(data,
+             x="Year",
+             y="GDP_Growth",
+             color="GDP_Growth")
+
+fig.show()
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Which year had the worst GDP growth?
+
+---
+
+### Question 2
+
+Why are bar charts useful for comparisons?
+
+---
+
+### Question 3
+
+Why should colors be used carefully in dashboards?
+
+---
+
+# Task 3 — Scatter Plot and Relationships
+
+## Objective
+
+Explore relationships between macroeconomic variables.
+
+---
+
+## Instructions
+
+Create an interactive scatter plot using:
+
+- Inflation
+- Exchange_Rate_Change
+
+Add hover information using Year.
+
+---
+
+## Example Structure
+
+```python
+fig = px.scatter(data,
+                 x="Inflation",
+                 y="Exchange_Rate_Change",
+                 hover_name="Year")
+
+fig.show()
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Do inflation and exchange rate changes appear related?
+
+---
+
+### Question 2
+
+Are there outliers?
+
+---
+
+### Question 3
+
+What macroeconomic events might explain extreme observations?
+
+---
+
+# Task 4 — Build Mini Dashboard
+
+## Objective
+
+Combine multiple indicators into one analytical system.
+
+---
+
+## Instructions
+
+Create a mini dashboard including:
+
+- inflation
+- GDP growth
+- exchange rate change
+
+---
+
+## Suggested Dashboard Structure
+
+| Section | Content |
+|---|---|
+| Top | Inflation trend |
+| Middle | GDP growth comparison |
+| Bottom | Scatter plot relationship |
+
+---
+
+## Question
+
+What overall macroeconomic story does your dashboard communicate?
+
+Write short interpretation.
+
+---
+
+# Task 5 — Dashboard Design Evaluation
+
+## Objective
+
+Critically evaluate dashboard quality.
+
+---
+
+## Questions
+
+### Question 1
+
+Why is too much information dangerous in dashboard design?
+
+---
+
+### Question 2
+
+What makes a dashboard easy to understand?
+
+---
+
+### Question 3
+
+Why is dashboard design important for policymakers and economists?
+
+---
+
+# Reflection Question
+
+Write a short paragraph answering:
+
+```text
+Why is economic storytelling important even when AI tools can generate dashboards automatically?
+```
+
+Your answer should include:
+
+- interpretation
+- communication
+- policy relevance
+- limitations of automated visualization
+
+---
+
+# Mini Quiz
+
+## Question 1
+
+What is the primary purpose of a dashboard?
+
+A. Decoration  
+B. Programming practice  
+C. Decision support and communication  
+D. File storage  
+
+---
+
+## Question 2
+
+Which library is mainly used this week?
+
+A. NumPy  
+B. Plotly  
+C. Statsmodels  
+D. TensorFlow  
+
+---
+
+## Question 3
+
+What can users do in interactive visualizations?
+
+A. Hover and zoom  
+B. Delete data automatically  
+C. Install software  
+D. Remove variables  
+
+---
+
+## Question 4
+
+Which graph type is best for time trends?
+
+A. Pie chart  
+B. Histogram  
+C. Line graph  
+D. Table  
+
+---
+
+# Submission Instructions
+
+Before submitting:
+
+1. Save notebook properly.
+2. Rename notebook using:
+
+```text
+Week06_IndexNumber_Name.ipynb
+```
+
+Example:
+
+```text
+Week06_2024BA12345_Perera.ipynb
+```
+
+3. Set notebook sharing to:
+
+```text
+Anyone with the link → Viewer
+```
+
+---
+
+# Submission Link
+
+[Submit Week 6 Activity](PASTE_WEEK6_SUBMISSION_LINK_HERE)
+
+---
+
+# Passcode Access
+
+The lecturer will provide the passcode during the lecture.
+
+Students without the correct passcode cannot access the submission form.
+
+---
+
+# Common Errors
+
+## Problem 1 — Too Many Graphs
+
+More graphs do NOT necessarily improve analysis.
+
+Simplify.
+
+---
+
+## Problem 2 — Missing Labels
+
+Every graph must include:
+
+- title
+- labels
+- readable structure
+
+---
+
+## Problem 3 — Random Colors
+
+Colors should communicate meaning.
+
+Do not use colors randomly.
+
+---
+
+## Problem 4 — Weak Interpretation
+
+Dashboards without interpretation are incomplete analysis.
+
+---
+
+## Problem 5 — Misleading Visual Design
+
+Poor scaling or clutter can distort economic understanding.
+
+---
+
+# Academic Integrity
+
+Students may use lecture materials and course notes.
+
+However:
+
+- copied answers are not allowed
+- copied notebooks are not allowed
+- AI-generated answers without understanding are unacceptable
+
+Students are responsible for all submitted work.

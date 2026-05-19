@@ -1,0 +1,158 @@
+---
+title: "Weekly In-Class Activities"
+---
+
+# ECN 4199 — Weekly In-Class Activities
+
+This page contains the weekly in-class activities for **ECN 4199: Industrial Data Analytics**.
+
+Each activity must be completed during the scheduled lecture hour.
+
+---
+
+# Assessment Structure
+
+| Item | Details |
+|---|---|
+| Number of Activities | 13 |
+| Marks per Activity | 5 marks |
+| Total Marks | 65 marks |
+| Duration | 1 hour per activity |
+| Access | Lecturer passcode required |
+| Submission | Through weekly submission link |
+| Completion Time | During lecture only |
+
+---
+
+# Important Instructions
+
+Students must:
+
+1. Attend the scheduled lecture.
+2. Wait until the lecturer announces the passcode.
+3. Open the relevant weekly activity.
+4. Complete the activity within one hour.
+5. Submit before the activity closes.
+
+Late submissions will not be accepted unless approved by the lecturer.
+
+---
+
+# How Activities Work
+
+Each weekly activity may include:
+
+- short conceptual questions
+- Python coding tasks
+- interpretation questions
+- graph or output interpretation
+- short reflection questions
+
+The purpose is not memorisation.
+
+The purpose is to test whether students can apply the weekly concepts in real time.
+
+---
+
+# Passcode Access
+
+Each activity will be protected by a lecturer-set passcode.
+
+The passcode will be announced only during the relevant lecture.
+
+Students should not share passcodes with others.
+
+---
+
+# Weekly Activity Table
+
+| Week | Topic | Marks | Duration | Activity Link |
+|---|---|---:|---:|---|
+| Week 1 | Orientation and First Python Code | 5 | 1 hour | [Open Activity](activities/week1_activity.qmd) |
+| Week 2 | Setup and First Dataset | 5 | 1 hour | [Open Activity](activities/week2_activity.qmd) |
+| Week 3 | Python Fundamentals | 5 | 1 hour | [Open Activity](activities/week3_activity.qmd) |
+| Week 4 | Data Handling with Pandas | 5 | 1 hour | [Open Activity](activities/week4_activity.qmd) |
+| Week 5 | Statistics and Visualization | 5 | 1 hour | [Open Activity](activities/week5_activity.qmd) |
+| Week 6 | Interactive Dashboards | 5 | 1 hour | [Open Activity](activities/week6_activity.qmd) |
+| Week 7 | Regression Analysis | 5 | 1 hour | [Open Activity](activities/week7_activity.qmd) |
+| Week 8 | Machine Learning Foundations | 5 | 1 hour | [Open Activity](activities/week8_activity.qmd) |
+| Week 9 | Classification Models | 5 | 1 hour | [Open Activity](activities/week9_activity.qmd) |
+| Week 10 | Clustering and Unsupervised Learning | 5 | 1 hour | [Open Activity](activities/week10_activity.qmd) |
+| Week 11 | Forecasting and Time Series | 5 | 1 hour | [Open Activity](activities/week11_activity.qmd) |
+| Week 12 | NLP and Generative AI | 5 | 1 hour | [Open Activity](activities/week12_activity.qmd) |
+| Week 13 | Capstone Analytics Workflow | 5 | 1 hour | [Open Activity](activities/week13_activity.qmd) |
+
+---
+
+# Submission Format
+
+Each activity must be submitted through the relevant weekly activity link.
+
+Where a Colab notebook is required, students must:
+
+1. Save a copy in Google Drive.
+2. Rename the notebook properly.
+3. Set sharing to:
+
+```text
+Anyone with the link → Viewer
+```
+
+4. Submit the notebook link.
+
+---
+
+# Notebook Naming Convention
+
+Use the following format:
+
+```text
+WeekNumber_IndexNumber_Name.ipynb
+```
+
+Example:
+
+```text
+Week05_2024BA12345_Perera.ipynb
+```
+
+---
+
+# Marking
+
+Each weekly activity is worth **5 marks**.
+
+The total mark across all 13 activities is:
+
+```text
+13 × 5 = 65 marks
+```
+
+Marks will be based on:
+
+| Component | Marks |
+|---|---:|
+| Correct completion of required task | 2 |
+| Correct code/output | 1 |
+| Economic interpretation | 1 |
+| Timely submission and formatting | 1 |
+| Total | 5 |
+
+---
+
+# Academic Integrity
+
+Students may use course materials and lecture notebooks.
+
+However:
+
+- copying another student’s work is not allowed
+- submitting work without understanding is not allowed
+- AI tools must not be used to replace student reasoning
+- all submitted explanations must be written in the student’s own words
+
+---
+
+# Lecturer Note
+
+The weekly links will be activated or shared during the relevant lecture period only.

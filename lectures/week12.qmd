@@ -1,0 +1,1130 @@
+---
+title: "Week 12 — Text Data, AI, and Economic Analysis: Introduction to NLP and Generative AI"
+---
+
+# Week 12 — Natural Language Processing (NLP), Text Analytics, and Generative AI for Economics
+
+Weeks 7–11 focused primarily on:
+
+- numerical data
+- prediction
+- forecasting
+- machine learning models
+
+This week introduces:
+
+```text
+text as data
+```
+
+This is one of the most important shifts in modern analytics.
+
+Economists increasingly analyze:
+
+- news articles
+- policy reports
+- social media
+- company filings
+- speeches
+- parliamentary debates
+- survey responses
+- customer reviews
+
+This week introduces:
+
+- Natural Language Processing (NLP)
+- text cleaning
+- sentiment analysis
+- keyword analysis
+- topic exploration
+- generative AI systems
+- large language models (LLMs)
+
+---
+
+# Critical Conceptual Goal
+
+Students must understand:
+
+```text
+Language data is messy, ambiguous, contextual, and political.
+```
+
+Generative AI systems:
+
+- do not “understand” like humans
+- do not automatically produce truth
+- may hallucinate
+- inherit bias from training data
+- can still be extremely powerful analytical tools
+
+This week is NOT about:
+
+```text
+blindly trusting AI outputs
+```
+
+This week is about:
+
+```text
+learning how economists can critically use AI systems
+```
+
+---
+
+# 1. Learning Objectives
+
+By the end of this week, students should be able to:
+
+- explain what NLP is
+- explain why text data matters in economics
+- distinguish structured and unstructured data
+- clean and preprocess text data
+- tokenize text
+- remove stopwords
+- calculate word frequencies
+- perform basic sentiment analysis
+- explain topic exploration intuition
+- explain how generative AI systems work
+- understand prompt engineering basics
+- critically evaluate AI hallucinations and bias
+- discuss ethical issues in generative AI
+
+---
+
+# 2. What Is NLP?
+
+NLP stands for:
+
+```text
+Natural Language Processing
+```
+
+NLP combines:
+
+- linguistics
+- statistics
+- machine learning
+- computer science
+
+Its goal is to help computers process human language.
+
+---
+
+# Examples of NLP Applications
+
+- translation
+- chatbots
+- sentiment analysis
+- spam filtering
+- document classification
+- AI assistants
+
+---
+
+# Economic Applications
+
+Economists use NLP for:
+
+- policy analysis
+- financial sentiment
+- media analysis
+- labor market analysis
+- political economy research
+
+---
+
+# Important Lesson
+
+Human language is:
+
+- ambiguous
+- contextual
+- emotional
+- imperfect
+
+That makes NLP difficult.
+
+---
+
+# 3. Why Text Data Matters in Economics
+
+A huge amount of economic information exists as text.
+
+---
+
+# Examples
+
+| Source | Economic Value |
+|---|---|
+| Central bank speeches | Monetary policy signals |
+| News articles | Economic sentiment |
+| Company reports | Business expectations |
+| Social media | Consumer confidence |
+| Survey responses | Household experiences |
+
+---
+
+# Example
+
+A central bank speech may influence:
+
+- inflation expectations
+- financial markets
+- exchange rates
+
+---
+
+# Important Lesson
+
+Text data contains:
+
+- narratives
+- expectations
+- uncertainty
+- beliefs
+
+Economics increasingly studies these factors.
+
+---
+
+# 4. Structured vs Unstructured Data
+
+## Structured Data
+
+Structured data consists of:
+
+- organized tables
+- rows and columns
+
+Example:
+
+```text
+Inflation datasets
+```
+
+---
+
+## Unstructured Data
+
+Unstructured data consists of:
+
+- free text
+- documents
+- speeches
+- articles
+
+---
+
+# Important Distinction
+
+Text data is much harder to analyze because:
+
+- meaning depends on context
+- words are ambiguous
+- language evolves
+
+---
+
+# Example
+
+The word:
+
+```text
+inflation
+```
+
+may appear:
+
+- positively
+- negatively
+- neutrally
+
+depending on context.
+
+---
+
+# 5. Text as Economic Data
+
+Economists increasingly treat text as measurable information.
+
+---
+
+# Example Applications
+
+| Text Source | Possible Analysis |
+|---|---|
+| News articles | Economic uncertainty |
+| Firm reports | Business optimism |
+| Survey responses | Labor market stress |
+| Parliamentary speeches | Policy preferences |
+
+---
+
+# Important Lesson
+
+Text reflects:
+
+- beliefs
+- narratives
+- institutions
+- expectations
+
+These matter enormously in economics.
+
+---
+
+# 6. Cleaning Text Data
+
+Raw text is messy.
+
+Before analysis, text usually requires preprocessing.
+
+---
+
+# Example Text
+
+```text
+"Inflation in Sri Lanka increased sharply in 2022!"
+```
+
+---
+
+# Cleaning May Involve
+
+- lowercase conversion
+- punctuation removal
+- removing extra spaces
+- removing numbers
+
+---
+
+# Example
+
+```python
+text = text.lower()
+```
+
+---
+
+# Remove Punctuation
+
+```python
+import re
+
+text = re.sub(r"[^\w\s]", "", text)
+```
+
+---
+
+# Important Lesson
+
+Text preprocessing strongly affects results.
+
+---
+
+# 7. Tokenization
+
+Tokenization means splitting text into words or units.
+
+---
+
+# Example
+
+Sentence:
+
+```text
+Inflation increased sharply
+```
+
+Tokens:
+
+```python
+["Inflation", "increased", "sharply"]
+```
+
+---
+
+# Python Example
+
+```python
+text.split()
+```
+
+---
+
+# Why Important?
+
+Most NLP models operate on:
+
+```text
+tokens
+```
+
+not entire paragraphs directly.
+
+---
+
+# 8. Stopwords and Preprocessing
+
+Some words appear frequently but contain little analytical meaning.
+
+Examples:
+
+- the
+- and
+- is
+- of
+
+These are called:
+
+```text
+stopwords
+```
+
+---
+
+# Example
+
+```python
+from nltk.corpus import stopwords
+```
+
+---
+
+# Remove Stopwords
+
+```python
+stop_words = set(stopwords.words("english"))
+```
+
+---
+
+# Important Lesson
+
+Preprocessing choices shape:
+
+- interpretation
+- sentiment
+- topic identification
+
+---
+
+# Critical Warning
+
+Aggressive preprocessing may remove meaningful context.
+
+---
+
+# 9. Word Frequencies
+
+One simple NLP technique:
+
+```text
+counting word frequency
+```
+
+---
+
+# Example Questions
+
+Which words appear most often in:
+
+- policy speeches
+- economic reports
+- survey responses
+
+---
+
+# Example Code
+
+```python
+from collections import Counter
+```
+
+---
+
+# Count Words
+
+```python
+Counter(tokens)
+```
+
+---
+
+# Economic Interpretation
+
+Frequent words may reveal:
+
+- dominant concerns
+- narratives
+- policy focus
+
+---
+
+# Important Warning
+
+Frequency alone does NOT capture meaning.
+
+---
+
+# 10. Sentiment Analysis
+
+Sentiment analysis estimates:
+
+- positive tone
+- negative tone
+- neutral tone
+
+---
+
+# Economic Applications
+
+Sentiment analysis is used for:
+
+- financial markets
+- consumer confidence
+- policy communication
+- political economy
+
+---
+
+# Example
+
+Sentence:
+
+```text
+"The economy faces severe instability and uncertainty."
+```
+
+Likely negative sentiment.
+
+---
+
+# Python Example
+
+```python
+from textblob import TextBlob
+```
+
+---
+
+# Estimate Sentiment
+
+```python
+blob = TextBlob(text)
+
+blob.sentiment
+```
+
+---
+
+# Important Warning
+
+Sentiment models are imperfect.
+
+Language is:
+
+- contextual
+- sarcastic
+- culturally dependent
+
+---
+
+# 11. Topic Exploration
+
+Topic analysis attempts to identify:
+
+- recurring themes
+- hidden discussion structures
+
+---
+
+# Example
+
+A collection of articles may contain topics such as:
+
+- inflation
+- unemployment
+- political instability
+- trade
+
+---
+
+# Important Lesson
+
+Topics are:
+
+```text
+statistical groupings
+```
+
+not:
+
+```text
+objectively discovered truths
+```
+
+---
+
+# Example Application
+
+Economists may study:
+
+```text
+how media attention shifts over time
+```
+
+---
+
+# 12. Introduction to Generative AI
+
+Generative AI systems create:
+
+- text
+- images
+- code
+- summaries
+- predictions
+
+---
+
+# Examples
+
+- ChatGPT
+- Claude
+- Gemini
+- Copilot
+
+---
+
+# Important Idea
+
+Generative AI predicts:
+
+```text
+likely next tokens
+```
+
+It does NOT:
+
+- think like humans
+- possess consciousness
+- automatically understand truth
+
+---
+
+# Critical Lesson
+
+Generative AI systems are:
+
+```text
+probabilistic language systems
+```
+
+---
+
+# 13. What Are Large Language Models?
+
+Large Language Models (LLMs) are trained on massive text datasets.
+
+They learn:
+
+- language structure
+- statistical patterns
+- contextual relationships
+
+---
+
+# Examples of Tasks
+
+LLMs can:
+
+- summarize reports
+- generate code
+- answer questions
+- explain concepts
+- draft policy memos
+
+---
+
+# Important Warning
+
+LLMs may:
+
+- hallucinate
+- invent citations
+- produce false information confidently
+
+---
+
+# Critical Lesson
+
+AI outputs require:
+
+- verification
+- skepticism
+- critical evaluation
+
+---
+
+# 14. Prompt Engineering for Economists
+
+AI output quality depends heavily on prompts.
+
+---
+
+# Weak Prompt
+
+```text
+Explain inflation.
+```
+
+---
+
+# Better Prompt
+
+```text
+Explain inflation in Sri Lanka after 2021 using monetary and external sector factors in simple language for undergraduate economics students.
+```
+
+---
+
+# Important Lesson
+
+Good prompts:
+
+- provide context
+- specify audience
+- define scope
+- clarify expectations
+
+---
+
+# Example Applications
+
+Economists may use prompts to:
+
+- summarize reports
+- generate coding assistance
+- brainstorm hypotheses
+- explain theory
+- organize literature
+
+---
+
+# 15. AI Hallucinations and Bias
+
+Generative AI systems may:
+
+- fabricate information
+- invent references
+- reproduce social bias
+- reinforce stereotypes
+
+---
+
+# Example
+
+An AI system may:
+
+```text
+confidently generate nonexistent academic citations
+```
+
+---
+
+# Important Lesson
+
+Confidence does NOT imply correctness.
+
+---
+
+# Critical Warning
+
+Students must NEVER:
+
+- blindly trust AI outputs
+- submit unverified AI-generated analysis
+
+---
+
+# 16. Ethical Issues in Generative AI
+
+Generative AI raises major ethical concerns.
+
+---
+
+# Important Issues
+
+| Issue | Concern |
+|---|---|
+| Bias | Reinforcing inequality |
+| Misinformation | False content generation |
+| Privacy | Data misuse |
+| Labor | Automation effects |
+| Academic integrity | Plagiarism |
+
+---
+
+# Critical Lesson
+
+AI systems are:
+
+- technological
+- economic
+- political
+- ethical systems
+
+---
+
+# 17. Open the Week 12 Live Notebook
+
+Replace placeholder below:
+
+[Open Week 12 Live Notebook — Save a Copy Before Editing](PASTE_WEEK12_COLAB_LINK_HERE)
+
+---
+
+# 18. Download NLP Dataset
+
+Replace placeholder below:
+
+[Download NLP Dataset](PASTE_DATASET_LINK_HERE)
+
+---
+
+# 19. NLP Cheat Sheet
+
+Replace placeholder below:
+
+[Open NLP Cheat Sheet](PASTE_NLP_GUIDE_LINK_HERE)
+
+---
+
+# 20. Generative AI Guide
+
+Replace placeholder below:
+
+[Open Generative AI Guide](PASTE_AI_GUIDE_LINK_HERE)
+
+---
+
+# 21. Live Coding Session
+
+## Activity Title
+
+```text
+Analyzing Economic News Articles Using NLP
+```
+
+---
+
+## Step 1 — Import Libraries
+
+```python
+import pandas as pd
+import re
+
+from collections import Counter
+from textblob import TextBlob
+```
+
+---
+
+## Step 2 — Load Text Dataset
+
+```python
+data = pd.read_csv("economic_news.csv")
+```
+
+---
+
+## Step 3 — Convert Text to Lowercase
+
+```python
+data["Clean_Text"] = data["Article"].str.lower()
+```
+
+---
+
+## Step 4 — Remove Punctuation
+
+```python
+data["Clean_Text"] = data["Clean_Text"].apply(
+    lambda x: re.sub(r"[^\w\s]", "", x)
+)
+```
+
+---
+
+## Step 5 — Tokenize Text
+
+```python
+tokens = data["Clean_Text"][0].split()
+```
+
+---
+
+## Step 6 — Count Word Frequencies
+
+```python
+Counter(tokens).most_common(10)
+```
+
+---
+
+## Step 7 — Perform Sentiment Analysis
+
+```python
+blob = TextBlob(data["Clean_Text"][0])
+
+blob.sentiment
+```
+
+---
+
+## Step 8 — Interpretation Questions
+
+Ask students:
+
+- What themes dominate?
+- Does sentiment appear positive or negative?
+- What are limitations of automated sentiment analysis?
+- Could AI misinterpret context?
+- Should economists trust AI-generated summaries blindly?
+
+---
+
+# 22. Interactive Mini Quiz
+
+## Question 1
+
+```python
+answer = input("What does NLP stand for? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! NLP stands for Natural Language Processing.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 2
+
+```python
+answer = input("What is tokenization? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! Tokenization splits text into units.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 3
+
+```python
+answer = input("Can generative AI hallucinate? Yes/No : ")
+
+if answer.lower() == "yes":
+    print("Correct!")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 4
+
+```python
+answer = input("Should AI-generated outputs always be verified? Yes/No : ")
+
+if answer.lower() == "yes":
+    print("Correct!")
+else:
+    print("Incorrect.")
+```
+
+---
+
+# 23. Self-Assessment Activity
+
+## Activity Title
+
+```text
+Week 12 Self-Assessment: NLP and Generative AI for Economics
+```
+
+---
+
+## Task 1 — Clean Text Dataset
+
+Perform text preprocessing.
+
+---
+
+## Task 2 — Tokenize Text
+
+Split text into tokens.
+
+---
+
+## Task 3 — Calculate Word Frequencies
+
+Identify most common words.
+
+---
+
+## Task 4 — Perform Sentiment Analysis
+
+Estimate sentiment of selected articles.
+
+---
+
+## Task 5 — Interpret Themes
+
+Interpret:
+
+- dominant themes
+- sentiment patterns
+- narrative structures
+
+---
+
+## Task 6 — Experiment with AI Prompting
+
+Try multiple prompts and compare outputs.
+
+---
+
+## Task 7 — Analytical Reflection
+
+Write short paragraph:
+
+```text
+What are the opportunities and dangers of generative AI in economics and policy analysis?
+```
+
+---
+
+# 24. Submission Instructions
+
+Submit:
+
+- NLP notebook
+- text preprocessing outputs
+- sentiment analysis results
+- word frequency analysis
+- analytical reflection
+
+---
+
+# File Naming Convention
+
+```text
+Week12_YourName.ipynb
+```
+
+---
+
+# Submission Method
+
+Submit your Colab notebook link through the LMS.
+
+---
+
+# 25. Common Errors
+
+## Problem 1 — Blind Trust in AI Outputs
+
+Generative AI may confidently produce false information.
+
+---
+
+## Problem 2 — Over-Cleaning Text
+
+Excessive preprocessing may remove meaning.
+
+---
+
+## Problem 3 — Misinterpreting Sentiment Analysis
+
+Sentiment tools often fail with:
+
+- sarcasm
+- context
+- nuanced language
+
+---
+
+## Problem 4 — Treating Word Frequency as Meaning
+
+Frequent words do not automatically imply importance.
+
+---
+
+## Problem 5 — Ignoring Ethical Issues
+
+AI systems affect:
+
+- inequality
+- labor
+- misinformation
+- academic integrity
+
+---
+
+# 26. AI Reflection Question
+
+Generative AI systems can produce:
+
+- summaries
+- explanations
+- code
+- economic interpretations
+
+However:
+
+- AI may hallucinate
+- AI may inherit social bias
+- AI may sound confident while being wrong
+
+Reflection question:
+
+```text
+Why should economists critically evaluate AI-generated outputs instead of treating them as objective truth?
+```
+
+---
+
+# 27. Key Takeaways
+
+By the end of Week 12, students should understand:
+
+- what NLP is
+- structured vs unstructured data
+- text preprocessing
+- tokenization
+- stopwords
+- word frequency analysis
+- sentiment analysis
+- generative AI foundations
+- LLM intuition
+- prompt engineering
+- AI hallucinations and bias
+- ethical issues in AI systems
+
+---
+
+# 28. Before Week 13
+
+Before next week, students should:
+
+- rerun all Week 12 code
+- experiment with prompts carefully
+- think critically about AI outputs
+- review NLP preprocessing
+- complete submission

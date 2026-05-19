@@ -1,0 +1,1046 @@
+---
+title: "Week 7 — Regression Analysis and Predictive Modeling for Economics"
+---
+
+# Week 7 — Regression Analysis: Explaining and Predicting Economic Relationships
+
+Weeks 1–6 focused on:
+
+- programming foundations
+- data handling
+- visualization
+- dashboards
+
+Now students enter one of the most important areas in economics:
+
+```text
+regression analysis
+```
+
+This week is a major intellectual transition.
+
+Students move from:
+
+```text
+describing data
+```
+
+to:
+
+```text
+modeling relationships
+```
+
+This week introduces:
+
+- regression intuition
+- prediction
+- explanatory modeling
+- dependent and independent variables
+- model estimation
+- coefficient interpretation
+- prediction errors
+- fitted regression lines
+
+---
+
+# Critical Pedagogical Warning
+
+Most students memorize regression mechanically.
+
+That is dangerous.
+
+Students must understand:
+
+- what regression is trying to do
+- what assumptions exist
+- why prediction differs from causality
+- why models are simplifications
+
+This week should NOT become:
+
+```text
+copy this regression code
+```
+
+Regression is fundamentally about:
+
+```text
+thinking carefully about relationships
+```
+
+---
+
+# 1. Learning Objectives
+
+By the end of this week, students should be able to:
+
+- explain what regression is
+- distinguish dependent and independent variables
+- estimate simple linear regressions
+- interpret coefficients
+- distinguish prediction from causality
+- generate predictions
+- visualize fitted regression lines
+- evaluate model limitations
+
+---
+
+# 2. What Is Regression?
+
+Regression is a statistical method used to estimate relationships between variables.
+
+Economists ask questions such as:
+
+- How does income affect consumption?
+- How does inflation affect unemployment?
+- How does education affect wages?
+- How does exchange rate depreciation affect imports?
+
+Regression helps estimate these relationships.
+
+---
+
+# Simple Regression Idea
+
+```text
+Outcome = Relationship + Error
+```
+
+Example:
+
+```text
+Consumption = f(Income)
+```
+
+Meaning:
+
+```text
+Consumption partly depends on income
+```
+
+---
+
+# Important Lesson
+
+Regression does NOT uncover absolute truth.
+
+Regression estimates patterns from data.
+
+That distinction matters enormously.
+
+---
+
+# 3. Why Economists Use Regression
+
+Economists use regression because real-world relationships are complicated.
+
+We need tools to:
+
+- organize evidence
+- estimate relationships
+- compare variables
+- test hypotheses
+- generate predictions
+
+---
+
+# Applications of Regression
+
+Regression is used in:
+
+- labour economics
+- macroeconomics
+- finance
+- development economics
+- business forecasting
+- policy evaluation
+
+---
+
+# Example Policy Question
+
+A policymaker may ask:
+
+```text
+If inflation rises by 1%, what happens to unemployment?
+```
+
+Regression helps estimate that relationship.
+
+---
+
+# 4. Dependent and Independent Variables
+
+Regression involves:
+
+- dependent variables
+- independent variables
+
+---
+
+# Dependent Variable
+
+The outcome we want to explain.
+
+Examples:
+
+- consumption
+- wages
+- inflation
+- exports
+
+---
+
+# Independent Variable
+
+The variable used to explain the outcome.
+
+Examples:
+
+- income
+- education
+- exchange rate
+- interest rate
+
+---
+
+# Example Equation
+
+```text
+Consumption = β0 + β1(Income)
+```
+
+| Component | Meaning |
+|---|---|
+| Consumption | Dependent variable |
+| Income | Independent variable |
+| β1 | Estimated relationship |
+
+---
+
+# 5. Regression Intuition
+
+Suppose richer households generally consume more.
+
+Regression tries to estimate:
+
+```text
+how strongly consumption changes with income
+```
+
+---
+
+# Visual Intuition
+
+Imagine a scatter plot:
+
+- each point = one household
+- x-axis = income
+- y-axis = consumption
+
+Regression fits a line through the data.
+
+---
+
+# Important Lesson
+
+The line does NOT pass through every point perfectly.
+
+Why?
+
+Because:
+
+- real-world behavior is noisy
+- unobserved factors matter
+- human behavior is complex
+
+---
+
+# 6. Correlation vs Regression
+
+Correlation measures association.
+
+Regression estimates a mathematical relationship.
+
+---
+
+# Correlation Example
+
+```python
+data["Income"].corr(data["Consumption"])
+```
+
+---
+
+# Regression Example
+
+Regression estimates:
+
+- intercept
+- slope
+- prediction equation
+
+---
+
+# Critical Distinction
+
+Correlation:
+
+- symmetric
+- does not distinguish dependent variable
+
+Regression:
+
+- directional
+- explicitly models one variable as dependent
+
+---
+
+# 7. Prediction vs Causality
+
+This is one of the most important ideas in economics.
+
+---
+
+# Prediction
+
+Question:
+
+```text
+Can we accurately forecast outcomes?
+```
+
+Example:
+
+```text
+Can income predict consumption?
+```
+
+---
+
+# Causality
+
+Question:
+
+```text
+Does changing income actually cause consumption to change?
+```
+
+These are NOT the same question.
+
+---
+
+# Important Example
+
+Suppose:
+
+- ice cream sales rise
+- drowning deaths rise
+
+Prediction may work.
+
+But causality is incorrect.
+
+The hidden factor is:
+
+```text
+temperature
+```
+
+---
+
+# Critical Lesson
+
+Regression alone does NOT automatically prove causality.
+
+---
+
+# 8. Introduction to Linear Regression
+
+The simplest regression model is:
+
+```text
+Y = β0 + β1X + ε
+```
+
+---
+
+# Meaning of Components
+
+| Component | Meaning |
+|---|---|
+| Y | Dependent variable |
+| X | Independent variable |
+| β0 | Intercept |
+| β1 | Slope coefficient |
+| ε | Error term |
+
+---
+
+# Economic Interpretation
+
+Example:
+
+```text
+Consumption = β0 + β1(Income) + ε
+```
+
+If:
+
+```text
+β1 > 0
+```
+
+higher income is associated with higher consumption.
+
+---
+
+# 9. Estimating a Regression Model
+
+We now estimate our first regression model using Python.
+
+---
+
+# Import Libraries
+
+```python
+import pandas as pd
+import statsmodels.api as sm
+```
+
+---
+
+# Load Dataset
+
+```python
+data = pd.read_csv("consumption_data.csv")
+```
+
+---
+
+# Define Variables
+
+```python
+X = data["Income"]
+
+Y = data["Consumption"]
+```
+
+---
+
+# Add Constant
+
+```python
+X = sm.add_constant(X)
+```
+
+---
+
+# Estimate Model
+
+```python
+model = sm.OLS(Y, X).fit()
+```
+
+---
+
+# Display Results
+
+```python
+print(model.summary())
+```
+
+---
+
+# 10. Interpreting Coefficients
+
+Suppose regression output gives:
+
+| Variable | Coefficient |
+|---|---|
+| Income | 0.75 |
+
+Interpretation:
+
+```text
+If income increases by 1 unit,
+consumption increases by approximately 0.75 units on average.
+```
+
+---
+
+# Important Lesson
+
+Interpretation depends on:
+
+- units
+- variables
+- context
+
+Always interpret carefully.
+
+---
+
+# Example
+
+If income is measured in:
+
+```text
+thousands of rupees
+```
+
+then interpretation changes.
+
+---
+
+# 11. Visualizing Regression Lines
+
+Regression becomes easier to understand visually.
+
+---
+
+# Example
+
+```python
+import matplotlib.pyplot as plt
+
+plt.scatter(data["Income"],
+            data["Consumption"])
+
+plt.plot(data["Income"],
+         model.predict(X),
+         color="red")
+
+plt.show()
+```
+
+---
+
+# Interpretation Questions
+
+Students should observe:
+
+- fitted line
+- dispersion around line
+- outliers
+- slope direction
+
+---
+
+# 12. Model Fit and Prediction Errors
+
+Regression models are imperfect.
+
+Prediction errors always exist.
+
+---
+
+# Error Formula
+
+```text
+Error = Actual Value − Predicted Value
+```
+
+---
+
+# Example
+
+If:
+
+- actual consumption = 100
+- predicted consumption = 90
+
+then:
+
+```text
+prediction error = 10
+```
+
+---
+
+# Why Errors Matter
+
+Errors reveal:
+
+- model limitations
+- omitted variables
+- randomness
+- measurement problems
+
+---
+
+# 13. Actual vs Predicted Values
+
+We compare:
+
+- actual outcomes
+- predicted outcomes
+
+---
+
+# Generate Predictions
+
+```python
+data["Predicted_Consumption"] = model.predict(X)
+```
+
+---
+
+# Display Comparison
+
+```python
+data[["Consumption",
+      "Predicted_Consumption"]]
+```
+
+---
+
+# Visualization
+
+```python
+plt.plot(data["Consumption"],
+         label="Actual")
+
+plt.plot(data["Predicted_Consumption"],
+         label="Predicted")
+
+plt.legend()
+
+plt.show()
+```
+
+---
+
+# Interpretation Questions
+
+Ask:
+
+- Does the model track reality well?
+- Where are largest errors?
+- Why might errors occur?
+
+---
+
+# 14. Introduction to statsmodels
+
+statsmodels is widely used for econometrics.
+
+It provides:
+
+- regression estimation
+- statistical tests
+- model summaries
+
+---
+
+# Key Advantage
+
+statsmodels is good for:
+
+- interpretation
+- econometric analysis
+- statistical output
+
+---
+
+# Example
+
+```python
+model.summary()
+```
+
+This gives:
+
+- coefficients
+- standard errors
+- p-values
+- R-squared
+
+---
+
+# 15. Introduction to scikit-learn
+
+scikit-learn is widely used in machine learning.
+
+It focuses more on:
+
+- prediction
+- machine learning workflows
+- model evaluation
+
+---
+
+# Example Import
+
+```python
+from sklearn.linear_model import LinearRegression
+```
+
+---
+
+# Important Distinction
+
+| Library | Main Purpose |
+|---|---|
+| statsmodels | Econometrics and interpretation |
+| scikit-learn | Prediction and ML workflows |
+
+---
+
+# 16. Open the Week 7 Live Notebook
+
+Replace placeholder below:
+
+[Open Week 7 Live Notebook — Save a Copy Before Editing](PASTE_WEEK7_COLAB_LINK_HERE)
+
+---
+
+# 17. Download Regression Dataset
+
+Replace placeholder below:
+
+[Download Regression Dataset](PASTE_DATASET_LINK_HERE)
+
+---
+
+# 18. Regression Cheat Sheet
+
+Replace placeholder below:
+
+[Open Regression Cheat Sheet](PASTE_REGRESSION_GUIDE_LINK_HERE)
+
+---
+
+# 19. statsmodels Guide
+
+Replace placeholder below:
+
+[Open statsmodels Guide](PASTE_STATSMODELS_GUIDE_LINK_HERE)
+
+---
+
+# 20. Live Coding Session
+
+## Activity Title
+
+```text
+Modeling Consumption and Income Relationships
+```
+
+---
+
+## Step 1 — Import Libraries
+
+```python
+import pandas as pd
+import statsmodels.api as sm
+import matplotlib.pyplot as plt
+```
+
+---
+
+## Step 2 — Load Dataset
+
+```python
+data = pd.read_csv("consumption_data.csv")
+```
+
+---
+
+## Step 3 — Visualize Relationship
+
+```python
+plt.scatter(data["Income"],
+            data["Consumption"])
+
+plt.show()
+```
+
+---
+
+## Step 4 — Estimate Regression
+
+```python
+X = sm.add_constant(data["Income"])
+
+Y = data["Consumption"]
+
+model = sm.OLS(Y, X).fit()
+```
+
+---
+
+## Step 5 — Display Results
+
+```python
+print(model.summary())
+```
+
+---
+
+## Step 6 — Visualize Fitted Line
+
+```python
+plt.scatter(data["Income"],
+            data["Consumption"])
+
+plt.plot(data["Income"],
+         model.predict(X),
+         color="red")
+
+plt.show()
+```
+
+---
+
+## Step 7 — Generate Predictions
+
+```python
+data["Predicted_Consumption"] = model.predict(X)
+```
+
+---
+
+## Step 8 — Interpretation Questions
+
+Ask students:
+
+- Is relationship positive?
+- Is relationship strong?
+- Are there outliers?
+- Does model predict well?
+- Why are predictions imperfect?
+
+---
+
+# 21. Interactive Mini Quiz
+
+## Question 1
+
+```python
+answer = input("What is the main purpose of regression? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! Regression estimates relationships.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 2
+
+```python
+answer = input("What is the dependent variable? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! The dependent variable is the outcome variable.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 3
+
+```python
+answer = input("Does regression automatically prove causality? Yes/No : ")
+
+if answer.lower() == "no":
+    print("Correct!")
+else:
+    print("Incorrect.")
+```
+
+---
+
+# 22. Self-Assessment Activity
+
+Students should complete the following tasks.
+
+---
+
+## Task 1 — Estimate Regression
+
+Estimate regression between:
+
+- income
+- consumption
+
+---
+
+## Task 2 — Interpret Coefficient
+
+Interpret the income coefficient carefully.
+
+---
+
+## Task 3 — Create Visualizations
+
+Create:
+
+- scatter plot
+- fitted regression line
+
+---
+
+## Task 4 — Generate Predictions
+
+Generate predicted values using model predictions.
+
+---
+
+## Task 5 — Compare Actual vs Predicted
+
+Compare:
+
+- actual values
+- predicted values
+
+---
+
+## Task 6 — Analytical Interpretation
+
+Write short analytical paragraph:
+
+```text
+What does the regression model suggest about the relationship between income and consumption?
+```
+
+---
+
+## Task 7 — Identify Model Problems
+
+Identify:
+
+- outliers
+- prediction errors
+- possible model limitations
+
+---
+
+# 23. Submission Instructions
+
+Submit:
+
+- regression notebook
+- regression output
+- visualizations
+- predicted values
+- interpretation paragraph
+
+---
+
+# File Naming Convention
+
+```text
+Week7_YourName.ipynb
+```
+
+---
+
+# Submission Link
+
+Replace placeholder below:
+
+[Submit Week 7 Work](PASTE_SUBMISSION_LINK_HERE)
+
+---
+
+# 24. Common Errors
+
+## Problem 1 — Forgetting Constant
+
+Wrong:
+
+```python
+model = sm.OLS(Y, X).fit()
+```
+
+without adding constant.
+
+Correct:
+
+```python
+X = sm.add_constant(X)
+```
+
+---
+
+## Problem 2 — Misinterpreting Coefficients
+
+Interpretation depends on:
+
+- units
+- scale
+- variable definitions
+
+---
+
+## Problem 3 — Confusing Prediction and Causality
+
+Regression can predict well without proving causal relationships.
+
+---
+
+## Problem 4 — Ignoring Outliers
+
+Extreme observations may strongly influence regression lines.
+
+---
+
+## Problem 5 — Blindly Trusting R-Squared
+
+High R-squared does NOT automatically imply:
+
+- good theory
+- causality
+- correct specification
+
+---
+
+# 25. AI Reflection Question
+
+AI can automatically generate regression code.
+
+However:
+
+- AI may misinterpret relationships
+- AI may ignore assumptions
+- AI may confuse prediction and causality
+
+Reflection question:
+
+```text
+Why must economists understand regression logic even when AI tools generate models automatically?
+```
+
+---
+
+# 26. Key Takeaways
+
+By the end of Week 7, students should understand:
+
+- what regression is
+- why economists use regression
+- dependent vs independent variables
+- regression intuition
+- prediction vs causality
+- linear regression basics
+- coefficient interpretation
+- prediction errors
+- regression visualization
+- introductory econometric modeling
+
+---
+
+# 27. Before Week 8
+
+Before next week, students should:
+
+- rerun all Week 7 code
+- practice coefficient interpretation
+- review prediction vs causality
+- practice visualization of regression lines
+- complete submission

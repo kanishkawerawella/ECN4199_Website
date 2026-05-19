@@ -1,0 +1,528 @@
+---
+title: "Week 10 In-Class Activity"
+---
+
+# Week 10 — In-Class Timed Activity
+
+# ECN 4199 — Industrial Data Analytics
+
+---
+
+# Activity Information
+
+| Item | Details |
+|---|---|
+| Week | Week 10 |
+| Topic | Clustering, Segmentation, and Unsupervised Learning |
+| Marks | 5 Marks |
+| Duration | 1 Hour |
+| Attempts | One Attempt Only |
+| Access | Lecturer Passcode Required |
+
+---
+
+# Instructions
+
+1. Open the Week 10 live notebook.
+2. Save a copy to your Google Drive.
+3. Complete all required tasks.
+4. Answer all interpretation questions.
+5. Submit before the activity closes.
+
+---
+
+# Important Reminder
+
+This activity tests:
+
+- clustering intuition
+- unsupervised learning
+- similarity and distance
+- K-Means clustering
+- PCA
+- cluster interpretation
+- analytical reasoning
+
+This week is NOT about discovering “objective truth.”
+
+This week is about exploratory analysis and understanding hidden structure in data.
+
+---
+
+# Task 1 — Understanding Unsupervised Learning
+
+## Objective
+
+Distinguish supervised and unsupervised learning.
+
+---
+
+## Questions
+
+### Question 1
+
+What is the main difference between supervised and unsupervised learning?
+
+---
+
+### Question 2
+
+Does clustering require labeled outcomes?
+
+---
+
+### Question 3
+
+Give one example of clustering in economics or business.
+
+---
+
+# Task 2 — Load Dataset and Select Variables
+
+## Objective
+
+Prepare data for clustering.
+
+---
+
+## Instructions
+
+Load dataset and select variables.
+
+---
+
+## Expected Structure
+
+```python
+import pandas as pd
+
+data = pd.read_csv("country_macro_data.csv")
+
+X = data[["Inflation",
+          "GDP_Growth",
+          "Debt",
+          "Unemployment"]]
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Why does variable selection matter in clustering?
+
+---
+
+### Question 2
+
+Can different variables produce different clusters?
+
+Explain briefly.
+
+---
+
+### Question 3
+
+Why should variables sometimes be scaled before clustering?
+
+---
+
+# Task 3 — Train K-Means Clustering Model
+
+## Objective
+
+Perform first clustering analysis.
+
+---
+
+## Instructions
+
+Train K-Means model using 3 clusters.
+
+---
+
+## Example Structure
+
+```python
+from sklearn.cluster import KMeans
+
+kmeans = KMeans(n_clusters=3)
+
+kmeans.fit(X)
+```
+
+---
+
+## Extract Cluster Labels
+
+```python
+clusters = kmeans.labels_
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Who chooses the number of clusters?
+
+---
+
+### Question 2
+
+Does K-Means “discover truth”?
+
+Explain briefly.
+
+---
+
+### Question 3
+
+Why might different cluster numbers produce different stories?
+
+---
+
+# Task 4 — Visualize Clusters
+
+## Objective
+
+Interpret clustering visually.
+
+---
+
+## Instructions
+
+Create scatter plot using:
+
+- Inflation
+- GDP_Growth
+
+Color observations using cluster labels.
+
+---
+
+## Example Structure
+
+```python
+import matplotlib.pyplot as plt
+
+plt.scatter(data["Inflation"],
+            data["GDP_Growth"],
+            c=clusters)
+
+plt.xlabel("Inflation")
+plt.ylabel("GDP Growth")
+
+plt.show()
+```
+
+---
+
+## Questions
+
+### Question 1
+
+Do clusters appear clearly separated?
+
+---
+
+### Question 2
+
+Are there overlapping observations?
+
+---
+
+### Question 3
+
+Which observations appear unusual?
+
+---
+
+# Task 5 — Cluster Interpretation
+
+## Objective
+
+Interpret cluster meaning economically.
+
+---
+
+## Instructions
+
+Describe each cluster economically.
+
+Example:
+
+| Cluster | Interpretation |
+|---|---|
+| Cluster 1 | Stable economies |
+| Cluster 2 | High inflation economies |
+| Cluster 3 | Crisis economies |
+
+---
+
+## Questions
+
+### Question 1
+
+What characteristics define each cluster?
+
+---
+
+### Question 2
+
+Why does economic interpretation matter?
+
+---
+
+### Question 3
+
+Can algorithms automatically explain economic meaning?
+
+---
+
+# Task 6 — Apply PCA
+
+## Objective
+
+Reduce dimensions for visualization.
+
+---
+
+## Instructions
+
+Apply PCA using 2 components.
+
+---
+
+## Example Structure
+
+```python
+from sklearn.decomposition import PCA
+
+pca = PCA(n_components=2)
+
+principal_components = pca.fit_transform(X)
+```
+
+---
+
+## Visualize PCA Output
+
+```python
+plt.scatter(principal_components[:,0],
+            principal_components[:,1],
+            c=clusters)
+
+plt.show()
+```
+
+---
+
+## Questions
+
+### Question 1
+
+What is the purpose of PCA?
+
+---
+
+### Question 2
+
+Does dimensionality reduction simplify interpretation?
+
+---
+
+### Question 3
+
+What information might be lost during dimensionality reduction?
+
+---
+
+# Task 7 — Experiment with Cluster Numbers
+
+## Objective
+
+Understand sensitivity of clustering.
+
+---
+
+## Instructions
+
+Compare:
+
+- 2 clusters
+- 3 clusters
+- 5 clusters
+
+---
+
+## Questions
+
+### Question 1
+
+Do cluster structures change?
+
+---
+
+### Question 2
+
+Which number of clusters appears most interpretable?
+
+---
+
+### Question 3
+
+Why is there no universally “correct” number of clusters?
+
+---
+
+# Reflection Question
+
+Write a short paragraph answering:
+
+```text
+Why should economists critically evaluate clustering results instead of treating algorithmic groups as objective truths?
+```
+
+Your answer should include:
+
+- assumptions
+- variable selection
+- interpretation
+- scaling
+- policy implications
+
+---
+
+# Mini Quiz
+
+## Question 1
+
+What is the main purpose of clustering?
+
+A. Predict exact values  
+B. Group similar observations  
+C. Delete variables  
+D. Install Python  
+
+---
+
+## Question 2
+
+Does unsupervised learning require labeled outcomes?
+
+A. Yes  
+B. No  
+
+---
+
+## Question 3
+
+What does PCA mainly do?
+
+A. Predict probabilities  
+B. Reduce dimensions  
+C. Create websites  
+D. Remove observations  
+
+---
+
+## Question 4
+
+Who chooses the number of clusters?
+
+A. The dataset  
+B. The algorithm automatically  
+C. The analyst  
+D. Python itself  
+
+---
+
+# Submission Instructions
+
+Before submitting:
+
+1. Save notebook properly.
+2. Rename notebook using:
+
+```text
+Week10_IndexNumber_Name.ipynb
+```
+
+Example:
+
+```text
+Week10_2024BA12345_Perera.ipynb
+```
+
+3. Set notebook sharing to:
+
+```text
+Anyone with the link → Viewer
+```
+
+---
+
+# Submission Link
+
+[Submit Week 10 Activity](PASTE_WEEK10_SUBMISSION_LINK_HERE)
+
+---
+
+# Passcode Access
+
+The lecturer will provide the passcode during the lecture.
+
+Students without the correct passcode cannot access the submission form.
+
+---
+
+# Common Errors
+
+## Problem 1 — Ignoring Scaling
+
+Variables with large values may dominate clustering unfairly.
+
+---
+
+## Problem 2 — Treating Clusters as Objective Truth
+
+Clusters are constructed statistical groupings.
+
+They are NOT natural truths.
+
+---
+
+## Problem 3 — Weak Interpretation
+
+Algorithms alone do NOT explain economic meaning.
+
+Interpretation requires context and judgment.
+
+---
+
+## Problem 4 — Too Many Clusters
+
+Too many clusters reduce interpretability.
+
+---
+
+## Problem 5 — Blind Trust in Visualization
+
+Visual separation may exaggerate actual structure.
+
+---
+
+# Academic Integrity
+
+Students may use lecture materials and course notes.
+
+However:
+
+- copied answers are not allowed
+- copied notebooks are not allowed
+- AI-generated answers without understanding are unacceptable
+
+Students are responsible for all submitted work.

@@ -1,0 +1,1081 @@
+---
+title: "Week 13 — Capstone Integration: From Data to Economic Intelligence"
+---
+
+# Week 13 — Building End-to-End Economic Analytics Projects and AI-Powered Decision Systems
+
+Weeks 1–12 introduced:
+
+- Python fundamentals
+- data handling
+- visualization
+- regression
+- machine learning
+- forecasting
+- NLP
+- generative AI
+
+This final week integrates everything into:
+
+```text
+complete analytical systems
+```
+
+Students now move from:
+
+```text
+learning individual tools
+```
+
+to:
+
+```text
+designing full analytical workflows
+```
+
+This week focuses on:
+
+- project integration
+- analytical pipelines
+- economic storytelling
+- dashboard communication
+- AI-assisted workflows
+- reproducibility
+- ethical reasoning
+- critical interpretation
+
+---
+
+# Critical Conceptual Goal
+
+Students must understand:
+
+```text
+analytics is not coding alone
+```
+
+Good economic analytics requires:
+
+- theory
+- judgment
+- communication
+- skepticism
+- interpretation
+- reproducibility
+- ethics
+
+The final goal of the course is NOT:
+
+```text
+students who can run code
+```
+
+The goal is:
+
+```text
+students who can think computationally about economic problems
+```
+
+---
+
+# 1. Learning Objectives
+
+By the end of this week, students should be able to:
+
+- explain what an end-to-end analytics workflow is
+- formulate meaningful economic questions
+- design analytical pipelines
+- clean and validate datasets
+- perform exploratory analysis
+- choose appropriate models
+- evaluate predictions and forecasts
+- communicate results effectively
+- explain reproducibility principles
+- critically evaluate AI-assisted workflows
+- discuss ethical implications of analytics systems
+
+---
+
+# 2. Welcome to Week 13
+
+Over the past 12 weeks, you have learned:
+
+- programming
+- data handling
+- visualization
+- machine learning
+- forecasting
+- AI systems
+
+This week integrates everything into:
+
+```text
+complete economic analytics systems
+```
+
+You will learn:
+
+- how professional analytical workflows operate
+- how economists combine tools
+- how analytics supports decision-making
+- how to communicate evidence effectively
+
+This week is not about:
+
+```text
+learning one new model
+```
+
+It is about:
+
+```text
+learning how analytical systems fit together
+```
+
+---
+
+# 3. What Is an End-to-End Analytics Project?
+
+Real-world analytics projects involve:
+
+- multiple stages
+- multiple tools
+- multiple decisions
+
+---
+
+# Example Workflow
+
+A policy analytics project may involve:
+
+- collecting data
+- cleaning data
+- visualizing patterns
+- estimating models
+- forecasting outcomes
+- building dashboards
+- communicating findings
+
+---
+
+# Important Lesson
+
+Professional analytics is:
+
+- iterative
+- messy
+- uncertain
+
+Not:
+
+```text
+run one model and finish
+```
+
+---
+
+# 4. The Economic Analytics Pipeline
+
+Modern analytics usually follows a pipeline.
+
+---
+
+# Typical Pipeline
+
+```text
+Problem → Data → Cleaning → Exploration → Modeling → Evaluation → Communication → Policy Insight
+```
+
+---
+
+# Important Lesson
+
+Weakness at any stage weakens the entire analysis.
+
+---
+
+# Example
+
+A sophisticated ML model cannot rescue:
+
+- poor data
+- poor theory
+- poor interpretation
+
+---
+
+# Critical Lesson
+
+Analytics quality depends more on:
+
+```text
+thinking
+```
+
+than:
+
+```text
+software complexity
+```
+
+---
+
+# 5. Problem Formulation
+
+Bad questions produce bad analysis.
+
+---
+
+# Weak Question
+
+```text
+Use AI on economic data.
+```
+
+---
+
+# Better Question
+
+```text
+Can macroeconomic indicators help forecast inflation instability in Sri Lanka?
+```
+
+---
+
+# Important Lesson
+
+Good analytical questions are:
+
+- specific
+- measurable
+- meaningful
+- theoretically grounded
+
+---
+
+# Critical Lesson
+
+Coding cannot compensate for:
+
+```text
+vague thinking
+```
+
+---
+
+# 6. Data Collection and Cleaning
+
+Most real-world projects spend enormous effort on:
+
+- data collection
+- cleaning
+- preprocessing
+
+---
+
+# Important Tasks
+
+- handling missing values
+- merging datasets
+- validating consistency
+- preprocessing text
+- formatting variables
+
+---
+
+# Example
+
+```python
+data.isnull().sum()
+```
+
+---
+
+# Critical Lesson
+
+Poor data quality produces:
+
+- misleading conclusions
+- unstable models
+- unreliable forecasts
+
+---
+
+# Important Reminder
+
+Always inspect data critically.
+
+---
+
+# 7. Exploratory Data Analysis
+
+Before modeling:
+
+```text
+understand the data
+```
+
+---
+
+# Important Questions
+
+Ask:
+
+- What patterns exist?
+- Are there outliers?
+- Are relationships plausible?
+- Are variables stable?
+
+---
+
+# Example Visualization
+
+```python
+plt.scatter(data["Inflation"],
+            data["Exchange_Rate"])
+
+plt.show()
+```
+
+---
+
+# Critical Lesson
+
+Many modeling errors could be avoided through better exploration.
+
+---
+
+# 8. Model Selection
+
+Different problems require different models.
+
+---
+
+# Examples
+
+| Problem | Possible Model |
+|---|---|
+| Predict income | Regression |
+| Predict poverty | Classification |
+| Group firms | Clustering |
+| Forecast inflation | Time series |
+
+---
+
+# Important Lesson
+
+No universally “best” model exists.
+
+---
+
+# Critical Lesson
+
+Model selection depends on:
+
+- purpose
+- interpretability
+- theory
+- data quality
+- computational constraints
+
+---
+
+# 9. Prediction and Forecasting
+
+Models generate:
+
+- predictions
+- probabilities
+- forecasts
+
+---
+
+# Important Lesson
+
+Predictions should be:
+
+- evaluated
+- interpreted
+- stress-tested
+
+---
+
+# Example Evaluation
+
+```python
+mean_absolute_error(actual,
+                    predictions)
+```
+
+---
+
+# Critical Lesson
+
+Good performance historically does NOT guarantee:
+
+```text
+future reliability
+```
+
+---
+
+# 10. Dashboard Communication
+
+Analytics must be communicated clearly.
+
+---
+
+# Important Idea
+
+Decision-makers rarely read:
+
+- raw code
+- raw datasets
+
+They rely on:
+
+- dashboards
+- reports
+- visual summaries
+
+---
+
+# Example Dashboard Elements
+
+- macro indicators
+- forecast graphs
+- classification risk scores
+- sentiment indicators
+
+---
+
+# Important Lesson
+
+Communication is part of analysis.
+
+---
+
+# Critical Lesson
+
+Poor communication can destroy:
+
+- useful evidence
+- policy impact
+- decision quality
+
+---
+
+# 11. AI-Assisted Workflows
+
+Modern analysts increasingly use:
+
+- generative AI
+- coding assistants
+- automated summarization
+- AI-supported workflows
+
+---
+
+# Examples
+
+AI systems can help:
+
+- write code
+- summarize reports
+- explain methods
+- organize ideas
+- debug workflows
+
+---
+
+# Important Warning
+
+AI outputs require:
+
+- verification
+- judgment
+- validation
+
+---
+
+# Critical Lesson
+
+AI should assist reasoning.
+
+Not replace reasoning.
+
+---
+
+# 12. Reproducibility and Documentation
+
+Professional analytics must be reproducible.
+
+---
+
+# Reproducibility Means
+
+Another analyst should be able to:
+
+- rerun the analysis
+- understand the workflow
+- verify the results
+
+---
+
+# Important Practices
+
+- clear file organization
+- comments in code
+- documented assumptions
+- reproducible notebooks
+
+---
+
+# Example
+
+```python
+# Load inflation dataset
+data = pd.read_csv("inflation.csv")
+```
+
+---
+
+# Critical Lesson
+
+Undocumented analysis is:
+
+- difficult to trust
+- difficult to audit
+- difficult to reproduce
+
+---
+
+# 13. Economic Storytelling
+
+Analytics is not just:
+
+- models
+- code
+- outputs
+
+It is also:
+
+```text
+narrative
+```
+
+---
+
+# Weak Storytelling
+
+```text
+Model accuracy = 92%.
+```
+
+---
+
+# Better Storytelling
+
+```text
+The model identifies macroeconomic instability periods with relatively high accuracy, though performance weakens during structural shocks.
+```
+
+---
+
+# Important Lesson
+
+Good analytical communication:
+
+- explains uncertainty
+- explains limitations
+- explains context
+
+---
+
+# 14. Ethical and Policy Reflection
+
+Economic analytics affects:
+
+- policy
+- markets
+- employment
+- welfare
+- inequality
+
+---
+
+# Critical Questions
+
+Ask:
+
+- Could models reinforce inequality?
+- Could predictions create exclusion?
+- Could dashboards mislead?
+- Could AI hallucinations create misinformation?
+
+---
+
+# Important Lesson
+
+Technical accuracy alone is insufficient.
+
+---
+
+# Critical Lesson
+
+Responsible analytics requires:
+
+- ethics
+- transparency
+- accountability
+
+---
+
+# 15. Designing Final Projects
+
+Students now design integrated analytics projects.
+
+---
+
+# Suggested Project Structure
+
+| Stage | Task |
+|---|---|
+| 1 | Define economic question |
+| 2 | Collect data |
+| 3 | Clean data |
+| 4 | Explore patterns |
+| 5 | Build model |
+| 6 | Evaluate performance |
+| 7 | Visualize findings |
+| 8 | Reflect critically |
+
+---
+
+# Suggested Project Ideas
+
+- inflation forecasting dashboard
+- household poverty prediction
+- labor market analytics
+- exchange rate monitoring
+- sentiment analysis of economic news
+- business demand forecasting
+
+---
+
+# Important Lesson
+
+Projects should prioritize:
+
+- clarity
+- reasoning
+- interpretation
+
+Not:
+
+```text
+unnecessary technical complexity
+```
+
+---
+
+# 16. Open the Week 13 Live Notebook
+
+Replace placeholder below:
+
+[Open Week 13 Live Notebook — Save a Copy Before Editing](PASTE_WEEK13_COLAB_LINK_HERE)
+
+---
+
+# 17. Download Final Project Dataset
+
+Replace placeholder below:
+
+[Download Final Project Dataset](PASTE_DATASET_LINK_HERE)
+
+---
+
+# 18. Analytics Workflow Guide
+
+Replace placeholder below:
+
+[Open Analytics Workflow Guide](PASTE_WORKFLOW_GUIDE_LINK_HERE)
+
+---
+
+# 19. AI Ethics Checklist
+
+Replace placeholder below:
+
+[Open AI Ethics Checklist](PASTE_ETHICS_GUIDE_LINK_HERE)
+
+---
+
+# 20. Live Coding Session
+
+## Activity Title
+
+```text
+Building an Integrated Economic Analytics Workflow
+```
+
+---
+
+## Step 1 — Import Libraries
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error
+```
+
+---
+
+## Step 2 — Load Dataset
+
+```python
+data = pd.read_csv("macro_project_data.csv")
+```
+
+---
+
+## Step 3 — Clean Data
+
+```python
+data.dropna(inplace=True)
+```
+
+---
+
+## Step 4 — Visualize Relationships
+
+```python
+plt.scatter(data["Exchange_Rate"],
+            data["Inflation"])
+
+plt.show()
+```
+
+---
+
+## Step 5 — Train Model
+
+```python
+X = data[["Exchange_Rate"]]
+
+y = data["Inflation"]
+
+model = LinearRegression()
+
+model.fit(X, y)
+```
+
+---
+
+## Step 6 — Generate Predictions
+
+```python
+predictions = model.predict(X)
+```
+
+---
+
+## Step 7 — Evaluate Performance
+
+```python
+mean_absolute_error(y,
+                    predictions)
+```
+
+---
+
+## Step 8 — Visualize Predictions
+
+```python
+plt.plot(y,
+         label="Actual")
+
+plt.plot(predictions,
+         label="Predicted")
+
+plt.legend()
+
+plt.show()
+```
+
+---
+
+## Step 9 — Interpretation Questions
+
+Ask:
+
+- What assumptions exist?
+- What limitations emerge?
+- Would policymakers trust this model?
+- Could the model fail during crises?
+
+---
+
+# 21. Self-Assessment Activity
+
+## Activity Title
+
+```text
+Week 13 Self-Assessment: Building a Complete Analytics Workflow
+```
+
+---
+
+## Task 1 — Define Economic Question
+
+Develop a clear analytical question.
+
+---
+
+## Task 2 — Clean and Preprocess Dataset
+
+Prepare data for analysis.
+
+---
+
+## Task 3 — Perform Exploratory Visualization
+
+Visualize relationships and patterns.
+
+---
+
+## Task 4 — Build Predictive or Forecasting Model
+
+Estimate and interpret a model.
+
+---
+
+## Task 5 — Evaluate Model Performance
+
+Evaluate predictions critically.
+
+---
+
+## Task 6 — Create Dashboard or Visual Summary
+
+Communicate findings visually.
+
+---
+
+## Task 7 — Analytical Reflection
+
+Write short paragraph:
+
+```text
+What are the opportunities and limitations of AI-driven economic analytics?
+```
+
+---
+
+## Task 8 — Document Workflow Clearly
+
+Ensure reproducibility and clarity.
+
+---
+
+# 22. Final Reflection Quiz
+
+## Question 1
+
+```python
+answer = input("What is the first stage of an analytics workflow? A/B/C/D : ")
+
+if answer.upper() == "C":
+    print("Correct! Problem formulation comes first.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 2
+
+```python
+answer = input("Why is reproducibility important? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! Reproducibility allows verification.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 3
+
+```python
+answer = input("Can AI-generated outputs contain errors? Yes/No : ")
+
+if answer.lower() == "yes":
+    print("Correct!")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 4
+
+```python
+answer = input("What is the biggest danger in analytics? A/B/C/D : ")
+
+if answer.upper() == "C":
+    print("Correct! False confidence from models is dangerous.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 5
+
+```python
+answer = input("Good analytics requires only programming. Yes/No : ")
+
+if answer.lower() == "no":
+    print("Correct!")
+else:
+    print("Incorrect.")
+```
+
+---
+
+# 23. Submission Instructions
+
+Submit:
+
+- final notebook
+- cleaned dataset
+- visualizations
+- model outputs
+- analytical report
+- reflection section
+
+---
+
+# File Naming Convention
+
+```text
+FinalProject_YourName.ipynb
+```
+
+---
+
+# Submission Method
+
+Submit your final notebook and dashboard link through the LMS.
+
+---
+
+# 24. Common Errors
+
+## Problem 1 — Overcomplicated Models
+
+Complexity does not guarantee insight.
+
+---
+
+## Problem 2 — Weak Problem Formulation
+
+Poor questions produce poor analysis.
+
+---
+
+## Problem 3 — Ignoring Uncertainty
+
+All models contain limitations.
+
+---
+
+## Problem 4 — Blind Trust in AI Outputs
+
+Generative AI requires verification.
+
+---
+
+## Problem 5 — Poor Communication
+
+Strong analysis can fail if communicated badly.
+
+---
+
+# 25. AI Reflection Question
+
+Modern analytics increasingly relies on:
+
+- algorithms
+- dashboards
+- AI systems
+- automated predictions
+
+Reflection question:
+
+```text
+How can economists balance technological capability with critical judgment and ethical responsibility?
+```
+
+---
+
+# 26. Key Takeaways
+
+By the end of Week 13, students should understand:
+
+- end-to-end analytical workflows
+- economic problem formulation
+- integrated analytics pipelines
+- forecasting and prediction evaluation
+- dashboard communication
+- AI-assisted analytical systems
+- reproducibility
+- economic storytelling
+- ethical analytics
+- limitations of AI-driven decision systems
+
+---
+
+# 27. Closing Reflection
+
+Over this semester, you have learned:
+
+- Python
+- data analytics
+- machine learning
+- forecasting
+- NLP
+- AI systems
+
+But the most important lesson is not technical.
+
+The most important lesson is:
+
+```text
+computational thinking
+```
+
+Modern economists increasingly operate in a world shaped by:
+
+- algorithms
+- automation
+- AI systems
+- data-driven decisions
+
+Your responsibility is not merely to:
+
+- use models
+- generate predictions
+- build dashboards
+
+Your responsibility is to:
+
+- question assumptions
+- interpret critically
+- communicate honestly
+- recognize uncertainty
+- understand social consequences

@@ -1,0 +1,1125 @@
+---
+title: "Week 10 — Clustering, Segmentation, and Unsupervised Learning for Economics"
+---
+
+# Week 10 — Unsupervised Learning: Discovering Hidden Patterns in Economic Data
+
+Weeks 8 and 9 focused on:
+
+- supervised learning
+- prediction
+- classification
+- labeled outcomes
+
+This week introduces:
+
+```text
+unsupervised learning
+```
+
+This is a major conceptual shift.
+
+In supervised learning:
+
+- we know the correct answers
+- models learn from labeled outcomes
+
+In unsupervised learning:
+
+- there are no predefined labels
+- models attempt to identify hidden structure in data
+
+This week introduces:
+
+- clustering
+- segmentation
+- similarity
+- dimensionality reduction
+- exploratory pattern discovery
+
+Students will learn:
+
+- how algorithms group observations
+- how clusters emerge
+- why segmentation matters
+- why unsupervised learning can both reveal and distort patterns
+
+---
+
+# Critical Conceptual Goal
+
+Students must understand:
+
+```text
+Clustering does not “discover truth.”
+```
+
+Clusters are:
+
+- statistical groupings
+- shaped by variables
+- sensitive to assumptions
+- dependent on scale and preprocessing
+
+This week is about:
+
+```text
+analytical exploration, not certainty
+```
+
+---
+
+# 1. Learning Objectives
+
+By the end of this week, students should be able to:
+
+- explain unsupervised learning
+- distinguish supervised vs unsupervised learning
+- explain clustering intuition
+- understand similarity and distance
+- perform K-Means clustering
+- visualize clusters
+- interpret cluster structure
+- explain dimensionality reduction
+- apply PCA
+- critically evaluate clustering limitations
+
+---
+
+# 2. What Is Unsupervised Learning?
+
+Unsupervised learning attempts to identify structure in unlabeled data.
+
+---
+
+# Important Distinction
+
+## Supervised Learning
+
+```text
+Data + Correct Answers → Learn Relationship
+```
+
+---
+
+## Unsupervised Learning
+
+```text
+Data Only → Discover Structure
+```
+
+---
+
+# Example
+
+Suppose we have data on countries:
+
+- inflation
+- GDP growth
+- debt
+- unemployment
+- reserves
+
+Unsupervised learning may group countries into:
+
+- stable economies
+- crisis economies
+- high-growth economies
+
+without predefined labels.
+
+---
+
+# Important Lesson
+
+The algorithm is NOT discovering:
+
+```text
+natural truth
+```
+
+It is organizing observations based on:
+
+```text
+statistical similarity
+```
+
+---
+
+# 3. Supervised vs Unsupervised Learning
+
+This distinction is fundamental.
+
+---
+
+# Important Comparison
+
+| Supervised | Unsupervised |
+|---|---|
+| Prediction | Exploration |
+| Known labels | No labels |
+| Target variable | No target |
+| Accuracy evaluation | Structural interpretation |
+
+---
+
+# Example
+
+## Supervised Learning
+
+```text
+Predict poverty status
+```
+
+---
+
+## Unsupervised Learning
+
+```text
+Identify household groups automatically
+```
+
+---
+
+# Important Lesson
+
+Unsupervised learning is often:
+
+- exploratory
+- interpretive
+- assumption-sensitive
+
+---
+
+# 4. What Is Clustering?
+
+Clustering groups similar observations together.
+
+---
+
+# Example
+
+Suppose firms have:
+
+- sales
+- profits
+- debt
+- productivity
+
+Clustering may identify:
+
+- high-performing firms
+- struggling firms
+- medium-risk firms
+
+---
+
+# Important Intuition
+
+Observations within clusters should be:
+
+```text
+more similar to each other
+```
+
+than observations in other clusters.
+
+---
+
+# Critical Lesson
+
+Clustering is:
+
+- exploratory
+- probabilistic
+- sensitive to assumptions
+
+---
+
+# 5. Why Clustering Matters in Economics
+
+Economists frequently classify observations into groups.
+
+---
+
+# Applications
+
+Clustering is used for:
+
+- market segmentation
+- household typologies
+- country classification
+- poverty mapping
+- labor market segmentation
+- consumer analytics
+- policy targeting
+
+---
+
+# Example
+
+A development agency may identify:
+
+- highly vulnerable districts
+- moderately vulnerable districts
+- resilient districts
+
+using clustering techniques.
+
+---
+
+# Important Warning
+
+Cluster labels are created by analysts.
+
+They are NOT objective truths.
+
+---
+
+# 6. Similarity and Distance
+
+Clustering depends on similarity.
+
+Algorithms measure:
+
+```text
+how “close” observations are
+```
+
+---
+
+# Example Intuition
+
+Two households may be similar if:
+
+- income is similar
+- education is similar
+- household size is similar
+
+---
+
+# Distance Concept
+
+Clustering algorithms often use:
+
+```text
+Euclidean distance
+```
+
+---
+
+# Simple Intuition
+
+| Distance | Meaning |
+|---|---|
+| Short distance | Greater similarity |
+| Large distance | Less similarity |
+
+---
+
+# Important Lesson
+
+Variable scaling matters enormously.
+
+A variable with large values may dominate clustering.
+
+---
+
+# Example Problem
+
+Suppose:
+
+| Variable | Scale |
+|---|---|
+| Inflation | 5–50 |
+| GDP | 1000–500000 |
+
+GDP may dominate clustering unfairly.
+
+---
+
+# Important Lesson
+
+Preprocessing matters greatly.
+
+---
+
+# 7. Introduction to K-Means Clustering
+
+K-Means is one of the most widely used clustering algorithms.
+
+---
+
+# Basic Idea
+
+The algorithm:
+
+1. chooses cluster centers
+2. assigns observations
+3. updates centers
+4. repeats until stable
+
+---
+
+# Important Intuition
+
+K-Means attempts to minimize:
+
+```text
+within-cluster variation
+```
+
+---
+
+# Example
+
+```python
+from sklearn.cluster import KMeans
+```
+
+---
+
+# Train Model
+
+```python
+kmeans = KMeans(n_clusters=3)
+
+kmeans.fit(X)
+```
+
+---
+
+# Extract Cluster Labels
+
+```python
+clusters = kmeans.labels_
+```
+
+---
+
+# Important Lesson
+
+The analyst chooses:
+
+```text
+number of clusters
+```
+
+That choice matters enormously.
+
+---
+
+# 8. Choosing Number of Clusters
+
+One of the hardest questions:
+
+```text
+How many clusters should exist?
+```
+
+There is NO universally correct answer.
+
+---
+
+# Example
+
+Should countries be grouped into:
+
+- 2 clusters?
+- 3 clusters?
+- 5 clusters?
+
+Different choices create different narratives.
+
+---
+
+# Elbow Method Intuition
+
+We examine:
+
+```text
+how clustering quality changes as cluster number increases
+```
+
+---
+
+# Example
+
+```python
+inertia = []
+```
+
+---
+
+# Important Lesson
+
+Cluster selection is partly:
+
+- statistical
+- analytical
+- interpretive
+
+---
+
+# Critical Warning
+
+Students should avoid:
+
+```text
+blindly searching for “the correct” number of clusters
+```
+
+---
+
+# 9. Visualizing Clusters
+
+Visualization helps interpret clusters.
+
+---
+
+# Example Scatter Plot
+
+```python
+plt.scatter(data["Inflation"],
+            data["GDP_Growth"],
+            c=clusters)
+
+plt.show()
+```
+
+---
+
+# Interpretation Questions
+
+Ask:
+
+- Which groups emerge?
+- Are clusters clearly separated?
+- Are observations overlapping?
+- Which observations appear unusual?
+
+---
+
+# Important Warning
+
+Visual separation may appear stronger than reality.
+
+---
+
+# 10. Cluster Interpretation
+
+Clusters are useful only if interpreted meaningfully.
+
+---
+
+# Example
+
+| Cluster | Characteristics |
+|---|---|
+| Cluster 1 | Low inflation, stable growth |
+| Cluster 2 | High inflation, recession |
+| Cluster 3 | Moderate growth, moderate inflation |
+
+---
+
+# Important Lesson
+
+Interpretation requires:
+
+- economics
+- context
+- judgment
+
+Algorithms alone do NOT provide meaning.
+
+---
+
+# 11. Introduction to Dimensionality Reduction
+
+Many datasets contain:
+
+- many variables
+- high-dimensional structure
+
+Dimensionality reduction simplifies complexity.
+
+---
+
+# Important Idea
+
+We attempt to:
+
+- preserve information
+- reduce dimensions
+
+---
+
+# Example
+
+Instead of:
+
+```text
+20 variables
+```
+
+we summarize patterns using:
+
+```text
+2 or 3 dimensions
+```
+
+---
+
+# Why Useful?
+
+Dimensionality reduction helps:
+
+- visualization
+- interpretation
+- compression
+- noise reduction
+
+---
+
+# 12. PCA Intuition
+
+Principal Component Analysis (PCA) is one of the most important dimensionality reduction methods.
+
+---
+
+# Intuition
+
+PCA identifies:
+
+```text
+major directions of variation
+```
+
+---
+
+# Example
+
+Suppose:
+
+- inflation
+- depreciation
+- debt
+- reserves
+
+all move together during crises.
+
+PCA may summarize this as:
+
+```text
+one crisis dimension
+```
+
+---
+
+# Important Warning
+
+PCA components are:
+
+```text
+mathematical constructs
+```
+
+Interpretation requires caution.
+
+---
+
+# PCA Example
+
+```python
+from sklearn.decomposition import PCA
+```
+
+---
+
+# Fit PCA
+
+```python
+pca = PCA(n_components=2)
+
+principal_components = pca.fit_transform(X)
+```
+
+---
+
+# 13. Visualizing High-Dimensional Data
+
+PCA allows visualization of high-dimensional data in two dimensions.
+
+---
+
+# Example
+
+```python
+plt.scatter(principal_components[:,0],
+            principal_components[:,1],
+            c=clusters)
+
+plt.show()
+```
+
+---
+
+# Interpretation Questions
+
+Ask:
+
+- Do groups separate clearly?
+- Which observations are unusual?
+- Are clusters stable?
+
+---
+
+# Important Lesson
+
+Visualization simplifies reality.
+
+Simplification may hide important information.
+
+---
+
+# 14. Cluster Applications in Economics
+
+Economists use clustering for:
+
+- market segmentation
+- regional analysis
+- poverty profiling
+- firm classification
+- macroeconomic typologies
+- labor market analysis
+
+---
+
+# Example
+
+Countries may cluster into:
+
+- stable advanced economies
+- vulnerable emerging economies
+- commodity-dependent economies
+
+---
+
+# Important Warning
+
+Labels may shape policy decisions.
+
+Cluster interpretation has political consequences.
+
+---
+
+# 15. Limitations of Clustering
+
+Clustering has major limitations.
+
+---
+
+# Important Concerns
+
+Clusters depend on:
+
+- variable selection
+- scaling
+- algorithm choice
+- number of clusters
+- preprocessing decisions
+
+---
+
+# Critical Lesson
+
+Clusters are:
+
+```text
+constructed
+```
+
+NOT:
+
+```text
+objectively discovered
+```
+
+---
+
+# Example
+
+Different variables produce different groupings.
+
+---
+
+# Important Question
+
+Are clusters:
+
+- meaningful?
+- stable?
+- useful?
+
+or merely:
+
+```text
+artifacts of modeling choices?
+```
+
+---
+
+# 16. Open the Week 10 Live Notebook
+
+Replace placeholder below:
+
+[Open Week 10 Live Notebook — Save a Copy Before Editing](PASTE_WEEK10_COLAB_LINK_HERE)
+
+---
+
+# 17. Download Clustering Dataset
+
+Replace placeholder below:
+
+[Download Clustering Dataset](PASTE_DATASET_LINK_HERE)
+
+---
+
+# 18. Clustering Cheat Sheet
+
+Replace placeholder below:
+
+[Open Clustering Cheat Sheet](PASTE_CLUSTERING_GUIDE_LINK_HERE)
+
+---
+
+# 19. PCA Beginner Guide
+
+Replace placeholder below:
+
+[Open PCA Beginner Guide](PASTE_PCA_GUIDE_LINK_HERE)
+
+---
+
+# 20. Live Coding Session
+
+## Activity Title
+
+```text
+Clustering Countries by Macroeconomic Characteristics
+```
+
+---
+
+## Step 1 — Import Libraries
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
+```
+
+---
+
+## Step 2 — Load Dataset
+
+```python
+data = pd.read_csv("country_macro_data.csv")
+```
+
+---
+
+## Step 3 — Select Variables
+
+```python
+X = data[["Inflation",
+          "GDP_Growth",
+          "Debt",
+          "Unemployment"]]
+```
+
+---
+
+## Step 4 — Train K-Means Model
+
+```python
+kmeans = KMeans(n_clusters=3)
+
+kmeans.fit(X)
+```
+
+---
+
+## Step 5 — Extract Cluster Labels
+
+```python
+clusters = kmeans.labels_
+```
+
+---
+
+## Step 6 — Visualize Clusters
+
+```python
+plt.scatter(data["Inflation"],
+            data["GDP_Growth"],
+            c=clusters)
+
+plt.show()
+```
+
+---
+
+## Step 7 — Apply PCA
+
+```python
+pca = PCA(n_components=2)
+
+principal_components = pca.fit_transform(X)
+```
+
+---
+
+## Step 8 — Visualize PCA Output
+
+```python
+plt.scatter(principal_components[:,0],
+            principal_components[:,1],
+            c=clusters)
+
+plt.show()
+```
+
+---
+
+## Step 9 — Interpretation Questions
+
+Ask students:
+
+- What economic groups emerge?
+- Are clusters stable?
+- Which countries appear unusual?
+- How sensitive are clusters to variable choice?
+
+---
+
+# 21. Interactive Mini Quiz
+
+## Question 1
+
+```python
+answer = input("What is the main purpose of clustering? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! Clustering groups similar observations.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 2
+
+```python
+answer = input("Does clustering require labeled outcomes? Yes/No : ")
+
+if answer.lower() == "no":
+    print("Correct!")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 3
+
+```python
+answer = input("What does PCA mainly do? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! PCA reduces dimensions.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 4
+
+```python
+answer = input("Who chooses the number of clusters? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! The analyst chooses.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+# 22. Self-Assessment Activity
+
+## Activity Title
+
+```text
+Week 10 Self-Assessment: Clustering and Economic Segmentation
+```
+
+---
+
+## Task 1 — Perform K-Means Clustering
+
+Perform clustering using macroeconomic indicators.
+
+---
+
+## Task 2 — Visualize Clusters
+
+Create cluster visualization.
+
+---
+
+## Task 3 — Interpret Cluster Characteristics
+
+Interpret cluster meaning economically.
+
+---
+
+## Task 4 — Apply PCA
+
+Reduce dimensions using PCA.
+
+---
+
+## Task 5 — Visualize Reduced Dimensions
+
+Visualize PCA output.
+
+---
+
+## Task 6 — Experiment with Cluster Numbers
+
+Compare:
+
+- 2 clusters
+- 3 clusters
+- 5 clusters
+
+---
+
+## Task 7 — Analytical Reflection
+
+Write short paragraph:
+
+```text
+What are the strengths and limitations of clustering methods in economics?
+```
+
+---
+
+# 23. Submission Instructions
+
+Submit:
+
+- clustering notebook
+- cluster visualizations
+- PCA outputs
+- interpretation paragraph
+- analytical reflection
+
+---
+
+# File Naming Convention
+
+```text
+Week10_YourName.ipynb
+```
+
+---
+
+# Submission Link
+
+Replace placeholder below:
+
+[Submit Week 10 Work](PASTE_SUBMISSION_LINK_HERE)
+
+---
+
+# 24. Common Errors
+
+## Problem 1 — Ignoring Scaling
+
+Variables with larger scales may dominate clustering.
+
+---
+
+## Problem 2 — Treating Clusters as Objective Truth
+
+Clusters depend heavily on modeling choices.
+
+---
+
+## Problem 3 — Arbitrary Interpretation
+
+Cluster labels require careful economic reasoning.
+
+---
+
+## Problem 4 — Choosing Too Many Clusters
+
+Too many clusters reduce interpretability.
+
+---
+
+## Problem 5 — Blind Trust in Visualization
+
+Visual separation may exaggerate actual structure.
+
+---
+
+# 25. AI Reflection Question
+
+AI systems can automatically generate clusters.
+
+However:
+
+- AI may create arbitrary segmentation
+- AI may reinforce stereotypes
+- AI may generate unstable groupings
+
+Reflection question:
+
+```text
+Why should economists critically evaluate clustering results rather than treating algorithmic groups as objective truths?
+```
+
+---
+
+# 26. Key Takeaways
+
+By the end of Week 10, students should understand:
+
+- unsupervised learning
+- clustering intuition
+- similarity and distance
+- K-Means clustering
+- cluster interpretation
+- dimensionality reduction
+- PCA intuition
+- exploratory segmentation
+- limitations of clustering
+- clustering applications in economics
+
+---
+
+# 27. Before Week 11
+
+Before next week, students should:
+
+- rerun all Week 10 code
+- experiment with different clusters
+- review PCA intuition
+- reflect on interpretation challenges
+- complete submission

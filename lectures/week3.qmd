@@ -1,0 +1,932 @@
+---
+title: "Week 3 — Python Fundamentals for Economic Analysis"
+---
+
+# Week 3 — Python Fundamentals: Thinking Computationally as an Economist
+
+Weeks 1 and 2 focused on:
+
+- removing fear
+- understanding workflow
+- setting up tools
+- loading data
+
+This week is different.
+
+This is the week students stop behaving like:
+
+```text
+users of software
+```
+
+and start behaving like:
+
+```text
+people who instruct computers
+```
+
+That transition matters enormously.
+
+---
+
+# 1. Learning Objectives
+
+By the end of this week, students should be able to:
+
+- create variables
+- understand data types
+- work with lists
+- use conditional logic
+- automate repetition using loops
+- create reusable functions
+- structure economic problems computationally
+
+---
+
+# 2. Thinking Like a Computational Economist
+
+Programming is not only about code.
+
+Programming is about structured thinking.
+
+Economists constantly ask questions like:
+
+- If inflation increases, what happens to real wages?
+- If income falls below the poverty line, who becomes poor?
+- If exports decline for several years, what patterns emerge?
+- How can repetitive calculations be automated?
+
+Computers require explicit instructions.
+
+Programming teaches us how to:
+
+- break problems into steps
+- organize logic clearly
+- automate analysis
+- reduce human error
+
+---
+
+# 3. Variables
+
+A variable stores information.
+
+Example:
+
+```python
+inflation = 46.4
+```
+
+Here:
+
+- `inflation` is the variable name
+- `46.4` is the stored value
+
+---
+
+# Rules for Naming Variables
+
+Good examples:
+
+```python
+gdp_growth
+exchange_rate
+inflation_2024
+```
+
+Bad examples:
+
+```python
+1inflation
+exchange-rate
+my variable
+```
+
+Readable code matters.
+
+---
+
+# Why Variables Matter
+
+Without variables:
+
+```python
+((120 - 100) / 100) * 100
+```
+
+is difficult to interpret.
+
+With variables:
+
+```python
+old_price = 100
+new_price = 120
+
+inflation = ((new_price - old_price) / old_price) * 100
+```
+
+the meaning becomes clearer.
+
+---
+
+# 4. Data Types
+
+Different kinds of information are stored differently.
+
+---
+
+# Integer
+
+Whole numbers:
+
+```python
+population = 22
+```
+
+---
+
+# Float
+
+Decimal numbers:
+
+```python
+inflation = 46.4
+```
+
+---
+
+# String
+
+Text values:
+
+```python
+country = "Sri Lanka"
+```
+
+---
+
+# Checking Data Type
+
+```python
+type(inflation)
+```
+
+Expected output:
+
+```text
+float
+```
+
+---
+
+# Example
+
+```python
+gdp_growth = 5.2
+country_name = "Sri Lanka"
+year = 2025
+
+print(type(gdp_growth))
+print(type(country_name))
+print(type(year))
+```
+
+---
+
+# 5. Lists and Collections of Data
+
+Lists allow us to store multiple values together.
+
+Example:
+
+```python
+inflation_rates = [4.6, 6.0, 46.4]
+```
+
+---
+
+# Why Lists Matter
+
+Economists often work with:
+
+- multiple years
+- multiple countries
+- multiple households
+- multiple firms
+
+Lists help organize repeated information.
+
+---
+
+# Accessing List Elements
+
+```python
+inflation_rates[0]
+```
+
+Output:
+
+```text
+4.6
+```
+
+---
+
+# Important Idea
+
+Python counting starts from zero.
+
+| Position | Value |
+|---|---|
+| 0 | 4.6 |
+| 1 | 6.0 |
+| 2 | 46.4 |
+
+---
+
+# Length of List
+
+```python
+len(inflation_rates)
+```
+
+Expected output:
+
+```text
+3
+```
+
+---
+
+# Adding Values to Lists
+
+```python
+inflation_rates.append(12.5)
+```
+
+---
+
+# Example
+
+```python
+inflation_rates = [4.6, 6.0, 46.4]
+
+print(inflation_rates)
+
+inflation_rates.append(12.5)
+
+print(inflation_rates)
+```
+
+---
+
+# 6. Economic Calculations Using Lists
+
+Suppose we have GDP growth rates over several years.
+
+```python
+gdp_growth = [3.5, 5.2, -7.8, 2.1]
+```
+
+---
+
+# Average GDP Growth
+
+```python
+average_growth = sum(gdp_growth) / len(gdp_growth)
+
+print(average_growth)
+```
+
+---
+
+# Interpretation
+
+This calculates the average GDP growth over the period.
+
+---
+
+# Another Example
+
+```python
+exports = [100, 120, 150, 130]
+
+maximum_exports = max(exports)
+
+print(maximum_exports)
+```
+
+---
+
+# Important Functions
+
+| Function | Purpose |
+|---|---|
+| `sum()` | Adds values |
+| `len()` | Counts items |
+| `max()` | Largest value |
+| `min()` | Smallest value |
+
+---
+
+# 7. Conditional Statements
+
+Conditional statements allow Python to make decisions.
+
+This is one of the most important ideas in programming.
+
+---
+
+# Example: Inflation Classification
+
+```python
+inflation = 12
+
+if inflation > 10:
+    print("High inflation")
+```
+
+---
+
+# Interpretation
+
+Python checks:
+
+```text
+Is inflation greater than 10?
+```
+
+If yes:
+
+```text
+Display "High inflation"
+```
+
+---
+
+# Using Else
+
+```python
+inflation = 6
+
+if inflation > 10:
+    print("High inflation")
+else:
+    print("Moderate inflation")
+```
+
+---
+
+# Using Elif
+
+```python
+inflation = 25
+
+if inflation < 5:
+    print("Low inflation")
+elif inflation < 15:
+    print("Moderate inflation")
+else:
+    print("High inflation")
+```
+
+---
+
+# Economics Example: Poverty Classification
+
+```python
+income = 12000
+poverty_line = 15000
+
+if income < poverty_line:
+    print("Poor household")
+else:
+    print("Non-poor household")
+```
+
+---
+
+# 8. Decision-Making with Python
+
+Economics often involves classification.
+
+Examples:
+
+- poor vs non-poor
+- employed vs unemployed
+- inflationary vs stable economy
+- high-risk vs low-risk borrower
+
+Conditional logic allows us to automate these classifications.
+
+---
+
+# Example: Exchange Rate Warning
+
+```python
+exchange_rate_change = 18
+
+if exchange_rate_change > 15:
+    print("Large depreciation detected")
+else:
+    print("Exchange rate relatively stable")
+```
+
+---
+
+# 9. Loops and Repetition
+
+Loops allow us to repeat tasks automatically.
+
+This is extremely important in data analysis.
+
+Without loops, repetitive work becomes exhausting.
+
+---
+
+# Example
+
+```python
+inflation_rates = [4.6, 6.0, 46.4]
+
+for rate in inflation_rates:
+    print(rate)
+```
+
+---
+
+# Interpretation
+
+Python:
+
+- takes each value
+- stores it temporarily as `rate`
+- prints it
+- repeats until the list ends
+
+---
+
+# Another Example
+
+```python
+gdp_growth = [3.5, 5.2, -7.8, 2.1]
+
+for growth in gdp_growth:
+    
+    if growth < 0:
+        print("Recession year")
+    else:
+        print("Positive growth")
+```
+
+---
+
+# Why Loops Matter
+
+Loops are essential for:
+
+- handling large datasets
+- repetitive calculations
+- automation
+- machine learning workflows
+
+---
+
+# 10. Functions
+
+Functions allow us to create reusable code.
+
+This is critical in professional programming.
+
+---
+
+# Example Function
+
+```python
+def calculate_growth(old_value, new_value):
+
+    growth_rate = ((new_value - old_value) / old_value) * 100
+
+    return growth_rate
+```
+
+---
+
+# Using the Function
+
+```python
+result = calculate_growth(100, 120)
+
+print(result)
+```
+
+Expected output:
+
+```text
+20.0
+```
+
+---
+
+# Why Functions Matter
+
+Functions:
+
+- reduce repetition
+- improve readability
+- improve organization
+- reduce errors
+
+---
+
+# Economic Example: Inflation Function
+
+```python
+def inflation_rate(old_cpi, new_cpi):
+
+    inflation = ((new_cpi - old_cpi) / old_cpi) * 100
+
+    return inflation
+```
+
+---
+
+# Using the Function
+
+```python
+rate = inflation_rate(200, 240)
+
+print(rate)
+```
+
+---
+
+# 11. Open the Week 3 Live Notebook
+
+Replace the placeholder below with your actual notebook link.
+
+[Open Week 3 Live Notebook — Save a Copy Before Editing](PASTE_WEEK3_COLAB_LINK_HERE)
+
+---
+
+# 12. Live Coding Session
+
+## Step 1 — Create Variables
+
+```python
+gdp_2023 = 5000
+gdp_2024 = 5400
+```
+
+---
+
+## Step 2 — Calculate Growth
+
+```python
+gdp_growth = ((gdp_2024 - gdp_2023) / gdp_2023) * 100
+
+print(gdp_growth)
+```
+
+---
+
+## Step 3 — Create List of Inflation Rates
+
+```python
+inflation_rates = [4.6, 6.0, 46.4, 12.5]
+```
+
+---
+
+## Step 4 — Calculate Average Inflation
+
+```python
+average_inflation = sum(inflation_rates) / len(inflation_rates)
+
+print(average_inflation)
+```
+
+---
+
+## Step 5 — Use Conditional Logic
+
+```python
+if average_inflation > 10:
+    print("Inflation problem detected")
+else:
+    print("Inflation relatively stable")
+```
+
+---
+
+## Step 6 — Create Loop
+
+```python
+for rate in inflation_rates:
+    print(rate)
+```
+
+---
+
+## Step 7 — Create Reusable Function
+
+```python
+def growth_rate(old, new):
+
+    growth = ((new - old) / old) * 100
+
+    return growth
+```
+
+---
+
+## Step 8 — Test Function
+
+```python
+growth_rate(200, 250)
+```
+
+---
+
+# 13. Interactive Mini Quiz
+
+Run the following inside the notebook.
+
+---
+
+## Question 1
+
+```python
+answer = input("What is a variable? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! A variable stores information.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 2
+
+```python
+answer = input("Which symbol means greater than? ")
+
+if answer == ">":
+    print("Correct!")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 3
+
+```python
+answer = input("What does a loop do? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! Loops repeat tasks.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+# 14. Self-Assessment Activity
+
+Students should complete the following tasks.
+
+---
+
+## Task 1 — Create Variables
+
+Create variables for:
+
+- exports
+- imports
+- exchange rate
+
+Print all values.
+
+---
+
+## Task 2 — Create GDP Growth List
+
+Create a list of GDP growth rates.
+
+Calculate:
+
+- average growth
+- maximum growth
+- minimum growth
+
+---
+
+## Task 3 — Inflation Classification
+
+Write conditional logic:
+
+- inflation below 5 → “Low inflation”
+- inflation between 5 and 15 → “Moderate inflation”
+- inflation above 15 → “High inflation”
+
+---
+
+## Task 4 — Loop Exercise
+
+Create a loop that prints:
+
+```text
+Positive growth
+```
+
+or
+
+```text
+Negative growth
+```
+
+for each GDP growth value.
+
+---
+
+## Task 5 — Create Function
+
+Create a reusable function that calculates percentage change.
+
+Formula:
+
+```text
+[(new - old) / old] × 100
+```
+
+---
+
+## Task 6 — Apply Function
+
+Apply your function to:
+
+- GDP
+- CPI
+- exchange rate
+
+Interpret each result.
+
+---
+
+# 15. Submission Instructions
+
+Submit notebook including:
+
+- variables
+- list calculations
+- conditional statements
+- loops
+- reusable functions
+- written interpretations
+
+---
+
+# File Naming Convention
+
+```text
+Week3_YourName.ipynb
+```
+
+---
+
+# Submission Link
+
+Replace placeholder below:
+
+[Submit Week 3 Work](PASTE_SUBMISSION_LINK_HERE)
+
+---
+
+# 16. Common Errors
+
+## Problem 1 — Indentation Errors
+
+Wrong:
+
+```python
+if inflation > 10:
+print("High inflation")
+```
+
+Correct:
+
+```python
+if inflation > 10:
+    print("High inflation")
+```
+
+Indentation matters in Python.
+
+---
+
+## Problem 2 — Forgetting Colon
+
+Wrong:
+
+```python
+if inflation > 10
+```
+
+Correct:
+
+```python
+if inflation > 10:
+```
+
+---
+
+## Problem 3 — Confusing = and ==
+
+`=` assigns value.
+
+Example:
+
+```python
+inflation = 12
+```
+
+`==` checks equality.
+
+Example:
+
+```python
+inflation == 12
+```
+
+---
+
+## Problem 4 — Forgetting Parentheses
+
+Wrong:
+
+```python
+print
+```
+
+Correct:
+
+```python
+print()
+```
+
+---
+
+## Problem 5 — Undefined Variables
+
+Wrong:
+
+```python
+print(gdp_growth)
+```
+
+before defining variable.
+
+---
+
+# 17. AI Reflection Question
+
+AI can generate Python code.
+
+However:
+
+- AI may generate incorrect logic
+- AI may misunderstand economic concepts
+- AI may produce inefficient code
+
+Reflection question:
+
+```text
+Why should economists understand programming logic even when AI tools can generate code automatically?
+```
+
+---
+
+# 18. Key Takeaways
+
+By the end of Week 3, students should understand:
+
+- how variables store information
+- how lists organize data
+- how conditional statements automate decisions
+- how loops automate repetition
+- how functions create reusable code
+- how computational thinking supports economics
+
+---
+
+# 19. Before Week 4
+
+Before next week, students should:
+
+- rerun all Week 3 code
+- practice loops and functions
+- debug at least one error themselves
+- complete self-assessment
+- submit notebook
