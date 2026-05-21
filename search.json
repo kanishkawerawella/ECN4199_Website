@@ -133,11 +133,137 @@
     "text": "Problem 3: Notebook not saving\nPossible reasons:\n\nGoogle Drive storage issue\ninternet disconnected\nnotebook opened in view-only mode"
   },
   {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "Weekly In-Class Activities",
+    "objectID": "project.html#stage-1-topic-selection",
+    "href": "project.html#stage-1-topic-selection",
+    "title": "Final Project",
+    "section": "Stage 1 — Topic Selection",
+    "text": "Stage 1 — Topic Selection\nStudents should first identify:\n\nan economic problem\nbusiness problem\npolicy issue\nforecasting problem\nbehavioral pattern\nor analytical question\n\nthat is both:\n\nmeaningful\nrealistically achievable within the semester\n\nStudents are encouraged to choose topics that genuinely interest them."
+  },
+  {
+    "objectID": "project.html#stage-2-preliminary-data-exploration",
+    "href": "project.html#stage-2-preliminary-data-exploration",
+    "title": "Final Project",
+    "section": "Stage 2 — Preliminary Data Exploration",
+    "text": "Stage 2 — Preliminary Data Exploration\nBefore finalizing the project, groups should:\n\nidentify possible datasets\ninspect data quality\nassess data availability\nexamine variable structure\nevaluate feasibility\n\nProjects with unrealistic data requirements are discouraged."
+  },
+  {
+    "objectID": "project.html#stage-3-conceptual-note-submission",
+    "href": "project.html#stage-3-conceptual-note-submission",
+    "title": "Final Project",
+    "section": "Stage 3 — Conceptual Note Submission",
+    "text": "Stage 3 — Conceptual Note Submission\nBefore:\n30.06.2026\neach group must submit:\n\nproposed project title\nnames and index numbers of all group members\none-page conceptual note\n\nthrough the LMS under:\nFinal Project → Conceptual Note\nThe conceptual note should briefly explain:\n\nproposed analytical question\nmotivation\nproposed data source\npossible analytical methods\nexpected contribution\n\n\nLMS Submission Link\nSubmit Concept Note"
+  },
+  {
+    "objectID": "project.html#stage-4-feasibility-discussion-with-lecturer",
+    "href": "project.html#stage-4-feasibility-discussion-with-lecturer",
+    "title": "Final Project",
+    "section": "Stage 4 — Feasibility Discussion with Lecturer",
+    "text": "Stage 4 — Feasibility Discussion with Lecturer\nAfter submitting the conceptual note, each group must arrange a discussion with the lecturer regarding:\n\nproject feasibility\ndataset suitability\nanalytical scope\ntechnical complexity\nrealism of proposed methods\n\nImportant:\nContacting the lecturer and arranging the discussion is entirely the responsibility of the student group.\nFailure to arrange this discussion may lead to poorly scoped or unrealistic projects."
+  },
+  {
+    "objectID": "project.html#stage-5-project-development",
+    "href": "project.html#stage-5-project-development",
+    "title": "Final Project",
+    "section": "Stage 5 — Project Development",
+    "text": "Stage 5 — Project Development\nFollowing approval and feedback, groups should proceed with:\n\ndata cleaning\nexploratory analysis\nvisualization\nmodeling\ninterpretation\ndocumentation\nreproducibility checks\n\nStudents are strongly encouraged to develop the project incrementally throughout the semester rather than postponing all work until the final weeks."
+  },
+  {
+    "objectID": "project.html#macroeconomic-forecasting",
+    "href": "project.html#macroeconomic-forecasting",
+    "title": "Final Project",
+    "section": "1. Macroeconomic Forecasting",
+    "text": "1. Macroeconomic Forecasting\nExamples:\n\ninflation forecasting\nexchange rate forecasting\nreserve adequacy analysis\nGDP growth forecasting"
+  },
+  {
+    "objectID": "project.html#labour-market-analytics",
+    "href": "project.html#labour-market-analytics",
+    "title": "Final Project",
+    "section": "2. Labour Market Analytics",
+    "text": "2. Labour Market Analytics\nExamples:\n\nunemployment prediction\nlabour force participation analysis\ngender wage gap analytics\neducation and employment outcomes"
+  },
+  {
+    "objectID": "project.html#business-analytics",
+    "href": "project.html#business-analytics",
+    "title": "Final Project",
+    "section": "3. Business Analytics",
+    "text": "3. Business Analytics\nExamples:\n\ncustomer segmentation\ndemand forecasting\nsales analytics dashboards\nfirm performance prediction"
+  },
+  {
+    "objectID": "project.html#nlp-and-ai-projects",
+    "href": "project.html#nlp-and-ai-projects",
+    "title": "Final Project",
+    "section": "4. NLP and AI Projects",
+    "text": "4. NLP and AI Projects\nExamples:\n\nsentiment analysis of economic news\nAI-assisted policy analysis\neconomic narrative tracking\ncentral bank speech analysis"
+  },
+  {
+    "objectID": "project.html#development-and-policy-analytics",
+    "href": "project.html#development-and-policy-analytics",
+    "title": "Final Project",
+    "section": "5. Development and Policy Analytics",
+    "text": "5. Development and Policy Analytics\nExamples:\n\npoverty prediction\nwelfare targeting systems\nhousehold vulnerability analysis\ndistrict-level development dashboard"
+  },
+  {
+    "objectID": "project.html#problem-1-overly-ambitious-projects",
+    "href": "project.html#problem-1-overly-ambitious-projects",
+    "title": "Final Project",
+    "section": "Problem 1 — Overly Ambitious Projects",
+    "text": "Problem 1 — Overly Ambitious Projects\nDo not attempt extremely large projects beyond the course scope."
+  },
+  {
+    "objectID": "project.html#problem-2-blind-use-of-ai-tools",
+    "href": "project.html#problem-2-blind-use-of-ai-tools",
+    "title": "Final Project",
+    "section": "Problem 2 — Blind Use of AI Tools",
+    "text": "Problem 2 — Blind Use of AI Tools\nAI-generated code must be:\n\nunderstood\nverified\ninterpreted critically"
+  },
+  {
+    "objectID": "project.html#problem-3-weak-interpretation",
+    "href": "project.html#problem-3-weak-interpretation",
+    "title": "Final Project",
+    "section": "Problem 3 — Weak Interpretation",
+    "text": "Problem 3 — Weak Interpretation\nGraphs and outputs without interpretation are insufficient."
+  },
+  {
+    "objectID": "project.html#problem-4-poor-documentation",
+    "href": "project.html#problem-4-poor-documentation",
+    "title": "Final Project",
+    "section": "Problem 4 — Poor Documentation",
+    "text": "Problem 4 — Poor Documentation\nUnreadable notebooks reduce project quality."
+  },
+  {
+    "objectID": "project.html#problem-5-ignoring-limitations",
+    "href": "project.html#problem-5-ignoring-limitations",
+    "title": "Final Project",
+    "section": "Problem 5 — Ignoring Limitations",
+    "text": "Problem 5 — Ignoring Limitations\nEvery model and dataset has limitations."
+  },
+  {
+    "objectID": "project.html#conceptual-note-submission",
+    "href": "project.html#conceptual-note-submission",
+    "title": "Final Project",
+    "section": "Conceptual Note Submission",
+    "text": "Conceptual Note Submission\nStudents must submit:\n\none-page conceptual note\nproposed title\ngroup member details\n\nthrough the LMS under:\nFinal Project → Conceptual Note"
+  },
+  {
+    "objectID": "project.html#final-project-submission",
+    "href": "project.html#final-project-submission",
+    "title": "Final Project",
+    "section": "Final Project Submission",
+    "text": "Final Project Submission\nFinal submissions must be uploaded to the LMS under:\nFinal Project\nThe following items must be uploaded:\n\nFinal Report\nPython Notebook\nDataset(s)\nSupporting files if applicable"
+  },
+  {
+    "objectID": "roadmap.html",
+    "href": "roadmap.html",
+    "title": "Course Roadmap",
     "section": "",
-    "text": "ECN 4199 — Weekly In-Class Activities\nThis page contains the weekly in-class activities for ECN 4199: Industrial Data Analytics.\nEach activity must be completed during the scheduled lecture hour.\n\n\n\nAssessment Structure\n\n\n\nItem\nDetails\n\n\n\n\nNumber of Activities\n13\n\n\nMarks per Activity\n5 marks\n\n\nTotal Marks\n65 marks\n\n\nDuration\n1 hour per activity\n\n\nAccess\nLecturer passcode required\n\n\nSubmission\nThrough weekly submission link\n\n\nCompletion Time\nDuring lecture only\n\n\n\n\n\n\nImportant Instructions\nStudents must:\n\nAttend the scheduled lecture.\nWait until the lecturer announces the passcode.\nOpen the relevant weekly activity.\nComplete the activity within one hour.\nSubmit before the activity closes.\n\nLate submissions will not be accepted unless approved by the lecturer.\n\n\n\nHow Activities Work\nEach weekly activity may include:\n\nshort conceptual questions\nPython coding tasks\ninterpretation questions\ngraph or output interpretation\nshort reflection questions\n\nThe purpose is not memorisation.\nThe purpose is to test whether students can apply the weekly concepts in real time.\n\n\n\nPasscode Access\nEach activity will be protected by a lecturer-set passcode.\nThe passcode will be announced only during the relevant lecture.\nStudents should not share passcodes with others.\n\n\n\nWeekly Activity Table\n\n\n\nWeek\nTopic\nMarks\nDuration\nActivity Link\n\n\n\n\nWeek 1\nOrientation and First Python Code\n5\n1 hour\nOpen Activity\n\n\n\n\n\n\n\nSubmission Format\nEach activity must be submitted through the relevant weekly activity link.\nWhere a Colab notebook is required, students must:\n\nSave a copy in Google Drive.\nRename the notebook properly.\nSet sharing to:\n\nAnyone with the link → Viewer\n\nSubmit the notebook link.\n\n\n\n\nNotebook Naming Convention\nUse the following format:\nWeekNumber_IndexNumber_Name.ipynb\nExample:\nWeek05_2024BA12345_Perera.ipynb\n\n\n\nMarking\nEach weekly activity is worth 5 marks.\nThe total mark across all 13 activities is:\n13 × 5 = 65 marks\nMarks will be based on:\n\n\n\nComponent\nMarks\n\n\n\n\nCorrect completion of required task\n2\n\n\nCorrect code/output\n1\n\n\nEconomic interpretation\n1\n\n\nTimely submission and formatting\n1\n\n\nTotal\n5\n\n\n\n\n\n\nAcademic Integrity\nStudents may use course materials and lecture notebooks.\nHowever:\n\ncopying another student’s work is not allowed\nsubmitting work without understanding is not allowed\nAI tools must not be used to replace student reasoning\nall submitted explanations must be written in the student’s own words\n\n\n\n\nLecturer Note\nThe weekly links will be activated or shared during the relevant lecture period only."
+    "text": "This course is organized into two major learning phases."
+  },
+  {
+    "objectID": "roadmap.html#week-1-digital-course-orientation-and-computational-thinking",
+    "href": "roadmap.html#week-1-digital-course-orientation-and-computational-thinking",
+    "title": "Course Roadmap",
+    "section": "Week 1 — Digital Course Orientation and Computational Thinking",
+    "text": "Week 1 — Digital Course Orientation and Computational Thinking\nOpen Week 1"
   },
   {
     "objectID": "index.html",
@@ -189,18 +315,53 @@
     "text": "Final Analytics Project\nStudents will complete an individual final analytics project carrying:\n35 Marks\nThe final project allows students to apply analytical methods learned throughout the course to a real-world economic, business, or policy problem.\nDetailed guidelines are available under the:\nFinal Project\ntab."
   },
   {
-    "objectID": "roadmap.html",
-    "href": "roadmap.html",
-    "title": "Course Roadmap",
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Weekly In-Class Activities",
     "section": "",
-    "text": "This course is organized into two major learning phases."
+    "text": "This page contains the weekly in-class activities for:\nECN 4199 — Industrial Data Analytics\nThese activities form the continuous assessment component of the course and are designed to provide hands-on analytical experience throughout the semester."
   },
   {
-    "objectID": "roadmap.html#week-1-digital-course-orientation-and-computational-thinking",
-    "href": "roadmap.html#week-1-digital-course-orientation-and-computational-thinking",
-    "title": "Course Roadmap",
-    "section": "Week 1 — Digital Course Orientation and Computational Thinking",
-    "text": "Week 1 — Digital Course Orientation and Computational Thinking\nOpen Week 1"
+    "objectID": "assignments.html#step-1-open-the-notebook",
+    "href": "assignments.html#step-1-open-the-notebook",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 1 — Open the Notebook",
+    "text": "Step 1 — Open the Notebook\nOpen the relevant notebook link provided within the weekly lecture materials."
+  },
+  {
+    "objectID": "assignments.html#step-2-save-a-personal-copy",
+    "href": "assignments.html#step-2-save-a-personal-copy",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 2 — Save a Personal Copy",
+    "text": "Step 2 — Save a Personal Copy\nInside Google Colab:\nFile → Save a Copy in Drive\nThis creates your own editable version.\nStudents should NEVER directly edit shared lecture notebooks."
+  },
+  {
+    "objectID": "assignments.html#step-3-complete-the-activity",
+    "href": "assignments.html#step-3-complete-the-activity",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 3 — Complete the Activity",
+    "text": "Step 3 — Complete the Activity\nStudents should:\n\nwrite code\nanswer interpretation questions\ngenerate outputs\nsave all completed work properly"
+  },
+  {
+    "objectID": "assignments.html#step-4-rename-the-notebook-properly",
+    "href": "assignments.html#step-4-rename-the-notebook-properly",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 4 — Rename the Notebook Properly",
+    "text": "Step 4 — Rename the Notebook Properly\nRename the notebook using the following structure:\nWeekNumber_IndexNumber_Name.ipynb\nExample:\nWeek05_2024BA12345_Perera.ipynb"
+  },
+  {
+    "objectID": "assignments.html#step-5-enable-sharing",
+    "href": "assignments.html#step-5-enable-sharing",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 5 — Enable Sharing",
+    "text": "Step 5 — Enable Sharing\nInside Google Colab:\nShare → General Access → Anyone with the Link → Viewer\nThis step is extremely important.\nIf sharing access is not enabled properly, the notebook cannot be evaluated."
+  },
+  {
+    "objectID": "assignments.html#step-6-submit-the-notebook-link",
+    "href": "assignments.html#step-6-submit-the-notebook-link",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 6 — Submit the Notebook Link",
+    "text": "Step 6 — Submit the Notebook Link\nCopy the notebook URL and submit it through the relevant weekly submission link."
   },
   {
     "objectID": "resources.html",
@@ -319,7 +480,7 @@
     "href": "lectures/week1.html",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "",
-    "text": "Welcome to ECN 4199 — Industrial Data Analytics.\nThis week is not about advanced coding. It is about removing fear, understanding the course workflow, and running your first Python code."
+    "text": "Welcome to:\nThis first week is NOT about advanced programming.\nIt is about:"
   },
   {
     "objectID": "lectures/week1.html#formula",
@@ -332,15 +493,15 @@
     "objectID": "lectures/week1.html#python-code",
     "href": "lectures/week1.html#python-code",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Python code",
-    "text": "Python code\ngdp_last_year = 1000\ngdp_this_year = 1080\n\ngdp_growth = ((gdp_this_year - gdp_last_year) / gdp_last_year) * 100\n\nprint(gdp_growth)"
+    "section": "Python Code",
+    "text": "Python Code\ngdp_last_year = 1000\ngdp_this_year = 1080\n\ngdp_growth = ((gdp_this_year - gdp_last_year) / gdp_last_year) * 100\n\nprint(gdp_growth)"
   },
   {
     "objectID": "lectures/week1.html#interpretation",
     "href": "lectures/week1.html#interpretation",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Interpretation",
-    "text": "Interpretation\nThe economy grew by 8 percent."
+    "text": "Interpretation\nThe economy grew by:\n8 percent"
   },
   {
     "objectID": "lectures/week1.html#formula-1",
@@ -353,15 +514,15 @@
     "objectID": "lectures/week1.html#python-code-1",
     "href": "lectures/week1.html#python-code-1",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Python code",
-    "text": "Python code\ncpi_last_year = 200\ncpi_this_year = 240\n\ninflation_rate = ((cpi_this_year - cpi_last_year) / cpi_last_year) * 100\n\nprint(inflation_rate)"
+    "section": "Python Code",
+    "text": "Python Code\ncpi_last_year = 200\ncpi_this_year = 240\n\ninflation_rate = ((cpi_this_year - cpi_last_year) / cpi_last_year) * 100\n\nprint(inflation_rate)"
   },
   {
     "objectID": "lectures/week1.html#interpretation-1",
     "href": "lectures/week1.html#interpretation-1",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Interpretation",
-    "text": "Interpretation\nPrices increased by 20 percent."
+    "text": "Interpretation\nPrices increased by:\n20 percent"
   },
   {
     "objectID": "lectures/week1.html#formula-2",
@@ -374,15 +535,15 @@
     "objectID": "lectures/week1.html#python-code-2",
     "href": "lectures/week1.html#python-code-2",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Python code",
-    "text": "Python code\nexchange_rate_old = 320\nexchange_rate_new = 360\n\ndepreciation = ((exchange_rate_new - exchange_rate_old) / exchange_rate_old) * 100\n\nprint(depreciation)"
+    "section": "Python Code",
+    "text": "Python Code\nexchange_rate_old = 320\nexchange_rate_new = 360\n\ndepreciation = ((exchange_rate_new - exchange_rate_old) / exchange_rate_old) * 100\n\nprint(depreciation)"
   },
   {
     "objectID": "lectures/week1.html#interpretation-2",
     "href": "lectures/week1.html#interpretation-2",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Interpretation",
-    "text": "Interpretation\nThe domestic currency depreciated by 12.5 percent."
+    "text": "Interpretation\nThe domestic currency depreciated by:\n12.5 percent"
   },
   {
     "objectID": "lectures/week1.html#formula-3",
@@ -395,105 +556,126 @@
     "objectID": "lectures/week1.html#python-code-3",
     "href": "lectures/week1.html#python-code-3",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Python code",
-    "text": "Python code\nnominal_income = 100000\nprice_index = 125\n\nreal_income = (nominal_income / price_index) * 100\n\nprint(real_income)"
+    "section": "Python Code",
+    "text": "Python Code\nnominal_income = 100000\nprice_index = 125\n\nreal_income = (nominal_income / price_index) * 100\n\nprint(real_income)"
   },
   {
     "objectID": "lectures/week1.html#interpretation-3",
     "href": "lectures/week1.html#interpretation-3",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Interpretation",
-    "text": "Interpretation\nAlthough nominal income is 100,000, real income is 80,000 in base-year prices."
+    "text": "Interpretation\nAlthough nominal income is:\n100,000\nreal income is:\n80,000\nin base-year prices."
   },
   {
     "objectID": "lectures/week1.html#task-1-print-your-first-message",
     "href": "lectures/week1.html#task-1-print-your-first-message",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Task 1: Print Your First Message",
-    "text": "Task 1: Print Your First Message\nWrite Python code to print:\nI am learning Python for Economics\nExpected code:\nprint(\"I am learning Python for Economics\")"
+    "section": "Task 1 — Print Your First Message",
+    "text": "Task 1 — Print Your First Message\nWrite Python code to print:\nI am learning Python for Economics"
   },
   {
     "objectID": "lectures/week1.html#task-2-calculate-inflation",
     "href": "lectures/week1.html#task-2-calculate-inflation",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Task 2: Calculate Inflation",
-    "text": "Task 2: Calculate Inflation\nGiven:\n\nCPI in 2023 = 180\nCPI in 2024 = 216\n\nCalculate the inflation rate.\nExpected answer:\n20.0"
+    "section": "Task 2 — Calculate Inflation",
+    "text": "Task 2 — Calculate Inflation\nGiven:\n\nCPI in 2023 = 180\nCPI in 2024 = 216\n\nCalculate the inflation rate."
   },
   {
     "objectID": "lectures/week1.html#task-3-calculate-gdp-growth",
     "href": "lectures/week1.html#task-3-calculate-gdp-growth",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Task 3: Calculate GDP Growth",
-    "text": "Task 3: Calculate GDP Growth\nGiven:\n\nGDP in 2023 = 8500\nGDP in 2024 = 9010\n\nCalculate GDP growth.\nExpected answer:\n6.0"
+    "section": "Task 3 — Calculate GDP Growth",
+    "text": "Task 3 — Calculate GDP Growth\nGiven:\n\nGDP in 2023 = 8500\nGDP in 2024 = 9010\n\nCalculate GDP growth."
   },
   {
     "objectID": "lectures/week1.html#task-4-calculate-exchange-rate-depreciation",
     "href": "lectures/week1.html#task-4-calculate-exchange-rate-depreciation",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Task 4: Calculate Exchange Rate Depreciation",
-    "text": "Task 4: Calculate Exchange Rate Depreciation\nGiven:\n\nOld exchange rate = 300\nNew exchange rate = 330\n\nCalculate the depreciation percentage.\nExpected answer:\n10.0"
+    "section": "Task 4 — Calculate Exchange Rate Depreciation",
+    "text": "Task 4 — Calculate Exchange Rate Depreciation\nGiven:\n\nOld exchange rate = 300\nNew exchange rate = 330\n\nCalculate the depreciation percentage."
   },
   {
     "objectID": "lectures/week1.html#task-5-short-reflection",
     "href": "lectures/week1.html#task-5-short-reflection",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Task 5: Short Reflection",
-    "text": "Task 5: Short Reflection\nAnswer in 3–5 sentences:\nWhat can Python do that Excel cannot easily do?"
+    "section": "Task 5 — Short Reflection",
+    "text": "Task 5 — Short Reflection\nAnswer in 3–5 sentences:\nWhat can Python do that Excel cannot easily do?"
   },
   {
     "objectID": "lectures/week1.html#question-1",
     "href": "lectures/week1.html#question-1",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Question 1",
-    "text": "Question 1\nWhat is Python?\nA. A spreadsheet software\nB. A programming language\nC. A statistical table\nD. A search engine\nCorrect answer: B"
+    "text": "Question 1\nWhat is Python?\nA. Spreadsheet software\nB. Programming language\nC. Statistical table\nD. Search engine\nCorrect Answer:\nB"
   },
   {
     "objectID": "lectures/week1.html#question-2",
     "href": "lectures/week1.html#question-2",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Question 2",
-    "text": "Question 2\nWhat does print() do in Python?\nA. Deletes data\nB. Displays output\nC. Creates a graph\nD. Opens Excel\nCorrect answer: B"
+    "text": "Question 2\nWhat does print() do?\nA. Deletes data\nB. Displays output\nC. Creates a graph\nD. Opens Excel\nCorrect Answer:\nB"
   },
   {
     "objectID": "lectures/week1.html#question-3",
     "href": "lectures/week1.html#question-3",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Question 3",
-    "text": "Question 3\nWhich symbol is used for multiplication in Python?\nA. x\nB. *\nC. /\nD. ^\nCorrect answer: B"
+    "text": "Question 3\nWhich symbol represents multiplication in Python?\nA. x\nB. *\nC. /\nD. ^\nCorrect Answer:\nB"
   },
   {
     "objectID": "lectures/week1.html#question-4",
     "href": "lectures/week1.html#question-4",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Question 4",
-    "text": "Question 4\nIf GDP increases from 100 to 110, what is the growth rate?\nA. 5%\nB. 10%\nC. 15%\nD. 20%\nCorrect answer: B"
+    "text": "Question 4\nIf GDP increases from 100 to 110, what is the growth rate?\nA. 5%\nB. 10%\nC. 15%\nD. 20%\nCorrect Answer:\nB"
   },
   {
     "objectID": "lectures/week1.html#problem-1-missing-quotation-marks",
     "href": "lectures/week1.html#problem-1-missing-quotation-marks",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Problem 1: Missing quotation marks",
-    "text": "Problem 1: Missing quotation marks\nWrong:\nprint(Hello Economics)\nCorrect:\nprint(\"Hello Economics\")"
+    "section": "Problem 1 — Missing Quotation Marks",
+    "text": "Problem 1 — Missing Quotation Marks\nWrong:\nprint(Hello Economics)\nCorrect:\nprint(\"Hello Economics\")"
   },
   {
     "objectID": "lectures/week1.html#problem-2-using-commas-in-numbers",
     "href": "lectures/week1.html#problem-2-using-commas-in-numbers",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Problem 2: Using commas in numbers",
-    "text": "Problem 2: Using commas in numbers\nWrong:\ngdp = 1,000\nBetter:\ngdp = 1000"
+    "section": "Problem 2 — Using Commas in Numbers",
+    "text": "Problem 2 — Using Commas in Numbers\nWrong:\ngdp = 1,000\nCorrect:\ngdp = 1000"
   },
   {
     "objectID": "lectures/week1.html#problem-3-wrong-multiplication-symbol",
     "href": "lectures/week1.html#problem-3-wrong-multiplication-symbol",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Problem 3: Wrong multiplication symbol",
-    "text": "Problem 3: Wrong multiplication symbol\nWrong:\ngrowth = value x 100\nCorrect:\ngrowth = value * 100"
+    "section": "Problem 3 — Wrong Multiplication Symbol",
+    "text": "Problem 3 — Wrong Multiplication Symbol\nWrong:\ngrowth = value x 100\nCorrect:\ngrowth = value * 100"
   },
   {
-    "objectID": "lectures/week1.html#problem-4-forgetting-to-run-the-code-cell",
-    "href": "lectures/week1.html#problem-4-forgetting-to-run-the-code-cell",
+    "objectID": "lectures/week1.html#problem-4-forgetting-to-run-cells",
+    "href": "lectures/week1.html#problem-4-forgetting-to-run-cells",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Problem 4: Forgetting to run the code cell",
-    "text": "Problem 4: Forgetting to run the code cell\nIn Colab, press:\nShift + Enter"
+    "section": "Problem 4 — Forgetting to Run Cells",
+    "text": "Problem 4 — Forgetting to Run Cells\nRemember:\nShift + Enter\nruns a code cell."
+  },
+  {
+    "objectID": "lectures/week1.html#step-1-save-a-personal-copy",
+    "href": "lectures/week1.html#step-1-save-a-personal-copy",
+    "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
+    "section": "Step 1 — Save a Personal Copy",
+    "text": "Step 1 — Save a Personal Copy\nInside Google Colab:\nFile → Save a Copy in Drive\nThis creates your own editable version.\nStudents should NOT directly edit the shared lecture notebook."
+  },
+  {
+    "objectID": "lectures/week1.html#step-2-organize-google-drive",
+    "href": "lectures/week1.html#step-2-organize-google-drive",
+    "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
+    "section": "Step 2 — Organize Google Drive",
+    "text": "Step 2 — Organize Google Drive\nStudents are strongly encouraged to create a folder such as:\nECN4199_Assignments\ninside Google Drive.\nStore all weekly assignment notebooks inside this folder throughout the semester."
+  },
+  {
+    "objectID": "lectures/week1.html#step-3-enable-sharing",
+    "href": "lectures/week1.html#step-3-enable-sharing",
+    "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
+    "section": "Step 3 — Enable Sharing",
+    "text": "Step 3 — Enable Sharing\nInside Google Colab:\n\nClick:\n\nShare\n\nUnder General Access select:\n\nAnyone with the link\n\nSet permissions to:\n\nViewer\n\nCopy the notebook link"
   }
 ]

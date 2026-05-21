@@ -140,7 +140,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../project.qmd"> 
+    <a class="nav-link" href="../project.html"> 
 <span class="menu-text">Final Project</span></a>
   </li>  
   <li class="nav-item">
@@ -163,53 +163,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-1-orientation-python-ai-and-data-analytics" id="toc-week-1-orientation-python-ai-and-data-analytics" class="nav-link active" data-scroll-target="#week-1-orientation-python-ai-and-data-analytics">Week 1 — Orientation: Python, AI, and Data Analytics</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">1. Learning Objectives</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">1. Learning Objectives</a></li>
   <li><a href="#how-this-course-website-works" id="toc-how-this-course-website-works" class="nav-link" data-scroll-target="#how-this-course-website-works">2. How This Course Website Works</a></li>
+  <li><a href="#weekly-learning-workflow" id="toc-weekly-learning-workflow" class="nav-link" data-scroll-target="#weekly-learning-workflow">Weekly Learning Workflow</a></li>
+  <li><a href="#important-note" id="toc-important-note" class="nav-link" data-scroll-target="#important-note">Important Note</a></li>
   <li><a href="#what-is-python" id="toc-what-is-python" class="nav-link" data-scroll-target="#what-is-python">3. What Is Python?</a></li>
   <li><a href="#why-economists-use-python" id="toc-why-economists-use-python" class="nav-link" data-scroll-target="#why-economists-use-python">4. Why Economists Use Python</a></li>
   <li><a href="#what-is-google-colab" id="toc-what-is-google-colab" class="nav-link" data-scroll-target="#what-is-google-colab">5. What Is Google Colab?</a></li>
   <li><a href="#open-the-week-1-live-notebook" id="toc-open-the-week-1-live-notebook" class="nav-link" data-scroll-target="#open-the-week-1-live-notebook">6. Open the Week 1 Live Notebook</a></li>
+  <li><a href="#before-continuing" id="toc-before-continuing" class="nav-link" data-scroll-target="#before-continuing">Before Continuing</a></li>
   <li><a href="#your-first-python-code" id="toc-your-first-python-code" class="nav-link" data-scroll-target="#your-first-python-code">7. Your First Python Code</a></li>
   <li><a href="#code-cells-and-text-cells" id="toc-code-cells-and-text-cells" class="nav-link" data-scroll-target="#code-cells-and-text-cells">8. Code Cells and Text Cells</a></li>
-  <li><a href="#running-code-in-colab" id="toc-running-code-in-colab" class="nav-link" data-scroll-target="#running-code-in-colab">9. Running Code in Colab</a></li>
+  <li><a href="#running-code-in-google-colab" id="toc-running-code-in-google-colab" class="nav-link" data-scroll-target="#running-code-in-google-colab">9. Running Code in Google Colab</a></li>
   <li><a href="#python-as-a-calculator" id="toc-python-as-a-calculator" class="nav-link" data-scroll-target="#python-as-a-calculator">10. Python as a Calculator</a></li>
+  <li><a href="#important-symbols" id="toc-important-symbols" class="nav-link" data-scroll-target="#important-symbols">Important Symbols</a></li>
   <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">11. Variables</a></li>
-  <li><a href="#economic-calculation-1-gdp-growth" id="toc-economic-calculation-1-gdp-growth" class="nav-link" data-scroll-target="#economic-calculation-1-gdp-growth">12. Economic Calculation 1: GDP Growth</a>
+  <li><a href="#economic-calculation-1-gdp-growth" id="toc-economic-calculation-1-gdp-growth" class="nav-link" data-scroll-target="#economic-calculation-1-gdp-growth">12. Economic Calculation 1 — GDP Growth</a>
   <ul class="collapse">
   <li><a href="#formula" id="toc-formula" class="nav-link" data-scroll-target="#formula">Formula</a></li>
-  <li><a href="#python-code" id="toc-python-code" class="nav-link" data-scroll-target="#python-code">Python code</a></li>
+  <li><a href="#python-code" id="toc-python-code" class="nav-link" data-scroll-target="#python-code">Python Code</a></li>
   <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
   </ul></li>
-  <li><a href="#live-activity-modify-the-gdp-numbers" id="toc-live-activity-modify-the-gdp-numbers" class="nav-link" data-scroll-target="#live-activity-modify-the-gdp-numbers">13. Live Activity: Modify the GDP Numbers</a></li>
-  <li><a href="#economic-calculation-2-inflation-rate" id="toc-economic-calculation-2-inflation-rate" class="nav-link" data-scroll-target="#economic-calculation-2-inflation-rate">14. Economic Calculation 2: Inflation Rate</a>
+  <li><a href="#live-activity-modify-the-gdp-values" id="toc-live-activity-modify-the-gdp-values" class="nav-link" data-scroll-target="#live-activity-modify-the-gdp-values">13. Live Activity — Modify the GDP Values</a></li>
+  <li><a href="#discussion-questions" id="toc-discussion-questions" class="nav-link" data-scroll-target="#discussion-questions">Discussion Questions</a></li>
+  <li><a href="#economic-calculation-2-inflation-rate" id="toc-economic-calculation-2-inflation-rate" class="nav-link" data-scroll-target="#economic-calculation-2-inflation-rate">14. Economic Calculation 2 — Inflation Rate</a>
   <ul class="collapse">
   <li><a href="#formula-1" id="toc-formula-1" class="nav-link" data-scroll-target="#formula-1">Formula</a></li>
-  <li><a href="#python-code-1" id="toc-python-code-1" class="nav-link" data-scroll-target="#python-code-1">Python code</a></li>
+  <li><a href="#python-code-1" id="toc-python-code-1" class="nav-link" data-scroll-target="#python-code-1">Python Code</a></li>
   <li><a href="#interpretation-1" id="toc-interpretation-1" class="nav-link" data-scroll-target="#interpretation-1">Interpretation</a></li>
   </ul></li>
-  <li><a href="#economic-calculation-3-exchange-rate-depreciation" id="toc-economic-calculation-3-exchange-rate-depreciation" class="nav-link" data-scroll-target="#economic-calculation-3-exchange-rate-depreciation">15. Economic Calculation 3: Exchange Rate Depreciation</a>
+  <li><a href="#economic-calculation-3-exchange-rate-depreciation" id="toc-economic-calculation-3-exchange-rate-depreciation" class="nav-link" data-scroll-target="#economic-calculation-3-exchange-rate-depreciation">15. Economic Calculation 3 — Exchange Rate Depreciation</a>
   <ul class="collapse">
   <li><a href="#formula-2" id="toc-formula-2" class="nav-link" data-scroll-target="#formula-2">Formula</a></li>
-  <li><a href="#python-code-2" id="toc-python-code-2" class="nav-link" data-scroll-target="#python-code-2">Python code</a></li>
+  <li><a href="#python-code-2" id="toc-python-code-2" class="nav-link" data-scroll-target="#python-code-2">Python Code</a></li>
   <li><a href="#interpretation-2" id="toc-interpretation-2" class="nav-link" data-scroll-target="#interpretation-2">Interpretation</a></li>
   </ul></li>
-  <li><a href="#economic-calculation-4-real-income" id="toc-economic-calculation-4-real-income" class="nav-link" data-scroll-target="#economic-calculation-4-real-income">16. Economic Calculation 4: Real Income</a>
+  <li><a href="#economic-calculation-4-real-income" id="toc-economic-calculation-4-real-income" class="nav-link" data-scroll-target="#economic-calculation-4-real-income">16. Economic Calculation 4 — Real Income</a>
   <ul class="collapse">
   <li><a href="#formula-3" id="toc-formula-3" class="nav-link" data-scroll-target="#formula-3">Formula</a></li>
-  <li><a href="#python-code-3" id="toc-python-code-3" class="nav-link" data-scroll-target="#python-code-3">Python code</a></li>
+  <li><a href="#python-code-3" id="toc-python-code-3" class="nav-link" data-scroll-target="#python-code-3">Python Code</a></li>
   <li><a href="#interpretation-3" id="toc-interpretation-3" class="nav-link" data-scroll-target="#interpretation-3">Interpretation</a></li>
   </ul></li>
-  <li><a href="#what-is-ai" id="toc-what-is-ai" class="nav-link" data-scroll-target="#what-is-ai">17. What Is AI?</a></li>
+  <li><a href="#what-is-artificial-intelligence-ai" id="toc-what-is-artificial-intelligence-ai" class="nav-link" data-scroll-target="#what-is-artificial-intelligence-ai">17. What Is Artificial Intelligence (AI)?</a></li>
   <li><a href="#what-is-machine-learning" id="toc-what-is-machine-learning" class="nav-link" data-scroll-target="#what-is-machine-learning">18. What Is Machine Learning?</a></li>
+  <li><a href="#important-distinction" id="toc-important-distinction" class="nav-link" data-scroll-target="#important-distinction">Important Distinction</a></li>
   <li><a href="#difference-between-python-excel-stata-ai-and-ml" id="toc-difference-between-python-excel-stata-ai-and-ml" class="nav-link" data-scroll-target="#difference-between-python-excel-stata-ai-and-ml">19. Difference Between Python, Excel, Stata, AI, and ML</a></li>
-  <li><a href="#self-assessment-activity" id="toc-self-assessment-activity" class="nav-link" data-scroll-target="#self-assessment-activity">20. Self-Assessment Activity</a>
+  <li><a href="#self-assessment-tasks" id="toc-self-assessment-tasks" class="nav-link" data-scroll-target="#self-assessment-tasks">20. Self-Assessment Tasks</a>
   <ul class="collapse">
-  <li><a href="#task-1-print-your-first-message" id="toc-task-1-print-your-first-message" class="nav-link" data-scroll-target="#task-1-print-your-first-message">Task 1: Print Your First Message</a></li>
-  <li><a href="#task-2-calculate-inflation" id="toc-task-2-calculate-inflation" class="nav-link" data-scroll-target="#task-2-calculate-inflation">Task 2: Calculate Inflation</a></li>
-  <li><a href="#task-3-calculate-gdp-growth" id="toc-task-3-calculate-gdp-growth" class="nav-link" data-scroll-target="#task-3-calculate-gdp-growth">Task 3: Calculate GDP Growth</a></li>
-  <li><a href="#task-4-calculate-exchange-rate-depreciation" id="toc-task-4-calculate-exchange-rate-depreciation" class="nav-link" data-scroll-target="#task-4-calculate-exchange-rate-depreciation">Task 4: Calculate Exchange Rate Depreciation</a></li>
-  <li><a href="#task-5-short-reflection" id="toc-task-5-short-reflection" class="nav-link" data-scroll-target="#task-5-short-reflection">Task 5: Short Reflection</a></li>
+  <li><a href="#task-1-print-your-first-message" id="toc-task-1-print-your-first-message" class="nav-link" data-scroll-target="#task-1-print-your-first-message">Task 1 — Print Your First Message</a></li>
+  <li><a href="#task-2-calculate-inflation" id="toc-task-2-calculate-inflation" class="nav-link" data-scroll-target="#task-2-calculate-inflation">Task 2 — Calculate Inflation</a></li>
+  <li><a href="#task-3-calculate-gdp-growth" id="toc-task-3-calculate-gdp-growth" class="nav-link" data-scroll-target="#task-3-calculate-gdp-growth">Task 3 — Calculate GDP Growth</a></li>
+  <li><a href="#task-4-calculate-exchange-rate-depreciation" id="toc-task-4-calculate-exchange-rate-depreciation" class="nav-link" data-scroll-target="#task-4-calculate-exchange-rate-depreciation">Task 4 — Calculate Exchange Rate Depreciation</a></li>
+  <li><a href="#task-5-short-reflection" id="toc-task-5-short-reflection" class="nav-link" data-scroll-target="#task-5-short-reflection">Task 5 — Short Reflection</a></li>
   </ul></li>
   <li><a href="#mini-quiz" id="toc-mini-quiz" class="nav-link" data-scroll-target="#mini-quiz">21. Mini Quiz</a>
   <ul class="collapse">
@@ -220,16 +225,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#common-beginner-errors" id="toc-common-beginner-errors" class="nav-link" data-scroll-target="#common-beginner-errors">22. Common Beginner Errors</a>
   <ul class="collapse">
-  <li><a href="#problem-1-missing-quotation-marks" id="toc-problem-1-missing-quotation-marks" class="nav-link" data-scroll-target="#problem-1-missing-quotation-marks">Problem 1: Missing quotation marks</a></li>
-  <li><a href="#problem-2-using-commas-in-numbers" id="toc-problem-2-using-commas-in-numbers" class="nav-link" data-scroll-target="#problem-2-using-commas-in-numbers">Problem 2: Using commas in numbers</a></li>
-  <li><a href="#problem-3-wrong-multiplication-symbol" id="toc-problem-3-wrong-multiplication-symbol" class="nav-link" data-scroll-target="#problem-3-wrong-multiplication-symbol">Problem 3: Wrong multiplication symbol</a></li>
-  <li><a href="#problem-4-forgetting-to-run-the-code-cell" id="toc-problem-4-forgetting-to-run-the-code-cell" class="nav-link" data-scroll-target="#problem-4-forgetting-to-run-the-code-cell">Problem 4: Forgetting to run the code cell</a></li>
+  <li><a href="#problem-1-missing-quotation-marks" id="toc-problem-1-missing-quotation-marks" class="nav-link" data-scroll-target="#problem-1-missing-quotation-marks">Problem 1 — Missing Quotation Marks</a></li>
+  <li><a href="#problem-2-using-commas-in-numbers" id="toc-problem-2-using-commas-in-numbers" class="nav-link" data-scroll-target="#problem-2-using-commas-in-numbers">Problem 2 — Using Commas in Numbers</a></li>
+  <li><a href="#problem-3-wrong-multiplication-symbol" id="toc-problem-3-wrong-multiplication-symbol" class="nav-link" data-scroll-target="#problem-3-wrong-multiplication-symbol">Problem 3 — Wrong Multiplication Symbol</a></li>
+  <li><a href="#problem-4-forgetting-to-run-cells" id="toc-problem-4-forgetting-to-run-cells" class="nav-link" data-scroll-target="#problem-4-forgetting-to-run-cells">Problem 4 — Forgetting to Run Cells</a></li>
   </ul></li>
-  <li><a href="#submission-task" id="toc-submission-task" class="nav-link" data-scroll-target="#submission-task">23. Submission Task</a></li>
-  <li><a href="#how-to-share-your-colab-notebook" id="toc-how-to-share-your-colab-notebook" class="nav-link" data-scroll-target="#how-to-share-your-colab-notebook">24. How to Share Your Colab Notebook</a></li>
-  <li><a href="#ai-reflection-question" id="toc-ai-reflection-question" class="nav-link" data-scroll-target="#ai-reflection-question">25. AI Reflection Question</a></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">26. Key Takeaways</a></li>
-  <li><a href="#before-week-2" id="toc-before-week-2" class="nav-link" data-scroll-target="#before-week-2">27. Before Week 2</a></li>
+  <li><a href="#week-1-assignment" id="toc-week-1-assignment" class="nav-link" data-scroll-target="#week-1-assignment">23. Week 1 Assignment</a></li>
+  <li><a href="#assignment-objectives" id="toc-assignment-objectives" class="nav-link" data-scroll-target="#assignment-objectives">Assignment Objectives</a></li>
+  <li><a href="#assignment-requirements" id="toc-assignment-requirements" class="nav-link" data-scroll-target="#assignment-requirements">Assignment Requirements</a></li>
+  <li><a href="#important-assignment-expectations" id="toc-important-assignment-expectations" class="nav-link" data-scroll-target="#important-assignment-expectations">Important Assignment Expectations</a></li>
+  <li><a href="#assignment-naming-convention" id="toc-assignment-naming-convention" class="nav-link" data-scroll-target="#assignment-naming-convention">Assignment Naming Convention</a></li>
+  <li><a href="#how-to-save-your-assignment-properly" id="toc-how-to-save-your-assignment-properly" class="nav-link" data-scroll-target="#how-to-save-your-assignment-properly">How to Save Your Assignment Properly</a>
+  <ul class="collapse">
+  <li><a href="#step-1-save-a-personal-copy" id="toc-step-1-save-a-personal-copy" class="nav-link" data-scroll-target="#step-1-save-a-personal-copy">Step 1 — Save a Personal Copy</a></li>
+  <li><a href="#step-2-organize-google-drive" id="toc-step-2-organize-google-drive" class="nav-link" data-scroll-target="#step-2-organize-google-drive">Step 2 — Organize Google Drive</a></li>
+  <li><a href="#step-3-enable-sharing" id="toc-step-3-enable-sharing" class="nav-link" data-scroll-target="#step-3-enable-sharing">Step 3 — Enable Sharing</a></li>
+  </ul></li>
+  <li><a href="#important-warning" id="toc-important-warning" class="nav-link" data-scroll-target="#important-warning">Important Warning</a></li>
+  <li><a href="#week-1-assignment-link" id="toc-week-1-assignment-link" class="nav-link" data-scroll-target="#week-1-assignment-link">Week 1 Assignment Link</a></li>
+  <li><a href="#assignment-submission-link" id="toc-assignment-submission-link" class="nav-link" data-scroll-target="#assignment-submission-link">Assignment Submission Link</a></li>
+  <li><a href="#submission-deadline" id="toc-submission-deadline" class="nav-link" data-scroll-target="#submission-deadline">Submission Deadline</a></li>
+  <li><a href="#ai-reflection-question" id="toc-ai-reflection-question" class="nav-link" data-scroll-target="#ai-reflection-question">24. AI Reflection Question</a></li>
+  <li><a href="#reflection-question" id="toc-reflection-question" class="nav-link" data-scroll-target="#reflection-question">Reflection Question</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">25. Key Takeaways</a></li>
+  <li><a href="#before-week-2" id="toc-before-week-2" class="nav-link" data-scroll-target="#before-week-2">26. Before Week 2</a></li>
   </ul>
 </nav>
     </div>
@@ -255,12 +274,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="week-1-orientation-python-ai-and-data-analytics" class="level1">
-<h1>Week 1 — Orientation: Python, AI, and Data Analytics</h1>
-<p>Welcome to <strong>ECN 4199 — Industrial Data Analytics</strong>.</p>
-<p>This week is not about advanced coding. It is about removing fear, understanding the course workflow, and running your first Python code.</p>
+<p>Welcome to:</p>
+<pre class="text"><code>ECN 4199 — Industrial Data Analytics</code></pre>
+<p>This first week is NOT about advanced programming.</p>
+<p>It is about:</p>
+<ul>
+<li>understanding the course workflow</li>
+<li>removing fear around coding</li>
+<li>understanding how economists use computational tools</li>
+<li>running your first Python code</li>
+<li>learning how to work with Google Colab</li>
+</ul>
 <hr>
-</section>
 <section id="learning-objectives" class="level1">
 <h1>1. Learning Objectives</h1>
 <p>By the end of this week, students should be able to:</p>
@@ -271,14 +296,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>open and save a Colab notebook</li>
 <li>run simple Python code</li>
 <li>calculate basic economic indicators</li>
-<li>submit a notebook link</li>
+<li>understand basic AI and machine learning concepts</li>
+<li>submit a notebook link properly</li>
 </ul>
 <hr>
 </section>
 <section id="how-this-course-website-works" class="level1">
 <h1>2. How This Course Website Works</h1>
 <p>This website is the main learning platform for the course.</p>
-<p>Each week, you will find:</p>
+<p>Each week, students will find:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -293,60 +319,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>Live Notebook</td>
-<td>Used during class</td>
+<td>Used during lecture</td>
 </tr>
 <tr class="odd">
 <td>Dataset</td>
-<td>Data used for practice</td>
+<td>Data used for exercises</td>
 </tr>
 <tr class="even">
-<td>Self-Assessment</td>
-<td>Completed after class</td>
+<td>Weekly Activity</td>
+<td>Practical in-class exercise</td>
 </tr>
 <tr class="odd">
-<td>Submission Task</td>
-<td>What you must submit</td>
+<td>Assignment</td>
+<td>Weekly submission task</td>
 </tr>
 <tr class="even">
 <td>Common Errors</td>
-<td>Help with mistakes</td>
+<td>Help with debugging</td>
 </tr>
 </tbody>
 </table>
-<p>Each week, follow this workflow:</p>
+<hr>
+</section>
+<section id="weekly-learning-workflow" class="level1">
+<h1>Weekly Learning Workflow</h1>
+<p>Each week, students should follow the process below.</p>
 <ol type="1">
 <li>Read the weekly lesson page</li>
-<li>Open the live Colab notebook</li>
-<li>Run the code during class</li>
-<li>Complete the self-assessment</li>
-<li>Submit your notebook link</li>
+<li>Open the live Google Colab notebook</li>
+<li>Follow the lecture demonstrations</li>
+<li>Complete the weekly activity</li>
+<li>Complete the weekly assignment</li>
+<li>Submit the assignment notebook link</li>
 </ol>
+<hr>
+</section>
+<section id="important-note" class="level1">
+<h1>Important Note</h1>
+<p>Throughout this course, students will progressively develop computational and analytical skills using Python and Google Colab.</p>
+<p>Students are strongly encouraged to:</p>
+<ul>
+<li>organize notebooks carefully</li>
+<li>revisit earlier notebooks regularly</li>
+<li>document explanations and interpretations clearly</li>
+<li>experiment with code actively</li>
+<li>debug errors independently</li>
+</ul>
+<p>Programming is learned through experimentation.</p>
 <hr>
 </section>
 <section id="what-is-python" class="level1">
 <h1>3. What Is Python?</h1>
 <p>Python is a programming language.</p>
 <p>A programming language allows us to give instructions to a computer.</p>
-<p>Economists use Python to:</p>
+<p>Economists increasingly use Python to:</p>
 <ul>
 <li>clean datasets</li>
 <li>calculate economic indicators</li>
-<li>create graphs</li>
+<li>create visualizations</li>
 <li>run regressions</li>
 <li>build dashboards</li>
 <li>forecast economic variables</li>
 <li>build machine learning models</li>
-<li>analyse text</li>
-<li>automate repetitive work</li>
+<li>analyze text</li>
+<li>automate repetitive tasks</li>
 </ul>
-<p>You do not need to memorise Python.</p>
-<p>You need to learn how to use it.</p>
+<p>You do NOT need to memorize Python.</p>
+<p>You need to learn how to use it practically.</p>
 <hr>
 </section>
 <section id="why-economists-use-python" class="level1">
 <h1>4. Why Economists Use Python</h1>
-<p>Economists increasingly work with data.</p>
-<p>Governments, central banks, businesses, NGOs, research institutes, and international organisations use data to answer questions such as:</p>
+<p>Economists increasingly work with large amounts of data.</p>
+<p>Governments, firms, central banks, NGOs, and international organizations use data to answer questions such as:</p>
 <ul>
 <li>Is inflation increasing?</li>
 <li>Are households becoming poorer?</li>
@@ -354,56 +399,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Can we forecast demand?</li>
 <li>Which regions need policy support?</li>
 <li>What do news articles say about the economy?</li>
-<li>Can AI help analyse large amounts of information?</li>
+<li>Can AI help analyze economic information?</li>
 </ul>
 <p>Traditional economics gives us theory.</p>
-<p>Data analytics helps us measure, test, predict, visualise, and communicate.</p>
-<p>This course connects both.</p>
+<p>Data analytics helps us:</p>
+<ul>
+<li>measure</li>
+<li>test</li>
+<li>predict</li>
+<li>visualize</li>
+<li>communicate</li>
+</ul>
+<p>This course connects economics with modern analytical tools.</p>
 <hr>
 </section>
 <section id="what-is-google-colab" class="level1">
 <h1>5. What Is Google Colab?</h1>
 <p>Google Colab is a cloud-based coding environment.</p>
-<p>It allows you to run Python directly in your browser.</p>
+<p>It allows students to run Python directly through a web browser.</p>
 <p>This means:</p>
 <ul>
-<li>no Python installation is required at the beginning</li>
-<li>you can work from most computers</li>
+<li>no Python installation is initially required</li>
+<li>coding can be done from most computers</li>
 <li>notebooks can be saved to Google Drive</li>
 <li>notebooks can be shared using links</li>
 </ul>
-<p>For the first few weeks, we will use Google Colab because it reduces technical problems.</p>
+<p>For the first few weeks, the course will primarily use Google Colab to minimize technical barriers.</p>
 <hr>
 </section>
 <section id="open-the-week-1-live-notebook" class="level1">
 <h1>6. Open the Week 1 Live Notebook</h1>
-<p>Click the link below to open the interactive notebook used during class.</p>
-<p><strong>Important:</strong> Replace the link below with your actual Google Colab notebook link.</p>
+<p>Click the link below to open the interactive notebook used during the lecture.</p>
 <p><a href="https://colab.research.google.com/drive/1OSRvERqcIAuZGCJo1esaHD6hL-Xn6pnI?usp=sharing">Open Week 1 Live Notebook</a></p>
-<p>Before continuing, students should:</p>
+<hr>
+</section>
+<section id="before-continuing" class="level1">
+<h1>Before Continuing</h1>
+<p>Students should:</p>
 <ol type="1">
 <li>Open the notebook</li>
 <li>Sign in to Google</li>
 <li>Run the first code cell</li>
-<li>Save a copy to Google Drive</li>
+<li>Save a personal copy to Google Drive</li>
 </ol>
 <hr>
 </section>
 <section id="your-first-python-code" class="level1">
 <h1>7. Your First Python Code</h1>
-<p>Run this code in the Colab notebook:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello Economics"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Run this code in the notebook:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello Economics"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This tells Python to display:</p>
 <pre class="text"><code>Hello Economics</code></pre>
 <p><code>print()</code> is a Python function.</p>
 <p>A function performs a task.</p>
-<p>Here, the task is to display text.</p>
-<p>Text must be written inside quotation marks.</p>
+<p>Here, the task is displaying text output.</p>
 <hr>
 </section>
 <section id="code-cells-and-text-cells" class="level1">
 <h1>8. Code Cells and Text Cells</h1>
-<p>In Google Colab, there are two main types of cells.</p>
+<p>Google Colab notebooks contain two main cell types.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -413,43 +467,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td>Code cell</td>
+<td>Code Cell</td>
 <td>Used to write and run Python code</td>
 </tr>
 <tr class="even">
-<td>Text cell</td>
-<td>Used to write explanations, answers, and interpretations</td>
+<td>Text Cell</td>
+<td>Used for explanations and interpretation</td>
 </tr>
 </tbody>
 </table>
-<p>In this course, you must use both.</p>
-<p>Good notebooks should contain:</p>
+<p>Good notebooks should contain BOTH:</p>
 <ul>
 <li>code</li>
-<li>output</li>
-<li>explanations</li>
-<li>economic interpretation</li>
+<li>outputs</li>
+<li>interpretation</li>
+<li>economic reasoning</li>
 </ul>
-<p>A notebook with only code is not enough.</p>
+<p>A notebook containing only code is insufficient.</p>
 <hr>
 </section>
-<section id="running-code-in-colab" class="level1">
-<h1>9. Running Code in Colab</h1>
+<section id="running-code-in-google-colab" class="level1">
+<h1>9. Running Code in Google Colab</h1>
 <p>To run a code cell:</p>
 <pre class="text"><code>Shift + Enter</code></pre>
 <p>or click the run button beside the cell.</p>
-<p>Try this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Welcome to ECN 4199"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Try the following:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Welcome to ECN 4199"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="python-as-a-calculator" class="level1">
 <h1>10. Python as a Calculator</h1>
-<p>Python can be used like a calculator.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="op">+</span> <span class="dv">50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="op">-</span> <span class="dv">50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="op">*</span> <span class="dv">50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="op">/</span> <span class="dv">50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Important symbols:</p>
+<p>Python can also be used like a calculator.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="op">+</span> <span class="dv">50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="op">-</span> <span class="dv">50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="op">*</span> <span class="dv">50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="op">/</span> <span class="dv">50</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="important-symbols" class="level1">
+<h1>Important Symbols</h1>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -481,168 +537,185 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <p>Example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">**</span> <span class="dv">3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">**</span> <span class="dv">3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This means:</p>
 <pre class="text"><code>2 × 2 × 2 = 8</code></pre>
 <hr>
 </section>
 <section id="variables" class="level1">
 <h1>11. Variables</h1>
-<p>A variable is a name used to store a value.</p>
+<p>Variables are used to store values.</p>
 <p>Example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>gdp_2023 <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>gdp_2024 <span class="op">=</span> <span class="dv">105</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Here:</p>
-<ul>
-<li><code>gdp_2023</code> stores the value <code>100</code></li>
-<li><code>gdp_2024</code> stores the value <code>105</code></li>
-</ul>
-<p>Variables allow us to organise calculations clearly.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>gdp_2023 <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>gdp_2024 <span class="op">=</span> <span class="dv">105</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Variables allow economists to organize calculations systematically.</p>
 <hr>
 </section>
 <section id="economic-calculation-1-gdp-growth" class="level1">
-<h1>12. Economic Calculation 1: GDP Growth</h1>
+<h1>12. Economic Calculation 1 — GDP Growth</h1>
 <section id="formula" class="level2">
 <h2 class="anchored" data-anchor-id="formula">Formula</h2>
 <pre class="text"><code>GDP Growth = [(GDP this year - GDP last year) / GDP last year] × 100</code></pre>
-</section>
-<section id="python-code" class="level2">
-<h2 class="anchored" data-anchor-id="python-code">Python code</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>gdp_last_year <span class="op">=</span> <span class="dv">1000</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>gdp_this_year <span class="op">=</span> <span class="dv">1080</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>gdp_growth <span class="op">=</span> ((gdp_this_year <span class="op">-</span> gdp_last_year) <span class="op">/</span> gdp_last_year) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gdp_growth)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
-<p>The economy grew by 8 percent.</p>
 <hr>
 </section>
-</section>
-<section id="live-activity-modify-the-gdp-numbers" class="level1">
-<h1>13. Live Activity: Modify the GDP Numbers</h1>
-<p>Now change the values:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>gdp_last_year <span class="op">=</span> <span class="dv">5000</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>gdp_this_year <span class="op">=</span> <span class="dv">5500</span></span>
+<section id="python-code" class="level2">
+<h2 class="anchored" data-anchor-id="python-code">Python Code</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>gdp_last_year <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>gdp_this_year <span class="op">=</span> <span class="dv">1080</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>gdp_growth <span class="op">=</span> ((gdp_this_year <span class="op">-</span> gdp_last_year) <span class="op">/</span> gdp_last_year) <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gdp_growth)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Answer:</p>
+<hr>
+</section>
+<section id="interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
+<p>The economy grew by:</p>
+<pre class="text"><code>8 percent</code></pre>
+<hr>
+</section>
+</section>
+<section id="live-activity-modify-the-gdp-values" class="level1">
+<h1>13. Live Activity — Modify the GDP Values</h1>
+<p>Modify the following values:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>gdp_last_year <span class="op">=</span> <span class="dv">5000</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>gdp_this_year <span class="op">=</span> <span class="dv">5500</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>gdp_growth <span class="op">=</span> ((gdp_this_year <span class="op">-</span> gdp_last_year) <span class="op">/</span> gdp_last_year) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gdp_growth)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Expected answer:</p>
 <pre class="text"><code>GDP increased by 10 percent.</code></pre>
-<p>Discussion questions:</p>
+<hr>
+</section>
+<section id="discussion-questions" class="level1">
+<h1>Discussion Questions</h1>
 <ul>
 <li>What happens if GDP falls?</li>
 <li>Why do economists use percentage changes?</li>
-<li>Why is percentage growth more useful than only looking at the absolute change?</li>
+<li>Why is percentage growth more informative than absolute changes?</li>
 </ul>
 <hr>
 </section>
 <section id="economic-calculation-2-inflation-rate" class="level1">
-<h1>14. Economic Calculation 2: Inflation Rate</h1>
+<h1>14. Economic Calculation 2 — Inflation Rate</h1>
 <section id="formula-1" class="level2">
 <h2 class="anchored" data-anchor-id="formula-1">Formula</h2>
 <pre class="text"><code>Inflation Rate = [(CPI this year - CPI last year) / CPI last year] × 100</code></pre>
+<hr>
 </section>
 <section id="python-code-1" class="level2">
-<h2 class="anchored" data-anchor-id="python-code-1">Python code</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>cpi_last_year <span class="op">=</span> <span class="dv">200</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>cpi_this_year <span class="op">=</span> <span class="dv">240</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>inflation_rate <span class="op">=</span> ((cpi_this_year <span class="op">-</span> cpi_last_year) <span class="op">/</span> cpi_last_year) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inflation_rate)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<h2 class="anchored" data-anchor-id="python-code-1">Python Code</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>cpi_last_year <span class="op">=</span> <span class="dv">200</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>cpi_this_year <span class="op">=</span> <span class="dv">240</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>inflation_rate <span class="op">=</span> ((cpi_this_year <span class="op">-</span> cpi_last_year) <span class="op">/</span> cpi_last_year) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inflation_rate)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
 </section>
 <section id="interpretation-1" class="level2">
 <h2 class="anchored" data-anchor-id="interpretation-1">Interpretation</h2>
-<p>Prices increased by 20 percent.</p>
+<p>Prices increased by:</p>
+<pre class="text"><code>20 percent</code></pre>
 <hr>
 </section>
 </section>
 <section id="economic-calculation-3-exchange-rate-depreciation" class="level1">
-<h1>15. Economic Calculation 3: Exchange Rate Depreciation</h1>
+<h1>15. Economic Calculation 3 — Exchange Rate Depreciation</h1>
 <section id="formula-2" class="level2">
 <h2 class="anchored" data-anchor-id="formula-2">Formula</h2>
 <pre class="text"><code>Depreciation = [(New exchange rate - Old exchange rate) / Old exchange rate] × 100</code></pre>
+<hr>
 </section>
 <section id="python-code-2" class="level2">
-<h2 class="anchored" data-anchor-id="python-code-2">Python code</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>exchange_rate_old <span class="op">=</span> <span class="dv">320</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>exchange_rate_new <span class="op">=</span> <span class="dv">360</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>depreciation <span class="op">=</span> ((exchange_rate_new <span class="op">-</span> exchange_rate_old) <span class="op">/</span> exchange_rate_old) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(depreciation)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<h2 class="anchored" data-anchor-id="python-code-2">Python Code</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>exchange_rate_old <span class="op">=</span> <span class="dv">320</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>exchange_rate_new <span class="op">=</span> <span class="dv">360</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>depreciation <span class="op">=</span> ((exchange_rate_new <span class="op">-</span> exchange_rate_old) <span class="op">/</span> exchange_rate_old) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(depreciation)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
 </section>
 <section id="interpretation-2" class="level2">
 <h2 class="anchored" data-anchor-id="interpretation-2">Interpretation</h2>
-<p>The domestic currency depreciated by 12.5 percent.</p>
+<p>The domestic currency depreciated by:</p>
+<pre class="text"><code>12.5 percent</code></pre>
 <hr>
 </section>
 </section>
 <section id="economic-calculation-4-real-income" class="level1">
-<h1>16. Economic Calculation 4: Real Income</h1>
+<h1>16. Economic Calculation 4 — Real Income</h1>
 <section id="formula-3" class="level2">
 <h2 class="anchored" data-anchor-id="formula-3">Formula</h2>
 <pre class="text"><code>Real Income = Nominal Income / Price Index × 100</code></pre>
+<hr>
 </section>
 <section id="python-code-3" class="level2">
-<h2 class="anchored" data-anchor-id="python-code-3">Python code</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>nominal_income <span class="op">=</span> <span class="dv">100000</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>price_index <span class="op">=</span> <span class="dv">125</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>real_income <span class="op">=</span> (nominal_income <span class="op">/</span> price_index) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(real_income)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<h2 class="anchored" data-anchor-id="python-code-3">Python Code</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>nominal_income <span class="op">=</span> <span class="dv">100000</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>price_index <span class="op">=</span> <span class="dv">125</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>real_income <span class="op">=</span> (nominal_income <span class="op">/</span> price_index) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(real_income)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
 </section>
 <section id="interpretation-3" class="level2">
 <h2 class="anchored" data-anchor-id="interpretation-3">Interpretation</h2>
-<p>Although nominal income is 100,000, real income is 80,000 in base-year prices.</p>
+<p>Although nominal income is:</p>
+<pre class="text"><code>100,000</code></pre>
+<p>real income is:</p>
+<pre class="text"><code>80,000</code></pre>
+<p>in base-year prices.</p>
 <hr>
 </section>
 </section>
-<section id="what-is-ai" class="level1">
-<h1>17. What Is AI?</h1>
-<p>Artificial Intelligence, or AI, refers to computer systems that can perform tasks that usually require human intelligence.</p>
+<section id="what-is-artificial-intelligence-ai" class="level1">
+<h1>17. What Is Artificial Intelligence (AI)?</h1>
+<p>Artificial Intelligence refers to computer systems capable of performing tasks typically associated with human intelligence.</p>
 <p>Examples include:</p>
 <ul>
 <li>answering questions</li>
 <li>translating text</li>
-<li>recognising images</li>
-<li>writing summaries</li>
-<li>identifying patterns</li>
+<li>summarizing information</li>
+<li>recognizing patterns</li>
+<li>generating code</li>
 <li>supporting decision-making</li>
 </ul>
-<p>An AI tool can help summarise a central bank report.</p>
-<p>But it may also make mistakes.</p>
-<p>Therefore, economists must use AI critically.</p>
-<p>AI can assist your thinking.</p>
-<p>It should not replace your thinking.</p>
+<p>AI tools can support economists.</p>
+<p>However, AI systems can also:</p>
+<ul>
+<li>make mistakes</li>
+<li>hallucinate information</li>
+<li>misunderstand context</li>
+<li>produce weak interpretations</li>
+</ul>
+<p>Therefore:</p>
+<pre class="text"><code>AI should support thinking — not replace thinking.</code></pre>
 <hr>
 </section>
 <section id="what-is-machine-learning" class="level1">
 <h1>18. What Is Machine Learning?</h1>
-<p>Machine learning is a type of AI.</p>
-<p>It allows computers to learn patterns from data.</p>
-<p>Instead of giving the computer every rule manually, we give it data and allow it to detect patterns.</p>
+<p>Machine learning is a branch of AI.</p>
+<p>Machine learning systems learn patterns from data.</p>
+<p>Instead of manually specifying every rule, we provide data and allow the model to identify relationships.</p>
 <p>Example:</p>
-<p>Suppose we have household data with:</p>
+<p>A machine learning system may use:</p>
 <ul>
 <li>income</li>
 <li>education</li>
-<li>household size</li>
+<li>employment</li>
 <li>location</li>
-<li>employment status</li>
+<li>household size</li>
 </ul>
-<p>A machine learning model may learn patterns that help predict whether a household is likely to be poor.</p>
-<p>Important distinction:</p>
+<p>to predict poverty risk.</p>
+<hr>
+</section>
+<section id="important-distinction" class="level1">
+<h1>Important Distinction</h1>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Economics</th>
@@ -651,112 +724,100 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td>Often focuses on explanation and causality</td>
-<td>Often focuses on prediction</td>
+<td>Often emphasizes causality</td>
+<td>Often emphasizes prediction</td>
 </tr>
 <tr class="even">
 <td>Asks why something happens</td>
 <td>Asks what is likely to happen</td>
 </tr>
 <tr class="odd">
-<td>Uses theory heavily</td>
-<td>Uses patterns in data heavily</td>
+<td>Theory-driven</td>
+<td>Pattern-driven</td>
 </tr>
 </tbody>
 </table>
-<p>This difference matters throughout the course.</p>
+<p>Understanding this distinction is extremely important throughout the course.</p>
 <hr>
 </section>
 <section id="difference-between-python-excel-stata-ai-and-ml" class="level1">
 <h1>19. Difference Between Python, Excel, Stata, AI, and ML</h1>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Tool/Concept</th>
-<th>What it does</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Excel</td>
-<td>Spreadsheet-based calculations and basic analysis</td>
+<td>Spreadsheet calculations</td>
 </tr>
 <tr class="even">
 <td>Stata</td>
-<td>Statistical software widely used in economics</td>
+<td>Statistical analysis software</td>
 </tr>
 <tr class="odd">
 <td>Python</td>
-<td>General-purpose programming language for data analysis and automation</td>
+<td>General-purpose programming language</td>
 </tr>
 <tr class="even">
 <td>AI</td>
-<td>Systems that perform tasks associated with human intelligence</td>
+<td>Systems performing human-like tasks</td>
 </tr>
 <tr class="odd">
 <td>Machine Learning</td>
-<td>Methods that learn patterns from data for prediction or classification</td>
+<td>Systems learning patterns from data</td>
 </tr>
 </tbody>
 </table>
-<p>Python does not replace economic thinking.</p>
-<p>It expands what economists can do with data.</p>
+<p>Python does NOT replace economics.</p>
+<p>It expands what economists can do computationally.</p>
 <hr>
 </section>
-<section id="self-assessment-activity" class="level1">
-<h1>20. Self-Assessment Activity</h1>
-<p>Complete the following tasks in your Week 1 notebook.</p>
+<section id="self-assessment-tasks" class="level1">
+<h1>20. Self-Assessment Tasks</h1>
+<p>Complete the following inside your Week 1 notebook.</p>
 <hr>
 <section id="task-1-print-your-first-message" class="level2">
-<h2 class="anchored" data-anchor-id="task-1-print-your-first-message">Task 1: Print Your First Message</h2>
+<h2 class="anchored" data-anchor-id="task-1-print-your-first-message">Task 1 — Print Your First Message</h2>
 <p>Write Python code to print:</p>
 <pre class="text"><code>I am learning Python for Economics</code></pre>
-<p>Expected code:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"I am learning Python for Economics"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="task-2-calculate-inflation" class="level2">
-<h2 class="anchored" data-anchor-id="task-2-calculate-inflation">Task 2: Calculate Inflation</h2>
+<h2 class="anchored" data-anchor-id="task-2-calculate-inflation">Task 2 — Calculate Inflation</h2>
 <p>Given:</p>
 <ul>
 <li>CPI in 2023 = 180</li>
 <li>CPI in 2024 = 216</li>
 </ul>
 <p>Calculate the inflation rate.</p>
-<p>Expected answer:</p>
-<pre class="text"><code>20.0</code></pre>
 <hr>
 </section>
 <section id="task-3-calculate-gdp-growth" class="level2">
-<h2 class="anchored" data-anchor-id="task-3-calculate-gdp-growth">Task 3: Calculate GDP Growth</h2>
+<h2 class="anchored" data-anchor-id="task-3-calculate-gdp-growth">Task 3 — Calculate GDP Growth</h2>
 <p>Given:</p>
 <ul>
 <li>GDP in 2023 = 8500</li>
 <li>GDP in 2024 = 9010</li>
 </ul>
 <p>Calculate GDP growth.</p>
-<p>Expected answer:</p>
-<pre class="text"><code>6.0</code></pre>
 <hr>
 </section>
 <section id="task-4-calculate-exchange-rate-depreciation" class="level2">
-<h2 class="anchored" data-anchor-id="task-4-calculate-exchange-rate-depreciation">Task 4: Calculate Exchange Rate Depreciation</h2>
+<h2 class="anchored" data-anchor-id="task-4-calculate-exchange-rate-depreciation">Task 4 — Calculate Exchange Rate Depreciation</h2>
 <p>Given:</p>
 <ul>
 <li>Old exchange rate = 300</li>
 <li>New exchange rate = 330</li>
 </ul>
 <p>Calculate the depreciation percentage.</p>
-<p>Expected answer:</p>
-<pre class="text"><code>10.0</code></pre>
 <hr>
 </section>
 <section id="task-5-short-reflection" class="level2">
-<h2 class="anchored" data-anchor-id="task-5-short-reflection">Task 5: Short Reflection</h2>
+<h2 class="anchored" data-anchor-id="task-5-short-reflection">Task 5 — Short Reflection</h2>
 <p>Answer in 3–5 sentences:</p>
 <pre class="text"><code>What can Python do that Excel cannot easily do?</code></pre>
 <hr>
@@ -767,31 +828,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
 <p>What is Python?</p>
-<p>A. A spreadsheet software<br>
-B. A programming language<br>
-C. A statistical table<br>
-D. A search engine</p>
-<p>Correct answer: B</p>
+<p>A. Spreadsheet software<br>
+B. Programming language<br>
+C. Statistical table<br>
+D. Search engine</p>
+<p>Correct Answer:</p>
+<pre class="text"><code>B</code></pre>
 <hr>
 </section>
 <section id="question-2" class="level2">
 <h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<p>What does <code>print()</code> do in Python?</p>
+<p>What does <code>print()</code> do?</p>
 <p>A. Deletes data<br>
 B. Displays output<br>
 C. Creates a graph<br>
 D. Opens Excel</p>
-<p>Correct answer: B</p>
+<p>Correct Answer:</p>
+<pre class="text"><code>B</code></pre>
 <hr>
 </section>
 <section id="question-3" class="level2">
 <h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<p>Which symbol is used for multiplication in Python?</p>
+<p>Which symbol represents multiplication in Python?</p>
 <p>A. x<br>
 B. *<br>
 C. /<br>
 D. ^</p>
-<p>Correct answer: B</p>
+<p>Correct Answer:</p>
+<pre class="text"><code>B</code></pre>
 <hr>
 </section>
 <section id="question-4" class="level2">
@@ -801,112 +865,245 @@ D. ^</p>
 B. 10%<br>
 C. 15%<br>
 D. 20%</p>
-<p>Correct answer: B</p>
+<p>Correct Answer:</p>
+<pre class="text"><code>B</code></pre>
 <hr>
 </section>
 </section>
 <section id="common-beginner-errors" class="level1">
 <h1>22. Common Beginner Errors</h1>
 <section id="problem-1-missing-quotation-marks" class="level2">
-<h2 class="anchored" data-anchor-id="problem-1-missing-quotation-marks">Problem 1: Missing quotation marks</h2>
+<h2 class="anchored" data-anchor-id="problem-1-missing-quotation-marks">Problem 1 — Missing Quotation Marks</h2>
 <p>Wrong:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Hello Economics)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Hello Economics)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Correct:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello Economics"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello Economics"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="problem-2-using-commas-in-numbers" class="level2">
-<h2 class="anchored" data-anchor-id="problem-2-using-commas-in-numbers">Problem 2: Using commas in numbers</h2>
+<h2 class="anchored" data-anchor-id="problem-2-using-commas-in-numbers">Problem 2 — Using Commas in Numbers</h2>
 <p>Wrong:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>gdp <span class="op">=</span> <span class="dv">1</span>,<span class="dv">000</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Better:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>gdp <span class="op">=</span> <span class="dv">1000</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>gdp <span class="op">=</span> <span class="dv">1</span>,<span class="dv">000</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Correct:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>gdp <span class="op">=</span> <span class="dv">1000</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="problem-3-wrong-multiplication-symbol" class="level2">
-<h2 class="anchored" data-anchor-id="problem-3-wrong-multiplication-symbol">Problem 3: Wrong multiplication symbol</h2>
+<h2 class="anchored" data-anchor-id="problem-3-wrong-multiplication-symbol">Problem 3 — Wrong Multiplication Symbol</h2>
 <p>Wrong:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>growth <span class="op">=</span> value x <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>growth <span class="op">=</span> value x <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Correct:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>growth <span class="op">=</span> value <span class="op">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>growth <span class="op">=</span> value <span class="op">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="problem-4-forgetting-to-run-the-code-cell" class="level2">
-<h2 class="anchored" data-anchor-id="problem-4-forgetting-to-run-the-code-cell">Problem 4: Forgetting to run the code cell</h2>
-<p>In Colab, press:</p>
+<section id="problem-4-forgetting-to-run-cells" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4-forgetting-to-run-cells">Problem 4 — Forgetting to Run Cells</h2>
+<p>Remember:</p>
 <pre class="text"><code>Shift + Enter</code></pre>
+<p>runs a code cell.</p>
 <hr>
 </section>
 </section>
-<section id="submission-task" class="level1">
-<h1>23. Submission Task</h1>
-<p>Submit your completed Week 1 notebook.</p>
-<p>Your notebook must include:</p>
+<section id="week-1-assignment" class="level1">
+<h1>23. Week 1 Assignment</h1>
+<p>Students are required to complete and submit the:</p>
+<pre class="text"><code>Week 1 Assignment</code></pre>
+<p>on or before:</p>
+<pre class="text"><code>28.05.2026</code></pre>
+<hr>
+</section>
+<section id="assignment-objectives" class="level1">
+<h1>Assignment Objectives</h1>
+<p>The purpose of this assignment is to help students:</p>
 <ul>
-<li>your name</li>
-<li>first print command</li>
-<li>GDP growth calculation</li>
-<li>inflation calculation</li>
-<li>exchange rate depreciation calculation</li>
-<li>short reflection answer</li>
+<li>become familiar with Google Colab</li>
+<li>practice basic Python syntax</li>
+<li>perform simple economic calculations</li>
+<li>understand notebook organization</li>
+<li>develop confidence working with computational tools</li>
 </ul>
-<p>Submission method:</p>
-<p><strong>Replace the link below with your actual Google Form, LMS, or submission link.</strong></p>
-<p><a href="PASTE_SUBMISSION_LINK_HERE">Submit Week 1 Work</a></p>
 <hr>
 </section>
-<section id="how-to-share-your-colab-notebook" class="level1">
-<h1>24. How to Share Your Colab Notebook</h1>
-<p>In Google Colab:</p>
+<section id="assignment-requirements" class="level1">
+<h1>Assignment Requirements</h1>
+<p>Your completed assignment should include:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Required Component</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Name and index number</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>First Python print command</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>GDP growth calculation</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Inflation calculation</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Exchange rate depreciation calculation</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Real income calculation</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Reflection answer</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="important-assignment-expectations" class="level1">
+<h1>Important Assignment Expectations</h1>
+<p>Students are encouraged to:</p>
+<ul>
+<li>experiment with code</li>
+<li>modify values</li>
+<li>test calculations</li>
+<li>rerun cells</li>
+<li>debug errors independently</li>
+<li>add explanations and comments</li>
+</ul>
+<p>Programming is learned through experimentation.</p>
+<p>Errors are a normal part of computational learning.</p>
+<hr>
+</section>
+<section id="assignment-naming-convention" class="level1">
+<h1>Assignment Naming Convention</h1>
+<p>Rename your notebook using:</p>
+<pre class="text"><code>Week01_IndexNumber_Name.ipynb</code></pre>
+<p>Example:</p>
+<pre class="text"><code>Week01_2024BA12345_Perera.ipynb</code></pre>
+<hr>
+</section>
+<section id="how-to-save-your-assignment-properly" class="level1">
+<h1>How to Save Your Assignment Properly</h1>
+<section id="step-1-save-a-personal-copy" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-save-a-personal-copy">Step 1 — Save a Personal Copy</h2>
+<p>Inside Google Colab:</p>
+<pre class="text"><code>File → Save a Copy in Drive</code></pre>
+<p>This creates your own editable version.</p>
+<p>Students should NOT directly edit the shared lecture notebook.</p>
+<hr>
+</section>
+<section id="step-2-organize-google-drive" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-organize-google-drive">Step 2 — Organize Google Drive</h2>
+<p>Students are strongly encouraged to create a folder such as:</p>
+<pre class="text"><code>ECN4199_Assignments</code></pre>
+<p>inside Google Drive.</p>
+<p>Store all weekly assignment notebooks inside this folder throughout the semester.</p>
+<hr>
+</section>
+<section id="step-3-enable-sharing" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-enable-sharing">Step 3 — Enable Sharing</h2>
+<p>Inside Google Colab:</p>
 <ol type="1">
-<li>Click <strong>Share</strong></li>
-<li>Change access to <strong>Anyone with the link</strong></li>
-<li>Set permission to <strong>Viewer</strong></li>
-<li>Copy the link</li>
-<li>Submit the link through the submission form</li>
+<li>Click:</li>
 </ol>
-<p>Before submitting, check that the link opens in another browser or private window.</p>
+<pre class="text"><code>Share</code></pre>
+<ol start="2" type="1">
+<li>Under General Access select:</li>
+</ol>
+<pre class="text"><code>Anyone with the link</code></pre>
+<ol start="3" type="1">
+<li>Set permissions to:</li>
+</ol>
+<pre class="text"><code>Viewer</code></pre>
+<ol start="4" type="1">
+<li>Copy the notebook link</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="important-warning" class="level1">
+<h1>Important Warning</h1>
+<p>If sharing permissions are NOT enabled correctly:</p>
+<pre class="text"><code>the assignment cannot be evaluated</code></pre>
+<p>Always test the notebook link before submission.</p>
+<hr>
+</section>
+<section id="week-1-assignment-link" class="level1">
+<h1>Week 1 Assignment Link</h1>
+<p><a href="../activities/week1_activity.html">Open Week 1 Assignment</a></p>
+<hr>
+</section>
+<section id="assignment-submission-link" class="level1">
+<h1>Assignment Submission Link</h1>
+<p><a href="https://lms.arts.cmb.ac.lk/mod/assign/view.php?id=91781">Submit Week 1 Assignment</a></p>
+<hr>
+</section>
+<section id="submission-deadline" class="level1">
+<h1>Submission Deadline</h1>
+<pre class="text"><code>28.05.2026</code></pre>
+<p>Late submissions may not be accepted unless prior approval has been obtained from the lecturer.</p>
 <hr>
 </section>
 <section id="ai-reflection-question" class="level1">
-<h1>25. AI Reflection Question</h1>
-<p>AI tools can help generate code and explanations.</p>
-<p>However, AI can also:</p>
+<h1>24. AI Reflection Question</h1>
+<p>AI tools can help generate:</p>
+<ul>
+<li>code</li>
+<li>explanations</li>
+<li>summaries</li>
+<li>visualizations</li>
+</ul>
+<p>However, AI systems can also:</p>
 <ul>
 <li>make mistakes</li>
-<li>misunderstand context</li>
-<li>produce wrong calculations</li>
-<li>give weak economic interpretations</li>
+<li>hallucinate information</li>
+<li>misunderstand economic context</li>
+<li>produce weak interpretations</li>
 </ul>
-<p>Reflection question:</p>
+<hr>
+</section>
+<section id="reflection-question" class="level1">
+<h1>Reflection Question</h1>
 <pre class="text"><code>Why should economists verify AI-generated outputs instead of blindly trusting them?</code></pre>
 <hr>
 </section>
 <section id="key-takeaways" class="level1">
-<h1>26. Key Takeaways</h1>
-<p>By the end of Week 1, students should know:</p>
+<h1>25. Key Takeaways</h1>
+<p>By the end of Week 1, students should understand that:</p>
 <ul>
 <li>Python is a programming language</li>
-<li>Google Colab allows Python coding in the browser</li>
+<li>Google Colab enables browser-based coding</li>
 <li>Python can calculate economic indicators</li>
-<li>AI can support analysis but must be used critically</li>
+<li>AI systems can support analysis but require verification</li>
 <li>Machine learning focuses heavily on prediction</li>
 <li>Economic interpretation matters as much as code</li>
-<li>Errors are normal in programming</li>
+<li>Errors are a normal part of programming</li>
 </ul>
 <hr>
 </section>
 <section id="before-week-2" class="level1">
-<h1>27. Before Week 2</h1>
-<p>Before the next class, students should:</p>
+<h1>26. Before Week 2</h1>
+<p>Before the next lecture, students should:</p>
 <ul>
 <li>rerun all Week 1 code cells</li>
-<li>save their notebook properly</li>
+<li>organize their Google Drive folders</li>
+<li>save the assignment properly</li>
 <li>submit the notebook link</li>
-<li>organise their Google Drive folder</li>
 <li>review common beginner errors</li>
-<li>read the Setup Guide</li>
+<li>revisit the Setup Guide</li>
 </ul>
+<hr>
+<p><em>ECN 4199 — Industrial Data Analytics</em><br>
+<em>Department of Economics</em><br>
+<em>University of Colombo</em></p>
 
 
 </section>
