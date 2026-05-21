@@ -2,12 +2,6 @@
 title: "Week 8 In-Class Activity"
 ---
 
-# Week 8 — In-Class Timed Activity
-
-# ECN 4199 — Industrial Data Analytics
-
----
-
 # Activity Information
 
 | Item | Details |

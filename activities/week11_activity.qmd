@@ -2,12 +2,6 @@
 title: "Week 11 In-Class Activity"
 ---
 
-# Week 11 — In-Class Timed Activity
-
-# ECN 4199 — Industrial Data Analytics
-
----
-
 # Activity Information
 
 | Item | Details |

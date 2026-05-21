@@ -13,6 +13,8 @@ This course is organized into two major learning phases.
 ## Week 1 — Digital Course Orientation and Computational Thinking
 [Open Week 1](lectures/week1.qmd)
 
+<!--
+
 ## Week 2 — Python Fundamentals for Economic Analysis
 [Open Week 2](lectures/week2.qmd)
 
@@ -53,7 +55,7 @@ This course is organized into two major learning phases.
 ## Week 13 — Capstone Integration and AI-Assisted Analytics
 [Open Week 13](lectures/week13.qmd)
 
----
+-->
 
 # Final Goal of the Course
 

@@ -2,12 +2,6 @@
 title: "Week 12 In-Class Activity"
 ---
 
-# Week 12 — In-Class Timed Activity
-
-# ECN 4199 — Industrial Data Analytics
-
----
-
 # Activity Information
 
 | Item | Details |
