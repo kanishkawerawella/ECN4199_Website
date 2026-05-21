@@ -1,5 +1,13 @@
 project:
   type: website
+  render:
+    - index.qmd
+    - roadmap.qmd
+    - assignments.qmd
+    - resources.qmd
+    - setup.qmd
+    - lectures/week1.qmd
+    - activities/week1_activity.qmd
 
 website:
   title: "ECN 4199 - Industrial Data Analytics"
