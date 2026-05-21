@@ -1,0 +1,1089 @@
+---
+title: "Week 8 — Introduction to Machine Learning for Economics"
+---
+
+# Week 8 — Machine Learning Foundations: Prediction, Patterns, and Economic Data
+
+Week 7 introduced:
+
+- regression
+- predictive modeling
+- explanatory relationships
+- econometric thinking
+
+Now students transition into:
+
+```text
+machine learning
+```
+
+This is one of the most dangerous weeks pedagogically.
+
+Why?
+
+Because students are heavily exposed online to:
+
+- AI hype
+- buzzwords
+- unrealistic claims
+- “black-box magic”
+
+This week is NOT about fake AI excitement.
+
+This week is about:
+
+- conceptual clarity
+- analytical skepticism
+- computational understanding
+
+Students must understand:
+
+- what machine learning actually is
+- how it differs from econometrics
+- why prediction matters
+- what overfitting means
+- why models fail
+- how ML supports economics
+
+---
+
+# Critical Conceptual Goal
+
+Students should leave Week 8 understanding:
+
+```text
+Machine learning learns patterns from data for prediction.
+```
+
+NOT:
+
+```text
+Artificial intelligence magic.
+```
+
+---
+
+# 1. Learning Objectives
+
+By the end of this week, students should be able to:
+
+- explain what machine learning is
+- distinguish ML from econometrics
+- understand prediction vs explanation
+- define features and target variables
+- split training and testing data
+- understand overfitting and underfitting
+- train simple ML models
+- compare predictive models
+- evaluate prediction performance
+- critically interpret ML outputs
+
+---
+
+# 2. What Is Machine Learning?
+
+Machine learning is a set of methods that allow computers to learn patterns from data.
+
+Instead of manually writing every rule:
+
+- we provide data
+- algorithms identify patterns automatically
+
+---
+
+# Traditional Programming vs Machine Learning
+
+| Traditional Programming | Machine Learning |
+|---|---|
+| Rules + Data → Answers | Data + Answers → Learned Rules |
+
+---
+
+# Economic Example
+
+Suppose we want to predict:
+
+- household poverty
+- unemployment risk
+- inflation
+- loan default
+- business failure
+
+Machine learning identifies statistical patterns associated with those outcomes.
+
+---
+
+# Important Warning
+
+Machine learning does NOT:
+
+- understand economics
+- discover truth automatically
+- replace economic reasoning
+- replace theory
+
+It identifies patterns in data.
+
+---
+
+# 3. Machine Learning vs Econometrics
+
+This distinction is critical.
+
+---
+
+# Econometrics Often Asks
+
+```text
+What causes changes in Y?
+```
+
+---
+
+# Machine Learning Often Asks
+
+```text
+Can we accurately predict Y?
+```
+
+---
+
+# Example
+
+## Econometric Question
+
+```text
+Does education causally increase wages?
+```
+
+---
+
+## Machine Learning Question
+
+```text
+Can wages be predicted accurately using education and other variables?
+```
+
+---
+
+# Important Comparison
+
+| Econometrics | Machine Learning |
+|---|---|
+| Explanation | Prediction |
+| Causality | Accuracy |
+| Theory-driven | Data-driven |
+| Interpretability | Performance |
+
+---
+
+# Critical Lesson
+
+Good economists should understand BOTH.
+
+---
+
+# 4. Prediction vs Explanation
+
+Prediction and explanation are NOT identical.
+
+A model may:
+
+- predict well
+- explain poorly
+
+Or:
+
+- explain well
+- predict poorly
+
+---
+
+# Example
+
+Suppose social media activity predicts stock prices.
+
+Prediction may work.
+
+But:
+
+```text
+the mechanism may remain unclear
+```
+
+---
+
+# Important Lesson
+
+Prediction alone is NOT sufficient for policy analysis.
+
+---
+
+# 5. Supervised Learning
+
+This week focuses on:
+
+```text
+supervised learning
+```
+
+---
+
+# What Is Supervised Learning?
+
+We already know the correct outcomes.
+
+The model learns relationships from labeled data.
+
+---
+
+# Examples
+
+| Features | Target |
+|---|---|
+| Income, education | Poverty status |
+| GDP, inflation | Unemployment |
+| Household characteristics | Consumption |
+
+---
+
+# Important Terms
+
+| Term | Meaning |
+|---|---|
+| Features | Input variables |
+| Target | Outcome variable |
+
+---
+
+# Example
+
+## Features
+
+- Education
+- Age
+- Experience
+
+## Target
+
+- Income
+
+---
+
+# 6. Features and Target Variables
+
+Machine learning models require:
+
+- input variables
+- output variables
+
+---
+
+# Python Example
+
+```python
+X = data[["Education",
+          "Age",
+          "Experience"]]
+
+y = data["Income"]
+```
+
+---
+
+# Important Lesson
+
+Feature selection matters enormously.
+
+Bad features produce bad predictions.
+
+---
+
+# 7. Training and Testing Data
+
+Machine learning evaluates prediction using:
+
+- training data
+- testing data
+
+---
+
+# Why Split Data?
+
+If we test the model using the same data used for training:
+
+```text
+performance becomes misleading
+```
+
+---
+
+# Import Function
+
+```python
+from sklearn.model_selection import train_test_split
+```
+
+---
+
+# Split Data
+
+```python
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.2,
+    random_state=42
+)
+```
+
+---
+
+# Interpretation
+
+| Dataset | Purpose |
+|---|---|
+| Training set | Learn patterns |
+| Testing set | Evaluate prediction |
+
+---
+
+# Critical Lesson
+
+Prediction quality must be evaluated on:
+
+```text
+unseen data
+```
+
+---
+
+# 8. Overfitting and Underfitting
+
+One of the most important concepts in ML.
+
+---
+
+# Overfitting
+
+The model memorizes training data too closely.
+
+Result:
+
+- excellent training performance
+- poor real-world performance
+
+---
+
+# Underfitting
+
+The model is too simple.
+
+Result:
+
+- weak learning
+- poor predictions
+
+---
+
+# Important Intuition
+
+Good models:
+
+- generalize well
+- balance complexity and simplicity
+
+---
+
+# Example Analogy
+
+Overfitting is like:
+
+```text
+memorizing exam answers without understanding concepts
+```
+
+---
+
+# 9. Model Evaluation
+
+How do we know whether a model performs well?
+
+We evaluate prediction errors.
+
+---
+
+# Common Metrics
+
+| Metric | Meaning |
+|---|---|
+| MAE | Mean Absolute Error |
+| MSE | Mean Squared Error |
+| RMSE | Root Mean Squared Error |
+
+---
+
+# Example
+
+```python
+from sklearn.metrics import mean_absolute_error
+```
+
+---
+
+# Calculate Error
+
+```python
+predictions = model.predict(X_test)
+
+mean_absolute_error(y_test, predictions)
+```
+
+---
+
+# Important Lesson
+
+Lower prediction error usually means:
+
+```text
+better predictive performance
+```
+
+But:
+
+- interpretability
+- fairness
+- transparency
+
+also matter.
+
+---
+
+# 10. Introduction to scikit-learn
+
+scikit-learn is one of the most widely used ML libraries.
+
+It provides tools for:
+
+- regression
+- classification
+- clustering
+- preprocessing
+- evaluation
+
+---
+
+# Import Example
+
+```python
+from sklearn.linear_model import LinearRegression
+```
+
+---
+
+# Important Lesson
+
+scikit-learn emphasizes:
+
+- prediction workflows
+- standardized pipelines
+- model performance
+
+---
+
+# 11. Linear Regression as Machine Learning
+
+Linear regression also exists in ML.
+
+But the focus differs.
+
+---
+
+# Econometrics Focus
+
+- interpretation
+- statistical inference
+
+---
+
+# ML Focus
+
+- prediction accuracy
+
+---
+
+# Example
+
+```python
+from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+
+model.fit(X_train, y_train)
+```
+
+---
+
+# Generate Predictions
+
+```python
+predictions = model.predict(X_test)
+```
+
+---
+
+# Important Lesson
+
+Same model.
+
+Different philosophy.
+
+---
+
+# 12. Decision Trees
+
+Decision trees split data into branches.
+
+---
+
+# Example Logic
+
+```text
+If income < threshold → Poor
+Else → Non-poor
+```
+
+---
+
+# Why Trees Matter
+
+Decision trees:
+
+- are intuitive
+- handle nonlinear relationships
+- are easy to visualize
+
+---
+
+# Example
+
+```python
+from sklearn.tree import DecisionTreeRegressor
+
+tree = DecisionTreeRegressor()
+
+tree.fit(X_train, y_train)
+```
+
+---
+
+# Important Warning
+
+Decision trees easily overfit.
+
+---
+
+# 13. Random Forests
+
+Random forests combine many decision trees.
+
+Instead of relying on one tree:
+
+```text
+many trees vote together
+```
+
+---
+
+# Why Useful?
+
+Random forests:
+
+- improve prediction
+- reduce overfitting
+- capture nonlinear relationships
+
+---
+
+# Example
+
+```python
+from sklearn.ensemble import RandomForestRegressor
+
+forest = RandomForestRegressor()
+
+forest.fit(X_train, y_train)
+```
+
+---
+
+# Important Lesson
+
+More complex models are NOT always better.
+
+Interpretability may decline.
+
+---
+
+# 14. Comparing Models
+
+This week students compare:
+
+- linear regression
+- decision tree
+- random forest
+
+---
+
+# Key Question
+
+```text
+Which model predicts best?
+```
+
+---
+
+# Important Insight
+
+Best predictive model may:
+
+- not be most interpretable
+- not align with economic theory
+
+---
+
+# Critical Lesson
+
+Economics requires balancing:
+
+- prediction
+- interpretability
+- theory
+- realism
+
+---
+
+# 15. Prediction Accuracy
+
+We compare model performance using prediction errors.
+
+---
+
+# Example
+
+```python
+from sklearn.metrics import mean_squared_error
+```
+
+---
+
+# Compare Models
+
+```python
+mean_squared_error(y_test, predictions)
+```
+
+---
+
+# Important Lesson
+
+Accuracy matters.
+
+But so do:
+
+- fairness
+- robustness
+- transparency
+- interpretability
+
+---
+
+# 16. Visualizing Predictions
+
+Visualization helps evaluate model performance.
+
+---
+
+# Example
+
+```python
+import matplotlib.pyplot as plt
+
+plt.scatter(y_test, predictions)
+
+plt.xlabel("Actual Values")
+plt.ylabel("Predicted Values")
+
+plt.show()
+```
+
+---
+
+# Interpretation
+
+Good predictions should lie close to a 45-degree line.
+
+---
+
+# Important Questions
+
+Ask:
+
+- Are predictions biased?
+- Are some groups predicted poorly?
+- Are outliers driving results?
+
+---
+
+# 17. Open the Week 8 Live Notebook
+
+Replace placeholder below:
+
+[Open Week 8 Live Notebook — Save a Copy Before Editing](PASTE_WEEK8_COLAB_LINK_HERE)
+
+---
+
+# 18. Download ML Dataset
+
+Replace placeholder below:
+
+[Download ML Dataset](PASTE_DATASET_LINK_HERE)
+
+---
+
+# 19. Machine Learning Cheat Sheet
+
+Replace placeholder below:
+
+[Open Machine Learning Cheat Sheet](PASTE_ML_GUIDE_LINK_HERE)
+
+---
+
+# 20. scikit-learn Beginner Guide
+
+Replace placeholder below:
+
+[Open scikit-learn Beginner Guide](PASTE_SKLEARN_GUIDE_LINK_HERE)
+
+---
+
+# 21. Live Coding Session
+
+## Activity Title
+
+```text
+Predicting Household Income Using Machine Learning
+```
+
+---
+
+## Step 1 — Import Libraries
+
+```python
+import pandas as pd
+
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error
+```
+
+---
+
+## Step 2 — Load Dataset
+
+```python
+data = pd.read_csv("household_income.csv")
+```
+
+---
+
+## Step 3 — Define Features and Target
+
+```python
+X = data[["Education",
+          "Age",
+          "Experience"]]
+
+y = data["Income"]
+```
+
+---
+
+## Step 4 — Split Data
+
+```python
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.2,
+    random_state=42
+)
+```
+
+---
+
+## Step 5 — Train Linear Regression Model
+
+```python
+model = LinearRegression()
+
+model.fit(X_train, y_train)
+```
+
+---
+
+## Step 6 — Generate Predictions
+
+```python
+predictions = model.predict(X_test)
+```
+
+---
+
+## Step 7 — Evaluate Error
+
+```python
+mean_absolute_error(y_test, predictions)
+```
+
+---
+
+## Step 8 — Train Decision Tree
+
+```python
+tree = DecisionTreeRegressor()
+
+tree.fit(X_train, y_train)
+```
+
+---
+
+## Step 9 — Compare Models
+
+Ask students:
+
+- Which predicts best?
+- Which is easier to interpret?
+- Which may overfit?
+- Which aligns better with economics?
+
+---
+
+# 22. Interactive Mini Quiz
+
+## Question 1
+
+```python
+answer = input("What is the primary focus of machine learning? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! ML mainly focuses on prediction.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 2
+
+```python
+answer = input("What is overfitting? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! Overfitting memorizes training data too closely.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 3
+
+```python
+answer = input("Why do we split training and testing data? A/B/C/D : ")
+
+if answer.upper() == "C":
+    print("Correct! Testing data evaluates unseen prediction performance.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+# 23. Self-Assessment Activity
+
+Students should complete the following tasks.
+
+---
+
+## Task 1 — Define Features and Target
+
+Define:
+
+- features
+- target variable
+
+---
+
+## Task 2 — Split Data
+
+Create:
+
+- training set
+- testing set
+
+---
+
+## Task 3 — Train Models
+
+Train:
+
+- linear regression
+- decision tree
+
+---
+
+## Task 4 — Generate Predictions
+
+Generate predictions using both models.
+
+---
+
+## Task 5 — Calculate Prediction Error
+
+Evaluate model performance.
+
+---
+
+## Task 6 — Compare Models
+
+Compare:
+
+- prediction quality
+- interpretability
+- overfitting risk
+
+---
+
+## Task 7 — Analytical Reflection
+
+Write short paragraph:
+
+```text
+What are the strengths and limitations of machine learning models in economics?
+```
+
+---
+
+# 24. Submission Instructions
+
+Submit:
+
+- completed ML notebook
+- trained models
+- prediction outputs
+- model comparison
+- interpretation paragraph
+
+---
+
+# File Naming Convention
+
+```text
+Week8_YourName.ipynb
+```
+
+---
+
+# Submission Link
+
+Replace placeholder below:
+
+[Submit Week 8 Work](PASTE_SUBMISSION_LINK_HERE)
+
+---
+
+# 25. Common Errors
+
+## Problem 1 — Data Leakage
+
+Students accidentally use testing data during training.
+
+This produces misleadingly high performance.
+
+---
+
+## Problem 2 — Overfitting
+
+Complex models may perform well in training but poorly in reality.
+
+---
+
+## Problem 3 — Blind Trust in Accuracy
+
+High prediction accuracy does NOT imply:
+
+- causality
+- fairness
+- robustness
+
+---
+
+## Problem 4 — Ignoring Economic Reasoning
+
+Prediction alone does not replace economic understanding.
+
+---
+
+## Problem 5 — Feature Misuse
+
+Bad or irrelevant features produce weak predictions.
+
+---
+
+# 26. AI Reflection Question
+
+AI can automatically generate ML models.
+
+However:
+
+- AI may optimize prediction while ignoring interpretation
+- AI may reinforce biases
+- AI may generate opaque “black-box” systems
+
+Reflection question:
+
+```text
+Why should economists remain skeptical even when machine learning models achieve high prediction accuracy?
+```
+
+---
+
+# 27. Key Takeaways
+
+By the end of Week 8, students should understand:
+
+- what machine learning is
+- prediction vs explanation
+- supervised learning
+- training/testing data
+- overfitting and underfitting
+- model evaluation
+- decision trees
+- random forests
+- prediction accuracy
+- limitations of ML in economics
+
+---
+
+# 28. Before Week 9
+
+Before next week, students should:
+
+- rerun all Week 8 code
+- compare model performance carefully
+- review overfitting concepts
+- practice prediction evaluation
+- complete submission

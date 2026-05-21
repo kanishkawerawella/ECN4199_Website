@@ -1,0 +1,734 @@
+---
+title: "Week 1 — Orientation: Python, AI, and Data Analytics"
+---
+
+# Week 1 — Orientation: Python, AI, and Data Analytics
+
+Welcome to **ECN 4199 — Industrial Data Analytics**.
+
+This week is not about advanced coding. It is about removing fear, understanding the course workflow, and running your first Python code.
+
+---
+
+# 1. Learning Objectives
+
+By the end of this week, students should be able to:
+
+- explain what Python is
+- explain why economists use Python
+- understand what Google Colab is
+- open and save a Colab notebook
+- run simple Python code
+- calculate basic economic indicators
+- submit a notebook link
+
+---
+
+# 2. How This Course Website Works
+
+This website is the main learning platform for the course.
+
+Each week, you will find:
+
+| Section | Purpose |
+|---|---|
+| Weekly Lesson | Explains the topic |
+| Live Notebook | Used during class |
+| Dataset | Data used for practice |
+| Self-Assessment | Completed after class |
+| Submission Task | What you must submit |
+| Common Errors | Help with mistakes |
+
+Each week, follow this workflow:
+
+1. Read the weekly lesson page
+2. Open the live Colab notebook
+3. Run the code during class
+4. Complete the self-assessment
+5. Submit your notebook link
+
+---
+
+# 3. What Is Python?
+
+Python is a programming language.
+
+A programming language allows us to give instructions to a computer.
+
+Economists use Python to:
+
+- clean datasets
+- calculate economic indicators
+- create graphs
+- run regressions
+- build dashboards
+- forecast economic variables
+- build machine learning models
+- analyse text
+- automate repetitive work
+
+You do not need to memorise Python.
+
+You need to learn how to use it.
+
+---
+
+# 4. Why Economists Use Python
+
+Economists increasingly work with data.
+
+Governments, central banks, businesses, NGOs, research institutes, and international organisations use data to answer questions such as:
+
+- Is inflation increasing?
+- Are households becoming poorer?
+- Which firms are likely to grow?
+- Can we forecast demand?
+- Which regions need policy support?
+- What do news articles say about the economy?
+- Can AI help analyse large amounts of information?
+
+Traditional economics gives us theory.
+
+Data analytics helps us measure, test, predict, visualise, and communicate.
+
+This course connects both.
+
+---
+
+# 5. What Is Google Colab?
+
+Google Colab is a cloud-based coding environment.
+
+It allows you to run Python directly in your browser.
+
+This means:
+
+- no Python installation is required at the beginning
+- you can work from most computers
+- notebooks can be saved to Google Drive
+- notebooks can be shared using links
+
+For the first few weeks, we will use Google Colab because it reduces technical problems.
+
+---
+
+# 6. Open the Week 1 Live Notebook
+
+Click the link below to open the interactive notebook used during class.
+
+**Important:** Replace the link below with your actual Google Colab notebook link.
+
+[Open Week 1 Live Notebook](https://colab.research.google.com/drive/1OSRvERqcIAuZGCJo1esaHD6hL-Xn6pnI?usp=sharing)
+
+Before continuing, students should:
+
+1. Open the notebook
+2. Sign in to Google
+3. Run the first code cell
+4. Save a copy to Google Drive
+
+---
+
+# 7. Your First Python Code
+
+Run this code in the Colab notebook:
+
+```python
+print("Hello Economics")
+```
+
+This tells Python to display:
+
+```text
+Hello Economics
+```
+
+`print()` is a Python function.
+
+A function performs a task.
+
+Here, the task is to display text.
+
+Text must be written inside quotation marks.
+
+---
+
+# 8. Code Cells and Text Cells
+
+In Google Colab, there are two main types of cells.
+
+| Cell Type | Purpose |
+|---|---|
+| Code cell | Used to write and run Python code |
+| Text cell | Used to write explanations, answers, and interpretations |
+
+In this course, you must use both.
+
+Good notebooks should contain:
+
+- code
+- output
+- explanations
+- economic interpretation
+
+A notebook with only code is not enough.
+
+---
+
+# 9. Running Code in Colab
+
+To run a code cell:
+
+```text
+Shift + Enter
+```
+
+or click the run button beside the cell.
+
+Try this:
+
+```python
+print("Welcome to ECN 4199")
+```
+
+---
+
+# 10. Python as a Calculator
+
+Python can be used like a calculator.
+
+```python
+100 + 50
+```
+
+```python
+100 - 50
+```
+
+```python
+100 * 50
+```
+
+```python
+100 / 50
+```
+
+Important symbols:
+
+| Symbol | Meaning |
+|---|---|
+| `+` | Addition |
+| `-` | Subtraction |
+| `*` | Multiplication |
+| `/` | Division |
+| `**` | Power |
+
+Example:
+
+```python
+2 ** 3
+```
+
+This means:
+
+```text
+2 × 2 × 2 = 8
+```
+
+---
+
+# 11. Variables
+
+A variable is a name used to store a value.
+
+Example:
+
+```python
+gdp_2023 = 100
+gdp_2024 = 105
+```
+
+Here:
+
+- `gdp_2023` stores the value `100`
+- `gdp_2024` stores the value `105`
+
+Variables allow us to organise calculations clearly.
+
+---
+
+# 12. Economic Calculation 1: GDP Growth
+
+## Formula
+
+```text
+GDP Growth = [(GDP this year - GDP last year) / GDP last year] × 100
+```
+
+## Python code
+
+```python
+gdp_last_year = 1000
+gdp_this_year = 1080
+
+gdp_growth = ((gdp_this_year - gdp_last_year) / gdp_last_year) * 100
+
+print(gdp_growth)
+```
+
+## Interpretation
+
+The economy grew by 8 percent.
+
+---
+
+# 13. Live Activity: Modify the GDP Numbers
+
+Now change the values:
+
+```python
+gdp_last_year = 5000
+gdp_this_year = 5500
+
+gdp_growth = ((gdp_this_year - gdp_last_year) / gdp_last_year) * 100
+
+print(gdp_growth)
+```
+
+Answer:
+
+```text
+GDP increased by 10 percent.
+```
+
+Discussion questions:
+
+- What happens if GDP falls?
+- Why do economists use percentage changes?
+- Why is percentage growth more useful than only looking at the absolute change?
+
+---
+
+# 14. Economic Calculation 2: Inflation Rate
+
+## Formula
+
+```text
+Inflation Rate = [(CPI this year - CPI last year) / CPI last year] × 100
+```
+
+## Python code
+
+```python
+cpi_last_year = 200
+cpi_this_year = 240
+
+inflation_rate = ((cpi_this_year - cpi_last_year) / cpi_last_year) * 100
+
+print(inflation_rate)
+```
+
+## Interpretation
+
+Prices increased by 20 percent.
+
+---
+
+# 15. Economic Calculation 3: Exchange Rate Depreciation
+
+## Formula
+
+```text
+Depreciation = [(New exchange rate - Old exchange rate) / Old exchange rate] × 100
+```
+
+## Python code
+
+```python
+exchange_rate_old = 320
+exchange_rate_new = 360
+
+depreciation = ((exchange_rate_new - exchange_rate_old) / exchange_rate_old) * 100
+
+print(depreciation)
+```
+
+## Interpretation
+
+The domestic currency depreciated by 12.5 percent.
+
+---
+
+# 16. Economic Calculation 4: Real Income
+
+## Formula
+
+```text
+Real Income = Nominal Income / Price Index × 100
+```
+
+## Python code
+
+```python
+nominal_income = 100000
+price_index = 125
+
+real_income = (nominal_income / price_index) * 100
+
+print(real_income)
+```
+
+## Interpretation
+
+Although nominal income is 100,000, real income is 80,000 in base-year prices.
+
+---
+
+# 17. What Is AI?
+
+Artificial Intelligence, or AI, refers to computer systems that can perform tasks that usually require human intelligence.
+
+Examples include:
+
+- answering questions
+- translating text
+- recognising images
+- writing summaries
+- identifying patterns
+- supporting decision-making
+
+An AI tool can help summarise a central bank report.
+
+But it may also make mistakes.
+
+Therefore, economists must use AI critically.
+
+AI can assist your thinking.
+
+It should not replace your thinking.
+
+---
+
+# 18. What Is Machine Learning?
+
+Machine learning is a type of AI.
+
+It allows computers to learn patterns from data.
+
+Instead of giving the computer every rule manually, we give it data and allow it to detect patterns.
+
+Example:
+
+Suppose we have household data with:
+
+- income
+- education
+- household size
+- location
+- employment status
+
+A machine learning model may learn patterns that help predict whether a household is likely to be poor.
+
+Important distinction:
+
+| Economics | Machine Learning |
+|---|---|
+| Often focuses on explanation and causality | Often focuses on prediction |
+| Asks why something happens | Asks what is likely to happen |
+| Uses theory heavily | Uses patterns in data heavily |
+
+This difference matters throughout the course.
+
+---
+
+# 19. Difference Between Python, Excel, Stata, AI, and ML
+
+| Tool/Concept | What it does |
+|---|---|
+| Excel | Spreadsheet-based calculations and basic analysis |
+| Stata | Statistical software widely used in economics |
+| Python | General-purpose programming language for data analysis and automation |
+| AI | Systems that perform tasks associated with human intelligence |
+| Machine Learning | Methods that learn patterns from data for prediction or classification |
+
+Python does not replace economic thinking.
+
+It expands what economists can do with data.
+
+---
+
+# 20. Self-Assessment Activity
+
+Complete the following tasks in your Week 1 notebook.
+
+---
+
+## Task 1: Print Your First Message
+
+Write Python code to print:
+
+```text
+I am learning Python for Economics
+```
+
+Expected code:
+
+```python
+print("I am learning Python for Economics")
+```
+
+---
+
+## Task 2: Calculate Inflation
+
+Given:
+
+- CPI in 2023 = 180
+- CPI in 2024 = 216
+
+Calculate the inflation rate.
+
+Expected answer:
+
+```text
+20.0
+```
+
+---
+
+## Task 3: Calculate GDP Growth
+
+Given:
+
+- GDP in 2023 = 8500
+- GDP in 2024 = 9010
+
+Calculate GDP growth.
+
+Expected answer:
+
+```text
+6.0
+```
+
+---
+
+## Task 4: Calculate Exchange Rate Depreciation
+
+Given:
+
+- Old exchange rate = 300
+- New exchange rate = 330
+
+Calculate the depreciation percentage.
+
+Expected answer:
+
+```text
+10.0
+```
+
+---
+
+## Task 5: Short Reflection
+
+Answer in 3–5 sentences:
+
+```text
+What can Python do that Excel cannot easily do?
+```
+
+---
+
+# 21. Mini Quiz
+
+## Question 1
+
+What is Python?
+
+A. A spreadsheet software  
+B. A programming language  
+C. A statistical table  
+D. A search engine  
+
+Correct answer: B
+
+---
+
+## Question 2
+
+What does `print()` do in Python?
+
+A. Deletes data  
+B. Displays output  
+C. Creates a graph  
+D. Opens Excel  
+
+Correct answer: B
+
+---
+
+## Question 3
+
+Which symbol is used for multiplication in Python?
+
+A. x  
+B. *  
+C. /  
+D. ^  
+
+Correct answer: B
+
+---
+
+## Question 4
+
+If GDP increases from 100 to 110, what is the growth rate?
+
+A. 5%  
+B. 10%  
+C. 15%  
+D. 20%  
+
+Correct answer: B
+
+---
+
+# 22. Common Beginner Errors
+
+## Problem 1: Missing quotation marks
+
+Wrong:
+
+```python
+print(Hello Economics)
+```
+
+Correct:
+
+```python
+print("Hello Economics")
+```
+
+---
+
+## Problem 2: Using commas in numbers
+
+Wrong:
+
+```python
+gdp = 1,000
+```
+
+Better:
+
+```python
+gdp = 1000
+```
+
+---
+
+## Problem 3: Wrong multiplication symbol
+
+Wrong:
+
+```python
+growth = value x 100
+```
+
+Correct:
+
+```python
+growth = value * 100
+```
+
+---
+
+## Problem 4: Forgetting to run the code cell
+
+In Colab, press:
+
+```text
+Shift + Enter
+```
+
+---
+
+# 23. Submission Task
+
+Submit your completed Week 1 notebook.
+
+Your notebook must include:
+
+- your name
+- first print command
+- GDP growth calculation
+- inflation calculation
+- exchange rate depreciation calculation
+- short reflection answer
+
+Submission method:
+
+**Replace the link below with your actual Google Form, LMS, or submission link.**
+
+[Submit Week 1 Work](PASTE_SUBMISSION_LINK_HERE)
+
+---
+
+# 24. How to Share Your Colab Notebook
+
+In Google Colab:
+
+1. Click **Share**
+2. Change access to **Anyone with the link**
+3. Set permission to **Viewer**
+4. Copy the link
+5. Submit the link through the submission form
+
+Before submitting, check that the link opens in another browser or private window.
+
+---
+
+# 25. AI Reflection Question
+
+AI tools can help generate code and explanations.
+
+However, AI can also:
+
+- make mistakes
+- misunderstand context
+- produce wrong calculations
+- give weak economic interpretations
+
+Reflection question:
+
+```text
+Why should economists verify AI-generated outputs instead of blindly trusting them?
+```
+
+---
+
+# 26. Key Takeaways
+
+By the end of Week 1, students should know:
+
+- Python is a programming language
+- Google Colab allows Python coding in the browser
+- Python can calculate economic indicators
+- AI can support analysis but must be used critically
+- Machine learning focuses heavily on prediction
+- Economic interpretation matters as much as code
+- Errors are normal in programming
+
+---
+
+# 27. Before Week 2
+
+Before the next class, students should:
+
+- rerun all Week 1 code cells
+- save their notebook properly
+- submit the notebook link
+- organise their Google Drive folder
+- review common beginner errors
+- read the Setup Guide

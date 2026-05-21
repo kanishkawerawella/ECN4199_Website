@@ -1,0 +1,935 @@
+---
+title: "Week 5 — Understanding Economic Data Through Statistics and Visualization"
+---
+
+# Week 5 — Descriptive Statistics and Data Visualization for Economics
+
+Weeks 1–4 focused on:
+
+- computational setup
+- Python fundamentals
+- programming logic
+- data handling and cleaning
+
+Now students move into:
+
+```text
+analytical interpretation
+```
+
+This week introduces:
+
+- descriptive statistics
+- distributions
+- correlation analysis
+- data visualization
+- economic storytelling with graphs
+
+This is where students begin transforming:
+
+```text
+data
+```
+
+into
+
+```text
+economic insight
+```
+
+---
+
+# 1. Learning Objectives
+
+By the end of this week, students should be able to:
+
+- generate descriptive statistics
+- interpret averages and variation
+- understand distributions
+- calculate correlations
+- create economic graphs
+- identify patterns and anomalies
+- communicate economic insights visually
+
+---
+
+# 2. Why Visualization Matters in Economics
+
+Large datasets are difficult to understand by simply reading tables.
+
+Visualization helps us:
+
+- detect patterns
+- identify trends
+- communicate evidence
+- compare variables
+- support decisions
+
+Good economists do not merely calculate.
+
+They explain.
+
+Visualization is part of explanation.
+
+---
+
+# Example
+
+Suppose inflation rises from:
+
+- 4%
+- to 6%
+- to 46%
+
+A table shows numbers.
+
+A graph shows crisis.
+
+That difference matters.
+
+---
+
+# 3. Descriptive Statistics
+
+Descriptive statistics summarize the main characteristics of data.
+
+They help answer questions such as:
+
+- What is the average?
+- How much variation exists?
+- Are values concentrated or spread out?
+- Are there extreme observations?
+
+---
+
+# Common Descriptive Statistics
+
+| Statistic | Purpose |
+|---|---|
+| Mean | Average |
+| Median | Middle value |
+| Standard deviation | Variation |
+| Minimum | Lowest value |
+| Maximum | Highest value |
+
+---
+
+# Generate Descriptive Statistics
+
+```python
+data.describe()
+```
+
+---
+
+# Example Interpretation
+
+| Statistic | Inflation |
+|---|---|
+| Mean | 12.5 |
+| Std | 15.2 |
+| Max | 46.4 |
+
+Interpretation:
+
+- Inflation averaged 12.5%
+- Inflation varied substantially
+- Some years experienced very high inflation
+
+---
+
+# 4. Measures of Central Tendency
+
+Central tendency describes the “typical” value.
+
+---
+
+# Mean
+
+```python
+data["Inflation"].mean()
+```
+
+---
+
+# Median
+
+```python
+data["Inflation"].median()
+```
+
+---
+
+# Why Mean and Median Differ
+
+If extreme values exist:
+
+- the mean may be distorted
+- the median may better represent the “typical” observation
+
+---
+
+# Economic Example
+
+If one household earns extremely high income:
+
+- average income rises sharply
+- median income changes little
+
+This matters in inequality analysis.
+
+---
+
+# 5. Measures of Dispersion
+
+Dispersion measures variability.
+
+Two economies may have the same average inflation but very different stability.
+
+---
+
+# Standard Deviation
+
+```python
+data["Inflation"].std()
+```
+
+---
+
+# Interpretation
+
+High standard deviation means:
+
+- high volatility
+- instability
+- uncertainty
+
+---
+
+# Range
+
+```python
+data["Inflation"].max() - data["Inflation"].min()
+```
+
+---
+
+# Economic Significance
+
+Volatility matters for:
+
+- investment
+- monetary policy
+- household welfare
+- business planning
+
+---
+
+# 6. Distributions and Histograms
+
+A distribution shows how values are spread.
+
+Histograms help visualize distributions.
+
+---
+
+# Example Histogram
+
+```python
+import matplotlib.pyplot as plt
+
+plt.hist(data["Inflation"])
+
+plt.show()
+```
+
+---
+
+# Interpretation Questions
+
+Ask:
+
+- Is inflation concentrated at low values?
+- Are there extreme observations?
+- Is the distribution symmetric?
+
+---
+
+# Why Distributions Matter
+
+Many statistical methods assume:
+
+- normality
+- symmetry
+- absence of extreme outliers
+
+Economists must inspect distributions before modeling.
+
+---
+
+# 7. Correlation Analysis
+
+Correlation measures how two variables move together.
+
+---
+
+# Example Questions
+
+Do:
+
+- inflation and exchange rate depreciation move together?
+- unemployment and GDP growth move inversely?
+
+---
+
+# Correlation Coefficient
+
+```python
+data["Inflation"].corr(data["Exchange_Rate_Change"])
+```
+
+---
+
+# Correlation Interpretation
+
+| Correlation | Meaning |
+|---|---|
+| +1 | Perfect positive relationship |
+| 0 | No relationship |
+| -1 | Perfect negative relationship |
+
+---
+
+# Critical Warning
+
+Correlation does NOT imply causation.
+
+This distinction is fundamental in economics.
+
+---
+
+# Example
+
+Ice cream sales and drowning deaths may rise together.
+
+This does NOT mean:
+
+```text
+ice cream causes drowning
+```
+
+A third factor:
+
+```text
+temperature
+```
+
+drives both.
+
+---
+
+# 8. Introduction to Data Visualization
+
+Visualization transforms raw numbers into interpretable patterns.
+
+This week we use:
+
+- matplotlib
+- Plotly
+
+---
+
+# Import Libraries
+
+```python
+import matplotlib.pyplot as plt
+import plotly.express as px
+```
+
+---
+
+# Common Graph Types
+
+| Graph | Best Use |
+|---|---|
+| Line graph | Trends over time |
+| Bar chart | Comparisons |
+| Scatter plot | Relationships |
+| Histogram | Distributions |
+
+---
+
+# Important Principle
+
+Choose graphs based on:
+
+```text
+analytical purpose
+```
+
+not appearance.
+
+---
+
+# 9. Line Graphs
+
+Line graphs are ideal for time-series data.
+
+---
+
+# Example
+
+```python
+plt.plot(data["Year"], data["Inflation"])
+
+plt.show()
+```
+
+---
+
+# Add Labels
+
+```python
+plt.plot(data["Year"], data["Inflation"])
+
+plt.title("Inflation in Sri Lanka")
+plt.xlabel("Year")
+plt.ylabel("Inflation Rate")
+
+plt.show()
+```
+
+---
+
+# Interpretation
+
+Students should identify:
+
+- trends
+- spikes
+- turning points
+- crises
+
+---
+
+# 10. Bar Charts
+
+Bar charts compare categories.
+
+---
+
+# Example
+
+```python
+plt.bar(data["Year"], data["GDP_Growth"])
+
+plt.show()
+```
+
+---
+
+# Economic Uses
+
+Bar charts are useful for:
+
+- regional comparisons
+- sector comparisons
+- unemployment by gender
+- export composition
+
+---
+
+# Warning
+
+Do not overload bar charts with too many categories.
+
+---
+
+# 11. Scatter Plots
+
+Scatter plots help analyze relationships between variables.
+
+---
+
+# Example
+
+```python
+plt.scatter(data["Inflation"],
+            data["Exchange_Rate_Change"])
+
+plt.show()
+```
+
+---
+
+# Interpretation Questions
+
+Ask:
+
+- Is there positive relationship?
+- Are there clusters?
+- Are there outliers?
+
+---
+
+# Add Labels
+
+```python
+plt.scatter(data["Inflation"],
+            data["Exchange_Rate_Change"])
+
+plt.xlabel("Inflation")
+plt.ylabel("Exchange Rate Change")
+
+plt.show()
+```
+
+---
+
+# 12. Multi-Variable Visualization
+
+Economists often compare several variables simultaneously.
+
+---
+
+# Example: Two-Axis Graph
+
+```python
+fig, ax1 = plt.subplots()
+
+ax1.plot(data["Year"], data["Inflation"])
+
+ax2 = ax1.twinx()
+
+ax2.plot(data["Year"], data["Exchange_Rate"])
+
+plt.show()
+```
+
+---
+
+# Interpretation
+
+Students should ask:
+
+- Do inflation spikes coincide with depreciation?
+- Do variables move together?
+
+---
+
+# Warning
+
+Multi-axis graphs can be misleading.
+
+Use carefully.
+
+---
+
+# 13. Interactive Graphs with Plotly
+
+Interactive visualization is increasingly important.
+
+Plotly allows:
+
+- zooming
+- hovering
+- filtering
+- interaction
+
+---
+
+# Example
+
+```python
+fig = px.line(data,
+              x="Year",
+              y="Inflation",
+              title="Inflation Trends")
+
+fig.show()
+```
+
+---
+
+# Why Interactive Graphs Matter
+
+They:
+
+- improve exploration
+- improve communication
+- improve dashboards
+- support decision-making
+
+---
+
+# 14. Telling Economic Stories with Data
+
+Good analysts do not simply create graphs.
+
+They interpret them.
+
+---
+
+# Weak Interpretation
+
+```text
+Inflation increased.
+```
+
+---
+
+# Better Interpretation
+
+```text
+Inflation remained relatively stable until 2021 but increased sharply in 2022, suggesting severe macroeconomic instability.
+```
+
+---
+
+# Critical Lesson
+
+Graphs without interpretation are incomplete analysis.
+
+---
+
+# 15. Open the Week 5 Live Notebook
+
+Replace placeholder below:
+
+[Open Week 5 Live Notebook — Save a Copy Before Editing](PASTE_WEEK5_COLAB_LINK_HERE)
+
+---
+
+# 16. Download the Visualization Dataset
+
+Replace placeholder below:
+
+[Download Visualization Dataset](PASTE_DATASET_LINK_HERE)
+
+---
+
+# 17. Live Coding Session
+
+## Step 1 — Import Libraries
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import plotly.express as px
+```
+
+---
+
+## Step 2 — Load Dataset
+
+```python
+data = pd.read_csv("sri_lanka_macro.csv")
+```
+
+---
+
+## Step 3 — Generate Descriptive Statistics
+
+```python
+data.describe()
+```
+
+---
+
+## Step 4 — Calculate Average Inflation
+
+```python
+data["Inflation"].mean()
+```
+
+---
+
+## Step 5 — Create Histogram
+
+```python
+plt.hist(data["Inflation"])
+
+plt.show()
+```
+
+---
+
+## Step 6 — Create Line Graph
+
+```python
+plt.plot(data["Year"], data["Inflation"])
+
+plt.show()
+```
+
+---
+
+## Step 7 — Create Scatter Plot
+
+```python
+plt.scatter(data["Inflation"],
+            data["Exchange_Rate_Change"])
+
+plt.show()
+```
+
+---
+
+## Step 8 — Create Interactive Plotly Graph
+
+```python
+fig = px.line(data,
+              x="Year",
+              y="Inflation")
+
+fig.show()
+```
+
+---
+
+## Step 9 — Interpretation Questions
+
+Ask students:
+
+- When did inflation accelerate?
+- What happened during crisis periods?
+- Are inflation and exchange rate movements related?
+- Are there outliers?
+
+---
+
+# 18. Interactive Mini Quiz
+
+## Question 1
+
+```python
+answer = input("What does standard deviation measure? A/B/C/D : ")
+
+if answer.upper() == "C":
+    print("Correct! Standard deviation measures variation.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 2
+
+```python
+answer = input("Which graph is best for time trends? A/B/C/D : ")
+
+if answer.upper() == "C":
+    print("Correct! Line graphs are best for trends.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 3
+
+```python
+answer = input("Does correlation imply causation? Yes/No : ")
+
+if answer.lower() == "no":
+    print("Correct!")
+else:
+    print("Incorrect.")
+```
+
+---
+
+# 19. Self-Assessment Activity
+
+Students should complete the following tasks.
+
+---
+
+## Task 1 — Generate Statistics
+
+Generate:
+
+- mean
+- median
+- standard deviation
+
+for:
+
+- inflation
+- GDP growth
+- exchange rate changes
+
+---
+
+## Task 2 — Create Graphs
+
+Create:
+
+- histogram
+- line graph
+- bar chart
+- scatter plot
+
+---
+
+## Task 3 — Correlation Analysis
+
+Calculate correlation between:
+
+- inflation
+- exchange rate changes
+
+Interpret result.
+
+---
+
+## Task 4 — Identify Key Events
+
+Identify:
+
+- highest inflation year
+- lowest GDP growth year
+- largest exchange rate depreciation
+
+---
+
+## Task 5 — Write Interpretation
+
+Write short analytical paragraph:
+
+```text
+What macroeconomic patterns do you observe in the data?
+```
+
+---
+
+## Task 6 — Create Interactive Plotly Graph
+
+Create one interactive graph using Plotly.
+
+---
+
+# 20. Submission Instructions
+
+Submit:
+
+- completed notebook
+- descriptive statistics
+- visualizations
+- correlation analysis
+- interpretation paragraph
+
+---
+
+# File Naming Convention
+
+```text
+Week5_YourName.ipynb
+```
+
+---
+
+# Submission Link
+
+Replace placeholder below:
+
+[Submit Week 5 Work](PASTE_SUBMISSION_LINK_HERE)
+
+---
+
+# 21. Common Errors
+
+## Problem 1 — Forgetting Labels
+
+Graphs without:
+
+- titles
+- axis labels
+- units
+
+are poor practice.
+
+---
+
+## Problem 2 — Misinterpreting Correlation
+
+Correlation:
+
+- indicates association
+- NOT causality
+
+---
+
+## Problem 3 — Overcrowded Graphs
+
+Too many variables create unreadable visualizations.
+
+Simplify.
+
+---
+
+## Problem 4 — Using Wrong Graph Type
+
+Example:
+
+using bar chart for continuous time trends.
+
+---
+
+## Problem 5 — Ignoring Outliers
+
+Extreme observations may:
+
+- distort averages
+- distort correlations
+- distort conclusions
+
+Always inspect data visually.
+
+---
+
+# 22. AI Reflection Question
+
+AI can automatically generate graphs.
+
+However:
+
+- AI may choose misleading graph types
+- AI may ignore economic context
+- AI may produce visually attractive but analytically weak outputs
+
+Reflection question:
+
+```text
+Why is economic interpretation still necessary even when AI tools generate visualizations automatically?
+```
+
+---
+
+# 23. Key Takeaways
+
+By the end of Week 5, students should understand:
+
+- descriptive statistics
+- measures of central tendency
+- measures of dispersion
+- distributions
+- correlation analysis
+- data visualization principles
+- line graphs
+- histograms
+- scatter plots
+- interactive visualization
+- economic interpretation of graphs
+
+---
+
+# 24. Before Week 6
+
+Before next week, students should:
+
+- rerun all Week 5 code
+- practice graph creation
+- practice interpretation writing
+- review correlation concepts
+- complete submission

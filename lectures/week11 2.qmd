@@ -1,0 +1,1219 @@
+---
+title: "Week 11 — Forecasting Economic and Business Trends Using Time Series Data"
+---
+
+# Week 11 — Forecasting and Time Series Analytics for Economics
+
+Weeks 7–10 focused on:
+
+- regression
+- machine learning
+- classification
+- clustering
+- prediction systems
+
+This week students move into:
+
+```text
+forecasting
+```
+
+Forecasting is one of the most important practical applications of:
+
+- economics
+- statistics
+- machine learning
+- business analytics
+
+Governments, firms, central banks, and international organizations constantly attempt to forecast:
+
+- inflation
+- GDP growth
+- unemployment
+- exchange rates
+- demand
+- imports and exports
+- financial market movements
+
+This week introduces:
+
+- time series thinking
+- trend analysis
+- seasonality
+- forecasting models
+- train/test forecasting evaluation
+- forecasting uncertainty
+- forecasting limitations
+
+---
+
+# Critical Conceptual Goal
+
+Students must understand:
+
+```text
+Forecasting is not prophecy.
+```
+
+Forecasts are:
+
+- probabilistic
+- assumption-dependent
+- uncertainty-heavy
+- sensitive to shocks
+
+Good forecasting is about:
+
+```text
+disciplined estimation under uncertainty
+```
+
+not:
+
+```text
+certainty about the future
+```
+
+---
+
+# 1. Learning Objectives
+
+By the end of this week, students should be able to:
+
+- explain what forecasting is
+- explain why forecasting matters in economics
+- distinguish time series data from cross-sectional data
+- identify trends, seasonality, and cycles
+- visualize time series data
+- calculate moving averages
+- understand train/test splits for forecasting
+- estimate a simple forecasting model
+- evaluate forecast accuracy
+- interpret forecast uncertainty
+- explain why forecasts fail
+
+---
+
+# 2. What Is Forecasting?
+
+Forecasting means estimating future values using historical data.
+
+Economists forecast:
+
+- inflation
+- unemployment
+- GDP growth
+- exchange rates
+- exports
+- imports
+
+Businesses forecast:
+
+- sales
+- demand
+- inventories
+- customer behavior
+
+---
+
+# Important Lesson
+
+Forecasting is:
+
+- probabilistic
+- uncertain
+- conditional on assumptions
+
+A forecast may estimate:
+
+```text
+Inflation next month is likely between 5% and 7%.
+```
+
+Not:
+
+```text
+Inflation will definitely be 6%.
+```
+
+---
+
+# 3. Why Forecasting Matters in Economics
+
+Forecasting influences:
+
+- monetary policy
+- budgeting
+- investment
+- inventory management
+- labor planning
+- international trade decisions
+
+---
+
+# Central Bank Example
+
+Central banks forecast inflation to:
+
+- decide interest rates
+- assess macroeconomic risks
+- communicate policy expectations
+
+---
+
+# Business Example
+
+A supermarket forecasts demand to:
+
+- manage inventory
+- reduce shortages
+- reduce waste
+
+---
+
+# Critical Lesson
+
+Bad forecasts can create:
+
+- policy mistakes
+- financial losses
+- instability
+- overconfidence
+
+---
+
+# 4. What Is Time Series Data?
+
+Time series data consists of observations recorded over time.
+
+---
+
+# Examples
+
+| Variable | Frequency |
+|---|---|
+| Monthly inflation | Monthly |
+| GDP growth | Quarterly |
+| Exchange rate | Daily |
+| Sales | Weekly |
+
+---
+
+# Important Distinction
+
+## Cross-Sectional Data
+
+Many observations at one point in time.
+
+Example:
+
+```text
+Household survey in 2025
+```
+
+## Time Series Data
+
+One variable observed across time.
+
+Example:
+
+```text
+Monthly inflation from 2010 to 2025
+```
+
+---
+
+# Example
+
+| Year | Inflation |
+|---|---|
+| 2019 | 4.3 |
+| 2020 | 4.6 |
+| 2021 | 6.0 |
+
+---
+
+# Important Lesson
+
+Time creates structure.
+
+Observations are:
+
+- ordered
+- dependent
+- sequential
+
+This means time series data cannot be treated like ordinary random observations.
+
+---
+
+# 5. Trends, Seasonality, and Cycles
+
+Time series often contain:
+
+- trends
+- seasonality
+- cycles
+
+---
+
+# Trend
+
+A trend is a long-run movement.
+
+Example:
+
+```text
+A gradual long-term increase in prices.
+```
+
+---
+
+# Seasonality
+
+Seasonality means regular repeating patterns.
+
+Example:
+
+```text
+Tourism peaks during holidays.
+```
+
+---
+
+# Cycles
+
+Cycles are broader fluctuations.
+
+Example:
+
+```text
+Business cycles.
+```
+
+---
+
+# Important Lesson
+
+Forecasting models attempt to capture these patterns.
+
+---
+
+# Example Visualization
+
+```python
+plt.plot(data["Date"],
+         data["Inflation"])
+
+plt.show()
+```
+
+---
+
+# Interpretation Questions
+
+Ask:
+
+- Is there an upward trend?
+- Are there repeated patterns?
+- Are there structural breaks?
+- Are there crisis periods?
+
+---
+
+# 6. Visualizing Time Series
+
+Visualization is critical in forecasting.
+
+Never forecast blindly.
+
+---
+
+# Example
+
+```python
+plt.figure(figsize=(10,5))
+
+plt.plot(data["Date"],
+         data["Inflation"])
+
+plt.title("Inflation Over Time")
+plt.xlabel("Date")
+plt.ylabel("Inflation")
+
+plt.show()
+```
+
+---
+
+# Important Lesson
+
+Visualization helps identify:
+
+- volatility
+- instability
+- outliers
+- crises
+- trend changes
+
+---
+
+# Economic Interpretation
+
+A sudden inflation spike may suggest:
+
+- exchange rate depreciation
+- supply shocks
+- fiscal pressure
+- monetary instability
+- crisis conditions
+
+The graph is not only technical.
+
+It is economic evidence.
+
+---
+
+# 7. Moving Averages
+
+Moving averages smooth fluctuations.
+
+They help reveal underlying trends.
+
+---
+
+# Example
+
+A 3-period moving average:
+
+```python
+data["MA_3"] = data["Inflation"].rolling(window=3).mean()
+```
+
+---
+
+# Visualization
+
+```python
+plt.plot(data["Inflation"],
+         label="Actual")
+
+plt.plot(data["MA_3"],
+         label="3-Period Moving Average")
+
+plt.legend()
+
+plt.show()
+```
+
+---
+
+# Important Lesson
+
+Moving averages reduce noise.
+
+But smoothing may hide:
+
+- shocks
+- turning points
+- crisis signals
+
+Use smoothing carefully.
+
+---
+
+# 8. Forecasting Intuition
+
+Forecasting assumes:
+
+```text
+past patterns contain useful information about future behavior
+```
+
+This assumption may fail during:
+
+- crises
+- wars
+- pandemics
+- political instability
+- policy regime changes
+
+---
+
+# Example
+
+Historical inflation patterns may become unreliable during:
+
+```text
+severe macroeconomic crises
+```
+
+---
+
+# Critical Lesson
+
+Forecasting models are vulnerable to structural breaks.
+
+A model may perform well in normal periods but fail badly during crises.
+
+---
+
+# 9. Train-Test Splits for Time Series
+
+Forecasting evaluation differs from ordinary machine learning.
+
+---
+
+# Important Rule
+
+Future observations must never influence past training.
+
+---
+
+# Correct Logic
+
+Train on earlier periods.
+
+Test on later periods.
+
+---
+
+# Example
+
+| Dataset | Period |
+|---|---|
+| Training | 2010–2020 |
+| Testing | 2021–2022 |
+
+---
+
+# Example Split
+
+```python
+train = data[data["Year"] <= 2020]
+
+test = data[data["Year"] > 2020]
+```
+
+---
+
+# Critical Lesson
+
+Time ordering matters enormously.
+
+Random splitting can create unrealistic forecasting performance.
+
+---
+
+# 10. Forecast Evaluation
+
+Forecasts must be evaluated carefully.
+
+---
+
+# Common Metrics
+
+| Metric | Meaning |
+|---|---|
+| MAE | Mean Absolute Error |
+| RMSE | Root Mean Squared Error |
+| MAPE | Percentage forecast error |
+
+---
+
+# Import Metric
+
+```python
+from sklearn.metrics import mean_absolute_error
+```
+
+---
+
+# Calculate Error
+
+```python
+mean_absolute_error(actual, forecast)
+```
+
+---
+
+# Important Lesson
+
+No forecast is perfect.
+
+We evaluate:
+
+- magnitude of errors
+- stability
+- robustness
+- usefulness
+
+---
+
+# 11. Introduction to ARIMA Intuition
+
+ARIMA is one of the most widely used forecasting frameworks.
+
+---
+
+# ARIMA Intuition
+
+ARIMA combines:
+
+- past values
+- trends
+- previous errors
+
+---
+
+# Important Idea
+
+Future values depend partly on:
+
+```text
+previous observations
+```
+
+Example:
+
+```text
+If inflation was high recently, future inflation may remain elevated.
+```
+
+---
+
+# Important Warning
+
+Students do NOT need deep mathematical theory this week.
+
+Focus on:
+
+- intuition
+- workflow
+- interpretation
+- limitations
+
+---
+
+# Import ARIMA
+
+```python
+from statsmodels.tsa.arima.model import ARIMA
+```
+
+---
+
+# 12. Forecasting with statsmodels
+
+We now estimate a simple forecasting model.
+
+---
+
+# Example
+
+```python
+model = ARIMA(train["Inflation"],
+              order=(1,1,1))
+
+model_fit = model.fit()
+```
+
+---
+
+# Generate Forecast
+
+```python
+forecast = model_fit.forecast(steps=len(test))
+```
+
+---
+
+# Important Lesson
+
+Forecasting models estimate:
+
+```text
+expected future paths
+```
+
+not:
+
+```text
+certainty
+```
+
+---
+
+# 13. Machine Learning Forecasting
+
+Machine learning can also forecast time series.
+
+ML methods may forecast:
+
+- demand
+- electricity usage
+- inventory needs
+- financial markets
+- sales
+- imports
+
+---
+
+# Important Comparison
+
+| Traditional Forecasting | ML Forecasting |
+|---|---|
+| Strong structure | Flexible patterns |
+| More interpretable | Often less interpretable |
+| Works with smaller datasets | Often needs larger datasets |
+| Theory-guided | Performance-guided |
+
+---
+
+# Critical Lesson
+
+Complex machine learning forecasting does NOT guarantee better forecasts.
+
+A simple model with good interpretation may be more useful than a complex model that nobody understands.
+
+---
+
+# 14. Forecast Visualization
+
+Forecast visualization helps compare:
+
+- actual values
+- predicted values
+- uncertainty
+
+---
+
+# Example
+
+```python
+plt.plot(test["Inflation"],
+         label="Actual")
+
+plt.plot(forecast,
+         label="Forecast")
+
+plt.legend()
+
+plt.show()
+```
+
+---
+
+# Interpretation Questions
+
+Ask:
+
+- Did the forecast capture the trend?
+- Did the forecast miss shocks?
+- Are errors systematic?
+- Is the forecast economically believable?
+
+---
+
+# 15. Forecast Uncertainty
+
+All forecasts involve uncertainty.
+
+---
+
+# Important Lesson
+
+Forecasts should often be expressed as:
+
+- ranges
+- confidence intervals
+- probability distributions
+
+---
+
+# Example
+
+A careful forecast says:
+
+```text
+Inflation next quarter is expected between 6% and 8%.
+```
+
+A careless forecast says:
+
+```text
+Inflation will be exactly 7%.
+```
+
+---
+
+# Critical Lesson
+
+False certainty is dangerous in forecasting.
+
+Economists should communicate uncertainty clearly.
+
+---
+
+# 16. Forecasting Failures and Limitations
+
+Forecasting models frequently fail.
+
+Why?
+
+Because:
+
+- economies change
+- shocks occur
+- behavior changes
+- crises emerge
+- policy regimes shift
+
+---
+
+# Important Examples
+
+Forecasting failures often occur during:
+
+- financial crises
+- pandemics
+- political instability
+- wars
+- debt crises
+
+---
+
+# Critical Lesson
+
+Forecasting is useful.
+
+But it is inherently limited.
+
+Good forecasters are humble.
+
+Bad forecasters sound certain.
+
+---
+
+# 17. Open the Week 11 Live Notebook
+
+Replace placeholder below:
+
+[Open Week 11 Live Notebook — Save a Copy Before Editing](PASTE_WEEK11_COLAB_LINK_HERE)
+
+---
+
+# 18. Download Time Series Dataset
+
+Replace placeholder below:
+
+[Download Time Series Dataset](PASTE_DATASET_LINK_HERE)
+
+---
+
+# 19. Forecasting Cheat Sheet
+
+Replace placeholder below:
+
+[Open Forecasting Cheat Sheet](PASTE_FORECASTING_GUIDE_LINK_HERE)
+
+---
+
+# 20. ARIMA Beginner Guide
+
+Replace placeholder below:
+
+[Open ARIMA Beginner Guide](PASTE_ARIMA_GUIDE_LINK_HERE)
+
+---
+
+# 21. Live Coding Session
+
+## Activity Title
+
+```text
+Forecasting Inflation Using Time Series Models
+```
+
+---
+
+## Step 1 — Import Libraries
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+from statsmodels.tsa.arima.model import ARIMA
+from sklearn.metrics import mean_absolute_error
+```
+
+---
+
+## Step 2 — Load Dataset
+
+```python
+data = pd.read_csv("inflation_timeseries.csv")
+```
+
+---
+
+## Step 3 — Inspect Dataset
+
+```python
+data.head()
+data.info()
+data.describe()
+```
+
+---
+
+## Step 4 — Visualize Inflation
+
+```python
+plt.figure(figsize=(10,5))
+
+plt.plot(data["Date"],
+         data["Inflation"])
+
+plt.title("Inflation Over Time")
+plt.xlabel("Date")
+plt.ylabel("Inflation")
+
+plt.show()
+```
+
+---
+
+## Step 5 — Create Moving Average
+
+```python
+data["MA_3"] = data["Inflation"].rolling(window=3).mean()
+```
+
+---
+
+## Step 6 — Visualize Moving Average
+
+```python
+plt.figure(figsize=(10,5))
+
+plt.plot(data["Inflation"],
+         label="Actual")
+
+plt.plot(data["MA_3"],
+         label="3-Period Moving Average")
+
+plt.legend()
+
+plt.show()
+```
+
+---
+
+## Step 7 — Split Train and Test Sets
+
+```python
+train = data.iloc[:-12]
+
+test = data.iloc[-12:]
+```
+
+---
+
+## Step 8 — Estimate ARIMA Model
+
+```python
+model = ARIMA(train["Inflation"],
+              order=(1,1,1))
+
+model_fit = model.fit()
+```
+
+---
+
+## Step 9 — Generate Forecast
+
+```python
+forecast = model_fit.forecast(steps=12)
+```
+
+---
+
+## Step 10 — Evaluate Forecast Error
+
+```python
+mean_absolute_error(test["Inflation"],
+                    forecast)
+```
+
+---
+
+## Step 11 — Visualize Forecast
+
+```python
+plt.figure(figsize=(10,5))
+
+plt.plot(test["Inflation"].values,
+         label="Actual")
+
+plt.plot(forecast.values,
+         label="Forecast")
+
+plt.legend()
+
+plt.show()
+```
+
+---
+
+## Step 12 — Interpretation Questions
+
+Ask students:
+
+- Did the forecast capture the inflation trend?
+- Were crisis periods difficult to predict?
+- Why might forecasts fail?
+- What assumptions does forecasting require?
+- Should policymakers rely only on model forecasts?
+
+---
+
+# 22. Interactive Mini Quiz
+
+## Question 1
+
+```python
+answer = input("What is forecasting? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! Forecasting estimates future values.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 2
+
+```python
+answer = input("What is time series data? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! Time series data is observed over time.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 3
+
+```python
+answer = input("What do moving averages mainly do? A/B/C/D : ")
+
+if answer.upper() == "B":
+    print("Correct! Moving averages smooth fluctuations.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+## Question 4
+
+```python
+answer = input("Should future data influence training models? Yes/No : ")
+
+if answer.lower() == "no":
+    print("Correct! Future data should not influence past training.")
+else:
+    print("Incorrect.")
+```
+
+---
+
+# 23. Self-Assessment Activity
+
+## Activity Title
+
+```text
+Week 11 Self-Assessment: Forecasting Economic Trends
+```
+
+---
+
+## Task 1 — Visualize Time Series Data
+
+Create a line graph of the time series variable.
+
+---
+
+## Task 2 — Create Moving Average
+
+Create a moving average variable and plot it against the actual series.
+
+---
+
+## Task 3 — Split Data
+
+Split the dataset into:
+
+- training data
+- testing data
+
+Do not randomly shuffle the data.
+
+---
+
+## Task 4 — Estimate Forecasting Model
+
+Estimate a simple forecasting model.
+
+---
+
+## Task 5 — Generate Forecast
+
+Generate forecast values for the test period.
+
+---
+
+## Task 6 — Calculate Forecast Error
+
+Calculate forecast error using:
+
+```python
+mean_absolute_error()
+```
+
+---
+
+## Task 7 — Visualize Actual vs Forecast
+
+Create a graph comparing:
+
+- actual values
+- forecast values
+
+---
+
+## Task 8 — Analytical Interpretation
+
+Write a short paragraph:
+
+```text
+What are the strengths and limitations of economic forecasting?
+```
+
+---
+
+# 24. Submission Instructions
+
+Submit:
+
+- forecasting notebook
+- forecast visualizations
+- forecast evaluation
+- interpretation paragraph
+
+---
+
+# File Naming Convention
+
+```text
+Week11_YourName.ipynb
+```
+
+---
+
+# Submission Link
+
+Replace placeholder below:
+
+[Submit Week 11 Work](PASTE_SUBMISSION_LINK_HERE)
+
+---
+
+# 25. Common Errors
+
+## Problem 1 — Random Train-Test Split
+
+Time series must preserve chronological order.
+
+Random splitting creates unrealistic forecasting performance.
+
+---
+
+## Problem 2 — Ignoring Structural Breaks
+
+Forecasts may fail during crises.
+
+A model trained on normal periods may fail during abnormal periods.
+
+---
+
+## Problem 3 — Blind Trust in Forecasts
+
+Forecasts are uncertain estimates.
+
+Do not interpret them as certainty.
+
+---
+
+## Problem 4 — Overcomplicated Models
+
+Complex forecasting models may overfit historical noise.
+
+---
+
+## Problem 5 — Misinterpreting Forecast Accuracy
+
+Low forecast error in stable periods does not guarantee future performance during crises.
+
+---
+
+# 26. AI Reflection Question
+
+AI systems can automatically generate forecasts.
+
+However:
+
+- AI may fail during structural breaks
+- AI may overfit historical patterns
+- AI may ignore political or institutional change
+- AI may produce false confidence
+
+Reflection question:
+
+```text
+Why should economists remain cautious even when forecasting models appear highly accurate historically?
+```
+
+---
+
+# 27. Key Takeaways
+
+By the end of Week 11, students should understand:
+
+- what forecasting is
+- why forecasting matters in economics
+- time series structure
+- trends and seasonality
+- moving averages
+- forecasting intuition
+- train-test forecasting evaluation
+- ARIMA intuition
+- forecast uncertainty
+- forecasting limitations
+- forecasting applications in economics and business
+
+---
+
+# 28. Before Week 12
+
+Before next week, students should:
+
+- rerun all Week 11 code
+- practice moving averages
+- review time-series train/test splits
+- think critically about forecast uncertainty
+- complete submission

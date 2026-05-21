@@ -69,6 +69,7 @@ Students should not share passcodes with others.
 | Week | Topic | Marks | Duration | Activity Link |
 |---|---|---:|---:|---|
 | Week 1 | Orientation and First Python Code | 5 | 1 hour | [Open Activity](activities/week1_activity.qmd) |
+<!--
 | Week 2 | Setup and First Dataset | 5 | 1 hour | [Open Activity](activities/week2_activity.qmd) |
 | Week 3 | Python Fundamentals | 5 | 1 hour | [Open Activity](activities/week3_activity.qmd) |
 | Week 4 | Data Handling with Pandas | 5 | 1 hour | [Open Activity](activities/week4_activity.qmd) |
@@ -81,6 +82,8 @@ Students should not share passcodes with others.
 | Week 11 | Forecasting and Time Series | 5 | 1 hour | [Open Activity](activities/week11_activity.qmd) |
 | Week 12 | NLP and Generative AI | 5 | 1 hour | [Open Activity](activities/week12_activity.qmd) |
 | Week 13 | Capstone Analytics Workflow | 5 | 1 hour | [Open Activity](activities/week13_activity.qmd) |
+
+-->
 
 ---
 
