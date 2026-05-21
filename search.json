@@ -142,23 +142,51 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "ECN 4199 - Industrial Data Analytics",
+    "title": "ECN 4199 — Industrial Data Analytics",
     "section": "",
-    "text": "Welcome to the course website for ECN 4199: Industrial Data Analytics.\nThis course introduces students to:\n\nPython programming\ndata analytics\ndata visualisation\nmachine learning\nforecasting\nAI tools for economics and business\ninteractive dashboards\ntext analytics\n\nThe course is designed for students with little or no prior programming experience.\nYou are not expected to become a computer scientist.\nYou are expected to become an economist who can work effectively with modern data tools."
+    "text": "Welcome to the course website for ECN 4199: Industrial Data Analytics.\nThis course introduces students to modern computational and analytical tools increasingly used in:\n\neconomics\nbusiness analytics\npolicy analysis\nfinance\nindustry research\nAI-assisted decision systems\n\nThe course is specifically designed for students with little or no prior programming experience.\nYou are not expected to become a computer scientist.\nYou are expected to become an economist who can:\n\nwork confidently with data\nthink computationally\ninterpret analytical outputs critically\ncommunicate evidence effectively\nuse AI systems responsibly"
   },
   {
-    "objectID": "index.html#during-lectures",
-    "href": "index.html#during-lectures",
-    "title": "ECN 4199 - Industrial Data Analytics",
-    "section": "During lectures",
-    "text": "During lectures\nStudents will use:\n\nthis website\nGoogle Colab notebooks\ndatasets provided on the website"
+    "objectID": "index.html#weekly-learning-workflow",
+    "href": "index.html#weekly-learning-workflow",
+    "title": "ECN 4199 — Industrial Data Analytics",
+    "section": "Weekly Learning Workflow",
+    "text": "Weekly Learning Workflow\nEach week, students should:\n\nReview the weekly lesson materials\nOpen the live coding notebook\nFollow the lecture demonstrations\nComplete the in-class activity\nSubmit the required weekly task"
   },
   {
-    "objectID": "index.html#after-lectures",
-    "href": "index.html#after-lectures",
-    "title": "ECN 4199 - Industrial Data Analytics",
-    "section": "After lectures",
-    "text": "After lectures\nStudents will complete:\n\ncoding exercises\nself-assessment tasks\nmini projects\ninterpretation activities"
+    "objectID": "index.html#during-lecture-sessions",
+    "href": "index.html#during-lecture-sessions",
+    "title": "ECN 4199 — Industrial Data Analytics",
+    "section": "During Lecture Sessions",
+    "text": "During Lecture Sessions\nStudents will actively use:\n\nthis course website\nGoogle Colab notebooks\ndatasets provided through the course\ninteractive coding exercises\nvisualization and analytics tools"
+  },
+  {
+    "objectID": "index.html#outside-lecture-sessions",
+    "href": "index.html#outside-lecture-sessions",
+    "title": "ECN 4199 — Industrial Data Analytics",
+    "section": "Outside Lecture Sessions",
+    "text": "Outside Lecture Sessions\nStudents are encouraged to:\n\nrevisit coding notebooks\npractice Python independently\nexplore additional datasets\nreview lecture materials\nexperiment with analytical techniques\nimprove interpretation and communication skills"
+  },
+  {
+    "objectID": "index.html#assessment-breakdown",
+    "href": "index.html#assessment-breakdown",
+    "title": "ECN 4199 — Industrial Data Analytics",
+    "section": "Assessment Breakdown",
+    "text": "Assessment Breakdown\n\n\n\nComponent\nWeight\n\n\n\n\nWeekly In-Class Activities (13 × 5 Marks)\n65 Marks\n\n\nFinal Analytics Project\n35 Marks\n\n\nTotal\n100 Marks"
+  },
+  {
+    "objectID": "index.html#weekly-in-class-activities",
+    "href": "index.html#weekly-in-class-activities",
+    "title": "ECN 4199 — Industrial Data Analytics",
+    "section": "Weekly In-Class Activities",
+    "text": "Weekly In-Class Activities\nEach week, students will complete a practical activity during the lecture session.\nActivities may include:\n\ncoding exercises\nvisualization tasks\nregression exercises\nmachine learning applications\nforecasting tasks\ninterpretation exercises\nNLP and AI activities\n\nEach weekly activity carries:\n5 Marks\nAcross 13 weeks, the total contribution becomes:\n65 Marks\nThese activities are designed to promote:\n\ncontinuous learning\nactive engagement\npractical analytical experience\ncomputational confidence"
+  },
+  {
+    "objectID": "index.html#final-analytics-project",
+    "href": "index.html#final-analytics-project",
+    "title": "ECN 4199 — Industrial Data Analytics",
+    "section": "Final Analytics Project",
+    "text": "Final Analytics Project\nStudents will complete an individual final analytics project carrying:\n35 Marks\nThe final project allows students to apply analytical methods learned throughout the course to a real-world economic, business, or policy problem.\nDetailed guidelines are available under the:\nFinal Project\ntab."
   },
   {
     "objectID": "roadmap.html",
