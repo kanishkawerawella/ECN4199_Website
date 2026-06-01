@@ -338,12 +338,18 @@ ul.task-list li input[type="checkbox"] {
 <td>Orientation and First Python Code</td>
 <td style="text-align: right;">5</td>
 <td style="text-align: right;">1 hour</td>
-<td><a href="./activities/week1_activity.html">Open Activity</a></td>
+<td><a href="./activities/week1_activity.html">Open Week 1 Activity</a></td>
+</tr>
+<tr class="even">
+<td>Week 2</td>
+<td>Working with Data in Python using the LFS Dataset</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1 hour</td>
+<td><a href="./activities/week2_activity.html">Open Week 2 Activity</a></td>
 </tr>
 </tbody>
 </table>
 <!--
-| Week 2 | Setup and First Dataset | 5 | 1 hour | [Open Activity](activities/week2_activity.qmd) |
 | Week 3 | Python Fundamentals | 5 | 1 hour | [Open Activity](activities/week3_activity.qmd) |
 | Week 4 | Data Handling with Pandas | 5 | 1 hour | [Open Activity](activities/week4_activity.qmd) |
 | Week 5 | Statistics and Visualization | 5 | 1 hour | [Open Activity](activities/week5_activity.qmd) |
@@ -434,7 +440,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/kanishkawerawella\.github\.io\/ECN4199_Website\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

@@ -132,6 +132,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#phase-i-foundations-of-computational-economics" id="toc-phase-i-foundations-of-computational-economics" class="nav-link" data-scroll-target="#phase-i-foundations-of-computational-economics">Phase I — Foundations of Computational Economics</a>
   <ul class="collapse">
   <li><a href="#week-1-digital-course-orientation-and-computational-thinking" id="toc-week-1-digital-course-orientation-and-computational-thinking" class="nav-link" data-scroll-target="#week-1-digital-course-orientation-and-computational-thinking">Week 1 — Digital Course Orientation and Computational Thinking</a></li>
+  <li><a href="#week-2-python-fundamentals-for-economic-analysis" id="toc-week-2-python-fundamentals-for-economic-analysis" class="nav-link" data-scroll-target="#week-2-python-fundamentals-for-economic-analysis">Week 2 — Python Fundamentals for Economic Analysis</a></li>
   </ul></li>
   <li><a href="#final-goal-of-the-course" id="toc-final-goal-of-the-course" class="nav-link" data-scroll-target="#final-goal-of-the-course">Final Goal of the Course</a></li>
   </ul>
@@ -168,11 +169,12 @@ ul.task-list li input[type="checkbox"] {
 <h1>Phase I — Foundations of Computational Economics</h1>
 <section id="week-1-digital-course-orientation-and-computational-thinking" class="level2">
 <h2 class="anchored" data-anchor-id="week-1-digital-course-orientation-and-computational-thinking">Week 1 — Digital Course Orientation and Computational Thinking</h2>
-<p><a href="./lectures/week1.html">Open Week 1</a></p>
+<p><a href="./lectures/week1.html">Open Week 1 Lecture Material</a></p>
+</section>
+<section id="week-2-python-fundamentals-for-economic-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="week-2-python-fundamentals-for-economic-analysis">Week 2 — Python Fundamentals for Economic Analysis</h2>
+<p><a href="./lectures/week2.html">Open Week 2 Lecture Material</a></p>
 <!--
-
-## Week 2 — Python Fundamentals for Economic Analysis
-[Open Week 2](lectures/week2.qmd)
 
 ## Week 3 — Data Structures and Data Handling
 [Open Week 3](lectures/week3.qmd)
@@ -303,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/kanishkawerawella\.github\.io\/ECN4199_Website\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
