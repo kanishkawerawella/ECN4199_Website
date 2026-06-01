@@ -1,103 +1,252 @@
 ---
-title: "ECN 4199 - Industrial Data Analytics"
+title: "ECN 4199 — Industrial Data Analytics"
 ---
 
-# Introduction
+# Welcome to ECN 4199
 
 Welcome to the course website for **ECN 4199: Industrial Data Analytics**.
 
-This course introduces students to:
+This course introduces students to modern computational and analytical tools increasingly used in:
 
-- Python programming
-- data analytics
-- data visualisation
-- machine learning
-- forecasting
-- AI tools for economics and business
-- interactive dashboards
-- text analytics
+- economics
+- business analytics
+- policy analysis
+- finance
+- industry research
+- AI-assisted decision systems
 
-The course is designed for students with little or no prior programming experience.
+The course is specifically designed for students with little or no prior programming experience.
 
-You are not expected to become a computer scientist.
+You are **not** expected to become a computer scientist.
 
-You are expected to become an economist who can work effectively with modern data tools.
+You are expected to become an economist who can:
+
+- work confidently with data
+- think computationally
+- interpret analytical outputs critically
+- communicate evidence effectively
+- use AI systems responsibly
 
 ---
 
-# How This Website Works
+# Course Facilitators
 
-This website is the main learning platform for the course.
+| Name | Role |
+|---|---|
+| **Kanishka Werawella** | Course Facilitator |
+| **Himashini Madushika** | Course Facilitator |
 
-Each week, students should:
+---
 
-1. Read the weekly lesson page
-2. Open the live coding notebook
-3. Follow the lecture activity
-4. Complete the self-assessment
-5. Submit the weekly task
+# What You Will Learn
+
+Throughout this course, students will gain practical exposure to:
+
+- Python programming
+- data analytics workflows
+- data visualization
+- regression analysis
+- machine learning fundamentals
+- forecasting and time series analytics
+- clustering and segmentation
+- dashboard development
+- NLP and text analytics
+- generative AI tools for analytics
+
+The course emphasizes:
+
+- hands-on learning
+- interpretation
+- analytical reasoning
+- reproducible workflows
+- real-world applications
 
 ---
 
 # Course Learning Progression
 
-| Weeks | Focus |
+| Weeks | Main Focus |
 |---|---|
-| Weeks 1–3 | Python foundations |
-| Weeks 4–6 | Data handling and visualisation |
-| Weeks 7–9 | Regression and machine learning |
+| Weeks 1–3 | Python foundations and computational thinking |
+| Weeks 4–6 | Data handling, visualization, and dashboards |
+| Weeks 7–9 | Regression, prediction, and machine learning |
 | Weeks 10–11 | Clustering and forecasting |
-| Week 12 | AI and text analytics |
-| Week 13 | Final integrated project |
+| Week 12 | NLP, AI, and text analytics |
+| Week 13 | Integrated analytics project |
 
 ---
 
-# Course Workflow
+# How to Use This Website
 
-## During lectures
+This website serves as the central learning platform for the course.
 
-Students will use:
+Students are expected to use the website continuously throughout the semester.
 
-- this website
+---
+
+## Weekly Learning Workflow
+
+Each week, students should:
+
+1. Review the weekly lesson materials
+2. Open the live coding notebook
+3. Follow the lecture demonstrations
+4. Complete the in-class activity
+5. Submit the required weekly task
+
+---
+
+## During Lecture Sessions
+
+Students will actively use:
+
+- this course website
 - Google Colab notebooks
-- datasets provided on the website
+- datasets provided through the course
+- interactive coding exercises
+- visualization and analytics tools
 
-## After lectures
+---
 
-Students will complete:
+## Outside Lecture Sessions
+
+Students are encouraged to:
+
+- revisit coding notebooks
+- practice Python independently
+- explore additional datasets
+- review lecture materials
+- experiment with analytical techniques
+- improve interpretation and communication skills
+
+---
+
+# Website Navigation Guide
+
+Use the navigation menu at the top of the website.
+
+| Tab | Purpose |
+|---|---|
+| **Home** | Course overview, guidance, and announcements |
+| **Course Roadmap** | Weekly lecture materials and learning progression |
+| **Assignments** | Weekly in-class activities and assessments |
+| **Final Project** | Capstone project guidelines and instructions |
+| **Resources** | Datasets, Python references, videos, and additional learning materials |
+
+---
+
+# Resources and Learning Support
+
+The **Resources** tab contains:
+
+- curated YouTube tutorials
+- Python learning resources
+- data analytics references
+- datasets for exercises
+- external learning materials
+- AI and machine learning references
+
+Students are strongly encouraged to explore these resources regularly throughout the course.
+
+---
+
+# Evaluation Structure
+
+Assessment in this course emphasizes:
+
+- practical analytical thinking
+- computational skills
+- interpretation
+- problem solving
+- continuous engagement
+- real-world application
+
+---
+
+## Assessment Breakdown
+
+| Component | Weight |
+|---|---:|
+| Weekly In-Class Activities (13 × 5 Marks) | 65 Marks |
+| Final Analytics Project | 35 Marks |
+| **Total** | **100 Marks** |
+
+---
+
+## Weekly In-Class Activities
+
+Each week, students will complete a practical activity during the lecture session.
+
+Activities may include:
 
 - coding exercises
-- self-assessment tasks
-- mini projects
-- interpretation activities
+- visualization tasks
+- regression exercises
+- machine learning applications
+- forecasting tasks
+- interpretation exercises
+- NLP and AI activities
+
+Each weekly activity carries:
+
+```text
+5 Marks
+```
+
+Across 13 weeks, the total contribution becomes:
+
+```text
+65 Marks
+```
+
+These activities are designed to promote:
+
+- continuous learning
+- active engagement
+- practical analytical experience
+- computational confidence
 
 ---
 
-# Important Note
+## Final Analytics Project
 
-This course focuses on practical analytical thinking.
+Students will complete an individual final analytics project carrying:
 
-The objective is not memorising code.
+```text
+35 Marks
+```
+
+The final project allows students to apply analytical methods learned throughout the course to a real-world economic, business, or policy problem.
+
+Detailed guidelines are available under the:
+
+```text
+Final Project
+```
+
+tab.
+
+---
+
+# Important Course Philosophy
+
+This course focuses on:
+
+- analytical thinking
+- interpretation
+- computational reasoning
+- evidence-based analysis
+- responsible use of AI systems
+
+The objective is **not** memorizing code.
 
 The objective is learning how to:
 
 - solve problems with data
-- interpret evidence
-- communicate findings
-- use AI critically and responsibly
-
----
-
-# Navigation Guide
-
-Use the navigation menu at the top of the website:
-
-- **Course Roadmap** → overall course structure
-- **Setup Guide** → how to use Colab and Python tools
-- **Week 1** → first lecture materials
-- **Datasets** → datasets for practical exercises
-- **Notebooks** → live coding notebooks
-- **Submissions** → assignment and notebook submissions
+- interpret evidence critically
+- communicate findings effectively
+- evaluate uncertainty
+- use AI responsibly and ethically
 
 ---
 
@@ -105,6 +254,27 @@ Use the navigation menu at the top of the website:
 
 Students should begin with:
 
-1. Setup Guide
-2. Week 1 lesson
-3. Week 1 live notebook
+1. Reviewing the Course Roadmap
+2. Opening the Week 1 materials
+3. Accessing the Week 1 live notebook
+4. Completing the Week 1 activity
+
+---
+
+# Final Note
+
+Modern economics increasingly operates within environments shaped by:
+
+- data
+- algorithms
+- automation
+- machine learning
+- AI-assisted systems
+
+This course is designed to help students develop the analytical and computational foundations necessary to engage critically and effectively with this rapidly changing landscape.
+
+---
+
+*ECN 4199 — Industrial Data Analytics*  
+*Department of Economics*  
+*University of Colombo*

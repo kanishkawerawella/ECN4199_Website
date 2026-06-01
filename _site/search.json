@@ -1,108 +1,171 @@
 [
   {
-    "objectID": "activities/week1_activity.html",
-    "href": "activities/week1_activity.html",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html",
+    "href": "activities/week2_activity.html",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "",
-    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 1\n\n\nTopic\nOrientation and Computational Thinking\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
+    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 2\n\n\nTopic\nWorking with Data in Python using a Labour Force Survey Dataset\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nSubmission Format\nGoogle Colab notebook link\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
   },
   {
-    "objectID": "activities/week1_activity.html#objective",
-    "href": "activities/week1_activity.html#objective",
-    "title": "Week 1 In-Class Activity",
-    "section": "Objective",
-    "text": "Objective\nRun your first Python code successfully."
-  },
-  {
-    "objectID": "activities/week1_activity.html#instructions-1",
-    "href": "activities/week1_activity.html#instructions-1",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html#instructions",
+    "href": "activities/week2_activity.html#instructions",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Instructions",
-    "text": "Instructions\nRun the following code:\nprint(\"Welcome to ECN 4199\")"
+    "text": "Instructions\nRun:\nprint(\"Week 2 assignment started successfully\")\nThen write your name and index number in a Markdown cell."
   },
   {
-    "objectID": "activities/week1_activity.html#question",
-    "href": "activities/week1_activity.html#question",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html#question",
+    "href": "activities/week2_activity.html#question",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Question",
-    "text": "Question\nWhat does the function:\nprint()\ndo in Python?\nWrite your answer in one sentence."
+    "text": "Question\nIn 2-3 sentences, explain why Google Colab is useful for beginners learning data analytics."
   },
   {
-    "objectID": "activities/week1_activity.html#objective-1",
-    "href": "activities/week1_activity.html#objective-1",
-    "title": "Week 1 In-Class Activity",
-    "section": "Objective",
-    "text": "Objective\nUnderstand basic Python variables."
-  },
-  {
-    "objectID": "activities/week1_activity.html#instructions-2",
-    "href": "activities/week1_activity.html#instructions-2",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html#instructions-1",
+    "href": "activities/week2_activity.html#instructions-1",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Instructions",
-    "text": "Instructions\nCreate the following variables:\nstudent_name\ninflation_rate\ngdp_growth\nAssign appropriate values.\nExample:\ninflation_rate = 12.5"
+    "text": "Instructions\nRun:\nimport pandas as pd"
   },
   {
-    "objectID": "activities/week1_activity.html#question-1",
-    "href": "activities/week1_activity.html#question-1",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html#question-1",
+    "href": "activities/week2_activity.html#question-1",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Question",
-    "text": "Question\nWhy are variables useful in programming and data analysis?"
+    "text": "Question\nWhy do economists and data analysts use libraries such as pandas instead of writing every command from scratch?"
   },
   {
-    "objectID": "activities/week1_activity.html#objective-2",
-    "href": "activities/week1_activity.html#objective-2",
-    "title": "Week 1 In-Class Activity",
-    "section": "Objective",
-    "text": "Objective\nUse Python for basic economic calculations."
-  },
-  {
-    "objectID": "activities/week1_activity.html#instructions-3",
-    "href": "activities/week1_activity.html#instructions-3",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html#instructions-2",
+    "href": "activities/week2_activity.html#instructions-2",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Instructions",
-    "text": "Instructions\nAssume:\n\n\n\nVariable\nValue\n\n\n\n\nInitial Inflation\n6%\n\n\nNew Inflation\n12%\n\n\n\nCalculate:\npercentage point increase in inflation\nusing Python."
+    "text": "Instructions\nUse the direct website method:\ndataset_url = \"https://kanishkawerawella.github.io/ECN4199_Website/data/LFS_Hypothetical_Dataset.xlsx\"\n\ndata = pd.read_excel(dataset_url, sheet_name=\"LFS_Data\")\ndictionary = pd.read_excel(dataset_url, sheet_name=\"Variable Dictionary\")\nIf the direct website method does not work, upload the downloaded Excel file into Colab and use:\ndata = pd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")\ndictionary = pd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"Variable Dictionary\")"
   },
   {
-    "objectID": "activities/week1_activity.html#example-structure",
-    "href": "activities/week1_activity.html#example-structure",
-    "title": "Week 1 In-Class Activity",
-    "section": "Example Structure",
-    "text": "Example Structure\ninitial_inflation = 6\nnew_inflation = 12"
+    "objectID": "activities/week2_activity.html#questions",
+    "href": "activities/week2_activity.html#questions",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Questions",
+    "text": "Questions\n\nWhat does the LFS_Data sheet contain?\nWhat does the Variable Dictionary sheet explain?\nWhy should analysts read the variable dictionary before interpreting a dataset?"
   },
   {
-    "objectID": "activities/week1_activity.html#question-2",
-    "href": "activities/week1_activity.html#question-2",
-    "title": "Week 1 In-Class Activity",
-    "section": "Question",
-    "text": "Question\nWhat does a sharp increase in inflation usually imply for households?\nWrite 2–3 sentences."
-  },
-  {
-    "objectID": "activities/week1_activity.html#objective-3",
-    "href": "activities/week1_activity.html#objective-3",
-    "title": "Week 1 In-Class Activity",
-    "section": "Objective",
-    "text": "Objective\nStore economic information using Python lists."
-  },
-  {
-    "objectID": "activities/week1_activity.html#instructions-4",
-    "href": "activities/week1_activity.html#instructions-4",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html#instructions-3",
+    "href": "activities/week2_activity.html#instructions-3",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Instructions",
-    "text": "Instructions\nCreate a Python list containing:\n\ninflation rates\nunemployment rates\nGDP growth values\n\nExample:\ninflation = [4.5, 5.2, 7.8]"
+    "text": "Instructions\nRun the following commands:\ndata.head()\ndata.tail()\ndata.shape\ndata.columns\ndata.info()"
   },
   {
-    "objectID": "activities/week1_activity.html#question-3",
-    "href": "activities/week1_activity.html#question-3",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html#questions-1",
+    "href": "activities/week2_activity.html#questions-1",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Questions",
+    "text": "Questions\n\nHow many observations are in the dataset?\nHow many variables are in the dataset?\nName five variables that are useful for labour market analysis.\nAre all variables numerical? Explain using examples."
+  },
+  {
+    "objectID": "activities/week2_activity.html#instructions-4",
+    "href": "activities/week2_activity.html#instructions-4",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Instructions",
+    "text": "Instructions\nDisplay the variable dictionary:\ndictionary\nThen identify the meaning of these variables:\n\nEmployment_Status\nMonthly_Wage_LKR\nEducation_Level\nInternet_Access\nUnpaid_Care_Hours_Weekly"
+  },
+  {
+    "objectID": "activities/week2_activity.html#question-2",
+    "href": "activities/week2_activity.html#question-2",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Question",
-    "text": "Question\nWhy is storing data systematically important for economists?"
+    "text": "Question\nChoose any three variables from the list above and explain why each variable may be useful for economic or labour market analysis."
   },
   {
-    "objectID": "activities/week1_activity.html#short-reflection",
-    "href": "activities/week1_activity.html#short-reflection",
-    "title": "Week 1 In-Class Activity",
-    "section": "Short Reflection",
-    "text": "Short Reflection\nWrite a short paragraph answering:\nWhy are computational and data skills becoming increasingly important for economists and policy analysts?\nYour answer should include:\n\ndata\ndecision-making\nmodern analytics\nAI or automation"
+    "objectID": "activities/week2_activity.html#instructions-5",
+    "href": "activities/week2_activity.html#instructions-5",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Instructions",
+    "text": "Instructions\nRun:\ndata.describe()"
+  },
+  {
+    "objectID": "activities/week2_activity.html#questions-2",
+    "href": "activities/week2_activity.html#questions-2",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Questions",
+    "text": "Questions\n\nWhat is the average age of individuals in the dataset?\nWhat is the average household size?\nWhat is the average monthly wage?\nWhat is the maximum monthly wage?\nWhat is the average number of unpaid care hours per week?\n\nFor each answer, write one short interpretation."
+  },
+  {
+    "objectID": "activities/week2_activity.html#instructions-6",
+    "href": "activities/week2_activity.html#instructions-6",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Instructions",
+    "text": "Instructions\nRun:\ndata[\"Sex\"].value_counts()\ndata[\"Sector\"].value_counts()\ndata[\"Education_Level\"].value_counts()\ndata[\"Employment_Status\"].value_counts()\ndata[\"Internet_Access\"].value_counts()"
+  },
+  {
+    "objectID": "activities/week2_activity.html#questions-3",
+    "href": "activities/week2_activity.html#questions-3",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Questions",
+    "text": "Questions\n\nHow many males and females are included in the dataset?\nIs the sample more urban or more rural?\nWhich education category appears most frequently?\nHow many individuals are employed, unemployed, and inactive?\nHow many individuals have internet access?"
+  },
+  {
+    "objectID": "activities/week2_activity.html#problem-1-file-not-found",
+    "href": "activities/week2_activity.html#problem-1-file-not-found",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Problem 1 — File Not Found",
+    "text": "Problem 1 — File Not Found\nPossible causes:\n\ndataset not uploaded\nincorrect filename\nfile uploaded to the wrong Colab session"
+  },
+  {
+    "objectID": "activities/week2_activity.html#problem-2-forgetting-quotes",
+    "href": "activities/week2_activity.html#problem-2-forgetting-quotes",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Problem 2 — Forgetting Quotes",
+    "text": "Problem 2 — Forgetting Quotes\nWrong:\npd.read_excel(LFS_Hypothetical_Dataset.xlsx)\nCorrect:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")"
+  },
+  {
+    "objectID": "activities/week2_activity.html#problem-3-wrong-sheet-name",
+    "href": "activities/week2_activity.html#problem-3-wrong-sheet-name",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Problem 3 — Wrong Sheet Name",
+    "text": "Problem 3 — Wrong Sheet Name\nWrong:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"Data\")\nCorrect:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")"
+  },
+  {
+    "objectID": "lectures/week2.html",
+    "href": "lectures/week2.html",
+    "title": "Week 2 — Working with Data in Python",
+    "section": "",
+    "text": "In Week 1, we learned how to use Python as a calculator and how to execute simple commands.\nThis week, we begin working with the most important asset in modern economics:\nDATA\nEvery day economists use data to answer questions such as:\n\nWhy are some people unemployed?\nWhat determines wages?\nWhy does inflation increase?\nWhich districts experience higher poverty?\nHow does education affect earnings?\nHow does technology influence productivity?\n\nRegardless of whether you become:\n\nan economist\npolicy analyst\nresearcher\nconsultant\nbanker\ndata analyst\n\nyour ability to work with data will become increasingly important.\nFor this reason, Week 2 focuses on understanding how Python stores and organizes data.\nEverything we do later in the course:\n\ndata visualization\ndashboards\nforecasting\nmachine learning\nartificial intelligence\n\ndepends on concepts introduced this week."
+  },
+  {
+    "objectID": "lectures/week2.html#option-1-load-the-dataset-directly-from-the-course-website",
+    "href": "lectures/week2.html#option-1-load-the-dataset-directly-from-the-course-website",
+    "title": "Week 2 — Working with Data in Python",
+    "section": "Option 1 — Load the Dataset Directly from the Course Website",
+    "text": "Option 1 — Load the Dataset Directly from the Course Website\nRun:\nimport pandas as pd\n\ndataset_url = \"https://kanishkawerawella.github.io/ECN4199_Website/data/LFS_Hypothetical_Dataset.xlsx\"\n\ndata = pd.read_excel(dataset_url, sheet_name=\"LFS_Data\")\ndictionary = pd.read_excel(dataset_url, sheet_name=\"Variable Dictionary\")"
+  },
+  {
+    "objectID": "lectures/week2.html#option-2-download-and-upload-the-dataset-manually",
+    "href": "lectures/week2.html#option-2-download-and-upload-the-dataset-manually",
+    "title": "Week 2 — Working with Data in Python",
+    "section": "Option 2 — Download and Upload the Dataset Manually",
+    "text": "Option 2 — Download and Upload the Dataset Manually\nStep 1\nDownload the dataset from the Week 2 page:\nDownload LFS_Hypothetical_Dataset.xlsx\n\nStep 2\nClick:\nFolder Icon\non the left panel.\n\nStep 3\nClick:\nUpload\n\nStep 4\nSelect the dataset.\n\nStep 5\nObserve the uploaded file.\n\nStep 6\nUse:\npd.read_excel()\nor\npd.read_csv()\nto import the file."
+  },
+  {
+    "objectID": "lectures/week2.html#mistake-1",
+    "href": "lectures/week2.html#mistake-1",
+    "title": "Week 2 — Working with Data in Python",
+    "section": "Mistake 1",
+    "text": "Mistake 1\nFile name typed incorrectly.\nWrong:\npd.read_excel(\"dataset\")\nCorrect:\npd.read_excel(\"dataset.xlsx\")"
+  },
+  {
+    "objectID": "lectures/week2.html#mistake-2",
+    "href": "lectures/week2.html#mistake-2",
+    "title": "Week 2 — Working with Data in Python",
+    "section": "Mistake 2",
+    "text": "Mistake 2\nDataset not uploaded.\nAlways check the file appears in the Colab folder panel."
+  },
+  {
+    "objectID": "lectures/week2.html#mistake-3",
+    "href": "lectures/week2.html#mistake-3",
+    "title": "Week 2 — Working with Data in Python",
+    "section": "Mistake 3",
+    "text": "Mistake 3\nVariable name typed incorrectly.\nWrong:\ndata[\"sex\"]\nCorrect:\ndata[\"Sex\"]\nVariable names are case-sensitive."
   },
   {
     "objectID": "setup.html",
@@ -133,32 +196,123 @@
     "text": "Problem 3: Notebook not saving\nPossible reasons:\n\nGoogle Drive storage issue\ninternet disconnected\nnotebook opened in view-only mode"
   },
   {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "Weekly In-Class Activities",
-    "section": "",
-    "text": "ECN 4199 — Weekly In-Class Activities\nThis page contains the weekly in-class activities for ECN 4199: Industrial Data Analytics.\nEach activity must be completed during the scheduled lecture hour.\n\n\n\nAssessment Structure\n\n\n\nItem\nDetails\n\n\n\n\nNumber of Activities\n13\n\n\nMarks per Activity\n5 marks\n\n\nTotal Marks\n65 marks\n\n\nDuration\n1 hour per activity\n\n\nAccess\nLecturer passcode required\n\n\nSubmission\nThrough weekly submission link\n\n\nCompletion Time\nDuring lecture only\n\n\n\n\n\n\nImportant Instructions\nStudents must:\n\nAttend the scheduled lecture.\nWait until the lecturer announces the passcode.\nOpen the relevant weekly activity.\nComplete the activity within one hour.\nSubmit before the activity closes.\n\nLate submissions will not be accepted unless approved by the lecturer.\n\n\n\nHow Activities Work\nEach weekly activity may include:\n\nshort conceptual questions\nPython coding tasks\ninterpretation questions\ngraph or output interpretation\nshort reflection questions\n\nThe purpose is not memorisation.\nThe purpose is to test whether students can apply the weekly concepts in real time.\n\n\n\nPasscode Access\nEach activity will be protected by a lecturer-set passcode.\nThe passcode will be announced only during the relevant lecture.\nStudents should not share passcodes with others.\n\n\n\nWeekly Activity Table\n\n\n\nWeek\nTopic\nMarks\nDuration\nActivity Link\n\n\n\n\nWeek 1\nOrientation and First Python Code\n5\n1 hour\nOpen Activity\n\n\n\n\n\n\n\nSubmission Format\nEach activity must be submitted through the relevant weekly activity link.\nWhere a Colab notebook is required, students must:\n\nSave a copy in Google Drive.\nRename the notebook properly.\nSet sharing to:\n\nAnyone with the link → Viewer\n\nSubmit the notebook link.\n\n\n\n\nNotebook Naming Convention\nUse the following format:\nWeekNumber_IndexNumber_Name.ipynb\nExample:\nWeek05_2024BA12345_Perera.ipynb\n\n\n\nMarking\nEach weekly activity is worth 5 marks.\nThe total mark across all 13 activities is:\n13 × 5 = 65 marks\nMarks will be based on:\n\n\n\nComponent\nMarks\n\n\n\n\nCorrect completion of required task\n2\n\n\nCorrect code/output\n1\n\n\nEconomic interpretation\n1\n\n\nTimely submission and formatting\n1\n\n\nTotal\n5\n\n\n\n\n\n\nAcademic Integrity\nStudents may use course materials and lecture notebooks.\nHowever:\n\ncopying another student’s work is not allowed\nsubmitting work without understanding is not allowed\nAI tools must not be used to replace student reasoning\nall submitted explanations must be written in the student’s own words\n\n\n\n\nLecturer Note\nThe weekly links will be activated or shared during the relevant lecture period only."
+    "objectID": "project.html#stage-1-topic-selection",
+    "href": "project.html#stage-1-topic-selection",
+    "title": "Final Project",
+    "section": "Stage 1 — Topic Selection",
+    "text": "Stage 1 — Topic Selection\nStudents should first identify:\n\nan economic problem\nbusiness problem\npolicy issue\nforecasting problem\nbehavioral pattern\nor analytical question\n\nthat is both:\n\nmeaningful\nrealistically achievable within the semester\n\nStudents are encouraged to choose topics that genuinely interest them."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ECN 4199 - Industrial Data Analytics",
-    "section": "",
-    "text": "Welcome to the course website for ECN 4199: Industrial Data Analytics.\nThis course introduces students to:\n\nPython programming\ndata analytics\ndata visualisation\nmachine learning\nforecasting\nAI tools for economics and business\ninteractive dashboards\ntext analytics\n\nThe course is designed for students with little or no prior programming experience.\nYou are not expected to become a computer scientist.\nYou are expected to become an economist who can work effectively with modern data tools."
+    "objectID": "project.html#stage-2-preliminary-data-exploration",
+    "href": "project.html#stage-2-preliminary-data-exploration",
+    "title": "Final Project",
+    "section": "Stage 2 — Preliminary Data Exploration",
+    "text": "Stage 2 — Preliminary Data Exploration\nBefore finalizing the project, groups should:\n\nidentify possible datasets\ninspect data quality\nassess data availability\nexamine variable structure\nevaluate feasibility\n\nProjects with unrealistic data requirements are discouraged."
   },
   {
-    "objectID": "index.html#during-lectures",
-    "href": "index.html#during-lectures",
-    "title": "ECN 4199 - Industrial Data Analytics",
-    "section": "During lectures",
-    "text": "During lectures\nStudents will use:\n\nthis website\nGoogle Colab notebooks\ndatasets provided on the website"
+    "objectID": "project.html#stage-3-conceptual-note-submission",
+    "href": "project.html#stage-3-conceptual-note-submission",
+    "title": "Final Project",
+    "section": "Stage 3 — Conceptual Note Submission",
+    "text": "Stage 3 — Conceptual Note Submission\nBefore:\n30.06.2026\neach group must submit:\n\nproposed project title\nnames and index numbers of all group members\none-page conceptual note\n\nthrough the LMS under:\nFinal Project → Conceptual Note\nThe conceptual note should briefly explain:\n\nproposed analytical question\nmotivation\nproposed data source\npossible analytical methods\nexpected contribution\n\n\nLMS Submission Link\nSubmit Concept Note"
   },
   {
-    "objectID": "index.html#after-lectures",
-    "href": "index.html#after-lectures",
-    "title": "ECN 4199 - Industrial Data Analytics",
-    "section": "After lectures",
-    "text": "After lectures\nStudents will complete:\n\ncoding exercises\nself-assessment tasks\nmini projects\ninterpretation activities"
+    "objectID": "project.html#stage-4-feasibility-discussion-with-lecturer",
+    "href": "project.html#stage-4-feasibility-discussion-with-lecturer",
+    "title": "Final Project",
+    "section": "Stage 4 — Feasibility Discussion with Lecturer",
+    "text": "Stage 4 — Feasibility Discussion with Lecturer\nAfter submitting the conceptual note, each group must arrange a discussion with the lecturer regarding:\n\nproject feasibility\ndataset suitability\nanalytical scope\ntechnical complexity\nrealism of proposed methods\n\nImportant:\nContacting the lecturer and arranging the discussion is entirely the responsibility of the student group.\nFailure to arrange this discussion may lead to poorly scoped or unrealistic projects."
+  },
+  {
+    "objectID": "project.html#stage-5-project-development",
+    "href": "project.html#stage-5-project-development",
+    "title": "Final Project",
+    "section": "Stage 5 — Project Development",
+    "text": "Stage 5 — Project Development\nFollowing approval and feedback, groups should proceed with:\n\ndata cleaning\nexploratory analysis\nvisualization\nmodeling\ninterpretation\ndocumentation\nreproducibility checks\n\nStudents are strongly encouraged to develop the project incrementally throughout the semester rather than postponing all work until the final weeks."
+  },
+  {
+    "objectID": "project.html#macroeconomic-forecasting",
+    "href": "project.html#macroeconomic-forecasting",
+    "title": "Final Project",
+    "section": "1. Macroeconomic Forecasting",
+    "text": "1. Macroeconomic Forecasting\nExamples:\n\ninflation forecasting\nexchange rate forecasting\nreserve adequacy analysis\nGDP growth forecasting"
+  },
+  {
+    "objectID": "project.html#labour-market-analytics",
+    "href": "project.html#labour-market-analytics",
+    "title": "Final Project",
+    "section": "2. Labour Market Analytics",
+    "text": "2. Labour Market Analytics\nExamples:\n\nunemployment prediction\nlabour force participation analysis\ngender wage gap analytics\neducation and employment outcomes"
+  },
+  {
+    "objectID": "project.html#business-analytics",
+    "href": "project.html#business-analytics",
+    "title": "Final Project",
+    "section": "3. Business Analytics",
+    "text": "3. Business Analytics\nExamples:\n\ncustomer segmentation\ndemand forecasting\nsales analytics dashboards\nfirm performance prediction"
+  },
+  {
+    "objectID": "project.html#nlp-and-ai-projects",
+    "href": "project.html#nlp-and-ai-projects",
+    "title": "Final Project",
+    "section": "4. NLP and AI Projects",
+    "text": "4. NLP and AI Projects\nExamples:\n\nsentiment analysis of economic news\nAI-assisted policy analysis\neconomic narrative tracking\ncentral bank speech analysis"
+  },
+  {
+    "objectID": "project.html#development-and-policy-analytics",
+    "href": "project.html#development-and-policy-analytics",
+    "title": "Final Project",
+    "section": "5. Development and Policy Analytics",
+    "text": "5. Development and Policy Analytics\nExamples:\n\npoverty prediction\nwelfare targeting systems\nhousehold vulnerability analysis\ndistrict-level development dashboard"
+  },
+  {
+    "objectID": "project.html#problem-1-overly-ambitious-projects",
+    "href": "project.html#problem-1-overly-ambitious-projects",
+    "title": "Final Project",
+    "section": "Problem 1 — Overly Ambitious Projects",
+    "text": "Problem 1 — Overly Ambitious Projects\nDo not attempt extremely large projects beyond the course scope."
+  },
+  {
+    "objectID": "project.html#problem-2-blind-use-of-ai-tools",
+    "href": "project.html#problem-2-blind-use-of-ai-tools",
+    "title": "Final Project",
+    "section": "Problem 2 — Blind Use of AI Tools",
+    "text": "Problem 2 — Blind Use of AI Tools\nAI-generated code must be:\n\nunderstood\nverified\ninterpreted critically"
+  },
+  {
+    "objectID": "project.html#problem-3-weak-interpretation",
+    "href": "project.html#problem-3-weak-interpretation",
+    "title": "Final Project",
+    "section": "Problem 3 — Weak Interpretation",
+    "text": "Problem 3 — Weak Interpretation\nGraphs and outputs without interpretation are insufficient."
+  },
+  {
+    "objectID": "project.html#problem-4-poor-documentation",
+    "href": "project.html#problem-4-poor-documentation",
+    "title": "Final Project",
+    "section": "Problem 4 — Poor Documentation",
+    "text": "Problem 4 — Poor Documentation\nUnreadable notebooks reduce project quality."
+  },
+  {
+    "objectID": "project.html#problem-5-ignoring-limitations",
+    "href": "project.html#problem-5-ignoring-limitations",
+    "title": "Final Project",
+    "section": "Problem 5 — Ignoring Limitations",
+    "text": "Problem 5 — Ignoring Limitations\nEvery model and dataset has limitations."
+  },
+  {
+    "objectID": "project.html#conceptual-note-submission",
+    "href": "project.html#conceptual-note-submission",
+    "title": "Final Project",
+    "section": "Conceptual Note Submission",
+    "text": "Conceptual Note Submission\nStudents must submit:\n\none-page conceptual note\nproposed title\ngroup member details\n\nthrough the LMS under:\nFinal Project → Conceptual Note"
+  },
+  {
+    "objectID": "project.html#final-project-submission",
+    "href": "project.html#final-project-submission",
+    "title": "Final Project",
+    "section": "Final Project Submission",
+    "text": "Final Project Submission\nFinal submissions must be uploaded to the LMS under:\nFinal Project\nThe following items must be uploaded:\n\nFinal Report\nPython Notebook\nDataset(s)\nSupporting files if applicable"
   },
   {
     "objectID": "roadmap.html",
@@ -172,7 +326,112 @@
     "href": "roadmap.html#week-1-digital-course-orientation-and-computational-thinking",
     "title": "Course Roadmap",
     "section": "Week 1 — Digital Course Orientation and Computational Thinking",
-    "text": "Week 1 — Digital Course Orientation and Computational Thinking\nOpen Week 1"
+    "text": "Week 1 — Digital Course Orientation and Computational Thinking\nOpen Week 1 Lecture Material"
+  },
+  {
+    "objectID": "roadmap.html#week-2-python-fundamentals-for-economic-analysis",
+    "href": "roadmap.html#week-2-python-fundamentals-for-economic-analysis",
+    "title": "Course Roadmap",
+    "section": "Week 2 — Python Fundamentals for Economic Analysis",
+    "text": "Week 2 — Python Fundamentals for Economic Analysis\nOpen Week 2 Lecture Material"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ECN 4199 — Industrial Data Analytics",
+    "section": "",
+    "text": "Welcome to the course website for ECN 4199: Industrial Data Analytics.\nThis course introduces students to modern computational and analytical tools increasingly used in:\n\neconomics\nbusiness analytics\npolicy analysis\nfinance\nindustry research\nAI-assisted decision systems\n\nThe course is specifically designed for students with little or no prior programming experience.\nYou are not expected to become a computer scientist.\nYou are expected to become an economist who can:\n\nwork confidently with data\nthink computationally\ninterpret analytical outputs critically\ncommunicate evidence effectively\nuse AI systems responsibly"
+  },
+  {
+    "objectID": "index.html#weekly-learning-workflow",
+    "href": "index.html#weekly-learning-workflow",
+    "title": "ECN 4199 — Industrial Data Analytics",
+    "section": "Weekly Learning Workflow",
+    "text": "Weekly Learning Workflow\nEach week, students should:\n\nReview the weekly lesson materials\nOpen the live coding notebook\nFollow the lecture demonstrations\nComplete the in-class activity\nSubmit the required weekly task"
+  },
+  {
+    "objectID": "index.html#during-lecture-sessions",
+    "href": "index.html#during-lecture-sessions",
+    "title": "ECN 4199 — Industrial Data Analytics",
+    "section": "During Lecture Sessions",
+    "text": "During Lecture Sessions\nStudents will actively use:\n\nthis course website\nGoogle Colab notebooks\ndatasets provided through the course\ninteractive coding exercises\nvisualization and analytics tools"
+  },
+  {
+    "objectID": "index.html#outside-lecture-sessions",
+    "href": "index.html#outside-lecture-sessions",
+    "title": "ECN 4199 — Industrial Data Analytics",
+    "section": "Outside Lecture Sessions",
+    "text": "Outside Lecture Sessions\nStudents are encouraged to:\n\nrevisit coding notebooks\npractice Python independently\nexplore additional datasets\nreview lecture materials\nexperiment with analytical techniques\nimprove interpretation and communication skills"
+  },
+  {
+    "objectID": "index.html#assessment-breakdown",
+    "href": "index.html#assessment-breakdown",
+    "title": "ECN 4199 — Industrial Data Analytics",
+    "section": "Assessment Breakdown",
+    "text": "Assessment Breakdown\n\n\n\nComponent\nWeight\n\n\n\n\nWeekly In-Class Activities (13 × 5 Marks)\n65 Marks\n\n\nFinal Analytics Project\n35 Marks\n\n\nTotal\n100 Marks"
+  },
+  {
+    "objectID": "index.html#weekly-in-class-activities",
+    "href": "index.html#weekly-in-class-activities",
+    "title": "ECN 4199 — Industrial Data Analytics",
+    "section": "Weekly In-Class Activities",
+    "text": "Weekly In-Class Activities\nEach week, students will complete a practical activity during the lecture session.\nActivities may include:\n\ncoding exercises\nvisualization tasks\nregression exercises\nmachine learning applications\nforecasting tasks\ninterpretation exercises\nNLP and AI activities\n\nEach weekly activity carries:\n5 Marks\nAcross 13 weeks, the total contribution becomes:\n65 Marks\nThese activities are designed to promote:\n\ncontinuous learning\nactive engagement\npractical analytical experience\ncomputational confidence"
+  },
+  {
+    "objectID": "index.html#final-analytics-project",
+    "href": "index.html#final-analytics-project",
+    "title": "ECN 4199 — Industrial Data Analytics",
+    "section": "Final Analytics Project",
+    "text": "Final Analytics Project\nStudents will complete an individual final analytics project carrying:\n35 Marks\nThe final project allows students to apply analytical methods learned throughout the course to a real-world economic, business, or policy problem.\nDetailed guidelines are available under the:\nFinal Project\ntab."
+  },
+  {
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Weekly In-Class Activities",
+    "section": "",
+    "text": "This page contains the weekly in-class activities for:\nECN 4199 — Industrial Data Analytics\nThese activities form the continuous assessment component of the course and are designed to provide hands-on analytical experience throughout the semester."
+  },
+  {
+    "objectID": "assignments.html#step-1-open-the-notebook",
+    "href": "assignments.html#step-1-open-the-notebook",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 1 — Open the Notebook",
+    "text": "Step 1 — Open the Notebook\nOpen the relevant notebook link provided within the weekly lecture materials."
+  },
+  {
+    "objectID": "assignments.html#step-2-save-a-personal-copy",
+    "href": "assignments.html#step-2-save-a-personal-copy",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 2 — Save a Personal Copy",
+    "text": "Step 2 — Save a Personal Copy\nInside Google Colab:\nFile → Save a Copy in Drive\nThis creates your own editable version.\nStudents should NEVER directly edit shared lecture notebooks."
+  },
+  {
+    "objectID": "assignments.html#step-3-complete-the-activity",
+    "href": "assignments.html#step-3-complete-the-activity",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 3 — Complete the Activity",
+    "text": "Step 3 — Complete the Activity\nStudents should:\n\nwrite code\nanswer interpretation questions\ngenerate outputs\nsave all completed work properly"
+  },
+  {
+    "objectID": "assignments.html#step-4-rename-the-notebook-properly",
+    "href": "assignments.html#step-4-rename-the-notebook-properly",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 4 — Rename the Notebook Properly",
+    "text": "Step 4 — Rename the Notebook Properly\nRename the notebook using the following structure:\nWeekNumber_IndexNumber_Name.ipynb\nExample:\nWeek05_2024BA12345_Perera.ipynb"
+  },
+  {
+    "objectID": "assignments.html#step-5-enable-sharing",
+    "href": "assignments.html#step-5-enable-sharing",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 5 — Enable Sharing",
+    "text": "Step 5 — Enable Sharing\nInside Google Colab:\nShare → General Access → Anyone with the Link → Viewer\nThis step is extremely important.\nIf sharing access is not enabled properly, the notebook cannot be evaluated."
+  },
+  {
+    "objectID": "assignments.html#step-6-submit-the-notebook-link",
+    "href": "assignments.html#step-6-submit-the-notebook-link",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 6 — Submit the Notebook Link",
+    "text": "Step 6 — Submit the Notebook Link\nCopy the notebook URL and submit it through the relevant weekly submission link."
   },
   {
     "objectID": "resources.html",
@@ -291,7 +550,7 @@
     "href": "lectures/week1.html",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "",
-    "text": "Welcome to ECN 4199 — Industrial Data Analytics.\nThis week is not about advanced coding. It is about removing fear, understanding the course workflow, and running your first Python code."
+    "text": "Welcome to:\nThis first week is NOT about advanced programming.\nIt is about:"
   },
   {
     "objectID": "lectures/week1.html#formula",
@@ -304,15 +563,15 @@
     "objectID": "lectures/week1.html#python-code",
     "href": "lectures/week1.html#python-code",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Python code",
-    "text": "Python code\ngdp_last_year = 1000\ngdp_this_year = 1080\n\ngdp_growth = ((gdp_this_year - gdp_last_year) / gdp_last_year) * 100\n\nprint(gdp_growth)"
+    "section": "Python Code",
+    "text": "Python Code\ngdp_last_year = 1000\ngdp_this_year = 1080\n\ngdp_growth = ((gdp_this_year - gdp_last_year) / gdp_last_year) * 100\n\nprint(gdp_growth)"
   },
   {
     "objectID": "lectures/week1.html#interpretation",
     "href": "lectures/week1.html#interpretation",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Interpretation",
-    "text": "Interpretation\nThe economy grew by 8 percent."
+    "text": "Interpretation\nThe economy grew by:\n8 percent"
   },
   {
     "objectID": "lectures/week1.html#formula-1",
@@ -325,15 +584,15 @@
     "objectID": "lectures/week1.html#python-code-1",
     "href": "lectures/week1.html#python-code-1",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Python code",
-    "text": "Python code\ncpi_last_year = 200\ncpi_this_year = 240\n\ninflation_rate = ((cpi_this_year - cpi_last_year) / cpi_last_year) * 100\n\nprint(inflation_rate)"
+    "section": "Python Code",
+    "text": "Python Code\ncpi_last_year = 200\ncpi_this_year = 240\n\ninflation_rate = ((cpi_this_year - cpi_last_year) / cpi_last_year) * 100\n\nprint(inflation_rate)"
   },
   {
     "objectID": "lectures/week1.html#interpretation-1",
     "href": "lectures/week1.html#interpretation-1",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Interpretation",
-    "text": "Interpretation\nPrices increased by 20 percent."
+    "text": "Interpretation\nPrices increased by:\n20 percent"
   },
   {
     "objectID": "lectures/week1.html#formula-2",
@@ -346,15 +605,15 @@
     "objectID": "lectures/week1.html#python-code-2",
     "href": "lectures/week1.html#python-code-2",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Python code",
-    "text": "Python code\nexchange_rate_old = 320\nexchange_rate_new = 360\n\ndepreciation = ((exchange_rate_new - exchange_rate_old) / exchange_rate_old) * 100\n\nprint(depreciation)"
+    "section": "Python Code",
+    "text": "Python Code\nexchange_rate_old = 320\nexchange_rate_new = 360\n\ndepreciation = ((exchange_rate_new - exchange_rate_old) / exchange_rate_old) * 100\n\nprint(depreciation)"
   },
   {
     "objectID": "lectures/week1.html#interpretation-2",
     "href": "lectures/week1.html#interpretation-2",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Interpretation",
-    "text": "Interpretation\nThe domestic currency depreciated by 12.5 percent."
+    "text": "Interpretation\nThe domestic currency depreciated by:\n12.5 percent"
   },
   {
     "objectID": "lectures/week1.html#formula-3",
@@ -367,105 +626,231 @@
     "objectID": "lectures/week1.html#python-code-3",
     "href": "lectures/week1.html#python-code-3",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Python code",
-    "text": "Python code\nnominal_income = 100000\nprice_index = 125\n\nreal_income = (nominal_income / price_index) * 100\n\nprint(real_income)"
+    "section": "Python Code",
+    "text": "Python Code\nnominal_income = 100000\nprice_index = 125\n\nreal_income = (nominal_income / price_index) * 100\n\nprint(real_income)"
   },
   {
     "objectID": "lectures/week1.html#interpretation-3",
     "href": "lectures/week1.html#interpretation-3",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Interpretation",
-    "text": "Interpretation\nAlthough nominal income is 100,000, real income is 80,000 in base-year prices."
+    "text": "Interpretation\nAlthough nominal income is:\n100,000\nreal income is:\n80,000\nin base-year prices."
   },
   {
     "objectID": "lectures/week1.html#task-1-print-your-first-message",
     "href": "lectures/week1.html#task-1-print-your-first-message",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Task 1: Print Your First Message",
-    "text": "Task 1: Print Your First Message\nWrite Python code to print:\nI am learning Python for Economics\nExpected code:\nprint(\"I am learning Python for Economics\")"
+    "section": "Task 1 — Print Your First Message",
+    "text": "Task 1 — Print Your First Message\nWrite Python code to print:\nI am learning Python for Economics"
   },
   {
     "objectID": "lectures/week1.html#task-2-calculate-inflation",
     "href": "lectures/week1.html#task-2-calculate-inflation",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Task 2: Calculate Inflation",
-    "text": "Task 2: Calculate Inflation\nGiven:\n\nCPI in 2023 = 180\nCPI in 2024 = 216\n\nCalculate the inflation rate.\nExpected answer:\n20.0"
+    "section": "Task 2 — Calculate Inflation",
+    "text": "Task 2 — Calculate Inflation\nGiven:\n\nCPI in 2023 = 180\nCPI in 2024 = 216\n\nCalculate the inflation rate."
   },
   {
     "objectID": "lectures/week1.html#task-3-calculate-gdp-growth",
     "href": "lectures/week1.html#task-3-calculate-gdp-growth",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Task 3: Calculate GDP Growth",
-    "text": "Task 3: Calculate GDP Growth\nGiven:\n\nGDP in 2023 = 8500\nGDP in 2024 = 9010\n\nCalculate GDP growth.\nExpected answer:\n6.0"
+    "section": "Task 3 — Calculate GDP Growth",
+    "text": "Task 3 — Calculate GDP Growth\nGiven:\n\nGDP in 2023 = 8500\nGDP in 2024 = 9010\n\nCalculate GDP growth."
   },
   {
     "objectID": "lectures/week1.html#task-4-calculate-exchange-rate-depreciation",
     "href": "lectures/week1.html#task-4-calculate-exchange-rate-depreciation",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Task 4: Calculate Exchange Rate Depreciation",
-    "text": "Task 4: Calculate Exchange Rate Depreciation\nGiven:\n\nOld exchange rate = 300\nNew exchange rate = 330\n\nCalculate the depreciation percentage.\nExpected answer:\n10.0"
+    "section": "Task 4 — Calculate Exchange Rate Depreciation",
+    "text": "Task 4 — Calculate Exchange Rate Depreciation\nGiven:\n\nOld exchange rate = 300\nNew exchange rate = 330\n\nCalculate the depreciation percentage."
   },
   {
     "objectID": "lectures/week1.html#task-5-short-reflection",
     "href": "lectures/week1.html#task-5-short-reflection",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Task 5: Short Reflection",
-    "text": "Task 5: Short Reflection\nAnswer in 3–5 sentences:\nWhat can Python do that Excel cannot easily do?"
+    "section": "Task 5 — Short Reflection",
+    "text": "Task 5 — Short Reflection\nAnswer in 3–5 sentences:\nWhat can Python do that Excel cannot easily do?"
   },
   {
     "objectID": "lectures/week1.html#question-1",
     "href": "lectures/week1.html#question-1",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Question 1",
-    "text": "Question 1\nWhat is Python?\nA. A spreadsheet software\nB. A programming language\nC. A statistical table\nD. A search engine\nCorrect answer: B"
+    "text": "Question 1\nWhat is Python?\nA. Spreadsheet software\nB. Programming language\nC. Statistical table\nD. Search engine\nCorrect Answer:\nB"
   },
   {
     "objectID": "lectures/week1.html#question-2",
     "href": "lectures/week1.html#question-2",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Question 2",
-    "text": "Question 2\nWhat does print() do in Python?\nA. Deletes data\nB. Displays output\nC. Creates a graph\nD. Opens Excel\nCorrect answer: B"
+    "text": "Question 2\nWhat does print() do?\nA. Deletes data\nB. Displays output\nC. Creates a graph\nD. Opens Excel\nCorrect Answer:\nB"
   },
   {
     "objectID": "lectures/week1.html#question-3",
     "href": "lectures/week1.html#question-3",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Question 3",
-    "text": "Question 3\nWhich symbol is used for multiplication in Python?\nA. x\nB. *\nC. /\nD. ^\nCorrect answer: B"
+    "text": "Question 3\nWhich symbol represents multiplication in Python?\nA. x\nB. *\nC. /\nD. ^\nCorrect Answer:\nB"
   },
   {
     "objectID": "lectures/week1.html#question-4",
     "href": "lectures/week1.html#question-4",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
     "section": "Question 4",
-    "text": "Question 4\nIf GDP increases from 100 to 110, what is the growth rate?\nA. 5%\nB. 10%\nC. 15%\nD. 20%\nCorrect answer: B"
+    "text": "Question 4\nIf GDP increases from 100 to 110, what is the growth rate?\nA. 5%\nB. 10%\nC. 15%\nD. 20%\nCorrect Answer:\nB"
   },
   {
     "objectID": "lectures/week1.html#problem-1-missing-quotation-marks",
     "href": "lectures/week1.html#problem-1-missing-quotation-marks",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Problem 1: Missing quotation marks",
-    "text": "Problem 1: Missing quotation marks\nWrong:\nprint(Hello Economics)\nCorrect:\nprint(\"Hello Economics\")"
+    "section": "Problem 1 — Missing Quotation Marks",
+    "text": "Problem 1 — Missing Quotation Marks\nWrong:\nprint(Hello Economics)\nCorrect:\nprint(\"Hello Economics\")"
   },
   {
     "objectID": "lectures/week1.html#problem-2-using-commas-in-numbers",
     "href": "lectures/week1.html#problem-2-using-commas-in-numbers",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Problem 2: Using commas in numbers",
-    "text": "Problem 2: Using commas in numbers\nWrong:\ngdp = 1,000\nBetter:\ngdp = 1000"
+    "section": "Problem 2 — Using Commas in Numbers",
+    "text": "Problem 2 — Using Commas in Numbers\nWrong:\ngdp = 1,000\nCorrect:\ngdp = 1000"
   },
   {
     "objectID": "lectures/week1.html#problem-3-wrong-multiplication-symbol",
     "href": "lectures/week1.html#problem-3-wrong-multiplication-symbol",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Problem 3: Wrong multiplication symbol",
-    "text": "Problem 3: Wrong multiplication symbol\nWrong:\ngrowth = value x 100\nCorrect:\ngrowth = value * 100"
+    "section": "Problem 3 — Wrong Multiplication Symbol",
+    "text": "Problem 3 — Wrong Multiplication Symbol\nWrong:\ngrowth = value x 100\nCorrect:\ngrowth = value * 100"
   },
   {
-    "objectID": "lectures/week1.html#problem-4-forgetting-to-run-the-code-cell",
-    "href": "lectures/week1.html#problem-4-forgetting-to-run-the-code-cell",
+    "objectID": "lectures/week1.html#problem-4-forgetting-to-run-cells",
+    "href": "lectures/week1.html#problem-4-forgetting-to-run-cells",
     "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "section": "Problem 4: Forgetting to run the code cell",
-    "text": "Problem 4: Forgetting to run the code cell\nIn Colab, press:\nShift + Enter"
+    "section": "Problem 4 — Forgetting to Run Cells",
+    "text": "Problem 4 — Forgetting to Run Cells\nRemember:\nShift + Enter\nruns a code cell."
+  },
+  {
+    "objectID": "lectures/week1.html#step-1-save-a-personal-copy",
+    "href": "lectures/week1.html#step-1-save-a-personal-copy",
+    "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
+    "section": "Step 1 — Save a Personal Copy",
+    "text": "Step 1 — Save a Personal Copy\nInside Google Colab:\nFile → Save a Copy in Drive\nThis creates your own editable version.\nStudents should NOT directly edit the shared lecture notebook."
+  },
+  {
+    "objectID": "lectures/week1.html#step-2-organize-google-drive",
+    "href": "lectures/week1.html#step-2-organize-google-drive",
+    "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
+    "section": "Step 2 — Organize Google Drive",
+    "text": "Step 2 — Organize Google Drive\nStudents are strongly encouraged to create a folder such as:\nECN4199_Assignments\ninside Google Drive.\nStore all weekly assignment notebooks inside this folder throughout the semester."
+  },
+  {
+    "objectID": "lectures/week1.html#step-3-enable-sharing",
+    "href": "lectures/week1.html#step-3-enable-sharing",
+    "title": "Week 1 — Orientation: Python, AI, and Data Analytics",
+    "section": "Step 3 — Enable Sharing",
+    "text": "Step 3 — Enable Sharing\nInside Google Colab:\n\nClick:\n\nShare\n\nUnder General Access select:\n\nAnyone with the link\n\nSet permissions to:\n\nViewer\n\nCopy the notebook link"
+  },
+  {
+    "objectID": "activities/week1_activity.html",
+    "href": "activities/week1_activity.html",
+    "title": "Week 1 In-Class Activity",
+    "section": "",
+    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 1\n\n\nTopic\nOrientation and Computational Thinking\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
+  },
+  {
+    "objectID": "activities/week1_activity.html#objective",
+    "href": "activities/week1_activity.html#objective",
+    "title": "Week 1 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nRun your first Python code successfully."
+  },
+  {
+    "objectID": "activities/week1_activity.html#instructions-1",
+    "href": "activities/week1_activity.html#instructions-1",
+    "title": "Week 1 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nRun the following code:\nprint(\"Welcome to ECN 4199\")"
+  },
+  {
+    "objectID": "activities/week1_activity.html#question",
+    "href": "activities/week1_activity.html#question",
+    "title": "Week 1 In-Class Activity",
+    "section": "Question",
+    "text": "Question\nWhat does the function:\nprint()\ndo in Python?\nWrite your answer in one sentence."
+  },
+  {
+    "objectID": "activities/week1_activity.html#objective-1",
+    "href": "activities/week1_activity.html#objective-1",
+    "title": "Week 1 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nUnderstand basic Python variables."
+  },
+  {
+    "objectID": "activities/week1_activity.html#instructions-2",
+    "href": "activities/week1_activity.html#instructions-2",
+    "title": "Week 1 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nCreate the following variables:\nstudent_name\ninflation_rate\ngdp_growth\nAssign appropriate values.\nExample:\ninflation_rate = 12.5"
+  },
+  {
+    "objectID": "activities/week1_activity.html#question-1",
+    "href": "activities/week1_activity.html#question-1",
+    "title": "Week 1 In-Class Activity",
+    "section": "Question",
+    "text": "Question\nWhy are variables useful in programming and data analysis?"
+  },
+  {
+    "objectID": "activities/week1_activity.html#objective-2",
+    "href": "activities/week1_activity.html#objective-2",
+    "title": "Week 1 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nUse Python for basic economic calculations."
+  },
+  {
+    "objectID": "activities/week1_activity.html#instructions-3",
+    "href": "activities/week1_activity.html#instructions-3",
+    "title": "Week 1 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nAssume:\n\n\n\nVariable\nValue\n\n\n\n\nInitial Inflation\n6%\n\n\nNew Inflation\n12%\n\n\n\nCalculate:\npercentage point increase in inflation\nusing Python."
+  },
+  {
+    "objectID": "activities/week1_activity.html#example-structure",
+    "href": "activities/week1_activity.html#example-structure",
+    "title": "Week 1 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\ninitial_inflation = 6\nnew_inflation = 12"
+  },
+  {
+    "objectID": "activities/week1_activity.html#question-2",
+    "href": "activities/week1_activity.html#question-2",
+    "title": "Week 1 In-Class Activity",
+    "section": "Question",
+    "text": "Question\nWhat does a sharp increase in inflation usually imply for households?\nWrite 2–3 sentences."
+  },
+  {
+    "objectID": "activities/week1_activity.html#objective-3",
+    "href": "activities/week1_activity.html#objective-3",
+    "title": "Week 1 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nStore economic information using Python lists."
+  },
+  {
+    "objectID": "activities/week1_activity.html#instructions-4",
+    "href": "activities/week1_activity.html#instructions-4",
+    "title": "Week 1 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nCreate a Python list containing:\n\ninflation rates\nunemployment rates\nGDP growth values\n\nExample:\ninflation = [4.5, 5.2, 7.8]"
+  },
+  {
+    "objectID": "activities/week1_activity.html#question-3",
+    "href": "activities/week1_activity.html#question-3",
+    "title": "Week 1 In-Class Activity",
+    "section": "Question",
+    "text": "Question\nWhy is storing data systematically important for economists?"
+  },
+  {
+    "objectID": "activities/week1_activity.html#short-reflection",
+    "href": "activities/week1_activity.html#short-reflection",
+    "title": "Week 1 In-Class Activity",
+    "section": "Short Reflection",
+    "text": "Short Reflection\nWrite a short paragraph answering:\nWhy are computational and data skills becoming increasingly important for economists and policy analysts?\nYour answer should include:\n\ndata\ndecision-making\nmodern analytics\nAI or automation"
   }
 ]

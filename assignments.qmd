@@ -4,9 +4,35 @@ title: "Weekly In-Class Activities"
 
 # ECN 4199 — Weekly In-Class Activities
 
-This page contains the weekly in-class activities for **ECN 4199: Industrial Data Analytics**.
+This page contains the weekly in-class activities for:
 
-Each activity must be completed during the scheduled lecture hour.
+```text
+ECN 4199 — Industrial Data Analytics
+```
+
+These activities form the continuous assessment component of the course and are designed to provide hands-on analytical experience throughout the semester.
+
+---
+
+# Purpose of Weekly Activities
+
+The weekly activities are designed to help students:
+
+- apply weekly concepts in real time
+- develop computational confidence
+- strengthen analytical reasoning
+- improve interpretation skills
+- engage actively during lectures
+- gain practical experience using Python and analytics tools
+
+The purpose is NOT memorization.
+
+The purpose is learning how to:
+
+- think computationally
+- solve analytical problems
+- interpret outputs critically
+- communicate evidence effectively
 
 ---
 
@@ -15,12 +41,11 @@ Each activity must be completed during the scheduled lecture hour.
 | Item | Details |
 |---|---|
 | Number of Activities | 13 |
-| Marks per Activity | 5 marks |
-| Total Marks | 65 marks |
-| Duration | 1 hour per activity |
-| Access | Lecturer passcode required |
-| Submission | Through weekly submission link |
-| Completion Time | During lecture only |
+| Marks per Activity | 5 Marks |
+| Total Marks | 65 Marks |
+| Duration | Approximately 1 Hour per Activity |
+| Completion Mode | During Scheduled Lecture Session |
+| Submission Method | Through Relevant Weekly Submission Link |
 
 ---
 
@@ -28,86 +53,85 @@ Each activity must be completed during the scheduled lecture hour.
 
 Students must:
 
-1. Attend the scheduled lecture.
-2. Wait until the lecturer announces the passcode.
-3. Open the relevant weekly activity.
-4. Complete the activity within one hour.
-5. Submit before the activity closes.
+1. Attend the scheduled lecture session.
+2. Open the relevant weekly activity page.
+3. Complete the activity within the allocated lecture period.
+4. Submit all required materials before the submission deadline.
 
-Late submissions will not be accepted unless approved by the lecturer.
+Late submissions will normally not be accepted unless prior approval has been obtained from the lecturer.
 
 ---
 
-# How Activities Work
+# How the Weekly Activities Work
 
-Each weekly activity may include:
+Each activity may include a combination of:
 
-- short conceptual questions
+- conceptual questions
 - Python coding tasks
+- visualization exercises
 - interpretation questions
-- graph or output interpretation
+- forecasting exercises
+- machine learning tasks
+- dashboard exercises
 - short reflection questions
 
-The purpose is not memorisation.
+Students are expected to demonstrate both:
 
-The purpose is to test whether students can apply the weekly concepts in real time.
+- technical execution
+- analytical interpretation
 
----
+Correct code without interpretation is insufficient.
 
-# Passcode Access
-
-Each activity will be protected by a lecturer-set passcode.
-
-The passcode will be announced only during the relevant lecture.
-
-Students should not share passcodes with others.
+Similarly, interpretation without computational implementation is also insufficient.
 
 ---
 
-# Weekly Activity Table
+# Google Colab Submission Instructions
 
-| Week | Topic | Marks | Duration | Activity Link |
-|---|---|---:|---:|---|
-| Week 1 | Orientation and First Python Code | 5 | 1 hour | [Open Activity](activities/week1_activity.qmd) |
-<!--
-| Week 2 | Setup and First Dataset | 5 | 1 hour | [Open Activity](activities/week2_activity.qmd) |
-| Week 3 | Python Fundamentals | 5 | 1 hour | [Open Activity](activities/week3_activity.qmd) |
-| Week 4 | Data Handling with Pandas | 5 | 1 hour | [Open Activity](activities/week4_activity.qmd) |
-| Week 5 | Statistics and Visualization | 5 | 1 hour | [Open Activity](activities/week5_activity.qmd) |
-| Week 6 | Interactive Dashboards | 5 | 1 hour | [Open Activity](activities/week6_activity.qmd) |
-| Week 7 | Regression Analysis | 5 | 1 hour | [Open Activity](activities/week7_activity.qmd) |
-| Week 8 | Machine Learning Foundations | 5 | 1 hour | [Open Activity](activities/week8_activity.qmd) |
-| Week 9 | Classification Models | 5 | 1 hour | [Open Activity](activities/week9_activity.qmd) |
-| Week 10 | Clustering and Unsupervised Learning | 5 | 1 hour | [Open Activity](activities/week10_activity.qmd) |
-| Week 11 | Forecasting and Time Series | 5 | 1 hour | [Open Activity](activities/week11_activity.qmd) |
-| Week 12 | NLP and Generative AI | 5 | 1 hour | [Open Activity](activities/week12_activity.qmd) |
-| Week 13 | Capstone Analytics Workflow | 5 | 1 hour | [Open Activity](activities/week13_activity.qmd) |
-
--->
-
----
-
-# Submission Format
-
-Each activity must be submitted through the relevant weekly activity link.
-
-Where a Colab notebook is required, students must:
-
-1. Save a copy in Google Drive.
-2. Rename the notebook properly.
-3. Set sharing to:
+Most weekly activities will require students to work using:
 
 ```text
-Anyone with the link → Viewer
+Google Colab Notebooks
 ```
 
-4. Submit the notebook link.
+Students should follow the process below carefully.
 
 ---
 
-# Notebook Naming Convention
+## Step 1 — Open the Notebook
 
-Use the following format:
+Open the relevant notebook link provided within the weekly lecture materials.
+
+---
+
+## Step 2 — Save a Personal Copy
+
+Inside Google Colab:
+
+```text
+File → Save a Copy in Drive
+```
+
+This creates your own editable version.
+
+Students should NEVER directly edit shared lecture notebooks.
+
+---
+
+## Step 3 — Complete the Activity
+
+Students should:
+
+- write code
+- answer interpretation questions
+- generate outputs
+- save all completed work properly
+
+---
+
+## Step 4 — Rename the Notebook Properly
+
+Rename the notebook using the following structure:
 
 ```text
 WeekNumber_IndexNumber_Name.ipynb
@@ -121,41 +145,42 @@ Week05_2024BA12345_Perera.ipynb
 
 ---
 
-# Marking
+## Step 5 — Enable Sharing
 
-Each weekly activity is worth **5 marks**.
-
-The total mark across all 13 activities is:
+Inside Google Colab:
 
 ```text
-13 × 5 = 65 marks
+Share → General Access → Anyone with the Link → Viewer
 ```
 
-Marks will be based on:
+This step is extremely important.
 
-| Component | Marks |
-|---|---:|
-| Correct completion of required task | 2 |
-| Correct code/output | 1 |
-| Economic interpretation | 1 |
-| Timely submission and formatting | 1 |
-| Total | 5 |
+If sharing access is not enabled properly, the notebook cannot be evaluated.
 
 ---
 
-# Academic Integrity
+## Step 6 — Submit the Notebook Link
 
-Students may use course materials and lecture notebooks.
-
-However:
-
-- copying another student’s work is not allowed
-- submitting work without understanding is not allowed
-- AI tools must not be used to replace student reasoning
-- all submitted explanations must be written in the student’s own words
+Copy the notebook URL and submit it through the relevant weekly submission link.
 
 ---
 
-# Lecturer Note
+# Weekly Activity Table
 
-The weekly links will be activated or shared during the relevant lecture period only.
+| Week | Topic | Marks | Duration | Activity Link |
+|---|---|---:|---:|---|
+| Week 1 | Orientation and First Python Code | 5 | 1 hour | [Open Week 1 Activity](activities/week1_activity.qmd) |
+| Week 2 | Working with Data in Python using the LFS Dataset | 5 | 1 hour | [Open Week 2 Activity](activities/week2_activity.qmd) |
+<!--
+| Week 3 | Python Fundamentals | 5 | 1 hour | [Open Activity](activities/week3_activity.qmd) |
+| Week 4 | Data Handling with Pandas | 5 | 1 hour | [Open Activity](activities/week4_activity.qmd) |
+| Week 5 | Statistics and Visualization | 5 | 1 hour | [Open Activity](activities/week5_activity.qmd) |
+| Week 6 | Interactive Dashboards | 5 | 1 hour | [Open Activity](activities/week6_activity.qmd) |
+| Week 7 | Regression Analysis | 5 | 1 hour | [Open Activity](activities/week7_activity.qmd) |
+| Week 8 | Machine Learning Foundations | 5 | 1 hour | [Open Activity](activities/week8_activity.qmd) |
+| Week 9 | Classification Models | 5 | 1 hour | [Open Activity](activities/week9_activity.qmd) |
+| Week 10 | Clustering and Unsupervised Learning | 5 | 1 hour | [Open Activity](activities/week10_activity.qmd) |
+| Week 11 | Forecasting and Time Series | 5 | 1 hour | [Open Activity](activities/week11_activity.qmd) |
+| Week 12 | NLP and Generative AI | 5 | 1 hour | [Open Activity](activities/week12_activity.qmd) |
+| Week 13 | Capstone Analytics Workflow | 5 | 1 hour | [Open Activity](activities/week13_activity.qmd) |
+-->

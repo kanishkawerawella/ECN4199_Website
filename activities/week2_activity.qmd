@@ -1,288 +1,64 @@
 ---
-title: "Week 2 In-Class Activity"
+title: "Week 2 Assignment — Working with Data in Python"
 ---
 
-# Activity Information
+# Assignment Information
 
 | Item | Details |
 |---|---|
 | Week | Week 2 |
-| Topic | Python Setup, Google Colab, VS Code, and Working with Real Data |
+| Topic | Working with Data in Python using a Labour Force Survey Dataset |
 | Marks | 5 Marks |
 | Duration | 1 Hour |
+| Submission Format | Google Colab notebook link |
 | Attempts | One Attempt Only |
 | Access | Lecturer Passcode Required |
 
 ---
 
-# Instructions
+# Assignment Purpose
 
-1. Open the Week 2 live notebook.
-2. Save a copy to your Google Drive.
-3. Complete all required tasks.
-4. Answer all interpretation questions.
-5. Submit before the activity closes.
+This assignment tests whether students can use the Week 2 materials to begin working with real data in Python.
 
----
+Students should demonstrate that they can:
 
-# Important Reminder
+- open and save a Google Colab notebook
+- import the `pandas` library
+- load an Excel dataset into Python
+- understand the difference between data and a variable dictionary
+- inspect rows, columns, data types, and missing values
+- generate descriptive statistics
+- produce frequency tables
+- write short economic interpretations from output
 
-This activity tests:
+The purpose is not memorizing code.
 
-- ability to use Google Colab
-- ability to load datasets
-- basic pandas usage
-- dataset interpretation
-- understanding of computational workflows
-
-This is NOT a memorisation exercise.
-
----
-
-# Task 1 — Opening the Notebook
-
-## Objective
-
-Ensure the notebook environment works correctly.
-
----
-
-## Instructions
-
-Run the following code:
-
-```python
-print("Week 2 activity started successfully")
-```
-
----
-
-## Question
-
-What is the advantage of cloud-based coding environments such as Google Colab?
-
-Write 2–3 sentences.
-
----
-
-# Task 2 — Importing pandas
-
-## Objective
-
-Load the main data analysis library.
-
----
-
-## Instructions
-
-Import pandas using the correct syntax.
-
----
-
-## Expected Structure
-
-```python
-import pandas as pd
-```
-
----
-
-## Question
-
-Why do economists and analysts use libraries instead of writing everything from scratch?
-
----
-
-# Task 3 — Loading the Dataset
-
-## Objective
-
-Load the Sri Lankan macroeconomic dataset.
-
----
-
-## Instructions
-
-Upload the provided CSV file into Colab.
-
-Then run:
-
-```python
-data = pd.read_csv("sri_lanka_macro.csv")
-```
-
----
-
-## Question
-
-What does CSV stand for?
-
----
-
-# Task 4 — Exploring the Dataset
-
-## Objective
-
-Inspect the structure of the dataset.
-
----
-
-## Instructions
-
-Run the following commands:
-
-```python
-data.head()
-```
-
-and
-
-```python
-data.info()
-```
-
----
-
-## Questions
-
-### Question 1
-
-How many variables are included in the dataset?
-
-### Question 2
-
-Are there missing values?
-
-### Question 3
-
-Which variable appears to have the largest numerical values?
-
----
-
-# Task 5 — Summary Statistics
-
-## Objective
-
-Generate basic statistical summaries.
-
----
-
-## Instructions
-
-Run:
-
-```python
-data.describe()
-```
-
----
-
-## Questions
-
-### Question 1
-
-Which year had the highest inflation?
-
-### Question 2
-
-What happened to GDP growth in 2022?
-
-### Question 3
-
-What happened to the exchange rate between 2021 and 2022?
-
-Write short interpretations.
-
----
-
-# Task 6 — Reflection Question
-
-Write a short paragraph answering:
+The purpose is learning how to move from:
 
 ```text
-Why is Python more useful than manually analysing large datasets in Excel?
-```
-
-Your answer should include:
-
-- automation
-- reproducibility
-- scalability
-- data handling
-
----
-
-# Mini Quiz
-
-## Question 1
-
-What does CSV stand for?
-
-A. Central Statistical Variable  
-B. Comma-Separated Values  
-C. Computer Statistical Verification  
-D. Column Sorted Values  
-
----
-
-## Question 2
-
-Which library is mainly used for data handling?
-
-A. matplotlib  
-B. numpy  
-C. pandas  
-D. sklearn  
-
----
-
-## Question 3
-
-What does `head()` do?
-
-A. Deletes rows  
-B. Creates graphs  
-C. Displays first rows  
-D. Saves dataset  
-
----
-
-## Question 4
-
-Which command imports pandas?
-
-A.
-
-```python
-import pandas as pd
-```
-
-B.
-
-```python
-load pandas
-```
-
-C.
-
-```python
-pandas.open()
-```
-
-D.
-
-```python
-import data
+raw dataset -> Python output -> economic interpretation
 ```
 
 ---
 
-# Submission Instructions
+# Required Materials
 
-Before submitting:
+| Material | Link |
+|---|---|
+| Labour Force Survey Dataset | [Download LFS_Hypothetical_Dataset.xlsx](../data/LFS_Hypothetical_Dataset.xlsx) |
 
-1. Save notebook properly.
-2. Rename notebook using:
+---
+
+# Before You Begin
+
+1. Go to Google Colab
+2. Go to:
+
+```text
+File -> Save a copy in Drive
+```
+
+3. Rename your notebook using:
 
 ```text
 Week02_IndexNumber_Name.ipynb
@@ -294,25 +70,289 @@ Example:
 Week02_2024BA12345_Perera.ipynb
 ```
 
-3. Set notebook sharing to:
+4. Download the Labour Force Survey dataset.
+5. Complete all tasks in your saved Google Colab notebook.
+
+---
+
+# Dataset
+
+This assignment uses:
 
 ```text
-Anyone with the link → Viewer
+LFS_Hypothetical_Dataset.xlsx
 ```
+
+The Excel workbook contains two sheets:
+
+| Sheet | Purpose |
+|---|---|
+| `LFS_Data` | Main dataset with individual-level labour force information |
+| `Variable Dictionary` | Explanation of variable names, labels, types, and coding |
+
+The dataset contains:
+
+```text
+1000 observations
+20 variables
+```
+
+Each row represents one individual.
+
+Each column represents one characteristic of that individual.
+
+---
+
+# Task 1 — Start the Notebook
+
+## Instructions
+
+Run:
+
+```python
+print("Week 2 assignment started successfully")
+```
+
+Then write your name and index number in a Markdown cell.
+
+## Question
+
+In 2-3 sentences, explain why Google Colab is useful for beginners learning data analytics.
+
+---
+
+# Task 2 — Import pandas
+
+## Instructions
+
+Run:
+
+```python
+import pandas as pd
+```
+
+## Question
+
+Why do economists and data analysts use libraries such as `pandas` instead of writing every command from scratch?
+
+---
+
+# Task 3 — Load the Dataset
+
+## Instructions
+
+Use the direct website method:
+
+```python
+dataset_url = "https://kanishkawerawella.github.io/ECN4199_Website/data/LFS_Hypothetical_Dataset.xlsx"
+
+data = pd.read_excel(dataset_url, sheet_name="LFS_Data")
+dictionary = pd.read_excel(dataset_url, sheet_name="Variable Dictionary")
+```
+
+If the direct website method does not work, upload the downloaded Excel file into Colab and use:
+
+```python
+data = pd.read_excel("LFS_Hypothetical_Dataset.xlsx", sheet_name="LFS_Data")
+dictionary = pd.read_excel("LFS_Hypothetical_Dataset.xlsx", sheet_name="Variable Dictionary")
+```
+
+## Questions
+
+1. What does the `LFS_Data` sheet contain?
+2. What does the `Variable Dictionary` sheet explain?
+3. Why should analysts read the variable dictionary before interpreting a dataset?
+
+---
+
+# Task 4 — Inspect the Dataset
+
+## Instructions
+
+Run the following commands:
+
+```python
+data.head()
+```
+
+```python
+data.tail()
+```
+
+```python
+data.shape
+```
+
+```python
+data.columns
+```
+
+```python
+data.info()
+```
+
+## Questions
+
+1. How many observations are in the dataset?
+2. How many variables are in the dataset?
+3. Name five variables that are useful for labour market analysis.
+4. Are all variables numerical? Explain using examples.
+
+---
+
+# Task 5 — Use the Variable Dictionary
+
+## Instructions
+
+Display the variable dictionary:
+
+```python
+dictionary
+```
+
+Then identify the meaning of these variables:
+
+- `Employment_Status`
+- `Monthly_Wage_LKR`
+- `Education_Level`
+- `Internet_Access`
+- `Unpaid_Care_Hours_Weekly`
+
+## Question
+
+Choose any three variables from the list above and explain why each variable may be useful for economic or labour market analysis.
+
+---
+
+# Task 6 — Summary Statistics
+
+## Instructions
+
+Run:
+
+```python
+data.describe()
+```
+
+## Questions
+
+1. What is the average age of individuals in the dataset?
+2. What is the average household size?
+3. What is the average monthly wage?
+4. What is the maximum monthly wage?
+5. What is the average number of unpaid care hours per week?
+
+For each answer, write one short interpretation.
+
+---
+
+# Task 7 — Frequency Tables
+
+## Instructions
+
+Run:
+
+```python
+data["Sex"].value_counts()
+```
+
+```python
+data["Sector"].value_counts()
+```
+
+```python
+data["Education_Level"].value_counts()
+```
+
+```python
+data["Employment_Status"].value_counts()
+```
+
+```python
+data["Internet_Access"].value_counts()
+```
+
+## Questions
+
+1. How many males and females are included in the dataset?
+2. Is the sample more urban or more rural?
+3. Which education category appears most frequently?
+4. How many individuals are employed, unemployed, and inactive?
+5. How many individuals have internet access?
+
+---
+
+# Task 8 — Simple Labour Market Interpretation
+
+Using your outputs from Tasks 6 and 7, write a short interpretation of the dataset.
+
+Your answer should include:
+
+- at least three numerical findings
+- at least two categorical findings
+- one possible economic question that could be studied using this dataset
+
+Recommended length:
+
+```text
+150-200 words
+```
+
+---
+
+# Task 9 — Reflection
+
+Write a short paragraph answering:
+
+```text
+Why is Python useful for analysing Labour Force Survey data?
+```
+
+Your answer should refer to:
+
+- automation
+- reproducibility
+- large datasets
+- variable dictionaries
+- interpretation
+
+---
+
+# Mark Allocation
+
+| Component | Marks |
+|---|---:|
+| Correct notebook setup, naming, and pandas import | 0.5 |
+| Correct loading of `LFS_Data` and `Variable Dictionary` | 0.75 |
+| Dataset inspection using `head()`, `tail()`, `shape`, `columns`, and `info()` | 0.75 |
+| Correct summary statistics and frequency tables | 1.25 |
+| Economic interpretation of outputs | 1.25 |
+| Submission formatting and sharing access | 0.5 |
+| Total | 5.0 |
+
+---
+
+# Submission Instructions
+
+Before submitting:
+
+1. Make sure all code cells have been run.
+2. Make sure all questions are answered in Markdown cells.
+3. Rename the notebook correctly.
+4. Set sharing access to:
+
+```text
+Anyone with the link -> Viewer
+```
+
+5. Copy the notebook link.
+6. Submit the link through the Week 2 submission form.
 
 ---
 
 # Submission Link
 
-[Submit Week 2 Activity](PASTE_WEEK2_SUBMISSION_LINK_HERE)
-
----
-
-# Passcode Access
-
-The lecturer will provide the passcode during the lecture.
-
-Students without the correct passcode cannot access the submission form.
+[Submit Week 2 Assignment](http://lms.arts.cmb.ac.lk/mod/assign/view.php?id=91945)
 
 ---
 
@@ -324,6 +364,7 @@ Possible causes:
 
 - dataset not uploaded
 - incorrect filename
+- file uploaded to the wrong Colab session
 
 ---
 
@@ -332,31 +373,29 @@ Possible causes:
 Wrong:
 
 ```python
-pd.read_csv(sri_lanka_macro.csv)
+pd.read_excel(LFS_Hypothetical_Dataset.xlsx)
 ```
 
 Correct:
 
 ```python
-pd.read_csv("sri_lanka_macro.csv")
+pd.read_excel("LFS_Hypothetical_Dataset.xlsx", sheet_name="LFS_Data")
 ```
 
 ---
 
-## Problem 3 — Forgetting Import Statement
+## Problem 3 — Wrong Sheet Name
 
 Wrong:
 
 ```python
-data = pd.read_csv("file.csv")
+pd.read_excel("LFS_Hypothetical_Dataset.xlsx", sheet_name="Data")
 ```
-
-without importing pandas first.
 
 Correct:
 
 ```python
-import pandas as pd
+pd.read_excel("LFS_Hypothetical_Dataset.xlsx", sheet_name="LFS_Data")
 ```
 
 ---
@@ -367,8 +406,9 @@ Students may use lecture materials and course notes.
 
 However:
 
-- copied answers are not allowed
 - copied notebooks are not allowed
+- copied interpretations are not allowed
 - AI-generated answers without understanding are unacceptable
+- all interpretations must be written in the student's own words
 
 Students are responsible for all submitted work.

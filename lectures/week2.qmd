@@ -1,376 +1,1380 @@
 ---
-title: "Week 2 — Setting Up Python and Working with Real Data"
+title: "Week 2 — Working with Data in Python"
 ---
 
-# Week 2 — Setting Up Python, Google Colab, VS Code, and Your First Dataset
+# Introduction
 
-Week 1 removed fear.
+In Week 1, we learned how to use Python as a calculator and how to execute simple commands.
 
-Week 2 builds computational independence.
+This week, we begin working with the most important asset in modern economics:
 
-This week focuses on:
+```text
+DATA
+```
 
-- computational environments
-- cloud vs local computing
-- Google Colab
-- VS Code
-- datasets
-- CSV files
-- loading real-world data into Python
+Every day economists use data to answer questions such as:
 
-This week is foundational.
+- Why are some people unemployed?
+- What determines wages?
+- Why does inflation increase?
+- Which districts experience higher poverty?
+- How does education affect earnings?
+- How does technology influence productivity?
 
-If students fail here, everything later becomes difficult.
+Regardless of whether you become:
+
+- an economist
+- policy analyst
+- researcher
+- consultant
+- banker
+- data analyst
+
+your ability to work with data will become increasingly important.
+
+For this reason, Week 2 focuses on understanding how Python stores and organizes data.
+
+Everything we do later in the course:
+
+- data visualization
+- dashboards
+- forecasting
+- machine learning
+- artificial intelligence
+
+depends on concepts introduced this week.
 
 ---
 
-# 1. Learning Objectives
+# Learning Objectives
 
-By the end of this week, students should be able to:
+By the end of this week students should be able to:
 
-- explain what a computational environment is
-- distinguish between cloud and local computing
-- use Google Colab effectively
-- understand the role of VS Code
-- upload datasets
-- read CSV files using Python
-- inspect a real-world dataset using pandas
+- understand how data is represented inside Python
+- create variables
+- understand data types
+- create and manipulate lists
+- understand indexing
+- perform simple operations on collections of data
+- open and save a Week 2 live notebook in Google Colab
+- download the Labour Force Survey Excel dataset
+- import an Excel dataset into pandas
+- inspect a dataset using `head()`, `tail()`, `shape`, `columns`, `info()`, and `describe()`
+- use a variable dictionary to understand the meaning of columns
 
 ---
 
-# 2. What Is a Computational Environment?
+# Week 2 Learning Materials
 
-A computational environment is the workspace where we write and run code.
+Use these materials during the 2-hour lecture session.
+
+| Material | Purpose | Link |
+|---|---|---|
+| Labour Force Survey Dataset | Download the Excel file used in class | [Download LFS_Hypothetical_Dataset.xlsx](../data/LFS_Hypothetical_Dataset.xlsx) |
+
+
+---
+
+# 1. Why Data Matters
+
+Economics has undergone a major transformation over the last several decades.
+
+Historically, economists relied heavily on:
+
+- theory
+- intuition
+- logical reasoning
+
+Today, economics is increasingly data-driven.
+
+When policymakers ask:
+
+> Did a policy work?
+
+they usually expect evidence.
+
+When firms ask:
+
+> Should we invest?
+
+they expect evidence.
+
+When international organizations ask:
+
+> Has poverty fallen?
+
+they expect evidence.
+
+The answer usually comes from data.
+
+Data allows economists to:
+
+- test theories
+- evaluate policies
+- forecast outcomes
+- identify patterns
+- support decision-making
+
+Without data, economics becomes speculation.
+
+With data, economics becomes evidence-based.
+
+---
+
+# 2. What Is Data?
+
+Data refers to information collected about people, organizations, events, or objects.
 
 Examples include:
 
-| Environment | Description |
-|---|---|
-| Google Colab | Cloud-based notebook environment |
-| Jupyter Notebook | Local notebook environment |
-| VS Code | Professional coding environment |
-| Spyder | Scientific Python IDE |
-| RStudio | IDE mainly used for R |
+| Person | Age | Wage |
+|----------|----------|----------|
+| A | 25 | 45000 |
+| B | 34 | 70000 |
+| C | 52 | 95000 |
 
-In this course, we mainly use:
+This table contains data.
 
-- Google Colab
-- VS Code
-- GitHub
+To work with data effectively, we need to understand several concepts.
 
 ---
 
-# 3. Cloud vs Local Computing
+# Observation
 
-There are two major ways to run Python.
+An observation is the unit being studied.
 
-## Option 1 — Cloud Computing
+Examples include:
+
+- a person
+- a household
+- a firm
+- a district
+- a country
+
+In the example above:
+
+```text
+Each row is an observation.
+```
+
+---
+
+# Variable
+
+A variable is a characteristic being measured.
+
+Examples:
+
+- age
+- wage
+- education
+- employment status
+- inflation
+- GDP growth
+
+In the example above:
+
+```text
+Each column is a variable.
+```
+
+---
+
+# Dataset
+
+A dataset is simply:
+
+```text
+A collection of observations and variables.
+```
+
+This definition remains the same whether you use:
+
+- Excel
+- Stata
+- SPSS
+- R
+- Python
+
+---
+
+# 3. How Computers Think About Data
+
+Humans naturally understand tables.
+
+Computers do not.
+
+Humans see:
+
+| Year | Inflation |
+|--------|--------|
+| 2020 | 4.6 |
+| 2021 | 6.0 |
+| 2022 | 46.4 |
+
+A computer sees:
+
+```text
+2020
+4.6
+
+2021
+6.0
+
+2022
+46.4
+```
+
+Computers require information to be organized using specific structures.
+
+Python provides several structures for storing information.
+
+The simplest of these structures is the variable.
+
+---
+
+# 4. Variables
+
+A variable stores a value.
+
+Think of a variable as a labelled container.
 
 Example:
-
-```text
-Google Colab
-```
-
-Advantages:
-
-- no installation required
-- works on most computers
-- easy sharing
-- ideal for beginners
-- free access to computing resources
-
-Disadvantages:
-
-- requires internet connection
-- temporary session storage
-
----
-
-## Option 2 — Local Computing
-
-Example:
-
-```text
-VS Code + Local Python Installation
-```
-
-Advantages:
-
-- works offline
-- faster for large projects
-- professional workflow
-- better file control
-
-Disadvantages:
-
-- installation required
-- more technical setup issues
-
----
-
-# Course Recommendation
-
-| Tool | Purpose |
-|---|---|
-| Google Colab | Main classroom environment |
-| VS Code | Long-term development environment |
-| GitHub | Storing and sharing work |
-
----
-
-# 4. Google Colab Setup
-
-Google Colab allows us to run Python directly in the browser.
-
-## Step-by-Step Instructions
-
-### Step 1
-
-Go to:
-
-```text
-https://colab.research.google.com
-```
-
-### Step 2
-
-Sign in using your Google account.
-
-### Step 3
-
-Click:
-
-```text
-New Notebook
-```
-
-### Step 4
-
-Rename notebook:
-
-```text
-Week2_YourName.ipynb
-```
-
----
-
-# 5. Running Code in Colab
-
-Run this code:
 
 ```python
-print("My first Week 2 notebook")
+inflation_2022 = 46.4
 ```
 
-To run a code cell:
+Here:
 
 ```text
-Shift + Enter
+inflation_2022
 ```
 
----
+is the name.
 
-# 6. VS Code Setup
-
-VS Code is one of the most widely used coding environments in the world.
-
-We use VS Code because it helps us:
-
-- organize projects
-- manage files
-- use GitHub
-- build websites
-- work professionally
-
----
-
-# VS Code Installation Steps
-
-## Step 1
-
-Download VS Code from:
+And:
 
 ```text
-https://code.visualstudio.com
+46.4
 ```
 
-## Step 2
+is the value.
 
-Install VS Code.
+---
 
-## Step 3
+# Displaying Variables
 
-Open VS Code.
+```python
+inflation_2022 = 46.4
 
-## Step 4
+print(inflation_2022)
+```
 
-Install the Python extension.
-
-Search for:
+Output:
 
 ```text
-Python
+46.4
 ```
-
-by Microsoft.
 
 ---
 
-# 7. Installing Python
+# Economic Examples
 
-Python itself must be installed separately for local work.
+```python
+country = "Sri Lanka"
 
-Download Python from:
+exchange_rate = 360
+
+gdp_growth = -7.8
+
+population = 22000000
+```
+
+These variables store different kinds of information.
+
+---
+
+# Why Variables Matter
+
+Variables allow us to:
+
+- store information
+- reuse information
+- perform calculations
+- organize data
+
+Without variables, programming would become extremely difficult.
+
+---
+
+# Example: Real Wage Change
+
+Suppose inflation increased by:
+
+```python
+inflation = 46.4
+```
+
+while wages increased by:
+
+```python
+wage_growth = 20
+```
+
+Then:
+
+```python
+real_wage_change = wage_growth - inflation
+
+print(real_wage_change)
+```
+
+Output:
 
 ```text
-https://python.org
+-26.4
+```
+
+Interpretation:
+
+Although nominal wages increased, purchasing power declined.
+
+---
+
+# 5. Data Types
+
+Not all information is stored in the same way.
+
+Python uses different data types.
+
+Understanding data types is important because different types support different operations.
+
+---
+
+# Integer
+
+Integers are whole numbers.
+
+Examples:
+
+```python
+age = 25
+
+children = 3
+
+districts = 25
 ```
 
 ---
 
-# Important Installation Step
+# Float
 
-During installation, check:
+Floats contain decimal points.
+
+Examples:
+
+```python
+inflation = 46.4
+
+gdp_growth = -7.8
+
+interest_rate = 8.5
+```
+
+---
+
+# String
+
+Strings contain text.
+
+Examples:
+
+```python
+country = "Sri Lanka"
+
+district = "Colombo"
+
+sector = "Services"
+```
+
+---
+
+# Boolean
+
+Booleans contain only:
 
 ```text
-Add Python to PATH
+True
+False
 ```
 
-This is extremely important.
+Examples:
+
+```python
+employed = True
+
+internet_access = False
+```
 
 ---
 
-# Verify Installation
+# Checking Data Types
 
-Open terminal and run:
+Python can tell us the type of a variable.
 
-```bash
-python --version
+Example:
+
+```python
+inflation = 46.4
+
+type(inflation)
 ```
 
-You should see something like:
+Output:
 
 ```text
-Python 3.12
+float
+```
+
+Try:
+
+```python
+type(country)
+
+type(age)
+
+type(employed)
 ```
 
 ---
 
-# 8. Installing Required Libraries
+# Why Data Types Matter
 
-Libraries are collections of tools created by other programmers.
+Suppose:
 
-We use libraries instead of building everything from scratch.
+```python
+age = 25
+
+age + 10
+```
+
+works perfectly.
+
+But:
+
+```python
+country = "Sri Lanka"
+
+country + 10
+```
+
+produces an error.
+
+Different data types behave differently.
+
+Understanding data types helps us avoid mistakes.
 
 ---
 
-# Important Libraries for This Course
+# Activity 1
 
-| Library | Purpose |
-|---|---|
-| pandas | Data handling |
-| numpy | Numerical calculations |
-| matplotlib | Graphs |
-| plotly | Interactive visualization |
-| scikit-learn | Machine learning |
-| statsmodels | Econometrics |
+Create the following variables:
+
+```python
+name
+
+age
+
+district
+
+wage
+
+employed
+```
+
+Assign appropriate values.
+
+Then use:
+
+```python
+type()
+```
+
+to identify the data type of each variable.
 
 ---
 
-# Installation Command
+# 6. Lists
 
-Run this in terminal:
+Economists rarely work with single observations.
 
-```bash
-pip install pandas numpy matplotlib plotly scikit-learn statsmodels
+Usually we work with many observations.
+
+Example:
+
+| Year | Inflation |
+|--------|--------|
+| 2020 | 4.6 |
+| 2021 | 6.0 |
+| 2022 | 46.4 |
+
+Rather than storing each value separately:
+
+```python
+inflation_2020 = 4.6
+
+inflation_2021 = 6.0
+
+inflation_2022 = 46.4
+```
+
+we can store them together.
+
+This is called a list.
+
+```python
+inflation = [4.6, 6.0, 46.4]
 ```
 
 ---
 
-# 9. Understanding Files and Folders
+# Why Lists Matter
 
-Good organization is essential.
+Lists allow us to store multiple observations inside a single object.
 
-Bad file management destroys projects.
+Think of a list as a vector.
 
----
-
-# Recommended Folder Structure
+Students familiar with statistics can think:
 
 ```text
-Industrial_Data_Analytics/
-│
-├── datasets/
-├── notebooks/
-├── assignments/
-├── outputs/
-└── drafts/
+List = Vector
 ```
 
 ---
 
-# Naming Conventions
+# Displaying Lists
 
-Good:
+```python
+inflation = [4.6, 6.0, 46.4]
+
+print(inflation)
+```
+
+Output:
 
 ```text
-inflation_data_2025.csv
+[4.6, 6.0, 46.4]
 ```
 
-Bad:
+---
+
+# Multiple Lists
+
+```python
+year = [2020, 2021, 2022]
+
+inflation = [4.6, 6.0, 46.4]
+
+gdp_growth = [-3.6, 3.7, -7.8]
+```
+
+We now have multiple vectors.
+
+This is the foundation of a dataset.
+
+---
+
+# Accessing Individual Elements
+
+Python uses indexing.
+
+```python
+inflation[0]
+```
+
+Output:
 
 ```text
-datafinalfinal2.csv
+4.6
 ```
 
-Students must learn discipline early.
+---
+
+```python
+inflation[1]
+```
+
+Output:
+
+```text
+6.0
+```
 
 ---
 
-# 10. What Is a Dataset?
+```python
+inflation[2]
+```
 
-A dataset is a structured collection of information.
+Output:
 
-Datasets contain:
-
-- rows
-- columns
-- variables
-- observations
+```text
+46.4
+```
 
 ---
 
-# Example Dataset
+# Important Rule
+
+Python starts counting from:
+
+```text
+0
+```
+
+NOT:
+
+```text
+1
+```
+
+This is one of the most common beginner mistakes.
+
+---
+
+# Activity 2
+
+Create a list called:
+
+```python
+wages
+```
+
+containing:
+
+```text
+45000
+60000
+80000
+100000
+120000
+```
+
+Display:
+
+- first wage
+- second wage
+- final wage
+
+using indexing.
+
+---
+
+# End of Part 1
+
+In the next section we move from simple variables and lists to professional analytical tools used by economists.
+
+We will introduce:
+
+- libraries
+- Pandas
+- DataFrames
+
+and create our first real dataset inside Python.
+
+# Part 2 — Libraries, Pandas, and DataFrames
+
+---
+
+# 7. Why We Need More Than Python
+
+So far we have used basic Python.
+
+For example:
+
+```python
+inflation = [4.6, 6.0, 46.4]
+
+print(inflation)
+```
+
+This works perfectly.
+
+However, imagine that you are working with:
+
+- 1000 individuals
+- 20 variables
+- 50,000 observations
+- multiple datasets
+
+Could we realistically analyze such datasets using only basic Python?
+
+The answer is:
+
+```text
+Not efficiently.
+```
+
+This is where libraries become important.
+
+---
+
+# 8. What Is a Library?
+
+A library is a collection of pre-written code that has been developed by other programmers.
+
+Instead of writing everything ourselves, we can use tools that already exist.
+
+Think of a library as a toolbox.
+
+A carpenter does not manufacture every tool before building a table.
+
+Similarly, a data analyst does not write every function from scratch.
+
+Instead, analysts use libraries.
+
+---
+
+# Everyday Analogy
+
+Imagine that you want to build a house.
+
+You could:
+
+Option 1
+
+```text
+Manufacture every brick,
+every nail,
+every screw,
+every window yourself.
+```
+
+Or:
+
+Option 2
+
+```text
+Purchase tools and materials that already exist.
+```
+
+Most people choose Option 2.
+
+Libraries work in exactly the same way.
+
+---
+
+# Why Libraries Matter
+
+Libraries allow us to:
+
+- save time
+- reduce errors
+- use tested code
+- perform complex tasks easily
+- focus on analysis rather than programming
+
+Without libraries, modern data analytics would be extremely difficult.
+
+---
+
+# Python's Strength
+
+One reason Python became so popular is its enormous collection of libraries.
+
+There are libraries for:
+
+- data analysis
+- econometrics
+- machine learning
+- artificial intelligence
+- forecasting
+- visualization
+- web applications
+- finance
+- text analytics
+
+---
+
+# Important Libraries for Economists
+
+| Library | Main Purpose |
+|----------|----------|
+| Pandas | Data management |
+| NumPy | Numerical computing |
+| Matplotlib | Basic visualizations |
+| Seaborn | Statistical graphics |
+| Plotly | Interactive dashboards |
+| Statsmodels | Econometrics |
+| Scikit-Learn | Machine learning |
+| NLTK | Text analytics |
+| Transformers | Modern AI models |
+
+---
+
+# What Is NumPy?
+
+NumPy is the foundation of numerical computing in Python.
+
+It provides:
+
+- arrays
+- mathematical functions
+- matrix operations
+- statistical calculations
+
+Many other libraries are built on top of NumPy.
+
+---
+
+# What Is Matplotlib?
+
+Matplotlib is used to create graphs.
+
+Examples:
+
+- line charts
+- bar charts
+- scatter plots
+- histograms
+
+We will begin using Matplotlib in future weeks.
+
+---
+
+# What Is Scikit-Learn?
+
+Scikit-Learn is one of the world's most popular machine learning libraries.
+
+It allows us to:
+
+- predict outcomes
+- classify observations
+- cluster data
+- evaluate models
+
+Later in the course we will use Scikit-Learn extensively.
+
+---
+
+# The Most Important Library for This Week
+
+For now, we focus on:
+
+```text
+Pandas
+```
+
+Pandas is the most important data analysis library in Python.
+
+---
+
+# 9. What Is Pandas?
+
+Pandas is a library designed specifically for working with datasets.
+
+Think about the software you already know.
+
+Pandas performs many tasks similar to:
+
+- Excel
+- Stata
+- SPSS
+
+However, it also allows automation and scalability.
+
+---
+
+# What Can Pandas Do?
+
+Pandas allows us to:
+
+- import datasets
+- clean data
+- rename variables
+- sort observations
+- filter observations
+- create new variables
+- merge datasets
+- reshape data
+- summarize information
+- prepare data for machine learning
+
+In practice:
+
+```text
+Most data analytics projects begin with Pandas.
+```
+
+---
+
+# Why Is It Called Pandas?
+
+The name comes from:
+
+```text
+Panel Data
+```
+
+and
+
+```text
+Python Data Analysis
+```
+
+The library was originally designed to make handling structured datasets easier.
+
+---
+
+# Importing Pandas
+
+Before using Pandas, we must import it.
+
+```python
+import pandas as pd
+```
+
+---
+
+# Understanding This Command
+
+```python
+import pandas as pd
+```
+
+means:
+
+```text
+Import the Pandas library
+and give it the shorter nickname "pd".
+```
+
+---
+
+# Why Use "pd"?
+
+Without an alias:
+
+```python
+pandas.DataFrame()
+```
+
+With an alias:
+
+```python
+pd.DataFrame()
+```
+
+The second option is shorter and easier to read.
+
+Almost every Python analyst uses:
+
+```python
+import pandas as pd
+```
+
+---
+
+# 10. What Is a DataFrame?
+
+A DataFrame is the most important object in Pandas.
+
+Think of a DataFrame as:
+
+```text
+A dataset inside Python.
+```
+
+---
+
+# DataFrame Analogy
+
+| Software | Dataset Object |
+|-----------|-----------|
+| Excel | Worksheet |
+| Stata | Dataset |
+| SPSS | Data File |
+| Pandas | DataFrame |
+
+---
+
+# Why DataFrames Matter
+
+Suppose you have:
+
+- 1000 people
+- 20 variables
+
+Storing them as individual lists would become difficult.
+
+Instead, we store everything inside one DataFrame.
+
+---
+
+# Creating Our First Dataset
+
+Let's create a small dataset manually.
+
+```python
+import pandas as pd
+
+data = pd.DataFrame({
+    "Year":[2020,2021,2022],
+    "Inflation":[4.6,6.0,46.4],
+    "GDP_Growth":[-3.6,3.7,-7.8]
+})
+
+data
+```
+
+---
+
+# Understanding What Happened
+
+We created:
+
+### Variable 1
+
+```python
+Year
+```
+
+### Variable 2
+
+```python
+Inflation
+```
+
+### Variable 3
+
+```python
+GDP_Growth
+```
+
+Each variable contains a list of observations.
+
+Pandas combines them into a dataset.
+
+---
+
+# Rows and Columns
+
+A DataFrame contains:
+
+### Rows
+
+```text
+Observations
+```
+
+### Columns
+
+```text
+Variables
+```
+
+Exactly as in econometrics.
+
+---
+
+# Economic Interpretation
+
+Observe:
 
 | Year | Inflation | GDP Growth |
-|---|---|---|
-| 2020 | 4.6 | -3.6 |
-| 2021 | 6.0 | 3.7 |
-| 2022 | 46.4 | -7.8 |
+|------|------|------|
+|2020|4.6|-3.6|
+|2021|6.0|3.7|
+|2022|46.4|-7.8|
+
+Question:
+
+```text
+What happened in 2022?
+```
+
+Students should immediately notice:
+
+- inflation increased sharply
+- growth became negative
+
+Notice:
+
+```text
+We are already doing analysis,
+not merely coding.
+```
 
 ---
 
-# Important Terminology
+# Creating a Labour Market Dataset
 
-| Term | Meaning |
-|---|---|
-| Row | One observation |
-| Column | One variable |
-| Observation | One unit of data |
-| Variable | Measured characteristic |
+Suppose we have:
+
+| Person | Age | Wage |
+|----------|----------|----------|
+| A | 25 | 45000 |
+| B | 35 | 65000 |
+| C | 50 | 90000 |
+
+Create it in Python:
+
+```python
+labour = pd.DataFrame({
+    "Age":[25,35,50],
+    "Monthly_Wage":[45000,65000,90000]
+})
+
+labour
+```
 
 ---
 
-# 11. What Is a CSV File?
+# Why This Is Powerful
+
+Imagine:
+
+Instead of:
+
+```text
+3 observations
+```
+
+you have:
+
+```text
+300,000 observations
+```
+
+The code changes very little.
+
+This scalability is one of the major advantages of Python.
+
+---
+
+# Viewing Variable Names
+
+Sometimes we forget variable names.
+
+Pandas can show them.
+
+```python
+labour.columns
+```
+
+Output:
+
+```text
+Age
+Monthly_Wage
+```
+
+---
+
+# Viewing Dataset Shape
+
+```python
+labour.shape
+```
+
+Output:
+
+```text
+(3,2)
+```
+
+Interpretation:
+
+```text
+3 observations
+2 variables
+```
+
+---
+
+# Why Shape Is Useful
+
+Before beginning analysis, analysts often ask:
+
+- How many observations?
+- How many variables?
+
+Shape immediately answers both questions.
+
+---
+
+# Activity 3
+
+Create a DataFrame containing:
+
+| District | Unemployment |
+|-----------|-----------|
+| Colombo | 4.5 |
+| Gampaha | 5.2 |
+| Kandy | 5.8 |
+| Matara | 6.4 |
+
+Call the DataFrame:
+
+```python
+district_data
+```
+
+Then:
+
+```python
+district_data.shape
+
+district_data.columns
+```
+
+---
+
+# Common Beginner Mistakes
+
+### Missing Comma
+
+Wrong:
+
+```python
+"Age":[25,35,50]
+"Monthly_Wage":[45000,65000,90000]
+```
+
+Correct:
+
+```python
+"Age":[25,35,50],
+"Monthly_Wage":[45000,65000,90000]
+```
+
+---
+
+### Unequal Length Lists
+
+Wrong:
+
+```python
+pd.DataFrame({
+"Age":[25,35,50],
+"Wage":[45000,65000]
+})
+```
+
+Every column must contain the same number of observations.
+
+---
+
+### Forgetting Pandas Import
+
+Wrong:
+
+```python
+pd.DataFrame()
+```
+
+without:
+
+```python
+import pandas as pd
+```
+
+Always import Pandas first.
+
+---
+
+# Transition to Part 3
+
+So far we have:
+
+- created variables
+- created lists
+- learned about libraries
+- learned about Pandas
+- created DataFrames manually
+
+However:
+
+```text
+Real analysts rarely create datasets manually.
+```
+
+Most datasets already exist in:
+
+- Excel files
+- CSV files
+- Stata files
+- SPSS files
+- databases
+
+In the next section we learn how to import and analyze real-world datasets, including the Labour Force Survey dataset provided for this course.
+
+
+# Part 3 — Working with Real Datasets
+
+---
+
+# 11. From Artificial Data to Real Data
+
+Until now we have created datasets manually.
+
+For example:
+
+```python
+data = pd.DataFrame({
+    "Age":[25,35,50],
+    "Monthly_Wage":[45000,65000,90000]
+})
+```
+
+Creating datasets manually is useful for learning.
+
+However, real analysts rarely create datasets from scratch.
+
+Instead, datasets are usually obtained from:
+
+- government agencies
+- firms
+- research institutions
+- surveys
+- censuses
+- administrative records
+- online platforms
+- international organizations
+
+Examples include:
+
+- Labour Force Survey
+- Household Income and Expenditure Survey
+- Census of Population and Housing
+- World Development Indicators
+- IMF Databases
+- Firm Sales Databases
+
+The first step in any data analytics project is therefore:
+
+```text
+Importing the data
+```
+
+---
+
+# 12. Common Data File Formats
+
+Data can be stored in many formats.
+
+As analysts, we should understand the most common file types.
+
+---
+
+# CSV Files
 
 CSV stands for:
 
 ```text
-Comma-Separated Values
+Comma Separated Values
 ```
-
-CSV files are one of the most common formats in economics and data science.
 
 Example:
 
@@ -378,99 +1382,544 @@ Example:
 Year,Inflation,GDP_Growth
 2020,4.6,-3.6
 2021,6.0,3.7
+2022,46.4,-7.8
 ```
 
----
+Advantages:
 
-# Why CSV Files Matter
+- simple
+- universal
+- lightweight
+- widely used
 
-CSV files:
+Disadvantages:
 
-- are lightweight
-- work across software
-- are easy to import
-- are widely used
-
----
-
-# 12. Your First Real Dataset
-
-This week we use a simple Sri Lankan macroeconomic dataset.
-
-Variables include:
-
-- year
-- inflation
-- GDP growth
-- unemployment
-- exchange rate
+- cannot store formatting
+- cannot store formulas
+- cannot store multiple sheets
 
 ---
 
-# Example Table
+# Excel Files
 
-| Year | Inflation | GDP_Growth | Exchange_Rate |
-|---|---|---|---|
-| 2020 | 4.6 | -3.6 | 185 |
-| 2021 | 6.0 | 3.7 | 200 |
-| 2022 | 46.4 | -7.8 | 360 |
+Extension:
+
+```text
+.xlsx
+```
+
+Examples:
+
+- financial reports
+- survey datasets
+- business records
+
+Advantages:
+
+- user friendly
+- supports multiple sheets
+- supports formulas
+
+Disadvantages:
+
+- large files become slow
+- less suitable for reproducible analysis
 
 ---
 
-# 13. Reading Data Using Pandas
+# Stata Files
 
-We use the pandas library to work with datasets.
+Extension:
+
+```text
+.dta
+```
+
+Common in:
+
+- economics
+- development economics
+- labour economics
+
+Advantages:
+
+- variable labels
+- value labels
+- survey settings
+
+Disadvantages:
+
+- requires specialized software
 
 ---
 
-# Import Pandas
+# SPSS Files
+
+Extension:
+
+```text
+.sav
+```
+
+Common in:
+
+- social sciences
+- psychology
+- survey research
+
+---
+
+# Other Formats
+
+Modern analysts also encounter:
+
+- JSON
+- Parquet
+- SQL databases
+- APIs
+- Cloud databases
+
+These will become increasingly important as datasets become larger.
+
+---
+
+# 13. Importing Data into Python
+
+The command depends on the file type.
+
+---
+
+# Importing a CSV File
 
 ```python
 import pandas as pd
+
+data = pd.read_csv("data.csv")
 ```
 
 ---
 
-# Read CSV File
+# Importing an Excel File
 
 ```python
-data = pd.read_csv("sri_lanka_macro.csv")
+import pandas as pd
+
+data = pd.read_excel("data.xlsx")
 ```
 
 ---
 
-# Display First Rows
+# Importing a Stata File
+
+```python
+import pandas as pd
+
+data = pd.read_stata("data.dta")
+```
+
+---
+
+# Importing an SPSS File
+
+```python
+import pandas as pd
+
+data = pd.read_spss("data.sav")
+```
+
+---
+
+# Important Observation
+
+Notice something interesting.
+
+Only one part changes:
+
+```python
+read_csv()
+
+read_excel()
+
+read_stata()
+
+read_spss()
+```
+
+Everything else remains the same.
+
+---
+
+# 14. Using Google Colab
+
+For this course we will primarily use:
+
+```text
+Google Colab
+```
+
+Why?
+
+Because:
+
+- it is free
+- no installation required
+- accessible from anywhere
+- integrates with Google Drive
+- widely used in education
+
+---
+
+# Uploading a Dataset in Colab
+
+There are two acceptable ways to use the dataset in Google Colab.
+
+---
+
+## Option 1 — Load the Dataset Directly from the Course Website
+
+Run:
+
+```python
+import pandas as pd
+
+dataset_url = "https://kanishkawerawella.github.io/ECN4199_Website/data/LFS_Hypothetical_Dataset.xlsx"
+
+data = pd.read_excel(dataset_url, sheet_name="LFS_Data")
+dictionary = pd.read_excel(dataset_url, sheet_name="Variable Dictionary")
+```
+
+---
+
+## Option 2 — Download and Upload the Dataset Manually
+
+Step 1
+
+Download the dataset from the Week 2 page:
+
+[Download LFS_Hypothetical_Dataset.xlsx](../data/LFS_Hypothetical_Dataset.xlsx)
+
+---
+
+Step 2
+
+Click:
+
+```text
+Folder Icon
+```
+
+on the left panel.
+
+---
+
+Step 3
+
+Click:
+
+```text
+Upload
+```
+
+---
+
+Step 4
+
+Select the dataset.
+
+---
+
+Step 5
+
+Observe the uploaded file.
+
+---
+
+Step 6
+
+Use:
+
+```python
+pd.read_excel()
+```
+
+or
+
+```python
+pd.read_csv()
+```
+
+to import the file.
+
+---
+
+# 15. Our Labour Force Survey Dataset
+
+This week we will work with a hypothetical Labour Force Survey dataset.
+
+The dataset contains:
+
+```text
+1000 individuals
+```
+
+and
+
+```text
+20 variables
+```
+
+Each row represents:
+
+```text
+One individual
+```
+
+Each column represents:
+
+```text
+One characteristic of that individual
+```
+
+---
+
+# Why This Dataset Matters
+
+This dataset resembles the type of information economists frequently work with.
+
+Examples include:
+
+- labour market analysis
+- gender analysis
+- wage analysis
+- education studies
+- employment research
+
+Throughout the semester we will repeatedly return to datasets like this.
+
+---
+
+# Loading the Dataset
+
+The file is called:
+
+```text
+LFS_Hypothetical_Dataset.xlsx
+```
+
+If you uploaded it manually, import the main data sheet using:
+
+```python
+import pandas as pd
+
+data = pd.read_excel("LFS_Hypothetical_Dataset.xlsx", sheet_name="LFS_Data")
+```
+
+Import the variable dictionary using:
+
+```python
+dictionary = pd.read_excel("LFS_Hypothetical_Dataset.xlsx", sheet_name="Variable Dictionary")
+```
+
+The variable dictionary explains the meaning, type, and coding of each column.
+
+---
+
+# Viewing the Variable Dictionary
+
+```python
+dictionary
+```
+
+Before doing analysis, students should check:
+
+- what each variable means
+- whether it is numerical or categorical
+- how values are coded
+- which variables are relevant for the research question
+
+---
+
+# 16. Looking at the Data
+
+The first thing an analyst should do is:
+
+```text
+Look at the dataset.
+```
+
+Never begin analysis blindly.
+
+---
+
+# Displaying First Observations
 
 ```python
 data.head()
 ```
 
-`head()` shows the first few rows of the dataset.
+Output:
+
+```text
+First 5 observations
+```
 
 ---
 
-# Display Dataset Information
+# Why Use head()?
+
+Imagine:
+
+```text
+100,000 observations
+```
+
+Printing the entire dataset would be impossible.
+
+Instead:
+
+```python
+data.head()
+```
+
+shows a preview.
+
+---
+
+# Displaying More Rows
+
+```python
+data.head(10)
+```
+
+shows:
+
+```text
+First 10 observations
+```
+
+---
+
+# Looking at the Last Observations
+
+```python
+data.tail()
+```
+
+This displays:
+
+```text
+Last 5 observations
+```
+
+---
+
+# Why tail() Matters
+
+Sometimes problems occur at the end of datasets.
+
+Examples:
+
+- missing values
+- duplicate records
+- data entry mistakes
+
+tail() helps identify such issues.
+
+---
+
+# 17. Understanding Dataset Dimensions
+
+A very important command:
+
+```python
+data.shape
+```
+
+Example output:
+
+```text
+(1000,20)
+```
+
+Interpretation:
+
+```text
+1000 observations
+
+20 variables
+```
+
+---
+
+# Why Shape Is Useful
+
+Before any analysis, analysts typically ask:
+
+- How many observations?
+- How many variables?
+
+shape answers both immediately.
+
+---
+
+# 18. Viewing Variable Names
+
+```python
+data.columns
+```
+
+This displays all variable names.
+
+---
+
+# Why Variable Names Matter
+
+Before analysis we need to know:
+
+- what variables exist
+- how they are coded
+- which variables are useful
+
+A good analyst always begins by understanding the variables.
+
+---
+
+# 19. Dataset Information
 
 ```python
 data.info()
 ```
 
-This shows:
+This command is extremely useful.
 
-- number of rows
-- columns
-- variable types
+It shows:
+
+- number of observations
+- variable names
+- data types
 - missing values
 
 ---
 
-# Summary Statistics
+# Why info() Matters
+
+Many problems can be identified immediately.
+
+Examples:
+
+- variables imported incorrectly
+- missing values
+- unexpected data types
+
+---
+
+# 20. Summary Statistics
 
 ```python
 data.describe()
 ```
 
-This calculates:
+This command generates:
 
 - mean
 - standard deviation
@@ -478,421 +1927,255 @@ This calculates:
 - maximum
 - quartiles
 
----
-
-# 14. Understanding Data Types
-
-Python stores different kinds of information differently.
+for numerical variables.
 
 ---
 
-# Common Data Types
+# Economic Interpretation
 
-| Type | Example |
-|---|---|
-| Integer | 5 |
-| Float | 5.2 |
-| String | "Sri Lanka" |
-| Boolean | True |
+Suppose the output reports:
+
+```text
+Mean Age = 38
+```
+
+Interpretation:
+
+```text
+The average individual in the sample is 38 years old.
+```
+
+Always interpret.
+
+Do not simply produce output.
 
 ---
 
-# Example
+# 21. Frequency Tables
+
+For categorical variables:
 
 ```python
-inflation = 46.4
-country = "Sri Lanka"
+data["Sex"].value_counts()
 ```
 
 ---
 
-# 15. Open the Week 2 Live Notebook
+# Why Frequency Tables Matter
 
-Replace the placeholder below with your actual notebook link.
+They tell us:
 
-[Open Week 2 Live Notebook — Save a Copy Before Editing](PASTE_WEEK2_COLAB_LINK_HERE)
+- how many males
+- how many females
 
----
-
-# 16. Download the Dataset
-
-Replace the placeholder below with your dataset link.
-
-[Download Sri Lanka Macro Dataset](PASTE_DATASET_LINK_HERE)
+are present in the dataset.
 
 ---
 
-# 17. Live Class Activity
-
-## Activity Title
-
-Opening and Exploring Our First Economic Dataset
-
----
-
-## Step 1
-
-Open the Week 2 notebook.
-
----
-
-## Step 2
-
-Import pandas.
+# Education Distribution
 
 ```python
-import pandas as pd
+data["Education_Level"].value_counts()
+```
+
+Questions:
+
+- Which education category is most common?
+- Which is least common?
+
+---
+
+# Employment Status Distribution
+
+```python
+data["Employment_Status"].value_counts()
+```
+
+Questions:
+
+- How many employed?
+- How many unemployed?
+- How many inactive?
+
+---
+
+# District Distribution
+
+```python
+data["District"].value_counts()
+```
+
+Question:
+
+```text
+Which district appears most frequently?
 ```
 
 ---
 
-## Step 3
+# 22. Mini Labour Market Investigation
 
-Upload dataset into Colab.
-
-Demonstrate:
-
-- clicking upload
-- selecting CSV file
-
----
-
-## Step 4
-
-Read dataset.
-
-```python
-data = pd.read_csv("sri_lanka_macro.csv")
-```
-
----
-
-## Step 5
-
-Display first rows.
-
-```python
-data.head()
-```
-
----
-
-## Step 6
-
-Inspect dataset.
-
-```python
-data.info()
-```
-
----
-
-## Step 7
-
-Generate summary statistics.
-
-```python
-data.describe()
-```
-
----
-
-## Step 8 — Discussion
-
-Ask students:
-
-- Which variable has the highest average value?
-- Which variable changed the most?
-- Are there missing values?
-- What does negative GDP growth mean?
-
----
-
-# 18. Self-Assessment Activity
-
-Students should complete the following tasks.
-
----
-
-## Task 1 — Import Pandas
-
-```python
-import pandas as pd
-```
-
----
-
-## Task 2 — Read Dataset
-
-```python
-data = pd.read_csv("sri_lanka_macro.csv")
-```
-
----
-
-## Task 3 — Display First 5 Rows
-
-```python
-data.head()
-```
-
----
-
-## Task 4 — Display Dataset Information
-
-```python
-data.info()
-```
-
----
-
-## Task 5 — Generate Summary Statistics
-
-```python
-data.describe()
-```
-
----
-
-## Task 6 — Interpretation Questions
+Using the dataset answer:
 
 ### Question 1
 
-Which year had the highest inflation?
+How many observations are in the dataset?
+
+---
 
 ### Question 2
 
-What happened to GDP growth in 2022?
+How many variables are available?
+
+---
 
 ### Question 3
 
-What happened to the exchange rate between 2021 and 2022?
+What is the average age?
 
 ---
 
-## Task 7 — Reflection
+### Question 4
 
-Write a short paragraph:
-
-```text
-What is the advantage of using Python instead of manually analysing data in Excel?
-```
+What is the average monthly wage?
 
 ---
 
-# 19. Mini Quiz
+### Question 5
 
-## Question 1
-
-What does CSV stand for?
-
-A. Central Statistical Variable  
-B. Comma-Separated Values  
-C. Computer Statistical Verification  
-D. Column Sorted Values  
-
-Correct answer: B
+What is the highest wage recorded?
 
 ---
 
-## Question 2
+### Question 6
 
-Which library is mainly used for data handling?
-
-A. matplotlib  
-B. numpy  
-C. pandas  
-D. sklearn  
-
-Correct answer: C
+Which education category appears most frequently?
 
 ---
 
-## Question 3
+### Question 7
 
-What does `head()` do?
-
-A. Deletes rows  
-B. Creates graphs  
-C. Displays first rows  
-D. Saves dataset  
-
-Correct answer: C
+Which district appears most frequently?
 
 ---
 
-## Question 4
+### Question 8
 
-Which command imports pandas?
-
-A.
-
-```python
-import pandas as pd
-```
-
-B.
-
-```python
-load pandas
-```
-
-C.
-
-```python
-pandas.open()
-```
-
-D.
-
-```python
-import data
-```
-
-Correct answer: A
+How many individuals have internet access?
 
 ---
 
-# 20. Interactive Mini Quiz
+### Question 9
 
-Run the following inside the notebook.
-
-```python
-answer = input("What does CSV stand for? A/B/C/D : ")
-
-if answer.upper() == "B":
-    print("Correct!")
-else:
-    print("Incorrect. CSV stands for Comma-Separated Values.")
-```
+What is the average number of unpaid care hours?
 
 ---
 
-# 21. Submission Instructions
+### Question 10
 
-Submit:
+What labour market insights can you identify?
 
-- completed notebook
-- answers to interpretation questions
-- short reflection paragraph
+Write at least three observations.
 
 ---
 
-# File Naming Convention
+# Activity 4
 
-```text
-Week2_YourName.ipynb
-```
+Work in pairs.
 
----
+Using the Labour Force Survey dataset:
 
-# Submission Link
-
-Replace placeholder below:
-
-[Submit Week 2 Work](PASTE_SUBMISSION_LINK_HERE)
-
----
-
-# 22. Common Errors
-
-## Problem 1 — File Not Found
-
-Error:
-
-```text
-FileNotFoundError
-```
-
-Possible causes:
-
-- dataset not uploaded
-- wrong filename
+1. Import the dataset.
+2. Display first 10 observations.
+3. Display last 10 observations.
+4. Check dimensions.
+5. Generate summary statistics.
+6. Produce frequency tables for:
+   - Sex
+   - Education
+   - Employment Status
+7. Write three labour market insights.
 
 ---
 
-## Problem 2 — Forgetting Quotes
+# Common Mistakes
+
+## Mistake 1
+
+File name typed incorrectly.
 
 Wrong:
 
 ```python
-pd.read_csv(sri_lanka_macro.csv)
+pd.read_excel("dataset")
 ```
 
 Correct:
 
 ```python
-pd.read_csv("sri_lanka_macro.csv")
+pd.read_excel("dataset.xlsx")
 ```
 
 ---
 
-## Problem 3 — Forgetting Import Statement
+## Mistake 2
+
+Dataset not uploaded.
+
+Always check the file appears in the Colab folder panel.
+
+---
+
+## Mistake 3
+
+Variable name typed incorrectly.
 
 Wrong:
 
 ```python
-data = pd.read_csv("file.csv")
+data["sex"]
 ```
-
-without importing pandas first.
 
 Correct:
 
 ```python
-import pandas as pd
+data["Sex"]
 ```
+
+Variable names are case-sensitive.
 
 ---
 
-## Problem 4 — Wrong File Path
+# Key Takeaways
 
-If dataset is inside another folder:
+By the end of Week 2 you should understand:
 
-```python
-pd.read_csv("datasets/sri_lanka_macro.csv")
-```
+- what data is
+- how Python stores data
+- what libraries are
+- why Pandas is important
+- what a DataFrame is
+- how to import datasets
+- how to explore datasets
+- how to generate basic descriptive statistics
+- how to interpret data analytically
 
----
+These skills form the foundation for everything we do in the remainder of the course.
 
-# 23. AI Reflection Question
-
-AI tools can summarize datasets and generate code.
-
-However:
-
-- AI can misunderstand datasets
-- AI may generate incorrect code
-- AI can produce weak interpretations
-
-Reflection question:
+In Week 3 we move from:
 
 ```text
-Why is human interpretation still necessary even when AI tools can analyze data?
+Understanding data
+```
+
+to:
+
+```text
+Cleaning and preparing data for analysis
 ```
 
 ---
 
-# 24. Key Takeaways
-
-By the end of Week 2, students should understand:
-
-- the difference between cloud and local computing
-- how to use Google Colab
-- how to use VS Code
-- how datasets are structured
-- how CSV files work
-- how to import datasets using pandas
-- how to inspect real-world data
-
----
-
-# 25. Before Week 3
-
-Before the next class, students should:
-
-- rerun all Week 2 code cells
-- practice importing datasets
-- organize folders properly
-- review common errors
-- complete submission
+*ECN 4199 — Industrial Data Analytics*  
+*Department of Economics*  
+*University of Colombo*

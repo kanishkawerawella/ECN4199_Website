@@ -2,11 +2,11 @@
 title: "Final Project"
 ---
 
-# ECN 4199 — Final Project
+# ECN 4199 — Final Group Project
 
 # Industrial Data Analytics Final Project
 
-The final project is the capstone component of:
+The Final Project is the capstone assessment component of:
 
 ```text
 ECN 4199 — Industrial Data Analytics
@@ -15,8 +15,42 @@ ECN 4199 — Industrial Data Analytics
 This project carries:
 
 ```text
-35 marks
+35 Marks
 ```
+
+and is designed to integrate the computational, analytical, and interpretive skills developed throughout the semester.
+
+---
+
+# Project Structure
+
+This is a:
+
+```text
+Group-Based Interdisciplinary Analytics Project
+```
+
+Each project group must consist of:
+
+```text
+3–4 students
+```
+
+Importantly, each group MUST include students from BOTH:
+
+- Finance and Banking (F & B) Stream
+- Transport Economics and Commercial Shipping (TECS) Stream
+
+The objective is to encourage interdisciplinary collaboration and exposure to different analytical and domain perspectives.
+
+Students are encouraged to form balanced teams with complementary strengths in:
+
+- economics
+- analytics
+- interpretation
+- visualization
+- communication
+- coding
 
 ---
 
@@ -48,6 +82,118 @@ think computationally about economic and business problems
 
 ---
 
+# Project Development Process
+
+Students are strongly advised to approach the project systematically rather than immediately attempting to build complex models.
+
+A strong analytics project typically progresses through the following stages.
+
+---
+
+## Stage 1 — Topic Selection
+
+Students should first identify:
+
+- an economic problem
+- business problem
+- policy issue
+- forecasting problem
+- behavioral pattern
+- or analytical question
+
+that is both:
+
+- meaningful
+- realistically achievable within the semester
+
+Students are encouraged to choose topics that genuinely interest them.
+
+---
+
+## Stage 2 — Preliminary Data Exploration
+
+Before finalizing the project, groups should:
+
+- identify possible datasets
+- inspect data quality
+- assess data availability
+- examine variable structure
+- evaluate feasibility
+
+Projects with unrealistic data requirements are discouraged.
+
+---
+
+## Stage 3 — Conceptual Note Submission
+
+Before:
+
+```text
+30.06.2026
+```
+
+each group must submit:
+
+- proposed project title
+- names and index numbers of all group members
+- one-page conceptual note
+
+through the LMS under:
+
+```text
+Final Project → Conceptual Note
+```
+
+The conceptual note should briefly explain:
+
+- proposed analytical question
+- motivation
+- proposed data source
+- possible analytical methods
+- expected contribution
+
+### LMS Submission Link
+
+[Submit Concept Note](https://lms.arts.cmb.ac.lk/mod/assign/view.php?id=91780)
+
+---
+
+## Stage 4 — Feasibility Discussion with Lecturer
+
+After submitting the conceptual note, each group must arrange a discussion with the lecturer regarding:
+
+- project feasibility
+- dataset suitability
+- analytical scope
+- technical complexity
+- realism of proposed methods
+
+Important:
+
+```text
+Contacting the lecturer and arranging the discussion is entirely the responsibility of the student group.
+```
+
+Failure to arrange this discussion may lead to poorly scoped or unrealistic projects.
+
+---
+
+## Stage 5 — Project Development
+
+Following approval and feedback, groups should proceed with:
+
+- data cleaning
+- exploratory analysis
+- visualization
+- modeling
+- interpretation
+- documentation
+- reproducibility checks
+
+Students are strongly encouraged to develop the project incrementally throughout the semester rather than postponing all work until the final weeks.
+
+---
+
 # Expected Project Components
 
 Each final project should contain the following sections.
@@ -64,13 +210,14 @@ The title should clearly reflect:
 
 ---
 
-# 2. Problem Statement
+# 2. Introduction and Motivation
 
 Students must clearly explain:
 
 - the analytical question
 - why the question matters
 - the economic/business relevance
+- the motivation behind the study
 - the objective of the project
 
 Weak example:
@@ -123,7 +270,7 @@ Students are expected to:
 - preprocess variables
 - document transformations
 
-Examples:
+Examples include:
 
 - removing missing values
 - converting date formats
@@ -162,7 +309,7 @@ Simply producing graphs without explanation is insufficient.
 
 Students should apply appropriate analytical techniques.
 
-Possible methods:
+Possible methods include:
 
 | Topic | Example Methods |
 |---|---|
@@ -228,7 +375,7 @@ Students must critically evaluate:
 
 Every project MUST contain a limitations section.
 
-Examples of limitations:
+Examples include:
 
 - small sample size
 - missing data
@@ -288,17 +435,46 @@ Professional analytics requires:
 
 ---
 
-# Deliverables
+# Submission Requirements
 
-Students must submit the following:
+Final project submissions must include ALL of the following components.
 
 | Item | Required |
 |---|---|
-| Final notebook (.ipynb) | Yes |
-| Project report | Yes |
-| Dataset(s) used | Yes |
+| Final Report (PDF) | Yes |
+| Python Notebook (.ipynb) | Yes |
+| Dataset(s) Used | Yes |
 | Visualizations | Yes |
-| Presentation slides | If required by lecturer |
+| AI Usage Declaration | Yes |
+
+---
+
+# Final Report Requirements
+
+The final written report must:
+
+- be professionally structured
+- clearly written
+- analytically rigorous
+- properly referenced
+
+The report should be approximately:
+
+```text
+4,000 words
+```
+
+excluding references and appendices.
+
+Students are encouraged to use:
+
+- tables
+- visualizations
+- figures
+- workflow diagrams
+- model summaries
+
+where appropriate.
 
 ---
 
@@ -306,42 +482,90 @@ Students must submit the following:
 
 Students must:
 
-1. Save notebook in Google Drive
-2. Set sharing to:
-
-```text
-Anyone with the link → Viewer
-```
-
-3. Submit the notebook link
-
----
-
-# Notebook Naming Convention
-
-Use:
-
-```text
-FinalProject_IndexNumber_Name.ipynb
-```
+1. Organize notebooks clearly
+2. Comment code properly
+3. Use readable variable names
+4. Ensure code runs correctly
+5. Maintain reproducibility
 
 Example:
 
-```text
-FinalProject_2024BA12345_Perera.ipynb
+```python
+# Load inflation dataset
+inflation = pd.read_csv("inflation.csv")
 ```
+
+Poorly documented notebooks will reduce marks.
 
 ---
 
-# Suggested Project Topics
+# Dataset Requirements
 
-Students may choose one of the following broad areas.
+All datasets used in the project must also be submitted.
+
+Datasets should be:
+
+- clearly labeled
+- organized properly
+- reproducible where possible
+
+Students must acknowledge all data sources properly.
+
+---
+
+# AI Usage Policy and Declaration
+
+Students are permitted to use AI tools such as:
+
+- ChatGPT
+- GitHub Copilot
+- Gemini
+- Claude
+- other generative AI systems
+
+for support purposes.
+
+However:
+
+- AI-generated outputs must be critically verified
+- students remain fully responsible for all submitted work
+- blind copying of AI-generated code or interpretation is unacceptable
+
+Importantly, all groups MUST explicitly acknowledge and document:
+
+- whether AI tools were used
+- which tools were used
+- how the tools were used
+
+Examples include:
+
+- code assistance
+- debugging
+- visualization support
+- brainstorming
+- writing assistance
+
+Students should include a brief:
+
+```text
+AI Usage Declaration
+```
+
+section within the final report.
+
+Failure to disclose substantial AI assistance may be treated as an academic integrity issue.
+
+---
+
+# Suggested Project Areas
+
+Students may choose projects from broad areas such as:
 
 ---
 
 ## 1. Macroeconomic Forecasting
 
-Possible projects:
+Examples:
 
 - inflation forecasting
 - exchange rate forecasting
@@ -352,7 +576,7 @@ Possible projects:
 
 ## 2. Labour Market Analytics
 
-Possible projects:
+Examples:
 
 - unemployment prediction
 - labour force participation analysis
@@ -363,7 +587,7 @@ Possible projects:
 
 ## 3. Business Analytics
 
-Possible projects:
+Examples:
 
 - customer segmentation
 - demand forecasting
@@ -374,7 +598,7 @@ Possible projects:
 
 ## 4. NLP and AI Projects
 
-Possible projects:
+Examples:
 
 - sentiment analysis of economic news
 - AI-assisted policy analysis
@@ -385,7 +609,7 @@ Possible projects:
 
 ## 5. Development and Policy Analytics
 
-Possible projects:
+Examples:
 
 - poverty prediction
 - welfare targeting systems
@@ -398,7 +622,7 @@ Possible projects:
 
 Choose a topic that:
 
-- genuinely interests you
+- genuinely interests your group
 - has available data
 - can be completed realistically within the semester
 - allows meaningful economic interpretation
@@ -476,6 +700,57 @@ Students are responsible for all submitted work.
 
 ---
 
+# Important Deadlines
+
+| Task | Deadline |
+|---|---|
+| Conceptual Note Submission | Before 30.06.2026 |
+| Lecturer Feasibility Discussion | After Conceptual Note Submission |
+| Final Project Submission | Before 14.08.2026 |
+
+---
+
+# Submission Procedure
+
+## Conceptual Note Submission
+
+Students must submit:
+
+- one-page conceptual note
+- proposed title
+- group member details
+
+through the LMS under:
+
+```text
+Final Project → Conceptual Note
+```
+
+---
+
+## Final Project Submission
+
+Final submissions must be uploaded to the LMS under:
+
+```text
+Final Project
+```
+
+The following items must be uploaded:
+
+- Final Report
+- Python Notebook
+- Dataset(s)
+- Supporting files if applicable
+
+---
+
+# LMS Submission Link
+
+[Submit Final Project](https://lms.arts.cmb.ac.lk/mod/assign/view.php?id=91779)
+
+---
+
 # Final Reflection
 
 The goal of this project is not merely to:
@@ -501,12 +776,6 @@ Strong projects combine:
 
 ---
 
-# Submission Link
-
-[Submit Final Project](PASTE_FINAL_PROJECT_SUBMISSION_LINK_HERE)
-
----
-
-# Deadlines
-
-Project deadlines and presentation schedules will be announced separately.
+*ECN 4199 — Industrial Data Analytics*  
+*Department of Economics*  
+*University of Colombo*
