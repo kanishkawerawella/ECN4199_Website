@@ -169,8 +169,8 @@ Copy the notebook URL and submit it through the relevant weekly submission link.
 
 | Week | Topic | Marks | Duration | Activity Link |
 |---|---|---:|---:|---|
-| Week 1 | Orientation and First Python Code | 5 | 1 hour | [Open Week 1 Activity](activities/week1_activity.qmd) |
-| Week 2 | Working with Data in Python using the LFS Dataset | 5 | 1 hour | [Open Week 2 Activity](activities/week2_activity.qmd) |
+| Week 1 | Orientation and First Python Code | 5 | 1 hour | [Open Week 1 Assignment](activities/week1_activity.qmd) |
+| Week 2 | Working with Data in Python using the LFS Dataset | 5 | 1 hour | [Open Week 2 Assignment](activities/week2_activity.qmd) |
 | Week 3 | Python Fundamentals and Computational Thinking | 5 | 1 hour | [Open Week 3 Assignment](activities/week3_activity.qmd) |
 <!--
 | Week 4 | Data Handling with Pandas | 5 | 1 hour | [Open Activity](activities/week4_activity.qmd) |

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 3 Assignment — Python Fundamentals – ECN 4199 - Industrial Data Analytics</title>
+<title>Week 3 Assignment — Programming Logic and Automation – ECN 4199 - Industrial Data Analytics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -163,74 +163,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-3-in-class-assignment" id="toc-week-3-in-class-assignment" class="nav-link active" data-scroll-target="#week-3-in-class-assignment">Week 3 — In-Class Assignment</a></li>
-  <li><a href="#ecn-4199-industrial-data-analytics" id="toc-ecn-4199-industrial-data-analytics" class="nav-link" data-scroll-target="#ecn-4199-industrial-data-analytics">ECN 4199 — Industrial Data Analytics</a></li>
-  <li><a href="#activity-information" id="toc-activity-information" class="nav-link" data-scroll-target="#activity-information">Activity Information</a></li>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
-  <li><a href="#required-material" id="toc-required-material" class="nav-link" data-scroll-target="#required-material">Required Material</a></li>
-  <li><a href="#important-reminder" id="toc-important-reminder" class="nav-link" data-scroll-target="#important-reminder">Important Reminder</a></li>
-  <li><a href="#task-1-variables-and-data-types" id="toc-task-1-variables-and-data-types" class="nav-link" data-scroll-target="#task-1-variables-and-data-types">Task 1 — Variables and Data Types</a>
+  <li><a href="#ecn-4199-industrial-data-analytics" id="toc-ecn-4199-industrial-data-analytics" class="nav-link active" data-scroll-target="#ecn-4199-industrial-data-analytics">ECN 4199 — Industrial Data Analytics</a></li>
+  <li><a href="#assignment-information" id="toc-assignment-information" class="nav-link" data-scroll-target="#assignment-information">Assignment Information</a></li>
+  <li><a href="#assignment-objective" id="toc-assignment-objective" class="nav-link" data-scroll-target="#assignment-objective">Assignment Objective</a></li>
+  <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link" data-scroll-target="#before-you-begin">Before You Begin</a></li>
+  <li><a href="#task-1-conditional-logic" id="toc-task-1-conditional-logic" class="nav-link" data-scroll-target="#task-1-conditional-logic">Task 1 — Conditional Logic</a>
   <ul class="collapse">
-  <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective">Objective</a></li>
-  <li><a href="#instructions-1" id="toc-instructions-1" class="nav-link" data-scroll-target="#instructions-1">Instructions</a></li>
-  <li><a href="#example-structure" id="toc-example-structure" class="nav-link" data-scroll-target="#example-structure">Example Structure</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
-  <ul class="collapse">
-  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#marks-1" id="toc-marks-1" class="nav-link" data-scroll-target="#marks-1">Marks: 1</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#task-2-lists-and-economic-data" id="toc-task-2-lists-and-economic-data" class="nav-link" data-scroll-target="#task-2-lists-and-economic-data">Task 2 — Lists and Economic Data</a>
+  <li><a href="#task-2-loop-and-stored-results" id="toc-task-2-loop-and-stored-results" class="nav-link" data-scroll-target="#task-2-loop-and-stored-results">Task 2 — Loop and Stored Results</a>
   <ul class="collapse">
-  <li><a href="#objective-1" id="toc-objective-1" class="nav-link" data-scroll-target="#objective-1">Objective</a></li>
-  <li><a href="#instructions-2" id="toc-instructions-2" class="nav-link" data-scroll-target="#instructions-2">Instructions</a></li>
-  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">Tasks</a></li>
-  <li><a href="#questions-1" id="toc-questions-1" class="nav-link" data-scroll-target="#questions-1">Questions</a>
-  <ul class="collapse">
-  <li><a href="#question-1-1" id="toc-question-1-1" class="nav-link" data-scroll-target="#question-1-1">Question 1</a></li>
-  <li><a href="#question-2-1" id="toc-question-2-1" class="nav-link" data-scroll-target="#question-2-1">Question 2</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#task-3-conditional-logic" id="toc-task-3-conditional-logic" class="nav-link" data-scroll-target="#task-3-conditional-logic">Task 3 — Conditional Logic</a>
-  <ul class="collapse">
-  <li><a href="#objective-2" id="toc-objective-2" class="nav-link" data-scroll-target="#objective-2">Objective</a></li>
-  <li><a href="#instructions-3" id="toc-instructions-3" class="nav-link" data-scroll-target="#instructions-3">Instructions</a></li>
-  <li><a href="#example-structure-1" id="toc-example-structure-1" class="nav-link" data-scroll-target="#example-structure-1">Example Structure</a></li>
+  <li><a href="#marks-1-1" id="toc-marks-1-1" class="nav-link" data-scroll-target="#marks-1-1">Marks: 1</a></li>
   <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question">Question</a></li>
   </ul></li>
-  <li><a href="#task-4-loops-and-automation" id="toc-task-4-loops-and-automation" class="nav-link" data-scroll-target="#task-4-loops-and-automation">Task 4 — Loops and Automation</a>
+  <li><a href="#task-3-reusable-percentage-change-function" id="toc-task-3-reusable-percentage-change-function" class="nav-link" data-scroll-target="#task-3-reusable-percentage-change-function">Task 3 — Reusable Percentage-Change Function</a>
   <ul class="collapse">
-  <li><a href="#objective-3" id="toc-objective-3" class="nav-link" data-scroll-target="#objective-3">Objective</a></li>
-  <li><a href="#instructions-4" id="toc-instructions-4" class="nav-link" data-scroll-target="#instructions-4">Instructions</a></li>
-  <li><a href="#example-structure-2" id="toc-example-structure-2" class="nav-link" data-scroll-target="#example-structure-2">Example Structure</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question</a></li>
+  <li><a href="#marks-1-2" id="toc-marks-1-2" class="nav-link" data-scroll-target="#marks-1-2">Marks: 1</a></li>
   </ul></li>
-  <li><a href="#task-5-functions-and-reusable-code" id="toc-task-5-functions-and-reusable-code" class="nav-link" data-scroll-target="#task-5-functions-and-reusable-code">Task 5 — Functions and Reusable Code</a>
+  <li><a href="#task-4-integrated-automation" id="toc-task-4-integrated-automation" class="nav-link" data-scroll-target="#task-4-integrated-automation">Task 4 — Integrated Automation</a>
   <ul class="collapse">
-  <li><a href="#objective-4" id="toc-objective-4" class="nav-link" data-scroll-target="#objective-4">Objective</a></li>
-  <li><a href="#instructions-5" id="toc-instructions-5" class="nav-link" data-scroll-target="#instructions-5">Instructions</a></li>
-  <li><a href="#example-structure-3" id="toc-example-structure-3" class="nav-link" data-scroll-target="#example-structure-3">Example Structure</a></li>
-  <li><a href="#apply-function-to" id="toc-apply-function-to" class="nav-link" data-scroll-target="#apply-function-to">Apply Function To</a></li>
-  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question</a></li>
+  <li><a href="#marks-1-3" id="toc-marks-1-3" class="nav-link" data-scroll-target="#marks-1-3">Marks: 1</a></li>
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question</a></li>
   </ul></li>
-  <li><a href="#reflection-question" id="toc-reflection-question" class="nav-link" data-scroll-target="#reflection-question">Reflection Question</a></li>
-  <li><a href="#mini-quiz" id="toc-mini-quiz" class="nav-link" data-scroll-target="#mini-quiz">Mini Quiz</a>
+  <li><a href="#task-5-debugging-and-ai-verification" id="toc-task-5-debugging-and-ai-verification" class="nav-link" data-scroll-target="#task-5-debugging-and-ai-verification">Task 5 — Debugging and AI Verification</a>
   <ul class="collapse">
-  <li><a href="#question-1-2" id="toc-question-1-2" class="nav-link" data-scroll-target="#question-1-2">Question 1</a></li>
-  <li><a href="#question-2-2" id="toc-question-2-2" class="nav-link" data-scroll-target="#question-2-2">Question 2</a></li>
-  <li><a href="#question-3-1" id="toc-question-3-1" class="nav-link" data-scroll-target="#question-3-1">Question 3</a></li>
-  <li><a href="#question-4-1" id="toc-question-4-1" class="nav-link" data-scroll-target="#question-4-1">Question 4</a></li>
+  <li><a href="#marks-1-4" id="toc-marks-1-4" class="nav-link" data-scroll-target="#marks-1-4">Marks: 1</a></li>
   </ul></li>
-  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">Submission Instructions</a></li>
-  <li><a href="#submission-link" id="toc-submission-link" class="nav-link" data-scroll-target="#submission-link">Submission Link</a></li>
+  <li><a href="#submission-checklist" id="toc-submission-checklist" class="nav-link" data-scroll-target="#submission-checklist">Submission Checklist</a></li>
   <li><a href="#mark-allocation" id="toc-mark-allocation" class="nav-link" data-scroll-target="#mark-allocation">Mark Allocation</a></li>
-  <li><a href="#passcode-access" id="toc-passcode-access" class="nav-link" data-scroll-target="#passcode-access">Passcode Access</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">Common Errors</a>
   <ul class="collapse">
-  <li><a href="#problem-1-indentation-errors" id="toc-problem-1-indentation-errors" class="nav-link" data-scroll-target="#problem-1-indentation-errors">Problem 1 — Indentation Errors</a></li>
-  <li><a href="#problem-2-forgetting-colon" id="toc-problem-2-forgetting-colon" class="nav-link" data-scroll-target="#problem-2-forgetting-colon">Problem 2 — Forgetting Colon</a></li>
-  <li><a href="#problem-3-confusing-and" id="toc-problem-3-confusing-and" class="nav-link" data-scroll-target="#problem-3-confusing-and">Problem 3 — Confusing = and ==</a></li>
-  <li><a href="#problem-4-undefined-variables" id="toc-problem-4-undefined-variables" class="nav-link" data-scroll-target="#problem-4-undefined-variables">Problem 4 — Undefined Variables</a></li>
+  <li><a href="#missing-colon" id="toc-missing-colon" class="nav-link" data-scroll-target="#missing-colon">Missing Colon</a></li>
+  <li><a href="#incorrect-indentation" id="toc-incorrect-indentation" class="nav-link" data-scroll-target="#incorrect-indentation">Incorrect Indentation</a></li>
+  <li><a href="#assignment-instead-of-comparison" id="toc-assignment-instead-of-comparison" class="nav-link" data-scroll-target="#assignment-instead-of-comparison">Assignment Instead of Comparison</a></li>
+  <li><a href="#forgetting-return" id="toc-forgetting-return" class="nav-link" data-scroll-target="#forgetting-return">Forgetting <code>return</code></a></li>
   </ul></li>
   <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity">Academic Integrity</a></li>
   </ul>
@@ -241,7 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 3 Assignment — Python Fundamentals</h1>
+<h1 class="title">Week 3 Assignment — Programming Logic and Automation</h1>
 </div>
 
 
@@ -258,15 +226,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="week-3-in-class-assignment" class="level1">
-<h1>Week 3 — In-Class Assignment</h1>
-</section>
 <section id="ecn-4199-industrial-data-analytics" class="level1">
 <h1>ECN 4199 — Industrial Data Analytics</h1>
 <hr>
 </section>
-<section id="activity-information" class="level1">
-<h1>Activity Information</h1>
+<section id="assignment-information" class="level1">
+<h1>Assignment Information</h1>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -281,7 +246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>Topic</td>
-<td>Python Fundamentals and Computational Thinking</td>
+<td>Programming Logic and Automation for Economic Analysis</td>
 </tr>
 <tr class="odd">
 <td>Marks</td>
@@ -292,10 +257,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>1 Hour</td>
 </tr>
 <tr class="odd">
+<td>Submission Format</td>
+<td>Google Colab notebook link</td>
+</tr>
+<tr class="even">
 <td>Attempts</td>
 <td>One Attempt Only</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Access</td>
 <td>Lecturer Passcode Required</td>
 </tr>
@@ -303,128 +272,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </table>
 <hr>
 </section>
-<section id="instructions" class="level1">
-<h1>Instructions</h1>
+<section id="assignment-objective" class="level1">
+<h1>Assignment Objective</h1>
+<p>This assignment evaluates whether students can translate economic rules into logical and reusable Python code.</p>
+<p>Students must demonstrate:</p>
+<ul>
+<li>conditional logic</li>
+<li>boundary testing</li>
+<li>loops</li>
+<li>functions</li>
+<li>integrated automation</li>
+<li>economic interpretation</li>
+<li>verification of AI-generated code</li>
+</ul>
+<p>Variables, data types, and lists are treated as prior knowledge from Weeks 1 and 2.</p>
+<hr>
+</section>
+<section id="before-you-begin" class="level1">
+<h1>Before You Begin</h1>
 <ol type="1">
 <li>Open the Week 3 live notebook.</li>
-<li>Save a copy to your Google Drive.</li>
-<li>Complete all required tasks.</li>
-<li>Answer all interpretation questions.</li>
-<li>Submit before the activity closes.</li>
+<li>Select:</li>
+</ol>
+<pre class="text"><code>File -&gt; Save a copy in Drive</code></pre>
+<ol start="3" type="1">
+<li>Rename the notebook:</li>
+</ol>
+<pre class="text"><code>Week03_IndexNumber_Name.ipynb</code></pre>
+<ol start="4" type="1">
+<li>Write your name and index number in the first Markdown cell.</li>
+<li>Run all completed code cells before submission.</li>
 </ol>
 <hr>
 </section>
-<section id="required-material" class="level1">
-<h1>Required Material</h1>
-<p><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week3/ECN4199_Week3_Live_Notebook.ipynb">Open Week 3 Live Notebook — Save a Copy Before Editing</a></p>
-<hr>
-</section>
-<section id="important-reminder" class="level1">
-<h1>Important Reminder</h1>
-<p>This activity tests:</p>
-<ul>
-<li>variables</li>
-<li>data types</li>
-<li>lists</li>
-<li>conditional logic</li>
-<li>loops</li>
-<li>functions</li>
-<li>computational reasoning</li>
-</ul>
-<p>The goal is NOT memorisation.</p>
-<p>The goal is to think computationally.</p>
-<hr>
-</section>
-<section id="task-1-variables-and-data-types" class="level1">
-<h1>Task 1 — Variables and Data Types</h1>
-<section id="objective" class="level2">
-<h2 class="anchored" data-anchor-id="objective">Objective</h2>
-<p>Create and understand variables.</p>
-<hr>
-</section>
-<section id="instructions-1" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-1">Instructions</h2>
-<p>Create variables for:</p>
-<ul>
-<li>inflation</li>
-<li>GDP growth</li>
-<li>exchange rate</li>
-<li>country name</li>
-</ul>
-<p>Use appropriate data types.</p>
-<hr>
-</section>
-<section id="example-structure" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> <span class="fl">46.4</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>country <span class="op">=</span> <span class="st">"Sri Lanka"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="questions" class="level2">
-<h2 class="anchored" data-anchor-id="questions">Questions</h2>
-<section id="question-1" class="level3">
-<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
-<p>What is the difference between:</p>
-<pre class="text"><code>integer</code></pre>
-<p>and</p>
-<pre class="text"><code>float</code></pre>
-<p>?</p>
-<hr>
-</section>
-<section id="question-2" class="level3">
-<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
-<p>Why are variables useful in economic analysis?</p>
-<hr>
-</section>
-</section>
-</section>
-<section id="task-2-lists-and-economic-data" class="level1">
-<h1>Task 2 — Lists and Economic Data</h1>
-<section id="objective-1" class="level2">
-<h2 class="anchored" data-anchor-id="objective-1">Objective</h2>
-<p>Store multiple observations using lists.</p>
-<hr>
-</section>
-<section id="instructions-2" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-2">Instructions</h2>
-<p>Create a list containing GDP growth rates for four years.</p>
-<p>Example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>gdp_growth <span class="op">=</span> [<span class="fl">3.5</span>, <span class="fl">5.2</span>, <span class="op">-</span><span class="fl">7.8</span>, <span class="fl">2.1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="tasks" class="level2">
-<h2 class="anchored" data-anchor-id="tasks">Tasks</h2>
-<p>Calculate:</p>
-<ul>
-<li>average GDP growth</li>
-<li>maximum GDP growth</li>
-<li>minimum GDP growth</li>
-</ul>
-<hr>
-</section>
-<section id="questions-1" class="level2">
-<h2 class="anchored" data-anchor-id="questions-1">Questions</h2>
-<section id="question-1-1" class="level3">
-<h3 class="anchored" data-anchor-id="question-1-1">Question 1</h3>
-<p>Which year appears to represent a recession?</p>
-</section>
-<section id="question-2-1" class="level3">
-<h3 class="anchored" data-anchor-id="question-2-1">Question 2</h3>
-<p>Why are lists useful for economists?</p>
-<hr>
-</section>
-</section>
-</section>
-<section id="task-3-conditional-logic" class="level1">
-<h1>Task 3 — Conditional Logic</h1>
-<section id="objective-2" class="level2">
-<h2 class="anchored" data-anchor-id="objective-2">Objective</h2>
-<p>Use Python to automate classification.</p>
-<hr>
-</section>
-<section id="instructions-3" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-3">Instructions</h2>
-<p>Write conditional logic using the following rules:</p>
+<section id="task-1-conditional-logic" class="level1">
+<h1>Task 1 — Conditional Logic</h1>
+<section id="marks-1" class="level2">
+<h2 class="anchored" data-anchor-id="marks-1">Marks: 1</h2>
+<p>Write a function called:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>classify_inflation(inflation)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use these rules:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -438,7 +325,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>Low inflation</td>
 </tr>
 <tr class="even">
-<td>Between 5 and 15</td>
+<td>5 to 15, inclusive</td>
 <td>Moderate inflation</td>
 </tr>
 <tr class="odd">
@@ -447,152 +334,166 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+<p>Your function must return the classification.</p>
+<p>Test it using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>test_rates <span class="op">=</span> [<span class="fl">4.9</span>, <span class="dv">5</span>, <span class="dv">12</span>, <span class="dv">15</span>, <span class="fl">15.1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<ol type="1">
+<li>How is exactly <code>5</code> classified?</li>
+<li>How is exactly <code>15</code> classified?</li>
+<li>Why should boundary values be tested?</li>
+</ol>
 <hr>
 </section>
-<section id="example-structure-1" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure-1">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> <span class="dv">12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
+</section>
+<section id="task-2-loop-and-stored-results" class="level1">
+<h1>Task 2 — Loop and Stored Results</h1>
+<section id="marks-1-1" class="level2">
+<h2 class="anchored" data-anchor-id="marks-1-1">Marks: 1</h2>
+<p>Use:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>gdp_growth_rates <span class="op">=</span> [<span class="fl">3.5</span>, <span class="fl">5.2</span>, <span class="op">-</span><span class="fl">7.8</span>, <span class="fl">2.1</span>, <span class="op">-</span><span class="fl">1.4</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Create an empty list called:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>growth_categories</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use a loop to classify each value:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>GDP Growth</th>
+<th>Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Below 0</td>
+<td>Recession</td>
+</tr>
+<tr class="even">
+<td>0 to below 3</td>
+<td>Slow growth</td>
+</tr>
+<tr class="odd">
+<td>3 or above</td>
+<td>Strong growth</td>
+</tr>
+</tbody>
+</table>
+<p>Store each classification in <code>growth_categories</code>.</p>
+<p>Print both the growth value and its classification.</p>
 </section>
 <section id="question" class="level2">
 <h2 class="anchored" data-anchor-id="question">Question</h2>
-<p>Why is conditional logic important in economics and policy analysis?</p>
+<p>Why is saving results in a list more useful than only printing them?</p>
 <hr>
 </section>
 </section>
-<section id="task-4-loops-and-automation" class="level1">
-<h1>Task 4 — Loops and Automation</h1>
-<section id="objective-3" class="level2">
-<h2 class="anchored" data-anchor-id="objective-3">Objective</h2>
-<p>Automate repetitive tasks.</p>
-<hr>
-</section>
-<section id="instructions-4" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-4">Instructions</h2>
-<p>Create a loop that checks each GDP growth value.</p>
-<p>Rules:</p>
-<ul>
-<li>positive value → “Positive growth”</li>
-<li>negative value → “Recession year”</li>
-</ul>
-<hr>
-</section>
-<section id="example-structure-2" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure-2">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> growth <span class="kw">in</span> gdp_growth:</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question</h2>
-<p>Why are loops important when working with large datasets?</p>
-<hr>
-</section>
-</section>
-<section id="task-5-functions-and-reusable-code" class="level1">
-<h1>Task 5 — Functions and Reusable Code</h1>
-<section id="objective-4" class="level2">
-<h2 class="anchored" data-anchor-id="objective-4">Objective</h2>
-<p>Create reusable analytical tools.</p>
-<hr>
-</section>
-<section id="instructions-5" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-5">Instructions</h2>
-<p>Create a function that calculates percentage change.</p>
-<p>Formula:</p>
-<pre class="text"><code>[(new - old) / old] × 100</code></pre>
-<hr>
-</section>
-<section id="example-structure-3" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure-3">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> growth_rate(old, new):</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="apply-function-to" class="level2">
-<h2 class="anchored" data-anchor-id="apply-function-to">Apply Function To</h2>
-<ul>
-<li>GDP</li>
-<li>CPI</li>
-<li>exchange rate</li>
-</ul>
-<hr>
-</section>
-<section id="question-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-4">Question</h2>
-<p>Why do professional programmers use functions instead of rewriting code repeatedly?</p>
+<section id="task-3-reusable-percentage-change-function" class="level1">
+<h1>Task 3 — Reusable Percentage-Change Function</h1>
+<section id="marks-1-2" class="level2">
+<h2 class="anchored" data-anchor-id="marks-1-2">Marks: 1</h2>
+<p>Create:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>percentage_change(old_value, new_value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use:</p>
+<pre class="text"><code>[(new value - old value) / old value] × 100</code></pre>
+<p>Apply the function to:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Indicator</th>
+<th style="text-align: right;">Old Value</th>
+<th style="text-align: right;">New Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GDP</td>
+<td style="text-align: right;">5000</td>
+<td style="text-align: right;">5400</td>
+</tr>
+<tr class="even">
+<td>CPI</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">240</td>
+</tr>
+<tr class="odd">
+<td>LKR per USD exchange rate</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">330</td>
+</tr>
+</tbody>
+</table>
+<p>Round each result to two decimal places.</p>
+<p>Write one sentence interpreting each result.</p>
 <hr>
 </section>
 </section>
-<section id="reflection-question" class="level1">
-<h1>Reflection Question</h1>
-<p>Write a short paragraph answering:</p>
-<pre class="text"><code>Why should economists understand programming logic even when AI tools can generate code automatically?</code></pre>
-<p>Your answer should include:</p>
-<ul>
-<li>verification</li>
-<li>interpretation</li>
-<li>logical reasoning</li>
-<li>limitations of AI-generated code</li>
-</ul>
-<hr>
-</section>
-<section id="mini-quiz" class="level1">
-<h1>Mini Quiz</h1>
-<section id="question-1-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-1-2">Question 1</h2>
-<p>Which data type stores decimal values?</p>
-<p>A. Integer<br>
-B. Float<br>
-C. String<br>
-D. Boolean</p>
-<hr>
-</section>
-<section id="question-2-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2-2">Question 2</h2>
-<p>What does a loop mainly do?</p>
-<p>A. Deletes variables<br>
-B. Repeats tasks<br>
-C. Creates graphs<br>
-D. Saves files</p>
-<hr>
-</section>
-<section id="question-3-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-3-1">Question 3</h2>
-<p>What does <code>len()</code> do?</p>
-<p>A. Creates variables<br>
-B. Measures internet speed<br>
-C. Counts items<br>
-D. Imports libraries</p>
-<hr>
-</section>
-<section id="question-4-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-4-1">Question 4</h2>
-<p>What is the purpose of a function?</p>
-<p>A. Repeat reusable logic<br>
-B. Delete datasets<br>
-C. Install Python<br>
-D. Upload files</p>
-<hr>
-</section>
-</section>
-<section id="submission-instructions" class="level1">
-<h1>Submission Instructions</h1>
-<p>Before submitting:</p>
+<section id="task-4-integrated-automation" class="level1">
+<h1>Task 4 — Integrated Automation</h1>
+<section id="marks-1-3" class="level2">
+<h2 class="anchored" data-anchor-id="marks-1-3">Marks: 1</h2>
+<p>Use:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>indicators <span class="op">=</span> [<span class="st">"GDP"</span>, <span class="st">"CPI"</span>, <span class="st">"Exchange rate"</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>old_values <span class="op">=</span> [<span class="dv">5000</span>, <span class="dv">200</span>, <span class="dv">300</span>]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>new_values <span class="op">=</span> [<span class="dv">5400</span>, <span class="dv">240</span>, <span class="dv">330</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Write a loop using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">zip</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For each indicator:</p>
 <ol type="1">
-<li>Save notebook properly.</li>
-<li>Rename notebook using:</li>
+<li>calculate percentage change using your function</li>
+<li>print the indicator name</li>
+<li>print the rounded result</li>
+<li>print a short interpretation label</li>
 </ol>
-<pre class="text"><code>Week03_IndexNumber_Name.ipynb</code></pre>
-<p>Example:</p>
-<pre class="text"><code>Week03_2024BA12345_Perera.ipynb</code></pre>
-<ol start="3" type="1">
-<li>Set notebook sharing to:</li>
-</ol>
-<pre class="text"><code>Anyone with the link → Viewer</code></pre>
+<p>Suggested labels:</p>
+<ul>
+<li>GDP: <code>"Economic growth"</code></li>
+<li>CPI: <code>"Inflation"</code></li>
+<li>Exchange rate: <code>"Currency depreciation"</code></li>
+</ul>
+</section>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question</h2>
+<p>What parts of this workflow are automated, and what parts still require economic judgement?</p>
 <hr>
 </section>
-<section id="submission-link" class="level1">
-<h1>Submission Link</h1>
-<p>Submit the completed notebook through the Week 3 activity in the University LMS.</p>
+</section>
+<section id="task-5-debugging-and-ai-verification" class="level1">
+<h1>Task 5 — Debugging and AI Verification</h1>
+<section id="marks-1-4" class="level2">
+<h2 class="anchored" data-anchor-id="marks-1-4">Marks: 1</h2>
+<p>An AI tool generated:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classify_inflation(inflation):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> inflation <span class="op">&lt;</span> <span class="dv">15</span>:</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Low inflation"</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> inflation <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Moderate inflation"</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"High inflation"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Complete all of the following:</p>
+<ol type="1">
+<li>Identify the logical error.</li>
+<li>Explain why <code>"Moderate inflation"</code> can never be returned.</li>
+<li>Correct the function.</li>
+<li>Test the corrected function using <code>4.9</code>, <code>5</code>, <code>15</code>, and <code>15.1</code>.</li>
+<li>In 80–120 words, explain why economists must verify AI-generated code.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="submission-checklist" class="level1">
+<h1>Submission Checklist</h1>
+<p>Before submitting, confirm that:</p>
+<ul>
+<li>all five tasks are complete</li>
+<li>every code cell has been run</li>
+<li>output is visible</li>
+<li>interpretations are written in Markdown cells</li>
+<li>boundary tests are included</li>
+<li>the notebook name is correct</li>
+<li>sharing access is set to:</li>
+</ul>
+<pre class="text"><code>Anyone with the link -&gt; Viewer</code></pre>
 <hr>
 </section>
 <section id="mark-allocation" class="level1">
@@ -606,23 +507,23 @@ D. Upload files</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Variables, data types, and list calculations</td>
+<td>Conditional logic and boundary testing</td>
 <td style="text-align: right;">1.0</td>
 </tr>
 <tr class="even">
-<td>Conditional logic</td>
+<td>Loop and stored classifications</td>
 <td style="text-align: right;">1.0</td>
 </tr>
 <tr class="odd">
-<td>Loop and automation task</td>
+<td>Percentage-change function and interpretation</td>
 <td style="text-align: right;">1.0</td>
 </tr>
 <tr class="even">
-<td>Reusable percentage-change function</td>
+<td>Integrated automation workflow</td>
 <td style="text-align: right;">1.0</td>
 </tr>
 <tr class="odd">
-<td>Interpretation, notebook naming, and correct sharing access</td>
+<td>Debugging and AI verification</td>
 <td style="text-align: right;">1.0</td>
 </tr>
 <tr class="even">
@@ -633,54 +534,54 @@ D. Upload files</p>
 </table>
 <hr>
 </section>
-<section id="passcode-access" class="level1">
-<h1>Passcode Access</h1>
-<p>The lecturer will provide the passcode during the lecture.</p>
-<p>Students without the correct passcode cannot access the submission form.</p>
+<section id="submission" class="level1">
+<h1>Submission</h1>
+<p>Submit the completed Google Colab notebook link through the Week 3 activity in the University LMS.</p>
+<p><a href="https://lms.arts.cmb.ac.lk/mod/assign/view.php?id=92317">Submit Week 2 Assignment</a></p>
 <hr>
 </section>
 <section id="common-errors" class="level1">
 <h1>Common Errors</h1>
-<section id="problem-1-indentation-errors" class="level2">
-<h2 class="anchored" data-anchor-id="problem-1-indentation-errors">Problem 1 — Indentation Errors</h2>
+<section id="missing-colon" class="level2">
+<h2 class="anchored" data-anchor-id="missing-colon">Missing Colon</h2>
 <p>Wrong:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span>:</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"High inflation"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&lt;</span> <span class="dv">5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Correct:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span>:</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"High inflation"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&lt;</span> <span class="dv">5</span>:</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="problem-2-forgetting-colon" class="level2">
-<h2 class="anchored" data-anchor-id="problem-2-forgetting-colon">Problem 2 — Forgetting Colon</h2>
+<section id="incorrect-indentation" class="level2">
+<h2 class="anchored" data-anchor-id="incorrect-indentation">Incorrect Indentation</h2>
 <p>Wrong:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> growth <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Recession"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Correct:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span>:</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> growth <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Recession"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="problem-3-confusing-and" class="level2">
-<h2 class="anchored" data-anchor-id="problem-3-confusing-and">Problem 3 — Confusing = and ==</h2>
-<p><code>=</code> assigns value.</p>
-<p><code>==</code> checks equality.</p>
-<hr>
+<section id="assignment-instead-of-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="assignment-instead-of-comparison">Assignment Instead of Comparison</h2>
+<p>Wrong:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> status <span class="op">=</span> <span class="st">"Employed"</span>:</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Correct:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> status <span class="op">==</span> <span class="st">"Employed"</span>:</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="problem-4-undefined-variables" class="level2">
-<h2 class="anchored" data-anchor-id="problem-4-undefined-variables">Problem 4 — Undefined Variables</h2>
-<p>Using variables before creating them.</p>
+<section id="forgetting-return" class="level2">
+<h2 class="anchored" data-anchor-id="forgetting-return">Forgetting <code>return</code></h2>
+<p>A function must return a result if that result will be reused.</p>
 <hr>
 </section>
 </section>
 <section id="academic-integrity" class="level1">
 <h1>Academic Integrity</h1>
-<p>Students may use lecture materials and course notes.</p>
+<p>Students may use lecture materials and AI tools for support.</p>
 <p>However:</p>
 <ul>
-<li>copied answers are not allowed</li>
-<li>copied notebooks are not allowed</li>
-<li>AI-generated answers without understanding are unacceptable</li>
+<li>copied notebooks are not permitted</li>
+<li>students must explain all submitted code</li>
+<li>AI-generated code must be tested and verified</li>
+<li>interpretations must be written in the student’s own words</li>
 </ul>
-<p>Students are responsible for all submitted work.</p>
+<p>Students are responsible for the correctness of all submitted work.</p>
 
 
 </section>

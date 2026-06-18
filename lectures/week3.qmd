@@ -1,390 +1,290 @@
 ---
-title: "Week 3 — Python Fundamentals for Economic Analysis"
+title: "Week 3 — Programming Logic and Automation for Economic Analysis"
 ---
 
-# Week 3 — Python Fundamentals: Thinking Computationally as an Economist
+In Week 1, we learned how to run Python code and perform economic calculations.
 
-Weeks 1 and 2 focused on:
+In Week 2, we learned how data are organized and how to import and inspect a real dataset.
 
-- removing fear
-- understanding workflow
-- setting up tools
-- loading data
-
-This week is different.
-
-This is the week students stop behaving like:
+Week 3 moves from:
 
 ```text
-users of software
+running individual commands
 ```
 
-and start behaving like:
+to:
 
 ```text
-people who instruct computers
+designing logical and reusable analytical workflows
 ```
 
-That transition matters enormously.
+The central question is:
+
+> How can economists translate rules, classifications, and repeated calculations into instructions that a computer can execute?
 
 ---
 
-# 1. Learning Objectives
+# 1. Learning Outcomes
 
 By the end of this week, students should be able to:
 
-- create variables
-- understand data types
-- work with lists
-- use conditional logic
-- automate repetition using loops
+- describe an economic problem as inputs, rules, processes, and outputs
+- use comparison and logical operators
+- write `if`, `elif`, and `else` statements
+- test boundary values and check whether a rule behaves correctly
+- process several observations using loops
 - create reusable functions
-- structure economic problems computationally
+- combine conditions, loops, and functions
+- identify and correct common Python errors
+- interpret automated analytical outputs
+- evaluate AI-generated code critically
 
 ---
 
-# 2. Thinking Like a Computational Economist
+# 2. Two-Hour Learning Plan
 
-Programming is not only about code.
-
-Programming is about structured thinking.
-
-Economists constantly ask questions like:
-
-- If inflation increases, what happens to real wages?
-- If income falls below the poverty line, who becomes poor?
-- If exports decline for several years, what patterns emerge?
-- How can repetitive calculations be automated?
-
-Computers require explicit instructions.
-
-Programming teaches us how to:
-
-- break problems into steps
-- organize logic clearly
-- automate analysis
-- reduce human error
+| Time | Section | Main Focus |
+|---|---|---|
+| 0–10 minutes | Diagnostic recap | Variables, lists, and DataFrames |
+| 10–25 minutes | Computational thinking | Input, rule, process, and output |
+| 25–50 minutes | Conditional logic | Comparisons, `if`, `elif`, and `else` |
+| 50–75 minutes | Loops | Applying rules to several observations |
+| 75–100 minutes | Functions | Reusable economic calculations |
+| 100–115 minutes | Integrated application | Conditions, loops, functions, and LFS data |
+| 115–120 minutes | Summary | Debugging, AI verification, and assignment |
 
 ---
 
-# 3. Variables
+# 3. Open the Week 3 Live Notebook
 
-A variable stores information.
+[Open Week 3 Live Notebook — Save a Copy Before Editing](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week3/ECN4199_Week3_Live_Notebook.ipynb)
 
-Example:
-
-```python
-inflation = 46.4
-```
-
-Here:
-
-- `inflation` is the variable name
-- `46.4` is the stored value
-
----
-
-# Rules for Naming Variables
-
-Good examples:
-
-```python
-gdp_growth
-exchange_rate
-inflation_2024
-```
-
-Bad examples:
-
-```python
-1inflation
-exchange-rate
-my variable
-```
-
-Readable code matters.
-
----
-
-# Why Variables Matter
-
-Without variables:
-
-```python
-((120 - 100) / 100) * 100
-```
-
-is difficult to interpret.
-
-With variables:
-
-```python
-old_price = 100
-new_price = 120
-
-inflation = ((new_price - old_price) / old_price) * 100
-```
-
-the meaning becomes clearer.
-
----
-
-# 4. Data Types
-
-Different kinds of information are stored differently.
-
----
-
-# Integer
-
-Whole numbers:
-
-```python
-population = 22
-```
-
----
-
-# Float
-
-Decimal numbers:
-
-```python
-inflation = 46.4
-```
-
----
-
-# String
-
-Text values:
-
-```python
-country = "Sri Lanka"
-```
-
----
-
-# Checking Data Type
-
-```python
-type(inflation)
-```
-
-Expected output:
+Inside Google Colab:
 
 ```text
-float
+File -> Save a copy in Drive
 ```
 
----
-
-# Example
-
-```python
-gdp_growth = 5.2
-country_name = "Sri Lanka"
-year = 2025
-
-print(type(gdp_growth))
-print(type(country_name))
-print(type(year))
-```
-
----
-
-# 5. Lists and Collections of Data
-
-Lists allow us to store multiple values together.
-
-Example:
-
-```python
-inflation_rates = [4.6, 6.0, 46.4]
-```
-
----
-
-# Why Lists Matter
-
-Economists often work with:
-
-- multiple years
-- multiple countries
-- multiple households
-- multiple firms
-
-Lists help organize repeated information.
-
----
-
-# Accessing List Elements
-
-```python
-inflation_rates[0]
-```
-
-Output:
+Rename your copy:
 
 ```text
-4.6
+Week03_IndexNumber_Name.ipynb
 ```
 
 ---
 
-# Important Idea
+# 4. Diagnostic Recap
 
-Python counting starts from zero.
+Variables, data types, and lists were introduced in Weeks 1 and 2.
 
-| Position | Value |
-|---|---|
-| 0 | 4.6 |
-| 1 | 6.0 |
-| 2 | 46.4 |
-
----
-
-# Length of List
+Complete this diagnostic without copying an example:
 
 ```python
-len(inflation_rates)
-```
+growth_rates = [3.5, 5.2, -7.8, 2.1]
 
-Expected output:
-
-```text
-3
-```
-
----
-
-# Adding Values to Lists
-
-```python
-inflation_rates.append(12.5)
-```
-
----
-
-# Example
-
-```python
-inflation_rates = [4.6, 6.0, 46.4]
-
-print(inflation_rates)
-
-inflation_rates.append(12.5)
-
-print(inflation_rates)
-```
-
----
-
-# 6. Economic Calculations Using Lists
-
-Suppose we have GDP growth rates over several years.
-
-```python
-gdp_growth = [3.5, 5.2, -7.8, 2.1]
-```
-
----
-
-# Average GDP Growth
-
-```python
-average_growth = sum(gdp_growth) / len(gdp_growth)
+average_growth = sum(growth_rates) / len(growth_rates)
+lowest_growth = min(growth_rates)
 
 print(average_growth)
+print(lowest_growth)
 ```
 
+## Check Your Understanding
+
+1. What type of object is `growth_rates`?
+2. Which value indicates a recession?
+3. Why is the average not enough to describe the full period?
+
+The purpose of this recap is to confirm the foundation, not reteach it.
+
 ---
 
-# Interpretation
+# 5. Computational Thinking
 
-This calculates the average GDP growth over the period.
+Programming is structured problem solving.
 
----
+A useful computational model is:
 
-# Another Example
-
-```python
-exports = [100, 120, 150, 130]
-
-maximum_exports = max(exports)
-
-print(maximum_exports)
+```text
+Input -> Rule -> Process -> Output
 ```
 
----
+## Economic Example: Inflation Classification
 
-# Important Functions
-
-| Function | Purpose |
+| Component | Example |
 |---|---|
-| `sum()` | Adds values |
-| `len()` | Counts items |
-| `max()` | Largest value |
-| `min()` | Smallest value |
+| Input | Inflation rate |
+| Rule | Below 5 is low; 5–15 is moderate; above 15 is high |
+| Process | Compare the observed rate with each threshold |
+| Output | Inflation classification |
+
+Before writing code, an analyst should be able to explain the rule clearly in words.
 
 ---
 
-# 7. Conditional Statements
+# 6. From Economic Reasoning to Explicit Rules
 
-Conditional statements allow Python to make decisions.
+Economists regularly use rules such as:
 
-This is one of the most important ideas in programming.
+- income below a poverty line indicates monetary poverty
+- negative GDP growth indicates economic contraction
+- unemployment requires being without work and actively seeking work
+- inflation above a target may require policy attention
+- a loan applicant may be classified according to several risk indicators
+
+A computer does not understand the economic meaning automatically.
+
+It follows only the exact rules that we specify.
+
+Therefore:
+
+```text
+unclear rule -> unreliable code -> misleading conclusion
+```
 
 ---
 
-# Example: Inflation Classification
+# 7. Comparison Operators
+
+Comparison operators produce either:
+
+```text
+True
+```
+
+or:
+
+```text
+False
+```
+
+| Operator | Meaning | Example |
+|---|---|---|
+| `>` | Greater than | `inflation > 10` |
+| `<` | Less than | `income < poverty_line` |
+| `>=` | Greater than or equal to | `age >= 15` |
+| `<=` | Less than or equal to | `inflation <= 5` |
+| `==` | Equal to | `status == "Unemployed"` |
+| `!=` | Not equal to | `sector != "Urban"` |
+
+## Try It
 
 ```python
 inflation = 12
 
-if inflation > 10:
-    print("High inflation")
+print(inflation > 10)
+print(inflation < 5)
+print(inflation == 12)
 ```
 
 ---
 
-# Interpretation
+# 8. Logical Operators
 
-Python checks:
+Sometimes one condition is not enough.
 
-```text
-Is inflation greater than 10?
-```
+| Operator | Meaning |
+|---|---|
+| `and` | Both conditions must be true |
+| `or` | At least one condition must be true |
+| `not` | Reverses a condition |
 
-If yes:
-
-```text
-Display "High inflation"
-```
-
----
-
-# Using Else
+## Example: Labour Force Classification
 
 ```python
-inflation = 6
+has_job = False
+seeking_work = True
 
-if inflation > 10:
-    print("High inflation")
+if not has_job and seeking_work:
+    print("Unemployed")
+```
+
+## Example: Policy Alert
+
+```python
+inflation = 18
+growth = -2
+
+if inflation > 15 or growth < 0:
+    print("Macroeconomic policy attention required")
+```
+
+---
+
+# 9. Conditional Statements
+
+Conditional statements allow Python to make rule-based decisions.
+
+The basic structure is:
+
+```python
+if condition:
+    action
+elif another_condition:
+    another_action
 else:
-    print("Moderate inflation")
+    final_action
 ```
+
+Python evaluates the conditions from top to bottom.
 
 ---
 
-# Using Elif
+# 10. Inflation Classification
 
 ```python
-inflation = 25
+inflation = 12
 
 if inflation < 5:
+    classification = "Low inflation"
+elif inflation <= 15:
+    classification = "Moderate inflation"
+else:
+    classification = "High inflation"
+
+print(classification)
+```
+
+## Interpretation
+
+The value `12` is:
+
+- not below `5`
+- less than or equal to `15`
+
+Therefore, Python returns:
+
+```text
+Moderate inflation
+```
+
+---
+
+# 11. Why the Order of Conditions Matters
+
+Consider this incorrect structure:
+
+```python
+inflation = 3
+
+if inflation <= 15:
+    print("Moderate inflation")
+elif inflation < 5:
     print("Low inflation")
-elif inflation < 15:
+else:
+    print("High inflation")
+```
+
+The first condition is already true when inflation is `3`.
+
+Python never reaches the second condition.
+
+The narrower condition should be checked first:
+
+```python
+if inflation < 5:
+    print("Low inflation")
+elif inflation <= 15:
     print("Moderate inflation")
 else:
     print("High inflation")
@@ -392,427 +292,308 @@ else:
 
 ---
 
-# Economics Example: Poverty Classification
+# 12. Testing Boundary Values
+
+Analysts should test the values where classifications change.
+
+For the inflation rule, test:
+
+```python
+test_rates = [4.9, 5, 15, 15.1]
+```
+
+Ask:
+
+- How should exactly `5` be classified?
+- How should exactly `15` be classified?
+- Does the written policy rule agree with the code?
+
+Boundary testing is an important part of verification.
+
+---
+
+# 13. Economic Example: Poverty Classification
 
 ```python
 income = 12000
 poverty_line = 15000
 
 if income < poverty_line:
-    print("Poor household")
+    poverty_status = "Below poverty line"
 else:
-    print("Non-poor household")
+    poverty_status = "At or above poverty line"
+
+print(poverty_status)
 ```
 
+## Critical Note
+
+This is a simplified monetary classification.
+
+Real poverty analysis may also consider:
+
+- household size
+- cost-of-living differences
+- access to education and health
+- housing conditions
+- multidimensional deprivation
+
+Code can automate a rule, but the analyst must evaluate whether the rule is appropriate.
+
 ---
 
-# 8. Decision-Making with Python
+# 14. Loops and Automation
 
-Economics often involves classification.
-
-Examples:
-
-- poor vs non-poor
-- employed vs unemployed
-- inflationary vs stable economy
-- high-risk vs low-risk borrower
-
-Conditional logic allows us to automate these classifications.
-
----
-
-# Example: Exchange Rate Warning
+A loop applies an operation repeatedly.
 
 ```python
-exchange_rate_change = 18
+growth_rates = [3.5, 5.2, -7.8, 2.1]
 
-if exchange_rate_change > 15:
-    print("Large depreciation detected")
-else:
-    print("Exchange rate relatively stable")
+for growth in growth_rates:
+    print(growth)
 ```
 
----
-
-# 9. Loops and Repetition
-
-Loops allow us to repeat tasks automatically.
-
-This is extremely important in data analysis.
-
-Without loops, repetitive work becomes exhausting.
+Python takes one value at a time and temporarily assigns it to `growth`.
 
 ---
 
-# Example
+# 15. Applying a Rule to Several Observations
 
 ```python
-inflation_rates = [4.6, 6.0, 46.4]
+growth_rates = [3.5, 5.2, -7.8, 2.1]
 
-for rate in inflation_rates:
-    print(rate)
-```
-
----
-
-# Interpretation
-
-Python:
-
-- takes each value
-- stores it temporarily as `rate`
-- prints it
-- repeats until the list ends
-
----
-
-# Another Example
-
-```python
-gdp_growth = [3.5, 5.2, -7.8, 2.1]
-
-for growth in gdp_growth:
-    
+for growth in growth_rates:
     if growth < 0:
-        print("Recession year")
+        print(growth, "Recession")
+    elif growth < 3:
+        print(growth, "Slow growth")
     else:
-        print("Positive growth")
+        print(growth, "Strong growth")
 ```
 
----
+This combines:
 
-# Why Loops Matter
-
-Loops are essential for:
-
-- handling large datasets
-- repetitive calculations
-- automation
-- machine learning workflows
+- a list
+- a loop
+- conditional logic
+- classification
 
 ---
 
-# 10. Functions
+# 16. Storing Results
 
-Functions allow us to create reusable code.
-
-This is critical in professional programming.
-
----
-
-# Example Function
+Printing is useful for learning, but analysts often need to save results.
 
 ```python
-def calculate_growth(old_value, new_value):
+growth_rates = [3.5, 5.2, -7.8, 2.1]
+classifications = []
 
-    growth_rate = ((new_value - old_value) / old_value) * 100
+for growth in growth_rates:
+    if growth < 0:
+        label = "Recession"
+    elif growth < 3:
+        label = "Slow growth"
+    else:
+        label = "Strong growth"
 
-    return growth_rate
+    classifications.append(label)
+
+print(classifications)
 ```
+
+The output can now be reused later.
 
 ---
 
-# Using the Function
+# 17. Connecting to the Week 2 LFS Dataset
+
+In Week 2, the Labour Force Survey dataset was stored in a DataFrame called:
 
 ```python
-result = calculate_growth(100, 120)
-
-print(result)
+data
 ```
 
-Expected output:
+Select the first ten employment-status values:
+
+```python
+statuses = list(data["Employment_Status"].head(10))
+```
+
+Apply a rule:
+
+```python
+for status in statuses:
+    if status == "Employed":
+        print("Currently employed")
+    elif status == "Unemployed":
+        print("Without work and seeking employment")
+    else:
+        print("Outside the labour force")
+```
+
+## Important Distinction
+
+Loops are valuable for learning programming logic.
+
+For large DataFrames, later lessons will introduce more efficient pandas methods.
+
+---
+
+# 18. Functions and Reusable Analysis
+
+A function packages logic into a reusable tool.
 
 ```text
-20.0
+Input -> Calculation -> Returned result
 ```
 
----
-
-# Why Functions Matter
-
-Functions:
-
-- reduce repetition
-- improve readability
-- improve organization
-- reduce errors
-
----
-
-# Economic Example: Inflation Function
+Basic structure:
 
 ```python
-def inflation_rate(old_cpi, new_cpi):
-
-    inflation = ((new_cpi - old_cpi) / old_cpi) * 100
-
-    return inflation
+def function_name(input_value):
+    result = calculation
+    return result
 ```
 
 ---
 
-# Using the Function
+# 19. Percentage-Change Function
 
 ```python
-rate = inflation_rate(200, 240)
+def percentage_change(old_value, new_value):
+    change = ((new_value - old_value) / old_value) * 100
+    return change
+```
 
-print(rate)
+Apply it:
+
+```python
+gdp_change = percentage_change(5000, 5400)
+inflation = percentage_change(200, 240)
+exchange_rate_change = percentage_change(300, 330)
+
+print(gdp_change)
+print(inflation)
+print(exchange_rate_change)
+```
+
+The same verified formula is reused for several economic indicators.
+
+---
+
+# 20. Interpretation Still Depends on Context
+
+The function calculates percentage change.
+
+It does not automatically know the economic meaning.
+
+| Application | Positive Result May Mean |
+|---|---|
+| GDP | Economic growth |
+| CPI | Inflation |
+| LKR per USD exchange rate | Currency depreciation |
+
+The same mathematical output can require different economic interpretation.
+
+---
+
+# 21. Classification Function
+
+```python
+def classify_growth(growth):
+    if growth < 0:
+        return "Recession"
+    elif growth < 3:
+        return "Slow growth"
+    else:
+        return "Strong growth"
+```
+
+Use the function:
+
+```python
+print(classify_growth(-7.8))
+print(classify_growth(2.1))
+print(classify_growth(5.2))
 ```
 
 ---
 
-# 11. Open the Week 3 Live Notebook
+# 22. Integrated Workflow
 
-[Open Week 3 Live Notebook — Save a Copy Before Editing](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week3/ECN4199_Week3_Live_Notebook.ipynb)
+Combine a list, loop, and function:
 
-Inside Google Colab, select:
+```python
+growth_rates = [3.5, 5.2, -7.8, 2.1]
+
+for growth in growth_rates:
+    category = classify_growth(growth)
+    print(growth, category)
+```
+
+The workflow is:
 
 ```text
-File -> Save a copy in Drive
+several inputs -> repeated function call -> classification output
 ```
-
-Complete all lecture examples in your own saved copy.
 
 ---
 
-# 12. Live Coding Session
+# 23. Integrated Economic Exercise
 
-## Step 1 — Create Variables
+You are given:
 
 ```python
-gdp_2023 = 5000
-gdp_2024 = 5400
+old_values = [5000, 200, 300]
+new_values = [5400, 240, 330]
+indicators = ["GDP", "CPI", "Exchange rate"]
 ```
 
----
-
-## Step 2 — Calculate Growth
+Use a loop and the `percentage_change()` function:
 
 ```python
-gdp_growth = ((gdp_2024 - gdp_2023) / gdp_2023) * 100
-
-print(gdp_growth)
+for indicator, old, new in zip(indicators, old_values, new_values):
+    change = percentage_change(old, new)
+    print(indicator, round(change, 2))
 ```
+
+Then interpret:
+
+- GDP growth
+- inflation
+- currency depreciation
 
 ---
 
-## Step 3 — Create List of Inflation Rates
+# 24. Debugging as Analytical Practice
+
+Debugging means identifying and correcting problems.
+
+It is not evidence of failure.
+
+It is part of computational analysis.
+
+---
+
+# 25. Common Error: Missing Colon
+
+Wrong:
 
 ```python
-inflation_rates = [4.6, 6.0, 46.4, 12.5]
+if inflation > 10
+    print("High inflation")
 ```
 
----
-
-## Step 4 — Calculate Average Inflation
+Correct:
 
 ```python
-average_inflation = sum(inflation_rates) / len(inflation_rates)
-
-print(average_inflation)
+if inflation > 10:
+    print("High inflation")
 ```
 
 ---
 
-## Step 5 — Use Conditional Logic
-
-```python
-if average_inflation > 10:
-    print("Inflation problem detected")
-else:
-    print("Inflation relatively stable")
-```
-
----
-
-## Step 6 — Create Loop
-
-```python
-for rate in inflation_rates:
-    print(rate)
-```
-
----
-
-## Step 7 — Create Reusable Function
-
-```python
-def growth_rate(old, new):
-
-    growth = ((new - old) / old) * 100
-
-    return growth
-```
-
----
-
-## Step 8 — Test Function
-
-```python
-growth_rate(200, 250)
-```
-
----
-
-# 13. Interactive Mini Quiz
-
-Run the following inside the notebook.
-
----
-
-## Question 1
-
-```python
-answer = input("What is a variable? A/B/C/D : ")
-
-if answer.upper() == "B":
-    print("Correct! A variable stores information.")
-else:
-    print("Incorrect.")
-```
-
----
-
-## Question 2
-
-```python
-answer = input("Which symbol means greater than? ")
-
-if answer == ">":
-    print("Correct!")
-else:
-    print("Incorrect.")
-```
-
----
-
-## Question 3
-
-```python
-answer = input("What does a loop do? A/B/C/D : ")
-
-if answer.upper() == "B":
-    print("Correct! Loops repeat tasks.")
-else:
-    print("Incorrect.")
-```
-
----
-
-# 14. Self-Assessment Activity
-
-Students should complete the following tasks.
-
----
-
-## Task 1 — Create Variables
-
-Create variables for:
-
-- exports
-- imports
-- exchange rate
-
-Print all values.
-
----
-
-## Task 2 — Create GDP Growth List
-
-Create a list of GDP growth rates.
-
-Calculate:
-
-- average growth
-- maximum growth
-- minimum growth
-
----
-
-## Task 3 — Inflation Classification
-
-Write conditional logic:
-
-- inflation below 5 → “Low inflation”
-- inflation between 5 and 15 → “Moderate inflation”
-- inflation above 15 → “High inflation”
-
----
-
-## Task 4 — Loop Exercise
-
-Create a loop that prints:
-
-```text
-Positive growth
-```
-
-or
-
-```text
-Negative growth
-```
-
-for each GDP growth value.
-
----
-
-## Task 5 — Create Function
-
-Create a reusable function that calculates percentage change.
-
-Formula:
-
-```text
-[(new - old) / old] × 100
-```
-
----
-
-## Task 6 — Apply Function
-
-Apply your function to:
-
-- GDP
-- CPI
-- exchange rate
-
-Interpret each result.
-
----
-
-# 15. Submission Instructions
-
-Submit notebook including:
-
-- variables
-- list calculations
-- conditional statements
-- loops
-- reusable functions
-- written interpretations
-
----
-
-# File Naming Convention
-
-```text
-Week3_YourName.ipynb
-```
-
----
-
-# Submission Link
-
-[Open the Week 3 Assignment](../activities/week3_activity.qmd)
-
-Submit the completed notebook through the Week 3 activity in the University LMS.
-
----
-
-# 16. Common Errors
-
-## Problem 1 — Indentation Errors
+# 26. Common Error: Incorrect Indentation
 
 Wrong:
 
@@ -828,111 +609,184 @@ if inflation > 10:
     print("High inflation")
 ```
 
-Indentation matters in Python.
+Indentation defines the structure of Python code.
 
 ---
 
-## Problem 2 — Forgetting Colon
+# 27. Common Error: Assignment vs Equality
 
-Wrong:
+Assignment:
 
 ```python
-if inflation > 10
+status = "Employed"
 ```
+
+Equality test:
+
+```python
+status == "Employed"
+```
+
+`=` stores a value.
+
+`==` compares two values.
+
+---
+
+# 28. Common Error: Forgetting `return`
+
+Incorrect:
+
+```python
+def percentage_change(old_value, new_value):
+    change = ((new_value - old_value) / old_value) * 100
+```
+
+The calculation occurs, but the result is not returned.
 
 Correct:
 
 ```python
-if inflation > 10:
+def percentage_change(old_value, new_value):
+    change = ((new_value - old_value) / old_value) * 100
+    return change
 ```
 
 ---
 
-## Problem 3 — Confusing = and ==
+# 29. A Simple Debugging Checklist
 
-`=` assigns value.
+When code fails:
 
-Example:
-
-```python
-inflation = 12
-```
-
-`==` checks equality.
-
-Example:
-
-```python
-inflation == 12
-```
+1. Read the complete error message.
+2. Identify the line where the error occurred.
+3. Check spelling and capitalization.
+4. Check brackets, quotation marks, and colons.
+5. Check indentation.
+6. Confirm that variables were defined.
+7. Test the smallest possible example.
+8. Compare the output with the economic rule.
 
 ---
 
-## Problem 4 — Forgetting Parentheses
+# 30. Responsible Use of AI
 
-Wrong:
+AI tools can:
 
-```python
-print
-```
+- explain an error message
+- suggest alternative code
+- generate test cases
+- add comments
+- help compare two approaches
 
-Correct:
+AI tools can also:
 
-```python
-print()
-```
-
----
-
-## Problem 5 — Undefined Variables
-
-Wrong:
-
-```python
-print(gdp_growth)
-```
-
-before defining variable.
+- use the wrong economic definition
+- generate incorrect thresholds
+- overlook boundary cases
+- invent variable names
+- produce code that runs but answers the wrong question
 
 ---
 
-# 17. AI Reflection Question
+# 31. How to Verify AI-Generated Code
 
-AI can generate Python code.
+Before accepting AI-generated code:
 
-However:
+1. Explain the rule in your own words.
+2. Check every variable and threshold.
+3. Test normal values.
+4. Test boundary values.
+5. Test unusual or invalid values.
+6. compare the output with economic reasoning.
+7. Rewrite any explanation in your own words.
 
-- AI may generate incorrect logic
-- AI may misunderstand economic concepts
-- AI may produce inefficient code
-
-Reflection question:
+The standard is:
 
 ```text
-Why should economists understand programming logic even when AI tools can generate code automatically?
+Do not submit code that you cannot explain.
 ```
 
 ---
 
-# 18. Key Takeaways
+# 32. Deliberately Flawed AI Example
 
-By the end of Week 3, students should understand:
+```python
+def classify_inflation(inflation):
+    if inflation < 15:
+        return "Low"
+    elif inflation < 5:
+        return "Moderate"
+    else:
+        return "High"
+```
 
-- how variables store information
-- how lists organize data
-- how conditional statements automate decisions
-- how loops automate repetition
-- how functions create reusable code
-- how computational thinking supports economics
+Discuss:
+
+1. Why can `"Moderate"` never be returned?
+2. How should the conditions be reordered?
+3. Which boundary values should be tested?
+4. Does the code match the stated economic rule?
 
 ---
 
-# 19. Before Week 4
+# 33. In-Class Practice
 
-Before next week, students should:
+Complete these tasks in the live notebook:
 
-- rerun all Week 3 code
-- practice loops and functions
-- debug at least one error themselves
-- complete self-assessment
-- submit notebook
+1. Classify inflation using `if`, `elif`, and `else`.
+2. Test the values `4.9`, `5`, `15`, and `15.1`.
+3. Loop through four GDP growth rates.
+4. Store the growth classifications in a new list.
+5. Create a percentage-change function.
+6. Apply it to GDP, CPI, and exchange-rate values.
+7. Write one sentence interpreting each result.
+8. Correct the deliberately flawed AI example.
+
+---
+
+# 34. Week 3 Assignment
+
+[Open the Week 3 Assignment](../activities/week3_activity.qmd)
+
+The assignment evaluates:
+
+- conditional logic
+- loops
+- functions
+- integrated automation
+- interpretation and AI verification
+
+Submit the completed notebook through the Week 3 activity in the University LMS.
+
+---
+
+# 35. Key Takeaways
+
+By the end of Week 3, students should understand that:
+
+- programming logic converts economic rules into explicit instructions
+- conditions automate decisions
+- loops apply rules repeatedly
+- functions make calculations reusable
+- correct code still requires economic interpretation
+- debugging and testing are part of analytical work
+- AI-generated code must be verified
+
+---
+
+# 36. Before Week 4
+
+Before the next class:
+
+- rerun every Week 3 code cell
+- test at least four boundary values
+- create one original classification function
+- correct at least one error without copying a solution
+- complete and submit the Week 3 assignment
+
+---
+
+*ECN 4199 — Industrial Data Analytics*  
+*Department of Economics*  
+*University of Colombo*
