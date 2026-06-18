@@ -10,13 +10,13 @@ This course is organized into two major learning phases.
 
 # Phase I — Foundations of Computational Economics
 
-## Week 1 — Digital Course Orientation and Computational Thinking
+## Week 1 — Orientation: Python, AI, and Data Analytics
 [Open Week 1 Lecture Material](lectures/week1.qmd)
 
-## Week 2 — Python Fundamentals for Economic Analysis
+## Week 2 — Working with Data in Python
 [Open Week 2 Lecture Material](lectures/week2.qmd)
 
-## Week 3 — Data Structures and Data Handling
+## Week 3 — Programming Logic and Automation for Economic Analysis
 [Open Week 3 Lecture Material](lectures/week3.qmd)
 
 <!--
