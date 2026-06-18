@@ -1,129 +1,311 @@
 [
   {
-    "objectID": "activities/week2_activity.html",
-    "href": "activities/week2_activity.html",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week3_activity.html#objective",
+    "href": "activities/week3_activity.html#objective",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Objective",
+    "text": "Objective\nCreate and understand variables."
+  },
+  {
+    "objectID": "activities/week3_activity.html#instructions-1",
+    "href": "activities/week3_activity.html#instructions-1",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Instructions",
+    "text": "Instructions\nCreate variables for:\n\ninflation\nGDP growth\nexchange rate\ncountry name\n\nUse appropriate data types."
+  },
+  {
+    "objectID": "activities/week3_activity.html#example-structure",
+    "href": "activities/week3_activity.html#example-structure",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Example Structure",
+    "text": "Example Structure\ninflation = 46.4\ncountry = \"Sri Lanka\""
+  },
+  {
+    "objectID": "activities/week3_activity.html#questions",
+    "href": "activities/week3_activity.html#questions",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhat is the difference between:\ninteger\nand\nfloat\n?\n\n\n\nQuestion 2\nWhy are variables useful in economic analysis?"
+  },
+  {
+    "objectID": "activities/week3_activity.html#objective-1",
+    "href": "activities/week3_activity.html#objective-1",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Objective",
+    "text": "Objective\nStore multiple observations using lists."
+  },
+  {
+    "objectID": "activities/week3_activity.html#instructions-2",
+    "href": "activities/week3_activity.html#instructions-2",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Instructions",
+    "text": "Instructions\nCreate a list containing GDP growth rates for four years.\nExample:\ngdp_growth = [3.5, 5.2, -7.8, 2.1]"
+  },
+  {
+    "objectID": "activities/week3_activity.html#tasks",
+    "href": "activities/week3_activity.html#tasks",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Tasks",
+    "text": "Tasks\nCalculate:\n\naverage GDP growth\nmaximum GDP growth\nminimum GDP growth"
+  },
+  {
+    "objectID": "activities/week3_activity.html#questions-1",
+    "href": "activities/week3_activity.html#questions-1",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhich year appears to represent a recession?\n\n\nQuestion 2\nWhy are lists useful for economists?"
+  },
+  {
+    "objectID": "activities/week3_activity.html#objective-2",
+    "href": "activities/week3_activity.html#objective-2",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Objective",
+    "text": "Objective\nUse Python to automate classification."
+  },
+  {
+    "objectID": "activities/week3_activity.html#instructions-3",
+    "href": "activities/week3_activity.html#instructions-3",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Instructions",
+    "text": "Instructions\nWrite conditional logic using the following rules:\n\n\n\nInflation Rate\nClassification\n\n\n\n\nBelow 5\nLow inflation\n\n\nBetween 5 and 15\nModerate inflation\n\n\nAbove 15\nHigh inflation"
+  },
+  {
+    "objectID": "activities/week3_activity.html#example-structure-1",
+    "href": "activities/week3_activity.html#example-structure-1",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Example Structure",
+    "text": "Example Structure\ninflation = 12"
+  },
+  {
+    "objectID": "activities/week3_activity.html#question",
+    "href": "activities/week3_activity.html#question",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Question",
+    "text": "Question\nWhy is conditional logic important in economics and policy analysis?"
+  },
+  {
+    "objectID": "activities/week3_activity.html#objective-3",
+    "href": "activities/week3_activity.html#objective-3",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Objective",
+    "text": "Objective\nAutomate repetitive tasks."
+  },
+  {
+    "objectID": "activities/week3_activity.html#instructions-4",
+    "href": "activities/week3_activity.html#instructions-4",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Instructions",
+    "text": "Instructions\nCreate a loop that checks each GDP growth value.\nRules:\n\npositive value → “Positive growth”\nnegative value → “Recession year”"
+  },
+  {
+    "objectID": "activities/week3_activity.html#example-structure-2",
+    "href": "activities/week3_activity.html#example-structure-2",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Example Structure",
+    "text": "Example Structure\nfor growth in gdp_growth:"
+  },
+  {
+    "objectID": "activities/week3_activity.html#question-3",
+    "href": "activities/week3_activity.html#question-3",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Question",
+    "text": "Question\nWhy are loops important when working with large datasets?"
+  },
+  {
+    "objectID": "activities/week3_activity.html#objective-4",
+    "href": "activities/week3_activity.html#objective-4",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Objective",
+    "text": "Objective\nCreate reusable analytical tools."
+  },
+  {
+    "objectID": "activities/week3_activity.html#instructions-5",
+    "href": "activities/week3_activity.html#instructions-5",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Instructions",
+    "text": "Instructions\nCreate a function that calculates percentage change.\nFormula:\n[(new - old) / old] × 100"
+  },
+  {
+    "objectID": "activities/week3_activity.html#example-structure-3",
+    "href": "activities/week3_activity.html#example-structure-3",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Example Structure",
+    "text": "Example Structure\ndef growth_rate(old, new):"
+  },
+  {
+    "objectID": "activities/week3_activity.html#apply-function-to",
+    "href": "activities/week3_activity.html#apply-function-to",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Apply Function To",
+    "text": "Apply Function To\n\nGDP\nCPI\nexchange rate"
+  },
+  {
+    "objectID": "activities/week3_activity.html#question-4",
+    "href": "activities/week3_activity.html#question-4",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Question",
+    "text": "Question\nWhy do professional programmers use functions instead of rewriting code repeatedly?"
+  },
+  {
+    "objectID": "activities/week3_activity.html#question-1-2",
+    "href": "activities/week3_activity.html#question-1-2",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Question 1",
+    "text": "Question 1\nWhich data type stores decimal values?\nA. Integer\nB. Float\nC. String\nD. Boolean"
+  },
+  {
+    "objectID": "activities/week3_activity.html#question-2-2",
+    "href": "activities/week3_activity.html#question-2-2",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Question 2",
+    "text": "Question 2\nWhat does a loop mainly do?\nA. Deletes variables\nB. Repeats tasks\nC. Creates graphs\nD. Saves files"
+  },
+  {
+    "objectID": "activities/week3_activity.html#question-3-1",
+    "href": "activities/week3_activity.html#question-3-1",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Question 3",
+    "text": "Question 3\nWhat does len() do?\nA. Creates variables\nB. Measures internet speed\nC. Counts items\nD. Imports libraries"
+  },
+  {
+    "objectID": "activities/week3_activity.html#question-4-1",
+    "href": "activities/week3_activity.html#question-4-1",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Question 4",
+    "text": "Question 4\nWhat is the purpose of a function?\nA. Repeat reusable logic\nB. Delete datasets\nC. Install Python\nD. Upload files"
+  },
+  {
+    "objectID": "activities/week3_activity.html#problem-1-indentation-errors",
+    "href": "activities/week3_activity.html#problem-1-indentation-errors",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Problem 1 — Indentation Errors",
+    "text": "Problem 1 — Indentation Errors\nWrong:\nif inflation &gt; 10:\nprint(\"High inflation\")\nCorrect:\nif inflation &gt; 10:\n    print(\"High inflation\")"
+  },
+  {
+    "objectID": "activities/week3_activity.html#problem-2-forgetting-colon",
+    "href": "activities/week3_activity.html#problem-2-forgetting-colon",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Problem 2 — Forgetting Colon",
+    "text": "Problem 2 — Forgetting Colon\nWrong:\nif inflation &gt; 10\nCorrect:\nif inflation &gt; 10:"
+  },
+  {
+    "objectID": "activities/week3_activity.html#problem-3-confusing-and",
+    "href": "activities/week3_activity.html#problem-3-confusing-and",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Problem 3 — Confusing = and ==",
+    "text": "Problem 3 — Confusing = and ==\n= assigns value.\n== checks equality."
+  },
+  {
+    "objectID": "activities/week3_activity.html#problem-4-undefined-variables",
+    "href": "activities/week3_activity.html#problem-4-undefined-variables",
+    "title": "Week 3 Assignment — Python Fundamentals",
+    "section": "Problem 4 — Undefined Variables",
+    "text": "Problem 4 — Undefined Variables\nUsing variables before creating them."
+  },
+  {
+    "objectID": "activities/week1_activity.html",
+    "href": "activities/week1_activity.html",
+    "title": "Week 1 In-Class Activity",
     "section": "",
-    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 2\n\n\nTopic\nWorking with Data in Python using a Labour Force Survey Dataset\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nSubmission Format\nGoogle Colab notebook link\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
+    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 1\n\n\nTopic\nOrientation and Computational Thinking\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
   },
   {
-    "objectID": "activities/week2_activity.html#instructions",
-    "href": "activities/week2_activity.html#instructions",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#objective",
+    "href": "activities/week1_activity.html#objective",
+    "title": "Week 1 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nRun your first Python code successfully."
+  },
+  {
+    "objectID": "activities/week1_activity.html#instructions-1",
+    "href": "activities/week1_activity.html#instructions-1",
+    "title": "Week 1 In-Class Activity",
     "section": "Instructions",
-    "text": "Instructions\nRun:\nprint(\"Week 2 assignment started successfully\")\nThen write your name and index number in a Markdown cell."
+    "text": "Instructions\nRun the following code:\nprint(\"Welcome to ECN 4199\")"
   },
   {
-    "objectID": "activities/week2_activity.html#question",
-    "href": "activities/week2_activity.html#question",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#question",
+    "href": "activities/week1_activity.html#question",
+    "title": "Week 1 In-Class Activity",
     "section": "Question",
-    "text": "Question\nIn 2-3 sentences, explain why Google Colab is useful for beginners learning data analytics."
+    "text": "Question\nWhat does the function:\nprint()\ndo in Python?\nWrite your answer in one sentence."
   },
   {
-    "objectID": "activities/week2_activity.html#instructions-1",
-    "href": "activities/week2_activity.html#instructions-1",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#objective-1",
+    "href": "activities/week1_activity.html#objective-1",
+    "title": "Week 1 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nUnderstand basic Python variables."
+  },
+  {
+    "objectID": "activities/week1_activity.html#instructions-2",
+    "href": "activities/week1_activity.html#instructions-2",
+    "title": "Week 1 In-Class Activity",
     "section": "Instructions",
-    "text": "Instructions\nRun:\nimport pandas as pd"
+    "text": "Instructions\nCreate the following variables:\nstudent_name\ninflation_rate\ngdp_growth\nAssign appropriate values.\nExample:\ninflation_rate = 12.5"
   },
   {
-    "objectID": "activities/week2_activity.html#question-1",
-    "href": "activities/week2_activity.html#question-1",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#question-1",
+    "href": "activities/week1_activity.html#question-1",
+    "title": "Week 1 In-Class Activity",
     "section": "Question",
-    "text": "Question\nWhy do economists and data analysts use libraries such as pandas instead of writing every command from scratch?"
+    "text": "Question\nWhy are variables useful in programming and data analysis?"
   },
   {
-    "objectID": "activities/week2_activity.html#instructions-2",
-    "href": "activities/week2_activity.html#instructions-2",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#objective-2",
+    "href": "activities/week1_activity.html#objective-2",
+    "title": "Week 1 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nUse Python for basic economic calculations."
+  },
+  {
+    "objectID": "activities/week1_activity.html#instructions-3",
+    "href": "activities/week1_activity.html#instructions-3",
+    "title": "Week 1 In-Class Activity",
     "section": "Instructions",
-    "text": "Instructions\nUse the direct website method:\ndataset_url = \"https://kanishkawerawella.github.io/ECN4199_Website/data/LFS_Hypothetical_Dataset.xlsx\"\n\ndata = pd.read_excel(dataset_url, sheet_name=\"LFS_Data\")\ndictionary = pd.read_excel(dataset_url, sheet_name=\"Variable Dictionary\")\nIf the direct website method does not work, upload the downloaded Excel file into Colab and use:\ndata = pd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")\ndictionary = pd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"Variable Dictionary\")"
+    "text": "Instructions\nAssume:\n\n\n\nVariable\nValue\n\n\n\n\nInitial Inflation\n6%\n\n\nNew Inflation\n12%\n\n\n\nCalculate:\npercentage point increase in inflation\nusing Python."
   },
   {
-    "objectID": "activities/week2_activity.html#questions",
-    "href": "activities/week2_activity.html#questions",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Questions",
-    "text": "Questions\n\nWhat does the LFS_Data sheet contain?\nWhat does the Variable Dictionary sheet explain?\nWhy should analysts read the variable dictionary before interpreting a dataset?"
+    "objectID": "activities/week1_activity.html#example-structure",
+    "href": "activities/week1_activity.html#example-structure",
+    "title": "Week 1 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\ninitial_inflation = 6\nnew_inflation = 12"
   },
   {
-    "objectID": "activities/week2_activity.html#instructions-3",
-    "href": "activities/week2_activity.html#instructions-3",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Instructions",
-    "text": "Instructions\nRun the following commands:\ndata.head()\ndata.tail()\ndata.shape\ndata.columns\ndata.info()"
-  },
-  {
-    "objectID": "activities/week2_activity.html#questions-1",
-    "href": "activities/week2_activity.html#questions-1",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Questions",
-    "text": "Questions\n\nHow many observations are in the dataset?\nHow many variables are in the dataset?\nName five variables that are useful for labour market analysis.\nAre all variables numerical? Explain using examples."
-  },
-  {
-    "objectID": "activities/week2_activity.html#instructions-4",
-    "href": "activities/week2_activity.html#instructions-4",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Instructions",
-    "text": "Instructions\nDisplay the variable dictionary:\ndictionary\nThen identify the meaning of these variables:\n\nEmployment_Status\nMonthly_Wage_LKR\nEducation_Level\nInternet_Access\nUnpaid_Care_Hours_Weekly"
-  },
-  {
-    "objectID": "activities/week2_activity.html#question-2",
-    "href": "activities/week2_activity.html#question-2",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#question-2",
+    "href": "activities/week1_activity.html#question-2",
+    "title": "Week 1 In-Class Activity",
     "section": "Question",
-    "text": "Question\nChoose any three variables from the list above and explain why each variable may be useful for economic or labour market analysis."
+    "text": "Question\nWhat does a sharp increase in inflation usually imply for households?\nWrite 2–3 sentences."
   },
   {
-    "objectID": "activities/week2_activity.html#instructions-5",
-    "href": "activities/week2_activity.html#instructions-5",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#objective-3",
+    "href": "activities/week1_activity.html#objective-3",
+    "title": "Week 1 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nStore economic information using Python lists."
+  },
+  {
+    "objectID": "activities/week1_activity.html#instructions-4",
+    "href": "activities/week1_activity.html#instructions-4",
+    "title": "Week 1 In-Class Activity",
     "section": "Instructions",
-    "text": "Instructions\nRun:\ndata.describe()"
+    "text": "Instructions\nCreate a Python list containing:\n\ninflation rates\nunemployment rates\nGDP growth values\n\nExample:\ninflation = [4.5, 5.2, 7.8]"
   },
   {
-    "objectID": "activities/week2_activity.html#questions-2",
-    "href": "activities/week2_activity.html#questions-2",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Questions",
-    "text": "Questions\n\nWhat is the average age of individuals in the dataset?\nWhat is the average household size?\nWhat is the average monthly wage?\nWhat is the maximum monthly wage?\nWhat is the average number of unpaid care hours per week?\n\nFor each answer, write one short interpretation."
+    "objectID": "activities/week1_activity.html#question-3",
+    "href": "activities/week1_activity.html#question-3",
+    "title": "Week 1 In-Class Activity",
+    "section": "Question",
+    "text": "Question\nWhy is storing data systematically important for economists?"
   },
   {
-    "objectID": "activities/week2_activity.html#instructions-6",
-    "href": "activities/week2_activity.html#instructions-6",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Instructions",
-    "text": "Instructions\nRun:\ndata[\"Sex\"].value_counts()\ndata[\"Sector\"].value_counts()\ndata[\"Education_Level\"].value_counts()\ndata[\"Employment_Status\"].value_counts()\ndata[\"Internet_Access\"].value_counts()"
-  },
-  {
-    "objectID": "activities/week2_activity.html#questions-3",
-    "href": "activities/week2_activity.html#questions-3",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Questions",
-    "text": "Questions\n\nHow many males and females are included in the dataset?\nIs the sample more urban or more rural?\nWhich education category appears most frequently?\nHow many individuals are employed, unemployed, and inactive?\nHow many individuals have internet access?"
-  },
-  {
-    "objectID": "activities/week2_activity.html#problem-1-file-not-found",
-    "href": "activities/week2_activity.html#problem-1-file-not-found",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Problem 1 — File Not Found",
-    "text": "Problem 1 — File Not Found\nPossible causes:\n\ndataset not uploaded\nincorrect filename\nfile uploaded to the wrong Colab session"
-  },
-  {
-    "objectID": "activities/week2_activity.html#problem-2-forgetting-quotes",
-    "href": "activities/week2_activity.html#problem-2-forgetting-quotes",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Problem 2 — Forgetting Quotes",
-    "text": "Problem 2 — Forgetting Quotes\nWrong:\npd.read_excel(LFS_Hypothetical_Dataset.xlsx)\nCorrect:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")"
-  },
-  {
-    "objectID": "activities/week2_activity.html#problem-3-wrong-sheet-name",
-    "href": "activities/week2_activity.html#problem-3-wrong-sheet-name",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Problem 3 — Wrong Sheet Name",
-    "text": "Problem 3 — Wrong Sheet Name\nWrong:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"Data\")\nCorrect:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")"
+    "objectID": "activities/week1_activity.html#short-reflection",
+    "href": "activities/week1_activity.html#short-reflection",
+    "title": "Week 1 In-Class Activity",
+    "section": "Short Reflection",
+    "text": "Short Reflection\nWrite a short paragraph answering:\nWhy are computational and data skills becoming increasingly important for economists and policy analysts?\nYour answer should include:\n\ndata\ndecision-making\nmodern analytics\nAI or automation"
   },
   {
     "objectID": "lectures/week2.html",
@@ -334,6 +516,13 @@
     "title": "Course Roadmap",
     "section": "Week 2 — Python Fundamentals for Economic Analysis",
     "text": "Week 2 — Python Fundamentals for Economic Analysis\nOpen Week 2 Lecture Material"
+  },
+  {
+    "objectID": "roadmap.html#week-3-data-structures-and-data-handling",
+    "href": "roadmap.html#week-3-data-structures-and-data-handling",
+    "title": "Course Roadmap",
+    "section": "Week 3 — Data Structures and Data Handling",
+    "text": "Week 3 — Data Structures and Data Handling\nOpen Week 3 Lecture Material"
   },
   {
     "objectID": "index.html",
@@ -749,108 +938,290 @@
     "text": "Step 3 — Enable Sharing\nInside Google Colab:\n\nClick:\n\nShare\n\nUnder General Access select:\n\nAnyone with the link\n\nSet permissions to:\n\nViewer\n\nCopy the notebook link"
   },
   {
-    "objectID": "activities/week1_activity.html",
-    "href": "activities/week1_activity.html",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "lectures/week3.html",
+    "href": "lectures/week3.html",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
     "section": "",
-    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 1\n\n\nTopic\nOrientation and Computational Thinking\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
+    "text": "Weeks 1 and 2 focused on:\n\nremoving fear\nunderstanding workflow\nsetting up tools\nloading data\n\nThis week is different.\nThis is the week students stop behaving like:\nusers of software\nand start behaving like:\npeople who instruct computers\nThat transition matters enormously."
   },
   {
-    "objectID": "activities/week1_activity.html#objective",
-    "href": "activities/week1_activity.html#objective",
-    "title": "Week 1 In-Class Activity",
-    "section": "Objective",
-    "text": "Objective\nRun your first Python code successfully."
+    "objectID": "lectures/week3.html#step-1-create-variables",
+    "href": "lectures/week3.html#step-1-create-variables",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Step 1 — Create Variables",
+    "text": "Step 1 — Create Variables\ngdp_2023 = 5000\ngdp_2024 = 5400"
   },
   {
-    "objectID": "activities/week1_activity.html#instructions-1",
-    "href": "activities/week1_activity.html#instructions-1",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "lectures/week3.html#step-2-calculate-growth",
+    "href": "lectures/week3.html#step-2-calculate-growth",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Step 2 — Calculate Growth",
+    "text": "Step 2 — Calculate Growth\ngdp_growth = ((gdp_2024 - gdp_2023) / gdp_2023) * 100\n\nprint(gdp_growth)"
+  },
+  {
+    "objectID": "lectures/week3.html#step-3-create-list-of-inflation-rates",
+    "href": "lectures/week3.html#step-3-create-list-of-inflation-rates",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Step 3 — Create List of Inflation Rates",
+    "text": "Step 3 — Create List of Inflation Rates\ninflation_rates = [4.6, 6.0, 46.4, 12.5]"
+  },
+  {
+    "objectID": "lectures/week3.html#step-4-calculate-average-inflation",
+    "href": "lectures/week3.html#step-4-calculate-average-inflation",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Step 4 — Calculate Average Inflation",
+    "text": "Step 4 — Calculate Average Inflation\naverage_inflation = sum(inflation_rates) / len(inflation_rates)\n\nprint(average_inflation)"
+  },
+  {
+    "objectID": "lectures/week3.html#step-5-use-conditional-logic",
+    "href": "lectures/week3.html#step-5-use-conditional-logic",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Step 5 — Use Conditional Logic",
+    "text": "Step 5 — Use Conditional Logic\nif average_inflation &gt; 10:\n    print(\"Inflation problem detected\")\nelse:\n    print(\"Inflation relatively stable\")"
+  },
+  {
+    "objectID": "lectures/week3.html#step-6-create-loop",
+    "href": "lectures/week3.html#step-6-create-loop",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Step 6 — Create Loop",
+    "text": "Step 6 — Create Loop\nfor rate in inflation_rates:\n    print(rate)"
+  },
+  {
+    "objectID": "lectures/week3.html#step-7-create-reusable-function",
+    "href": "lectures/week3.html#step-7-create-reusable-function",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Step 7 — Create Reusable Function",
+    "text": "Step 7 — Create Reusable Function\ndef growth_rate(old, new):\n\n    growth = ((new - old) / old) * 100\n\n    return growth"
+  },
+  {
+    "objectID": "lectures/week3.html#step-8-test-function",
+    "href": "lectures/week3.html#step-8-test-function",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Step 8 — Test Function",
+    "text": "Step 8 — Test Function\ngrowth_rate(200, 250)"
+  },
+  {
+    "objectID": "lectures/week3.html#question-1",
+    "href": "lectures/week3.html#question-1",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Question 1",
+    "text": "Question 1\nanswer = input(\"What is a variable? A/B/C/D : \")\n\nif answer.upper() == \"B\":\n    print(\"Correct! A variable stores information.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week3.html#question-2",
+    "href": "lectures/week3.html#question-2",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Question 2",
+    "text": "Question 2\nanswer = input(\"Which symbol means greater than? \")\n\nif answer == \"&gt;\":\n    print(\"Correct!\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week3.html#question-3",
+    "href": "lectures/week3.html#question-3",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Question 3",
+    "text": "Question 3\nanswer = input(\"What does a loop do? A/B/C/D : \")\n\nif answer.upper() == \"B\":\n    print(\"Correct! Loops repeat tasks.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week3.html#task-1-create-variables",
+    "href": "lectures/week3.html#task-1-create-variables",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Task 1 — Create Variables",
+    "text": "Task 1 — Create Variables\nCreate variables for:\n\nexports\nimports\nexchange rate\n\nPrint all values."
+  },
+  {
+    "objectID": "lectures/week3.html#task-2-create-gdp-growth-list",
+    "href": "lectures/week3.html#task-2-create-gdp-growth-list",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Task 2 — Create GDP Growth List",
+    "text": "Task 2 — Create GDP Growth List\nCreate a list of GDP growth rates.\nCalculate:\n\naverage growth\nmaximum growth\nminimum growth"
+  },
+  {
+    "objectID": "lectures/week3.html#task-3-inflation-classification",
+    "href": "lectures/week3.html#task-3-inflation-classification",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Task 3 — Inflation Classification",
+    "text": "Task 3 — Inflation Classification\nWrite conditional logic:\n\ninflation below 5 → “Low inflation”\ninflation between 5 and 15 → “Moderate inflation”\ninflation above 15 → “High inflation”"
+  },
+  {
+    "objectID": "lectures/week3.html#task-4-loop-exercise",
+    "href": "lectures/week3.html#task-4-loop-exercise",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Task 4 — Loop Exercise",
+    "text": "Task 4 — Loop Exercise\nCreate a loop that prints:\nPositive growth\nor\nNegative growth\nfor each GDP growth value."
+  },
+  {
+    "objectID": "lectures/week3.html#task-5-create-function",
+    "href": "lectures/week3.html#task-5-create-function",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Task 5 — Create Function",
+    "text": "Task 5 — Create Function\nCreate a reusable function that calculates percentage change.\nFormula:\n[(new - old) / old] × 100"
+  },
+  {
+    "objectID": "lectures/week3.html#task-6-apply-function",
+    "href": "lectures/week3.html#task-6-apply-function",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Task 6 — Apply Function",
+    "text": "Task 6 — Apply Function\nApply your function to:\n\nGDP\nCPI\nexchange rate\n\nInterpret each result."
+  },
+  {
+    "objectID": "lectures/week3.html#problem-1-indentation-errors",
+    "href": "lectures/week3.html#problem-1-indentation-errors",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Problem 1 — Indentation Errors",
+    "text": "Problem 1 — Indentation Errors\nWrong:\nif inflation &gt; 10:\nprint(\"High inflation\")\nCorrect:\nif inflation &gt; 10:\n    print(\"High inflation\")\nIndentation matters in Python."
+  },
+  {
+    "objectID": "lectures/week3.html#problem-2-forgetting-colon",
+    "href": "lectures/week3.html#problem-2-forgetting-colon",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Problem 2 — Forgetting Colon",
+    "text": "Problem 2 — Forgetting Colon\nWrong:\nif inflation &gt; 10\nCorrect:\nif inflation &gt; 10:"
+  },
+  {
+    "objectID": "lectures/week3.html#problem-3-confusing-and",
+    "href": "lectures/week3.html#problem-3-confusing-and",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Problem 3 — Confusing = and ==",
+    "text": "Problem 3 — Confusing = and ==\n= assigns value.\nExample:\ninflation = 12\n== checks equality.\nExample:\ninflation == 12"
+  },
+  {
+    "objectID": "lectures/week3.html#problem-4-forgetting-parentheses",
+    "href": "lectures/week3.html#problem-4-forgetting-parentheses",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Problem 4 — Forgetting Parentheses",
+    "text": "Problem 4 — Forgetting Parentheses\nWrong:\nprint\nCorrect:\nprint()"
+  },
+  {
+    "objectID": "lectures/week3.html#problem-5-undefined-variables",
+    "href": "lectures/week3.html#problem-5-undefined-variables",
+    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "section": "Problem 5 — Undefined Variables",
+    "text": "Problem 5 — Undefined Variables\nWrong:\nprint(gdp_growth)\nbefore defining variable."
+  },
+  {
+    "objectID": "activities/week2_activity.html",
+    "href": "activities/week2_activity.html",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "",
+    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 2\n\n\nTopic\nWorking with Data in Python using a Labour Force Survey Dataset\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nSubmission Format\nGoogle Colab notebook link\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
+  },
+  {
+    "objectID": "activities/week2_activity.html#instructions",
+    "href": "activities/week2_activity.html#instructions",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Instructions",
-    "text": "Instructions\nRun the following code:\nprint(\"Welcome to ECN 4199\")"
+    "text": "Instructions\nRun:\nprint(\"Week 2 assignment started successfully\")\nThen write your name and index number in a Markdown cell."
   },
   {
-    "objectID": "activities/week1_activity.html#question",
-    "href": "activities/week1_activity.html#question",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html#question",
+    "href": "activities/week2_activity.html#question",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Question",
-    "text": "Question\nWhat does the function:\nprint()\ndo in Python?\nWrite your answer in one sentence."
+    "text": "Question\nIn 2-3 sentences, explain why Google Colab is useful for beginners learning data analytics."
   },
   {
-    "objectID": "activities/week1_activity.html#objective-1",
-    "href": "activities/week1_activity.html#objective-1",
-    "title": "Week 1 In-Class Activity",
-    "section": "Objective",
-    "text": "Objective\nUnderstand basic Python variables."
-  },
-  {
-    "objectID": "activities/week1_activity.html#instructions-2",
-    "href": "activities/week1_activity.html#instructions-2",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html#instructions-1",
+    "href": "activities/week2_activity.html#instructions-1",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Instructions",
-    "text": "Instructions\nCreate the following variables:\nstudent_name\ninflation_rate\ngdp_growth\nAssign appropriate values.\nExample:\ninflation_rate = 12.5"
+    "text": "Instructions\nRun:\nimport pandas as pd"
   },
   {
-    "objectID": "activities/week1_activity.html#question-1",
-    "href": "activities/week1_activity.html#question-1",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html#question-1",
+    "href": "activities/week2_activity.html#question-1",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Question",
-    "text": "Question\nWhy are variables useful in programming and data analysis?"
+    "text": "Question\nWhy do economists and data analysts use libraries such as pandas instead of writing every command from scratch?"
   },
   {
-    "objectID": "activities/week1_activity.html#objective-2",
-    "href": "activities/week1_activity.html#objective-2",
-    "title": "Week 1 In-Class Activity",
-    "section": "Objective",
-    "text": "Objective\nUse Python for basic economic calculations."
-  },
-  {
-    "objectID": "activities/week1_activity.html#instructions-3",
-    "href": "activities/week1_activity.html#instructions-3",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html#instructions-2",
+    "href": "activities/week2_activity.html#instructions-2",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Instructions",
-    "text": "Instructions\nAssume:\n\n\n\nVariable\nValue\n\n\n\n\nInitial Inflation\n6%\n\n\nNew Inflation\n12%\n\n\n\nCalculate:\npercentage point increase in inflation\nusing Python."
+    "text": "Instructions\nUse the direct website method:\ndataset_url = \"https://kanishkawerawella.github.io/ECN4199_Website/data/LFS_Hypothetical_Dataset.xlsx\"\n\ndata = pd.read_excel(dataset_url, sheet_name=\"LFS_Data\")\ndictionary = pd.read_excel(dataset_url, sheet_name=\"Variable Dictionary\")\nIf the direct website method does not work, upload the downloaded Excel file into Colab and use:\ndata = pd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")\ndictionary = pd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"Variable Dictionary\")"
   },
   {
-    "objectID": "activities/week1_activity.html#example-structure",
-    "href": "activities/week1_activity.html#example-structure",
-    "title": "Week 1 In-Class Activity",
-    "section": "Example Structure",
-    "text": "Example Structure\ninitial_inflation = 6\nnew_inflation = 12"
+    "objectID": "activities/week2_activity.html#questions",
+    "href": "activities/week2_activity.html#questions",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Questions",
+    "text": "Questions\n\nWhat does the LFS_Data sheet contain?\nWhat does the Variable Dictionary sheet explain?\nWhy should analysts read the variable dictionary before interpreting a dataset?"
   },
   {
-    "objectID": "activities/week1_activity.html#question-2",
-    "href": "activities/week1_activity.html#question-2",
-    "title": "Week 1 In-Class Activity",
-    "section": "Question",
-    "text": "Question\nWhat does a sharp increase in inflation usually imply for households?\nWrite 2–3 sentences."
-  },
-  {
-    "objectID": "activities/week1_activity.html#objective-3",
-    "href": "activities/week1_activity.html#objective-3",
-    "title": "Week 1 In-Class Activity",
-    "section": "Objective",
-    "text": "Objective\nStore economic information using Python lists."
-  },
-  {
-    "objectID": "activities/week1_activity.html#instructions-4",
-    "href": "activities/week1_activity.html#instructions-4",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html#instructions-3",
+    "href": "activities/week2_activity.html#instructions-3",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Instructions",
-    "text": "Instructions\nCreate a Python list containing:\n\ninflation rates\nunemployment rates\nGDP growth values\n\nExample:\ninflation = [4.5, 5.2, 7.8]"
+    "text": "Instructions\nRun the following commands:\ndata.head()\ndata.tail()\ndata.shape\ndata.columns\ndata.info()"
   },
   {
-    "objectID": "activities/week1_activity.html#question-3",
-    "href": "activities/week1_activity.html#question-3",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week2_activity.html#questions-1",
+    "href": "activities/week2_activity.html#questions-1",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Questions",
+    "text": "Questions\n\nHow many observations are in the dataset?\nHow many variables are in the dataset?\nName five variables that are useful for labour market analysis.\nAre all variables numerical? Explain using examples."
+  },
+  {
+    "objectID": "activities/week2_activity.html#instructions-4",
+    "href": "activities/week2_activity.html#instructions-4",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Instructions",
+    "text": "Instructions\nDisplay the variable dictionary:\ndictionary\nThen identify the meaning of these variables:\n\nEmployment_Status\nMonthly_Wage_LKR\nEducation_Level\nInternet_Access\nUnpaid_Care_Hours_Weekly"
+  },
+  {
+    "objectID": "activities/week2_activity.html#question-2",
+    "href": "activities/week2_activity.html#question-2",
+    "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Question",
-    "text": "Question\nWhy is storing data systematically important for economists?"
+    "text": "Question\nChoose any three variables from the list above and explain why each variable may be useful for economic or labour market analysis."
   },
   {
-    "objectID": "activities/week1_activity.html#short-reflection",
-    "href": "activities/week1_activity.html#short-reflection",
-    "title": "Week 1 In-Class Activity",
-    "section": "Short Reflection",
-    "text": "Short Reflection\nWrite a short paragraph answering:\nWhy are computational and data skills becoming increasingly important for economists and policy analysts?\nYour answer should include:\n\ndata\ndecision-making\nmodern analytics\nAI or automation"
+    "objectID": "activities/week2_activity.html#instructions-5",
+    "href": "activities/week2_activity.html#instructions-5",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Instructions",
+    "text": "Instructions\nRun:\ndata.describe()"
+  },
+  {
+    "objectID": "activities/week2_activity.html#questions-2",
+    "href": "activities/week2_activity.html#questions-2",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Questions",
+    "text": "Questions\n\nWhat is the average age of individuals in the dataset?\nWhat is the average household size?\nWhat is the average monthly wage?\nWhat is the maximum monthly wage?\nWhat is the average number of unpaid care hours per week?\n\nFor each answer, write one short interpretation."
+  },
+  {
+    "objectID": "activities/week2_activity.html#instructions-6",
+    "href": "activities/week2_activity.html#instructions-6",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Instructions",
+    "text": "Instructions\nRun:\ndata[\"Sex\"].value_counts()\ndata[\"Sector\"].value_counts()\ndata[\"Education_Level\"].value_counts()\ndata[\"Employment_Status\"].value_counts()\ndata[\"Internet_Access\"].value_counts()"
+  },
+  {
+    "objectID": "activities/week2_activity.html#questions-3",
+    "href": "activities/week2_activity.html#questions-3",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Questions",
+    "text": "Questions\n\nHow many males and females are included in the dataset?\nIs the sample more urban or more rural?\nWhich education category appears most frequently?\nHow many individuals are employed, unemployed, and inactive?\nHow many individuals have internet access?"
+  },
+  {
+    "objectID": "activities/week2_activity.html#problem-1-file-not-found",
+    "href": "activities/week2_activity.html#problem-1-file-not-found",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Problem 1 — File Not Found",
+    "text": "Problem 1 — File Not Found\nPossible causes:\n\ndataset not uploaded\nincorrect filename\nfile uploaded to the wrong Colab session"
+  },
+  {
+    "objectID": "activities/week2_activity.html#problem-2-forgetting-quotes",
+    "href": "activities/week2_activity.html#problem-2-forgetting-quotes",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Problem 2 — Forgetting Quotes",
+    "text": "Problem 2 — Forgetting Quotes\nWrong:\npd.read_excel(LFS_Hypothetical_Dataset.xlsx)\nCorrect:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")"
+  },
+  {
+    "objectID": "activities/week2_activity.html#problem-3-wrong-sheet-name",
+    "href": "activities/week2_activity.html#problem-3-wrong-sheet-name",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Problem 3 — Wrong Sheet Name",
+    "text": "Problem 3 — Wrong Sheet Name\nWrong:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"Data\")\nCorrect:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")"
   }
 ]
