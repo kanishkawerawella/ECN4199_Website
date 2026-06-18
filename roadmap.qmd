@@ -16,10 +16,10 @@ This course is organized into two major learning phases.
 ## Week 2 — Python Fundamentals for Economic Analysis
 [Open Week 2 Lecture Material](lectures/week2.qmd)
 
-<!--
-
 ## Week 3 — Data Structures and Data Handling
-[Open Week 3](lectures/week3.qmd)
+[Open Week 3 Lecture Material](lectures/week3.qmd)
+
+<!--
 
 ## Week 4 — Data Visualization and Economic Dashboards
 [Open Week 4](lectures/week4.qmd)

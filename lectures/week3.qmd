@@ -563,9 +563,15 @@ print(rate)
 
 # 11. Open the Week 3 Live Notebook
 
-Replace the placeholder below with your actual notebook link.
+[Open Week 3 Live Notebook — Save a Copy Before Editing](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week3/ECN4199_Week3_Live_Notebook.ipynb)
 
-[Open Week 3 Live Notebook — Save a Copy Before Editing](PASTE_WEEK3_COLAB_LINK_HERE)
+Inside Google Colab, select:
+
+```text
+File -> Save a copy in Drive
+```
+
+Complete all lecture examples in your own saved copy.
 
 ---
 
@@ -798,9 +804,9 @@ Week3_YourName.ipynb
 
 # Submission Link
 
-Replace placeholder below:
+[Open the Week 3 Assignment](../activities/week3_activity.qmd)
 
-[Submit Week 3 Work](PASTE_SUBMISSION_LINK_HERE)
+Submit the completed notebook through the Week 3 activity in the University LMS.
 
 ---
 

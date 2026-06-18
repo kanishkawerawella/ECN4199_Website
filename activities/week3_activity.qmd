@@ -1,8 +1,8 @@
 ---
-title: "Week 3 In-Class Activity"
+title: "Week 3 Assignment — Python Fundamentals"
 ---
 
-# Week 3 — In-Class Timed Activity
+# Week 3 — In-Class Assignment
 
 # ECN 4199 — Industrial Data Analytics
 
@@ -28,6 +28,12 @@ title: "Week 3 In-Class Activity"
 3. Complete all required tasks.
 4. Answer all interpretation questions.
 5. Submit before the activity closes.
+
+---
+
+# Required Material
+
+[Open Week 3 Live Notebook — Save a Copy Before Editing](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week3/ECN4199_Week3_Live_Notebook.ipynb)
 
 ---
 
@@ -346,7 +352,20 @@ Anyone with the link → Viewer
 
 # Submission Link
 
-[Submit Week 3 Activity](PASTE_WEEK3_SUBMISSION_LINK_HERE)
+Submit the completed notebook through the Week 3 activity in the University LMS.
+
+---
+
+# Mark Allocation
+
+| Component | Marks |
+|---|---:|
+| Variables, data types, and list calculations | 1.0 |
+| Conditional logic | 1.0 |
+| Loop and automation task | 1.0 |
+| Reusable percentage-change function | 1.0 |
+| Interpretation, notebook naming, and correct sharing access | 1.0 |
+| Total | 5.0 |
 
 ---
 
