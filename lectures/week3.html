@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 3 — Python Fundamentals for Economic Analysis – ECN 4199 - Industrial Data Analytics</title>
+<title>Week 3 — Programming Logic and Automation for Economic Analysis – ECN 4199 - Industrial Data Analytics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -163,90 +163,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-3-python-fundamentals-thinking-computationally-as-an-economist" id="toc-week-3-python-fundamentals-thinking-computationally-as-an-economist" class="nav-link active" data-scroll-target="#week-3-python-fundamentals-thinking-computationally-as-an-economist">Week 3 — Python Fundamentals: Thinking Computationally as an Economist</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">1. Learning Objectives</a></li>
-  <li><a href="#thinking-like-a-computational-economist" id="toc-thinking-like-a-computational-economist" class="nav-link" data-scroll-target="#thinking-like-a-computational-economist">2. Thinking Like a Computational Economist</a></li>
-  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">3. Variables</a></li>
-  <li><a href="#rules-for-naming-variables" id="toc-rules-for-naming-variables" class="nav-link" data-scroll-target="#rules-for-naming-variables">Rules for Naming Variables</a></li>
-  <li><a href="#why-variables-matter" id="toc-why-variables-matter" class="nav-link" data-scroll-target="#why-variables-matter">Why Variables Matter</a></li>
-  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types">4. Data Types</a></li>
-  <li><a href="#integer" id="toc-integer" class="nav-link" data-scroll-target="#integer">Integer</a></li>
-  <li><a href="#float" id="toc-float" class="nav-link" data-scroll-target="#float">Float</a></li>
-  <li><a href="#string" id="toc-string" class="nav-link" data-scroll-target="#string">String</a></li>
-  <li><a href="#checking-data-type" id="toc-checking-data-type" class="nav-link" data-scroll-target="#checking-data-type">Checking Data Type</a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
-  <li><a href="#lists-and-collections-of-data" id="toc-lists-and-collections-of-data" class="nav-link" data-scroll-target="#lists-and-collections-of-data">5. Lists and Collections of Data</a></li>
-  <li><a href="#why-lists-matter" id="toc-why-lists-matter" class="nav-link" data-scroll-target="#why-lists-matter">Why Lists Matter</a></li>
-  <li><a href="#accessing-list-elements" id="toc-accessing-list-elements" class="nav-link" data-scroll-target="#accessing-list-elements">Accessing List Elements</a></li>
-  <li><a href="#important-idea" id="toc-important-idea" class="nav-link" data-scroll-target="#important-idea">Important Idea</a></li>
-  <li><a href="#length-of-list" id="toc-length-of-list" class="nav-link" data-scroll-target="#length-of-list">Length of List</a></li>
-  <li><a href="#adding-values-to-lists" id="toc-adding-values-to-lists" class="nav-link" data-scroll-target="#adding-values-to-lists">Adding Values to Lists</a></li>
-  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example</a></li>
-  <li><a href="#economic-calculations-using-lists" id="toc-economic-calculations-using-lists" class="nav-link" data-scroll-target="#economic-calculations-using-lists">6. Economic Calculations Using Lists</a></li>
-  <li><a href="#average-gdp-growth" id="toc-average-gdp-growth" class="nav-link" data-scroll-target="#average-gdp-growth">Average GDP Growth</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">1. Learning Outcomes</a></li>
+  <li><a href="#two-hour-learning-plan" id="toc-two-hour-learning-plan" class="nav-link" data-scroll-target="#two-hour-learning-plan">2. Two-Hour Learning Plan</a></li>
+  <li><a href="#open-the-week-3-live-notebook" id="toc-open-the-week-3-live-notebook" class="nav-link" data-scroll-target="#open-the-week-3-live-notebook">3. Open the Week 3 Live Notebook</a></li>
+  <li><a href="#diagnostic-recap" id="toc-diagnostic-recap" class="nav-link" data-scroll-target="#diagnostic-recap">4. Diagnostic Recap</a>
+  <ul class="collapse">
+  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding">Check Your Understanding</a></li>
+  </ul></li>
+  <li><a href="#computational-thinking" id="toc-computational-thinking" class="nav-link" data-scroll-target="#computational-thinking">5. Computational Thinking</a>
+  <ul class="collapse">
+  <li><a href="#economic-example-inflation-classification" id="toc-economic-example-inflation-classification" class="nav-link" data-scroll-target="#economic-example-inflation-classification">Economic Example: Inflation Classification</a></li>
+  </ul></li>
+  <li><a href="#from-economic-reasoning-to-explicit-rules" id="toc-from-economic-reasoning-to-explicit-rules" class="nav-link" data-scroll-target="#from-economic-reasoning-to-explicit-rules">6. From Economic Reasoning to Explicit Rules</a></li>
+  <li><a href="#comparison-operators" id="toc-comparison-operators" class="nav-link" data-scroll-target="#comparison-operators">7. Comparison Operators</a>
+  <ul class="collapse">
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">Try It</a></li>
+  </ul></li>
+  <li><a href="#logical-operators" id="toc-logical-operators" class="nav-link" data-scroll-target="#logical-operators">8. Logical Operators</a>
+  <ul class="collapse">
+  <li><a href="#example-labour-force-classification" id="toc-example-labour-force-classification" class="nav-link" data-scroll-target="#example-labour-force-classification">Example: Labour Force Classification</a></li>
+  <li><a href="#example-policy-alert" id="toc-example-policy-alert" class="nav-link" data-scroll-target="#example-policy-alert">Example: Policy Alert</a></li>
+  </ul></li>
+  <li><a href="#conditional-statements" id="toc-conditional-statements" class="nav-link" data-scroll-target="#conditional-statements">9. Conditional Statements</a></li>
+  <li><a href="#inflation-classification" id="toc-inflation-classification" class="nav-link" data-scroll-target="#inflation-classification">10. Inflation Classification</a>
+  <ul class="collapse">
   <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
-  <li><a href="#another-example" id="toc-another-example" class="nav-link" data-scroll-target="#another-example">Another Example</a></li>
-  <li><a href="#important-functions" id="toc-important-functions" class="nav-link" data-scroll-target="#important-functions">Important Functions</a></li>
-  <li><a href="#conditional-statements" id="toc-conditional-statements" class="nav-link" data-scroll-target="#conditional-statements">7. Conditional Statements</a></li>
-  <li><a href="#example-inflation-classification" id="toc-example-inflation-classification" class="nav-link" data-scroll-target="#example-inflation-classification">Example: Inflation Classification</a></li>
-  <li><a href="#interpretation-1" id="toc-interpretation-1" class="nav-link" data-scroll-target="#interpretation-1">Interpretation</a></li>
-  <li><a href="#using-else" id="toc-using-else" class="nav-link" data-scroll-target="#using-else">Using Else</a></li>
-  <li><a href="#using-elif" id="toc-using-elif" class="nav-link" data-scroll-target="#using-elif">Using Elif</a></li>
-  <li><a href="#economics-example-poverty-classification" id="toc-economics-example-poverty-classification" class="nav-link" data-scroll-target="#economics-example-poverty-classification">Economics Example: Poverty Classification</a></li>
-  <li><a href="#decision-making-with-python" id="toc-decision-making-with-python" class="nav-link" data-scroll-target="#decision-making-with-python">8. Decision-Making with Python</a></li>
-  <li><a href="#example-exchange-rate-warning" id="toc-example-exchange-rate-warning" class="nav-link" data-scroll-target="#example-exchange-rate-warning">Example: Exchange Rate Warning</a></li>
-  <li><a href="#loops-and-repetition" id="toc-loops-and-repetition" class="nav-link" data-scroll-target="#loops-and-repetition">9. Loops and Repetition</a></li>
-  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example</a></li>
-  <li><a href="#interpretation-2" id="toc-interpretation-2" class="nav-link" data-scroll-target="#interpretation-2">Interpretation</a></li>
-  <li><a href="#another-example-1" id="toc-another-example-1" class="nav-link" data-scroll-target="#another-example-1">Another Example</a></li>
-  <li><a href="#why-loops-matter" id="toc-why-loops-matter" class="nav-link" data-scroll-target="#why-loops-matter">Why Loops Matter</a></li>
-  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">10. Functions</a></li>
-  <li><a href="#example-function" id="toc-example-function" class="nav-link" data-scroll-target="#example-function">Example Function</a></li>
-  <li><a href="#using-the-function" id="toc-using-the-function" class="nav-link" data-scroll-target="#using-the-function">Using the Function</a></li>
-  <li><a href="#why-functions-matter" id="toc-why-functions-matter" class="nav-link" data-scroll-target="#why-functions-matter">Why Functions Matter</a></li>
-  <li><a href="#economic-example-inflation-function" id="toc-economic-example-inflation-function" class="nav-link" data-scroll-target="#economic-example-inflation-function">Economic Example: Inflation Function</a></li>
-  <li><a href="#using-the-function-1" id="toc-using-the-function-1" class="nav-link" data-scroll-target="#using-the-function-1">Using the Function</a></li>
-  <li><a href="#open-the-week-3-live-notebook" id="toc-open-the-week-3-live-notebook" class="nav-link" data-scroll-target="#open-the-week-3-live-notebook">11. Open the Week 3 Live Notebook</a></li>
-  <li><a href="#live-coding-session" id="toc-live-coding-session" class="nav-link" data-scroll-target="#live-coding-session">12. Live Coding Session</a>
-  <ul class="collapse">
-  <li><a href="#step-1-create-variables" id="toc-step-1-create-variables" class="nav-link" data-scroll-target="#step-1-create-variables">Step 1 — Create Variables</a></li>
-  <li><a href="#step-2-calculate-growth" id="toc-step-2-calculate-growth" class="nav-link" data-scroll-target="#step-2-calculate-growth">Step 2 — Calculate Growth</a></li>
-  <li><a href="#step-3-create-list-of-inflation-rates" id="toc-step-3-create-list-of-inflation-rates" class="nav-link" data-scroll-target="#step-3-create-list-of-inflation-rates">Step 3 — Create List of Inflation Rates</a></li>
-  <li><a href="#step-4-calculate-average-inflation" id="toc-step-4-calculate-average-inflation" class="nav-link" data-scroll-target="#step-4-calculate-average-inflation">Step 4 — Calculate Average Inflation</a></li>
-  <li><a href="#step-5-use-conditional-logic" id="toc-step-5-use-conditional-logic" class="nav-link" data-scroll-target="#step-5-use-conditional-logic">Step 5 — Use Conditional Logic</a></li>
-  <li><a href="#step-6-create-loop" id="toc-step-6-create-loop" class="nav-link" data-scroll-target="#step-6-create-loop">Step 6 — Create Loop</a></li>
-  <li><a href="#step-7-create-reusable-function" id="toc-step-7-create-reusable-function" class="nav-link" data-scroll-target="#step-7-create-reusable-function">Step 7 — Create Reusable Function</a></li>
-  <li><a href="#step-8-test-function" id="toc-step-8-test-function" class="nav-link" data-scroll-target="#step-8-test-function">Step 8 — Test Function</a></li>
   </ul></li>
-  <li><a href="#interactive-mini-quiz" id="toc-interactive-mini-quiz" class="nav-link" data-scroll-target="#interactive-mini-quiz">13. Interactive Mini Quiz</a>
+  <li><a href="#why-the-order-of-conditions-matters" id="toc-why-the-order-of-conditions-matters" class="nav-link" data-scroll-target="#why-the-order-of-conditions-matters">11. Why the Order of Conditions Matters</a></li>
+  <li><a href="#testing-boundary-values" id="toc-testing-boundary-values" class="nav-link" data-scroll-target="#testing-boundary-values">12. Testing Boundary Values</a></li>
+  <li><a href="#economic-example-poverty-classification" id="toc-economic-example-poverty-classification" class="nav-link" data-scroll-target="#economic-example-poverty-classification">13. Economic Example: Poverty Classification</a>
   <ul class="collapse">
-  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#critical-note" id="toc-critical-note" class="nav-link" data-scroll-target="#critical-note">Critical Note</a></li>
   </ul></li>
-  <li><a href="#self-assessment-activity" id="toc-self-assessment-activity" class="nav-link" data-scroll-target="#self-assessment-activity">14. Self-Assessment Activity</a>
+  <li><a href="#loops-and-automation" id="toc-loops-and-automation" class="nav-link" data-scroll-target="#loops-and-automation">14. Loops and Automation</a></li>
+  <li><a href="#applying-a-rule-to-several-observations" id="toc-applying-a-rule-to-several-observations" class="nav-link" data-scroll-target="#applying-a-rule-to-several-observations">15. Applying a Rule to Several Observations</a></li>
+  <li><a href="#storing-results" id="toc-storing-results" class="nav-link" data-scroll-target="#storing-results">16. Storing Results</a></li>
+  <li><a href="#connecting-to-the-week-2-lfs-dataset" id="toc-connecting-to-the-week-2-lfs-dataset" class="nav-link" data-scroll-target="#connecting-to-the-week-2-lfs-dataset">17. Connecting to the Week 2 LFS Dataset</a>
   <ul class="collapse">
-  <li><a href="#task-1-create-variables" id="toc-task-1-create-variables" class="nav-link" data-scroll-target="#task-1-create-variables">Task 1 — Create Variables</a></li>
-  <li><a href="#task-2-create-gdp-growth-list" id="toc-task-2-create-gdp-growth-list" class="nav-link" data-scroll-target="#task-2-create-gdp-growth-list">Task 2 — Create GDP Growth List</a></li>
-  <li><a href="#task-3-inflation-classification" id="toc-task-3-inflation-classification" class="nav-link" data-scroll-target="#task-3-inflation-classification">Task 3 — Inflation Classification</a></li>
-  <li><a href="#task-4-loop-exercise" id="toc-task-4-loop-exercise" class="nav-link" data-scroll-target="#task-4-loop-exercise">Task 4 — Loop Exercise</a></li>
-  <li><a href="#task-5-create-function" id="toc-task-5-create-function" class="nav-link" data-scroll-target="#task-5-create-function">Task 5 — Create Function</a></li>
-  <li><a href="#task-6-apply-function" id="toc-task-6-apply-function" class="nav-link" data-scroll-target="#task-6-apply-function">Task 6 — Apply Function</a></li>
+  <li><a href="#important-distinction" id="toc-important-distinction" class="nav-link" data-scroll-target="#important-distinction">Important Distinction</a></li>
   </ul></li>
-  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">15. Submission Instructions</a></li>
-  <li><a href="#file-naming-convention" id="toc-file-naming-convention" class="nav-link" data-scroll-target="#file-naming-convention">File Naming Convention</a></li>
-  <li><a href="#submission-link" id="toc-submission-link" class="nav-link" data-scroll-target="#submission-link">Submission Link</a></li>
-  <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">16. Common Errors</a>
-  <ul class="collapse">
-  <li><a href="#problem-1-indentation-errors" id="toc-problem-1-indentation-errors" class="nav-link" data-scroll-target="#problem-1-indentation-errors">Problem 1 — Indentation Errors</a></li>
-  <li><a href="#problem-2-forgetting-colon" id="toc-problem-2-forgetting-colon" class="nav-link" data-scroll-target="#problem-2-forgetting-colon">Problem 2 — Forgetting Colon</a></li>
-  <li><a href="#problem-3-confusing-and" id="toc-problem-3-confusing-and" class="nav-link" data-scroll-target="#problem-3-confusing-and">Problem 3 — Confusing = and ==</a></li>
-  <li><a href="#problem-4-forgetting-parentheses" id="toc-problem-4-forgetting-parentheses" class="nav-link" data-scroll-target="#problem-4-forgetting-parentheses">Problem 4 — Forgetting Parentheses</a></li>
-  <li><a href="#problem-5-undefined-variables" id="toc-problem-5-undefined-variables" class="nav-link" data-scroll-target="#problem-5-undefined-variables">Problem 5 — Undefined Variables</a></li>
-  </ul></li>
-  <li><a href="#ai-reflection-question" id="toc-ai-reflection-question" class="nav-link" data-scroll-target="#ai-reflection-question">17. AI Reflection Question</a></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">18. Key Takeaways</a></li>
-  <li><a href="#before-week-4" id="toc-before-week-4" class="nav-link" data-scroll-target="#before-week-4">19. Before Week 4</a></li>
+  <li><a href="#functions-and-reusable-analysis" id="toc-functions-and-reusable-analysis" class="nav-link" data-scroll-target="#functions-and-reusable-analysis">18. Functions and Reusable Analysis</a></li>
+  <li><a href="#percentage-change-function" id="toc-percentage-change-function" class="nav-link" data-scroll-target="#percentage-change-function">19. Percentage-Change Function</a></li>
+  <li><a href="#interpretation-still-depends-on-context" id="toc-interpretation-still-depends-on-context" class="nav-link" data-scroll-target="#interpretation-still-depends-on-context">20. Interpretation Still Depends on Context</a></li>
+  <li><a href="#classification-function" id="toc-classification-function" class="nav-link" data-scroll-target="#classification-function">21. Classification Function</a></li>
+  <li><a href="#integrated-workflow" id="toc-integrated-workflow" class="nav-link" data-scroll-target="#integrated-workflow">22. Integrated Workflow</a></li>
+  <li><a href="#integrated-economic-exercise" id="toc-integrated-economic-exercise" class="nav-link" data-scroll-target="#integrated-economic-exercise">23. Integrated Economic Exercise</a></li>
+  <li><a href="#debugging-as-analytical-practice" id="toc-debugging-as-analytical-practice" class="nav-link" data-scroll-target="#debugging-as-analytical-practice">24. Debugging as Analytical Practice</a></li>
+  <li><a href="#common-error-missing-colon" id="toc-common-error-missing-colon" class="nav-link" data-scroll-target="#common-error-missing-colon">25. Common Error: Missing Colon</a></li>
+  <li><a href="#common-error-incorrect-indentation" id="toc-common-error-incorrect-indentation" class="nav-link" data-scroll-target="#common-error-incorrect-indentation">26. Common Error: Incorrect Indentation</a></li>
+  <li><a href="#common-error-assignment-vs-equality" id="toc-common-error-assignment-vs-equality" class="nav-link" data-scroll-target="#common-error-assignment-vs-equality">27. Common Error: Assignment vs Equality</a></li>
+  <li><a href="#common-error-forgetting-return" id="toc-common-error-forgetting-return" class="nav-link" data-scroll-target="#common-error-forgetting-return">28. Common Error: Forgetting <code>return</code></a></li>
+  <li><a href="#a-simple-debugging-checklist" id="toc-a-simple-debugging-checklist" class="nav-link" data-scroll-target="#a-simple-debugging-checklist">29. A Simple Debugging Checklist</a></li>
+  <li><a href="#responsible-use-of-ai" id="toc-responsible-use-of-ai" class="nav-link" data-scroll-target="#responsible-use-of-ai">30. Responsible Use of AI</a></li>
+  <li><a href="#how-to-verify-ai-generated-code" id="toc-how-to-verify-ai-generated-code" class="nav-link" data-scroll-target="#how-to-verify-ai-generated-code">31. How to Verify AI-Generated Code</a></li>
+  <li><a href="#deliberately-flawed-ai-example" id="toc-deliberately-flawed-ai-example" class="nav-link" data-scroll-target="#deliberately-flawed-ai-example">32. Deliberately Flawed AI Example</a></li>
+  <li><a href="#in-class-practice" id="toc-in-class-practice" class="nav-link" data-scroll-target="#in-class-practice">33. In-Class Practice</a></li>
+  <li><a href="#week-3-assignment" id="toc-week-3-assignment" class="nav-link" data-scroll-target="#week-3-assignment">34. Week 3 Assignment</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">35. Key Takeaways</a></li>
+  <li><a href="#before-week-4" id="toc-before-week-4" class="nav-link" data-scroll-target="#before-week-4">36. Before Week 4</a></li>
   </ul>
 </nav>
     </div>
@@ -255,7 +229,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 3 — Python Fundamentals for Economic Analysis</h1>
+<h1 class="title">Week 3 — Programming Logic and Automation for Economic Analysis</h1>
 </div>
 
 
@@ -272,718 +246,719 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="week-3-python-fundamentals-thinking-computationally-as-an-economist" class="level1">
-<h1>Week 3 — Python Fundamentals: Thinking Computationally as an Economist</h1>
-<p>Weeks 1 and 2 focused on:</p>
-<ul>
-<li>removing fear</li>
-<li>understanding workflow</li>
-<li>setting up tools</li>
-<li>loading data</li>
-</ul>
-<p>This week is different.</p>
-<p>This is the week students stop behaving like:</p>
-<pre class="text"><code>users of software</code></pre>
-<p>and start behaving like:</p>
-<pre class="text"><code>people who instruct computers</code></pre>
-<p>That transition matters enormously.</p>
+<p>In Week 1, we learned how to run Python code and perform economic calculations.</p>
+<p>In Week 2, we learned how data are organized and how to import and inspect a real dataset.</p>
+<p>Week 3 moves from:</p>
+<pre class="text"><code>running individual commands</code></pre>
+<p>to:</p>
+<pre class="text"><code>designing logical and reusable analytical workflows</code></pre>
+<p>The central question is:</p>
+<blockquote class="blockquote">
+<p>How can economists translate rules, classifications, and repeated calculations into instructions that a computer can execute?</p>
+</blockquote>
 <hr>
-</section>
-<section id="learning-objectives" class="level1">
-<h1>1. Learning Objectives</h1>
+<section id="learning-outcomes" class="level1">
+<h1>1. Learning Outcomes</h1>
 <p>By the end of this week, students should be able to:</p>
 <ul>
-<li>create variables</li>
-<li>understand data types</li>
-<li>work with lists</li>
-<li>use conditional logic</li>
-<li>automate repetition using loops</li>
+<li>describe an economic problem as inputs, rules, processes, and outputs</li>
+<li>use comparison and logical operators</li>
+<li>write <code>if</code>, <code>elif</code>, and <code>else</code> statements</li>
+<li>test boundary values and check whether a rule behaves correctly</li>
+<li>process several observations using loops</li>
 <li>create reusable functions</li>
-<li>structure economic problems computationally</li>
+<li>combine conditions, loops, and functions</li>
+<li>identify and correct common Python errors</li>
+<li>interpret automated analytical outputs</li>
+<li>evaluate AI-generated code critically</li>
 </ul>
 <hr>
 </section>
-<section id="thinking-like-a-computational-economist" class="level1">
-<h1>2. Thinking Like a Computational Economist</h1>
-<p>Programming is not only about code.</p>
-<p>Programming is about structured thinking.</p>
-<p>Economists constantly ask questions like:</p>
-<ul>
-<li>If inflation increases, what happens to real wages?</li>
-<li>If income falls below the poverty line, who becomes poor?</li>
-<li>If exports decline for several years, what patterns emerge?</li>
-<li>How can repetitive calculations be automated?</li>
-</ul>
-<p>Computers require explicit instructions.</p>
-<p>Programming teaches us how to:</p>
-<ul>
-<li>break problems into steps</li>
-<li>organize logic clearly</li>
-<li>automate analysis</li>
-<li>reduce human error</li>
-</ul>
-<hr>
-</section>
-<section id="variables" class="level1">
-<h1>3. Variables</h1>
-<p>A variable stores information.</p>
-<p>Example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> <span class="fl">46.4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Here:</p>
-<ul>
-<li><code>inflation</code> is the variable name</li>
-<li><code>46.4</code> is the stored value</li>
-</ul>
-<hr>
-</section>
-<section id="rules-for-naming-variables" class="level1">
-<h1>Rules for Naming Variables</h1>
-<p>Good examples:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>gdp_growth</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>exchange_rate</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>inflation_2024</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Bad examples:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="er">inflation</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>exchange<span class="op">-</span>rate</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>my variable</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Readable code matters.</p>
-<hr>
-</section>
-<section id="why-variables-matter" class="level1">
-<h1>Why Variables Matter</h1>
-<p>Without variables:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>((<span class="dv">120</span> <span class="op">-</span> <span class="dv">100</span>) <span class="op">/</span> <span class="dv">100</span>) <span class="op">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>is difficult to interpret.</p>
-<p>With variables:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>old_price <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>new_price <span class="op">=</span> <span class="dv">120</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> ((new_price <span class="op">-</span> old_price) <span class="op">/</span> old_price) <span class="op">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>the meaning becomes clearer.</p>
-<hr>
-</section>
-<section id="data-types" class="level1">
-<h1>4. Data Types</h1>
-<p>Different kinds of information are stored differently.</p>
-<hr>
-</section>
-<section id="integer" class="level1">
-<h1>Integer</h1>
-<p>Whole numbers:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>population <span class="op">=</span> <span class="dv">22</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="float" class="level1">
-<h1>Float</h1>
-<p>Decimal numbers:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> <span class="fl">46.4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="string" class="level1">
-<h1>String</h1>
-<p>Text values:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>country <span class="op">=</span> <span class="st">"Sri Lanka"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="checking-data-type" class="level1">
-<h1>Checking Data Type</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(inflation)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Expected output:</p>
-<pre class="text"><code>float</code></pre>
-<hr>
-</section>
-<section id="example" class="level1">
-<h1>Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>gdp_growth <span class="op">=</span> <span class="fl">5.2</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>country_name <span class="op">=</span> <span class="st">"Sri Lanka"</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>year <span class="op">=</span> <span class="dv">2025</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(gdp_growth))</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(country_name))</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(year))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="lists-and-collections-of-data" class="level1">
-<h1>5. Lists and Collections of Data</h1>
-<p>Lists allow us to store multiple values together.</p>
-<p>Example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>inflation_rates <span class="op">=</span> [<span class="fl">4.6</span>, <span class="fl">6.0</span>, <span class="fl">46.4</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="why-lists-matter" class="level1">
-<h1>Why Lists Matter</h1>
-<p>Economists often work with:</p>
-<ul>
-<li>multiple years</li>
-<li>multiple countries</li>
-<li>multiple households</li>
-<li>multiple firms</li>
-</ul>
-<p>Lists help organize repeated information.</p>
-<hr>
-</section>
-<section id="accessing-list-elements" class="level1">
-<h1>Accessing List Elements</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>inflation_rates[<span class="dv">0</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Output:</p>
-<pre class="text"><code>4.6</code></pre>
-<hr>
-</section>
-<section id="important-idea" class="level1">
-<h1>Important Idea</h1>
-<p>Python counting starts from zero.</p>
+<section id="two-hour-learning-plan" class="level1">
+<h1>2. Two-Hour Learning Plan</h1>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Position</th>
-<th>Value</th>
+<th>Time</th>
+<th>Section</th>
+<th>Main Focus</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>0</td>
-<td>4.6</td>
+<td>0–10 minutes</td>
+<td>Diagnostic recap</td>
+<td>Variables, lists, and DataFrames</td>
 </tr>
 <tr class="even">
-<td>1</td>
-<td>6.0</td>
+<td>10–25 minutes</td>
+<td>Computational thinking</td>
+<td>Input, rule, process, and output</td>
 </tr>
 <tr class="odd">
-<td>2</td>
-<td>46.4</td>
+<td>25–50 minutes</td>
+<td>Conditional logic</td>
+<td>Comparisons, <code>if</code>, <code>elif</code>, and <code>else</code></td>
+</tr>
+<tr class="even">
+<td>50–75 minutes</td>
+<td>Loops</td>
+<td>Applying rules to several observations</td>
+</tr>
+<tr class="odd">
+<td>75–100 minutes</td>
+<td>Functions</td>
+<td>Reusable economic calculations</td>
+</tr>
+<tr class="even">
+<td>100–115 minutes</td>
+<td>Integrated application</td>
+<td>Conditions, loops, functions, and LFS data</td>
+</tr>
+<tr class="odd">
+<td>115–120 minutes</td>
+<td>Summary</td>
+<td>Debugging, AI verification, and assignment</td>
 </tr>
 </tbody>
 </table>
-<hr>
-</section>
-<section id="length-of-list" class="level1">
-<h1>Length of List</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(inflation_rates)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Expected output:</p>
-<pre class="text"><code>3</code></pre>
-<hr>
-</section>
-<section id="adding-values-to-lists" class="level1">
-<h1>Adding Values to Lists</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>inflation_rates.append(<span class="fl">12.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="example-1" class="level1">
-<h1>Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>inflation_rates <span class="op">=</span> [<span class="fl">4.6</span>, <span class="fl">6.0</span>, <span class="fl">46.4</span>]</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inflation_rates)</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>inflation_rates.append(<span class="fl">12.5</span>)</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inflation_rates)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="economic-calculations-using-lists" class="level1">
-<h1>6. Economic Calculations Using Lists</h1>
-<p>Suppose we have GDP growth rates over several years.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>gdp_growth <span class="op">=</span> [<span class="fl">3.5</span>, <span class="fl">5.2</span>, <span class="op">-</span><span class="fl">7.8</span>, <span class="fl">2.1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="average-gdp-growth" class="level1">
-<h1>Average GDP Growth</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>average_growth <span class="op">=</span> <span class="bu">sum</span>(gdp_growth) <span class="op">/</span> <span class="bu">len</span>(gdp_growth)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(average_growth)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="interpretation" class="level1">
-<h1>Interpretation</h1>
-<p>This calculates the average GDP growth over the period.</p>
-<hr>
-</section>
-<section id="another-example" class="level1">
-<h1>Another Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>exports <span class="op">=</span> [<span class="dv">100</span>, <span class="dv">120</span>, <span class="dv">150</span>, <span class="dv">130</span>]</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>maximum_exports <span class="op">=</span> <span class="bu">max</span>(exports)</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(maximum_exports)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="important-functions" class="level1">
-<h1>Important Functions</h1>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Function</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>sum()</code></td>
-<td>Adds values</td>
-</tr>
-<tr class="even">
-<td><code>len()</code></td>
-<td>Counts items</td>
-</tr>
-<tr class="odd">
-<td><code>max()</code></td>
-<td>Largest value</td>
-</tr>
-<tr class="even">
-<td><code>min()</code></td>
-<td>Smallest value</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="conditional-statements" class="level1">
-<h1>7. Conditional Statements</h1>
-<p>Conditional statements allow Python to make decisions.</p>
-<p>This is one of the most important ideas in programming.</p>
-<hr>
-</section>
-<section id="example-inflation-classification" class="level1">
-<h1>Example: Inflation Classification</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> <span class="dv">12</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span>:</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"High inflation"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="interpretation-1" class="level1">
-<h1>Interpretation</h1>
-<p>Python checks:</p>
-<pre class="text"><code>Is inflation greater than 10?</code></pre>
-<p>If yes:</p>
-<pre class="text"><code>Display "High inflation"</code></pre>
-<hr>
-</section>
-<section id="using-else" class="level1">
-<h1>Using Else</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> <span class="dv">6</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span>:</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"High inflation"</span>)</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Moderate inflation"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="using-elif" class="level1">
-<h1>Using Elif</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> <span class="dv">25</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&lt;</span> <span class="dv">5</span>:</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Low inflation"</span>)</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> inflation <span class="op">&lt;</span> <span class="dv">15</span>:</span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Moderate inflation"</span>)</span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"High inflation"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="economics-example-poverty-classification" class="level1">
-<h1>Economics Example: Poverty Classification</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>income <span class="op">=</span> <span class="dv">12000</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>poverty_line <span class="op">=</span> <span class="dv">15000</span></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> income <span class="op">&lt;</span> poverty_line:</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Poor household"</span>)</span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Non-poor household"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="decision-making-with-python" class="level1">
-<h1>8. Decision-Making with Python</h1>
-<p>Economics often involves classification.</p>
-<p>Examples:</p>
-<ul>
-<li>poor vs non-poor</li>
-<li>employed vs unemployed</li>
-<li>inflationary vs stable economy</li>
-<li>high-risk vs low-risk borrower</li>
-</ul>
-<p>Conditional logic allows us to automate these classifications.</p>
-<hr>
-</section>
-<section id="example-exchange-rate-warning" class="level1">
-<h1>Example: Exchange Rate Warning</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>exchange_rate_change <span class="op">=</span> <span class="dv">18</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> exchange_rate_change <span class="op">&gt;</span> <span class="dv">15</span>:</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Large depreciation detected"</span>)</span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Exchange rate relatively stable"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="loops-and-repetition" class="level1">
-<h1>9. Loops and Repetition</h1>
-<p>Loops allow us to repeat tasks automatically.</p>
-<p>This is extremely important in data analysis.</p>
-<p>Without loops, repetitive work becomes exhausting.</p>
-<hr>
-</section>
-<section id="example-2" class="level1">
-<h1>Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>inflation_rates <span class="op">=</span> [<span class="fl">4.6</span>, <span class="fl">6.0</span>, <span class="fl">46.4</span>]</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> rate <span class="kw">in</span> inflation_rates:</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(rate)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="interpretation-2" class="level1">
-<h1>Interpretation</h1>
-<p>Python:</p>
-<ul>
-<li>takes each value</li>
-<li>stores it temporarily as <code>rate</code></li>
-<li>prints it</li>
-<li>repeats until the list ends</li>
-</ul>
-<hr>
-</section>
-<section id="another-example-1" class="level1">
-<h1>Another Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>gdp_growth <span class="op">=</span> [<span class="fl">3.5</span>, <span class="fl">5.2</span>, <span class="op">-</span><span class="fl">7.8</span>, <span class="fl">2.1</span>]</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> growth <span class="kw">in</span> gdp_growth:</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> growth <span class="op">&lt;</span> <span class="dv">0</span>:</span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Recession year"</span>)</span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Positive growth"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="why-loops-matter" class="level1">
-<h1>Why Loops Matter</h1>
-<p>Loops are essential for:</p>
-<ul>
-<li>handling large datasets</li>
-<li>repetitive calculations</li>
-<li>automation</li>
-<li>machine learning workflows</li>
-</ul>
-<hr>
-</section>
-<section id="functions" class="level1">
-<h1>10. Functions</h1>
-<p>Functions allow us to create reusable code.</p>
-<p>This is critical in professional programming.</p>
-<hr>
-</section>
-<section id="example-function" class="level1">
-<h1>Example Function</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_growth(old_value, new_value):</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    growth_rate <span class="op">=</span> ((new_value <span class="op">-</span> old_value) <span class="op">/</span> old_value) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> growth_rate</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="using-the-function" class="level1">
-<h1>Using the Function</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> calculate_growth(<span class="dv">100</span>, <span class="dv">120</span>)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Expected output:</p>
-<pre class="text"><code>20.0</code></pre>
-<hr>
-</section>
-<section id="why-functions-matter" class="level1">
-<h1>Why Functions Matter</h1>
-<p>Functions:</p>
-<ul>
-<li>reduce repetition</li>
-<li>improve readability</li>
-<li>improve organization</li>
-<li>reduce errors</li>
-</ul>
-<hr>
-</section>
-<section id="economic-example-inflation-function" class="level1">
-<h1>Economic Example: Inflation Function</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> inflation_rate(old_cpi, new_cpi):</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    inflation <span class="op">=</span> ((new_cpi <span class="op">-</span> old_cpi) <span class="op">/</span> old_cpi) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> inflation</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="using-the-function-1" class="level1">
-<h1>Using the Function</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>rate <span class="op">=</span> inflation_rate(<span class="dv">200</span>, <span class="dv">240</span>)</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rate)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="open-the-week-3-live-notebook" class="level1">
-<h1>11. Open the Week 3 Live Notebook</h1>
+<h1>3. Open the Week 3 Live Notebook</h1>
 <p><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week3/ECN4199_Week3_Live_Notebook.ipynb">Open Week 3 Live Notebook — Save a Copy Before Editing</a></p>
-<p>Inside Google Colab, select:</p>
+<p>Inside Google Colab:</p>
 <pre class="text"><code>File -&gt; Save a copy in Drive</code></pre>
-<p>Complete all lecture examples in your own saved copy.</p>
+<p>Rename your copy:</p>
+<pre class="text"><code>Week03_IndexNumber_Name.ipynb</code></pre>
 <hr>
 </section>
-<section id="live-coding-session" class="level1">
-<h1>12. Live Coding Session</h1>
-<section id="step-1-create-variables" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-create-variables">Step 1 — Create Variables</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>gdp_2023 <span class="op">=</span> <span class="dv">5000</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>gdp_2024 <span class="op">=</span> <span class="dv">5400</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-2-calculate-growth" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-calculate-growth">Step 2 — Calculate Growth</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>gdp_growth <span class="op">=</span> ((gdp_2024 <span class="op">-</span> gdp_2023) <span class="op">/</span> gdp_2023) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gdp_growth)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-3-create-list-of-inflation-rates" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-create-list-of-inflation-rates">Step 3 — Create List of Inflation Rates</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>inflation_rates <span class="op">=</span> [<span class="fl">4.6</span>, <span class="fl">6.0</span>, <span class="fl">46.4</span>, <span class="fl">12.5</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-4-calculate-average-inflation" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-calculate-average-inflation">Step 4 — Calculate Average Inflation</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>average_inflation <span class="op">=</span> <span class="bu">sum</span>(inflation_rates) <span class="op">/</span> <span class="bu">len</span>(inflation_rates)</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(average_inflation)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-5-use-conditional-logic" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-use-conditional-logic">Step 5 — Use Conditional Logic</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> average_inflation <span class="op">&gt;</span> <span class="dv">10</span>:</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Inflation problem detected"</span>)</span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Inflation relatively stable"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-6-create-loop" class="level2">
-<h2 class="anchored" data-anchor-id="step-6-create-loop">Step 6 — Create Loop</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> rate <span class="kw">in</span> inflation_rates:</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(rate)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-7-create-reusable-function" class="level2">
-<h2 class="anchored" data-anchor-id="step-7-create-reusable-function">Step 7 — Create Reusable Function</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> growth_rate(old, new):</span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>    growth <span class="op">=</span> ((new <span class="op">-</span> old) <span class="op">/</span> old) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> growth</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-8-test-function" class="level2">
-<h2 class="anchored" data-anchor-id="step-8-test-function">Step 8 — Test Function</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>growth_rate(<span class="dv">200</span>, <span class="dv">250</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="diagnostic-recap" class="level1">
+<h1>4. Diagnostic Recap</h1>
+<p>Variables, data types, and lists were introduced in Weeks 1 and 2.</p>
+<p>Complete this diagnostic without copying an example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>growth_rates <span class="op">=</span> [<span class="fl">3.5</span>, <span class="fl">5.2</span>, <span class="op">-</span><span class="fl">7.8</span>, <span class="fl">2.1</span>]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>average_growth <span class="op">=</span> <span class="bu">sum</span>(growth_rates) <span class="op">/</span> <span class="bu">len</span>(growth_rates)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>lowest_growth <span class="op">=</span> <span class="bu">min</span>(growth_rates)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(average_growth)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(lowest_growth)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="check-your-understanding" class="level2">
+<h2 class="anchored" data-anchor-id="check-your-understanding">Check Your Understanding</h2>
+<ol type="1">
+<li>What type of object is <code>growth_rates</code>?</li>
+<li>Which value indicates a recession?</li>
+<li>Why is the average not enough to describe the full period?</li>
+</ol>
+<p>The purpose of this recap is to confirm the foundation, not reteach it.</p>
 <hr>
 </section>
 </section>
-<section id="interactive-mini-quiz" class="level1">
-<h1>13. Interactive Mini Quiz</h1>
-<p>Run the following inside the notebook.</p>
-<hr>
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is a variable? A/B/C/D : "</span>)</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"B"</span>:</span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! A variable stores information."</span>)</span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="computational-thinking" class="level1">
+<h1>5. Computational Thinking</h1>
+<p>Programming is structured problem solving.</p>
+<p>A useful computational model is:</p>
+<pre class="text"><code>Input -&gt; Rule -&gt; Process -&gt; Output</code></pre>
+<section id="economic-example-inflation-classification" class="level2">
+<h2 class="anchored" data-anchor-id="economic-example-inflation-classification">Economic Example: Inflation Classification</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Input</td>
+<td>Inflation rate</td>
+</tr>
+<tr class="even">
+<td>Rule</td>
+<td>Below 5 is low; 5–15 is moderate; above 15 is high</td>
+</tr>
+<tr class="odd">
+<td>Process</td>
+<td>Compare the observed rate with each threshold</td>
+</tr>
+<tr class="even">
+<td>Output</td>
+<td>Inflation classification</td>
+</tr>
+</tbody>
+</table>
+<p>Before writing code, an analyst should be able to explain the rule clearly in words.</p>
 <hr>
 </section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Which symbol means greater than? "</span>)</span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer <span class="op">==</span> <span class="st">"&gt;"</span>:</span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct!"</span>)</span>
-<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
 </section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What does a loop do? A/B/C/D : "</span>)</span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"B"</span>:</span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! Loops repeat tasks."</span>)</span>
-<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-</section>
-<section id="self-assessment-activity" class="level1">
-<h1>14. Self-Assessment Activity</h1>
-<p>Students should complete the following tasks.</p>
-<hr>
-<section id="task-1-create-variables" class="level2">
-<h2 class="anchored" data-anchor-id="task-1-create-variables">Task 1 — Create Variables</h2>
-<p>Create variables for:</p>
+<section id="from-economic-reasoning-to-explicit-rules" class="level1">
+<h1>6. From Economic Reasoning to Explicit Rules</h1>
+<p>Economists regularly use rules such as:</p>
 <ul>
-<li>exports</li>
-<li>imports</li>
-<li>exchange rate</li>
+<li>income below a poverty line indicates monetary poverty</li>
+<li>negative GDP growth indicates economic contraction</li>
+<li>unemployment requires being without work and actively seeking work</li>
+<li>inflation above a target may require policy attention</li>
+<li>a loan applicant may be classified according to several risk indicators</li>
 </ul>
-<p>Print all values.</p>
+<p>A computer does not understand the economic meaning automatically.</p>
+<p>It follows only the exact rules that we specify.</p>
+<p>Therefore:</p>
+<pre class="text"><code>unclear rule -&gt; unreliable code -&gt; misleading conclusion</code></pre>
 <hr>
 </section>
-<section id="task-2-create-gdp-growth-list" class="level2">
-<h2 class="anchored" data-anchor-id="task-2-create-gdp-growth-list">Task 2 — Create GDP Growth List</h2>
-<p>Create a list of GDP growth rates.</p>
-<p>Calculate:</p>
+<section id="comparison-operators" class="level1">
+<h1>7. Comparison Operators</h1>
+<p>Comparison operators produce either:</p>
+<pre class="text"><code>True</code></pre>
+<p>or:</p>
+<pre class="text"><code>False</code></pre>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>&gt;</code></td>
+<td>Greater than</td>
+<td><code>inflation &gt; 10</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;</code></td>
+<td>Less than</td>
+<td><code>income &lt; poverty_line</code></td>
+</tr>
+<tr class="odd">
+<td><code>&gt;=</code></td>
+<td>Greater than or equal to</td>
+<td><code>age &gt;= 15</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;=</code></td>
+<td>Less than or equal to</td>
+<td><code>inflation &lt;= 5</code></td>
+</tr>
+<tr class="odd">
+<td><code>==</code></td>
+<td>Equal to</td>
+<td><code>status == "Unemployed"</code></td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td>Not equal to</td>
+<td><code>sector != "Urban"</code></td>
+</tr>
+</tbody>
+</table>
+<section id="try-it" class="level2">
+<h2 class="anchored" data-anchor-id="try-it">Try It</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inflation <span class="op">&gt;</span> <span class="dv">10</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inflation <span class="op">&lt;</span> <span class="dv">5</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inflation <span class="op">==</span> <span class="dv">12</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="logical-operators" class="level1">
+<h1>8. Logical Operators</h1>
+<p>Sometimes one condition is not enough.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>and</code></td>
+<td>Both conditions must be true</td>
+</tr>
+<tr class="even">
+<td><code>or</code></td>
+<td>At least one condition must be true</td>
+</tr>
+<tr class="odd">
+<td><code>not</code></td>
+<td>Reverses a condition</td>
+</tr>
+</tbody>
+</table>
+<section id="example-labour-force-classification" class="level2">
+<h2 class="anchored" data-anchor-id="example-labour-force-classification">Example: Labour Force Classification</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>has_job <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>seeking_work <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> has_job <span class="kw">and</span> seeking_work:</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Unemployed"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="example-policy-alert" class="level2">
+<h2 class="anchored" data-anchor-id="example-policy-alert">Example: Policy Alert</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> <span class="dv">18</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>growth <span class="op">=</span> <span class="op">-</span><span class="dv">2</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">15</span> <span class="kw">or</span> growth <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Macroeconomic policy attention required"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="conditional-statements" class="level1">
+<h1>9. Conditional Statements</h1>
+<p>Conditional statements allow Python to make rule-based decisions.</p>
+<p>The basic structure is:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> condition:</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    action</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> another_condition:</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    another_action</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    final_action</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Python evaluates the conditions from top to bottom.</p>
+<hr>
+</section>
+<section id="inflation-classification" class="level1">
+<h1>10. Inflation Classification</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    classification <span class="op">=</span> <span class="st">"Low inflation"</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> inflation <span class="op">&lt;=</span> <span class="dv">15</span>:</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    classification <span class="op">=</span> <span class="st">"Moderate inflation"</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    classification <span class="op">=</span> <span class="st">"High inflation"</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classification)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
+<p>The value <code>12</code> is:</p>
 <ul>
-<li>average growth</li>
-<li>maximum growth</li>
-<li>minimum growth</li>
+<li>not below <code>5</code></li>
+<li>less than or equal to <code>15</code></li>
 </ul>
+<p>Therefore, Python returns:</p>
+<pre class="text"><code>Moderate inflation</code></pre>
 <hr>
 </section>
-<section id="task-3-inflation-classification" class="level2">
-<h2 class="anchored" data-anchor-id="task-3-inflation-classification">Task 3 — Inflation Classification</h2>
-<p>Write conditional logic:</p>
+</section>
+<section id="why-the-order-of-conditions-matters" class="level1">
+<h1>11. Why the Order of Conditions Matters</h1>
+<p>Consider this incorrect structure:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&lt;=</span> <span class="dv">15</span>:</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Moderate inflation"</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> inflation <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Low inflation"</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"High inflation"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The first condition is already true when inflation is <code>3</code>.</p>
+<p>Python never reaches the second condition.</p>
+<p>The narrower condition should be checked first:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Low inflation"</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> inflation <span class="op">&lt;=</span> <span class="dv">15</span>:</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Moderate inflation"</span>)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"High inflation"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="testing-boundary-values" class="level1">
+<h1>12. Testing Boundary Values</h1>
+<p>Analysts should test the values where classifications change.</p>
+<p>For the inflation rule, test:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>test_rates <span class="op">=</span> [<span class="fl">4.9</span>, <span class="dv">5</span>, <span class="dv">15</span>, <span class="fl">15.1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ask:</p>
 <ul>
-<li>inflation below 5 → “Low inflation”</li>
-<li>inflation between 5 and 15 → “Moderate inflation”</li>
-<li>inflation above 15 → “High inflation”</li>
+<li>How should exactly <code>5</code> be classified?</li>
+<li>How should exactly <code>15</code> be classified?</li>
+<li>Does the written policy rule agree with the code?</li>
 </ul>
+<p>Boundary testing is an important part of verification.</p>
 <hr>
 </section>
-<section id="task-4-loop-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="task-4-loop-exercise">Task 4 — Loop Exercise</h2>
-<p>Create a loop that prints:</p>
-<pre class="text"><code>Positive growth</code></pre>
-<p>or</p>
-<pre class="text"><code>Negative growth</code></pre>
-<p>for each GDP growth value.</p>
-<hr>
-</section>
-<section id="task-5-create-function" class="level2">
-<h2 class="anchored" data-anchor-id="task-5-create-function">Task 5 — Create Function</h2>
-<p>Create a reusable function that calculates percentage change.</p>
-<p>Formula:</p>
-<pre class="text"><code>[(new - old) / old] × 100</code></pre>
-<hr>
-</section>
-<section id="task-6-apply-function" class="level2">
-<h2 class="anchored" data-anchor-id="task-6-apply-function">Task 6 — Apply Function</h2>
-<p>Apply your function to:</p>
+<section id="economic-example-poverty-classification" class="level1">
+<h1>13. Economic Example: Poverty Classification</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>income <span class="op">=</span> <span class="dv">12000</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>poverty_line <span class="op">=</span> <span class="dv">15000</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> income <span class="op">&lt;</span> poverty_line:</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    poverty_status <span class="op">=</span> <span class="st">"Below poverty line"</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    poverty_status <span class="op">=</span> <span class="st">"At or above poverty line"</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(poverty_status)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="critical-note" class="level2">
+<h2 class="anchored" data-anchor-id="critical-note">Critical Note</h2>
+<p>This is a simplified monetary classification.</p>
+<p>Real poverty analysis may also consider:</p>
 <ul>
-<li>GDP</li>
-<li>CPI</li>
-<li>exchange rate</li>
+<li>household size</li>
+<li>cost-of-living differences</li>
+<li>access to education and health</li>
+<li>housing conditions</li>
+<li>multidimensional deprivation</li>
 </ul>
-<p>Interpret each result.</p>
+<p>Code can automate a rule, but the analyst must evaluate whether the rule is appropriate.</p>
 <hr>
 </section>
 </section>
-<section id="submission-instructions" class="level1">
-<h1>15. Submission Instructions</h1>
-<p>Submit notebook including:</p>
+<section id="loops-and-automation" class="level1">
+<h1>14. Loops and Automation</h1>
+<p>A loop applies an operation repeatedly.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>growth_rates <span class="op">=</span> [<span class="fl">3.5</span>, <span class="fl">5.2</span>, <span class="op">-</span><span class="fl">7.8</span>, <span class="fl">2.1</span>]</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> growth <span class="kw">in</span> growth_rates:</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(growth)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Python takes one value at a time and temporarily assigns it to <code>growth</code>.</p>
+<hr>
+</section>
+<section id="applying-a-rule-to-several-observations" class="level1">
+<h1>15. Applying a Rule to Several Observations</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>growth_rates <span class="op">=</span> [<span class="fl">3.5</span>, <span class="fl">5.2</span>, <span class="op">-</span><span class="fl">7.8</span>, <span class="fl">2.1</span>]</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> growth <span class="kw">in</span> growth_rates:</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> growth <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(growth, <span class="st">"Recession"</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> growth <span class="op">&lt;</span> <span class="dv">3</span>:</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(growth, <span class="st">"Slow growth"</span>)</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(growth, <span class="st">"Strong growth"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This combines:</p>
 <ul>
-<li>variables</li>
-<li>list calculations</li>
-<li>conditional statements</li>
-<li>loops</li>
-<li>reusable functions</li>
-<li>written interpretations</li>
+<li>a list</li>
+<li>a loop</li>
+<li>conditional logic</li>
+<li>classification</li>
 </ul>
 <hr>
 </section>
-<section id="file-naming-convention" class="level1">
-<h1>File Naming Convention</h1>
-<pre class="text"><code>Week3_YourName.ipynb</code></pre>
+<section id="storing-results" class="level1">
+<h1>16. Storing Results</h1>
+<p>Printing is useful for learning, but analysts often need to save results.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>growth_rates <span class="op">=</span> [<span class="fl">3.5</span>, <span class="fl">5.2</span>, <span class="op">-</span><span class="fl">7.8</span>, <span class="fl">2.1</span>]</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>classifications <span class="op">=</span> []</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> growth <span class="kw">in</span> growth_rates:</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> growth <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>        label <span class="op">=</span> <span class="st">"Recession"</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> growth <span class="op">&lt;</span> <span class="dv">3</span>:</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>        label <span class="op">=</span> <span class="st">"Slow growth"</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>        label <span class="op">=</span> <span class="st">"Strong growth"</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>    classifications.append(label)</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classifications)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The output can now be reused later.</p>
 <hr>
 </section>
-<section id="submission-link" class="level1">
-<h1>Submission Link</h1>
+<section id="connecting-to-the-week-2-lfs-dataset" class="level1">
+<h1>17. Connecting to the Week 2 LFS Dataset</h1>
+<p>In Week 2, the Labour Force Survey dataset was stored in a DataFrame called:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Select the first ten employment-status values:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>statuses <span class="op">=</span> <span class="bu">list</span>(data[<span class="st">"Employment_Status"</span>].head(<span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Apply a rule:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> status <span class="kw">in</span> statuses:</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> status <span class="op">==</span> <span class="st">"Employed"</span>:</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Currently employed"</span>)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> status <span class="op">==</span> <span class="st">"Unemployed"</span>:</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Without work and seeking employment"</span>)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Outside the labour force"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="important-distinction" class="level2">
+<h2 class="anchored" data-anchor-id="important-distinction">Important Distinction</h2>
+<p>Loops are valuable for learning programming logic.</p>
+<p>For large DataFrames, later lessons will introduce more efficient pandas methods.</p>
+<hr>
+</section>
+</section>
+<section id="functions-and-reusable-analysis" class="level1">
+<h1>18. Functions and Reusable Analysis</h1>
+<p>A function packages logic into a reusable tool.</p>
+<pre class="text"><code>Input -&gt; Calculation -&gt; Returned result</code></pre>
+<p>Basic structure:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> function_name(input_value):</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> calculation</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="percentage-change-function" class="level1">
+<h1>19. Percentage-Change Function</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> percentage_change(old_value, new_value):</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    change <span class="op">=</span> ((new_value <span class="op">-</span> old_value) <span class="op">/</span> old_value) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> change</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Apply it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>gdp_change <span class="op">=</span> percentage_change(<span class="dv">5000</span>, <span class="dv">5400</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> percentage_change(<span class="dv">200</span>, <span class="dv">240</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>exchange_rate_change <span class="op">=</span> percentage_change(<span class="dv">300</span>, <span class="dv">330</span>)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gdp_change)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inflation)</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(exchange_rate_change)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The same verified formula is reused for several economic indicators.</p>
+<hr>
+</section>
+<section id="interpretation-still-depends-on-context" class="level1">
+<h1>20. Interpretation Still Depends on Context</h1>
+<p>The function calculates percentage change.</p>
+<p>It does not automatically know the economic meaning.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Application</th>
+<th>Positive Result May Mean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GDP</td>
+<td>Economic growth</td>
+</tr>
+<tr class="even">
+<td>CPI</td>
+<td>Inflation</td>
+</tr>
+<tr class="odd">
+<td>LKR per USD exchange rate</td>
+<td>Currency depreciation</td>
+</tr>
+</tbody>
+</table>
+<p>The same mathematical output can require different economic interpretation.</p>
+<hr>
+</section>
+<section id="classification-function" class="level1">
+<h1>21. Classification Function</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classify_growth(growth):</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> growth <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Recession"</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> growth <span class="op">&lt;</span> <span class="dv">3</span>:</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Slow growth"</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Strong growth"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use the function:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classify_growth(<span class="op">-</span><span class="fl">7.8</span>))</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classify_growth(<span class="fl">2.1</span>))</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(classify_growth(<span class="fl">5.2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="integrated-workflow" class="level1">
+<h1>22. Integrated Workflow</h1>
+<p>Combine a list, loop, and function:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>growth_rates <span class="op">=</span> [<span class="fl">3.5</span>, <span class="fl">5.2</span>, <span class="op">-</span><span class="fl">7.8</span>, <span class="fl">2.1</span>]</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> growth <span class="kw">in</span> growth_rates:</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    category <span class="op">=</span> classify_growth(growth)</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(growth, category)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The workflow is:</p>
+<pre class="text"><code>several inputs -&gt; repeated function call -&gt; classification output</code></pre>
+<hr>
+</section>
+<section id="integrated-economic-exercise" class="level1">
+<h1>23. Integrated Economic Exercise</h1>
+<p>You are given:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>old_values <span class="op">=</span> [<span class="dv">5000</span>, <span class="dv">200</span>, <span class="dv">300</span>]</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>new_values <span class="op">=</span> [<span class="dv">5400</span>, <span class="dv">240</span>, <span class="dv">330</span>]</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>indicators <span class="op">=</span> [<span class="st">"GDP"</span>, <span class="st">"CPI"</span>, <span class="st">"Exchange rate"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use a loop and the <code>percentage_change()</code> function:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> indicator, old, new <span class="kw">in</span> <span class="bu">zip</span>(indicators, old_values, new_values):</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    change <span class="op">=</span> percentage_change(old, new)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(indicator, <span class="bu">round</span>(change, <span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then interpret:</p>
+<ul>
+<li>GDP growth</li>
+<li>inflation</li>
+<li>currency depreciation</li>
+</ul>
+<hr>
+</section>
+<section id="debugging-as-analytical-practice" class="level1">
+<h1>24. Debugging as Analytical Practice</h1>
+<p>Debugging means identifying and correcting problems.</p>
+<p>It is not evidence of failure.</p>
+<p>It is part of computational analysis.</p>
+<hr>
+</section>
+<section id="common-error-missing-colon" class="level1">
+<h1>25. Common Error: Missing Colon</h1>
+<p>Wrong:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"High inflation"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Correct:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span>:</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"High inflation"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="common-error-incorrect-indentation" class="level1">
+<h1>26. Common Error: Incorrect Indentation</h1>
+<p>Wrong:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span>:</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"High inflation"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Correct:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span>:</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"High inflation"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Indentation defines the structure of Python code.</p>
+<hr>
+</section>
+<section id="common-error-assignment-vs-equality" class="level1">
+<h1>27. Common Error: Assignment vs Equality</h1>
+<p>Assignment:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>status <span class="op">=</span> <span class="st">"Employed"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Equality test:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>status <span class="op">==</span> <span class="st">"Employed"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>=</code> stores a value.</p>
+<p><code>==</code> compares two values.</p>
+<hr>
+</section>
+<section id="common-error-forgetting-return" class="level1">
+<h1>28. Common Error: Forgetting <code>return</code></h1>
+<p>Incorrect:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> percentage_change(old_value, new_value):</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>    change <span class="op">=</span> ((new_value <span class="op">-</span> old_value) <span class="op">/</span> old_value) <span class="op">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The calculation occurs, but the result is not returned.</p>
+<p>Correct:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> percentage_change(old_value, new_value):</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>    change <span class="op">=</span> ((new_value <span class="op">-</span> old_value) <span class="op">/</span> old_value) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> change</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="a-simple-debugging-checklist" class="level1">
+<h1>29. A Simple Debugging Checklist</h1>
+<p>When code fails:</p>
+<ol type="1">
+<li>Read the complete error message.</li>
+<li>Identify the line where the error occurred.</li>
+<li>Check spelling and capitalization.</li>
+<li>Check brackets, quotation marks, and colons.</li>
+<li>Check indentation.</li>
+<li>Confirm that variables were defined.</li>
+<li>Test the smallest possible example.</li>
+<li>Compare the output with the economic rule.</li>
+</ol>
+<hr>
+</section>
+<section id="responsible-use-of-ai" class="level1">
+<h1>30. Responsible Use of AI</h1>
+<p>AI tools can:</p>
+<ul>
+<li>explain an error message</li>
+<li>suggest alternative code</li>
+<li>generate test cases</li>
+<li>add comments</li>
+<li>help compare two approaches</li>
+</ul>
+<p>AI tools can also:</p>
+<ul>
+<li>use the wrong economic definition</li>
+<li>generate incorrect thresholds</li>
+<li>overlook boundary cases</li>
+<li>invent variable names</li>
+<li>produce code that runs but answers the wrong question</li>
+</ul>
+<hr>
+</section>
+<section id="how-to-verify-ai-generated-code" class="level1">
+<h1>31. How to Verify AI-Generated Code</h1>
+<p>Before accepting AI-generated code:</p>
+<ol type="1">
+<li>Explain the rule in your own words.</li>
+<li>Check every variable and threshold.</li>
+<li>Test normal values.</li>
+<li>Test boundary values.</li>
+<li>Test unusual or invalid values.</li>
+<li>compare the output with economic reasoning.</li>
+<li>Rewrite any explanation in your own words.</li>
+</ol>
+<p>The standard is:</p>
+<pre class="text"><code>Do not submit code that you cannot explain.</code></pre>
+<hr>
+</section>
+<section id="deliberately-flawed-ai-example" class="level1">
+<h1>32. Deliberately Flawed AI Example</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classify_inflation(inflation):</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> inflation <span class="op">&lt;</span> <span class="dv">15</span>:</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Low"</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> inflation <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Moderate"</span></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"High"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Discuss:</p>
+<ol type="1">
+<li>Why can <code>"Moderate"</code> never be returned?</li>
+<li>How should the conditions be reordered?</li>
+<li>Which boundary values should be tested?</li>
+<li>Does the code match the stated economic rule?</li>
+</ol>
+<hr>
+</section>
+<section id="in-class-practice" class="level1">
+<h1>33. In-Class Practice</h1>
+<p>Complete these tasks in the live notebook:</p>
+<ol type="1">
+<li>Classify inflation using <code>if</code>, <code>elif</code>, and <code>else</code>.</li>
+<li>Test the values <code>4.9</code>, <code>5</code>, <code>15</code>, and <code>15.1</code>.</li>
+<li>Loop through four GDP growth rates.</li>
+<li>Store the growth classifications in a new list.</li>
+<li>Create a percentage-change function.</li>
+<li>Apply it to GDP, CPI, and exchange-rate values.</li>
+<li>Write one sentence interpreting each result.</li>
+<li>Correct the deliberately flawed AI example.</li>
+</ol>
+<hr>
+</section>
+<section id="week-3-assignment" class="level1">
+<h1>34. Week 3 Assignment</h1>
 <p><a href="../activities/week3_activity.html">Open the Week 3 Assignment</a></p>
+<p>The assignment evaluates:</p>
+<ul>
+<li>conditional logic</li>
+<li>loops</li>
+<li>functions</li>
+<li>integrated automation</li>
+<li>interpretation and AI verification</li>
+</ul>
 <p>Submit the completed notebook through the Week 3 activity in the University LMS.</p>
 <hr>
 </section>
-<section id="common-errors" class="level1">
-<h1>16. Common Errors</h1>
-<section id="problem-1-indentation-errors" class="level2">
-<h2 class="anchored" data-anchor-id="problem-1-indentation-errors">Problem 1 — Indentation Errors</h2>
-<p>Wrong:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span>:</span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"High inflation"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Correct:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span>:</span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"High inflation"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Indentation matters in Python.</p>
-<hr>
-</section>
-<section id="problem-2-forgetting-colon" class="level2">
-<h2 class="anchored" data-anchor-id="problem-2-forgetting-colon">Problem 2 — Forgetting Colon</h2>
-<p>Wrong:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Correct:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> inflation <span class="op">&gt;</span> <span class="dv">10</span>:</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="problem-3-confusing-and" class="level2">
-<h2 class="anchored" data-anchor-id="problem-3-confusing-and">Problem 3 — Confusing = and ==</h2>
-<p><code>=</code> assigns value.</p>
-<p>Example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> <span class="dv">12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>==</code> checks equality.</p>
-<p>Example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">==</span> <span class="dv">12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="problem-4-forgetting-parentheses" class="level2">
-<h2 class="anchored" data-anchor-id="problem-4-forgetting-parentheses">Problem 4 — Forgetting Parentheses</h2>
-<p>Wrong:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Correct:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="problem-5-undefined-variables" class="level2">
-<h2 class="anchored" data-anchor-id="problem-5-undefined-variables">Problem 5 — Undefined Variables</h2>
-<p>Wrong:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gdp_growth)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>before defining variable.</p>
-<hr>
-</section>
-</section>
-<section id="ai-reflection-question" class="level1">
-<h1>17. AI Reflection Question</h1>
-<p>AI can generate Python code.</p>
-<p>However:</p>
-<ul>
-<li>AI may generate incorrect logic</li>
-<li>AI may misunderstand economic concepts</li>
-<li>AI may produce inefficient code</li>
-</ul>
-<p>Reflection question:</p>
-<pre class="text"><code>Why should economists understand programming logic even when AI tools can generate code automatically?</code></pre>
-<hr>
-</section>
 <section id="key-takeaways" class="level1">
-<h1>18. Key Takeaways</h1>
-<p>By the end of Week 3, students should understand:</p>
+<h1>35. Key Takeaways</h1>
+<p>By the end of Week 3, students should understand that:</p>
 <ul>
-<li>how variables store information</li>
-<li>how lists organize data</li>
-<li>how conditional statements automate decisions</li>
-<li>how loops automate repetition</li>
-<li>how functions create reusable code</li>
-<li>how computational thinking supports economics</li>
+<li>programming logic converts economic rules into explicit instructions</li>
+<li>conditions automate decisions</li>
+<li>loops apply rules repeatedly</li>
+<li>functions make calculations reusable</li>
+<li>correct code still requires economic interpretation</li>
+<li>debugging and testing are part of analytical work</li>
+<li>AI-generated code must be verified</li>
 </ul>
 <hr>
 </section>
 <section id="before-week-4" class="level1">
-<h1>19. Before Week 4</h1>
-<p>Before next week, students should:</p>
+<h1>36. Before Week 4</h1>
+<p>Before the next class:</p>
 <ul>
-<li>rerun all Week 3 code</li>
-<li>practice loops and functions</li>
-<li>debug at least one error themselves</li>
-<li>complete self-assessment</li>
-<li>submit notebook</li>
+<li>rerun every Week 3 code cell</li>
+<li>test at least four boundary values</li>
+<li>create one original classification function</li>
+<li>correct at least one error without copying a solution</li>
+<li>complete and submit the Week 3 assignment</li>
 </ul>
+<hr>
+<p><em>ECN 4199 — Industrial Data Analytics</em><br>
+<em>Department of Economics</em><br>
+<em>University of Colombo</em></p>
 
 
 </section>

@@ -1,206 +1,87 @@
 [
   {
-    "objectID": "activities/week3_activity.html#objective",
-    "href": "activities/week3_activity.html#objective",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Objective",
-    "text": "Objective\nCreate and understand variables."
-  },
-  {
-    "objectID": "activities/week3_activity.html#instructions-1",
-    "href": "activities/week3_activity.html#instructions-1",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Instructions",
-    "text": "Instructions\nCreate variables for:\n\ninflation\nGDP growth\nexchange rate\ncountry name\n\nUse appropriate data types."
-  },
-  {
-    "objectID": "activities/week3_activity.html#example-structure",
-    "href": "activities/week3_activity.html#example-structure",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Example Structure",
-    "text": "Example Structure\ninflation = 46.4\ncountry = \"Sri Lanka\""
+    "objectID": "activities/week3_activity.html#marks-1",
+    "href": "activities/week3_activity.html#marks-1",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Marks: 1",
+    "text": "Marks: 1\nWrite a function called:\nclassify_inflation(inflation)\nUse these rules:\n\n\n\nInflation Rate\nClassification\n\n\n\n\nBelow 5\nLow inflation\n\n\n5 to 15, inclusive\nModerate inflation\n\n\nAbove 15\nHigh inflation\n\n\n\nYour function must return the classification.\nTest it using:\ntest_rates = [4.9, 5, 12, 15, 15.1]"
   },
   {
     "objectID": "activities/week3_activity.html#questions",
     "href": "activities/week3_activity.html#questions",
-    "title": "Week 3 Assignment — Python Fundamentals",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
     "section": "Questions",
-    "text": "Questions\n\nQuestion 1\nWhat is the difference between:\ninteger\nand\nfloat\n?\n\n\n\nQuestion 2\nWhy are variables useful in economic analysis?"
+    "text": "Questions\n\nHow is exactly 5 classified?\nHow is exactly 15 classified?\nWhy should boundary values be tested?"
   },
   {
-    "objectID": "activities/week3_activity.html#objective-1",
-    "href": "activities/week3_activity.html#objective-1",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Objective",
-    "text": "Objective\nStore multiple observations using lists."
-  },
-  {
-    "objectID": "activities/week3_activity.html#instructions-2",
-    "href": "activities/week3_activity.html#instructions-2",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Instructions",
-    "text": "Instructions\nCreate a list containing GDP growth rates for four years.\nExample:\ngdp_growth = [3.5, 5.2, -7.8, 2.1]"
-  },
-  {
-    "objectID": "activities/week3_activity.html#tasks",
-    "href": "activities/week3_activity.html#tasks",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Tasks",
-    "text": "Tasks\nCalculate:\n\naverage GDP growth\nmaximum GDP growth\nminimum GDP growth"
-  },
-  {
-    "objectID": "activities/week3_activity.html#questions-1",
-    "href": "activities/week3_activity.html#questions-1",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Questions",
-    "text": "Questions\n\nQuestion 1\nWhich year appears to represent a recession?\n\n\nQuestion 2\nWhy are lists useful for economists?"
-  },
-  {
-    "objectID": "activities/week3_activity.html#objective-2",
-    "href": "activities/week3_activity.html#objective-2",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Objective",
-    "text": "Objective\nUse Python to automate classification."
-  },
-  {
-    "objectID": "activities/week3_activity.html#instructions-3",
-    "href": "activities/week3_activity.html#instructions-3",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Instructions",
-    "text": "Instructions\nWrite conditional logic using the following rules:\n\n\n\nInflation Rate\nClassification\n\n\n\n\nBelow 5\nLow inflation\n\n\nBetween 5 and 15\nModerate inflation\n\n\nAbove 15\nHigh inflation"
-  },
-  {
-    "objectID": "activities/week3_activity.html#example-structure-1",
-    "href": "activities/week3_activity.html#example-structure-1",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Example Structure",
-    "text": "Example Structure\ninflation = 12"
+    "objectID": "activities/week3_activity.html#marks-1-1",
+    "href": "activities/week3_activity.html#marks-1-1",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Marks: 1",
+    "text": "Marks: 1\nUse:\ngdp_growth_rates = [3.5, 5.2, -7.8, 2.1, -1.4]\nCreate an empty list called:\ngrowth_categories\nUse a loop to classify each value:\n\n\n\nGDP Growth\nClassification\n\n\n\n\nBelow 0\nRecession\n\n\n0 to below 3\nSlow growth\n\n\n3 or above\nStrong growth\n\n\n\nStore each classification in growth_categories.\nPrint both the growth value and its classification."
   },
   {
     "objectID": "activities/week3_activity.html#question",
     "href": "activities/week3_activity.html#question",
-    "title": "Week 3 Assignment — Python Fundamentals",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
     "section": "Question",
-    "text": "Question\nWhy is conditional logic important in economics and policy analysis?"
+    "text": "Question\nWhy is saving results in a list more useful than only printing them?"
   },
   {
-    "objectID": "activities/week3_activity.html#objective-3",
-    "href": "activities/week3_activity.html#objective-3",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Objective",
-    "text": "Objective\nAutomate repetitive tasks."
+    "objectID": "activities/week3_activity.html#marks-1-2",
+    "href": "activities/week3_activity.html#marks-1-2",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Marks: 1",
+    "text": "Marks: 1\nCreate:\npercentage_change(old_value, new_value)\nUse:\n[(new value - old value) / old value] × 100\nApply the function to:\n\n\n\nIndicator\nOld Value\nNew Value\n\n\n\n\nGDP\n5000\n5400\n\n\nCPI\n200\n240\n\n\nLKR per USD exchange rate\n300\n330\n\n\n\nRound each result to two decimal places.\nWrite one sentence interpreting each result."
   },
   {
-    "objectID": "activities/week3_activity.html#instructions-4",
-    "href": "activities/week3_activity.html#instructions-4",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Instructions",
-    "text": "Instructions\nCreate a loop that checks each GDP growth value.\nRules:\n\npositive value → “Positive growth”\nnegative value → “Recession year”"
+    "objectID": "activities/week3_activity.html#marks-1-3",
+    "href": "activities/week3_activity.html#marks-1-3",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Marks: 1",
+    "text": "Marks: 1\nUse:\nindicators = [\"GDP\", \"CPI\", \"Exchange rate\"]\nold_values = [5000, 200, 300]\nnew_values = [5400, 240, 330]\nWrite a loop using:\nzip()\nFor each indicator:\n\ncalculate percentage change using your function\nprint the indicator name\nprint the rounded result\nprint a short interpretation label\n\nSuggested labels:\n\nGDP: \"Economic growth\"\nCPI: \"Inflation\"\nExchange rate: \"Currency depreciation\""
   },
   {
-    "objectID": "activities/week3_activity.html#example-structure-2",
-    "href": "activities/week3_activity.html#example-structure-2",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Example Structure",
-    "text": "Example Structure\nfor growth in gdp_growth:"
-  },
-  {
-    "objectID": "activities/week3_activity.html#question-3",
-    "href": "activities/week3_activity.html#question-3",
-    "title": "Week 3 Assignment — Python Fundamentals",
+    "objectID": "activities/week3_activity.html#question-1",
+    "href": "activities/week3_activity.html#question-1",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
     "section": "Question",
-    "text": "Question\nWhy are loops important when working with large datasets?"
+    "text": "Question\nWhat parts of this workflow are automated, and what parts still require economic judgement?"
   },
   {
-    "objectID": "activities/week3_activity.html#objective-4",
-    "href": "activities/week3_activity.html#objective-4",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Objective",
-    "text": "Objective\nCreate reusable analytical tools."
+    "objectID": "activities/week3_activity.html#marks-1-4",
+    "href": "activities/week3_activity.html#marks-1-4",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Marks: 1",
+    "text": "Marks: 1\nAn AI tool generated:\ndef classify_inflation(inflation):\n    if inflation &lt; 15:\n        return \"Low inflation\"\n    elif inflation &lt; 5:\n        return \"Moderate inflation\"\n    else:\n        return \"High inflation\"\nComplete all of the following:\n\nIdentify the logical error.\nExplain why \"Moderate inflation\" can never be returned.\nCorrect the function.\nTest the corrected function using 4.9, 5, 15, and 15.1.\nIn 80–120 words, explain why economists must verify AI-generated code."
   },
   {
-    "objectID": "activities/week3_activity.html#instructions-5",
-    "href": "activities/week3_activity.html#instructions-5",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Instructions",
-    "text": "Instructions\nCreate a function that calculates percentage change.\nFormula:\n[(new - old) / old] × 100"
+    "objectID": "activities/week3_activity.html#missing-colon",
+    "href": "activities/week3_activity.html#missing-colon",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Missing Colon",
+    "text": "Missing Colon\nWrong:\nif inflation &lt; 5\nCorrect:\nif inflation &lt; 5:"
   },
   {
-    "objectID": "activities/week3_activity.html#example-structure-3",
-    "href": "activities/week3_activity.html#example-structure-3",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Example Structure",
-    "text": "Example Structure\ndef growth_rate(old, new):"
+    "objectID": "activities/week3_activity.html#incorrect-indentation",
+    "href": "activities/week3_activity.html#incorrect-indentation",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Incorrect Indentation",
+    "text": "Incorrect Indentation\nWrong:\nif growth &lt; 0:\nprint(\"Recession\")\nCorrect:\nif growth &lt; 0:\n    print(\"Recession\")"
   },
   {
-    "objectID": "activities/week3_activity.html#apply-function-to",
-    "href": "activities/week3_activity.html#apply-function-to",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Apply Function To",
-    "text": "Apply Function To\n\nGDP\nCPI\nexchange rate"
+    "objectID": "activities/week3_activity.html#assignment-instead-of-comparison",
+    "href": "activities/week3_activity.html#assignment-instead-of-comparison",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Assignment Instead of Comparison",
+    "text": "Assignment Instead of Comparison\nWrong:\nif status = \"Employed\":\nCorrect:\nif status == \"Employed\":"
   },
   {
-    "objectID": "activities/week3_activity.html#question-4",
-    "href": "activities/week3_activity.html#question-4",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Question",
-    "text": "Question\nWhy do professional programmers use functions instead of rewriting code repeatedly?"
-  },
-  {
-    "objectID": "activities/week3_activity.html#question-1-2",
-    "href": "activities/week3_activity.html#question-1-2",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Question 1",
-    "text": "Question 1\nWhich data type stores decimal values?\nA. Integer\nB. Float\nC. String\nD. Boolean"
-  },
-  {
-    "objectID": "activities/week3_activity.html#question-2-2",
-    "href": "activities/week3_activity.html#question-2-2",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Question 2",
-    "text": "Question 2\nWhat does a loop mainly do?\nA. Deletes variables\nB. Repeats tasks\nC. Creates graphs\nD. Saves files"
-  },
-  {
-    "objectID": "activities/week3_activity.html#question-3-1",
-    "href": "activities/week3_activity.html#question-3-1",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Question 3",
-    "text": "Question 3\nWhat does len() do?\nA. Creates variables\nB. Measures internet speed\nC. Counts items\nD. Imports libraries"
-  },
-  {
-    "objectID": "activities/week3_activity.html#question-4-1",
-    "href": "activities/week3_activity.html#question-4-1",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Question 4",
-    "text": "Question 4\nWhat is the purpose of a function?\nA. Repeat reusable logic\nB. Delete datasets\nC. Install Python\nD. Upload files"
-  },
-  {
-    "objectID": "activities/week3_activity.html#problem-1-indentation-errors",
-    "href": "activities/week3_activity.html#problem-1-indentation-errors",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Problem 1 — Indentation Errors",
-    "text": "Problem 1 — Indentation Errors\nWrong:\nif inflation &gt; 10:\nprint(\"High inflation\")\nCorrect:\nif inflation &gt; 10:\n    print(\"High inflation\")"
-  },
-  {
-    "objectID": "activities/week3_activity.html#problem-2-forgetting-colon",
-    "href": "activities/week3_activity.html#problem-2-forgetting-colon",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Problem 2 — Forgetting Colon",
-    "text": "Problem 2 — Forgetting Colon\nWrong:\nif inflation &gt; 10\nCorrect:\nif inflation &gt; 10:"
-  },
-  {
-    "objectID": "activities/week3_activity.html#problem-3-confusing-and",
-    "href": "activities/week3_activity.html#problem-3-confusing-and",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Problem 3 — Confusing = and ==",
-    "text": "Problem 3 — Confusing = and ==\n= assigns value.\n== checks equality."
-  },
-  {
-    "objectID": "activities/week3_activity.html#problem-4-undefined-variables",
-    "href": "activities/week3_activity.html#problem-4-undefined-variables",
-    "title": "Week 3 Assignment — Python Fundamentals",
-    "section": "Problem 4 — Undefined Variables",
-    "text": "Problem 4 — Undefined Variables\nUsing variables before creating them."
+    "objectID": "activities/week3_activity.html#forgetting-return",
+    "href": "activities/week3_activity.html#forgetting-return",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Forgetting return",
+    "text": "Forgetting return\nA function must return a result if that result will be reused."
   },
   {
     "objectID": "activities/week1_activity.html",
@@ -940,163 +821,65 @@
   {
     "objectID": "lectures/week3.html",
     "href": "lectures/week3.html",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
+    "title": "Week 3 — Programming Logic and Automation for Economic Analysis",
     "section": "",
-    "text": "Weeks 1 and 2 focused on:\n\nremoving fear\nunderstanding workflow\nsetting up tools\nloading data\n\nThis week is different.\nThis is the week students stop behaving like:\nusers of software\nand start behaving like:\npeople who instruct computers\nThat transition matters enormously."
+    "text": "In Week 1, we learned how to run Python code and perform economic calculations.\nIn Week 2, we learned how data are organized and how to import and inspect a real dataset.\nWeek 3 moves from:\nto:\nThe central question is:"
   },
   {
-    "objectID": "lectures/week3.html#step-1-create-variables",
-    "href": "lectures/week3.html#step-1-create-variables",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Step 1 — Create Variables",
-    "text": "Step 1 — Create Variables\ngdp_2023 = 5000\ngdp_2024 = 5400"
+    "objectID": "lectures/week3.html#check-your-understanding",
+    "href": "lectures/week3.html#check-your-understanding",
+    "title": "Week 3 — Programming Logic and Automation for Economic Analysis",
+    "section": "Check Your Understanding",
+    "text": "Check Your Understanding\n\nWhat type of object is growth_rates?\nWhich value indicates a recession?\nWhy is the average not enough to describe the full period?\n\nThe purpose of this recap is to confirm the foundation, not reteach it."
   },
   {
-    "objectID": "lectures/week3.html#step-2-calculate-growth",
-    "href": "lectures/week3.html#step-2-calculate-growth",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Step 2 — Calculate Growth",
-    "text": "Step 2 — Calculate Growth\ngdp_growth = ((gdp_2024 - gdp_2023) / gdp_2023) * 100\n\nprint(gdp_growth)"
+    "objectID": "lectures/week3.html#economic-example-inflation-classification",
+    "href": "lectures/week3.html#economic-example-inflation-classification",
+    "title": "Week 3 — Programming Logic and Automation for Economic Analysis",
+    "section": "Economic Example: Inflation Classification",
+    "text": "Economic Example: Inflation Classification\n\n\n\nComponent\nExample\n\n\n\n\nInput\nInflation rate\n\n\nRule\nBelow 5 is low; 5–15 is moderate; above 15 is high\n\n\nProcess\nCompare the observed rate with each threshold\n\n\nOutput\nInflation classification\n\n\n\nBefore writing code, an analyst should be able to explain the rule clearly in words."
   },
   {
-    "objectID": "lectures/week3.html#step-3-create-list-of-inflation-rates",
-    "href": "lectures/week3.html#step-3-create-list-of-inflation-rates",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Step 3 — Create List of Inflation Rates",
-    "text": "Step 3 — Create List of Inflation Rates\ninflation_rates = [4.6, 6.0, 46.4, 12.5]"
+    "objectID": "lectures/week3.html#try-it",
+    "href": "lectures/week3.html#try-it",
+    "title": "Week 3 — Programming Logic and Automation for Economic Analysis",
+    "section": "Try It",
+    "text": "Try It\ninflation = 12\n\nprint(inflation &gt; 10)\nprint(inflation &lt; 5)\nprint(inflation == 12)"
   },
   {
-    "objectID": "lectures/week3.html#step-4-calculate-average-inflation",
-    "href": "lectures/week3.html#step-4-calculate-average-inflation",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Step 4 — Calculate Average Inflation",
-    "text": "Step 4 — Calculate Average Inflation\naverage_inflation = sum(inflation_rates) / len(inflation_rates)\n\nprint(average_inflation)"
+    "objectID": "lectures/week3.html#example-labour-force-classification",
+    "href": "lectures/week3.html#example-labour-force-classification",
+    "title": "Week 3 — Programming Logic and Automation for Economic Analysis",
+    "section": "Example: Labour Force Classification",
+    "text": "Example: Labour Force Classification\nhas_job = False\nseeking_work = True\n\nif not has_job and seeking_work:\n    print(\"Unemployed\")"
   },
   {
-    "objectID": "lectures/week3.html#step-5-use-conditional-logic",
-    "href": "lectures/week3.html#step-5-use-conditional-logic",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Step 5 — Use Conditional Logic",
-    "text": "Step 5 — Use Conditional Logic\nif average_inflation &gt; 10:\n    print(\"Inflation problem detected\")\nelse:\n    print(\"Inflation relatively stable\")"
+    "objectID": "lectures/week3.html#example-policy-alert",
+    "href": "lectures/week3.html#example-policy-alert",
+    "title": "Week 3 — Programming Logic and Automation for Economic Analysis",
+    "section": "Example: Policy Alert",
+    "text": "Example: Policy Alert\ninflation = 18\ngrowth = -2\n\nif inflation &gt; 15 or growth &lt; 0:\n    print(\"Macroeconomic policy attention required\")"
   },
   {
-    "objectID": "lectures/week3.html#step-6-create-loop",
-    "href": "lectures/week3.html#step-6-create-loop",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Step 6 — Create Loop",
-    "text": "Step 6 — Create Loop\nfor rate in inflation_rates:\n    print(rate)"
+    "objectID": "lectures/week3.html#interpretation",
+    "href": "lectures/week3.html#interpretation",
+    "title": "Week 3 — Programming Logic and Automation for Economic Analysis",
+    "section": "Interpretation",
+    "text": "Interpretation\nThe value 12 is:\n\nnot below 5\nless than or equal to 15\n\nTherefore, Python returns:\nModerate inflation"
   },
   {
-    "objectID": "lectures/week3.html#step-7-create-reusable-function",
-    "href": "lectures/week3.html#step-7-create-reusable-function",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Step 7 — Create Reusable Function",
-    "text": "Step 7 — Create Reusable Function\ndef growth_rate(old, new):\n\n    growth = ((new - old) / old) * 100\n\n    return growth"
+    "objectID": "lectures/week3.html#critical-note",
+    "href": "lectures/week3.html#critical-note",
+    "title": "Week 3 — Programming Logic and Automation for Economic Analysis",
+    "section": "Critical Note",
+    "text": "Critical Note\nThis is a simplified monetary classification.\nReal poverty analysis may also consider:\n\nhousehold size\ncost-of-living differences\naccess to education and health\nhousing conditions\nmultidimensional deprivation\n\nCode can automate a rule, but the analyst must evaluate whether the rule is appropriate."
   },
   {
-    "objectID": "lectures/week3.html#step-8-test-function",
-    "href": "lectures/week3.html#step-8-test-function",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Step 8 — Test Function",
-    "text": "Step 8 — Test Function\ngrowth_rate(200, 250)"
-  },
-  {
-    "objectID": "lectures/week3.html#question-1",
-    "href": "lectures/week3.html#question-1",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Question 1",
-    "text": "Question 1\nanswer = input(\"What is a variable? A/B/C/D : \")\n\nif answer.upper() == \"B\":\n    print(\"Correct! A variable stores information.\")\nelse:\n    print(\"Incorrect.\")"
-  },
-  {
-    "objectID": "lectures/week3.html#question-2",
-    "href": "lectures/week3.html#question-2",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Question 2",
-    "text": "Question 2\nanswer = input(\"Which symbol means greater than? \")\n\nif answer == \"&gt;\":\n    print(\"Correct!\")\nelse:\n    print(\"Incorrect.\")"
-  },
-  {
-    "objectID": "lectures/week3.html#question-3",
-    "href": "lectures/week3.html#question-3",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Question 3",
-    "text": "Question 3\nanswer = input(\"What does a loop do? A/B/C/D : \")\n\nif answer.upper() == \"B\":\n    print(\"Correct! Loops repeat tasks.\")\nelse:\n    print(\"Incorrect.\")"
-  },
-  {
-    "objectID": "lectures/week3.html#task-1-create-variables",
-    "href": "lectures/week3.html#task-1-create-variables",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Task 1 — Create Variables",
-    "text": "Task 1 — Create Variables\nCreate variables for:\n\nexports\nimports\nexchange rate\n\nPrint all values."
-  },
-  {
-    "objectID": "lectures/week3.html#task-2-create-gdp-growth-list",
-    "href": "lectures/week3.html#task-2-create-gdp-growth-list",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Task 2 — Create GDP Growth List",
-    "text": "Task 2 — Create GDP Growth List\nCreate a list of GDP growth rates.\nCalculate:\n\naverage growth\nmaximum growth\nminimum growth"
-  },
-  {
-    "objectID": "lectures/week3.html#task-3-inflation-classification",
-    "href": "lectures/week3.html#task-3-inflation-classification",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Task 3 — Inflation Classification",
-    "text": "Task 3 — Inflation Classification\nWrite conditional logic:\n\ninflation below 5 → “Low inflation”\ninflation between 5 and 15 → “Moderate inflation”\ninflation above 15 → “High inflation”"
-  },
-  {
-    "objectID": "lectures/week3.html#task-4-loop-exercise",
-    "href": "lectures/week3.html#task-4-loop-exercise",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Task 4 — Loop Exercise",
-    "text": "Task 4 — Loop Exercise\nCreate a loop that prints:\nPositive growth\nor\nNegative growth\nfor each GDP growth value."
-  },
-  {
-    "objectID": "lectures/week3.html#task-5-create-function",
-    "href": "lectures/week3.html#task-5-create-function",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Task 5 — Create Function",
-    "text": "Task 5 — Create Function\nCreate a reusable function that calculates percentage change.\nFormula:\n[(new - old) / old] × 100"
-  },
-  {
-    "objectID": "lectures/week3.html#task-6-apply-function",
-    "href": "lectures/week3.html#task-6-apply-function",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Task 6 — Apply Function",
-    "text": "Task 6 — Apply Function\nApply your function to:\n\nGDP\nCPI\nexchange rate\n\nInterpret each result."
-  },
-  {
-    "objectID": "lectures/week3.html#problem-1-indentation-errors",
-    "href": "lectures/week3.html#problem-1-indentation-errors",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Problem 1 — Indentation Errors",
-    "text": "Problem 1 — Indentation Errors\nWrong:\nif inflation &gt; 10:\nprint(\"High inflation\")\nCorrect:\nif inflation &gt; 10:\n    print(\"High inflation\")\nIndentation matters in Python."
-  },
-  {
-    "objectID": "lectures/week3.html#problem-2-forgetting-colon",
-    "href": "lectures/week3.html#problem-2-forgetting-colon",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Problem 2 — Forgetting Colon",
-    "text": "Problem 2 — Forgetting Colon\nWrong:\nif inflation &gt; 10\nCorrect:\nif inflation &gt; 10:"
-  },
-  {
-    "objectID": "lectures/week3.html#problem-3-confusing-and",
-    "href": "lectures/week3.html#problem-3-confusing-and",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Problem 3 — Confusing = and ==",
-    "text": "Problem 3 — Confusing = and ==\n= assigns value.\nExample:\ninflation = 12\n== checks equality.\nExample:\ninflation == 12"
-  },
-  {
-    "objectID": "lectures/week3.html#problem-4-forgetting-parentheses",
-    "href": "lectures/week3.html#problem-4-forgetting-parentheses",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Problem 4 — Forgetting Parentheses",
-    "text": "Problem 4 — Forgetting Parentheses\nWrong:\nprint\nCorrect:\nprint()"
-  },
-  {
-    "objectID": "lectures/week3.html#problem-5-undefined-variables",
-    "href": "lectures/week3.html#problem-5-undefined-variables",
-    "title": "Week 3 — Python Fundamentals for Economic Analysis",
-    "section": "Problem 5 — Undefined Variables",
-    "text": "Problem 5 — Undefined Variables\nWrong:\nprint(gdp_growth)\nbefore defining variable."
+    "objectID": "lectures/week3.html#important-distinction",
+    "href": "lectures/week3.html#important-distinction",
+    "title": "Week 3 — Programming Logic and Automation for Economic Analysis",
+    "section": "Important Distinction",
+    "text": "Important Distinction\nLoops are valuable for learning programming logic.\nFor large DataFrames, later lessons will introduce more efficient pandas methods."
   },
   {
     "objectID": "activities/week2_activity.html",
