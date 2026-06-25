@@ -19,43 +19,16 @@ This course is organized into two major learning phases.
 ## Week 3 — Programming Logic and Automation for Economic Analysis
 [Open Week 3 Lecture Material](lectures/week3.qmd)
 
-<!--
+## Week 4 — Working with Real Economic Data Using Pandas
+[Open Week 4 Lecture Material](lectures/week4.qmd)
 
-## Week 4 — Data Visualization and Economic Dashboards
-[Open Week 4](lectures/week4.qmd)
+## Week 5 — Descriptive Statistics and Data Visualization for Economics
+[Open Week 5 Lecture Material](lectures/week5.qmd)
 
-## Week 5 — Exploratory Data Analysis and Interpretation
-[Open Week 5](lectures/week5.qmd)
-
-## Week 6 — Data Wrangling and Analytical Workflows
-[Open Week 6](lectures/week6.qmd)
+## Week 6 — Interactive Dashboards and Data Storytelling for Economics
+[Open Week 6 Lecture Material](lectures/week6.qmd)
 
 ---
-
-# Phase II — Machine Learning, Forecasting, and AI Systems
-
-## Week 7 — Regression Analysis and Predictive Modeling
-[Open Week 7](lectures/week7.qmd)
-
-## Week 8 — Introduction to Machine Learning
-[Open Week 8](lectures/week8.qmd)
-
-## Week 9 — Classification Models and Economic Decision Systems
-[Open Week 9](lectures/week9.qmd)
-
-## Week 10 — Clustering and Unsupervised Learning
-[Open Week 10](lectures/week10.qmd)
-
-## Week 11 — Forecasting and Time Series Analytics
-[Open Week 11](lectures/week11.qmd)
-
-## Week 12 — NLP and Generative AI for Economics
-[Open Week 12](lectures/week12.qmd)
-
-## Week 13 — Capstone Integration and AI-Assisted Analytics
-[Open Week 13](lectures/week13.qmd)
-
--->
 
 # Final Goal of the Course
 

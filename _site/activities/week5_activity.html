@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 1 In-Class Activity – ECN 4199 - Industrial Data Analytics</title>
+<title>Week 5 In-Class Activity – ECN 4199 - Industrial Data Analytics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -170,38 +170,96 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#activity-information" id="toc-activity-information" class="nav-link active" data-scroll-target="#activity-information">Activity Information</a></li>
   <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
   <li><a href="#important-reminder" id="toc-important-reminder" class="nav-link" data-scroll-target="#important-reminder">Important Reminder</a></li>
-  <li><a href="#task-1-opening-python" id="toc-task-1-opening-python" class="nav-link" data-scroll-target="#task-1-opening-python">Task 1 — Opening Python</a>
+  <li><a href="#task-1-generate-descriptive-statistics" id="toc-task-1-generate-descriptive-statistics" class="nav-link" data-scroll-target="#task-1-generate-descriptive-statistics">Task 1 — Generate Descriptive Statistics</a>
   <ul class="collapse">
   <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective">Objective</a></li>
   <li><a href="#instructions-1" id="toc-instructions-1" class="nav-link" data-scroll-target="#instructions-1">Instructions</a></li>
-  <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question">Question</a></li>
+  <li><a href="#expected-structure" id="toc-expected-structure" class="nav-link" data-scroll-target="#expected-structure">Expected Structure</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
   </ul></li>
-  <li><a href="#task-2-creating-variables" id="toc-task-2-creating-variables" class="nav-link" data-scroll-target="#task-2-creating-variables">Task 2 — Creating Variables</a>
+  </ul></li>
+  <li><a href="#task-2-measures-of-central-tendency" id="toc-task-2-measures-of-central-tendency" class="nav-link" data-scroll-target="#task-2-measures-of-central-tendency">Task 2 — Measures of Central Tendency</a>
   <ul class="collapse">
   <li><a href="#objective-1" id="toc-objective-1" class="nav-link" data-scroll-target="#objective-1">Objective</a></li>
   <li><a href="#instructions-2" id="toc-instructions-2" class="nav-link" data-scroll-target="#instructions-2">Instructions</a></li>
-  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question</a></li>
+  <li><a href="#example-structure" id="toc-example-structure" class="nav-link" data-scroll-target="#example-structure">Example Structure</a></li>
+  <li><a href="#questions-1" id="toc-questions-1" class="nav-link" data-scroll-target="#questions-1">Questions</a>
+  <ul class="collapse">
+  <li><a href="#question-1-1" id="toc-question-1-1" class="nav-link" data-scroll-target="#question-1-1">Question 1</a></li>
+  <li><a href="#question-2-1" id="toc-question-2-1" class="nav-link" data-scroll-target="#question-2-1">Question 2</a></li>
+  <li><a href="#question-3-1" id="toc-question-3-1" class="nav-link" data-scroll-target="#question-3-1">Question 3</a></li>
   </ul></li>
-  <li><a href="#task-3-simple-economic-calculation" id="toc-task-3-simple-economic-calculation" class="nav-link" data-scroll-target="#task-3-simple-economic-calculation">Task 3 — Simple Economic Calculation</a>
+  </ul></li>
+  <li><a href="#task-3-histogram-and-distribution-analysis" id="toc-task-3-histogram-and-distribution-analysis" class="nav-link" data-scroll-target="#task-3-histogram-and-distribution-analysis">Task 3 — Histogram and Distribution Analysis</a>
   <ul class="collapse">
   <li><a href="#objective-2" id="toc-objective-2" class="nav-link" data-scroll-target="#objective-2">Objective</a></li>
   <li><a href="#instructions-3" id="toc-instructions-3" class="nav-link" data-scroll-target="#instructions-3">Instructions</a></li>
-  <li><a href="#example-structure" id="toc-example-structure" class="nav-link" data-scroll-target="#example-structure">Example Structure</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question</a></li>
+  <li><a href="#example-structure-1" id="toc-example-structure-1" class="nav-link" data-scroll-target="#example-structure-1">Example Structure</a></li>
+  <li><a href="#questions-2" id="toc-questions-2" class="nav-link" data-scroll-target="#questions-2">Questions</a>
+  <ul class="collapse">
+  <li><a href="#question-1-2" id="toc-question-1-2" class="nav-link" data-scroll-target="#question-1-2">Question 1</a></li>
+  <li><a href="#question-2-2" id="toc-question-2-2" class="nav-link" data-scroll-target="#question-2-2">Question 2</a></li>
+  <li><a href="#question-3-2" id="toc-question-3-2" class="nav-link" data-scroll-target="#question-3-2">Question 3</a></li>
   </ul></li>
-  <li><a href="#task-4-lists-and-economic-data" id="toc-task-4-lists-and-economic-data" class="nav-link" data-scroll-target="#task-4-lists-and-economic-data">Task 4 — Lists and Economic Data</a>
+  </ul></li>
+  <li><a href="#task-4-line-graph-and-economic-trends" id="toc-task-4-line-graph-and-economic-trends" class="nav-link" data-scroll-target="#task-4-line-graph-and-economic-trends">Task 4 — Line Graph and Economic Trends</a>
   <ul class="collapse">
   <li><a href="#objective-3" id="toc-objective-3" class="nav-link" data-scroll-target="#objective-3">Objective</a></li>
   <li><a href="#instructions-4" id="toc-instructions-4" class="nav-link" data-scroll-target="#instructions-4">Instructions</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question</a></li>
-  </ul></li>
-  <li><a href="#task-5-reflection-question" id="toc-task-5-reflection-question" class="nav-link" data-scroll-target="#task-5-reflection-question">Task 5 — Reflection Question</a>
+  <li><a href="#example-structure-2" id="toc-example-structure-2" class="nav-link" data-scroll-target="#example-structure-2">Example Structure</a></li>
+  <li><a href="#questions-3" id="toc-questions-3" class="nav-link" data-scroll-target="#questions-3">Questions</a>
   <ul class="collapse">
-  <li><a href="#short-reflection" id="toc-short-reflection" class="nav-link" data-scroll-target="#short-reflection">Short Reflection</a></li>
+  <li><a href="#question-1-3" id="toc-question-1-3" class="nav-link" data-scroll-target="#question-1-3">Question 1</a></li>
+  <li><a href="#question-2-3" id="toc-question-2-3" class="nav-link" data-scroll-target="#question-2-3">Question 2</a></li>
+  <li><a href="#question-3-3" id="toc-question-3-3" class="nav-link" data-scroll-target="#question-3-3">Question 3</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#task-5-correlation-analysis" id="toc-task-5-correlation-analysis" class="nav-link" data-scroll-target="#task-5-correlation-analysis">Task 5 — Correlation Analysis</a>
+  <ul class="collapse">
+  <li><a href="#objective-4" id="toc-objective-4" class="nav-link" data-scroll-target="#objective-4">Objective</a></li>
+  <li><a href="#instructions-5" id="toc-instructions-5" class="nav-link" data-scroll-target="#instructions-5">Instructions</a></li>
+  <li><a href="#example-structure-3" id="toc-example-structure-3" class="nav-link" data-scroll-target="#example-structure-3">Example Structure</a></li>
+  <li><a href="#questions-4" id="toc-questions-4" class="nav-link" data-scroll-target="#questions-4">Questions</a>
+  <ul class="collapse">
+  <li><a href="#question-1-4" id="toc-question-1-4" class="nav-link" data-scroll-target="#question-1-4">Question 1</a></li>
+  <li><a href="#question-2-4" id="toc-question-2-4" class="nav-link" data-scroll-target="#question-2-4">Question 2</a></li>
+  <li><a href="#question-3-4" id="toc-question-3-4" class="nav-link" data-scroll-target="#question-3-4">Question 3</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#task-6-scatter-plot" id="toc-task-6-scatter-plot" class="nav-link" data-scroll-target="#task-6-scatter-plot">Task 6 — Scatter Plot</a>
+  <ul class="collapse">
+  <li><a href="#objective-5" id="toc-objective-5" class="nav-link" data-scroll-target="#objective-5">Objective</a></li>
+  <li><a href="#instructions-6" id="toc-instructions-6" class="nav-link" data-scroll-target="#instructions-6">Instructions</a></li>
+  <li><a href="#example-structure-4" id="toc-example-structure-4" class="nav-link" data-scroll-target="#example-structure-4">Example Structure</a></li>
+  <li><a href="#questions-5" id="toc-questions-5" class="nav-link" data-scroll-target="#questions-5">Questions</a>
+  <ul class="collapse">
+  <li><a href="#question-1-5" id="toc-question-1-5" class="nav-link" data-scroll-target="#question-1-5">Question 1</a></li>
+  <li><a href="#question-2-5" id="toc-question-2-5" class="nav-link" data-scroll-target="#question-2-5">Question 2</a></li>
+  <li><a href="#question-3-5" id="toc-question-3-5" class="nav-link" data-scroll-target="#question-3-5">Question 3</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#reflection-question" id="toc-reflection-question" class="nav-link" data-scroll-target="#reflection-question">Reflection Question</a></li>
+  <li><a href="#mini-quiz" id="toc-mini-quiz" class="nav-link" data-scroll-target="#mini-quiz">Mini Quiz</a>
+  <ul class="collapse">
+  <li><a href="#question-1-6" id="toc-question-1-6" class="nav-link" data-scroll-target="#question-1-6">Question 1</a></li>
+  <li><a href="#question-2-6" id="toc-question-2-6" class="nav-link" data-scroll-target="#question-2-6">Question 2</a></li>
+  <li><a href="#question-3-6" id="toc-question-3-6" class="nav-link" data-scroll-target="#question-3-6">Question 3</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
   </ul></li>
   <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">Submission Instructions</a></li>
   <li><a href="#submission-link" id="toc-submission-link" class="nav-link" data-scroll-target="#submission-link">Submission Link</a></li>
   <li><a href="#passcode-access" id="toc-passcode-access" class="nav-link" data-scroll-target="#passcode-access">Passcode Access</a></li>
+  <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">Common Errors</a>
+  <ul class="collapse">
+  <li><a href="#problem-1-missing-labels" id="toc-problem-1-missing-labels" class="nav-link" data-scroll-target="#problem-1-missing-labels">Problem 1 — Missing Labels</a></li>
+  <li><a href="#problem-2-misinterpreting-correlation" id="toc-problem-2-misinterpreting-correlation" class="nav-link" data-scroll-target="#problem-2-misinterpreting-correlation">Problem 2 — Misinterpreting Correlation</a></li>
+  <li><a href="#problem-3-wrong-graph-choice" id="toc-problem-3-wrong-graph-choice" class="nav-link" data-scroll-target="#problem-3-wrong-graph-choice">Problem 3 — Wrong Graph Choice</a></li>
+  <li><a href="#problem-4-ignoring-outliers" id="toc-problem-4-ignoring-outliers" class="nav-link" data-scroll-target="#problem-4-ignoring-outliers">Problem 4 — Ignoring Outliers</a></li>
+  </ul></li>
   <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity">Academic Integrity</a></li>
   </ul>
 </nav>
@@ -211,7 +269,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 1 In-Class Activity</h1>
+<h1 class="title">Week 5 In-Class Activity</h1>
 </div>
 
 
@@ -240,11 +298,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>Week</td>
-<td>Week 1</td>
+<td>Week 5</td>
 </tr>
 <tr class="even">
 <td>Topic</td>
-<td>Orientation and Computational Thinking</td>
+<td>Descriptive Statistics and Data Visualization</td>
 </tr>
 <tr class="odd">
 <td>Marks</td>
@@ -269,156 +327,350 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="instructions" class="level1">
 <h1>Instructions</h1>
 <ol type="1">
-<li>Open your Google Colab notebook.</li>
-<li>Save a copy to your Google Drive.</li>
-<li>Complete all tasks below.</li>
+<li>Open the Week 5 live notebook.</li>
+<li>Download the Week 5 macroeconomic dataset.</li>
+<li>Save a copy of the notebook to your Google Drive.</li>
+<li>Complete all required tasks.</li>
 <li>Answer all interpretation questions.</li>
 <li>Submit before the activity closes.</li>
 </ol>
-<hr>
-</section>
-<section id="important-reminder" class="level1">
-<h1>Important Reminder</h1>
-<p>This activity is designed to test:</p>
-<ul>
-<li>basic computational understanding</li>
-<li>ability to run code</li>
-<li>interpretation skills</li>
-<li>ability to follow analytical workflows</li>
-</ul>
-<p>This is NOT a memorization exercise.</p>
-<hr>
-</section>
-<section id="task-1-opening-python" class="level1">
-<h1>Task 1 — Opening Python</h1>
-<section id="objective" class="level2">
-<h2 class="anchored" data-anchor-id="objective">Objective</h2>
-<p>Run your first Python code successfully.</p>
-<hr>
-</section>
-<section id="instructions-1" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-1">Instructions</h2>
-<p>Run the following code:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Welcome to ECN 4199"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="question" class="level2">
-<h2 class="anchored" data-anchor-id="question">Question</h2>
-<p>What does the function:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>do in Python?</p>
-<p>Write your answer in one sentence.</p>
-<hr>
-</section>
-</section>
-<section id="task-2-creating-variables" class="level1">
-<h1>Task 2 — Creating Variables</h1>
-<section id="objective-1" class="level2">
-<h2 class="anchored" data-anchor-id="objective-1">Objective</h2>
-<p>Understand basic Python variables.</p>
-<hr>
-</section>
-<section id="instructions-2" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-2">Instructions</h2>
-<p>Create the following variables:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>student_name</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>inflation_rate</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>gdp_growth</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Assign appropriate values.</p>
-<p>Example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>inflation_rate <span class="op">=</span> <span class="fl">12.5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question</h2>
-<p>Why are variables useful in programming and data analysis?</p>
-<hr>
-</section>
-</section>
-<section id="task-3-simple-economic-calculation" class="level1">
-<h1>Task 3 — Simple Economic Calculation</h1>
-<section id="objective-2" class="level2">
-<h2 class="anchored" data-anchor-id="objective-2">Objective</h2>
-<p>Use Python for basic economic calculations.</p>
-<hr>
-</section>
-<section id="instructions-3" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-3">Instructions</h2>
-<p>Assume:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Variable</th>
-<th style="text-align: right;">Value</th>
+<th>Material</th>
+<th>Link</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Initial Inflation</td>
-<td style="text-align: right;">6%</td>
+<td>Week 5 Live Notebook</td>
+<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week5/ECN4199_Week5_Live_Notebook.ipynb">Open in Google Colab</a></td>
 </tr>
 <tr class="even">
-<td>New Inflation</td>
-<td style="text-align: right;">12%</td>
+<td>Week 5 Dataset</td>
+<td><a href="../data/sri_lanka_macro.csv">Download sri_lanka_macro.csv</a></td>
 </tr>
 </tbody>
 </table>
+<hr>
+</section>
+<section id="important-reminder" class="level1">
+<h1>Important Reminder</h1>
+<p>This activity tests:</p>
+<ul>
+<li>descriptive statistics</li>
+<li>interpretation of variation</li>
+<li>distributions</li>
+<li>correlations</li>
+<li>graph creation</li>
+<li>economic storytelling with data</li>
+</ul>
+<p>The goal is NOT merely to create graphs.</p>
+<p>The goal is to explain economic patterns using evidence.</p>
+<hr>
+</section>
+<section id="task-1-generate-descriptive-statistics" class="level1">
+<h1>Task 1 — Generate Descriptive Statistics</h1>
+<section id="objective" class="level2">
+<h2 class="anchored" data-anchor-id="objective">Objective</h2>
+<p>Summarize the macroeconomic dataset statistically.</p>
+<hr>
+</section>
+<section id="instructions-1" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-1">Instructions</h2>
+<p>Load the dataset and generate descriptive statistics.</p>
+<hr>
+</section>
+<section id="expected-structure" class="level2">
+<h2 class="anchored" data-anchor-id="expected-structure">Expected Structure</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"sri_lanka_macro.csv"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>data.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<section id="question-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<p>What is the average inflation rate?</p>
+<hr>
+</section>
+<section id="question-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<p>Which variable appears most volatile?</p>
+<hr>
+</section>
+<section id="question-3" class="level3">
+<h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<p>Why is standard deviation important in economics?</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="task-2-measures-of-central-tendency" class="level1">
+<h1>Task 2 — Measures of Central Tendency</h1>
+<section id="objective-1" class="level2">
+<h2 class="anchored" data-anchor-id="objective-1">Objective</h2>
+<p>Compare mean and median values.</p>
+<hr>
+</section>
+<section id="instructions-2" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-2">Instructions</h2>
 <p>Calculate:</p>
-<pre class="text"><code>percentage point increase in inflation</code></pre>
-<p>using Python.</p>
+<ul>
+<li>mean inflation</li>
+<li>median inflation</li>
+</ul>
 <hr>
 </section>
 <section id="example-structure" class="level2">
 <h2 class="anchored" data-anchor-id="example-structure">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>initial_inflation <span class="op">=</span> <span class="dv">6</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>new_inflation <span class="op">=</span> <span class="dv">12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].mean()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].median()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question</h2>
-<p>What does a sharp increase in inflation usually imply for households?</p>
-<p>Write 2–3 sentences.</p>
+<section id="questions-1" class="level2">
+<h2 class="anchored" data-anchor-id="questions-1">Questions</h2>
+<section id="question-1-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-1">Question 1</h3>
+<p>Are the mean and median similar?</p>
+<hr>
+</section>
+<section id="question-2-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-1">Question 2</h3>
+<p>What might explain differences between them?</p>
+<hr>
+</section>
+<section id="question-3-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-1">Question 3</h3>
+<p>Why can extreme observations distort averages?</p>
 <hr>
 </section>
 </section>
-<section id="task-4-lists-and-economic-data" class="level1">
-<h1>Task 4 — Lists and Economic Data</h1>
+</section>
+<section id="task-3-histogram-and-distribution-analysis" class="level1">
+<h1>Task 3 — Histogram and Distribution Analysis</h1>
+<section id="objective-2" class="level2">
+<h2 class="anchored" data-anchor-id="objective-2">Objective</h2>
+<p>Visualize the inflation distribution.</p>
+<hr>
+</section>
+<section id="instructions-3" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-3">Instructions</h2>
+<p>Create a histogram for inflation.</p>
+<hr>
+</section>
+<section id="example-structure-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-structure-1">Example Structure</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.hist(data[<span class="st">"Inflation"</span>])</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Distribution of Inflation"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Inflation"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Frequency"</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="questions-2" class="level2">
+<h2 class="anchored" data-anchor-id="questions-2">Questions</h2>
+<section id="question-1-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-2">Question 1</h3>
+<p>Does the distribution appear symmetric?</p>
+<hr>
+</section>
+<section id="question-2-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-2">Question 2</h3>
+<p>Are there extreme observations?</p>
+<hr>
+</section>
+<section id="question-3-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-2">Question 3</h3>
+<p>What might unusually high inflation indicate economically?</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="task-4-line-graph-and-economic-trends" class="level1">
+<h1>Task 4 — Line Graph and Economic Trends</h1>
 <section id="objective-3" class="level2">
 <h2 class="anchored" data-anchor-id="objective-3">Objective</h2>
-<p>Store economic information using Python lists.</p>
+<p>Visualize inflation trends over time.</p>
 <hr>
 </section>
 <section id="instructions-4" class="level2">
 <h2 class="anchored" data-anchor-id="instructions-4">Instructions</h2>
-<p>Create a Python list containing:</p>
+<p>Create a line graph for inflation.</p>
+<hr>
+</section>
+<section id="example-structure-2" class="level2">
+<h2 class="anchored" data-anchor-id="example-structure-2">Example Structure</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Year"</span>], data[<span class="st">"Inflation"</span>])</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Inflation Trends"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Inflation"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="questions-3" class="level2">
+<h2 class="anchored" data-anchor-id="questions-3">Questions</h2>
+<section id="question-1-3" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-3">Question 1</h3>
+<p>When did inflation increase sharply?</p>
+<hr>
+</section>
+<section id="question-2-3" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-3">Question 2</h3>
+<p>What might explain the spike?</p>
+<hr>
+</section>
+<section id="question-3-3" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-3">Question 3</h3>
+<p>Why are line graphs useful for time-series analysis?</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="task-5-correlation-analysis" class="level1">
+<h1>Task 5 — Correlation Analysis</h1>
+<section id="objective-4" class="level2">
+<h2 class="anchored" data-anchor-id="objective-4">Objective</h2>
+<p>Analyze relationships between variables.</p>
+<hr>
+</section>
+<section id="instructions-5" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-5">Instructions</h2>
+<p>Calculate correlation between:</p>
 <ul>
-<li>inflation rates</li>
-<li>unemployment rates</li>
-<li>GDP growth values</li>
+<li>inflation</li>
+<li>exchange rate change</li>
 </ul>
-<p>Example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> [<span class="fl">4.5</span>, <span class="fl">5.2</span>, <span class="fl">7.8</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question</h2>
-<p>Why is storing data systematically important for economists?</p>
+<section id="example-structure-3" class="level2">
+<h2 class="anchored" data-anchor-id="example-structure-3">Example Structure</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].corr(data[<span class="st">"Exchange_Rate_Change"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="questions-4" class="level2">
+<h2 class="anchored" data-anchor-id="questions-4">Questions</h2>
+<section id="question-1-4" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-4">Question 1</h3>
+<p>Is the relationship positive or negative?</p>
+<hr>
+</section>
+<section id="question-2-4" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-4">Question 2</h3>
+<p>Does correlation imply causation?</p>
+<p>Explain briefly.</p>
+<hr>
+</section>
+<section id="question-3-4" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-4">Question 3</h3>
+<p>What third factors might influence both inflation and exchange rate changes?</p>
 <hr>
 </section>
 </section>
-<section id="task-5-reflection-question" class="level1">
-<h1>Task 5 — Reflection Question</h1>
-<section id="short-reflection" class="level2">
-<h2 class="anchored" data-anchor-id="short-reflection">Short Reflection</h2>
+</section>
+<section id="task-6-scatter-plot" class="level1">
+<h1>Task 6 — Scatter Plot</h1>
+<section id="objective-5" class="level2">
+<h2 class="anchored" data-anchor-id="objective-5">Objective</h2>
+<p>Visualize the relationship between two variables.</p>
+<hr>
+</section>
+<section id="instructions-6" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-6">Instructions</h2>
+<p>Create scatter plot using:</p>
+<ul>
+<li>inflation</li>
+<li>exchange rate change</li>
+</ul>
+<hr>
+</section>
+<section id="example-structure-4" class="level2">
+<h2 class="anchored" data-anchor-id="example-structure-4">Example Structure</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Inflation"</span>],</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">"Exchange_Rate_Change"</span>])</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Inflation"</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Exchange Rate Change"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="questions-5" class="level2">
+<h2 class="anchored" data-anchor-id="questions-5">Questions</h2>
+<section id="question-1-5" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-5">Question 1</h3>
+<p>Do the variables appear related?</p>
+<hr>
+</section>
+<section id="question-2-5" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-5">Question 2</h3>
+<p>Are there outliers?</p>
+<hr>
+</section>
+<section id="question-3-5" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-5">Question 3</h3>
+<p>Why are scatter plots useful in economics?</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="reflection-question" class="level1">
+<h1>Reflection Question</h1>
 <p>Write a short paragraph answering:</p>
-<pre class="text"><code>Why are computational and data skills becoming increasingly important for economists and policy analysts?</code></pre>
+<pre class="text"><code>Why is economic interpretation necessary even when graphs and statistics can be generated automatically?</code></pre>
 <p>Your answer should include:</p>
 <ul>
-<li>data</li>
-<li>decision-making</li>
-<li>modern analytics</li>
-<li>AI or automation</li>
+<li>context</li>
+<li>interpretation</li>
+<li>limitations of automation</li>
+<li>policy relevance</li>
 </ul>
+<hr>
+</section>
+<section id="mini-quiz" class="level1">
+<h1>Mini Quiz</h1>
+<section id="question-1-6" class="level2">
+<h2 class="anchored" data-anchor-id="question-1-6">Question 1</h2>
+<p>What does standard deviation measure?</p>
+<p>A. Average<br>
+B. Trend<br>
+C. Variation<br>
+D. Correlation</p>
+<hr>
+</section>
+<section id="question-2-6" class="level2">
+<h2 class="anchored" data-anchor-id="question-2-6">Question 2</h2>
+<p>Which graph is best for showing trends over time?</p>
+<p>A. Pie chart<br>
+B. Histogram<br>
+C. Line graph<br>
+D. Table</p>
+<hr>
+</section>
+<section id="question-3-6" class="level2">
+<h2 class="anchored" data-anchor-id="question-3-6">Question 3</h2>
+<p>Does correlation imply causation?</p>
+<p>A. Yes<br>
+B. No</p>
+<hr>
+</section>
+<section id="question-4" class="level2">
+<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
+<p>Which graph is most useful for studying relationships between two variables?</p>
+<p>A. Scatter plot<br>
+B. Histogram<br>
+C. Bar chart<br>
+D. Pie chart</p>
 <hr>
 </section>
 </section>
@@ -429,9 +681,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Save notebook properly.</li>
 <li>Rename notebook using:</li>
 </ol>
-<pre class="text"><code>Week01_IndexNumber_Name.ipynb</code></pre>
+<pre class="text"><code>Week05_IndexNumber_Name.ipynb</code></pre>
 <p>Example:</p>
-<pre class="text"><code>Week01_2024BA12345_Perera.ipynb</code></pre>
+<pre class="text"><code>Week05_2024BA12345_Perera.ipynb</code></pre>
 <ol start="3" type="1">
 <li>Set notebook sharing to:</li>
 </ol>
@@ -440,7 +692,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="submission-link" class="level1">
 <h1>Submission Link</h1>
-<p><a href="https://lms.arts.cmb.ac.lk/mod/assign/view.php?id=91781">Submit Week 1 Activity</a></p>
+<p>The lecturer will provide the live submission link during the class session.</p>
 <hr>
 </section>
 <section id="passcode-access" class="level1">
@@ -448,6 +700,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The lecturer will provide the passcode during the lecture.</p>
 <p>Students without the correct passcode cannot access the submission form.</p>
 <hr>
+</section>
+<section id="common-errors" class="level1">
+<h1>Common Errors</h1>
+<section id="problem-1-missing-labels" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1-missing-labels">Problem 1 — Missing Labels</h2>
+<p>Graphs without:</p>
+<ul>
+<li>titles</li>
+<li>axis labels</li>
+<li>units</li>
+</ul>
+<p>are poor analytical practice.</p>
+<hr>
+</section>
+<section id="problem-2-misinterpreting-correlation" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2-misinterpreting-correlation">Problem 2 — Misinterpreting Correlation</h2>
+<p>Correlation indicates association.</p>
+<p>It does NOT automatically indicate causation.</p>
+<hr>
+</section>
+<section id="problem-3-wrong-graph-choice" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3-wrong-graph-choice">Problem 3 — Wrong Graph Choice</h2>
+<p>Different graph types answer different analytical questions.</p>
+<p>Choose graphs based on analytical purpose.</p>
+<hr>
+</section>
+<section id="problem-4-ignoring-outliers" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4-ignoring-outliers">Problem 4 — Ignoring Outliers</h2>
+<p>Extreme observations can distort:</p>
+<ul>
+<li>averages</li>
+<li>correlations</li>
+<li>interpretations</li>
+</ul>
+<p>Always inspect data visually.</p>
+<hr>
+</section>
 </section>
 <section id="academic-integrity" class="level1">
 <h1>Academic Integrity</h1>

@@ -52,7 +52,28 @@ By the end of this week, students should be able to:
 
 ---
 
-# 2. What Is a DataFrame?
+# 2. Week 4 Learning Materials
+
+| Material | Purpose | Link |
+|---|---|---|
+| Week 4 Live Notebook | Run the pandas examples in Google Colab | [Open Week 4 Live Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week4/ECN4199_Week4_Live_Notebook.ipynb) |
+| Macroeconomic Dataset | Download the CSV file used in class | [Download sri_lanka_macro.csv](../data/sri_lanka_macro.csv) |
+
+Inside Google Colab:
+
+```text
+File -> Save a copy in Drive
+```
+
+Rename your copy:
+
+```text
+Week04_IndexNumber_Name.ipynb
+```
+
+---
+
+# 3. What Is a DataFrame?
 
 A dataframe is one of the most important concepts in data science.
 
@@ -94,7 +115,7 @@ Dataframes allow us to:
 
 ---
 
-# 3. Importing Data with Pandas
+# 4. Importing Data with Pandas
 
 We use pandas to import datasets.
 
@@ -132,7 +153,7 @@ Everything we do this week uses this dataframe.
 
 ---
 
-# 4. Understanding Rows and Columns
+# 5. Understanding Rows and Columns
 
 Rows represent observations.
 
@@ -176,7 +197,7 @@ Meaning:
 
 ---
 
-# 5. Inspecting Data
+# 6. Inspecting Data
 
 Before analyzing data, economists inspect it carefully.
 
@@ -235,7 +256,7 @@ That is bad practice.
 
 ---
 
-# 6. Selecting Columns and Rows
+# 7. Selecting Columns and Rows
 
 We often work with specific variables.
 
@@ -283,7 +304,7 @@ Displays first three rows.
 
 ---
 
-# 7. Filtering Data
+# 8. Filtering Data
 
 Filtering allows us to select observations satisfying conditions.
 
@@ -333,7 +354,7 @@ Filtering isolates relevant observations.
 
 ---
 
-# 8. Creating New Variables
+# 9. Creating New Variables
 
 Much of economics involves constructing new indicators.
 
@@ -373,7 +394,7 @@ transforming raw data into meaningful variables
 
 ---
 
-# 9. Sorting Data
+# 10. Sorting Data
 
 Sorting helps identify:
 
@@ -410,7 +431,7 @@ data.sort_values(by="Inflation", ascending=False).head(1)
 
 ---
 
-# 10. Missing Values
+# 11. Missing Values
 
 Real datasets often contain missing values.
 
@@ -467,7 +488,7 @@ Economists must think carefully.
 
 ---
 
-# 11. Cleaning Data
+# 12. Cleaning Data
 
 Data cleaning is one of the most important skills in analytics.
 
@@ -509,7 +530,7 @@ Professional analysis requires:
 
 ---
 
-# 12. Grouping and Aggregation
+# 13. Grouping and Aggregation
 
 Economists often summarize data by groups.
 
@@ -596,17 +617,13 @@ Modern economics depends heavily on combining data sources.
 
 # 14. Open the Week 4 Live Notebook
 
-Replace placeholder below:
-
-[Open Week 4 Live Notebook — Save a Copy Before Editing](PASTE_WEEK4_COLAB_LINK_HERE)
+[Open Week 4 Live Notebook — Save a Copy Before Editing](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week4/ECN4199_Week4_Live_Notebook.ipynb)
 
 ---
 
 # 15. Download the Dataset
 
-Replace placeholder below:
-
-[Download Macroeconomic Dataset](PASTE_DATASET_LINK_HERE)
+[Download Macroeconomic Dataset](../data/sri_lanka_macro.csv)
 
 ---
 
@@ -812,9 +829,7 @@ Week4_YourName.ipynb
 
 # Submission Link
 
-Replace placeholder below:
-
-[Submit Week 4 Work](PASTE_SUBMISSION_LINK_HERE)
+The lecturer will provide the live submission link during the class session.
 
 ---
 

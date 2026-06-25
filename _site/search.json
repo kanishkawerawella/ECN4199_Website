@@ -1,192 +1,878 @@
 [
   {
-    "objectID": "activities/week3_activity.html#marks-1",
-    "href": "activities/week3_activity.html#marks-1",
-    "title": "Week 3 Assignment — Programming Logic and Automation",
-    "section": "Marks: 1",
-    "text": "Marks: 1\nWrite a function called:\nclassify_inflation(inflation)\nUse these rules:\n\n\n\nInflation Rate\nClassification\n\n\n\n\nBelow 5\nLow inflation\n\n\n5 to 15, inclusive\nModerate inflation\n\n\nAbove 15\nHigh inflation\n\n\n\nYour function must return the classification.\nTest it using:\ntest_rates = [4.9, 5, 12, 15, 15.1]"
-  },
-  {
-    "objectID": "activities/week3_activity.html#questions",
-    "href": "activities/week3_activity.html#questions",
-    "title": "Week 3 Assignment — Programming Logic and Automation",
-    "section": "Questions",
-    "text": "Questions\n\nHow is exactly 5 classified?\nHow is exactly 15 classified?\nWhy should boundary values be tested?"
-  },
-  {
-    "objectID": "activities/week3_activity.html#marks-1-1",
-    "href": "activities/week3_activity.html#marks-1-1",
-    "title": "Week 3 Assignment — Programming Logic and Automation",
-    "section": "Marks: 1",
-    "text": "Marks: 1\nUse:\ngdp_growth_rates = [3.5, 5.2, -7.8, 2.1, -1.4]\nCreate an empty list called:\ngrowth_categories\nUse a loop to classify each value:\n\n\n\nGDP Growth\nClassification\n\n\n\n\nBelow 0\nRecession\n\n\n0 to below 3\nSlow growth\n\n\n3 or above\nStrong growth\n\n\n\nStore each classification in growth_categories.\nPrint both the growth value and its classification."
-  },
-  {
-    "objectID": "activities/week3_activity.html#question",
-    "href": "activities/week3_activity.html#question",
-    "title": "Week 3 Assignment — Programming Logic and Automation",
-    "section": "Question",
-    "text": "Question\nWhy is saving results in a list more useful than only printing them?"
-  },
-  {
-    "objectID": "activities/week3_activity.html#marks-1-2",
-    "href": "activities/week3_activity.html#marks-1-2",
-    "title": "Week 3 Assignment — Programming Logic and Automation",
-    "section": "Marks: 1",
-    "text": "Marks: 1\nCreate:\npercentage_change(old_value, new_value)\nUse:\n[(new value - old value) / old value] × 100\nApply the function to:\n\n\n\nIndicator\nOld Value\nNew Value\n\n\n\n\nGDP\n5000\n5400\n\n\nCPI\n200\n240\n\n\nLKR per USD exchange rate\n300\n330\n\n\n\nRound each result to two decimal places.\nWrite one sentence interpreting each result."
-  },
-  {
-    "objectID": "activities/week3_activity.html#marks-1-3",
-    "href": "activities/week3_activity.html#marks-1-3",
-    "title": "Week 3 Assignment — Programming Logic and Automation",
-    "section": "Marks: 1",
-    "text": "Marks: 1\nUse:\nindicators = [\"GDP\", \"CPI\", \"Exchange rate\"]\nold_values = [5000, 200, 300]\nnew_values = [5400, 240, 330]\nWrite a loop using:\nzip()\nFor each indicator:\n\ncalculate percentage change using your function\nprint the indicator name\nprint the rounded result\nprint a short interpretation label\n\nSuggested labels:\n\nGDP: \"Economic growth\"\nCPI: \"Inflation\"\nExchange rate: \"Currency depreciation\""
-  },
-  {
-    "objectID": "activities/week3_activity.html#question-1",
-    "href": "activities/week3_activity.html#question-1",
-    "title": "Week 3 Assignment — Programming Logic and Automation",
-    "section": "Question",
-    "text": "Question\nWhat parts of this workflow are automated, and what parts still require economic judgement?"
-  },
-  {
-    "objectID": "activities/week3_activity.html#marks-1-4",
-    "href": "activities/week3_activity.html#marks-1-4",
-    "title": "Week 3 Assignment — Programming Logic and Automation",
-    "section": "Marks: 1",
-    "text": "Marks: 1\nAn AI tool generated:\ndef classify_inflation(inflation):\n    if inflation &lt; 15:\n        return \"Low inflation\"\n    elif inflation &lt; 5:\n        return \"Moderate inflation\"\n    else:\n        return \"High inflation\"\nComplete all of the following:\n\nIdentify the logical error.\nExplain why \"Moderate inflation\" can never be returned.\nCorrect the function.\nTest the corrected function using 4.9, 5, 15, and 15.1.\nIn 80–120 words, explain why economists must verify AI-generated code."
-  },
-  {
-    "objectID": "activities/week3_activity.html#missing-colon",
-    "href": "activities/week3_activity.html#missing-colon",
-    "title": "Week 3 Assignment — Programming Logic and Automation",
-    "section": "Missing Colon",
-    "text": "Missing Colon\nWrong:\nif inflation &lt; 5\nCorrect:\nif inflation &lt; 5:"
-  },
-  {
-    "objectID": "activities/week3_activity.html#incorrect-indentation",
-    "href": "activities/week3_activity.html#incorrect-indentation",
-    "title": "Week 3 Assignment — Programming Logic and Automation",
-    "section": "Incorrect Indentation",
-    "text": "Incorrect Indentation\nWrong:\nif growth &lt; 0:\nprint(\"Recession\")\nCorrect:\nif growth &lt; 0:\n    print(\"Recession\")"
-  },
-  {
-    "objectID": "activities/week3_activity.html#assignment-instead-of-comparison",
-    "href": "activities/week3_activity.html#assignment-instead-of-comparison",
-    "title": "Week 3 Assignment — Programming Logic and Automation",
-    "section": "Assignment Instead of Comparison",
-    "text": "Assignment Instead of Comparison\nWrong:\nif status = \"Employed\":\nCorrect:\nif status == \"Employed\":"
-  },
-  {
-    "objectID": "activities/week3_activity.html#forgetting-return",
-    "href": "activities/week3_activity.html#forgetting-return",
-    "title": "Week 3 Assignment — Programming Logic and Automation",
-    "section": "Forgetting return",
-    "text": "Forgetting return\nA function must return a result if that result will be reused."
-  },
-  {
-    "objectID": "activities/week1_activity.html",
-    "href": "activities/week1_activity.html",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week6_activity.html",
+    "href": "activities/week6_activity.html",
+    "title": "Week 6 In-Class Activity",
     "section": "",
-    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 1\n\n\nTopic\nOrientation and Computational Thinking\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
+    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 6\n\n\nTopic\nInteractive Dashboards and Data Storytelling\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
   },
   {
-    "objectID": "activities/week1_activity.html#objective",
-    "href": "activities/week1_activity.html#objective",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week6_activity.html#objective",
+    "href": "activities/week6_activity.html#objective",
+    "title": "Week 6 In-Class Activity",
     "section": "Objective",
-    "text": "Objective\nRun your first Python code successfully."
+    "text": "Objective\nBuild an interactive inflation trend graph."
   },
   {
-    "objectID": "activities/week1_activity.html#instructions-1",
-    "href": "activities/week1_activity.html#instructions-1",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week6_activity.html#instructions-1",
+    "href": "activities/week6_activity.html#instructions-1",
+    "title": "Week 6 In-Class Activity",
     "section": "Instructions",
-    "text": "Instructions\nRun the following code:\nprint(\"Welcome to ECN 4199\")"
+    "text": "Instructions\nCreate an interactive Plotly line graph showing inflation over time."
   },
   {
-    "objectID": "activities/week1_activity.html#question",
-    "href": "activities/week1_activity.html#question",
-    "title": "Week 1 In-Class Activity",
-    "section": "Question",
-    "text": "Question\nWhat does the function:\nprint()\ndo in Python?\nWrite your answer in one sentence."
+    "objectID": "activities/week6_activity.html#expected-structure",
+    "href": "activities/week6_activity.html#expected-structure",
+    "title": "Week 6 In-Class Activity",
+    "section": "Expected Structure",
+    "text": "Expected Structure\nimport pandas as pd\nimport plotly.express as px\n\ndata = pd.read_csv(\"sri_lanka_macro.csv\")\n\nfig = px.line(data,\n              x=\"Year\",\n              y=\"Inflation\",\n              title=\"Inflation Trends\")\n\nfig.show()"
   },
   {
-    "objectID": "activities/week1_activity.html#objective-1",
-    "href": "activities/week1_activity.html#objective-1",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week6_activity.html#questions",
+    "href": "activities/week6_activity.html#questions",
+    "title": "Week 6 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhen does inflation increase sharply?\n\n\n\nQuestion 2\nWhat economic conditions might explain this increase?\n\n\n\nQuestion 3\nWhy are interactive graphs useful compared to static graphs?"
+  },
+  {
+    "objectID": "activities/week6_activity.html#objective-1",
+    "href": "activities/week6_activity.html#objective-1",
+    "title": "Week 6 In-Class Activity",
     "section": "Objective",
-    "text": "Objective\nUnderstand basic Python variables."
+    "text": "Objective\nCompare GDP growth visually."
   },
   {
-    "objectID": "activities/week1_activity.html#instructions-2",
-    "href": "activities/week1_activity.html#instructions-2",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week6_activity.html#instructions-2",
+    "href": "activities/week6_activity.html#instructions-2",
+    "title": "Week 6 In-Class Activity",
     "section": "Instructions",
-    "text": "Instructions\nCreate the following variables:\nstudent_name\ninflation_rate\ngdp_growth\nAssign appropriate values.\nExample:\ninflation_rate = 12.5"
+    "text": "Instructions\nCreate an interactive bar chart for GDP growth."
   },
   {
-    "objectID": "activities/week1_activity.html#question-1",
-    "href": "activities/week1_activity.html#question-1",
-    "title": "Week 1 In-Class Activity",
-    "section": "Question",
-    "text": "Question\nWhy are variables useful in programming and data analysis?"
-  },
-  {
-    "objectID": "activities/week1_activity.html#objective-2",
-    "href": "activities/week1_activity.html#objective-2",
-    "title": "Week 1 In-Class Activity",
-    "section": "Objective",
-    "text": "Objective\nUse Python for basic economic calculations."
-  },
-  {
-    "objectID": "activities/week1_activity.html#instructions-3",
-    "href": "activities/week1_activity.html#instructions-3",
-    "title": "Week 1 In-Class Activity",
-    "section": "Instructions",
-    "text": "Instructions\nAssume:\n\n\n\nVariable\nValue\n\n\n\n\nInitial Inflation\n6%\n\n\nNew Inflation\n12%\n\n\n\nCalculate:\npercentage point increase in inflation\nusing Python."
-  },
-  {
-    "objectID": "activities/week1_activity.html#example-structure",
-    "href": "activities/week1_activity.html#example-structure",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week6_activity.html#example-structure",
+    "href": "activities/week6_activity.html#example-structure",
+    "title": "Week 6 In-Class Activity",
     "section": "Example Structure",
-    "text": "Example Structure\ninitial_inflation = 6\nnew_inflation = 12"
+    "text": "Example Structure\nfig = px.bar(data,\n             x=\"Year\",\n             y=\"GDP_Growth\",\n             color=\"GDP_Growth\")\n\nfig.show()"
   },
   {
-    "objectID": "activities/week1_activity.html#question-2",
-    "href": "activities/week1_activity.html#question-2",
-    "title": "Week 1 In-Class Activity",
-    "section": "Question",
-    "text": "Question\nWhat does a sharp increase in inflation usually imply for households?\nWrite 2–3 sentences."
+    "objectID": "activities/week6_activity.html#questions-1",
+    "href": "activities/week6_activity.html#questions-1",
+    "title": "Week 6 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhich year had the worst GDP growth?\n\n\n\nQuestion 2\nWhy are bar charts useful for comparisons?\n\n\n\nQuestion 3\nWhy should colors be used carefully in dashboards?"
   },
   {
-    "objectID": "activities/week1_activity.html#objective-3",
-    "href": "activities/week1_activity.html#objective-3",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week6_activity.html#objective-2",
+    "href": "activities/week6_activity.html#objective-2",
+    "title": "Week 6 In-Class Activity",
     "section": "Objective",
-    "text": "Objective\nStore economic information using Python lists."
+    "text": "Objective\nExplore relationships between macroeconomic variables."
   },
   {
-    "objectID": "activities/week1_activity.html#instructions-4",
-    "href": "activities/week1_activity.html#instructions-4",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week6_activity.html#instructions-3",
+    "href": "activities/week6_activity.html#instructions-3",
+    "title": "Week 6 In-Class Activity",
     "section": "Instructions",
-    "text": "Instructions\nCreate a Python list containing:\n\ninflation rates\nunemployment rates\nGDP growth values\n\nExample:\ninflation = [4.5, 5.2, 7.8]"
+    "text": "Instructions\nCreate an interactive scatter plot using:\n\nInflation\nExchange_Rate_Change\n\nAdd hover information using Year."
   },
   {
-    "objectID": "activities/week1_activity.html#question-3",
-    "href": "activities/week1_activity.html#question-3",
-    "title": "Week 1 In-Class Activity",
+    "objectID": "activities/week6_activity.html#example-structure-1",
+    "href": "activities/week6_activity.html#example-structure-1",
+    "title": "Week 6 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\nfig = px.scatter(data,\n                 x=\"Inflation\",\n                 y=\"Exchange_Rate_Change\",\n                 hover_name=\"Year\")\n\nfig.show()"
+  },
+  {
+    "objectID": "activities/week6_activity.html#questions-2",
+    "href": "activities/week6_activity.html#questions-2",
+    "title": "Week 6 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nDo inflation and exchange rate changes appear related?\n\n\n\nQuestion 2\nAre there outliers?\n\n\n\nQuestion 3\nWhat macroeconomic events might explain extreme observations?"
+  },
+  {
+    "objectID": "activities/week6_activity.html#objective-3",
+    "href": "activities/week6_activity.html#objective-3",
+    "title": "Week 6 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nCombine multiple indicators into one analytical system."
+  },
+  {
+    "objectID": "activities/week6_activity.html#instructions-4",
+    "href": "activities/week6_activity.html#instructions-4",
+    "title": "Week 6 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nCreate a mini dashboard including:\n\ninflation\nGDP growth\nexchange rate change"
+  },
+  {
+    "objectID": "activities/week6_activity.html#suggested-dashboard-structure",
+    "href": "activities/week6_activity.html#suggested-dashboard-structure",
+    "title": "Week 6 In-Class Activity",
+    "section": "Suggested Dashboard Structure",
+    "text": "Suggested Dashboard Structure\n\n\n\nSection\nContent\n\n\n\n\nTop\nInflation trend\n\n\nMiddle\nGDP growth comparison\n\n\nBottom\nScatter plot relationship"
+  },
+  {
+    "objectID": "activities/week6_activity.html#question",
+    "href": "activities/week6_activity.html#question",
+    "title": "Week 6 In-Class Activity",
     "section": "Question",
-    "text": "Question\nWhy is storing data systematically important for economists?"
+    "text": "Question\nWhat overall macroeconomic story does your dashboard communicate?\nWrite short interpretation."
   },
   {
-    "objectID": "activities/week1_activity.html#short-reflection",
-    "href": "activities/week1_activity.html#short-reflection",
-    "title": "Week 1 In-Class Activity",
-    "section": "Short Reflection",
-    "text": "Short Reflection\nWrite a short paragraph answering:\nWhy are computational and data skills becoming increasingly important for economists and policy analysts?\nYour answer should include:\n\ndata\ndecision-making\nmodern analytics\nAI or automation"
+    "objectID": "activities/week6_activity.html#objective-4",
+    "href": "activities/week6_activity.html#objective-4",
+    "title": "Week 6 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nCritically evaluate dashboard quality."
+  },
+  {
+    "objectID": "activities/week6_activity.html#questions-3",
+    "href": "activities/week6_activity.html#questions-3",
+    "title": "Week 6 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhy is too much information dangerous in dashboard design?\n\n\n\nQuestion 2\nWhat makes a dashboard easy to understand?\n\n\n\nQuestion 3\nWhy is dashboard design important for policymakers and economists?"
+  },
+  {
+    "objectID": "activities/week6_activity.html#question-1-4",
+    "href": "activities/week6_activity.html#question-1-4",
+    "title": "Week 6 In-Class Activity",
+    "section": "Question 1",
+    "text": "Question 1\nWhat is the primary purpose of a dashboard?\nA. Decoration\nB. Programming practice\nC. Decision support and communication\nD. File storage"
+  },
+  {
+    "objectID": "activities/week6_activity.html#question-2-4",
+    "href": "activities/week6_activity.html#question-2-4",
+    "title": "Week 6 In-Class Activity",
+    "section": "Question 2",
+    "text": "Question 2\nWhich library is mainly used this week?\nA. NumPy\nB. Plotly\nC. Statsmodels\nD. TensorFlow"
+  },
+  {
+    "objectID": "activities/week6_activity.html#question-3-4",
+    "href": "activities/week6_activity.html#question-3-4",
+    "title": "Week 6 In-Class Activity",
+    "section": "Question 3",
+    "text": "Question 3\nWhat can users do in interactive visualizations?\nA. Hover and zoom\nB. Delete data automatically\nC. Install software\nD. Remove variables"
+  },
+  {
+    "objectID": "activities/week6_activity.html#question-4",
+    "href": "activities/week6_activity.html#question-4",
+    "title": "Week 6 In-Class Activity",
+    "section": "Question 4",
+    "text": "Question 4\nWhich graph type is best for time trends?\nA. Pie chart\nB. Histogram\nC. Line graph\nD. Table"
+  },
+  {
+    "objectID": "activities/week6_activity.html#problem-1-too-many-graphs",
+    "href": "activities/week6_activity.html#problem-1-too-many-graphs",
+    "title": "Week 6 In-Class Activity",
+    "section": "Problem 1 — Too Many Graphs",
+    "text": "Problem 1 — Too Many Graphs\nMore graphs do NOT necessarily improve analysis.\nSimplify."
+  },
+  {
+    "objectID": "activities/week6_activity.html#problem-2-missing-labels",
+    "href": "activities/week6_activity.html#problem-2-missing-labels",
+    "title": "Week 6 In-Class Activity",
+    "section": "Problem 2 — Missing Labels",
+    "text": "Problem 2 — Missing Labels\nEvery graph must include:\n\ntitle\nlabels\nreadable structure"
+  },
+  {
+    "objectID": "activities/week6_activity.html#problem-3-random-colors",
+    "href": "activities/week6_activity.html#problem-3-random-colors",
+    "title": "Week 6 In-Class Activity",
+    "section": "Problem 3 — Random Colors",
+    "text": "Problem 3 — Random Colors\nColors should communicate meaning.\nDo not use colors randomly."
+  },
+  {
+    "objectID": "activities/week6_activity.html#problem-4-weak-interpretation",
+    "href": "activities/week6_activity.html#problem-4-weak-interpretation",
+    "title": "Week 6 In-Class Activity",
+    "section": "Problem 4 — Weak Interpretation",
+    "text": "Problem 4 — Weak Interpretation\nDashboards without interpretation are incomplete analysis."
+  },
+  {
+    "objectID": "activities/week6_activity.html#problem-5-misleading-visual-design",
+    "href": "activities/week6_activity.html#problem-5-misleading-visual-design",
+    "title": "Week 6 In-Class Activity",
+    "section": "Problem 5 — Misleading Visual Design",
+    "text": "Problem 5 — Misleading Visual Design\nPoor scaling or clutter can distort economic understanding."
+  },
+  {
+    "objectID": "activities/week4_activity.html",
+    "href": "activities/week4_activity.html",
+    "title": "Week 4 In-Class Activity",
+    "section": "",
+    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 4\n\n\nTopic\nData Handling, Cleaning, and Manipulation with Pandas\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
+  },
+  {
+    "objectID": "activities/week4_activity.html#objective",
+    "href": "activities/week4_activity.html#objective",
+    "title": "Week 4 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nLoad and inspect the macroeconomic dataset."
+  },
+  {
+    "objectID": "activities/week4_activity.html#instructions-1",
+    "href": "activities/week4_activity.html#instructions-1",
+    "title": "Week 4 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nImport pandas and load the dataset."
+  },
+  {
+    "objectID": "activities/week4_activity.html#expected-structure",
+    "href": "activities/week4_activity.html#expected-structure",
+    "title": "Week 4 In-Class Activity",
+    "section": "Expected Structure",
+    "text": "Expected Structure\nimport pandas as pd\n\ndata = pd.read_csv(\"sri_lanka_macro.csv\")"
+  },
+  {
+    "objectID": "activities/week4_activity.html#run-the-following-commands",
+    "href": "activities/week4_activity.html#run-the-following-commands",
+    "title": "Week 4 In-Class Activity",
+    "section": "Run the Following Commands",
+    "text": "Run the Following Commands\ndata.head()\ndata.info()\ndata.describe()"
+  },
+  {
+    "objectID": "activities/week4_activity.html#questions",
+    "href": "activities/week4_activity.html#questions",
+    "title": "Week 4 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nHow many rows and columns are in the dataset?\n\n\n\nQuestion 2\nWhich variables are numerical?\n\n\n\nQuestion 3\nAre there missing values?"
+  },
+  {
+    "objectID": "activities/week4_activity.html#objective-1",
+    "href": "activities/week4_activity.html#objective-1",
+    "title": "Week 4 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nWork with specific columns and rows."
+  },
+  {
+    "objectID": "activities/week4_activity.html#instructions-2",
+    "href": "activities/week4_activity.html#instructions-2",
+    "title": "Week 4 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nSelect:\n\nInflation\nGDP_Growth\nExchange_Rate"
+  },
+  {
+    "objectID": "activities/week4_activity.html#example-structure",
+    "href": "activities/week4_activity.html#example-structure",
+    "title": "Week 4 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\ndata[[\"Inflation\", \"GDP_Growth\"]]"
+  },
+  {
+    "objectID": "activities/week4_activity.html#questions-1",
+    "href": "activities/week4_activity.html#questions-1",
+    "title": "Week 4 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhy do economists often focus only on selected variables instead of the entire dataset?"
+  },
+  {
+    "objectID": "activities/week4_activity.html#objective-2",
+    "href": "activities/week4_activity.html#objective-2",
+    "title": "Week 4 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nFilter observations using economic conditions."
+  },
+  {
+    "objectID": "activities/week4_activity.html#instructions-3",
+    "href": "activities/week4_activity.html#instructions-3",
+    "title": "Week 4 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nFilter:\n\nPart A\nYears with:\nInflation &gt; 10\n\n\nPart B\nYears with:\nGDP_Growth &lt; 0"
+  },
+  {
+    "objectID": "activities/week4_activity.html#example-structure-1",
+    "href": "activities/week4_activity.html#example-structure-1",
+    "title": "Week 4 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\ndata[data[\"Inflation\"] &gt; 10]"
+  },
+  {
+    "objectID": "activities/week4_activity.html#questions-2",
+    "href": "activities/week4_activity.html#questions-2",
+    "title": "Week 4 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhich years appear to represent economic crisis conditions?\n\n\n\nQuestion 2\nDo high inflation years appear associated with recession years?\nWrite short interpretation."
+  },
+  {
+    "objectID": "activities/week4_activity.html#objective-3",
+    "href": "activities/week4_activity.html#objective-3",
+    "title": "Week 4 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nCreate analytical indicators."
+  },
+  {
+    "objectID": "activities/week4_activity.html#instructions-4",
+    "href": "activities/week4_activity.html#instructions-4",
+    "title": "Week 4 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nCreate:\n\nPart A\nExchange rate percentage change."
+  },
+  {
+    "objectID": "activities/week4_activity.html#example-structure-2",
+    "href": "activities/week4_activity.html#example-structure-2",
+    "title": "Week 4 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\ndata[\"Exchange_Rate_Change\"] = data[\"Exchange_Rate\"].pct_change() * 100\n\n\nPart B\nHigh inflation category variable.\nRules:\n\n\n\nCondition\nOutput\n\n\n\n\nInflation &gt; 10\nTrue\n\n\nOtherwise\nFalse"
+  },
+  {
+    "objectID": "activities/week4_activity.html#question",
+    "href": "activities/week4_activity.html#question",
+    "title": "Week 4 In-Class Activity",
+    "section": "Question",
+    "text": "Question\nWhy do economists create new variables instead of relying only on raw data?"
+  },
+  {
+    "objectID": "activities/week4_activity.html#objective-4",
+    "href": "activities/week4_activity.html#objective-4",
+    "title": "Week 4 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nIdentify important economic observations."
+  },
+  {
+    "objectID": "activities/week4_activity.html#instructions-5",
+    "href": "activities/week4_activity.html#instructions-5",
+    "title": "Week 4 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nSort the dataset by:\n\nInflation (highest first)\nGDP growth (lowest first)"
+  },
+  {
+    "objectID": "activities/week4_activity.html#example-structure-3",
+    "href": "activities/week4_activity.html#example-structure-3",
+    "title": "Week 4 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\ndata.sort_values(by=\"Inflation\", ascending=False)"
+  },
+  {
+    "objectID": "activities/week4_activity.html#questions-3",
+    "href": "activities/week4_activity.html#questions-3",
+    "title": "Week 4 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhich year had the highest inflation?\n\n\n\nQuestion 2\nWhich year had the worst GDP growth?\n\n\n\nQuestion 3\nWhat patterns do you observe between inflation and GDP growth?"
+  },
+  {
+    "objectID": "activities/week4_activity.html#objective-5",
+    "href": "activities/week4_activity.html#objective-5",
+    "title": "Week 4 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nUnderstand missing values and data cleaning."
+  },
+  {
+    "objectID": "activities/week4_activity.html#instructions-6",
+    "href": "activities/week4_activity.html#instructions-6",
+    "title": "Week 4 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nRun:\ndata.isnull().sum()"
+  },
+  {
+    "objectID": "activities/week4_activity.html#questions-4",
+    "href": "activities/week4_activity.html#questions-4",
+    "title": "Week 4 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhat does NaN mean?\n\n\n\nQuestion 2\nWhy can missing values create analytical problems?\n\n\n\nQuestion 3\nWhy is blindly deleting missing values sometimes dangerous?"
+  },
+  {
+    "objectID": "activities/week4_activity.html#question-1-5",
+    "href": "activities/week4_activity.html#question-1-5",
+    "title": "Week 4 In-Class Activity",
+    "section": "Question 1",
+    "text": "Question 1\nWhat is a dataframe?\nA. A graph\nB. A machine learning model\nC. A table of data\nD. A Python error"
+  },
+  {
+    "objectID": "activities/week4_activity.html#question-2-4",
+    "href": "activities/week4_activity.html#question-2-4",
+    "title": "Week 4 In-Class Activity",
+    "section": "Question 2",
+    "text": "Question 2\nWhich function displays first rows?\nA. tail()\nB. show()\nC. head()\nD. info()"
+  },
+  {
+    "objectID": "activities/week4_activity.html#question-3-3",
+    "href": "activities/week4_activity.html#question-3-3",
+    "title": "Week 4 In-Class Activity",
+    "section": "Question 3",
+    "text": "Question 3\nWhat does dropna() mainly do?\nA. Creates graphs\nB. Removes missing values\nC. Sorts data\nD. Imports libraries"
+  },
+  {
+    "objectID": "activities/week4_activity.html#question-4",
+    "href": "activities/week4_activity.html#question-4",
+    "title": "Week 4 In-Class Activity",
+    "section": "Question 4",
+    "text": "Question 4\nWhat does filtering data allow economists to do?\nA. Install Python\nB. Isolate relevant observations\nC. Delete variables automatically\nD. Create websites"
+  },
+  {
+    "objectID": "activities/week4_activity.html#problem-1-wrong-column-name",
+    "href": "activities/week4_activity.html#problem-1-wrong-column-name",
+    "title": "Week 4 In-Class Activity",
+    "section": "Problem 1 — Wrong Column Name",
+    "text": "Problem 1 — Wrong Column Name\nError:\nKeyError\nPossible causes:\n\nspelling mistake\nincorrect capitalization"
+  },
+  {
+    "objectID": "activities/week4_activity.html#problem-2-forgetting-brackets",
+    "href": "activities/week4_activity.html#problem-2-forgetting-brackets",
+    "title": "Week 4 In-Class Activity",
+    "section": "Problem 2 — Forgetting Brackets",
+    "text": "Problem 2 — Forgetting Brackets\nWrong:\ndata[\"Inflation\" &gt; 10]\nCorrect:\ndata[data[\"Inflation\"] &gt; 10]"
+  },
+  {
+    "objectID": "activities/week4_activity.html#problem-3-misinterpreting-nan",
+    "href": "activities/week4_activity.html#problem-3-misinterpreting-nan",
+    "title": "Week 4 In-Class Activity",
+    "section": "Problem 3 — Misinterpreting NaN",
+    "text": "Problem 3 — Misinterpreting NaN\nNaN does NOT mean zero.\nIt means:\ninformation is unavailable"
+  },
+  {
+    "objectID": "activities/week4_activity.html#problem-4-forgetting-assignment",
+    "href": "activities/week4_activity.html#problem-4-forgetting-assignment",
+    "title": "Week 4 In-Class Activity",
+    "section": "Problem 4 — Forgetting Assignment",
+    "text": "Problem 4 — Forgetting Assignment\nWrong:\ndata.dropna()\nBetter:\ndata = data.dropna()"
+  },
+  {
+    "objectID": "activities/week2_activity.html",
+    "href": "activities/week2_activity.html",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "",
+    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 2\n\n\nTopic\nWorking with Data in Python using a Labour Force Survey Dataset\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nSubmission Format\nGoogle Colab notebook link\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
+  },
+  {
+    "objectID": "activities/week2_activity.html#instructions",
+    "href": "activities/week2_activity.html#instructions",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Instructions",
+    "text": "Instructions\nRun:\nprint(\"Week 2 assignment started successfully\")\nThen write your name and index number in a Markdown cell."
+  },
+  {
+    "objectID": "activities/week2_activity.html#question",
+    "href": "activities/week2_activity.html#question",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Question",
+    "text": "Question\nIn 2-3 sentences, explain why Google Colab is useful for beginners learning data analytics."
+  },
+  {
+    "objectID": "activities/week2_activity.html#instructions-1",
+    "href": "activities/week2_activity.html#instructions-1",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Instructions",
+    "text": "Instructions\nRun:\nimport pandas as pd"
+  },
+  {
+    "objectID": "activities/week2_activity.html#question-1",
+    "href": "activities/week2_activity.html#question-1",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Question",
+    "text": "Question\nWhy do economists and data analysts use libraries such as pandas instead of writing every command from scratch?"
+  },
+  {
+    "objectID": "activities/week2_activity.html#instructions-2",
+    "href": "activities/week2_activity.html#instructions-2",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Instructions",
+    "text": "Instructions\nUse the direct website method:\ndataset_url = \"https://kanishkawerawella.github.io/ECN4199_Website/data/LFS_Hypothetical_Dataset.xlsx\"\n\ndata = pd.read_excel(dataset_url, sheet_name=\"LFS_Data\")\ndictionary = pd.read_excel(dataset_url, sheet_name=\"Variable Dictionary\")\nIf the direct website method does not work, upload the downloaded Excel file into Colab and use:\ndata = pd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")\ndictionary = pd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"Variable Dictionary\")"
+  },
+  {
+    "objectID": "activities/week2_activity.html#questions",
+    "href": "activities/week2_activity.html#questions",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Questions",
+    "text": "Questions\n\nWhat does the LFS_Data sheet contain?\nWhat does the Variable Dictionary sheet explain?\nWhy should analysts read the variable dictionary before interpreting a dataset?"
+  },
+  {
+    "objectID": "activities/week2_activity.html#instructions-3",
+    "href": "activities/week2_activity.html#instructions-3",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Instructions",
+    "text": "Instructions\nRun the following commands:\ndata.head()\ndata.tail()\ndata.shape\ndata.columns\ndata.info()"
+  },
+  {
+    "objectID": "activities/week2_activity.html#questions-1",
+    "href": "activities/week2_activity.html#questions-1",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Questions",
+    "text": "Questions\n\nHow many observations are in the dataset?\nHow many variables are in the dataset?\nName five variables that are useful for labour market analysis.\nAre all variables numerical? Explain using examples."
+  },
+  {
+    "objectID": "activities/week2_activity.html#instructions-4",
+    "href": "activities/week2_activity.html#instructions-4",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Instructions",
+    "text": "Instructions\nDisplay the variable dictionary:\ndictionary\nThen identify the meaning of these variables:\n\nEmployment_Status\nMonthly_Wage_LKR\nEducation_Level\nInternet_Access\nUnpaid_Care_Hours_Weekly"
+  },
+  {
+    "objectID": "activities/week2_activity.html#question-2",
+    "href": "activities/week2_activity.html#question-2",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Question",
+    "text": "Question\nChoose any three variables from the list above and explain why each variable may be useful for economic or labour market analysis."
+  },
+  {
+    "objectID": "activities/week2_activity.html#instructions-5",
+    "href": "activities/week2_activity.html#instructions-5",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Instructions",
+    "text": "Instructions\nRun:\ndata.describe()"
+  },
+  {
+    "objectID": "activities/week2_activity.html#questions-2",
+    "href": "activities/week2_activity.html#questions-2",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Questions",
+    "text": "Questions\n\nWhat is the average age of individuals in the dataset?\nWhat is the average household size?\nWhat is the average monthly wage?\nWhat is the maximum monthly wage?\nWhat is the average number of unpaid care hours per week?\n\nFor each answer, write one short interpretation."
+  },
+  {
+    "objectID": "activities/week2_activity.html#instructions-6",
+    "href": "activities/week2_activity.html#instructions-6",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Instructions",
+    "text": "Instructions\nRun:\ndata[\"Sex\"].value_counts()\ndata[\"Sector\"].value_counts()\ndata[\"Education_Level\"].value_counts()\ndata[\"Employment_Status\"].value_counts()\ndata[\"Internet_Access\"].value_counts()"
+  },
+  {
+    "objectID": "activities/week2_activity.html#questions-3",
+    "href": "activities/week2_activity.html#questions-3",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Questions",
+    "text": "Questions\n\nHow many males and females are included in the dataset?\nIs the sample more urban or more rural?\nWhich education category appears most frequently?\nHow many individuals are employed, unemployed, and inactive?\nHow many individuals have internet access?"
+  },
+  {
+    "objectID": "activities/week2_activity.html#problem-1-file-not-found",
+    "href": "activities/week2_activity.html#problem-1-file-not-found",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Problem 1 — File Not Found",
+    "text": "Problem 1 — File Not Found\nPossible causes:\n\ndataset not uploaded\nincorrect filename\nfile uploaded to the wrong Colab session"
+  },
+  {
+    "objectID": "activities/week2_activity.html#problem-2-forgetting-quotes",
+    "href": "activities/week2_activity.html#problem-2-forgetting-quotes",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Problem 2 — Forgetting Quotes",
+    "text": "Problem 2 — Forgetting Quotes\nWrong:\npd.read_excel(LFS_Hypothetical_Dataset.xlsx)\nCorrect:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")"
+  },
+  {
+    "objectID": "activities/week2_activity.html#problem-3-wrong-sheet-name",
+    "href": "activities/week2_activity.html#problem-3-wrong-sheet-name",
+    "title": "Week 2 Assignment — Working with Data in Python",
+    "section": "Problem 3 — Wrong Sheet Name",
+    "text": "Problem 3 — Wrong Sheet Name\nWrong:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"Data\")\nCorrect:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")"
+  },
+  {
+    "objectID": "lectures/week6.html",
+    "href": "lectures/week6.html",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "",
+    "text": "Weeks 1–5 focused on:\n\nPython fundamentals\ndata handling\ndescriptive statistics\nvisualization\n\nNow students move from:\ncreating graphs\nto:\nbuilding analytical systems\nThis week introduces:\n\ninteractive dashboards\ndynamic visualization\ndashboard logic\nuser interaction\nexploratory analysis\ndata storytelling\n\nModern economists increasingly communicate through:\n\ndashboards\ninteractive reports\nweb applications\nreal-time monitoring systems\n\nThis week is a major transition."
+  },
+  {
+    "objectID": "lectures/week6.html#step-1-import-libraries",
+    "href": "lectures/week6.html#step-1-import-libraries",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Step 1 — Import Libraries",
+    "text": "Step 1 — Import Libraries\nimport pandas as pd\nimport plotly.express as px"
+  },
+  {
+    "objectID": "lectures/week6.html#step-2-load-dataset",
+    "href": "lectures/week6.html#step-2-load-dataset",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Step 2 — Load Dataset",
+    "text": "Step 2 — Load Dataset\ndata = pd.read_csv(\"sri_lanka_macro.csv\")"
+  },
+  {
+    "objectID": "lectures/week6.html#step-3-create-interactive-inflation-graph",
+    "href": "lectures/week6.html#step-3-create-interactive-inflation-graph",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Step 3 — Create Interactive Inflation Graph",
+    "text": "Step 3 — Create Interactive Inflation Graph\nfig = px.line(data,\n              x=\"Year\",\n              y=\"Inflation\",\n              title=\"Inflation Trends\")\n\nfig.show()"
+  },
+  {
+    "objectID": "lectures/week6.html#step-4-create-gdp-growth-bar-chart",
+    "href": "lectures/week6.html#step-4-create-gdp-growth-bar-chart",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Step 4 — Create GDP Growth Bar Chart",
+    "text": "Step 4 — Create GDP Growth Bar Chart\nfig = px.bar(data,\n             x=\"Year\",\n             y=\"GDP_Growth\")\n\nfig.show()"
+  },
+  {
+    "objectID": "lectures/week6.html#step-5-create-scatter-plot",
+    "href": "lectures/week6.html#step-5-create-scatter-plot",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Step 5 — Create Scatter Plot",
+    "text": "Step 5 — Create Scatter Plot\nfig = px.scatter(data,\n                 x=\"Inflation\",\n                 y=\"Exchange_Rate_Change\",\n                 hover_name=\"Year\")\n\nfig.show()"
+  },
+  {
+    "objectID": "lectures/week6.html#step-6-add-multiple-indicators",
+    "href": "lectures/week6.html#step-6-add-multiple-indicators",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Step 6 — Add Multiple Indicators",
+    "text": "Step 6 — Add Multiple Indicators\nfig = px.line(data,\n              x=\"Year\",\n              y=[\"Inflation\",\n                 \"Exchange_Rate_Change\"])\n\nfig.show()"
+  },
+  {
+    "objectID": "lectures/week6.html#step-7-interpretation-questions",
+    "href": "lectures/week6.html#step-7-interpretation-questions",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Step 7 — Interpretation Questions",
+    "text": "Step 7 — Interpretation Questions\nAsk students:\n\nWhen did macro instability intensify?\nAre inflation and depreciation connected?\nWhich years are outliers?\nWhat policy implications emerge?"
+  },
+  {
+    "objectID": "lectures/week6.html#question-1",
+    "href": "lectures/week6.html#question-1",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Question 1",
+    "text": "Question 1\nanswer = input(\"What is the main purpose of a dashboard? A/B/C/D : \")\n\nif answer.upper() == \"C\":\n    print(\"Correct! Dashboards support visual decision-making.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week6.html#question-2",
+    "href": "lectures/week6.html#question-2",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Question 2",
+    "text": "Question 2\nanswer = input(\"Which library is mainly used this week? A/B/C/D : \")\n\nif answer.upper() == \"B\":\n    print(\"Correct! Plotly is the main library.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week6.html#question-3",
+    "href": "lectures/week6.html#question-3",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Question 3",
+    "text": "Question 3\nanswer = input(\"What can users do in interactive graphs? A/B/C/D : \")\n\nif answer.upper() == \"B\":\n    print(\"Correct! Users can hover and zoom.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week6.html#task-1-create-interactive-graphs",
+    "href": "lectures/week6.html#task-1-create-interactive-graphs",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Task 1 — Create Interactive Graphs",
+    "text": "Task 1 — Create Interactive Graphs\nCreate:\n\none interactive line graph\none bar chart\none scatter plot"
+  },
+  {
+    "objectID": "lectures/week6.html#task-2-add-improvements",
+    "href": "lectures/week6.html#task-2-add-improvements",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Task 2 — Add Improvements",
+    "text": "Task 2 — Add Improvements\nAdd:\n\ntitles\nlabels\nhover information"
+  },
+  {
+    "objectID": "lectures/week6.html#task-3-create-mini-dashboard",
+    "href": "lectures/week6.html#task-3-create-mini-dashboard",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Task 3 — Create Mini Dashboard",
+    "text": "Task 3 — Create Mini Dashboard\nBuild a dashboard using:\n\ninflation\nGDP growth\nexchange rate"
+  },
+  {
+    "objectID": "lectures/week6.html#task-4-write-interpretation",
+    "href": "lectures/week6.html#task-4-write-interpretation",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Task 4 — Write Interpretation",
+    "text": "Task 4 — Write Interpretation\nWrite short analytical interpretation:\nWhat macroeconomic story does your dashboard tell?"
+  },
+  {
+    "objectID": "lectures/week6.html#task-5-identify-important-events",
+    "href": "lectures/week6.html#task-5-identify-important-events",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Task 5 — Identify Important Events",
+    "text": "Task 5 — Identify Important Events\nIdentify:\n\ncrisis periods\nunusual observations\nrelationships between indicators"
+  },
+  {
+    "objectID": "lectures/week6.html#task-6-improve-dashboard-design",
+    "href": "lectures/week6.html#task-6-improve-dashboard-design",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Task 6 — Improve Dashboard Design",
+    "text": "Task 6 — Improve Dashboard Design\nImprove:\n\nreadability\nstructure\nclarity\ninterpretation"
+  },
+  {
+    "objectID": "lectures/week6.html#problem-1-too-many-charts",
+    "href": "lectures/week6.html#problem-1-too-many-charts",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Problem 1 — Too Many Charts",
+    "text": "Problem 1 — Too Many Charts\nMore graphs do NOT improve analysis.\nSimplify."
+  },
+  {
+    "objectID": "lectures/week6.html#problem-2-missing-titles",
+    "href": "lectures/week6.html#problem-2-missing-titles",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Problem 2 — Missing Titles",
+    "text": "Problem 2 — Missing Titles\nEvery graph must explain:\n\nwhat is shown\nunits\nvariables"
+  },
+  {
+    "objectID": "lectures/week6.html#problem-3-misleading-scales",
+    "href": "lectures/week6.html#problem-3-misleading-scales",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Problem 3 — Misleading Scales",
+    "text": "Problem 3 — Misleading Scales\nAxis scaling can distort interpretation."
+  },
+  {
+    "objectID": "lectures/week6.html#problem-4-random-colors",
+    "href": "lectures/week6.html#problem-4-random-colors",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Problem 4 — Random Colors",
+    "text": "Problem 4 — Random Colors\nColors should communicate meaning."
+  },
+  {
+    "objectID": "lectures/week6.html#problem-5-no-interpretation",
+    "href": "lectures/week6.html#problem-5-no-interpretation",
+    "title": "Week 6 — Building Interactive Economic Dashboards with Plotly",
+    "section": "Problem 5 — No Interpretation",
+    "text": "Problem 5 — No Interpretation\nA dashboard without interpretation is incomplete analysis."
+  },
+  {
+    "objectID": "lectures/week4.html",
+    "href": "lectures/week4.html",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "",
+    "text": "Weeks 1–3 built:\n\ncomputational confidence\nPython fundamentals\nprogramming logic\n\nNow students begin real data analysis.\nThis is one of the most important weeks in the entire course.\nWhy?\nBecause in real-world economics:\ndata is almost never clean\nProfessional economists spend enormous amounts of time:\n\ncleaning data\nrestructuring data\nhandling missing values\nchecking consistency\nmerging datasets\ncreating variables\n\nPoor data handling destroys analysis long before models matter."
+  },
+  {
+    "objectID": "lectures/week4.html#step-1-import-pandas",
+    "href": "lectures/week4.html#step-1-import-pandas",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Step 1 — Import Pandas",
+    "text": "Step 1 — Import Pandas\nimport pandas as pd"
+  },
+  {
+    "objectID": "lectures/week4.html#step-2-read-dataset",
+    "href": "lectures/week4.html#step-2-read-dataset",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Step 2 — Read Dataset",
+    "text": "Step 2 — Read Dataset\ndata = pd.read_csv(\"sri_lanka_macro.csv\")"
+  },
+  {
+    "objectID": "lectures/week4.html#step-3-inspect-dataset",
+    "href": "lectures/week4.html#step-3-inspect-dataset",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Step 3 — Inspect Dataset",
+    "text": "Step 3 — Inspect Dataset\ndata.head()\ndata.info()\ndata.describe()"
+  },
+  {
+    "objectID": "lectures/week4.html#step-4-filter-high-inflation-years",
+    "href": "lectures/week4.html#step-4-filter-high-inflation-years",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Step 4 — Filter High Inflation Years",
+    "text": "Step 4 — Filter High Inflation Years\ndata[data[\"Inflation\"] &gt; 10]"
+  },
+  {
+    "objectID": "lectures/week4.html#step-5-create-new-variable",
+    "href": "lectures/week4.html#step-5-create-new-variable",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Step 5 — Create New Variable",
+    "text": "Step 5 — Create New Variable\ndata[\"Exchange_Rate_Change\"] = data[\"Exchange_Rate\"].pct_change() * 100"
+  },
+  {
+    "objectID": "lectures/week4.html#step-6-check-missing-values",
+    "href": "lectures/week4.html#step-6-check-missing-values",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Step 6 — Check Missing Values",
+    "text": "Step 6 — Check Missing Values\ndata.isnull().sum()"
+  },
+  {
+    "objectID": "lectures/week4.html#step-7-sort-dataset",
+    "href": "lectures/week4.html#step-7-sort-dataset",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Step 7 — Sort Dataset",
+    "text": "Step 7 — Sort Dataset\ndata.sort_values(by=\"Inflation\", ascending=False)"
+  },
+  {
+    "objectID": "lectures/week4.html#step-8-interpretation-questions",
+    "href": "lectures/week4.html#step-8-interpretation-questions",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Step 8 — Interpretation Questions",
+    "text": "Step 8 — Interpretation Questions\nAsk students:\n\nWhich year had highest inflation?\nWhich year had largest depreciation?\nWere recession years associated with inflation spikes?\nWhat problems exist in the dataset?"
+  },
+  {
+    "objectID": "lectures/week4.html#question-1",
+    "href": "lectures/week4.html#question-1",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Question 1",
+    "text": "Question 1\nanswer = input(\"What is a dataframe? A/B/C/D : \")\n\nif answer.upper() == \"C\":\n    print(\"Correct! A dataframe is a table of data.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week4.html#question-2",
+    "href": "lectures/week4.html#question-2",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Question 2",
+    "text": "Question 2\nanswer = input(\"Which function displays first rows? \")\n\nif answer.lower() == \"head()\":\n    print(\"Correct!\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week4.html#question-3",
+    "href": "lectures/week4.html#question-3",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Question 3",
+    "text": "Question 3\nanswer = input(\"What does dropna() do? A/B/C/D : \")\n\nif answer.upper() == \"B\":\n    print(\"Correct! It removes missing values.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week4.html#task-1-import-dataset",
+    "href": "lectures/week4.html#task-1-import-dataset",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Task 1 — Import Dataset",
+    "text": "Task 1 — Import Dataset\nImport dataset using pandas."
+  },
+  {
+    "objectID": "lectures/week4.html#task-2-display-information",
+    "href": "lectures/week4.html#task-2-display-information",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Task 2 — Display Information",
+    "text": "Task 2 — Display Information\nDisplay:\n\nfirst 5 rows\nsummary statistics\nvariable names"
+  },
+  {
+    "objectID": "lectures/week4.html#task-3-filter-data",
+    "href": "lectures/week4.html#task-3-filter-data",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Task 3 — Filter Data",
+    "text": "Task 3 — Filter Data\nFilter:\n\nyears with inflation above 10\nyears with negative GDP growth"
+  },
+  {
+    "objectID": "lectures/week4.html#task-4-create-variables",
+    "href": "lectures/week4.html#task-4-create-variables",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Task 4 — Create Variables",
+    "text": "Task 4 — Create Variables\nCreate:\n\nexchange rate growth variable\ninflation category variable"
+  },
+  {
+    "objectID": "lectures/week4.html#task-5-sort-dataset",
+    "href": "lectures/week4.html#task-5-sort-dataset",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Task 5 — Sort Dataset",
+    "text": "Task 5 — Sort Dataset\nSort dataset by:\n\ninflation\nGDP growth"
+  },
+  {
+    "objectID": "lectures/week4.html#task-6-check-data-problems",
+    "href": "lectures/week4.html#task-6-check-data-problems",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Task 6 — Check Data Problems",
+    "text": "Task 6 — Check Data Problems\nCheck:\n\nmissing values\nduplicate rows"
+  },
+  {
+    "objectID": "lectures/week4.html#task-7-interpretation",
+    "href": "lectures/week4.html#task-7-interpretation",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Task 7 — Interpretation",
+    "text": "Task 7 — Interpretation\nWrite short interpretation:\nWhat economic patterns do you observe in the dataset?"
+  },
+  {
+    "objectID": "lectures/week4.html#problem-1-wrong-column-name",
+    "href": "lectures/week4.html#problem-1-wrong-column-name",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Problem 1 — Wrong Column Name",
+    "text": "Problem 1 — Wrong Column Name\nError:\nKeyError\nPossible causes:\n\nspelling mistake\nincorrect capitalization"
+  },
+  {
+    "objectID": "lectures/week4.html#problem-2-forgetting-brackets",
+    "href": "lectures/week4.html#problem-2-forgetting-brackets",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Problem 2 — Forgetting Brackets",
+    "text": "Problem 2 — Forgetting Brackets\nWrong:\ndata[\"Inflation\" &gt; 10]\nCorrect:\ndata[data[\"Inflation\"] &gt; 10]"
+  },
+  {
+    "objectID": "lectures/week4.html#problem-3-confusing-parentheses-and-brackets",
+    "href": "lectures/week4.html#problem-3-confusing-parentheses-and-brackets",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Problem 3 — Confusing Parentheses and Brackets",
+    "text": "Problem 3 — Confusing Parentheses and Brackets\nDataframes use:\nsquare brackets []\nFunctions use:\nparentheses ()"
+  },
+  {
+    "objectID": "lectures/week4.html#problem-4-forgetting-assignment",
+    "href": "lectures/week4.html#problem-4-forgetting-assignment",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Problem 4 — Forgetting Assignment",
+    "text": "Problem 4 — Forgetting Assignment\nWrong:\ndata.dropna()\nwithout saving result.\nBetter:\ndata = data.dropna()"
+  },
+  {
+    "objectID": "lectures/week4.html#problem-5-misinterpreting-missing-values",
+    "href": "lectures/week4.html#problem-5-misinterpreting-missing-values",
+    "title": "Week 4 — Working with Real Economic Data Using Pandas",
+    "section": "Problem 5 — Misinterpreting Missing Values",
+    "text": "Problem 5 — Misinterpreting Missing Values\nNaN does NOT mean zero.\nIt means:\ninformation is unavailable\nThat distinction matters."
   },
   {
     "objectID": "lectures/week2.html",
@@ -378,32 +1064,53 @@
     "text": "Final Project Submission\nFinal submissions must be uploaded to the LMS under:\nFinal Project\nThe following items must be uploaded:\n\nFinal Report\nPython Notebook\nDataset(s)\nSupporting files if applicable"
   },
   {
-    "objectID": "roadmap.html",
-    "href": "roadmap.html",
-    "title": "Course Roadmap",
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "Weekly In-Class Activities",
     "section": "",
-    "text": "This course is organized into two major learning phases."
+    "text": "This page contains the weekly in-class activities for:\nECN 4199 — Industrial Data Analytics\nThese activities form the continuous assessment component of the course and are designed to provide hands-on analytical experience throughout the semester."
   },
   {
-    "objectID": "roadmap.html#week-1-orientation-python-ai-and-data-analytics",
-    "href": "roadmap.html#week-1-orientation-python-ai-and-data-analytics",
-    "title": "Course Roadmap",
-    "section": "Week 1 — Orientation: Python, AI, and Data Analytics",
-    "text": "Week 1 — Orientation: Python, AI, and Data Analytics\nOpen Week 1 Lecture Material"
+    "objectID": "assignments.html#step-1-open-the-notebook",
+    "href": "assignments.html#step-1-open-the-notebook",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 1 — Open the Notebook",
+    "text": "Step 1 — Open the Notebook\nOpen the relevant notebook link provided within the weekly lecture materials."
   },
   {
-    "objectID": "roadmap.html#week-2-working-with-data-in-python",
-    "href": "roadmap.html#week-2-working-with-data-in-python",
-    "title": "Course Roadmap",
-    "section": "Week 2 — Working with Data in Python",
-    "text": "Week 2 — Working with Data in Python\nOpen Week 2 Lecture Material"
+    "objectID": "assignments.html#step-2-save-a-personal-copy",
+    "href": "assignments.html#step-2-save-a-personal-copy",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 2 — Save a Personal Copy",
+    "text": "Step 2 — Save a Personal Copy\nInside Google Colab:\nFile → Save a Copy in Drive\nThis creates your own editable version.\nStudents should NEVER directly edit shared lecture notebooks."
   },
   {
-    "objectID": "roadmap.html#week-3-programming-logic-and-automation-for-economic-analysis",
-    "href": "roadmap.html#week-3-programming-logic-and-automation-for-economic-analysis",
-    "title": "Course Roadmap",
-    "section": "Week 3 — Programming Logic and Automation for Economic Analysis",
-    "text": "Week 3 — Programming Logic and Automation for Economic Analysis\nOpen Week 3 Lecture Material"
+    "objectID": "assignments.html#step-3-complete-the-activity",
+    "href": "assignments.html#step-3-complete-the-activity",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 3 — Complete the Activity",
+    "text": "Step 3 — Complete the Activity\nStudents should:\n\nwrite code\nanswer interpretation questions\ngenerate outputs\nsave all completed work properly"
+  },
+  {
+    "objectID": "assignments.html#step-4-rename-the-notebook-properly",
+    "href": "assignments.html#step-4-rename-the-notebook-properly",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 4 — Rename the Notebook Properly",
+    "text": "Step 4 — Rename the Notebook Properly\nRename the notebook using the following structure:\nWeekNumber_IndexNumber_Name.ipynb\nExample:\nWeek05_2024BA12345_Perera.ipynb"
+  },
+  {
+    "objectID": "assignments.html#step-5-enable-sharing",
+    "href": "assignments.html#step-5-enable-sharing",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 5 — Enable Sharing",
+    "text": "Step 5 — Enable Sharing\nInside Google Colab:\nShare → General Access → Anyone with the Link → Viewer\nThis step is extremely important.\nIf sharing access is not enabled properly, the notebook cannot be evaluated."
+  },
+  {
+    "objectID": "assignments.html#step-6-submit-the-notebook-link",
+    "href": "assignments.html#step-6-submit-the-notebook-link",
+    "title": "Weekly In-Class Activities",
+    "section": "Step 6 — Submit the Notebook Link",
+    "text": "Step 6 — Submit the Notebook Link\nCopy the notebook URL and submit it through the relevant weekly submission link."
   },
   {
     "objectID": "index.html",
@@ -455,53 +1162,81 @@
     "text": "Final Analytics Project\nStudents will complete an individual final analytics project carrying:\n35 Marks\nThe final project allows students to apply analytical methods learned throughout the course to a real-world economic, business, or policy problem.\nDetailed guidelines are available under the:\nFinal Project\ntab."
   },
   {
-    "objectID": "assignments.html",
-    "href": "assignments.html",
-    "title": "Weekly In-Class Activities",
+    "objectID": "roadmap.html",
+    "href": "roadmap.html",
+    "title": "Course Roadmap",
     "section": "",
-    "text": "This page contains the weekly in-class activities for:\nECN 4199 — Industrial Data Analytics\nThese activities form the continuous assessment component of the course and are designed to provide hands-on analytical experience throughout the semester."
+    "text": "This course is organized into two major learning phases."
   },
   {
-    "objectID": "assignments.html#step-1-open-the-notebook",
-    "href": "assignments.html#step-1-open-the-notebook",
-    "title": "Weekly In-Class Activities",
-    "section": "Step 1 — Open the Notebook",
-    "text": "Step 1 — Open the Notebook\nOpen the relevant notebook link provided within the weekly lecture materials."
+    "objectID": "roadmap.html#week-1-orientation-python-ai-and-data-analytics",
+    "href": "roadmap.html#week-1-orientation-python-ai-and-data-analytics",
+    "title": "Course Roadmap",
+    "section": "Week 1 — Orientation: Python, AI, and Data Analytics",
+    "text": "Week 1 — Orientation: Python, AI, and Data Analytics\nOpen Week 1 Lecture Material"
   },
   {
-    "objectID": "assignments.html#step-2-save-a-personal-copy",
-    "href": "assignments.html#step-2-save-a-personal-copy",
-    "title": "Weekly In-Class Activities",
-    "section": "Step 2 — Save a Personal Copy",
-    "text": "Step 2 — Save a Personal Copy\nInside Google Colab:\nFile → Save a Copy in Drive\nThis creates your own editable version.\nStudents should NEVER directly edit shared lecture notebooks."
+    "objectID": "roadmap.html#week-2-working-with-data-in-python",
+    "href": "roadmap.html#week-2-working-with-data-in-python",
+    "title": "Course Roadmap",
+    "section": "Week 2 — Working with Data in Python",
+    "text": "Week 2 — Working with Data in Python\nOpen Week 2 Lecture Material"
   },
   {
-    "objectID": "assignments.html#step-3-complete-the-activity",
-    "href": "assignments.html#step-3-complete-the-activity",
-    "title": "Weekly In-Class Activities",
-    "section": "Step 3 — Complete the Activity",
-    "text": "Step 3 — Complete the Activity\nStudents should:\n\nwrite code\nanswer interpretation questions\ngenerate outputs\nsave all completed work properly"
+    "objectID": "roadmap.html#week-3-programming-logic-and-automation-for-economic-analysis",
+    "href": "roadmap.html#week-3-programming-logic-and-automation-for-economic-analysis",
+    "title": "Course Roadmap",
+    "section": "Week 3 — Programming Logic and Automation for Economic Analysis",
+    "text": "Week 3 — Programming Logic and Automation for Economic Analysis\nOpen Week 3 Lecture Material"
   },
   {
-    "objectID": "assignments.html#step-4-rename-the-notebook-properly",
-    "href": "assignments.html#step-4-rename-the-notebook-properly",
-    "title": "Weekly In-Class Activities",
-    "section": "Step 4 — Rename the Notebook Properly",
-    "text": "Step 4 — Rename the Notebook Properly\nRename the notebook using the following structure:\nWeekNumber_IndexNumber_Name.ipynb\nExample:\nWeek05_2024BA12345_Perera.ipynb"
+    "objectID": "roadmap.html#week-4-working-with-real-economic-data-using-pandas",
+    "href": "roadmap.html#week-4-working-with-real-economic-data-using-pandas",
+    "title": "Course Roadmap",
+    "section": "Week 4 — Working with Real Economic Data Using Pandas",
+    "text": "Week 4 — Working with Real Economic Data Using Pandas\nOpen Week 4 Lecture Material"
   },
   {
-    "objectID": "assignments.html#step-5-enable-sharing",
-    "href": "assignments.html#step-5-enable-sharing",
-    "title": "Weekly In-Class Activities",
-    "section": "Step 5 — Enable Sharing",
-    "text": "Step 5 — Enable Sharing\nInside Google Colab:\nShare → General Access → Anyone with the Link → Viewer\nThis step is extremely important.\nIf sharing access is not enabled properly, the notebook cannot be evaluated."
+    "objectID": "roadmap.html#week-5-descriptive-statistics-and-data-visualization-for-economics",
+    "href": "roadmap.html#week-5-descriptive-statistics-and-data-visualization-for-economics",
+    "title": "Course Roadmap",
+    "section": "Week 5 — Descriptive Statistics and Data Visualization for Economics",
+    "text": "Week 5 — Descriptive Statistics and Data Visualization for Economics\nOpen Week 5 Lecture Material"
   },
   {
-    "objectID": "assignments.html#step-6-submit-the-notebook-link",
-    "href": "assignments.html#step-6-submit-the-notebook-link",
-    "title": "Weekly In-Class Activities",
-    "section": "Step 6 — Submit the Notebook Link",
-    "text": "Step 6 — Submit the Notebook Link\nCopy the notebook URL and submit it through the relevant weekly submission link."
+    "objectID": "roadmap.html#week-6-interactive-dashboards-and-data-storytelling-for-economics",
+    "href": "roadmap.html#week-6-interactive-dashboards-and-data-storytelling-for-economics",
+    "title": "Course Roadmap",
+    "section": "Week 6 — Interactive Dashboards and Data Storytelling for Economics",
+    "text": "Week 6 — Interactive Dashboards and Data Storytelling for Economics\nOpen Week 6 Lecture Material"
+  },
+  {
+    "objectID": "notebooks.html",
+    "href": "notebooks.html",
+    "title": "Live Notebooks",
+    "section": "",
+    "text": "This page contains the weekly Google Colab notebooks used during lectures.\nStudents must always:\n\nOpen the weekly notebook\nGo to File → Save a copy in Drive\nRename the notebook using the correct format\nComplete the activity\nSubmit the notebook link when required"
+  },
+  {
+    "objectID": "notebooks.html#notebook-does-not-open",
+    "href": "notebooks.html#notebook-does-not-open",
+    "title": "Live Notebooks",
+    "section": "Notebook does not open",
+    "text": "Notebook does not open\nMake sure you are signed into your Google account."
+  },
+  {
+    "objectID": "notebooks.html#cannot-edit-notebook",
+    "href": "notebooks.html#cannot-edit-notebook",
+    "title": "Live Notebooks",
+    "section": "Cannot edit notebook",
+    "text": "Cannot edit notebook\nYou are probably viewing the master copy.\nUse:\nFile → Save a copy in Drive"
+  },
+  {
+    "objectID": "notebooks.html#code-does-not-run",
+    "href": "notebooks.html#code-does-not-run",
+    "title": "Live Notebooks",
+    "section": "Code does not run",
+    "text": "Code does not run\nCheck:\n\ninternet connection\nruntime status\nspelling mistakes\nwhether required libraries are imported"
   },
   {
     "objectID": "resources.html",
@@ -882,129 +1617,591 @@
     "text": "Important Distinction\nLoops are valuable for learning programming logic.\nFor large DataFrames, later lessons will introduce more efficient pandas methods."
   },
   {
-    "objectID": "activities/week2_activity.html",
-    "href": "activities/week2_activity.html",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "lectures/week5.html",
+    "href": "lectures/week5.html",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
     "section": "",
-    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 2\n\n\nTopic\nWorking with Data in Python using a Labour Force Survey Dataset\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nSubmission Format\nGoogle Colab notebook link\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
+    "text": "Weeks 1–4 focused on:\n\ncomputational setup\nPython fundamentals\nprogramming logic\ndata handling and cleaning\n\nNow students move into:\nanalytical interpretation\nThis week introduces:\n\ndescriptive statistics\ndistributions\ncorrelation analysis\ndata visualization\neconomic storytelling with graphs\n\nThis is where students begin transforming:\ndata\ninto\neconomic insight"
   },
   {
-    "objectID": "activities/week2_activity.html#instructions",
-    "href": "activities/week2_activity.html#instructions",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "lectures/week5.html#step-1-import-libraries",
+    "href": "lectures/week5.html#step-1-import-libraries",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Step 1 — Import Libraries",
+    "text": "Step 1 — Import Libraries\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport plotly.express as px"
+  },
+  {
+    "objectID": "lectures/week5.html#step-2-load-dataset",
+    "href": "lectures/week5.html#step-2-load-dataset",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Step 2 — Load Dataset",
+    "text": "Step 2 — Load Dataset\ndata = pd.read_csv(\"sri_lanka_macro.csv\")"
+  },
+  {
+    "objectID": "lectures/week5.html#step-3-generate-descriptive-statistics",
+    "href": "lectures/week5.html#step-3-generate-descriptive-statistics",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Step 3 — Generate Descriptive Statistics",
+    "text": "Step 3 — Generate Descriptive Statistics\ndata.describe()"
+  },
+  {
+    "objectID": "lectures/week5.html#step-4-calculate-average-inflation",
+    "href": "lectures/week5.html#step-4-calculate-average-inflation",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Step 4 — Calculate Average Inflation",
+    "text": "Step 4 — Calculate Average Inflation\ndata[\"Inflation\"].mean()"
+  },
+  {
+    "objectID": "lectures/week5.html#step-5-create-histogram",
+    "href": "lectures/week5.html#step-5-create-histogram",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Step 5 — Create Histogram",
+    "text": "Step 5 — Create Histogram\nplt.hist(data[\"Inflation\"])\n\nplt.show()"
+  },
+  {
+    "objectID": "lectures/week5.html#step-6-create-line-graph",
+    "href": "lectures/week5.html#step-6-create-line-graph",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Step 6 — Create Line Graph",
+    "text": "Step 6 — Create Line Graph\nplt.plot(data[\"Year\"], data[\"Inflation\"])\n\nplt.show()"
+  },
+  {
+    "objectID": "lectures/week5.html#step-7-create-scatter-plot",
+    "href": "lectures/week5.html#step-7-create-scatter-plot",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Step 7 — Create Scatter Plot",
+    "text": "Step 7 — Create Scatter Plot\nplt.scatter(data[\"Inflation\"],\n            data[\"Exchange_Rate_Change\"])\n\nplt.show()"
+  },
+  {
+    "objectID": "lectures/week5.html#step-8-create-interactive-plotly-graph",
+    "href": "lectures/week5.html#step-8-create-interactive-plotly-graph",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Step 8 — Create Interactive Plotly Graph",
+    "text": "Step 8 — Create Interactive Plotly Graph\nfig = px.line(data,\n              x=\"Year\",\n              y=\"Inflation\")\n\nfig.show()"
+  },
+  {
+    "objectID": "lectures/week5.html#step-9-interpretation-questions",
+    "href": "lectures/week5.html#step-9-interpretation-questions",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Step 9 — Interpretation Questions",
+    "text": "Step 9 — Interpretation Questions\nAsk students:\n\nWhen did inflation accelerate?\nWhat happened during crisis periods?\nAre inflation and exchange rate movements related?\nAre there outliers?"
+  },
+  {
+    "objectID": "lectures/week5.html#question-1",
+    "href": "lectures/week5.html#question-1",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Question 1",
+    "text": "Question 1\nanswer = input(\"What does standard deviation measure? A/B/C/D : \")\n\nif answer.upper() == \"C\":\n    print(\"Correct! Standard deviation measures variation.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week5.html#question-2",
+    "href": "lectures/week5.html#question-2",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Question 2",
+    "text": "Question 2\nanswer = input(\"Which graph is best for time trends? A/B/C/D : \")\n\nif answer.upper() == \"C\":\n    print(\"Correct! Line graphs are best for trends.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week5.html#question-3",
+    "href": "lectures/week5.html#question-3",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Question 3",
+    "text": "Question 3\nanswer = input(\"Does correlation imply causation? Yes/No : \")\n\nif answer.lower() == \"no\":\n    print(\"Correct!\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week5.html#task-1-generate-statistics",
+    "href": "lectures/week5.html#task-1-generate-statistics",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Task 1 — Generate Statistics",
+    "text": "Task 1 — Generate Statistics\nGenerate:\n\nmean\nmedian\nstandard deviation\n\nfor:\n\ninflation\nGDP growth\nexchange rate changes"
+  },
+  {
+    "objectID": "lectures/week5.html#task-2-create-graphs",
+    "href": "lectures/week5.html#task-2-create-graphs",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Task 2 — Create Graphs",
+    "text": "Task 2 — Create Graphs\nCreate:\n\nhistogram\nline graph\nbar chart\nscatter plot"
+  },
+  {
+    "objectID": "lectures/week5.html#task-3-correlation-analysis",
+    "href": "lectures/week5.html#task-3-correlation-analysis",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Task 3 — Correlation Analysis",
+    "text": "Task 3 — Correlation Analysis\nCalculate correlation between:\n\ninflation\nexchange rate changes\n\nInterpret result."
+  },
+  {
+    "objectID": "lectures/week5.html#task-4-identify-key-events",
+    "href": "lectures/week5.html#task-4-identify-key-events",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Task 4 — Identify Key Events",
+    "text": "Task 4 — Identify Key Events\nIdentify:\n\nhighest inflation year\nlowest GDP growth year\nlargest exchange rate depreciation"
+  },
+  {
+    "objectID": "lectures/week5.html#task-5-write-interpretation",
+    "href": "lectures/week5.html#task-5-write-interpretation",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Task 5 — Write Interpretation",
+    "text": "Task 5 — Write Interpretation\nWrite short analytical paragraph:\nWhat macroeconomic patterns do you observe in the data?"
+  },
+  {
+    "objectID": "lectures/week5.html#task-6-create-interactive-plotly-graph",
+    "href": "lectures/week5.html#task-6-create-interactive-plotly-graph",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Task 6 — Create Interactive Plotly Graph",
+    "text": "Task 6 — Create Interactive Plotly Graph\nCreate one interactive graph using Plotly."
+  },
+  {
+    "objectID": "lectures/week5.html#problem-1-forgetting-labels",
+    "href": "lectures/week5.html#problem-1-forgetting-labels",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Problem 1 — Forgetting Labels",
+    "text": "Problem 1 — Forgetting Labels\nGraphs without:\n\ntitles\naxis labels\nunits\n\nare poor practice."
+  },
+  {
+    "objectID": "lectures/week5.html#problem-2-misinterpreting-correlation",
+    "href": "lectures/week5.html#problem-2-misinterpreting-correlation",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Problem 2 — Misinterpreting Correlation",
+    "text": "Problem 2 — Misinterpreting Correlation\nCorrelation:\n\nindicates association\nNOT causality"
+  },
+  {
+    "objectID": "lectures/week5.html#problem-3-overcrowded-graphs",
+    "href": "lectures/week5.html#problem-3-overcrowded-graphs",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Problem 3 — Overcrowded Graphs",
+    "text": "Problem 3 — Overcrowded Graphs\nToo many variables create unreadable visualizations.\nSimplify."
+  },
+  {
+    "objectID": "lectures/week5.html#problem-4-using-wrong-graph-type",
+    "href": "lectures/week5.html#problem-4-using-wrong-graph-type",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Problem 4 — Using Wrong Graph Type",
+    "text": "Problem 4 — Using Wrong Graph Type\nExample:\nusing bar chart for continuous time trends."
+  },
+  {
+    "objectID": "lectures/week5.html#problem-5-ignoring-outliers",
+    "href": "lectures/week5.html#problem-5-ignoring-outliers",
+    "title": "Week 5 — Understanding Economic Data Through Statistics and Visualization",
+    "section": "Problem 5 — Ignoring Outliers",
+    "text": "Problem 5 — Ignoring Outliers\nExtreme observations may:\n\ndistort averages\ndistort correlations\ndistort conclusions\n\nAlways inspect data visually."
+  },
+  {
+    "objectID": "activities/week1_activity.html",
+    "href": "activities/week1_activity.html",
+    "title": "Week 1 In-Class Activity",
+    "section": "",
+    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 1\n\n\nTopic\nOrientation and Computational Thinking\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
+  },
+  {
+    "objectID": "activities/week1_activity.html#objective",
+    "href": "activities/week1_activity.html#objective",
+    "title": "Week 1 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nRun your first Python code successfully."
+  },
+  {
+    "objectID": "activities/week1_activity.html#instructions-1",
+    "href": "activities/week1_activity.html#instructions-1",
+    "title": "Week 1 In-Class Activity",
     "section": "Instructions",
-    "text": "Instructions\nRun:\nprint(\"Week 2 assignment started successfully\")\nThen write your name and index number in a Markdown cell."
+    "text": "Instructions\nRun the following code:\nprint(\"Welcome to ECN 4199\")"
   },
   {
-    "objectID": "activities/week2_activity.html#question",
-    "href": "activities/week2_activity.html#question",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#question",
+    "href": "activities/week1_activity.html#question",
+    "title": "Week 1 In-Class Activity",
     "section": "Question",
-    "text": "Question\nIn 2-3 sentences, explain why Google Colab is useful for beginners learning data analytics."
+    "text": "Question\nWhat does the function:\nprint()\ndo in Python?\nWrite your answer in one sentence."
   },
   {
-    "objectID": "activities/week2_activity.html#instructions-1",
-    "href": "activities/week2_activity.html#instructions-1",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#objective-1",
+    "href": "activities/week1_activity.html#objective-1",
+    "title": "Week 1 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nUnderstand basic Python variables."
+  },
+  {
+    "objectID": "activities/week1_activity.html#instructions-2",
+    "href": "activities/week1_activity.html#instructions-2",
+    "title": "Week 1 In-Class Activity",
     "section": "Instructions",
-    "text": "Instructions\nRun:\nimport pandas as pd"
+    "text": "Instructions\nCreate the following variables:\nstudent_name\ninflation_rate\ngdp_growth\nAssign appropriate values.\nExample:\ninflation_rate = 12.5"
   },
   {
-    "objectID": "activities/week2_activity.html#question-1",
-    "href": "activities/week2_activity.html#question-1",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#question-1",
+    "href": "activities/week1_activity.html#question-1",
+    "title": "Week 1 In-Class Activity",
     "section": "Question",
-    "text": "Question\nWhy do economists and data analysts use libraries such as pandas instead of writing every command from scratch?"
+    "text": "Question\nWhy are variables useful in programming and data analysis?"
   },
   {
-    "objectID": "activities/week2_activity.html#instructions-2",
-    "href": "activities/week2_activity.html#instructions-2",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#objective-2",
+    "href": "activities/week1_activity.html#objective-2",
+    "title": "Week 1 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nUse Python for basic economic calculations."
+  },
+  {
+    "objectID": "activities/week1_activity.html#instructions-3",
+    "href": "activities/week1_activity.html#instructions-3",
+    "title": "Week 1 In-Class Activity",
     "section": "Instructions",
-    "text": "Instructions\nUse the direct website method:\ndataset_url = \"https://kanishkawerawella.github.io/ECN4199_Website/data/LFS_Hypothetical_Dataset.xlsx\"\n\ndata = pd.read_excel(dataset_url, sheet_name=\"LFS_Data\")\ndictionary = pd.read_excel(dataset_url, sheet_name=\"Variable Dictionary\")\nIf the direct website method does not work, upload the downloaded Excel file into Colab and use:\ndata = pd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")\ndictionary = pd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"Variable Dictionary\")"
+    "text": "Instructions\nAssume:\n\n\n\nVariable\nValue\n\n\n\n\nInitial Inflation\n6%\n\n\nNew Inflation\n12%\n\n\n\nCalculate:\npercentage point increase in inflation\nusing Python."
   },
   {
-    "objectID": "activities/week2_activity.html#questions",
-    "href": "activities/week2_activity.html#questions",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Questions",
-    "text": "Questions\n\nWhat does the LFS_Data sheet contain?\nWhat does the Variable Dictionary sheet explain?\nWhy should analysts read the variable dictionary before interpreting a dataset?"
+    "objectID": "activities/week1_activity.html#example-structure",
+    "href": "activities/week1_activity.html#example-structure",
+    "title": "Week 1 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\ninitial_inflation = 6\nnew_inflation = 12"
   },
   {
-    "objectID": "activities/week2_activity.html#instructions-3",
-    "href": "activities/week2_activity.html#instructions-3",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Instructions",
-    "text": "Instructions\nRun the following commands:\ndata.head()\ndata.tail()\ndata.shape\ndata.columns\ndata.info()"
-  },
-  {
-    "objectID": "activities/week2_activity.html#questions-1",
-    "href": "activities/week2_activity.html#questions-1",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Questions",
-    "text": "Questions\n\nHow many observations are in the dataset?\nHow many variables are in the dataset?\nName five variables that are useful for labour market analysis.\nAre all variables numerical? Explain using examples."
-  },
-  {
-    "objectID": "activities/week2_activity.html#instructions-4",
-    "href": "activities/week2_activity.html#instructions-4",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Instructions",
-    "text": "Instructions\nDisplay the variable dictionary:\ndictionary\nThen identify the meaning of these variables:\n\nEmployment_Status\nMonthly_Wage_LKR\nEducation_Level\nInternet_Access\nUnpaid_Care_Hours_Weekly"
-  },
-  {
-    "objectID": "activities/week2_activity.html#question-2",
-    "href": "activities/week2_activity.html#question-2",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#question-2",
+    "href": "activities/week1_activity.html#question-2",
+    "title": "Week 1 In-Class Activity",
     "section": "Question",
-    "text": "Question\nChoose any three variables from the list above and explain why each variable may be useful for economic or labour market analysis."
+    "text": "Question\nWhat does a sharp increase in inflation usually imply for households?\nWrite 2–3 sentences."
   },
   {
-    "objectID": "activities/week2_activity.html#instructions-5",
-    "href": "activities/week2_activity.html#instructions-5",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#objective-3",
+    "href": "activities/week1_activity.html#objective-3",
+    "title": "Week 1 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nStore economic information using Python lists."
+  },
+  {
+    "objectID": "activities/week1_activity.html#instructions-4",
+    "href": "activities/week1_activity.html#instructions-4",
+    "title": "Week 1 In-Class Activity",
     "section": "Instructions",
-    "text": "Instructions\nRun:\ndata.describe()"
+    "text": "Instructions\nCreate a Python list containing:\n\ninflation rates\nunemployment rates\nGDP growth values\n\nExample:\ninflation = [4.5, 5.2, 7.8]"
   },
   {
-    "objectID": "activities/week2_activity.html#questions-2",
-    "href": "activities/week2_activity.html#questions-2",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week1_activity.html#question-3",
+    "href": "activities/week1_activity.html#question-3",
+    "title": "Week 1 In-Class Activity",
+    "section": "Question",
+    "text": "Question\nWhy is storing data systematically important for economists?"
+  },
+  {
+    "objectID": "activities/week1_activity.html#short-reflection",
+    "href": "activities/week1_activity.html#short-reflection",
+    "title": "Week 1 In-Class Activity",
+    "section": "Short Reflection",
+    "text": "Short Reflection\nWrite a short paragraph answering:\nWhy are computational and data skills becoming increasingly important for economists and policy analysts?\nYour answer should include:\n\ndata\ndecision-making\nmodern analytics\nAI or automation"
+  },
+  {
+    "objectID": "activities/week3_activity.html#marks-1",
+    "href": "activities/week3_activity.html#marks-1",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Marks: 1",
+    "text": "Marks: 1\nWrite a function called:\nclassify_inflation(inflation)\nUse these rules:\n\n\n\nInflation Rate\nClassification\n\n\n\n\nBelow 5\nLow inflation\n\n\n5 to 15, inclusive\nModerate inflation\n\n\nAbove 15\nHigh inflation\n\n\n\nYour function must return the classification.\nTest it using:\ntest_rates = [4.9, 5, 12, 15, 15.1]"
+  },
+  {
+    "objectID": "activities/week3_activity.html#questions",
+    "href": "activities/week3_activity.html#questions",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
     "section": "Questions",
-    "text": "Questions\n\nWhat is the average age of individuals in the dataset?\nWhat is the average household size?\nWhat is the average monthly wage?\nWhat is the maximum monthly wage?\nWhat is the average number of unpaid care hours per week?\n\nFor each answer, write one short interpretation."
+    "text": "Questions\n\nHow is exactly 5 classified?\nHow is exactly 15 classified?\nWhy should boundary values be tested?"
   },
   {
-    "objectID": "activities/week2_activity.html#instructions-6",
-    "href": "activities/week2_activity.html#instructions-6",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week3_activity.html#marks-1-1",
+    "href": "activities/week3_activity.html#marks-1-1",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Marks: 1",
+    "text": "Marks: 1\nUse:\ngdp_growth_rates = [3.5, 5.2, -7.8, 2.1, -1.4]\nCreate an empty list called:\ngrowth_categories\nUse a loop to classify each value:\n\n\n\nGDP Growth\nClassification\n\n\n\n\nBelow 0\nRecession\n\n\n0 to below 3\nSlow growth\n\n\n3 or above\nStrong growth\n\n\n\nStore each classification in growth_categories.\nPrint both the growth value and its classification."
+  },
+  {
+    "objectID": "activities/week3_activity.html#question",
+    "href": "activities/week3_activity.html#question",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Question",
+    "text": "Question\nWhy is saving results in a list more useful than only printing them?"
+  },
+  {
+    "objectID": "activities/week3_activity.html#marks-1-2",
+    "href": "activities/week3_activity.html#marks-1-2",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Marks: 1",
+    "text": "Marks: 1\nCreate:\npercentage_change(old_value, new_value)\nUse:\n[(new value - old value) / old value] × 100\nApply the function to:\n\n\n\nIndicator\nOld Value\nNew Value\n\n\n\n\nGDP\n5000\n5400\n\n\nCPI\n200\n240\n\n\nLKR per USD exchange rate\n300\n330\n\n\n\nRound each result to two decimal places.\nWrite one sentence interpreting each result."
+  },
+  {
+    "objectID": "activities/week3_activity.html#marks-1-3",
+    "href": "activities/week3_activity.html#marks-1-3",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Marks: 1",
+    "text": "Marks: 1\nUse:\nindicators = [\"GDP\", \"CPI\", \"Exchange rate\"]\nold_values = [5000, 200, 300]\nnew_values = [5400, 240, 330]\nWrite a loop using:\nzip()\nFor each indicator:\n\ncalculate percentage change using your function\nprint the indicator name\nprint the rounded result\nprint a short interpretation label\n\nSuggested labels:\n\nGDP: \"Economic growth\"\nCPI: \"Inflation\"\nExchange rate: \"Currency depreciation\""
+  },
+  {
+    "objectID": "activities/week3_activity.html#question-1",
+    "href": "activities/week3_activity.html#question-1",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Question",
+    "text": "Question\nWhat parts of this workflow are automated, and what parts still require economic judgement?"
+  },
+  {
+    "objectID": "activities/week3_activity.html#marks-1-4",
+    "href": "activities/week3_activity.html#marks-1-4",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Marks: 1",
+    "text": "Marks: 1\nAn AI tool generated:\ndef classify_inflation(inflation):\n    if inflation &lt; 15:\n        return \"Low inflation\"\n    elif inflation &lt; 5:\n        return \"Moderate inflation\"\n    else:\n        return \"High inflation\"\nComplete all of the following:\n\nIdentify the logical error.\nExplain why \"Moderate inflation\" can never be returned.\nCorrect the function.\nTest the corrected function using 4.9, 5, 15, and 15.1.\nIn 80–120 words, explain why economists must verify AI-generated code."
+  },
+  {
+    "objectID": "activities/week3_activity.html#missing-colon",
+    "href": "activities/week3_activity.html#missing-colon",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Missing Colon",
+    "text": "Missing Colon\nWrong:\nif inflation &lt; 5\nCorrect:\nif inflation &lt; 5:"
+  },
+  {
+    "objectID": "activities/week3_activity.html#incorrect-indentation",
+    "href": "activities/week3_activity.html#incorrect-indentation",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Incorrect Indentation",
+    "text": "Incorrect Indentation\nWrong:\nif growth &lt; 0:\nprint(\"Recession\")\nCorrect:\nif growth &lt; 0:\n    print(\"Recession\")"
+  },
+  {
+    "objectID": "activities/week3_activity.html#assignment-instead-of-comparison",
+    "href": "activities/week3_activity.html#assignment-instead-of-comparison",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Assignment Instead of Comparison",
+    "text": "Assignment Instead of Comparison\nWrong:\nif status = \"Employed\":\nCorrect:\nif status == \"Employed\":"
+  },
+  {
+    "objectID": "activities/week3_activity.html#forgetting-return",
+    "href": "activities/week3_activity.html#forgetting-return",
+    "title": "Week 3 Assignment — Programming Logic and Automation",
+    "section": "Forgetting return",
+    "text": "Forgetting return\nA function must return a result if that result will be reused."
+  },
+  {
+    "objectID": "activities/week5_activity.html",
+    "href": "activities/week5_activity.html",
+    "title": "Week 5 In-Class Activity",
+    "section": "",
+    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 5\n\n\nTopic\nDescriptive Statistics and Data Visualization\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
+  },
+  {
+    "objectID": "activities/week5_activity.html#objective",
+    "href": "activities/week5_activity.html#objective",
+    "title": "Week 5 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nSummarize the macroeconomic dataset statistically."
+  },
+  {
+    "objectID": "activities/week5_activity.html#instructions-1",
+    "href": "activities/week5_activity.html#instructions-1",
+    "title": "Week 5 In-Class Activity",
     "section": "Instructions",
-    "text": "Instructions\nRun:\ndata[\"Sex\"].value_counts()\ndata[\"Sector\"].value_counts()\ndata[\"Education_Level\"].value_counts()\ndata[\"Employment_Status\"].value_counts()\ndata[\"Internet_Access\"].value_counts()"
+    "text": "Instructions\nLoad the dataset and generate descriptive statistics."
   },
   {
-    "objectID": "activities/week2_activity.html#questions-3",
-    "href": "activities/week2_activity.html#questions-3",
-    "title": "Week 2 Assignment — Working with Data in Python",
+    "objectID": "activities/week5_activity.html#expected-structure",
+    "href": "activities/week5_activity.html#expected-structure",
+    "title": "Week 5 In-Class Activity",
+    "section": "Expected Structure",
+    "text": "Expected Structure\nimport pandas as pd\n\ndata = pd.read_csv(\"sri_lanka_macro.csv\")\n\ndata.describe()"
+  },
+  {
+    "objectID": "activities/week5_activity.html#questions",
+    "href": "activities/week5_activity.html#questions",
+    "title": "Week 5 In-Class Activity",
     "section": "Questions",
-    "text": "Questions\n\nHow many males and females are included in the dataset?\nIs the sample more urban or more rural?\nWhich education category appears most frequently?\nHow many individuals are employed, unemployed, and inactive?\nHow many individuals have internet access?"
+    "text": "Questions\n\nQuestion 1\nWhat is the average inflation rate?\n\n\n\nQuestion 2\nWhich variable appears most volatile?\n\n\n\nQuestion 3\nWhy is standard deviation important in economics?"
   },
   {
-    "objectID": "activities/week2_activity.html#problem-1-file-not-found",
-    "href": "activities/week2_activity.html#problem-1-file-not-found",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Problem 1 — File Not Found",
-    "text": "Problem 1 — File Not Found\nPossible causes:\n\ndataset not uploaded\nincorrect filename\nfile uploaded to the wrong Colab session"
+    "objectID": "activities/week5_activity.html#objective-1",
+    "href": "activities/week5_activity.html#objective-1",
+    "title": "Week 5 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nCompare mean and median values."
   },
   {
-    "objectID": "activities/week2_activity.html#problem-2-forgetting-quotes",
-    "href": "activities/week2_activity.html#problem-2-forgetting-quotes",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Problem 2 — Forgetting Quotes",
-    "text": "Problem 2 — Forgetting Quotes\nWrong:\npd.read_excel(LFS_Hypothetical_Dataset.xlsx)\nCorrect:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")"
+    "objectID": "activities/week5_activity.html#instructions-2",
+    "href": "activities/week5_activity.html#instructions-2",
+    "title": "Week 5 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nCalculate:\n\nmean inflation\nmedian inflation"
   },
   {
-    "objectID": "activities/week2_activity.html#problem-3-wrong-sheet-name",
-    "href": "activities/week2_activity.html#problem-3-wrong-sheet-name",
-    "title": "Week 2 Assignment — Working with Data in Python",
-    "section": "Problem 3 — Wrong Sheet Name",
-    "text": "Problem 3 — Wrong Sheet Name\nWrong:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"Data\")\nCorrect:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")"
+    "objectID": "activities/week5_activity.html#example-structure",
+    "href": "activities/week5_activity.html#example-structure",
+    "title": "Week 5 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\ndata[\"Inflation\"].mean()\n\ndata[\"Inflation\"].median()"
+  },
+  {
+    "objectID": "activities/week5_activity.html#questions-1",
+    "href": "activities/week5_activity.html#questions-1",
+    "title": "Week 5 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nAre the mean and median similar?\n\n\n\nQuestion 2\nWhat might explain differences between them?\n\n\n\nQuestion 3\nWhy can extreme observations distort averages?"
+  },
+  {
+    "objectID": "activities/week5_activity.html#objective-2",
+    "href": "activities/week5_activity.html#objective-2",
+    "title": "Week 5 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nVisualize the inflation distribution."
+  },
+  {
+    "objectID": "activities/week5_activity.html#instructions-3",
+    "href": "activities/week5_activity.html#instructions-3",
+    "title": "Week 5 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nCreate a histogram for inflation."
+  },
+  {
+    "objectID": "activities/week5_activity.html#example-structure-1",
+    "href": "activities/week5_activity.html#example-structure-1",
+    "title": "Week 5 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\nimport matplotlib.pyplot as plt\n\nplt.hist(data[\"Inflation\"])\n\nplt.title(\"Distribution of Inflation\")\nplt.xlabel(\"Inflation\")\nplt.ylabel(\"Frequency\")\n\nplt.show()"
+  },
+  {
+    "objectID": "activities/week5_activity.html#questions-2",
+    "href": "activities/week5_activity.html#questions-2",
+    "title": "Week 5 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nDoes the distribution appear symmetric?\n\n\n\nQuestion 2\nAre there extreme observations?\n\n\n\nQuestion 3\nWhat might unusually high inflation indicate economically?"
+  },
+  {
+    "objectID": "activities/week5_activity.html#objective-3",
+    "href": "activities/week5_activity.html#objective-3",
+    "title": "Week 5 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nVisualize inflation trends over time."
+  },
+  {
+    "objectID": "activities/week5_activity.html#instructions-4",
+    "href": "activities/week5_activity.html#instructions-4",
+    "title": "Week 5 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nCreate a line graph for inflation."
+  },
+  {
+    "objectID": "activities/week5_activity.html#example-structure-2",
+    "href": "activities/week5_activity.html#example-structure-2",
+    "title": "Week 5 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\nplt.plot(data[\"Year\"], data[\"Inflation\"])\n\nplt.title(\"Inflation Trends\")\nplt.xlabel(\"Year\")\nplt.ylabel(\"Inflation\")\n\nplt.show()"
+  },
+  {
+    "objectID": "activities/week5_activity.html#questions-3",
+    "href": "activities/week5_activity.html#questions-3",
+    "title": "Week 5 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhen did inflation increase sharply?\n\n\n\nQuestion 2\nWhat might explain the spike?\n\n\n\nQuestion 3\nWhy are line graphs useful for time-series analysis?"
+  },
+  {
+    "objectID": "activities/week5_activity.html#objective-4",
+    "href": "activities/week5_activity.html#objective-4",
+    "title": "Week 5 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nAnalyze relationships between variables."
+  },
+  {
+    "objectID": "activities/week5_activity.html#instructions-5",
+    "href": "activities/week5_activity.html#instructions-5",
+    "title": "Week 5 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nCalculate correlation between:\n\ninflation\nexchange rate change"
+  },
+  {
+    "objectID": "activities/week5_activity.html#example-structure-3",
+    "href": "activities/week5_activity.html#example-structure-3",
+    "title": "Week 5 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\ndata[\"Inflation\"].corr(data[\"Exchange_Rate_Change\"])"
+  },
+  {
+    "objectID": "activities/week5_activity.html#questions-4",
+    "href": "activities/week5_activity.html#questions-4",
+    "title": "Week 5 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nIs the relationship positive or negative?\n\n\n\nQuestion 2\nDoes correlation imply causation?\nExplain briefly.\n\n\n\nQuestion 3\nWhat third factors might influence both inflation and exchange rate changes?"
+  },
+  {
+    "objectID": "activities/week5_activity.html#objective-5",
+    "href": "activities/week5_activity.html#objective-5",
+    "title": "Week 5 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nVisualize the relationship between two variables."
+  },
+  {
+    "objectID": "activities/week5_activity.html#instructions-6",
+    "href": "activities/week5_activity.html#instructions-6",
+    "title": "Week 5 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nCreate scatter plot using:\n\ninflation\nexchange rate change"
+  },
+  {
+    "objectID": "activities/week5_activity.html#example-structure-4",
+    "href": "activities/week5_activity.html#example-structure-4",
+    "title": "Week 5 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\nplt.scatter(data[\"Inflation\"],\n            data[\"Exchange_Rate_Change\"])\n\nplt.xlabel(\"Inflation\")\nplt.ylabel(\"Exchange Rate Change\")\n\nplt.show()"
+  },
+  {
+    "objectID": "activities/week5_activity.html#questions-5",
+    "href": "activities/week5_activity.html#questions-5",
+    "title": "Week 5 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nDo the variables appear related?\n\n\n\nQuestion 2\nAre there outliers?\n\n\n\nQuestion 3\nWhy are scatter plots useful in economics?"
+  },
+  {
+    "objectID": "activities/week5_activity.html#question-1-6",
+    "href": "activities/week5_activity.html#question-1-6",
+    "title": "Week 5 In-Class Activity",
+    "section": "Question 1",
+    "text": "Question 1\nWhat does standard deviation measure?\nA. Average\nB. Trend\nC. Variation\nD. Correlation"
+  },
+  {
+    "objectID": "activities/week5_activity.html#question-2-6",
+    "href": "activities/week5_activity.html#question-2-6",
+    "title": "Week 5 In-Class Activity",
+    "section": "Question 2",
+    "text": "Question 2\nWhich graph is best for showing trends over time?\nA. Pie chart\nB. Histogram\nC. Line graph\nD. Table"
+  },
+  {
+    "objectID": "activities/week5_activity.html#question-3-6",
+    "href": "activities/week5_activity.html#question-3-6",
+    "title": "Week 5 In-Class Activity",
+    "section": "Question 3",
+    "text": "Question 3\nDoes correlation imply causation?\nA. Yes\nB. No"
+  },
+  {
+    "objectID": "activities/week5_activity.html#question-4",
+    "href": "activities/week5_activity.html#question-4",
+    "title": "Week 5 In-Class Activity",
+    "section": "Question 4",
+    "text": "Question 4\nWhich graph is most useful for studying relationships between two variables?\nA. Scatter plot\nB. Histogram\nC. Bar chart\nD. Pie chart"
+  },
+  {
+    "objectID": "activities/week5_activity.html#problem-1-missing-labels",
+    "href": "activities/week5_activity.html#problem-1-missing-labels",
+    "title": "Week 5 In-Class Activity",
+    "section": "Problem 1 — Missing Labels",
+    "text": "Problem 1 — Missing Labels\nGraphs without:\n\ntitles\naxis labels\nunits\n\nare poor analytical practice."
+  },
+  {
+    "objectID": "activities/week5_activity.html#problem-2-misinterpreting-correlation",
+    "href": "activities/week5_activity.html#problem-2-misinterpreting-correlation",
+    "title": "Week 5 In-Class Activity",
+    "section": "Problem 2 — Misinterpreting Correlation",
+    "text": "Problem 2 — Misinterpreting Correlation\nCorrelation indicates association.\nIt does NOT automatically indicate causation."
+  },
+  {
+    "objectID": "activities/week5_activity.html#problem-3-wrong-graph-choice",
+    "href": "activities/week5_activity.html#problem-3-wrong-graph-choice",
+    "title": "Week 5 In-Class Activity",
+    "section": "Problem 3 — Wrong Graph Choice",
+    "text": "Problem 3 — Wrong Graph Choice\nDifferent graph types answer different analytical questions.\nChoose graphs based on analytical purpose."
+  },
+  {
+    "objectID": "activities/week5_activity.html#problem-4-ignoring-outliers",
+    "href": "activities/week5_activity.html#problem-4-ignoring-outliers",
+    "title": "Week 5 In-Class Activity",
+    "section": "Problem 4 — Ignoring Outliers",
+    "text": "Problem 4 — Ignoring Outliers\nExtreme observations can distort:\n\naverages\ncorrelations\ninterpretations\n\nAlways inspect data visually."
   }
 ]

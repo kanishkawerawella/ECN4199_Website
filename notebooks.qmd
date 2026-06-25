@@ -28,19 +28,12 @@ Always save your own copy first.
 
 | Week | Topic | Notebook |
 |---|---|---|
-| Week 1 | Orientation and First Python Code | [Open Notebook](PASTE_WEEK1_COLAB_LINK_HERE) |
-| Week 2 | Setup and First Dataset | [Open Notebook](PASTE_WEEK2_COLAB_LINK_HERE) |
-| Week 3 | Python Fundamentals | [Open Notebook](PASTE_WEEK3_COLAB_LINK_HERE) |
-| Week 4 | Data Handling with Pandas | [Open Notebook](PASTE_WEEK4_COLAB_LINK_HERE) |
-| Week 5 | Statistics and Visualization | [Open Notebook](PASTE_WEEK5_COLAB_LINK_HERE) |
-| Week 6 | Interactive Dashboards | [Open Notebook](PASTE_WEEK6_COLAB_LINK_HERE) |
-| Week 7 | Regression Analysis | [Open Notebook](PASTE_WEEK7_COLAB_LINK_HERE) |
-| Week 8 | Machine Learning Foundations | [Open Notebook](PASTE_WEEK8_COLAB_LINK_HERE) |
-| Week 9 | Classification Models | [Open Notebook](PASTE_WEEK9_COLAB_LINK_HERE) |
-| Week 10 | Clustering and Unsupervised Learning | [Open Notebook](PASTE_WEEK10_COLAB_LINK_HERE) |
-| Week 11 | Forecasting and Time Series | [Open Notebook](PASTE_WEEK11_COLAB_LINK_HERE) |
-| Week 12 | NLP and Generative AI | [Open Notebook](PASTE_WEEK12_COLAB_LINK_HERE) |
-| Week 13 | Capstone Analytics Project | [Open Notebook](PASTE_WEEK13_COLAB_LINK_HERE) |
+| Week 1 | Orientation and First Python Code | [Open Notebook](https://colab.research.google.com/drive/1OSRvERqcIAuZGCJo1esaHD6hL-Xn6pnI?usp=sharing) |
+| Week 2 | Setup and First Dataset | [Open Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week2/ECN4199_Week2_Live_Notebook.ipynb) |
+| Week 3 | Python Fundamentals | [Open Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week3/ECN4199_Week3_Live_Notebook.ipynb) |
+| Week 4 | Data Handling with Pandas | [Open Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week4/ECN4199_Week4_Live_Notebook.ipynb) |
+| Week 5 | Statistics and Visualization | [Open Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week5/ECN4199_Week5_Live_Notebook.ipynb) |
+| Week 6 | Interactive Dashboards | [Open Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week6/ECN4199_Week6_Live_Notebook.ipynb) |
 
 ---
 

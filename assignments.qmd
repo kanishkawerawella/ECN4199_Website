@@ -172,15 +172,6 @@ Copy the notebook URL and submit it through the relevant weekly submission link.
 | Week 1 | Orientation and First Python Code | 5 | 1 hour | [Open Week 1 Assignment](activities/week1_activity.qmd) |
 | Week 2 | Working with Data in Python using the LFS Dataset | 5 | 1 hour | [Open Week 2 Assignment](activities/week2_activity.qmd) |
 | Week 3 | Python Fundamentals and Computational Thinking | 5 | 1 hour | [Open Week 3 Assignment](activities/week3_activity.qmd) |
-<!--
-| Week 4 | Data Handling with Pandas | 5 | 1 hour | [Open Activity](activities/week4_activity.qmd) |
-| Week 5 | Statistics and Visualization | 5 | 1 hour | [Open Activity](activities/week5_activity.qmd) |
-| Week 6 | Interactive Dashboards | 5 | 1 hour | [Open Activity](activities/week6_activity.qmd) |
-| Week 7 | Regression Analysis | 5 | 1 hour | [Open Activity](activities/week7_activity.qmd) |
-| Week 8 | Machine Learning Foundations | 5 | 1 hour | [Open Activity](activities/week8_activity.qmd) |
-| Week 9 | Classification Models | 5 | 1 hour | [Open Activity](activities/week9_activity.qmd) |
-| Week 10 | Clustering and Unsupervised Learning | 5 | 1 hour | [Open Activity](activities/week10_activity.qmd) |
-| Week 11 | Forecasting and Time Series | 5 | 1 hour | [Open Activity](activities/week11_activity.qmd) |
-| Week 12 | NLP and Generative AI | 5 | 1 hour | [Open Activity](activities/week12_activity.qmd) |
-| Week 13 | Capstone Analytics Workflow | 5 | 1 hour | [Open Activity](activities/week13_activity.qmd) |
--->
+| Week 4 | Working with Real Economic Data Using Pandas | 5 | 1 hour | [Open Week 4 Assignment](activities/week4_activity.qmd) |
+| Week 5 | Descriptive Statistics and Data Visualization | 5 | 1 hour | [Open Week 5 Assignment](activities/week5_activity.qmd) |
+| Week 6 | Interactive Dashboards and Data Storytelling | 5 | 1 hour | [Open Week 6 Assignment](activities/week6_activity.qmd) |

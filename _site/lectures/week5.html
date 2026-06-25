@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Week 5 — Understanding Economic Data Through Statistics and Visualization – ECN 4199 - Industrial Data Analytics</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-89fc109efc47e76c8a3852ba5571bf68.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">ECN 4199 - Industrial Data Analytics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../roadmap.html"> 
+<span class="menu-text">Course Roadmap</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../assignments.html"> 
+<span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks.html"> 
+<span class="menu-text">Live Notebooks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../project.html"> 
+<span class="menu-text">Final Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#week-5-descriptive-statistics-and-data-visualization-for-economics" id="toc-week-5-descriptive-statistics-and-data-visualization-for-economics" class="nav-link active" data-scroll-target="#week-5-descriptive-statistics-and-data-visualization-for-economics">Week 5 — Descriptive Statistics and Data Visualization for Economics</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">1. Learning Objectives</a></li>
+  <li><a href="#week-5-learning-materials" id="toc-week-5-learning-materials" class="nav-link" data-scroll-target="#week-5-learning-materials">2. Week 5 Learning Materials</a></li>
+  <li><a href="#why-visualization-matters-in-economics" id="toc-why-visualization-matters-in-economics" class="nav-link" data-scroll-target="#why-visualization-matters-in-economics">3. Why Visualization Matters in Economics</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link" data-scroll-target="#descriptive-statistics">4. Descriptive Statistics</a></li>
+  <li><a href="#common-descriptive-statistics" id="toc-common-descriptive-statistics" class="nav-link" data-scroll-target="#common-descriptive-statistics">Common Descriptive Statistics</a></li>
+  <li><a href="#generate-descriptive-statistics" id="toc-generate-descriptive-statistics" class="nav-link" data-scroll-target="#generate-descriptive-statistics">Generate Descriptive Statistics</a></li>
+  <li><a href="#example-interpretation" id="toc-example-interpretation" class="nav-link" data-scroll-target="#example-interpretation">Example Interpretation</a></li>
+  <li><a href="#measures-of-central-tendency" id="toc-measures-of-central-tendency" class="nav-link" data-scroll-target="#measures-of-central-tendency">5. Measures of Central Tendency</a></li>
+  <li><a href="#mean" id="toc-mean" class="nav-link" data-scroll-target="#mean">Mean</a></li>
+  <li><a href="#median" id="toc-median" class="nav-link" data-scroll-target="#median">Median</a></li>
+  <li><a href="#why-mean-and-median-differ" id="toc-why-mean-and-median-differ" class="nav-link" data-scroll-target="#why-mean-and-median-differ">Why Mean and Median Differ</a></li>
+  <li><a href="#economic-example" id="toc-economic-example" class="nav-link" data-scroll-target="#economic-example">Economic Example</a></li>
+  <li><a href="#measures-of-dispersion" id="toc-measures-of-dispersion" class="nav-link" data-scroll-target="#measures-of-dispersion">6. Measures of Dispersion</a></li>
+  <li><a href="#standard-deviation" id="toc-standard-deviation" class="nav-link" data-scroll-target="#standard-deviation">Standard Deviation</a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  <li><a href="#range" id="toc-range" class="nav-link" data-scroll-target="#range">Range</a></li>
+  <li><a href="#economic-significance" id="toc-economic-significance" class="nav-link" data-scroll-target="#economic-significance">Economic Significance</a></li>
+  <li><a href="#distributions-and-histograms" id="toc-distributions-and-histograms" class="nav-link" data-scroll-target="#distributions-and-histograms">7. Distributions and Histograms</a></li>
+  <li><a href="#example-histogram" id="toc-example-histogram" class="nav-link" data-scroll-target="#example-histogram">Example Histogram</a></li>
+  <li><a href="#interpretation-questions" id="toc-interpretation-questions" class="nav-link" data-scroll-target="#interpretation-questions">Interpretation Questions</a></li>
+  <li><a href="#why-distributions-matter" id="toc-why-distributions-matter" class="nav-link" data-scroll-target="#why-distributions-matter">Why Distributions Matter</a></li>
+  <li><a href="#correlation-analysis" id="toc-correlation-analysis" class="nav-link" data-scroll-target="#correlation-analysis">8. Correlation Analysis</a></li>
+  <li><a href="#example-questions" id="toc-example-questions" class="nav-link" data-scroll-target="#example-questions">Example Questions</a></li>
+  <li><a href="#correlation-coefficient" id="toc-correlation-coefficient" class="nav-link" data-scroll-target="#correlation-coefficient">Correlation Coefficient</a></li>
+  <li><a href="#correlation-interpretation" id="toc-correlation-interpretation" class="nav-link" data-scroll-target="#correlation-interpretation">Correlation Interpretation</a></li>
+  <li><a href="#critical-warning" id="toc-critical-warning" class="nav-link" data-scroll-target="#critical-warning">Critical Warning</a></li>
+  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example</a></li>
+  <li><a href="#introduction-to-data-visualization" id="toc-introduction-to-data-visualization" class="nav-link" data-scroll-target="#introduction-to-data-visualization">9. Introduction to Data Visualization</a></li>
+  <li><a href="#import-libraries" id="toc-import-libraries" class="nav-link" data-scroll-target="#import-libraries">Import Libraries</a></li>
+  <li><a href="#common-graph-types" id="toc-common-graph-types" class="nav-link" data-scroll-target="#common-graph-types">Common Graph Types</a></li>
+  <li><a href="#important-principle" id="toc-important-principle" class="nav-link" data-scroll-target="#important-principle">Important Principle</a></li>
+  <li><a href="#line-graphs" id="toc-line-graphs" class="nav-link" data-scroll-target="#line-graphs">10. Line Graphs</a></li>
+  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example</a></li>
+  <li><a href="#add-labels" id="toc-add-labels" class="nav-link" data-scroll-target="#add-labels">Add Labels</a></li>
+  <li><a href="#interpretation-1" id="toc-interpretation-1" class="nav-link" data-scroll-target="#interpretation-1">Interpretation</a></li>
+  <li><a href="#bar-charts" id="toc-bar-charts" class="nav-link" data-scroll-target="#bar-charts">11. Bar Charts</a></li>
+  <li><a href="#example-3" id="toc-example-3" class="nav-link" data-scroll-target="#example-3">Example</a></li>
+  <li><a href="#economic-uses" id="toc-economic-uses" class="nav-link" data-scroll-target="#economic-uses">Economic Uses</a></li>
+  <li><a href="#warning" id="toc-warning" class="nav-link" data-scroll-target="#warning">Warning</a></li>
+  <li><a href="#scatter-plots" id="toc-scatter-plots" class="nav-link" data-scroll-target="#scatter-plots">12. Scatter Plots</a></li>
+  <li><a href="#example-4" id="toc-example-4" class="nav-link" data-scroll-target="#example-4">Example</a></li>
+  <li><a href="#interpretation-questions-1" id="toc-interpretation-questions-1" class="nav-link" data-scroll-target="#interpretation-questions-1">Interpretation Questions</a></li>
+  <li><a href="#add-labels-1" id="toc-add-labels-1" class="nav-link" data-scroll-target="#add-labels-1">Add Labels</a></li>
+  <li><a href="#multi-variable-visualization" id="toc-multi-variable-visualization" class="nav-link" data-scroll-target="#multi-variable-visualization">13. Multi-Variable Visualization</a></li>
+  <li><a href="#example-two-axis-graph" id="toc-example-two-axis-graph" class="nav-link" data-scroll-target="#example-two-axis-graph">Example: Two-Axis Graph</a></li>
+  <li><a href="#interpretation-2" id="toc-interpretation-2" class="nav-link" data-scroll-target="#interpretation-2">Interpretation</a></li>
+  <li><a href="#warning-1" id="toc-warning-1" class="nav-link" data-scroll-target="#warning-1">Warning</a></li>
+  <li><a href="#interactive-graphs-with-plotly" id="toc-interactive-graphs-with-plotly" class="nav-link" data-scroll-target="#interactive-graphs-with-plotly">13. Interactive Graphs with Plotly</a></li>
+  <li><a href="#example-5" id="toc-example-5" class="nav-link" data-scroll-target="#example-5">Example</a></li>
+  <li><a href="#why-interactive-graphs-matter" id="toc-why-interactive-graphs-matter" class="nav-link" data-scroll-target="#why-interactive-graphs-matter">Why Interactive Graphs Matter</a></li>
+  <li><a href="#telling-economic-stories-with-data" id="toc-telling-economic-stories-with-data" class="nav-link" data-scroll-target="#telling-economic-stories-with-data">14. Telling Economic Stories with Data</a></li>
+  <li><a href="#weak-interpretation" id="toc-weak-interpretation" class="nav-link" data-scroll-target="#weak-interpretation">Weak Interpretation</a></li>
+  <li><a href="#better-interpretation" id="toc-better-interpretation" class="nav-link" data-scroll-target="#better-interpretation">Better Interpretation</a></li>
+  <li><a href="#critical-lesson" id="toc-critical-lesson" class="nav-link" data-scroll-target="#critical-lesson">Critical Lesson</a></li>
+  <li><a href="#open-the-week-5-live-notebook" id="toc-open-the-week-5-live-notebook" class="nav-link" data-scroll-target="#open-the-week-5-live-notebook">15. Open the Week 5 Live Notebook</a></li>
+  <li><a href="#download-the-visualization-dataset" id="toc-download-the-visualization-dataset" class="nav-link" data-scroll-target="#download-the-visualization-dataset">16. Download the Visualization Dataset</a></li>
+  <li><a href="#live-coding-session" id="toc-live-coding-session" class="nav-link" data-scroll-target="#live-coding-session">17. Live Coding Session</a>
+  <ul class="collapse">
+  <li><a href="#step-1-import-libraries" id="toc-step-1-import-libraries" class="nav-link" data-scroll-target="#step-1-import-libraries">Step 1 — Import Libraries</a></li>
+  <li><a href="#step-2-load-dataset" id="toc-step-2-load-dataset" class="nav-link" data-scroll-target="#step-2-load-dataset">Step 2 — Load Dataset</a></li>
+  <li><a href="#step-3-generate-descriptive-statistics" id="toc-step-3-generate-descriptive-statistics" class="nav-link" data-scroll-target="#step-3-generate-descriptive-statistics">Step 3 — Generate Descriptive Statistics</a></li>
+  <li><a href="#step-4-calculate-average-inflation" id="toc-step-4-calculate-average-inflation" class="nav-link" data-scroll-target="#step-4-calculate-average-inflation">Step 4 — Calculate Average Inflation</a></li>
+  <li><a href="#step-5-create-histogram" id="toc-step-5-create-histogram" class="nav-link" data-scroll-target="#step-5-create-histogram">Step 5 — Create Histogram</a></li>
+  <li><a href="#step-6-create-line-graph" id="toc-step-6-create-line-graph" class="nav-link" data-scroll-target="#step-6-create-line-graph">Step 6 — Create Line Graph</a></li>
+  <li><a href="#step-7-create-scatter-plot" id="toc-step-7-create-scatter-plot" class="nav-link" data-scroll-target="#step-7-create-scatter-plot">Step 7 — Create Scatter Plot</a></li>
+  <li><a href="#step-8-create-interactive-plotly-graph" id="toc-step-8-create-interactive-plotly-graph" class="nav-link" data-scroll-target="#step-8-create-interactive-plotly-graph">Step 8 — Create Interactive Plotly Graph</a></li>
+  <li><a href="#step-9-interpretation-questions" id="toc-step-9-interpretation-questions" class="nav-link" data-scroll-target="#step-9-interpretation-questions">Step 9 — Interpretation Questions</a></li>
+  </ul></li>
+  <li><a href="#interactive-mini-quiz" id="toc-interactive-mini-quiz" class="nav-link" data-scroll-target="#interactive-mini-quiz">18. Interactive Mini Quiz</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  </ul></li>
+  <li><a href="#self-assessment-activity" id="toc-self-assessment-activity" class="nav-link" data-scroll-target="#self-assessment-activity">19. Self-Assessment Activity</a>
+  <ul class="collapse">
+  <li><a href="#task-1-generate-statistics" id="toc-task-1-generate-statistics" class="nav-link" data-scroll-target="#task-1-generate-statistics">Task 1 — Generate Statistics</a></li>
+  <li><a href="#task-2-create-graphs" id="toc-task-2-create-graphs" class="nav-link" data-scroll-target="#task-2-create-graphs">Task 2 — Create Graphs</a></li>
+  <li><a href="#task-3-correlation-analysis" id="toc-task-3-correlation-analysis" class="nav-link" data-scroll-target="#task-3-correlation-analysis">Task 3 — Correlation Analysis</a></li>
+  <li><a href="#task-4-identify-key-events" id="toc-task-4-identify-key-events" class="nav-link" data-scroll-target="#task-4-identify-key-events">Task 4 — Identify Key Events</a></li>
+  <li><a href="#task-5-write-interpretation" id="toc-task-5-write-interpretation" class="nav-link" data-scroll-target="#task-5-write-interpretation">Task 5 — Write Interpretation</a></li>
+  <li><a href="#task-6-create-interactive-plotly-graph" id="toc-task-6-create-interactive-plotly-graph" class="nav-link" data-scroll-target="#task-6-create-interactive-plotly-graph">Task 6 — Create Interactive Plotly Graph</a></li>
+  </ul></li>
+  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">20. Submission Instructions</a></li>
+  <li><a href="#file-naming-convention" id="toc-file-naming-convention" class="nav-link" data-scroll-target="#file-naming-convention">File Naming Convention</a></li>
+  <li><a href="#submission-link" id="toc-submission-link" class="nav-link" data-scroll-target="#submission-link">Submission Link</a></li>
+  <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">21. Common Errors</a>
+  <ul class="collapse">
+  <li><a href="#problem-1-forgetting-labels" id="toc-problem-1-forgetting-labels" class="nav-link" data-scroll-target="#problem-1-forgetting-labels">Problem 1 — Forgetting Labels</a></li>
+  <li><a href="#problem-2-misinterpreting-correlation" id="toc-problem-2-misinterpreting-correlation" class="nav-link" data-scroll-target="#problem-2-misinterpreting-correlation">Problem 2 — Misinterpreting Correlation</a></li>
+  <li><a href="#problem-3-overcrowded-graphs" id="toc-problem-3-overcrowded-graphs" class="nav-link" data-scroll-target="#problem-3-overcrowded-graphs">Problem 3 — Overcrowded Graphs</a></li>
+  <li><a href="#problem-4-using-wrong-graph-type" id="toc-problem-4-using-wrong-graph-type" class="nav-link" data-scroll-target="#problem-4-using-wrong-graph-type">Problem 4 — Using Wrong Graph Type</a></li>
+  <li><a href="#problem-5-ignoring-outliers" id="toc-problem-5-ignoring-outliers" class="nav-link" data-scroll-target="#problem-5-ignoring-outliers">Problem 5 — Ignoring Outliers</a></li>
+  </ul></li>
+  <li><a href="#ai-reflection-question" id="toc-ai-reflection-question" class="nav-link" data-scroll-target="#ai-reflection-question">22. AI Reflection Question</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">23. Key Takeaways</a></li>
+  <li><a href="#before-week-6" id="toc-before-week-6" class="nav-link" data-scroll-target="#before-week-6">24. Before Week 6</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Week 5 — Understanding Economic Data Through Statistics and Visualization</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="week-5-descriptive-statistics-and-data-visualization-for-economics" class="level1">
+<h1>Week 5 — Descriptive Statistics and Data Visualization for Economics</h1>
+<p>Weeks 1–4 focused on:</p>
+<ul>
+<li>computational setup</li>
+<li>Python fundamentals</li>
+<li>programming logic</li>
+<li>data handling and cleaning</li>
+</ul>
+<p>Now students move into:</p>
+<pre class="text"><code>analytical interpretation</code></pre>
+<p>This week introduces:</p>
+<ul>
+<li>descriptive statistics</li>
+<li>distributions</li>
+<li>correlation analysis</li>
+<li>data visualization</li>
+<li>economic storytelling with graphs</li>
+</ul>
+<p>This is where students begin transforming:</p>
+<pre class="text"><code>data</code></pre>
+<p>into</p>
+<pre class="text"><code>economic insight</code></pre>
+<hr>
+</section>
+<section id="learning-objectives" class="level1">
+<h1>1. Learning Objectives</h1>
+<p>By the end of this week, students should be able to:</p>
+<ul>
+<li>generate descriptive statistics</li>
+<li>interpret averages and variation</li>
+<li>understand distributions</li>
+<li>calculate correlations</li>
+<li>create economic graphs</li>
+<li>identify patterns and anomalies</li>
+<li>communicate economic insights visually</li>
+</ul>
+<hr>
+</section>
+<section id="week-5-learning-materials" class="level1">
+<h1>2. Week 5 Learning Materials</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Material</th>
+<th>Purpose</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Week 5 Live Notebook</td>
+<td>Run the statistics and visualization examples in Google Colab</td>
+<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week5/ECN4199_Week5_Live_Notebook.ipynb">Open Week 5 Live Notebook</a></td>
+</tr>
+<tr class="even">
+<td>Macroeconomic Dataset</td>
+<td>Download the CSV file used in class</td>
+<td><a href="../data/sri_lanka_macro.csv">Download sri_lanka_macro.csv</a></td>
+</tr>
+</tbody>
+</table>
+<p>Inside Google Colab:</p>
+<pre class="text"><code>File -&gt; Save a copy in Drive</code></pre>
+<p>Rename your copy:</p>
+<pre class="text"><code>Week05_IndexNumber_Name.ipynb</code></pre>
+<hr>
+</section>
+<section id="why-visualization-matters-in-economics" class="level1">
+<h1>3. Why Visualization Matters in Economics</h1>
+<p>Large datasets are difficult to understand by simply reading tables.</p>
+<p>Visualization helps us:</p>
+<ul>
+<li>detect patterns</li>
+<li>identify trends</li>
+<li>communicate evidence</li>
+<li>compare variables</li>
+<li>support decisions</li>
+</ul>
+<p>Good economists do not merely calculate.</p>
+<p>They explain.</p>
+<p>Visualization is part of explanation.</p>
+<hr>
+</section>
+<section id="example" class="level1">
+<h1>Example</h1>
+<p>Suppose inflation rises from:</p>
+<ul>
+<li>4%</li>
+<li>to 6%</li>
+<li>to 46%</li>
+</ul>
+<p>A table shows numbers.</p>
+<p>A graph shows crisis.</p>
+<p>That difference matters.</p>
+<hr>
+</section>
+<section id="descriptive-statistics" class="level1">
+<h1>4. Descriptive Statistics</h1>
+<p>Descriptive statistics summarize the main characteristics of data.</p>
+<p>They help answer questions such as:</p>
+<ul>
+<li>What is the average?</li>
+<li>How much variation exists?</li>
+<li>Are values concentrated or spread out?</li>
+<li>Are there extreme observations?</li>
+</ul>
+<hr>
+</section>
+<section id="common-descriptive-statistics" class="level1">
+<h1>Common Descriptive Statistics</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mean</td>
+<td>Average</td>
+</tr>
+<tr class="even">
+<td>Median</td>
+<td>Middle value</td>
+</tr>
+<tr class="odd">
+<td>Standard deviation</td>
+<td>Variation</td>
+</tr>
+<tr class="even">
+<td>Minimum</td>
+<td>Lowest value</td>
+</tr>
+<tr class="odd">
+<td>Maximum</td>
+<td>Highest value</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="generate-descriptive-statistics" class="level1">
+<h1>Generate Descriptive Statistics</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="example-interpretation" class="level1">
+<h1>Example Interpretation</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Statistic</th>
+<th>Inflation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mean</td>
+<td>12.5</td>
+</tr>
+<tr class="even">
+<td>Std</td>
+<td>15.2</td>
+</tr>
+<tr class="odd">
+<td>Max</td>
+<td>46.4</td>
+</tr>
+</tbody>
+</table>
+<p>Interpretation:</p>
+<ul>
+<li>Inflation averaged 12.5%</li>
+<li>Inflation varied substantially</li>
+<li>Some years experienced very high inflation</li>
+</ul>
+<hr>
+</section>
+<section id="measures-of-central-tendency" class="level1">
+<h1>5. Measures of Central Tendency</h1>
+<p>Central tendency describes the “typical” value.</p>
+<hr>
+</section>
+<section id="mean" class="level1">
+<h1>Mean</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].mean()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="median" class="level1">
+<h1>Median</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].median()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="why-mean-and-median-differ" class="level1">
+<h1>Why Mean and Median Differ</h1>
+<p>If extreme values exist:</p>
+<ul>
+<li>the mean may be distorted</li>
+<li>the median may better represent the “typical” observation</li>
+</ul>
+<hr>
+</section>
+<section id="economic-example" class="level1">
+<h1>Economic Example</h1>
+<p>If one household earns extremely high income:</p>
+<ul>
+<li>average income rises sharply</li>
+<li>median income changes little</li>
+</ul>
+<p>This matters in inequality analysis.</p>
+<hr>
+</section>
+<section id="measures-of-dispersion" class="level1">
+<h1>6. Measures of Dispersion</h1>
+<p>Dispersion measures variability.</p>
+<p>Two economies may have the same average inflation but very different stability.</p>
+<hr>
+</section>
+<section id="standard-deviation" class="level1">
+<h1>Standard Deviation</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].std()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="interpretation" class="level1">
+<h1>Interpretation</h1>
+<p>High standard deviation means:</p>
+<ul>
+<li>high volatility</li>
+<li>instability</li>
+<li>uncertainty</li>
+</ul>
+<hr>
+</section>
+<section id="range" class="level1">
+<h1>Range</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].<span class="bu">max</span>() <span class="op">-</span> data[<span class="st">"Inflation"</span>].<span class="bu">min</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="economic-significance" class="level1">
+<h1>Economic Significance</h1>
+<p>Volatility matters for:</p>
+<ul>
+<li>investment</li>
+<li>monetary policy</li>
+<li>household welfare</li>
+<li>business planning</li>
+</ul>
+<hr>
+</section>
+<section id="distributions-and-histograms" class="level1">
+<h1>7. Distributions and Histograms</h1>
+<p>A distribution shows how values are spread.</p>
+<p>Histograms help visualize distributions.</p>
+<hr>
+</section>
+<section id="example-histogram" class="level1">
+<h1>Example Histogram</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>plt.hist(data[<span class="st">"Inflation"</span>])</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="interpretation-questions" class="level1">
+<h1>Interpretation Questions</h1>
+<p>Ask:</p>
+<ul>
+<li>Is inflation concentrated at low values?</li>
+<li>Are there extreme observations?</li>
+<li>Is the distribution symmetric?</li>
+</ul>
+<hr>
+</section>
+<section id="why-distributions-matter" class="level1">
+<h1>Why Distributions Matter</h1>
+<p>Many statistical methods assume:</p>
+<ul>
+<li>normality</li>
+<li>symmetry</li>
+<li>absence of extreme outliers</li>
+</ul>
+<p>Economists must inspect distributions before modeling.</p>
+<hr>
+</section>
+<section id="correlation-analysis" class="level1">
+<h1>8. Correlation Analysis</h1>
+<p>Correlation measures how two variables move together.</p>
+<hr>
+</section>
+<section id="example-questions" class="level1">
+<h1>Example Questions</h1>
+<p>Do:</p>
+<ul>
+<li>inflation and exchange rate depreciation move together?</li>
+<li>unemployment and GDP growth move inversely?</li>
+</ul>
+<hr>
+</section>
+<section id="correlation-coefficient" class="level1">
+<h1>Correlation Coefficient</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].corr(data[<span class="st">"Exchange_Rate_Change"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="correlation-interpretation" class="level1">
+<h1>Correlation Interpretation</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Correlation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+1</td>
+<td>Perfect positive relationship</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>No relationship</td>
+</tr>
+<tr class="odd">
+<td>-1</td>
+<td>Perfect negative relationship</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="critical-warning" class="level1">
+<h1>Critical Warning</h1>
+<p>Correlation does NOT imply causation.</p>
+<p>This distinction is fundamental in economics.</p>
+<hr>
+</section>
+<section id="example-1" class="level1">
+<h1>Example</h1>
+<p>Ice cream sales and drowning deaths may rise together.</p>
+<p>This does NOT mean:</p>
+<pre class="text"><code>ice cream causes drowning</code></pre>
+<p>A third factor:</p>
+<pre class="text"><code>temperature</code></pre>
+<p>drives both.</p>
+<hr>
+</section>
+<section id="introduction-to-data-visualization" class="level1">
+<h1>9. Introduction to Data Visualization</h1>
+<p>Visualization transforms raw numbers into interpretable patterns.</p>
+<p>This week we use:</p>
+<ul>
+<li>matplotlib</li>
+<li>Plotly</li>
+</ul>
+<hr>
+</section>
+<section id="import-libraries" class="level1">
+<h1>Import Libraries</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="common-graph-types" class="level1">
+<h1>Common Graph Types</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Graph</th>
+<th>Best Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Line graph</td>
+<td>Trends over time</td>
+</tr>
+<tr class="even">
+<td>Bar chart</td>
+<td>Comparisons</td>
+</tr>
+<tr class="odd">
+<td>Scatter plot</td>
+<td>Relationships</td>
+</tr>
+<tr class="even">
+<td>Histogram</td>
+<td>Distributions</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="important-principle" class="level1">
+<h1>Important Principle</h1>
+<p>Choose graphs based on:</p>
+<pre class="text"><code>analytical purpose</code></pre>
+<p>not appearance.</p>
+<hr>
+</section>
+<section id="line-graphs" class="level1">
+<h1>10. Line Graphs</h1>
+<p>Line graphs are ideal for time-series data.</p>
+<hr>
+</section>
+<section id="example-2" class="level1">
+<h1>Example</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Year"</span>], data[<span class="st">"Inflation"</span>])</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="add-labels" class="level1">
+<h1>Add Labels</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Year"</span>], data[<span class="st">"Inflation"</span>])</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Inflation in Sri Lanka"</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Inflation Rate"</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="interpretation-1" class="level1">
+<h1>Interpretation</h1>
+<p>Students should identify:</p>
+<ul>
+<li>trends</li>
+<li>spikes</li>
+<li>turning points</li>
+<li>crises</li>
+</ul>
+<hr>
+</section>
+<section id="bar-charts" class="level1">
+<h1>11. Bar Charts</h1>
+<p>Bar charts compare categories.</p>
+<hr>
+</section>
+<section id="example-3" class="level1">
+<h1>Example</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>plt.bar(data[<span class="st">"Year"</span>], data[<span class="st">"GDP_Growth"</span>])</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="economic-uses" class="level1">
+<h1>Economic Uses</h1>
+<p>Bar charts are useful for:</p>
+<ul>
+<li>regional comparisons</li>
+<li>sector comparisons</li>
+<li>unemployment by gender</li>
+<li>export composition</li>
+</ul>
+<hr>
+</section>
+<section id="warning" class="level1">
+<h1>Warning</h1>
+<p>Do not overload bar charts with too many categories.</p>
+<hr>
+</section>
+<section id="scatter-plots" class="level1">
+<h1>12. Scatter Plots</h1>
+<p>Scatter plots help analyze relationships between variables.</p>
+<hr>
+</section>
+<section id="example-4" class="level1">
+<h1>Example</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Inflation"</span>],</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">"Exchange_Rate_Change"</span>])</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="interpretation-questions-1" class="level1">
+<h1>Interpretation Questions</h1>
+<p>Ask:</p>
+<ul>
+<li>Is there positive relationship?</li>
+<li>Are there clusters?</li>
+<li>Are there outliers?</li>
+</ul>
+<hr>
+</section>
+<section id="add-labels-1" class="level1">
+<h1>Add Labels</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Inflation"</span>],</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">"Exchange_Rate_Change"</span>])</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Inflation"</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Exchange Rate Change"</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="multi-variable-visualization" class="level1">
+<h1>13. Multi-Variable Visualization</h1>
+<p>Economists often compare several variables simultaneously.</p>
+<hr>
+</section>
+<section id="example-two-axis-graph" class="level1">
+<h1>Example: Two-Axis Graph</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>fig, ax1 <span class="op">=</span> plt.subplots()</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>ax1.plot(data[<span class="st">"Year"</span>], data[<span class="st">"Inflation"</span>])</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> ax1.twinx()</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>ax2.plot(data[<span class="st">"Year"</span>], data[<span class="st">"Exchange_Rate"</span>])</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="interpretation-2" class="level1">
+<h1>Interpretation</h1>
+<p>Students should ask:</p>
+<ul>
+<li>Do inflation spikes coincide with depreciation?</li>
+<li>Do variables move together?</li>
+</ul>
+<hr>
+</section>
+<section id="warning-1" class="level1">
+<h1>Warning</h1>
+<p>Multi-axis graphs can be misleading.</p>
+<p>Use carefully.</p>
+<hr>
+</section>
+<section id="interactive-graphs-with-plotly" class="level1">
+<h1>13. Interactive Graphs with Plotly</h1>
+<p>Interactive visualization is increasingly important.</p>
+<p>Plotly allows:</p>
+<ul>
+<li>zooming</li>
+<li>hovering</li>
+<li>filtering</li>
+<li>interaction</li>
+</ul>
+<hr>
+</section>
+<section id="example-5" class="level1">
+<h1>Example</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(data,</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>              x<span class="op">=</span><span class="st">"Year"</span>,</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span><span class="st">"Inflation"</span>,</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>              title<span class="op">=</span><span class="st">"Inflation Trends"</span>)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="why-interactive-graphs-matter" class="level1">
+<h1>Why Interactive Graphs Matter</h1>
+<p>They:</p>
+<ul>
+<li>improve exploration</li>
+<li>improve communication</li>
+<li>improve dashboards</li>
+<li>support decision-making</li>
+</ul>
+<hr>
+</section>
+<section id="telling-economic-stories-with-data" class="level1">
+<h1>14. Telling Economic Stories with Data</h1>
+<p>Good analysts do not simply create graphs.</p>
+<p>They interpret them.</p>
+<hr>
+</section>
+<section id="weak-interpretation" class="level1">
+<h1>Weak Interpretation</h1>
+<pre class="text"><code>Inflation increased.</code></pre>
+<hr>
+</section>
+<section id="better-interpretation" class="level1">
+<h1>Better Interpretation</h1>
+<pre class="text"><code>Inflation remained relatively stable until 2021 but increased sharply in 2022, suggesting severe macroeconomic instability.</code></pre>
+<hr>
+</section>
+<section id="critical-lesson" class="level1">
+<h1>Critical Lesson</h1>
+<p>Graphs without interpretation are incomplete analysis.</p>
+<hr>
+</section>
+<section id="open-the-week-5-live-notebook" class="level1">
+<h1>15. Open the Week 5 Live Notebook</h1>
+<p><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week5/ECN4199_Week5_Live_Notebook.ipynb">Open Week 5 Live Notebook — Save a Copy Before Editing</a></p>
+<hr>
+</section>
+<section id="download-the-visualization-dataset" class="level1">
+<h1>16. Download the Visualization Dataset</h1>
+<p><a href="../data/sri_lanka_macro.csv">Download Visualization Dataset</a></p>
+<hr>
+</section>
+<section id="live-coding-session" class="level1">
+<h1>17. Live Coding Session</h1>
+<section id="step-1-import-libraries" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-import-libraries">Step 1 — Import Libraries</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-2-load-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-load-dataset">Step 2 — Load Dataset</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"sri_lanka_macro.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-3-generate-descriptive-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-generate-descriptive-statistics">Step 3 — Generate Descriptive Statistics</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>data.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-4-calculate-average-inflation" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-calculate-average-inflation">Step 4 — Calculate Average Inflation</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].mean()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-5-create-histogram" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-create-histogram">Step 5 — Create Histogram</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>plt.hist(data[<span class="st">"Inflation"</span>])</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-6-create-line-graph" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-create-line-graph">Step 6 — Create Line Graph</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Year"</span>], data[<span class="st">"Inflation"</span>])</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-7-create-scatter-plot" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-create-scatter-plot">Step 7 — Create Scatter Plot</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Inflation"</span>],</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">"Exchange_Rate_Change"</span>])</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-8-create-interactive-plotly-graph" class="level2">
+<h2 class="anchored" data-anchor-id="step-8-create-interactive-plotly-graph">Step 8 — Create Interactive Plotly Graph</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(data,</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>              x<span class="op">=</span><span class="st">"Year"</span>,</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span><span class="st">"Inflation"</span>)</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-9-interpretation-questions" class="level2">
+<h2 class="anchored" data-anchor-id="step-9-interpretation-questions">Step 9 — Interpretation Questions</h2>
+<p>Ask students:</p>
+<ul>
+<li>When did inflation accelerate?</li>
+<li>What happened during crisis periods?</li>
+<li>Are inflation and exchange rate movements related?</li>
+<li>Are there outliers?</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="interactive-mini-quiz" class="level1">
+<h1>18. Interactive Mini Quiz</h1>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What does standard deviation measure? A/B/C/D : "</span>)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"C"</span>:</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! Standard deviation measures variation."</span>)</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Which graph is best for time trends? A/B/C/D : "</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"C"</span>:</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! Line graphs are best for trends."</span>)</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Does correlation imply causation? Yes/No : "</span>)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.lower() <span class="op">==</span> <span class="st">"no"</span>:</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct!"</span>)</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="self-assessment-activity" class="level1">
+<h1>19. Self-Assessment Activity</h1>
+<p>Students should complete the following tasks.</p>
+<hr>
+<section id="task-1-generate-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="task-1-generate-statistics">Task 1 — Generate Statistics</h2>
+<p>Generate:</p>
+<ul>
+<li>mean</li>
+<li>median</li>
+<li>standard deviation</li>
+</ul>
+<p>for:</p>
+<ul>
+<li>inflation</li>
+<li>GDP growth</li>
+<li>exchange rate changes</li>
+</ul>
+<hr>
+</section>
+<section id="task-2-create-graphs" class="level2">
+<h2 class="anchored" data-anchor-id="task-2-create-graphs">Task 2 — Create Graphs</h2>
+<p>Create:</p>
+<ul>
+<li>histogram</li>
+<li>line graph</li>
+<li>bar chart</li>
+<li>scatter plot</li>
+</ul>
+<hr>
+</section>
+<section id="task-3-correlation-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="task-3-correlation-analysis">Task 3 — Correlation Analysis</h2>
+<p>Calculate correlation between:</p>
+<ul>
+<li>inflation</li>
+<li>exchange rate changes</li>
+</ul>
+<p>Interpret result.</p>
+<hr>
+</section>
+<section id="task-4-identify-key-events" class="level2">
+<h2 class="anchored" data-anchor-id="task-4-identify-key-events">Task 4 — Identify Key Events</h2>
+<p>Identify:</p>
+<ul>
+<li>highest inflation year</li>
+<li>lowest GDP growth year</li>
+<li>largest exchange rate depreciation</li>
+</ul>
+<hr>
+</section>
+<section id="task-5-write-interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="task-5-write-interpretation">Task 5 — Write Interpretation</h2>
+<p>Write short analytical paragraph:</p>
+<pre class="text"><code>What macroeconomic patterns do you observe in the data?</code></pre>
+<hr>
+</section>
+<section id="task-6-create-interactive-plotly-graph" class="level2">
+<h2 class="anchored" data-anchor-id="task-6-create-interactive-plotly-graph">Task 6 — Create Interactive Plotly Graph</h2>
+<p>Create one interactive graph using Plotly.</p>
+<hr>
+</section>
+</section>
+<section id="submission-instructions" class="level1">
+<h1>20. Submission Instructions</h1>
+<p>Submit:</p>
+<ul>
+<li>completed notebook</li>
+<li>descriptive statistics</li>
+<li>visualizations</li>
+<li>correlation analysis</li>
+<li>interpretation paragraph</li>
+</ul>
+<hr>
+</section>
+<section id="file-naming-convention" class="level1">
+<h1>File Naming Convention</h1>
+<pre class="text"><code>Week5_YourName.ipynb</code></pre>
+<hr>
+</section>
+<section id="submission-link" class="level1">
+<h1>Submission Link</h1>
+<p>The lecturer will provide the live submission link during the class session.</p>
+<hr>
+</section>
+<section id="common-errors" class="level1">
+<h1>21. Common Errors</h1>
+<section id="problem-1-forgetting-labels" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1-forgetting-labels">Problem 1 — Forgetting Labels</h2>
+<p>Graphs without:</p>
+<ul>
+<li>titles</li>
+<li>axis labels</li>
+<li>units</li>
+</ul>
+<p>are poor practice.</p>
+<hr>
+</section>
+<section id="problem-2-misinterpreting-correlation" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2-misinterpreting-correlation">Problem 2 — Misinterpreting Correlation</h2>
+<p>Correlation:</p>
+<ul>
+<li>indicates association</li>
+<li>NOT causality</li>
+</ul>
+<hr>
+</section>
+<section id="problem-3-overcrowded-graphs" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3-overcrowded-graphs">Problem 3 — Overcrowded Graphs</h2>
+<p>Too many variables create unreadable visualizations.</p>
+<p>Simplify.</p>
+<hr>
+</section>
+<section id="problem-4-using-wrong-graph-type" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4-using-wrong-graph-type">Problem 4 — Using Wrong Graph Type</h2>
+<p>Example:</p>
+<p>using bar chart for continuous time trends.</p>
+<hr>
+</section>
+<section id="problem-5-ignoring-outliers" class="level2">
+<h2 class="anchored" data-anchor-id="problem-5-ignoring-outliers">Problem 5 — Ignoring Outliers</h2>
+<p>Extreme observations may:</p>
+<ul>
+<li>distort averages</li>
+<li>distort correlations</li>
+<li>distort conclusions</li>
+</ul>
+<p>Always inspect data visually.</p>
+<hr>
+</section>
+</section>
+<section id="ai-reflection-question" class="level1">
+<h1>22. AI Reflection Question</h1>
+<p>AI can automatically generate graphs.</p>
+<p>However:</p>
+<ul>
+<li>AI may choose misleading graph types</li>
+<li>AI may ignore economic context</li>
+<li>AI may produce visually attractive but analytically weak outputs</li>
+</ul>
+<p>Reflection question:</p>
+<pre class="text"><code>Why is economic interpretation still necessary even when AI tools generate visualizations automatically?</code></pre>
+<hr>
+</section>
+<section id="key-takeaways" class="level1">
+<h1>23. Key Takeaways</h1>
+<p>By the end of Week 5, students should understand:</p>
+<ul>
+<li>descriptive statistics</li>
+<li>measures of central tendency</li>
+<li>measures of dispersion</li>
+<li>distributions</li>
+<li>correlation analysis</li>
+<li>data visualization principles</li>
+<li>line graphs</li>
+<li>histograms</li>
+<li>scatter plots</li>
+<li>interactive visualization</li>
+<li>economic interpretation of graphs</li>
+</ul>
+<hr>
+</section>
+<section id="before-week-6" class="level1">
+<h1>24. Before Week 6</h1>
+<p>Before next week, students should:</p>
+<ul>
+<li>rerun all Week 5 code</li>
+<li>practice graph creation</li>
+<li>practice interpretation writing</li>
+<li>review correlation concepts</li>
+<li>complete submission</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Developed and maintained by Kanishka Werawella<br>
+Department of Economics, University of Colombo</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>ECN 4199 — Industrial Data Analytics<br>
+Academic Year 2026/27</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

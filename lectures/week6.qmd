@@ -57,7 +57,28 @@ By the end of this week, students should be able to:
 
 ---
 
-# 2. What Is a Dashboard?
+# 2. Week 6 Learning Materials
+
+| Material | Purpose | Link |
+|---|---|---|
+| Week 6 Live Notebook | Build the interactive Plotly examples in Google Colab | [Open Week 6 Live Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week6/ECN4199_Week6_Live_Notebook.ipynb) |
+| Macroeconomic Dataset | Download the CSV file used in class | [Download sri_lanka_macro.csv](../data/sri_lanka_macro.csv) |
+
+Inside Google Colab:
+
+```text
+File -> Save a copy in Drive
+```
+
+Rename your copy:
+
+```text
+Week06_IndexNumber_Name.ipynb
+```
+
+---
+
+# 3. What Is a Dashboard?
 
 A dashboard is:
 
@@ -106,7 +127,7 @@ A good dashboard:
 
 ---
 
-# 3. Why Dashboards Matter in Economics
+# 4. Why Dashboards Matter in Economics
 
 Modern economics increasingly involves:
 
@@ -154,7 +175,7 @@ economic communication
 
 ---
 
-# 4. Static vs Interactive Visualization
+# 5. Static vs Interactive Visualization
 
 Traditional graphs are static.
 
@@ -199,7 +220,7 @@ fig.show()
 
 ---
 
-# 5. Introduction to Plotly
+# 6. Introduction to Plotly
 
 Plotly is one of the most widely used interactive visualization libraries.
 
@@ -241,7 +262,7 @@ Students can:
 
 ---
 
-# 6. Building Interactive Line Graphs
+# 7. Building Interactive Line Graphs
 
 Line graphs are ideal for:
 
@@ -288,7 +309,7 @@ Ask:
 
 ---
 
-# 7. Building Interactive Bar Charts
+# 8. Building Interactive Bar Charts
 
 Bar charts are useful for:
 
@@ -332,7 +353,7 @@ Do NOT use colors randomly.
 
 ---
 
-# 8. Interactive Scatter Plots
+# 9. Interactive Scatter Plots
 
 Scatter plots help explore relationships interactively.
 
@@ -373,7 +394,7 @@ Users can:
 
 ---
 
-# 9. Adding Hover Information
+# 10. Adding Hover Information
 
 Hover information improves analytical depth.
 
@@ -403,7 +424,7 @@ Users can inspect:
 
 ---
 
-# 10. Dashboard Design Principles
+# 11. Dashboard Design Principles
 
 Most beginner dashboards are terrible.
 
@@ -440,7 +461,7 @@ better analysis
 
 ---
 
-# 11. Multi-Chart Dashboards
+# 12. Multi-Chart Dashboards
 
 Dashboards often combine multiple visualizations.
 
@@ -490,7 +511,7 @@ fig.show()
 
 ---
 
-# 12. Storytelling with Dashboards
+# 13. Storytelling with Dashboards
 
 Dashboards should guide interpretation.
 
@@ -539,7 +560,7 @@ NOT decorative.
 
 ---
 
-# 13. Designing Economic Dashboards
+# 14. Designing Economic Dashboards
 
 This week students will build a:
 
@@ -583,33 +604,25 @@ Why is this graph useful?
 
 # 14. Open the Week 6 Live Notebook
 
-Replace placeholder below:
-
-[Open Week 6 Live Notebook — Save a Copy Before Editing](PASTE_WEEK6_COLAB_LINK_HERE)
+[Open Week 6 Live Notebook — Save a Copy Before Editing](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week6/ECN4199_Week6_Live_Notebook.ipynb)
 
 ---
 
 # 15. Download Dashboard Dataset
 
-Replace placeholder below:
-
-[Download Dashboard Dataset](PASTE_DATASET_LINK_HERE)
+[Download Dashboard Dataset](../data/sri_lanka_macro.csv)
 
 ---
 
 # 16. Plotly Cheat Sheet
 
-Replace placeholder below:
-
-[Open Plotly Cheat Sheet](PASTE_PLOTLY_GUIDE_LINK_HERE)
+[Open Plotly Python Guide](https://plotly.com/python/)
 
 ---
 
 # 17. Dashboard Design Guide
 
-Replace placeholder below:
-
-[Open Dashboard Design Guide](PASTE_DASHBOARD_GUIDE_LINK_HERE)
+Use the dashboard design principles listed above when building your Week 6 dashboard.
 
 ---
 
@@ -823,9 +836,7 @@ Week6_YourName.ipynb
 
 # Submission Link
 
-Replace placeholder below:
-
-[Submit Week 6 Work](PASTE_SUBMISSION_LINK_HERE)
+The lecturer will provide the live submission link during the class session.
 
 ---
 

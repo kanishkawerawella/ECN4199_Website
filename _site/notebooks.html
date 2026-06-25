@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 1 In-Class Activity – ECN 4199 - Industrial Data Analytics</title>
+<title>Live Notebooks – ECN 4199 - Industrial Data Analytics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,61 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-89fc109efc47e76c8a3852ba5571bf68.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-89fc109efc47e76c8a3852ba5571bf68.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -117,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">ECN 4199 - Industrial Data Analytics</span>
     </a>
   </div>
@@ -128,27 +93,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../roadmap.html"> 
+    <a class="nav-link" href="./roadmap.html"> 
 <span class="menu-text">Course Roadmap</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../assignments.html"> 
+    <a class="nav-link" href="./assignments.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../notebooks.html"> 
+    <a class="nav-link active" href="./notebooks.html" aria-current="page"> 
 <span class="menu-text">Live Notebooks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../project.html"> 
+    <a class="nav-link" href="./project.html"> 
 <span class="menu-text">Final Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources.html"> 
+    <a class="nav-link" href="./resources.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
 </ul>
@@ -167,41 +132,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#activity-information" id="toc-activity-information" class="nav-link active" data-scroll-target="#activity-information">Activity Information</a></li>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
-  <li><a href="#important-reminder" id="toc-important-reminder" class="nav-link" data-scroll-target="#important-reminder">Important Reminder</a></li>
-  <li><a href="#task-1-opening-python" id="toc-task-1-opening-python" class="nav-link" data-scroll-target="#task-1-opening-python">Task 1 — Opening Python</a>
+  <li><a href="#ecn-4199-live-coding-notebooks" id="toc-ecn-4199-live-coding-notebooks" class="nav-link active" data-scroll-target="#ecn-4199-live-coding-notebooks">ECN 4199 — Live Coding Notebooks</a></li>
+  <li><a href="#important-rule" id="toc-important-rule" class="nav-link" data-scroll-target="#important-rule">Important Rule</a></li>
+  <li><a href="#weekly-live-notebooks" id="toc-weekly-live-notebooks" class="nav-link" data-scroll-target="#weekly-live-notebooks">Weekly Live Notebooks</a></li>
+  <li><a href="#notebook-naming-convention" id="toc-notebook-naming-convention" class="nav-link" data-scroll-target="#notebook-naming-convention">Notebook Naming Convention</a></li>
+  <li><a href="#submission-reminder" id="toc-submission-reminder" class="nav-link" data-scroll-target="#submission-reminder">Submission Reminder</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a>
   <ul class="collapse">
-  <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective">Objective</a></li>
-  <li><a href="#instructions-1" id="toc-instructions-1" class="nav-link" data-scroll-target="#instructions-1">Instructions</a></li>
-  <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question">Question</a></li>
+  <li><a href="#notebook-does-not-open" id="toc-notebook-does-not-open" class="nav-link" data-scroll-target="#notebook-does-not-open">Notebook does not open</a></li>
+  <li><a href="#cannot-edit-notebook" id="toc-cannot-edit-notebook" class="nav-link" data-scroll-target="#cannot-edit-notebook">Cannot edit notebook</a></li>
+  <li><a href="#code-does-not-run" id="toc-code-does-not-run" class="nav-link" data-scroll-target="#code-does-not-run">Code does not run</a></li>
   </ul></li>
-  <li><a href="#task-2-creating-variables" id="toc-task-2-creating-variables" class="nav-link" data-scroll-target="#task-2-creating-variables">Task 2 — Creating Variables</a>
-  <ul class="collapse">
-  <li><a href="#objective-1" id="toc-objective-1" class="nav-link" data-scroll-target="#objective-1">Objective</a></li>
-  <li><a href="#instructions-2" id="toc-instructions-2" class="nav-link" data-scroll-target="#instructions-2">Instructions</a></li>
-  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question</a></li>
-  </ul></li>
-  <li><a href="#task-3-simple-economic-calculation" id="toc-task-3-simple-economic-calculation" class="nav-link" data-scroll-target="#task-3-simple-economic-calculation">Task 3 — Simple Economic Calculation</a>
-  <ul class="collapse">
-  <li><a href="#objective-2" id="toc-objective-2" class="nav-link" data-scroll-target="#objective-2">Objective</a></li>
-  <li><a href="#instructions-3" id="toc-instructions-3" class="nav-link" data-scroll-target="#instructions-3">Instructions</a></li>
-  <li><a href="#example-structure" id="toc-example-structure" class="nav-link" data-scroll-target="#example-structure">Example Structure</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question</a></li>
-  </ul></li>
-  <li><a href="#task-4-lists-and-economic-data" id="toc-task-4-lists-and-economic-data" class="nav-link" data-scroll-target="#task-4-lists-and-economic-data">Task 4 — Lists and Economic Data</a>
-  <ul class="collapse">
-  <li><a href="#objective-3" id="toc-objective-3" class="nav-link" data-scroll-target="#objective-3">Objective</a></li>
-  <li><a href="#instructions-4" id="toc-instructions-4" class="nav-link" data-scroll-target="#instructions-4">Instructions</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question</a></li>
-  </ul></li>
-  <li><a href="#task-5-reflection-question" id="toc-task-5-reflection-question" class="nav-link" data-scroll-target="#task-5-reflection-question">Task 5 — Reflection Question</a>
-  <ul class="collapse">
-  <li><a href="#short-reflection" id="toc-short-reflection" class="nav-link" data-scroll-target="#short-reflection">Short Reflection</a></li>
-  </ul></li>
-  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">Submission Instructions</a></li>
-  <li><a href="#submission-link" id="toc-submission-link" class="nav-link" data-scroll-target="#submission-link">Submission Link</a></li>
-  <li><a href="#passcode-access" id="toc-passcode-access" class="nav-link" data-scroll-target="#passcode-access">Passcode Access</a></li>
   <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity">Academic Integrity</a></li>
   </ul>
 </nav>
@@ -211,7 +152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 1 In-Class Activity</h1>
+<h1 class="title">Live Notebooks</h1>
 </div>
 
 
@@ -228,237 +169,118 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="activity-information" class="level1">
-<h1>Activity Information</h1>
+<section id="ecn-4199-live-coding-notebooks" class="level1">
+<h1>ECN 4199 — Live Coding Notebooks</h1>
+<p>This page contains the weekly Google Colab notebooks used during lectures.</p>
+<p>Students must always:</p>
+<ol type="1">
+<li>Open the weekly notebook</li>
+<li>Go to <strong>File → Save a copy in Drive</strong></li>
+<li>Rename the notebook using the correct format</li>
+<li>Complete the activity</li>
+<li>Submit the notebook link when required</li>
+</ol>
+<hr>
+</section>
+<section id="important-rule" class="level1">
+<h1>Important Rule</h1>
+<p>Do <strong>not</strong> edit the master notebook directly.</p>
+<p>Always save your own copy first.</p>
+<hr>
+</section>
+<section id="weekly-live-notebooks" class="level1">
+<h1>Weekly Live Notebooks</h1>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Item</th>
-<th>Details</th>
+<th>Week</th>
+<th>Topic</th>
+<th>Notebook</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Week</td>
 <td>Week 1</td>
+<td>Orientation and First Python Code</td>
+<td><a href="https://colab.research.google.com/drive/1OSRvERqcIAuZGCJo1esaHD6hL-Xn6pnI?usp=sharing">Open Notebook</a></td>
 </tr>
 <tr class="even">
-<td>Topic</td>
-<td>Orientation and Computational Thinking</td>
+<td>Week 2</td>
+<td>Setup and First Dataset</td>
+<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week2/ECN4199_Week2_Live_Notebook.ipynb">Open Notebook</a></td>
 </tr>
 <tr class="odd">
-<td>Marks</td>
-<td>5 Marks</td>
+<td>Week 3</td>
+<td>Python Fundamentals</td>
+<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week3/ECN4199_Week3_Live_Notebook.ipynb">Open Notebook</a></td>
 </tr>
 <tr class="even">
-<td>Duration</td>
-<td>1 Hour</td>
+<td>Week 4</td>
+<td>Data Handling with Pandas</td>
+<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week4/ECN4199_Week4_Live_Notebook.ipynb">Open Notebook</a></td>
 </tr>
 <tr class="odd">
-<td>Attempts</td>
-<td>One Attempt Only</td>
+<td>Week 5</td>
+<td>Statistics and Visualization</td>
+<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week5/ECN4199_Week5_Live_Notebook.ipynb">Open Notebook</a></td>
 </tr>
 <tr class="even">
-<td>Access</td>
-<td>Lecturer Passcode Required</td>
+<td>Week 6</td>
+<td>Interactive Dashboards</td>
+<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week6/ECN4199_Week6_Live_Notebook.ipynb">Open Notebook</a></td>
 </tr>
 </tbody>
 </table>
 <hr>
 </section>
-<section id="instructions" class="level1">
-<h1>Instructions</h1>
+<section id="notebook-naming-convention" class="level1">
+<h1>Notebook Naming Convention</h1>
+<p>Students must rename notebooks as follows:</p>
+<pre class="text"><code>WeekNumber_IndexNumber_Name.ipynb</code></pre>
+<p>Example:</p>
+<pre class="text"><code>Week03_2024BA12345_Perera.ipynb</code></pre>
+<hr>
+</section>
+<section id="submission-reminder" class="level1">
+<h1>Submission Reminder</h1>
+<p>When submitting a notebook:</p>
 <ol type="1">
-<li>Open your Google Colab notebook.</li>
-<li>Save a copy to your Google Drive.</li>
-<li>Complete all tasks below.</li>
-<li>Answer all interpretation questions.</li>
-<li>Submit before the activity closes.</li>
+<li>Click <strong>Share</strong></li>
+<li>Change access to <strong>Anyone with the link</strong></li>
+<li>Set permission to <strong>Viewer</strong></li>
+<li>Copy the link</li>
+<li>Submit through the weekly activity/submission page</li>
 </ol>
 <hr>
 </section>
-<section id="important-reminder" class="level1">
-<h1>Important Reminder</h1>
-<p>This activity is designed to test:</p>
+<section id="troubleshooting" class="level1">
+<h1>Troubleshooting</h1>
+<section id="notebook-does-not-open" class="level2">
+<h2 class="anchored" data-anchor-id="notebook-does-not-open">Notebook does not open</h2>
+<p>Make sure you are signed into your Google account.</p>
+</section>
+<section id="cannot-edit-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="cannot-edit-notebook">Cannot edit notebook</h2>
+<p>You are probably viewing the master copy.</p>
+<p>Use:</p>
+<pre class="text"><code>File → Save a copy in Drive</code></pre>
+</section>
+<section id="code-does-not-run" class="level2">
+<h2 class="anchored" data-anchor-id="code-does-not-run">Code does not run</h2>
+<p>Check:</p>
 <ul>
-<li>basic computational understanding</li>
-<li>ability to run code</li>
-<li>interpretation skills</li>
-<li>ability to follow analytical workflows</li>
-</ul>
-<p>This is NOT a memorization exercise.</p>
-<hr>
-</section>
-<section id="task-1-opening-python" class="level1">
-<h1>Task 1 — Opening Python</h1>
-<section id="objective" class="level2">
-<h2 class="anchored" data-anchor-id="objective">Objective</h2>
-<p>Run your first Python code successfully.</p>
-<hr>
-</section>
-<section id="instructions-1" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-1">Instructions</h2>
-<p>Run the following code:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Welcome to ECN 4199"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="question" class="level2">
-<h2 class="anchored" data-anchor-id="question">Question</h2>
-<p>What does the function:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>do in Python?</p>
-<p>Write your answer in one sentence.</p>
-<hr>
-</section>
-</section>
-<section id="task-2-creating-variables" class="level1">
-<h1>Task 2 — Creating Variables</h1>
-<section id="objective-1" class="level2">
-<h2 class="anchored" data-anchor-id="objective-1">Objective</h2>
-<p>Understand basic Python variables.</p>
-<hr>
-</section>
-<section id="instructions-2" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-2">Instructions</h2>
-<p>Create the following variables:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>student_name</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>inflation_rate</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>gdp_growth</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Assign appropriate values.</p>
-<p>Example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>inflation_rate <span class="op">=</span> <span class="fl">12.5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question</h2>
-<p>Why are variables useful in programming and data analysis?</p>
-<hr>
-</section>
-</section>
-<section id="task-3-simple-economic-calculation" class="level1">
-<h1>Task 3 — Simple Economic Calculation</h1>
-<section id="objective-2" class="level2">
-<h2 class="anchored" data-anchor-id="objective-2">Objective</h2>
-<p>Use Python for basic economic calculations.</p>
-<hr>
-</section>
-<section id="instructions-3" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-3">Instructions</h2>
-<p>Assume:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th style="text-align: right;">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Initial Inflation</td>
-<td style="text-align: right;">6%</td>
-</tr>
-<tr class="even">
-<td>New Inflation</td>
-<td style="text-align: right;">12%</td>
-</tr>
-</tbody>
-</table>
-<p>Calculate:</p>
-<pre class="text"><code>percentage point increase in inflation</code></pre>
-<p>using Python.</p>
-<hr>
-</section>
-<section id="example-structure" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>initial_inflation <span class="op">=</span> <span class="dv">6</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>new_inflation <span class="op">=</span> <span class="dv">12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question</h2>
-<p>What does a sharp increase in inflation usually imply for households?</p>
-<p>Write 2–3 sentences.</p>
-<hr>
-</section>
-</section>
-<section id="task-4-lists-and-economic-data" class="level1">
-<h1>Task 4 — Lists and Economic Data</h1>
-<section id="objective-3" class="level2">
-<h2 class="anchored" data-anchor-id="objective-3">Objective</h2>
-<p>Store economic information using Python lists.</p>
-<hr>
-</section>
-<section id="instructions-4" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-4">Instructions</h2>
-<p>Create a Python list containing:</p>
-<ul>
-<li>inflation rates</li>
-<li>unemployment rates</li>
-<li>GDP growth values</li>
-</ul>
-<p>Example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>inflation <span class="op">=</span> [<span class="fl">4.5</span>, <span class="fl">5.2</span>, <span class="fl">7.8</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question</h2>
-<p>Why is storing data systematically important for economists?</p>
-<hr>
-</section>
-</section>
-<section id="task-5-reflection-question" class="level1">
-<h1>Task 5 — Reflection Question</h1>
-<section id="short-reflection" class="level2">
-<h2 class="anchored" data-anchor-id="short-reflection">Short Reflection</h2>
-<p>Write a short paragraph answering:</p>
-<pre class="text"><code>Why are computational and data skills becoming increasingly important for economists and policy analysts?</code></pre>
-<p>Your answer should include:</p>
-<ul>
-<li>data</li>
-<li>decision-making</li>
-<li>modern analytics</li>
-<li>AI or automation</li>
+<li>internet connection</li>
+<li>runtime status</li>
+<li>spelling mistakes</li>
+<li>whether required libraries are imported</li>
 </ul>
 <hr>
 </section>
-</section>
-<section id="submission-instructions" class="level1">
-<h1>Submission Instructions</h1>
-<p>Before submitting:</p>
-<ol type="1">
-<li>Save notebook properly.</li>
-<li>Rename notebook using:</li>
-</ol>
-<pre class="text"><code>Week01_IndexNumber_Name.ipynb</code></pre>
-<p>Example:</p>
-<pre class="text"><code>Week01_2024BA12345_Perera.ipynb</code></pre>
-<ol start="3" type="1">
-<li>Set notebook sharing to:</li>
-</ol>
-<pre class="text"><code>Anyone with the link → Viewer</code></pre>
-<hr>
-</section>
-<section id="submission-link" class="level1">
-<h1>Submission Link</h1>
-<p><a href="https://lms.arts.cmb.ac.lk/mod/assign/view.php?id=91781">Submit Week 1 Activity</a></p>
-<hr>
-</section>
-<section id="passcode-access" class="level1">
-<h1>Passcode Access</h1>
-<p>The lecturer will provide the passcode during the lecture.</p>
-<p>Students without the correct passcode cannot access the submission form.</p>
-<hr>
 </section>
 <section id="academic-integrity" class="level1">
 <h1>Academic Integrity</h1>
-<p>Students may use lecture materials and course notes.</p>
-<p>However:</p>
-<ul>
-<li>copied answers are not allowed</li>
-<li>copied notebooks are not allowed</li>
-<li>AI-generated answers without understanding are unacceptable</li>
-</ul>
-<p>Students are responsible for all submitted work.</p>
+<p>Students may use AI tools for support, but all submitted notebooks must include their own understanding, interpretation, and explanation.</p>
+<p>Submitting copied code without understanding is not acceptable.</p>
 
 
 </section>
@@ -884,5 +706,5 @@ Academic Year 2026/27</p>
 
 
 
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
