@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 6 In-Class Activity – ECN 4199 - Industrial Data Analytics</title>
+<title>Week 6 Assignment — Build an Economic Dashboard – ECN 4199 - Industrial Data Analytics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,41 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -167,82 +132,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#activity-information" id="toc-activity-information" class="nav-link active" data-scroll-target="#activity-information">Activity Information</a></li>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
-  <li><a href="#important-reminder" id="toc-important-reminder" class="nav-link" data-scroll-target="#important-reminder">Important Reminder</a></li>
-  <li><a href="#task-1-create-interactive-inflation-graph" id="toc-task-1-create-interactive-inflation-graph" class="nav-link" data-scroll-target="#task-1-create-interactive-inflation-graph">Task 1 — Create Interactive Inflation Graph</a>
-  <ul class="collapse">
-  <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective">Objective</a></li>
-  <li><a href="#instructions-1" id="toc-instructions-1" class="nav-link" data-scroll-target="#instructions-1">Instructions</a></li>
-  <li><a href="#expected-structure" id="toc-expected-structure" class="nav-link" data-scroll-target="#expected-structure">Expected Structure</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
-  <ul class="collapse">
-  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#task-2-interactive-gdp-growth-bar-chart" id="toc-task-2-interactive-gdp-growth-bar-chart" class="nav-link" data-scroll-target="#task-2-interactive-gdp-growth-bar-chart">Task 2 — Interactive GDP Growth Bar Chart</a>
-  <ul class="collapse">
-  <li><a href="#objective-1" id="toc-objective-1" class="nav-link" data-scroll-target="#objective-1">Objective</a></li>
-  <li><a href="#instructions-2" id="toc-instructions-2" class="nav-link" data-scroll-target="#instructions-2">Instructions</a></li>
-  <li><a href="#example-structure" id="toc-example-structure" class="nav-link" data-scroll-target="#example-structure">Example Structure</a></li>
-  <li><a href="#questions-1" id="toc-questions-1" class="nav-link" data-scroll-target="#questions-1">Questions</a>
-  <ul class="collapse">
-  <li><a href="#question-1-1" id="toc-question-1-1" class="nav-link" data-scroll-target="#question-1-1">Question 1</a></li>
-  <li><a href="#question-2-1" id="toc-question-2-1" class="nav-link" data-scroll-target="#question-2-1">Question 2</a></li>
-  <li><a href="#question-3-1" id="toc-question-3-1" class="nav-link" data-scroll-target="#question-3-1">Question 3</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#task-3-scatter-plot-and-relationships" id="toc-task-3-scatter-plot-and-relationships" class="nav-link" data-scroll-target="#task-3-scatter-plot-and-relationships">Task 3 — Scatter Plot and Relationships</a>
-  <ul class="collapse">
-  <li><a href="#objective-2" id="toc-objective-2" class="nav-link" data-scroll-target="#objective-2">Objective</a></li>
-  <li><a href="#instructions-3" id="toc-instructions-3" class="nav-link" data-scroll-target="#instructions-3">Instructions</a></li>
-  <li><a href="#example-structure-1" id="toc-example-structure-1" class="nav-link" data-scroll-target="#example-structure-1">Example Structure</a></li>
-  <li><a href="#questions-2" id="toc-questions-2" class="nav-link" data-scroll-target="#questions-2">Questions</a>
-  <ul class="collapse">
-  <li><a href="#question-1-2" id="toc-question-1-2" class="nav-link" data-scroll-target="#question-1-2">Question 1</a></li>
-  <li><a href="#question-2-2" id="toc-question-2-2" class="nav-link" data-scroll-target="#question-2-2">Question 2</a></li>
-  <li><a href="#question-3-2" id="toc-question-3-2" class="nav-link" data-scroll-target="#question-3-2">Question 3</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#task-4-build-mini-dashboard" id="toc-task-4-build-mini-dashboard" class="nav-link" data-scroll-target="#task-4-build-mini-dashboard">Task 4 — Build Mini Dashboard</a>
-  <ul class="collapse">
-  <li><a href="#objective-3" id="toc-objective-3" class="nav-link" data-scroll-target="#objective-3">Objective</a></li>
-  <li><a href="#instructions-4" id="toc-instructions-4" class="nav-link" data-scroll-target="#instructions-4">Instructions</a></li>
-  <li><a href="#suggested-dashboard-structure" id="toc-suggested-dashboard-structure" class="nav-link" data-scroll-target="#suggested-dashboard-structure">Suggested Dashboard Structure</a></li>
-  <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question">Question</a></li>
-  </ul></li>
-  <li><a href="#task-5-dashboard-design-evaluation" id="toc-task-5-dashboard-design-evaluation" class="nav-link" data-scroll-target="#task-5-dashboard-design-evaluation">Task 5 — Dashboard Design Evaluation</a>
-  <ul class="collapse">
-  <li><a href="#objective-4" id="toc-objective-4" class="nav-link" data-scroll-target="#objective-4">Objective</a></li>
-  <li><a href="#questions-3" id="toc-questions-3" class="nav-link" data-scroll-target="#questions-3">Questions</a>
-  <ul class="collapse">
-  <li><a href="#question-1-3" id="toc-question-1-3" class="nav-link" data-scroll-target="#question-1-3">Question 1</a></li>
-  <li><a href="#question-2-3" id="toc-question-2-3" class="nav-link" data-scroll-target="#question-2-3">Question 2</a></li>
-  <li><a href="#question-3-3" id="toc-question-3-3" class="nav-link" data-scroll-target="#question-3-3">Question 3</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#reflection-question" id="toc-reflection-question" class="nav-link" data-scroll-target="#reflection-question">Reflection Question</a></li>
-  <li><a href="#mini-quiz" id="toc-mini-quiz" class="nav-link" data-scroll-target="#mini-quiz">Mini Quiz</a>
-  <ul class="collapse">
-  <li><a href="#question-1-4" id="toc-question-1-4" class="nav-link" data-scroll-target="#question-1-4">Question 1</a></li>
-  <li><a href="#question-2-4" id="toc-question-2-4" class="nav-link" data-scroll-target="#question-2-4">Question 2</a></li>
-  <li><a href="#question-3-4" id="toc-question-3-4" class="nav-link" data-scroll-target="#question-3-4">Question 3</a></li>
-  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
-  </ul></li>
-  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">Submission Instructions</a></li>
-  <li><a href="#submission-link" id="toc-submission-link" class="nav-link" data-scroll-target="#submission-link">Submission Link</a></li>
-  <li><a href="#passcode-access" id="toc-passcode-access" class="nav-link" data-scroll-target="#passcode-access">Passcode Access</a></li>
-  <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">Common Errors</a>
-  <ul class="collapse">
-  <li><a href="#problem-1-too-many-graphs" id="toc-problem-1-too-many-graphs" class="nav-link" data-scroll-target="#problem-1-too-many-graphs">Problem 1 — Too Many Graphs</a></li>
-  <li><a href="#problem-2-missing-labels" id="toc-problem-2-missing-labels" class="nav-link" data-scroll-target="#problem-2-missing-labels">Problem 2 — Missing Labels</a></li>
-  <li><a href="#problem-3-random-colors" id="toc-problem-3-random-colors" class="nav-link" data-scroll-target="#problem-3-random-colors">Problem 3 — Random Colors</a></li>
-  <li><a href="#problem-4-weak-interpretation" id="toc-problem-4-weak-interpretation" class="nav-link" data-scroll-target="#problem-4-weak-interpretation">Problem 4 — Weak Interpretation</a></li>
-  <li><a href="#problem-5-misleading-visual-design" id="toc-problem-5-misleading-visual-design" class="nav-link" data-scroll-target="#problem-5-misleading-visual-design">Problem 5 — Misleading Visual Design</a></li>
-  </ul></li>
-  <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity">Academic Integrity</a></li>
+  <li><a href="#week-6-assignment-build-an-economic-dashboard" id="toc-week-6-assignment-build-an-economic-dashboard" class="nav-link active" data-scroll-target="#week-6-assignment-build-an-economic-dashboard">Week 6 Assignment — Build an Economic Dashboard</a></li>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">Purpose</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#task-1-dashboard-question" id="toc-task-1-dashboard-question" class="nav-link" data-scroll-target="#task-1-dashboard-question">Task 1 — Dashboard Question</a></li>
+  <li><a href="#task-2-interactive-charts" id="toc-task-2-interactive-charts" class="nav-link" data-scroll-target="#task-2-interactive-charts">Task 2 — Interactive Charts</a></li>
+  <li><a href="#task-3-multi-panel-dashboard" id="toc-task-3-multi-panel-dashboard" class="nav-link" data-scroll-target="#task-3-multi-panel-dashboard">Task 3 — Multi-Panel Dashboard</a></li>
+  <li><a href="#task-4-dashboard-design-review" id="toc-task-4-dashboard-design-review" class="nav-link" data-scroll-target="#task-4-dashboard-design-review">Task 4 — Dashboard Design Review</a></li>
+  <li><a href="#task-5-data-story" id="toc-task-5-data-story" class="nav-link" data-scroll-target="#task-5-data-story">Task 5 — Data Story</a></li>
+  <li><a href="#submission-checklist" id="toc-submission-checklist" class="nav-link" data-scroll-target="#submission-checklist">Submission Checklist</a></li>
   </ul>
 </nav>
     </div>
@@ -251,7 +149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 6 In-Class Activity</h1>
+<h1 class="title">Week 6 Assignment — Build an Economic Dashboard</h1>
 </div>
 
 
@@ -268,8 +166,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="activity-information" class="level1">
-<h1>Activity Information</h1>
+<section id="week-6-assignment-build-an-economic-dashboard" class="level1">
+<h1>Week 6 Assignment — Build an Economic Dashboard</h1>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -295,27 +193,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>1 Hour</td>
 </tr>
 <tr class="odd">
-<td>Attempts</td>
-<td>One Attempt Only</td>
-</tr>
-<tr class="even">
-<td>Access</td>
-<td>Lecturer Passcode Required</td>
+<td>Submission</td>
+<td>Completed Google Colab notebook link</td>
 </tr>
 </tbody>
 </table>
 <hr>
 </section>
-<section id="instructions" class="level1">
-<h1>Instructions</h1>
-<ol type="1">
-<li>Open the Week 6 live notebook.</li>
-<li>Download the Week 6 macroeconomic dataset.</li>
-<li>Save a copy of the notebook to your Google Drive.</li>
-<li>Complete all required tasks.</li>
-<li>Answer all interpretation questions.</li>
-<li>Submit before the activity closes.</li>
-</ol>
+<section id="purpose" class="level1">
+<h1>Purpose</h1>
+<p>This assignment checks whether you can communicate economic evidence clearly using an interactive dashboard.</p>
+<p>Your dashboard should help a reader understand the main macroeconomic pattern in the dataset.</p>
+<hr>
+</section>
+<section id="materials" class="level1">
+<h1>Materials</h1>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -329,361 +221,131 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week6/ECN4199_Week6_Live_Notebook.ipynb">Open in Google Colab</a></td>
 </tr>
 <tr class="even">
-<td>Week 6 Dataset</td>
+<td>Dataset</td>
 <td><a href="../data/sri_lanka_macro.csv">Download sri_lanka_macro.csv</a></td>
+</tr>
+<tr class="odd">
+<td>Plotly Guide</td>
+<td><a href="https://plotly.com/python/">Open Plotly Python Guide</a></td>
 </tr>
 </tbody>
 </table>
+<p>Before working:</p>
+<pre class="text"><code>File -&gt; Save a copy in Drive</code></pre>
+<p>Rename your notebook:</p>
+<pre class="text"><code>Week06_IndexNumber_Name.ipynb</code></pre>
 <hr>
 </section>
-<section id="important-reminder" class="level1">
-<h1>Important Reminder</h1>
-<p>This activity tests:</p>
-<ul>
-<li>interactive visualization</li>
-<li>dashboard design</li>
-<li>Plotly usage</li>
-<li>data storytelling</li>
-<li>interpretation</li>
-<li>economic communication</li>
-</ul>
-<p>The goal is NOT to create decorative dashboards.</p>
-<p>The goal is to communicate economic insights clearly and analytically.</p>
+<section id="task-1-dashboard-question" class="level1">
+<h1>Task 1 — Dashboard Question</h1>
+<p>Write one dashboard question.</p>
+<p>Example:</p>
+<pre class="text"><code>How did Sri Lanka's macroeconomic conditions change across the period?</code></pre>
+<p>Then identify the three indicators your dashboard will use.</p>
+<p><strong>Marks: 1</strong></p>
 <hr>
 </section>
-<section id="task-1-create-interactive-inflation-graph" class="level1">
-<h1>Task 1 — Create Interactive Inflation Graph</h1>
-<section id="objective" class="level2">
-<h2 class="anchored" data-anchor-id="objective">Objective</h2>
-<p>Build an interactive inflation trend graph.</p>
-<hr>
-</section>
-<section id="instructions-1" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-1">Instructions</h2>
-<p>Create an interactive Plotly line graph showing inflation over time.</p>
-<hr>
-</section>
-<section id="expected-structure" class="level2">
-<h2 class="anchored" data-anchor-id="expected-structure">Expected Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"sri_lanka_macro.csv"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(data,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>              x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span><span class="st">"Inflation"</span>,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>              title<span class="op">=</span><span class="st">"Inflation Trends"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="questions" class="level2">
-<h2 class="anchored" data-anchor-id="questions">Questions</h2>
-<section id="question-1" class="level3">
-<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
-<p>When does inflation increase sharply?</p>
-<hr>
-</section>
-<section id="question-2" class="level3">
-<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
-<p>What economic conditions might explain this increase?</p>
-<hr>
-</section>
-<section id="question-3" class="level3">
-<h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
-<p>Why are interactive graphs useful compared to static graphs?</p>
-<hr>
-</section>
-</section>
-</section>
-<section id="task-2-interactive-gdp-growth-bar-chart" class="level1">
-<h1>Task 2 — Interactive GDP Growth Bar Chart</h1>
-<section id="objective-1" class="level2">
-<h2 class="anchored" data-anchor-id="objective-1">Objective</h2>
-<p>Compare GDP growth visually.</p>
-<hr>
-</section>
-<section id="instructions-2" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-2">Instructions</h2>
-<p>Create an interactive bar chart for GDP growth.</p>
-<hr>
-</section>
-<section id="example-structure" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.bar(data,</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>             x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>             y<span class="op">=</span><span class="st">"GDP_Growth"</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>             color<span class="op">=</span><span class="st">"GDP_Growth"</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="questions-1" class="level2">
-<h2 class="anchored" data-anchor-id="questions-1">Questions</h2>
-<section id="question-1-1" class="level3">
-<h3 class="anchored" data-anchor-id="question-1-1">Question 1</h3>
-<p>Which year had the worst GDP growth?</p>
-<hr>
-</section>
-<section id="question-2-1" class="level3">
-<h3 class="anchored" data-anchor-id="question-2-1">Question 2</h3>
-<p>Why are bar charts useful for comparisons?</p>
-<hr>
-</section>
-<section id="question-3-1" class="level3">
-<h3 class="anchored" data-anchor-id="question-3-1">Question 3</h3>
-<p>Why should colors be used carefully in dashboards?</p>
-<hr>
-</section>
-</section>
-</section>
-<section id="task-3-scatter-plot-and-relationships" class="level1">
-<h1>Task 3 — Scatter Plot and Relationships</h1>
-<section id="objective-2" class="level2">
-<h2 class="anchored" data-anchor-id="objective-2">Objective</h2>
-<p>Explore relationships between macroeconomic variables.</p>
-<hr>
-</section>
-<section id="instructions-3" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-3">Instructions</h2>
-<p>Create an interactive scatter plot using:</p>
-<ul>
-<li>Inflation</li>
-<li>Exchange_Rate_Change</li>
-</ul>
-<p>Add hover information using Year.</p>
-<hr>
-</section>
-<section id="example-structure-1" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure-1">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.scatter(data,</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                 x<span class="op">=</span><span class="st">"Inflation"</span>,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                 y<span class="op">=</span><span class="st">"Exchange_Rate_Change"</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                 hover_name<span class="op">=</span><span class="st">"Year"</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="questions-2" class="level2">
-<h2 class="anchored" data-anchor-id="questions-2">Questions</h2>
-<section id="question-1-2" class="level3">
-<h3 class="anchored" data-anchor-id="question-1-2">Question 1</h3>
-<p>Do inflation and exchange rate changes appear related?</p>
-<hr>
-</section>
-<section id="question-2-2" class="level3">
-<h3 class="anchored" data-anchor-id="question-2-2">Question 2</h3>
-<p>Are there outliers?</p>
-<hr>
-</section>
-<section id="question-3-2" class="level3">
-<h3 class="anchored" data-anchor-id="question-3-2">Question 3</h3>
-<p>What macroeconomic events might explain extreme observations?</p>
-<hr>
-</section>
-</section>
-</section>
-<section id="task-4-build-mini-dashboard" class="level1">
-<h1>Task 4 — Build Mini Dashboard</h1>
-<section id="objective-3" class="level2">
-<h2 class="anchored" data-anchor-id="objective-3">Objective</h2>
-<p>Combine multiple indicators into one analytical system.</p>
-<hr>
-</section>
-<section id="instructions-4" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-4">Instructions</h2>
-<p>Create a mini dashboard including:</p>
-<ul>
-<li>inflation</li>
-<li>GDP growth</li>
-<li>exchange rate change</li>
-</ul>
-<hr>
-</section>
-<section id="suggested-dashboard-structure" class="level2">
-<h2 class="anchored" data-anchor-id="suggested-dashboard-structure">Suggested Dashboard Structure</h2>
+<section id="task-2-interactive-charts" class="level1">
+<h1>Task 2 — Interactive Charts</h1>
+<p>Create three interactive Plotly charts:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Section</th>
-<th>Content</th>
+<th>Chart</th>
+<th>Required Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Line chart</td>
+<td>Inflation over time</td>
+</tr>
+<tr class="even">
+<td>Bar chart</td>
+<td>GDP growth by year</td>
+</tr>
+<tr class="odd">
+<td>Scatter plot</td>
+<td>Inflation and exchange rate change</td>
+</tr>
+</tbody>
+</table>
+<p>Each chart must include:</p>
+<ul>
+<li>meaningful title</li>
+<li>clear variable names</li>
+<li>hover information where useful</li>
+</ul>
+<p><strong>Marks: 1</strong></p>
+<hr>
+</section>
+<section id="task-3-multi-panel-dashboard" class="level1">
+<h1>Task 3 — Multi-Panel Dashboard</h1>
+<p>Create one multi-panel dashboard using Plotly subplots.</p>
+<p>Your dashboard should include at least three indicators.</p>
+<p>Suggested structure:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Panel</th>
+<th>Indicator</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Top</td>
-<td>Inflation trend</td>
+<td>Inflation</td>
 </tr>
 <tr class="even">
 <td>Middle</td>
-<td>GDP growth comparison</td>
+<td>GDP growth</td>
 </tr>
 <tr class="odd">
 <td>Bottom</td>
-<td>Scatter plot relationship</td>
+<td>Exchange rate or reserves</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Marks: 1</strong></p>
 <hr>
 </section>
-<section id="question" class="level2">
-<h2 class="anchored" data-anchor-id="question">Question</h2>
-<p>What overall macroeconomic story does your dashboard communicate?</p>
-<p>Write short interpretation.</p>
-<hr>
-</section>
-</section>
-<section id="task-5-dashboard-design-evaluation" class="level1">
-<h1>Task 5 — Dashboard Design Evaluation</h1>
-<section id="objective-4" class="level2">
-<h2 class="anchored" data-anchor-id="objective-4">Objective</h2>
-<p>Critically evaluate dashboard quality.</p>
-<hr>
-</section>
-<section id="questions-3" class="level2">
-<h2 class="anchored" data-anchor-id="questions-3">Questions</h2>
-<section id="question-1-3" class="level3">
-<h3 class="anchored" data-anchor-id="question-1-3">Question 1</h3>
-<p>Why is too much information dangerous in dashboard design?</p>
-<hr>
-</section>
-<section id="question-2-3" class="level3">
-<h3 class="anchored" data-anchor-id="question-2-3">Question 2</h3>
-<p>What makes a dashboard easy to understand?</p>
-<hr>
-</section>
-<section id="question-3-3" class="level3">
-<h3 class="anchored" data-anchor-id="question-3-3">Question 3</h3>
-<p>Why is dashboard design important for policymakers and economists?</p>
-<hr>
-</section>
-</section>
-</section>
-<section id="reflection-question" class="level1">
-<h1>Reflection Question</h1>
-<p>Write a short paragraph answering:</p>
-<pre class="text"><code>Why is economic storytelling important even when AI tools can generate dashboards automatically?</code></pre>
-<p>Your answer should include:</p>
+<section id="task-4-dashboard-design-review" class="level1">
+<h1>Task 4 — Dashboard Design Review</h1>
+<p>Write 80-120 words evaluating your dashboard design.</p>
+<p>Mention:</p>
 <ul>
-<li>interpretation</li>
-<li>communication</li>
-<li>policy relevance</li>
-<li>limitations of automated visualization</li>
+<li>what the reader should notice first</li>
+<li>why you selected these charts</li>
+<li>one design improvement you made</li>
+<li>one limitation of the dashboard</li>
 </ul>
+<p><strong>Marks: 1</strong></p>
 <hr>
 </section>
-<section id="mini-quiz" class="level1">
-<h1>Mini Quiz</h1>
-<section id="question-1-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-1-4">Question 1</h2>
-<p>What is the primary purpose of a dashboard?</p>
-<p>A. Decoration<br>
-B. Programming practice<br>
-C. Decision support and communication<br>
-D. File storage</p>
+<section id="task-5-data-story" class="level1">
+<h1>Task 5 — Data Story</h1>
+<p>Write a final dashboard story of 120-180 words.</p>
+<p>Your story must include:</p>
+<ul>
+<li>main claim</li>
+<li>evidence from at least two indicators</li>
+<li>economic meaning</li>
+<li>caution about interpretation</li>
+</ul>
+<p><strong>Marks: 1</strong></p>
 <hr>
 </section>
-<section id="question-2-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-2-4">Question 2</h2>
-<p>Which library is mainly used this week?</p>
-<p>A. NumPy<br>
-B. Plotly<br>
-C. Statsmodels<br>
-D. TensorFlow</p>
-<hr>
-</section>
-<section id="question-3-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-3-4">Question 3</h2>
-<p>What can users do in interactive visualizations?</p>
-<p>A. Hover and zoom<br>
-B. Delete data automatically<br>
-C. Install software<br>
-D. Remove variables</p>
-<hr>
-</section>
-<section id="question-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
-<p>Which graph type is best for time trends?</p>
-<p>A. Pie chart<br>
-B. Histogram<br>
-C. Line graph<br>
-D. Table</p>
-<hr>
-</section>
-</section>
-<section id="submission-instructions" class="level1">
-<h1>Submission Instructions</h1>
-<p>Before submitting:</p>
-<ol type="1">
-<li>Save notebook properly.</li>
-<li>Rename notebook using:</li>
-</ol>
-<pre class="text"><code>Week06_IndexNumber_Name.ipynb</code></pre>
-<p>Example:</p>
-<pre class="text"><code>Week06_2024BA12345_Perera.ipynb</code></pre>
-<ol start="3" type="1">
-<li>Set notebook sharing to:</li>
-</ol>
-<pre class="text"><code>Anyone with the link → Viewer</code></pre>
-<hr>
-</section>
-<section id="submission-link" class="level1">
-<h1>Submission Link</h1>
+<section id="submission-checklist" class="level1">
+<h1>Submission Checklist</h1>
+<p>Before submitting, make sure:</p>
+<ul>
+<li>all charts display correctly</li>
+<li>the dashboard has a clear title</li>
+<li>chart labels are readable</li>
+<li>interpretation is written in your own words</li>
+<li>sharing is set to <code>Anyone with the link -&gt; Viewer</code></li>
+</ul>
 <p>The lecturer will provide the live submission link during the class session.</p>
-<hr>
-</section>
-<section id="passcode-access" class="level1">
-<h1>Passcode Access</h1>
-<p>The lecturer will provide the passcode during the lecture.</p>
-<p>Students without the correct passcode cannot access the submission form.</p>
-<hr>
-</section>
-<section id="common-errors" class="level1">
-<h1>Common Errors</h1>
-<section id="problem-1-too-many-graphs" class="level2">
-<h2 class="anchored" data-anchor-id="problem-1-too-many-graphs">Problem 1 — Too Many Graphs</h2>
-<p>More graphs do NOT necessarily improve analysis.</p>
-<p>Simplify.</p>
-<hr>
-</section>
-<section id="problem-2-missing-labels" class="level2">
-<h2 class="anchored" data-anchor-id="problem-2-missing-labels">Problem 2 — Missing Labels</h2>
-<p>Every graph must include:</p>
-<ul>
-<li>title</li>
-<li>labels</li>
-<li>readable structure</li>
-</ul>
-<hr>
-</section>
-<section id="problem-3-random-colors" class="level2">
-<h2 class="anchored" data-anchor-id="problem-3-random-colors">Problem 3 — Random Colors</h2>
-<p>Colors should communicate meaning.</p>
-<p>Do not use colors randomly.</p>
-<hr>
-</section>
-<section id="problem-4-weak-interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="problem-4-weak-interpretation">Problem 4 — Weak Interpretation</h2>
-<p>Dashboards without interpretation are incomplete analysis.</p>
-<hr>
-</section>
-<section id="problem-5-misleading-visual-design" class="level2">
-<h2 class="anchored" data-anchor-id="problem-5-misleading-visual-design">Problem 5 — Misleading Visual Design</h2>
-<p>Poor scaling or clutter can distort economic understanding.</p>
-<hr>
-</section>
-</section>
-<section id="academic-integrity" class="level1">
-<h1>Academic Integrity</h1>
-<p>Students may use lecture materials and course notes.</p>
-<p>However:</p>
-<ul>
-<li>copied answers are not allowed</li>
-<li>copied notebooks are not allowed</li>
-<li>AI-generated answers without understanding are unacceptable</li>
-</ul>
-<p>Students are responsible for all submitted work.</p>
 
 
 </section>

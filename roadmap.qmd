@@ -19,13 +19,13 @@ This course is organized into two major learning phases.
 ## Week 3 — Programming Logic and Automation for Economic Analysis
 [Open Week 3 Lecture Material](lectures/week3.qmd)
 
-## Week 4 — Working with Real Economic Data Using Pandas
+## Week 4 — Preparing Economic Data for Analysis
 [Open Week 4 Lecture Material](lectures/week4.qmd)
 
-## Week 5 — Descriptive Statistics and Data Visualization for Economics
+## Week 5 — Exploratory Economic Analysis
 [Open Week 5 Lecture Material](lectures/week5.qmd)
 
-## Week 6 — Interactive Dashboards and Data Storytelling for Economics
+## Week 6 — Economic Dashboards and Data Storytelling
 [Open Week 6 Lecture Material](lectures/week6.qmd)
 
 ---

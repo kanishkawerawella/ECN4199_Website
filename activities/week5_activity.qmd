@@ -1,492 +1,150 @@
 ---
-title: "Week 5 In-Class Activity"
+title: "Week 5 Assignment — Exploratory Economic Analysis"
 ---
 
-# Activity Information
+# Week 5 Assignment — Exploratory Economic Analysis
 
 | Item | Details |
 |---|---|
 | Week | Week 5 |
-| Topic | Descriptive Statistics and Data Visualization |
+| Topic | Descriptive Statistics, Visualization, and Interpretation |
 | Marks | 5 Marks |
 | Duration | 1 Hour |
-| Attempts | One Attempt Only |
-| Access | Lecturer Passcode Required |
+| Submission | Completed Google Colab notebook link |
 
 ---
 
-# Instructions
+# Purpose
 
-1. Open the Week 5 live notebook.
-2. Download the Week 5 macroeconomic dataset.
-3. Save a copy of the notebook to your Google Drive.
-4. Complete all required tasks.
-5. Answer all interpretation questions.
-6. Submit before the activity closes.
+This assignment checks whether you can turn prepared data into economic evidence.
+
+The goal is not to create many graphs. The goal is to use statistics and visualizations to support a clear interpretation.
+
+---
+
+# Materials
 
 | Material | Link |
 |---|---|
 | Week 5 Live Notebook | [Open in Google Colab](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week5/ECN4199_Week5_Live_Notebook.ipynb) |
-| Week 5 Dataset | [Download sri_lanka_macro.csv](../data/sri_lanka_macro.csv) |
+| Dataset | [Download sri_lanka_macro.csv](../data/sri_lanka_macro.csv) |
 
----
-
-# Important Reminder
-
-This activity tests:
-
-- descriptive statistics
-- interpretation of variation
-- distributions
-- correlations
-- graph creation
-- economic storytelling with data
-
-The goal is NOT merely to create graphs.
-
-The goal is to explain economic patterns using evidence.
-
----
-
-# Task 1 — Generate Descriptive Statistics
-
-## Objective
-
-Summarize the macroeconomic dataset statistically.
-
----
-
-## Instructions
-
-Load the dataset and generate descriptive statistics.
-
----
-
-## Expected Structure
-
-```python
-import pandas as pd
-
-data = pd.read_csv("sri_lanka_macro.csv")
-
-data.describe()
-```
-
----
-
-## Questions
-
-### Question 1
-
-What is the average inflation rate?
-
----
-
-### Question 2
-
-Which variable appears most volatile?
-
----
-
-### Question 3
-
-Why is standard deviation important in economics?
-
----
-
-# Task 2 — Measures of Central Tendency
-
-## Objective
-
-Compare mean and median values.
-
----
-
-## Instructions
-
-Calculate:
-
-- mean inflation
-- median inflation
-
----
-
-## Example Structure
-
-```python
-data["Inflation"].mean()
-
-data["Inflation"].median()
-```
-
----
-
-## Questions
-
-### Question 1
-
-Are the mean and median similar?
-
----
-
-### Question 2
-
-What might explain differences between them?
-
----
-
-### Question 3
-
-Why can extreme observations distort averages?
-
----
-
-# Task 3 — Histogram and Distribution Analysis
-
-## Objective
-
-Visualize the inflation distribution.
-
----
-
-## Instructions
-
-Create a histogram for inflation.
-
----
-
-## Example Structure
-
-```python
-import matplotlib.pyplot as plt
-
-plt.hist(data["Inflation"])
-
-plt.title("Distribution of Inflation")
-plt.xlabel("Inflation")
-plt.ylabel("Frequency")
-
-plt.show()
-```
-
----
-
-## Questions
-
-### Question 1
-
-Does the distribution appear symmetric?
-
----
-
-### Question 2
-
-Are there extreme observations?
-
----
-
-### Question 3
-
-What might unusually high inflation indicate economically?
-
----
-
-# Task 4 — Line Graph and Economic Trends
-
-## Objective
-
-Visualize inflation trends over time.
-
----
-
-## Instructions
-
-Create a line graph for inflation.
-
----
-
-## Example Structure
-
-```python
-plt.plot(data["Year"], data["Inflation"])
-
-plt.title("Inflation Trends")
-plt.xlabel("Year")
-plt.ylabel("Inflation")
-
-plt.show()
-```
-
----
-
-## Questions
-
-### Question 1
-
-When did inflation increase sharply?
-
----
-
-### Question 2
-
-What might explain the spike?
-
----
-
-### Question 3
-
-Why are line graphs useful for time-series analysis?
-
----
-
-# Task 5 — Correlation Analysis
-
-## Objective
-
-Analyze relationships between variables.
-
----
-
-## Instructions
-
-Calculate correlation between:
-
-- inflation
-- exchange rate change
-
----
-
-## Example Structure
-
-```python
-data["Inflation"].corr(data["Exchange_Rate_Change"])
-```
-
----
-
-## Questions
-
-### Question 1
-
-Is the relationship positive or negative?
-
----
-
-### Question 2
-
-Does correlation imply causation?
-
-Explain briefly.
-
----
-
-### Question 3
-
-What third factors might influence both inflation and exchange rate changes?
-
----
-
-# Task 6 — Scatter Plot
-
-## Objective
-
-Visualize the relationship between two variables.
-
----
-
-## Instructions
-
-Create scatter plot using:
-
-- inflation
-- exchange rate change
-
----
-
-## Example Structure
-
-```python
-plt.scatter(data["Inflation"],
-            data["Exchange_Rate_Change"])
-
-plt.xlabel("Inflation")
-plt.ylabel("Exchange Rate Change")
-
-plt.show()
-```
-
----
-
-## Questions
-
-### Question 1
-
-Do the variables appear related?
-
----
-
-### Question 2
-
-Are there outliers?
-
----
-
-### Question 3
-
-Why are scatter plots useful in economics?
-
----
-
-# Reflection Question
-
-Write a short paragraph answering:
+Before working:
 
 ```text
-Why is economic interpretation necessary even when graphs and statistics can be generated automatically?
+File -> Save a copy in Drive
 ```
 
-Your answer should include:
-
-- context
-- interpretation
-- limitations of automation
-- policy relevance
-
----
-
-# Mini Quiz
-
-## Question 1
-
-What does standard deviation measure?
-
-A. Average  
-B. Trend  
-C. Variation  
-D. Correlation  
-
----
-
-## Question 2
-
-Which graph is best for showing trends over time?
-
-A. Pie chart  
-B. Histogram  
-C. Line graph  
-D. Table  
-
----
-
-## Question 3
-
-Does correlation imply causation?
-
-A. Yes  
-B. No  
-
----
-
-## Question 4
-
-Which graph is most useful for studying relationships between two variables?
-
-A. Scatter plot  
-B. Histogram  
-C. Bar chart  
-D. Pie chart  
-
----
-
-# Submission Instructions
-
-Before submitting:
-
-1. Save notebook properly.
-2. Rename notebook using:
+Rename your notebook:
 
 ```text
 Week05_IndexNumber_Name.ipynb
 ```
 
+---
+
+# Task 1 — Analytical Questions
+
+Write three economic questions that can be explored using the dataset.
+
+At least one question must involve a relationship between two variables.
+
 Example:
 
 ```text
-Week05_2024BA12345_Perera.ipynb
+Did high inflation coincide with exchange rate depreciation?
 ```
 
-3. Set notebook sharing to:
+**Marks: 1**
+
+---
+
+# Task 2 — Descriptive Statistics
+
+Generate descriptive statistics for:
 
 ```text
-Anyone with the link → Viewer
+Inflation
+GDP_Growth
+Exchange_Rate_Change
+Reserves
+Unemployment
 ```
 
+Answer briefly:
+
+1. Which variable appears most volatile?
+2. Which year or value seems most unusual?
+3. Why is the average alone not enough?
+
+**Marks: 1**
+
 ---
 
-# Submission Link
+# Task 3 — Visual Evidence
+
+Create three graphs:
+
+| Graph | Purpose |
+|---|---|
+| Line graph of inflation | Show trend over time |
+| Bar chart of GDP growth | Identify expansion and contraction |
+| Scatter plot of inflation and exchange rate change | Explore relationship |
+
+Each graph must include:
+
+- title
+- x-axis label
+- y-axis label
+
+After each graph, write one interpretation sentence.
+
+**Marks: 1**
+
+---
+
+# Task 4 — Correlation and Caution
+
+Calculate the correlation between:
+
+```text
+Inflation
+Exchange_Rate_Change
+```
+
+Then answer:
+
+1. Is the relationship positive, negative, or weak?
+2. Does this prove causation?
+3. What other economic factors might matter?
+
+**Marks: 1**
+
+---
+
+# Task 5 — Evidence-Based Interpretation
+
+Write one paragraph of 120-180 words explaining the main macroeconomic pattern in the data.
+
+Your paragraph must include:
+
+- one clear claim
+- at least two pieces of numerical evidence
+- one economic implication
+- one caution or limitation
+
+**Marks: 1**
+
+---
+
+# Submission Checklist
+
+Before submitting, make sure:
+
+- your notebook includes code and interpretation
+- graphs are visible
+- numerical evidence is used in your paragraph
+- correlation is interpreted carefully
+- sharing is set to `Anyone with the link -> Viewer`
 
 The lecturer will provide the live submission link during the class session.
-
----
-
-# Passcode Access
-
-The lecturer will provide the passcode during the lecture.
-
-Students without the correct passcode cannot access the submission form.
-
----
-
-# Common Errors
-
-## Problem 1 — Missing Labels
-
-Graphs without:
-
-- titles
-- axis labels
-- units
-
-are poor analytical practice.
-
----
-
-## Problem 2 — Misinterpreting Correlation
-
-Correlation indicates association.
-
-It does NOT automatically indicate causation.
-
----
-
-## Problem 3 — Wrong Graph Choice
-
-Different graph types answer different analytical questions.
-
-Choose graphs based on analytical purpose.
-
----
-
-## Problem 4 — Ignoring Outliers
-
-Extreme observations can distort:
-
-- averages
-- correlations
-- interpretations
-
-Always inspect data visually.
-
----
-
-# Academic Integrity
-
-Students may use lecture materials and course notes.
-
-However:
-
-- copied answers are not allowed
-- copied notebooks are not allowed
-- AI-generated answers without understanding are unacceptable
-
-Students are responsible for all submitted work.

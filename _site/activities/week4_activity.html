@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 4 In-Class Activity – ECN 4199 - Industrial Data Analytics</title>
+<title>Week 4 Assignment — Prepare an Analysis-Ready Dataset – ECN 4199 - Industrial Data Analytics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -167,102 +167,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#activity-information" id="toc-activity-information" class="nav-link active" data-scroll-target="#activity-information">Activity Information</a></li>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
-  <li><a href="#important-reminder" id="toc-important-reminder" class="nav-link" data-scroll-target="#important-reminder">Important Reminder</a></li>
-  <li><a href="#task-1-import-and-inspect-dataset" id="toc-task-1-import-and-inspect-dataset" class="nav-link" data-scroll-target="#task-1-import-and-inspect-dataset">Task 1 — Import and Inspect Dataset</a>
-  <ul class="collapse">
-  <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective">Objective</a></li>
-  <li><a href="#instructions-1" id="toc-instructions-1" class="nav-link" data-scroll-target="#instructions-1">Instructions</a></li>
-  <li><a href="#expected-structure" id="toc-expected-structure" class="nav-link" data-scroll-target="#expected-structure">Expected Structure</a></li>
-  <li><a href="#run-the-following-commands" id="toc-run-the-following-commands" class="nav-link" data-scroll-target="#run-the-following-commands">Run the Following Commands</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
-  <ul class="collapse">
-  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#task-2-selecting-variables" id="toc-task-2-selecting-variables" class="nav-link" data-scroll-target="#task-2-selecting-variables">Task 2 — Selecting Variables</a>
-  <ul class="collapse">
-  <li><a href="#objective-1" id="toc-objective-1" class="nav-link" data-scroll-target="#objective-1">Objective</a></li>
-  <li><a href="#instructions-2" id="toc-instructions-2" class="nav-link" data-scroll-target="#instructions-2">Instructions</a></li>
-  <li><a href="#example-structure" id="toc-example-structure" class="nav-link" data-scroll-target="#example-structure">Example Structure</a></li>
-  <li><a href="#questions-1" id="toc-questions-1" class="nav-link" data-scroll-target="#questions-1">Questions</a>
-  <ul class="collapse">
-  <li><a href="#question-1-1" id="toc-question-1-1" class="nav-link" data-scroll-target="#question-1-1">Question 1</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#task-3-filtering-economic-conditions" id="toc-task-3-filtering-economic-conditions" class="nav-link" data-scroll-target="#task-3-filtering-economic-conditions">Task 3 — Filtering Economic Conditions</a>
-  <ul class="collapse">
-  <li><a href="#objective-2" id="toc-objective-2" class="nav-link" data-scroll-target="#objective-2">Objective</a></li>
-  <li><a href="#instructions-3" id="toc-instructions-3" class="nav-link" data-scroll-target="#instructions-3">Instructions</a>
-  <ul class="collapse">
-  <li><a href="#part-a" id="toc-part-a" class="nav-link" data-scroll-target="#part-a">Part A</a></li>
-  <li><a href="#part-b" id="toc-part-b" class="nav-link" data-scroll-target="#part-b">Part B</a></li>
-  </ul></li>
-  <li><a href="#example-structure-1" id="toc-example-structure-1" class="nav-link" data-scroll-target="#example-structure-1">Example Structure</a></li>
-  <li><a href="#questions-2" id="toc-questions-2" class="nav-link" data-scroll-target="#questions-2">Questions</a>
-  <ul class="collapse">
-  <li><a href="#question-1-2" id="toc-question-1-2" class="nav-link" data-scroll-target="#question-1-2">Question 1</a></li>
-  <li><a href="#question-2-1" id="toc-question-2-1" class="nav-link" data-scroll-target="#question-2-1">Question 2</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#task-4-creating-new-variables" id="toc-task-4-creating-new-variables" class="nav-link" data-scroll-target="#task-4-creating-new-variables">Task 4 — Creating New Variables</a>
-  <ul class="collapse">
-  <li><a href="#objective-3" id="toc-objective-3" class="nav-link" data-scroll-target="#objective-3">Objective</a></li>
-  <li><a href="#instructions-4" id="toc-instructions-4" class="nav-link" data-scroll-target="#instructions-4">Instructions</a>
-  <ul class="collapse">
-  <li><a href="#part-a-1" id="toc-part-a-1" class="nav-link" data-scroll-target="#part-a-1">Part A</a></li>
-  </ul></li>
-  <li><a href="#example-structure-2" id="toc-example-structure-2" class="nav-link" data-scroll-target="#example-structure-2">Example Structure</a>
-  <ul class="collapse">
-  <li><a href="#part-b-1" id="toc-part-b-1" class="nav-link" data-scroll-target="#part-b-1">Part B</a></li>
-  </ul></li>
-  <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question">Question</a></li>
-  </ul></li>
-  <li><a href="#task-5-sorting-and-identifying-patterns" id="toc-task-5-sorting-and-identifying-patterns" class="nav-link" data-scroll-target="#task-5-sorting-and-identifying-patterns">Task 5 — Sorting and Identifying Patterns</a>
-  <ul class="collapse">
-  <li><a href="#objective-4" id="toc-objective-4" class="nav-link" data-scroll-target="#objective-4">Objective</a></li>
-  <li><a href="#instructions-5" id="toc-instructions-5" class="nav-link" data-scroll-target="#instructions-5">Instructions</a></li>
-  <li><a href="#example-structure-3" id="toc-example-structure-3" class="nav-link" data-scroll-target="#example-structure-3">Example Structure</a></li>
-  <li><a href="#questions-3" id="toc-questions-3" class="nav-link" data-scroll-target="#questions-3">Questions</a>
-  <ul class="collapse">
-  <li><a href="#question-1-3" id="toc-question-1-3" class="nav-link" data-scroll-target="#question-1-3">Question 1</a></li>
-  <li><a href="#question-2-2" id="toc-question-2-2" class="nav-link" data-scroll-target="#question-2-2">Question 2</a></li>
-  <li><a href="#question-3-1" id="toc-question-3-1" class="nav-link" data-scroll-target="#question-3-1">Question 3</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#task-6-missing-values-and-data-quality" id="toc-task-6-missing-values-and-data-quality" class="nav-link" data-scroll-target="#task-6-missing-values-and-data-quality">Task 6 — Missing Values and Data Quality</a>
-  <ul class="collapse">
-  <li><a href="#objective-5" id="toc-objective-5" class="nav-link" data-scroll-target="#objective-5">Objective</a></li>
-  <li><a href="#instructions-6" id="toc-instructions-6" class="nav-link" data-scroll-target="#instructions-6">Instructions</a></li>
-  <li><a href="#questions-4" id="toc-questions-4" class="nav-link" data-scroll-target="#questions-4">Questions</a>
-  <ul class="collapse">
-  <li><a href="#question-1-4" id="toc-question-1-4" class="nav-link" data-scroll-target="#question-1-4">Question 1</a></li>
-  <li><a href="#question-2-3" id="toc-question-2-3" class="nav-link" data-scroll-target="#question-2-3">Question 2</a></li>
-  <li><a href="#question-3-2" id="toc-question-3-2" class="nav-link" data-scroll-target="#question-3-2">Question 3</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#reflection-question" id="toc-reflection-question" class="nav-link" data-scroll-target="#reflection-question">Reflection Question</a></li>
-  <li><a href="#mini-quiz" id="toc-mini-quiz" class="nav-link" data-scroll-target="#mini-quiz">Mini Quiz</a>
-  <ul class="collapse">
-  <li><a href="#question-1-5" id="toc-question-1-5" class="nav-link" data-scroll-target="#question-1-5">Question 1</a></li>
-  <li><a href="#question-2-4" id="toc-question-2-4" class="nav-link" data-scroll-target="#question-2-4">Question 2</a></li>
-  <li><a href="#question-3-3" id="toc-question-3-3" class="nav-link" data-scroll-target="#question-3-3">Question 3</a></li>
-  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
-  </ul></li>
-  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">Submission Instructions</a></li>
-  <li><a href="#submission-link" id="toc-submission-link" class="nav-link" data-scroll-target="#submission-link">Submission Link</a></li>
-  <li><a href="#passcode-access" id="toc-passcode-access" class="nav-link" data-scroll-target="#passcode-access">Passcode Access</a></li>
-  <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">Common Errors</a>
-  <ul class="collapse">
-  <li><a href="#problem-1-wrong-column-name" id="toc-problem-1-wrong-column-name" class="nav-link" data-scroll-target="#problem-1-wrong-column-name">Problem 1 — Wrong Column Name</a></li>
-  <li><a href="#problem-2-forgetting-brackets" id="toc-problem-2-forgetting-brackets" class="nav-link" data-scroll-target="#problem-2-forgetting-brackets">Problem 2 — Forgetting Brackets</a></li>
-  <li><a href="#problem-3-misinterpreting-nan" id="toc-problem-3-misinterpreting-nan" class="nav-link" data-scroll-target="#problem-3-misinterpreting-nan">Problem 3 — Misinterpreting NaN</a></li>
-  <li><a href="#problem-4-forgetting-assignment" id="toc-problem-4-forgetting-assignment" class="nav-link" data-scroll-target="#problem-4-forgetting-assignment">Problem 4 — Forgetting Assignment</a></li>
-  </ul></li>
-  <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity">Academic Integrity</a></li>
+  <li><a href="#week-4-assignment-prepare-an-analysis-ready-dataset" id="toc-week-4-assignment-prepare-an-analysis-ready-dataset" class="nav-link active" data-scroll-target="#week-4-assignment-prepare-an-analysis-ready-dataset">Week 4 Assignment — Prepare an Analysis-Ready Dataset</a></li>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">Purpose</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#task-1-data-audit" id="toc-task-1-data-audit" class="nav-link" data-scroll-target="#task-1-data-audit">Task 1 — Data Audit</a></li>
+  <li><a href="#task-2-create-analytical-variables" id="toc-task-2-create-analytical-variables" class="nav-link" data-scroll-target="#task-2-create-analytical-variables">Task 2 — Create Analytical Variables</a></li>
+  <li><a href="#task-3-inflation-classification" id="toc-task-3-inflation-classification" class="nav-link" data-scroll-target="#task-3-inflation-classification">Task 3 — Inflation Classification</a></li>
+  <li><a href="#task-4-data-quality-note" id="toc-task-4-data-quality-note" class="nav-link" data-scroll-target="#task-4-data-quality-note">Task 4 — Data Quality Note</a></li>
+  <li><a href="#task-5-prepared-dataset-preview" id="toc-task-5-prepared-dataset-preview" class="nav-link" data-scroll-target="#task-5-prepared-dataset-preview">Task 5 — Prepared Dataset Preview</a></li>
+  <li><a href="#submission-checklist" id="toc-submission-checklist" class="nav-link" data-scroll-target="#submission-checklist">Submission Checklist</a></li>
   </ul>
 </nav>
     </div>
@@ -271,7 +184,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 4 In-Class Activity</h1>
+<h1 class="title">Week 4 Assignment — Prepare an Analysis-Ready Dataset</h1>
 </div>
 
 
@@ -288,8 +201,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="activity-information" class="level1">
-<h1>Activity Information</h1>
+<section id="week-4-assignment-prepare-an-analysis-ready-dataset" class="level1">
+<h1>Week 4 Assignment — Prepare an Analysis-Ready Dataset</h1>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -304,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td>Topic</td>
-<td>Data Handling, Cleaning, and Manipulation with Pandas</td>
+<td>Data Preparation for Economic Analysis</td>
 </tr>
 <tr class="odd">
 <td>Marks</td>
@@ -315,27 +228,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>1 Hour</td>
 </tr>
 <tr class="odd">
-<td>Attempts</td>
-<td>One Attempt Only</td>
-</tr>
-<tr class="even">
-<td>Access</td>
-<td>Lecturer Passcode Required</td>
+<td>Submission</td>
+<td>Completed Google Colab notebook link</td>
 </tr>
 </tbody>
 </table>
 <hr>
 </section>
-<section id="instructions" class="level1">
-<h1>Instructions</h1>
-<ol type="1">
-<li>Open the Week 4 live notebook.</li>
-<li>Download the Week 4 macroeconomic dataset.</li>
-<li>Save a copy of the notebook to your Google Drive.</li>
-<li>Complete all required tasks.</li>
-<li>Answer all interpretation questions.</li>
-<li>Submit before the activity closes.</li>
-</ol>
+<section id="purpose" class="level1">
+<h1>Purpose</h1>
+<p>This assignment checks whether you can move from raw data to analysis-ready data.</p>
+<p>The goal is not only to run pandas commands. The goal is to explain whether the dataset is ready for economic analysis and to document the preparation decisions you made.</p>
+<hr>
+</section>
+<section id="materials" class="level1">
+<h1>Materials</h1>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -349,395 +256,145 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week4/ECN4199_Week4_Live_Notebook.ipynb">Open in Google Colab</a></td>
 </tr>
 <tr class="even">
-<td>Week 4 Dataset</td>
+<td>Dataset</td>
 <td><a href="../data/sri_lanka_macro.csv">Download sri_lanka_macro.csv</a></td>
 </tr>
 </tbody>
 </table>
+<p>Before working:</p>
+<pre class="text"><code>File -&gt; Save a copy in Drive</code></pre>
+<p>Rename your notebook:</p>
+<pre class="text"><code>Week04_IndexNumber_Name.ipynb</code></pre>
 <hr>
 </section>
-<section id="important-reminder" class="level1">
-<h1>Important Reminder</h1>
-<p>This activity tests:</p>
-<ul>
-<li>dataframe understanding</li>
-<li>data inspection</li>
-<li>filtering</li>
-<li>sorting</li>
-<li>variable creation</li>
-<li>missing value handling</li>
-<li>economic interpretation</li>
-</ul>
-<p>This is one of the most important practical weeks in the course.</p>
+<section id="task-1-data-audit" class="level1">
+<h1>Task 1 — Data Audit</h1>
+<p>Load the dataset and produce a short audit.</p>
+<p>Your notebook must show:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data.head()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data.shape</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>data.info()</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>data.describe()</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>data.isna().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Answer briefly:</p>
+<ol type="1">
+<li>What does one row represent?</li>
+<li>Which variables are numerical?</li>
+<li>Are there missing values?</li>
+<li>Which variable or value needs the most careful economic interpretation?</li>
+</ol>
+<p><strong>Marks: 1</strong></p>
 <hr>
 </section>
-<section id="task-1-import-and-inspect-dataset" class="level1">
-<h1>Task 1 — Import and Inspect Dataset</h1>
-<section id="objective" class="level2">
-<h2 class="anchored" data-anchor-id="objective">Objective</h2>
-<p>Load and inspect the macroeconomic dataset.</p>
-<hr>
-</section>
-<section id="instructions-1" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-1">Instructions</h2>
-<p>Import pandas and load the dataset.</p>
-<hr>
-</section>
-<section id="expected-structure" class="level2">
-<h2 class="anchored" data-anchor-id="expected-structure">Expected Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"sri_lanka_macro.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="run-the-following-commands" class="level2">
-<h2 class="anchored" data-anchor-id="run-the-following-commands">Run the Following Commands</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="questions" class="level2">
-<h2 class="anchored" data-anchor-id="questions">Questions</h2>
-<section id="question-1" class="level3">
-<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
-<p>How many rows and columns are in the dataset?</p>
-<hr>
-</section>
-<section id="question-2" class="level3">
-<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
-<p>Which variables are numerical?</p>
-<hr>
-</section>
-<section id="question-3" class="level3">
-<h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
-<p>Are there missing values?</p>
-<hr>
-</section>
-</section>
-</section>
-<section id="task-2-selecting-variables" class="level1">
-<h1>Task 2 — Selecting Variables</h1>
-<section id="objective-1" class="level2">
-<h2 class="anchored" data-anchor-id="objective-1">Objective</h2>
-<p>Work with specific columns and rows.</p>
-<hr>
-</section>
-<section id="instructions-2" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-2">Instructions</h2>
-<p>Select:</p>
-<ul>
-<li>Inflation</li>
-<li>GDP_Growth</li>
-<li>Exchange_Rate</li>
-</ul>
-<hr>
-</section>
-<section id="example-structure" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">"Inflation"</span>, <span class="st">"GDP_Growth"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="questions-1" class="level2">
-<h2 class="anchored" data-anchor-id="questions-1">Questions</h2>
-<section id="question-1-1" class="level3">
-<h3 class="anchored" data-anchor-id="question-1-1">Question 1</h3>
-<p>Why do economists often focus only on selected variables instead of the entire dataset?</p>
-<hr>
-</section>
-</section>
-</section>
-<section id="task-3-filtering-economic-conditions" class="level1">
-<h1>Task 3 — Filtering Economic Conditions</h1>
-<section id="objective-2" class="level2">
-<h2 class="anchored" data-anchor-id="objective-2">Objective</h2>
-<p>Filter observations using economic conditions.</p>
-<hr>
-</section>
-<section id="instructions-3" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-3">Instructions</h2>
-<p>Filter:</p>
-<section id="part-a" class="level3">
-<h3 class="anchored" data-anchor-id="part-a">Part A</h3>
-<p>Years with:</p>
-<pre class="text"><code>Inflation &gt; 10</code></pre>
-</section>
-<section id="part-b" class="level3">
-<h3 class="anchored" data-anchor-id="part-b">Part B</h3>
-<p>Years with:</p>
-<pre class="text"><code>GDP_Growth &lt; 0</code></pre>
-<hr>
-</section>
-</section>
-<section id="example-structure-1" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure-1">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data[data[<span class="st">"Inflation"</span>] <span class="op">&gt;</span> <span class="dv">10</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="questions-2" class="level2">
-<h2 class="anchored" data-anchor-id="questions-2">Questions</h2>
-<section id="question-1-2" class="level3">
-<h3 class="anchored" data-anchor-id="question-1-2">Question 1</h3>
-<p>Which years appear to represent economic crisis conditions?</p>
-<hr>
-</section>
-<section id="question-2-1" class="level3">
-<h3 class="anchored" data-anchor-id="question-2-1">Question 2</h3>
-<p>Do high inflation years appear associated with recession years?</p>
-<p>Write short interpretation.</p>
-<hr>
-</section>
-</section>
-</section>
-<section id="task-4-creating-new-variables" class="level1">
-<h1>Task 4 — Creating New Variables</h1>
-<section id="objective-3" class="level2">
-<h2 class="anchored" data-anchor-id="objective-3">Objective</h2>
-<p>Create analytical indicators.</p>
-<hr>
-</section>
-<section id="instructions-4" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-4">Instructions</h2>
-<p>Create:</p>
-<section id="part-a-1" class="level3">
-<h3 class="anchored" data-anchor-id="part-a-1">Part A</h3>
-<p>Exchange rate percentage change.</p>
-<hr>
-</section>
-</section>
-<section id="example-structure-2" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure-2">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Exchange_Rate_Change"</span>] <span class="op">=</span> data[<span class="st">"Exchange_Rate"</span>].pct_change() <span class="op">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-<section id="part-b-1" class="level3">
-<h3 class="anchored" data-anchor-id="part-b-1">Part B</h3>
-<p>High inflation category variable.</p>
-<p>Rules:</p>
+<section id="task-2-create-analytical-variables" class="level1">
+<h1>Task 2 — Create Analytical Variables</h1>
+<p>Create at least three new variables:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Condition</th>
-<th>Output</th>
+<th>Variable</th>
+<th>Rule</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Inflation &gt; 10</td>
-<td>True</td>
+<td><code>Exchange_Rate_Change</code></td>
+<td>Percentage change in <code>Exchange_Rate</code></td>
 </tr>
 <tr class="even">
-<td>Otherwise</td>
-<td>False</td>
+<td><code>Recession</code></td>
+<td><code>GDP_Growth &lt; 0</code></td>
+</tr>
+<tr class="odd">
+<td><code>Low_Reserves</code></td>
+<td><code>Reserves &lt; 4000</code></td>
 </tr>
 </tbody>
 </table>
-<hr>
-</section>
-</section>
-<section id="question" class="level2">
-<h2 class="anchored" data-anchor-id="question">Question</h2>
-<p>Why do economists create new variables instead of relying only on raw data?</p>
-<hr>
-</section>
-</section>
-<section id="task-5-sorting-and-identifying-patterns" class="level1">
-<h1>Task 5 — Sorting and Identifying Patterns</h1>
-<section id="objective-4" class="level2">
-<h2 class="anchored" data-anchor-id="objective-4">Objective</h2>
-<p>Identify important economic observations.</p>
-<hr>
-</section>
-<section id="instructions-5" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-5">Instructions</h2>
-<p>Sort the dataset by:</p>
-<ul>
-<li>Inflation (highest first)</li>
-<li>GDP growth (lowest first)</li>
-</ul>
-<hr>
-</section>
-<section id="example-structure-3" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure-3">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data.sort_values(by<span class="op">=</span><span class="st">"Inflation"</span>, ascending<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="questions-3" class="level2">
-<h2 class="anchored" data-anchor-id="questions-3">Questions</h2>
-<section id="question-1-3" class="level3">
-<h3 class="anchored" data-anchor-id="question-1-3">Question 1</h3>
-<p>Which year had the highest inflation?</p>
-<hr>
-</section>
-<section id="question-2-2" class="level3">
-<h3 class="anchored" data-anchor-id="question-2-2">Question 2</h3>
-<p>Which year had the worst GDP growth?</p>
-<hr>
-</section>
-<section id="question-3-1" class="level3">
-<h3 class="anchored" data-anchor-id="question-3-1">Question 3</h3>
-<p>What patterns do you observe between inflation and GDP growth?</p>
-<hr>
-</section>
-</section>
-</section>
-<section id="task-6-missing-values-and-data-quality" class="level1">
-<h1>Task 6 — Missing Values and Data Quality</h1>
-<section id="objective-5" class="level2">
-<h2 class="anchored" data-anchor-id="objective-5">Objective</h2>
-<p>Understand missing values and data cleaning.</p>
-<hr>
-</section>
-<section id="instructions-6" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-6">Instructions</h2>
-<p>Run:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data.isnull().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="questions-4" class="level2">
-<h2 class="anchored" data-anchor-id="questions-4">Questions</h2>
-<section id="question-1-4" class="level3">
-<h3 class="anchored" data-anchor-id="question-1-4">Question 1</h3>
-<p>What does <code>NaN</code> mean?</p>
-<hr>
-</section>
-<section id="question-2-3" class="level3">
-<h3 class="anchored" data-anchor-id="question-2-3">Question 2</h3>
-<p>Why can missing values create analytical problems?</p>
-<hr>
-</section>
-<section id="question-3-2" class="level3">
-<h3 class="anchored" data-anchor-id="question-3-2">Question 3</h3>
-<p>Why is blindly deleting missing values sometimes dangerous?</p>
-<hr>
-</section>
-</section>
-</section>
-<section id="reflection-question" class="level1">
-<h1>Reflection Question</h1>
-<p>Write a short paragraph answering:</p>
-<pre class="text"><code>Why is data cleaning one of the most important stages in economic analysis?</code></pre>
-<p>Your answer should include:</p>
-<ul>
-<li>data quality</li>
-<li>reliability</li>
-<li>bias</li>
-<li>policy implications</li>
-</ul>
-<hr>
-</section>
-<section id="mini-quiz" class="level1">
-<h1>Mini Quiz</h1>
-<section id="question-1-5" class="level2">
-<h2 class="anchored" data-anchor-id="question-1-5">Question 1</h2>
-<p>What is a dataframe?</p>
-<p>A. A graph<br>
-B. A machine learning model<br>
-C. A table of data<br>
-D. A Python error</p>
-<hr>
-</section>
-<section id="question-2-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-2-4">Question 2</h2>
-<p>Which function displays first rows?</p>
-<p>A. tail()<br>
-B. show()<br>
-C. head()<br>
-D. info()</p>
-<hr>
-</section>
-<section id="question-3-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3-3">Question 3</h2>
-<p>What does <code>dropna()</code> mainly do?</p>
-<p>A. Creates graphs<br>
-B. Removes missing values<br>
-C. Sorts data<br>
-D. Imports libraries</p>
-<hr>
-</section>
-<section id="question-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
-<p>What does filtering data allow economists to do?</p>
-<p>A. Install Python<br>
-B. Isolate relevant observations<br>
-C. Delete variables automatically<br>
-D. Create websites</p>
-<hr>
-</section>
-</section>
-<section id="submission-instructions" class="level1">
-<h1>Submission Instructions</h1>
-<p>Before submitting:</p>
-<ol type="1">
-<li>Save notebook properly.</li>
-<li>Rename notebook using:</li>
-</ol>
-<pre class="text"><code>Week04_IndexNumber_Name.ipynb</code></pre>
 <p>Example:</p>
-<pre class="text"><code>Week04_2024BA12345_Perera.ipynb</code></pre>
-<ol start="3" type="1">
-<li>Set notebook sharing to:</li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Exchange_Rate_Change"</span>] <span class="op">=</span> data[<span class="st">"Exchange_Rate"</span>].pct_change() <span class="op">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then display the updated dataset.</p>
+<p><strong>Marks: 1</strong></p>
+<hr>
+</section>
+<section id="task-3-inflation-classification" class="level1">
+<h1>Task 3 — Inflation Classification</h1>
+<p>Create a function to classify inflation.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Rule</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Inflation below 5</td>
+<td>Low</td>
+</tr>
+<tr class="even">
+<td>Inflation from 5 to 15</td>
+<td>Moderate</td>
+</tr>
+<tr class="odd">
+<td>Inflation above 15</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p>Apply the function to create:</p>
+<pre class="text"><code>Inflation_Category</code></pre>
+<p>Test boundary values:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fl">4.9</span>, <span class="dv">5</span>, <span class="dv">15</span>, <span class="fl">15.1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Answer briefly:</p>
+<ol type="1">
+<li>Why are boundary values important?</li>
+<li>Which category should 5 belong to?</li>
+<li>Which category should 15 belong to?</li>
 </ol>
-<pre class="text"><code>Anyone with the link → Viewer</code></pre>
+<p><strong>Marks: 1</strong></p>
 <hr>
 </section>
-<section id="submission-link" class="level1">
-<h1>Submission Link</h1>
+<section id="task-4-data-quality-note" class="level1">
+<h1>Task 4 — Data Quality Note</h1>
+<p>Write a short data-quality note of 100-150 words.</p>
+<p>Your note should mention:</p>
+<ul>
+<li>whether the dataset is usable for Week 5 analysis</li>
+<li>any missing values or unusual values</li>
+<li>whether extreme values should be removed or kept</li>
+<li>how your new variables help analysis</li>
+</ul>
+<p><strong>Marks: 1</strong></p>
+<hr>
+</section>
+<section id="task-5-prepared-dataset-preview" class="level1">
+<h1>Task 5 — Prepared Dataset Preview</h1>
+<p>Display a final prepared dataset containing:</p>
+<pre class="text"><code>Year
+Inflation
+Inflation_Category
+GDP_Growth
+Recession
+Exchange_Rate
+Exchange_Rate_Change
+Reserves
+Low_Reserves</code></pre>
+<p>Then write two sentences explaining how this prepared dataset will help Week 5 exploratory analysis.</p>
+<p><strong>Marks: 1</strong></p>
+<hr>
+</section>
+<section id="submission-checklist" class="level1">
+<h1>Submission Checklist</h1>
+<p>Before submitting, make sure:</p>
+<ul>
+<li>your notebook runs from top to bottom</li>
+<li>all tasks are answered</li>
+<li>code outputs are visible</li>
+<li>interpretation answers are written in your own words</li>
+<li>sharing is set to <code>Anyone with the link -&gt; Viewer</code></li>
+</ul>
 <p>The lecturer will provide the live submission link during the class session.</p>
-<hr>
-</section>
-<section id="passcode-access" class="level1">
-<h1>Passcode Access</h1>
-<p>The lecturer will provide the passcode during the lecture.</p>
-<p>Students without the correct passcode cannot access the submission form.</p>
-<hr>
-</section>
-<section id="common-errors" class="level1">
-<h1>Common Errors</h1>
-<section id="problem-1-wrong-column-name" class="level2">
-<h2 class="anchored" data-anchor-id="problem-1-wrong-column-name">Problem 1 — Wrong Column Name</h2>
-<p>Error:</p>
-<pre class="text"><code>KeyError</code></pre>
-<p>Possible causes:</p>
-<ul>
-<li>spelling mistake</li>
-<li>incorrect capitalization</li>
-</ul>
-<hr>
-</section>
-<section id="problem-2-forgetting-brackets" class="level2">
-<h2 class="anchored" data-anchor-id="problem-2-forgetting-brackets">Problem 2 — Forgetting Brackets</h2>
-<p>Wrong:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span> <span class="op">&gt;</span> <span class="dv">10</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Correct:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>data[data[<span class="st">"Inflation"</span>] <span class="op">&gt;</span> <span class="dv">10</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="problem-3-misinterpreting-nan" class="level2">
-<h2 class="anchored" data-anchor-id="problem-3-misinterpreting-nan">Problem 3 — Misinterpreting NaN</h2>
-<p><code>NaN</code> does NOT mean zero.</p>
-<p>It means:</p>
-<pre class="text"><code>information is unavailable</code></pre>
-<hr>
-</section>
-<section id="problem-4-forgetting-assignment" class="level2">
-<h2 class="anchored" data-anchor-id="problem-4-forgetting-assignment">Problem 4 — Forgetting Assignment</h2>
-<p>Wrong:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>data.dropna()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Better:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> data.dropna()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-</section>
-<section id="academic-integrity" class="level1">
-<h1>Academic Integrity</h1>
-<p>Students may use lecture materials and course notes.</p>
-<p>However:</p>
-<ul>
-<li>copied answers are not allowed</li>
-<li>copied notebooks are not allowed</li>
-<li>AI-generated answers without understanding are unacceptable</li>
-</ul>
-<p>Students are responsible for all submitted work.</p>
 
 
 </section>

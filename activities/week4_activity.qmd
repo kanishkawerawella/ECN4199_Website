@@ -1,499 +1,172 @@
 ---
-title: "Week 4 In-Class Activity"
+title: "Week 4 Assignment — Prepare an Analysis-Ready Dataset"
 ---
 
-# Activity Information
+# Week 4 Assignment — Prepare an Analysis-Ready Dataset
 
 | Item | Details |
 |---|---|
 | Week | Week 4 |
-| Topic | Data Handling, Cleaning, and Manipulation with Pandas |
+| Topic | Data Preparation for Economic Analysis |
 | Marks | 5 Marks |
 | Duration | 1 Hour |
-| Attempts | One Attempt Only |
-| Access | Lecturer Passcode Required |
+| Submission | Completed Google Colab notebook link |
 
 ---
 
-# Instructions
+# Purpose
 
-1. Open the Week 4 live notebook.
-2. Download the Week 4 macroeconomic dataset.
-3. Save a copy of the notebook to your Google Drive.
-4. Complete all required tasks.
-5. Answer all interpretation questions.
-6. Submit before the activity closes.
+This assignment checks whether you can move from raw data to analysis-ready data.
+
+The goal is not only to run pandas commands. The goal is to explain whether the dataset is ready for economic analysis and to document the preparation decisions you made.
+
+---
+
+# Materials
 
 | Material | Link |
 |---|---|
 | Week 4 Live Notebook | [Open in Google Colab](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week4/ECN4199_Week4_Live_Notebook.ipynb) |
-| Week 4 Dataset | [Download sri_lanka_macro.csv](../data/sri_lanka_macro.csv) |
+| Dataset | [Download sri_lanka_macro.csv](../data/sri_lanka_macro.csv) |
 
----
-
-# Important Reminder
-
-This activity tests:
-
-- dataframe understanding
-- data inspection
-- filtering
-- sorting
-- variable creation
-- missing value handling
-- economic interpretation
-
-This is one of the most important practical weeks in the course.
-
----
-
-# Task 1 — Import and Inspect Dataset
-
-## Objective
-
-Load and inspect the macroeconomic dataset.
-
----
-
-## Instructions
-
-Import pandas and load the dataset.
-
----
-
-## Expected Structure
-
-```python
-import pandas as pd
-
-data = pd.read_csv("sri_lanka_macro.csv")
-```
-
----
-
-## Run the Following Commands
-
-```python
-data.head()
-```
-
-```python
-data.info()
-```
-
-```python
-data.describe()
-```
-
----
-
-## Questions
-
-### Question 1
-
-How many rows and columns are in the dataset?
-
----
-
-### Question 2
-
-Which variables are numerical?
-
----
-
-### Question 3
-
-Are there missing values?
-
----
-
-# Task 2 — Selecting Variables
-
-## Objective
-
-Work with specific columns and rows.
-
----
-
-## Instructions
-
-Select:
-
-- Inflation
-- GDP_Growth
-- Exchange_Rate
-
----
-
-## Example Structure
-
-```python
-data[["Inflation", "GDP_Growth"]]
-```
-
----
-
-## Questions
-
-### Question 1
-
-Why do economists often focus only on selected variables instead of the entire dataset?
-
----
-
-# Task 3 — Filtering Economic Conditions
-
-## Objective
-
-Filter observations using economic conditions.
-
----
-
-## Instructions
-
-Filter:
-
-### Part A
-
-Years with:
+Before working:
 
 ```text
-Inflation > 10
+File -> Save a copy in Drive
 ```
 
-### Part B
-
-Years with:
-
-```text
-GDP_Growth < 0
-```
-
----
-
-## Example Structure
-
-```python
-data[data["Inflation"] > 10]
-```
-
----
-
-## Questions
-
-### Question 1
-
-Which years appear to represent economic crisis conditions?
-
----
-
-### Question 2
-
-Do high inflation years appear associated with recession years?
-
-Write short interpretation.
-
----
-
-# Task 4 — Creating New Variables
-
-## Objective
-
-Create analytical indicators.
-
----
-
-## Instructions
-
-Create:
-
-### Part A
-
-Exchange rate percentage change.
-
----
-
-## Example Structure
-
-```python
-data["Exchange_Rate_Change"] = data["Exchange_Rate"].pct_change() * 100
-```
-
----
-
-### Part B
-
-High inflation category variable.
-
-Rules:
-
-| Condition | Output |
-|---|---|
-| Inflation > 10 | True |
-| Otherwise | False |
-
----
-
-## Question
-
-Why do economists create new variables instead of relying only on raw data?
-
----
-
-# Task 5 — Sorting and Identifying Patterns
-
-## Objective
-
-Identify important economic observations.
-
----
-
-## Instructions
-
-Sort the dataset by:
-
-- Inflation (highest first)
-- GDP growth (lowest first)
-
----
-
-## Example Structure
-
-```python
-data.sort_values(by="Inflation", ascending=False)
-```
-
----
-
-## Questions
-
-### Question 1
-
-Which year had the highest inflation?
-
----
-
-### Question 2
-
-Which year had the worst GDP growth?
-
----
-
-### Question 3
-
-What patterns do you observe between inflation and GDP growth?
-
----
-
-# Task 6 — Missing Values and Data Quality
-
-## Objective
-
-Understand missing values and data cleaning.
-
----
-
-## Instructions
-
-Run:
-
-```python
-data.isnull().sum()
-```
-
----
-
-## Questions
-
-### Question 1
-
-What does `NaN` mean?
-
----
-
-### Question 2
-
-Why can missing values create analytical problems?
-
----
-
-### Question 3
-
-Why is blindly deleting missing values sometimes dangerous?
-
----
-
-# Reflection Question
-
-Write a short paragraph answering:
-
-```text
-Why is data cleaning one of the most important stages in economic analysis?
-```
-
-Your answer should include:
-
-- data quality
-- reliability
-- bias
-- policy implications
-
----
-
-# Mini Quiz
-
-## Question 1
-
-What is a dataframe?
-
-A. A graph  
-B. A machine learning model  
-C. A table of data  
-D. A Python error  
-
----
-
-## Question 2
-
-Which function displays first rows?
-
-A. tail()  
-B. show()  
-C. head()  
-D. info()  
-
----
-
-## Question 3
-
-What does `dropna()` mainly do?
-
-A. Creates graphs  
-B. Removes missing values  
-C. Sorts data  
-D. Imports libraries  
-
----
-
-## Question 4
-
-What does filtering data allow economists to do?
-
-A. Install Python  
-B. Isolate relevant observations  
-C. Delete variables automatically  
-D. Create websites  
-
----
-
-# Submission Instructions
-
-Before submitting:
-
-1. Save notebook properly.
-2. Rename notebook using:
+Rename your notebook:
 
 ```text
 Week04_IndexNumber_Name.ipynb
 ```
 
+---
+
+# Task 1 — Data Audit
+
+Load the dataset and produce a short audit.
+
+Your notebook must show:
+
+```python
+data.head()
+data.shape
+data.info()
+data.describe()
+data.isna().sum()
+```
+
+Answer briefly:
+
+1. What does one row represent?
+2. Which variables are numerical?
+3. Are there missing values?
+4. Which variable or value needs the most careful economic interpretation?
+
+**Marks: 1**
+
+---
+
+# Task 2 — Create Analytical Variables
+
+Create at least three new variables:
+
+| Variable | Rule |
+|---|---|
+| `Exchange_Rate_Change` | Percentage change in `Exchange_Rate` |
+| `Recession` | `GDP_Growth < 0` |
+| `Low_Reserves` | `Reserves < 4000` |
+
 Example:
 
-```text
-Week04_2024BA12345_Perera.ipynb
+```python
+data["Exchange_Rate_Change"] = data["Exchange_Rate"].pct_change() * 100
 ```
 
-3. Set notebook sharing to:
+Then display the updated dataset.
 
-```text
-Anyone with the link → Viewer
-```
+**Marks: 1**
 
 ---
 
-# Submission Link
+# Task 3 — Inflation Classification
+
+Create a function to classify inflation.
+
+| Rule | Category |
+|---|---|
+| Inflation below 5 | Low |
+| Inflation from 5 to 15 | Moderate |
+| Inflation above 15 | High |
+
+Apply the function to create:
+
+```text
+Inflation_Category
+```
+
+Test boundary values:
+
+```python
+4.9, 5, 15, 15.1
+```
+
+Answer briefly:
+
+1. Why are boundary values important?
+2. Which category should 5 belong to?
+3. Which category should 15 belong to?
+
+**Marks: 1**
+
+---
+
+# Task 4 — Data Quality Note
+
+Write a short data-quality note of 100-150 words.
+
+Your note should mention:
+
+- whether the dataset is usable for Week 5 analysis
+- any missing values or unusual values
+- whether extreme values should be removed or kept
+- how your new variables help analysis
+
+**Marks: 1**
+
+---
+
+# Task 5 — Prepared Dataset Preview
+
+Display a final prepared dataset containing:
+
+```text
+Year
+Inflation
+Inflation_Category
+GDP_Growth
+Recession
+Exchange_Rate
+Exchange_Rate_Change
+Reserves
+Low_Reserves
+```
+
+Then write two sentences explaining how this prepared dataset will help Week 5 exploratory analysis.
+
+**Marks: 1**
+
+---
+
+# Submission Checklist
+
+Before submitting, make sure:
+
+- your notebook runs from top to bottom
+- all tasks are answered
+- code outputs are visible
+- interpretation answers are written in your own words
+- sharing is set to `Anyone with the link -> Viewer`
 
 The lecturer will provide the live submission link during the class session.
-
----
-
-# Passcode Access
-
-The lecturer will provide the passcode during the lecture.
-
-Students without the correct passcode cannot access the submission form.
-
----
-
-# Common Errors
-
-## Problem 1 — Wrong Column Name
-
-Error:
-
-```text
-KeyError
-```
-
-Possible causes:
-
-- spelling mistake
-- incorrect capitalization
-
----
-
-## Problem 2 — Forgetting Brackets
-
-Wrong:
-
-```python
-data["Inflation" > 10]
-```
-
-Correct:
-
-```python
-data[data["Inflation"] > 10]
-```
-
----
-
-## Problem 3 — Misinterpreting NaN
-
-`NaN` does NOT mean zero.
-
-It means:
-
-```text
-information is unavailable
-```
-
----
-
-## Problem 4 — Forgetting Assignment
-
-Wrong:
-
-```python
-data.dropna()
-```
-
-Better:
-
-```python
-data = data.dropna()
-```
-
----
-
-# Academic Integrity
-
-Students may use lecture materials and course notes.
-
-However:
-
-- copied answers are not allowed
-- copied notebooks are not allowed
-- AI-generated answers without understanding are unacceptable
-
-Students are responsible for all submitted work.

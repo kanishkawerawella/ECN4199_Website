@@ -1,68 +1,60 @@
 ---
-title: "Week 6 — Building Interactive Economic Dashboards with Plotly"
+title: "Week 6 — Economic Dashboards and Data Storytelling"
 ---
 
-# Week 6 — Interactive Dashboards and Data Storytelling for Economics
+# Week 6 — Economic Dashboards and Data Storytelling
 
-Weeks 1–5 focused on:
+Week 4 prepared the data.
 
-- Python fundamentals
-- data handling
-- descriptive statistics
-- visualization
+Week 5 generated evidence.
 
-Now students move from:
+Week 6 asks students to communicate the evidence clearly.
 
-```text
-creating graphs
-```
-
-to:
+The central question is:
 
 ```text
-building analytical systems
+How can we turn analysis into a dashboard that supports understanding and decision-making?
 ```
 
-This week introduces:
-
-- interactive dashboards
-- dynamic visualization
-- dashboard logic
-- user interaction
-- exploratory analysis
-- data storytelling
-
-Modern economists increasingly communicate through:
-
-- dashboards
-- interactive reports
-- web applications
-- real-time monitoring systems
-
-This week is a major transition.
+This week is not about making graphs look decorative. It is about designing an analytical communication product.
 
 ---
 
-# 1. Learning Objectives
+# 1. Learning Outcomes
 
 By the end of this week, students should be able to:
 
-- explain what dashboards are
-- distinguish static vs interactive visualization
+- explain the purpose of an economic dashboard
+- select charts based on analytical questions
 - build interactive Plotly graphs
-- create dashboard layouts
-- add hover information
-- design multi-chart dashboards
-- communicate economic insights interactively
+- combine indicators into a coherent dashboard
+- use titles, labels, hover information, and layout to support interpretation
+- avoid common dashboard design mistakes
+- write a short data story that connects evidence to economic meaning
 
 ---
 
-# 2. Week 6 Learning Materials
+# 2. Two-Hour Learning Plan
+
+| Time | Section | Main Focus |
+|---|---|---|
+| 0-10 minutes | Week 5 recap | Main findings from exploratory analysis |
+| 10-25 minutes | Dashboard purpose | Decision support, not decoration |
+| 25-45 minutes | Chart selection | Match chart type to question |
+| 45-70 minutes | Interactive graphs | Plotly line, bar, and scatter charts |
+| 70-95 minutes | Dashboard layout | Build a multi-panel monitoring dashboard |
+| 95-115 minutes | Data storytelling | Claim, evidence, implication, caution |
+| 115-120 minutes | Assignment briefing | Final dashboard submission |
+
+---
+
+# 3. Week 6 Learning Materials
 
 | Material | Purpose | Link |
 |---|---|---|
-| Week 6 Live Notebook | Build the interactive Plotly examples in Google Colab | [Open Week 6 Live Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week6/ECN4199_Week6_Live_Notebook.ipynb) |
+| Week 6 Live Notebook | Build the dashboard in Google Colab | [Open Week 6 Live Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week6/ECN4199_Week6_Live_Notebook.ipynb) |
 | Macroeconomic Dataset | Download the CSV file used in class | [Download sri_lanka_macro.csv](../data/sri_lanka_macro.csv) |
+| Plotly Guide | Reference for interactive charts | [Open Plotly Python Guide](https://plotly.com/python/) |
 
 Inside Google Colab:
 
@@ -78,432 +70,214 @@ Week06_IndexNumber_Name.ipynb
 
 ---
 
-# 3. What Is a Dashboard?
+# 4. Why Week 6 Is the Next Step
+
+Students have already learned how to:
+
+- run Python code
+- inspect and clean data
+- create variables
+- generate statistics
+- create graphs
+- interpret evidence
+
+Week 6 combines those skills into one communication workflow.
+
+| Stage | Student Output |
+|---|---|
+| Week 4 | Clean dataset |
+| Week 5 | Evidence and interpretation |
+| Week 6 | Dashboard and data story |
+
+---
+
+# 5. What Is a Dashboard?
+
+A dashboard is a structured visual interface that helps users understand important information quickly.
+
+In economics, dashboards may be used to monitor:
+
+- inflation
+- GDP growth
+- exchange rates
+- reserves
+- unemployment
+- fiscal indicators
+- household welfare
+
+A dashboard is not:
+
+```text
+many charts placed on one page
+```
 
 A dashboard is:
 
 ```text
-a visual interface that organizes and displays important information for decision-making
+a guided analytical view of a problem
 ```
 
-Dashboards combine:
-
-- graphs
-- indicators
-- summaries
-- tables
-- filters
-- interactive elements
-
 ---
 
-# Examples of Economic Dashboards
+# 6. Dashboard Design Questions
 
-Economists use dashboards for:
+Before building a dashboard, answer:
 
-- inflation monitoring
-- exchange rate tracking
-- labour market analysis
-- trade monitoring
-- financial market surveillance
-- poverty mapping
+1. Who is the audience?
+2. What question should the dashboard answer?
+3. Which indicators are most important?
+4. Which charts best communicate those indicators?
+5. What should the user notice first?
+6. What interpretation should accompany the visuals?
 
----
-
-# Important Idea
-
-A dashboard is NOT:
+For this course, the Week 6 dashboard answers:
 
 ```text
-many graphs on one page
-```
-
-A good dashboard:
-
-- answers questions
-- guides interpretation
-- highlights patterns
-- supports decisions
-
----
-
-# 4. Why Dashboards Matter in Economics
-
-Modern economics increasingly involves:
-
-- large datasets
-- multiple indicators
-- real-time information
-- policy communication
-
-Dashboards help:
-
-- policymakers
-- researchers
-- firms
-- journalists
-- the public
-
-understand complex information quickly.
-
----
-
-# Example
-
-A central bank dashboard may display:
-
-- inflation
-- reserves
-- exchange rates
-- interest rates
-- unemployment
-- money supply
-
-within one integrated system.
-
----
-
-# Critical Lesson
-
-Visualization is NOT decoration.
-
-Visualization is:
-
-```text
-economic communication
+How did Sri Lanka's macroeconomic conditions change across the period?
 ```
 
 ---
 
-# 5. Static vs Interactive Visualization
+# 7. Chart Selection
 
-Traditional graphs are static.
-
-Interactive graphs allow users to:
-
-- zoom
-- hover
-- filter
-- explore relationships
-- inspect exact values
-
----
-
-# Static Graph Example
-
-```python
-plt.plot(data["Year"], data["Inflation"])
-```
-
----
-
-# Interactive Graph Example
-
-```python
-fig = px.line(data,
-              x="Year",
-              y="Inflation")
-
-fig.show()
-```
-
----
-
-# Advantages of Interactive Graphs
-
-| Feature | Benefit |
+| Question | Recommended Chart |
 |---|---|
-| Hovering | Shows exact values |
-| Zooming | Explore details |
-| Interactivity | Better exploration |
-| Dynamic filtering | Flexible analysis |
+| How did a variable change over time? | Line chart |
+| Which year had the worst outcome? | Bar chart |
+| Do two variables move together? | Scatter plot |
+| Which indicators reached warning levels? | Table or highlighted indicators |
+
+The chart should follow the question.
+
+Do not choose a graph only because it looks attractive.
 
 ---
 
-# 6. Introduction to Plotly
-
-Plotly is one of the most widely used interactive visualization libraries.
-
-It allows us to create:
-
-- interactive charts
-- dashboards
-- web-ready visualizations
-
----
-
-# Import Plotly
+# 8. Load the Data
 
 ```python
+import pandas as pd
 import plotly.express as px
-```
-
----
-
-# Basic Interactive Line Graph
-
-```python
-fig = px.line(data,
-              x="Year",
-              y="Inflation")
-
-fig.show()
-```
-
----
-
-# What Happens?
-
-Students can:
-
-- hover over values
-- zoom into periods
-- interact with the graph
-
----
-
-# 7. Building Interactive Line Graphs
-
-Line graphs are ideal for:
-
-- inflation
-- GDP growth
-- unemployment
-- exchange rates
-- reserves
-
----
-
-# Example
-
-```python
-fig = px.line(data,
-              x="Year",
-              y="Inflation",
-              title="Inflation Trends in Sri Lanka")
-
-fig.show()
-```
-
----
-
-# Adding Multiple Variables
-
-```python
-fig = px.line(data,
-              x="Year",
-              y=["Inflation", "GDP_Growth"])
-
-fig.show()
-```
-
----
-
-# Interpretation Questions
-
-Ask:
-
-- Which variable is more volatile?
-- Do variables move together?
-- When do structural breaks occur?
-
----
-
-# 8. Building Interactive Bar Charts
-
-Bar charts are useful for:
-
-- comparing regions
-- comparing sectors
-- comparing years
-- comparing categories
-
----
-
-# Example
-
-```python
-fig = px.bar(data,
-             x="Year",
-             y="GDP_Growth")
-
-fig.show()
-```
-
----
-
-# Example with Colors
-
-```python
-fig = px.bar(data,
-             x="Year",
-             y="GDP_Growth",
-             color="GDP_Growth")
-
-fig.show()
-```
-
----
-
-# Important Lesson
-
-Color should support interpretation.
-
-Do NOT use colors randomly.
-
----
-
-# 9. Interactive Scatter Plots
-
-Scatter plots help explore relationships interactively.
-
----
-
-# Example
-
-```python
-fig = px.scatter(data,
-                 x="Inflation",
-                 y="Exchange_Rate_Change")
-
-fig.show()
-```
-
----
-
-# Adding Labels
-
-```python
-fig = px.scatter(data,
-                 x="Inflation",
-                 y="Exchange_Rate_Change",
-                 hover_name="Year")
-
-fig.show()
-```
-
----
-
-# Why This Matters
-
-Users can:
-
-- identify outliers
-- inspect specific years
-- explore relationships dynamically
-
----
-
-# 10. Adding Hover Information
-
-Hover information improves analytical depth.
-
----
-
-# Example
-
-```python
-fig = px.line(data,
-              x="Year",
-              y="Inflation",
-              hover_data=["GDP_Growth",
-                          "Exchange_Rate"])
-
-fig.show()
-```
-
----
-
-# Why Hover Information Matters
-
-Users can inspect:
-
-- exact values
-- related indicators
-- contextual information
-
----
-
-# 11. Dashboard Design Principles
-
-Most beginner dashboards are terrible.
-
-Why?
-
-Because they:
-
-- overload information
-- lack structure
-- lack hierarchy
-- prioritize appearance over analysis
-
----
-
-# Good Dashboard Principles
-
-| Principle | Meaning |
-|---|---|
-| Simplicity | Avoid clutter |
-| Hierarchy | Important information first |
-| Consistency | Similar styles |
-| Readability | Clear labels |
-| Relevance | Only useful graphs |
-
----
-
-# Important Warning
-
-More charts do NOT mean:
-
-```text
-better analysis
-```
-
----
-
-# 12. Multi-Chart Dashboards
-
-Dashboards often combine multiple visualizations.
-
----
-
-# Example Dashboard Structure
-
-| Section | Content |
-|---|---|
-| Top panel | Key indicators |
-| Middle panel | Trends |
-| Bottom panel | Relationships |
-
----
-
-# Import Dashboard Tools
-
-```python
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
+
+url = "https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/sri_lanka_macro.csv"
+data = pd.read_csv(url)
+
+data["Exchange_Rate_Change"] = data["Exchange_Rate"].pct_change() * 100
+data["Recession"] = data["GDP_Growth"] < 0
 ```
 
 ---
 
-# Simple Subplot Example
+# 9. Interactive Line Chart
 
 ```python
-fig = make_subplots(rows=2,
-                    cols=1)
+fig = px.line(
+    data,
+    x="Year",
+    y="Inflation",
+    markers=True,
+    title="Inflation Over Time"
+)
+
+fig.show()
+```
+
+Use line charts for trends.
+
+Interpretation:
+
+```text
+The chart helps identify when inflation began to accelerate and when it returned toward lower levels.
+```
+
+---
+
+# 10. Interactive Bar Chart
+
+```python
+fig = px.bar(
+    data,
+    x="Year",
+    y="GDP_Growth",
+    color="GDP_Growth",
+    title="GDP Growth by Year"
+)
+
+fig.show()
+```
+
+Use bar charts for comparisons.
+
+Add interpretation:
+
+- Which year had the largest contraction?
+- Did the contraction coincide with high inflation?
+- What does this suggest about macroeconomic stress?
+
+---
+
+# 11. Interactive Scatter Plot
+
+```python
+fig = px.scatter(
+    data,
+    x="Inflation",
+    y="Exchange_Rate_Change",
+    hover_name="Year",
+    title="Inflation and Exchange Rate Change"
+)
+
+fig.show()
+```
+
+Use scatter plots for relationships.
+
+Interpret carefully:
+
+```text
+The chart can show association, but not causation.
+```
+
+---
+
+# 12. Building a Monitoring Dashboard
+
+A simple dashboard can combine multiple indicators.
+
+```python
+fig = make_subplots(
+    rows=3,
+    cols=1,
+    subplot_titles=(
+        "Inflation",
+        "GDP Growth",
+        "Exchange Rate"
+    )
+)
 
 fig.add_trace(
-    go.Scatter(x=data["Year"],
-               y=data["Inflation"]),
+    go.Scatter(x=data["Year"], y=data["Inflation"], mode="lines+markers", name="Inflation"),
     row=1,
     col=1
 )
 
 fig.add_trace(
-    go.Scatter(x=data["Year"],
-               y=data["GDP_Growth"]),
+    go.Bar(x=data["Year"], y=data["GDP_Growth"], name="GDP Growth"),
     row=2,
     col=1
+)
+
+fig.add_trace(
+    go.Scatter(x=data["Year"], y=data["Exchange_Rate"], mode="lines+markers", name="Exchange Rate"),
+    row=3,
+    col=1
+)
+
+fig.update_layout(
+    height=850,
+    title_text="Macroeconomic Monitoring Dashboard"
 )
 
 fig.show()
@@ -511,412 +285,69 @@ fig.show()
 
 ---
 
-# 13. Storytelling with Dashboards
+# 13. Dashboard Design Principles
 
-Dashboards should guide interpretation.
+Good dashboards are:
 
-A dashboard should answer:
+- focused
+- readable
+- consistent
+- clearly labelled
+- connected to an analytical question
+- supported by interpretation
 
-- What happened?
-- Why does it matter?
-- What patterns exist?
-- What should decision-makers notice?
+Avoid:
 
----
-
-# Weak Dashboard
-
-```text
-Many disconnected graphs
-```
-
----
-
-# Strong Dashboard
-
-```text
-A coherent analytical story
-```
+- too many charts
+- unclear titles
+- missing units
+- random colors
+- decorative graphs without purpose
+- conclusions that go beyond the evidence
 
 ---
 
-# Example Narrative
+# 14. Data Storytelling
 
-```text
-Inflation accelerated sharply after 2021, coinciding with severe exchange rate depreciation and negative GDP growth.
-```
+A dashboard should be accompanied by a short story.
 
----
+Use this structure:
 
-# Critical Lesson
-
-Data storytelling is:
-
-- analytical
-- strategic
-- interpretive
-
-NOT decorative.
-
----
-
-# 14. Designing Economic Dashboards
-
-This week students will build a:
-
-```text
-Macroeconomic Monitoring Dashboard
-```
-
----
-
-# Suggested Indicators
-
-| Indicator | Graph Type |
+| Part | Purpose |
 |---|---|
-| Inflation | Line graph |
-| GDP growth | Bar chart |
-| Exchange rate | Line graph |
-| Reserves | Interactive line graph |
-| Unemployment | Scatter or line graph |
+| Claim | State the main pattern |
+| Evidence | Refer to values or charts |
+| Meaning | Explain why it matters economically |
+| Caution | State what the dashboard cannot prove |
 
----
-
-# Suggested Structure
-
-| Position | Content |
-|---|---|
-| Top | Key macro indicators |
-| Middle | Inflation and exchange rate trends |
-| Bottom | GDP growth and unemployment |
-
----
-
-# Important Advice
-
-Every graph must answer:
+Example:
 
 ```text
-Why is this graph useful?
+The dashboard suggests that 2022 was the most severe macroeconomic stress point in the period. Inflation reached its highest value while GDP growth was strongly negative and the exchange rate increased sharply. This combination signals pressure on prices, output, and external stability. However, the dashboard is descriptive and should not be treated as a causal model.
 ```
 
 ---
 
-# 14. Open the Week 6 Live Notebook
+# 15. Week 6 Output
 
-[Open Week 6 Live Notebook — Save a Copy Before Editing](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week6/ECN4199_Week6_Live_Notebook.ipynb)
+By the end of Week 6, students should have:
 
----
-
-# 15. Download Dashboard Dataset
-
-[Download Dashboard Dataset](../data/sri_lanka_macro.csv)
-
----
-
-# 16. Plotly Cheat Sheet
-
-[Open Plotly Python Guide](https://plotly.com/python/)
+- at least three interactive charts
+- one multi-panel dashboard
+- clear titles, labels, and hover information
+- a short dashboard interpretation
+- one limitation or caution statement
 
 ---
 
-# 17. Dashboard Design Guide
+# 16. Summary
 
-Use the dashboard design principles listed above when building your Week 6 dashboard.
+Week 6 completes the applied analytics block.
 
----
-
-# 18. Live Coding Session
-
-## Step 1 — Import Libraries
-
-```python
-import pandas as pd
-import plotly.express as px
-```
-
----
-
-## Step 2 — Load Dataset
-
-```python
-data = pd.read_csv("sri_lanka_macro.csv")
-```
-
----
-
-## Step 3 — Create Interactive Inflation Graph
-
-```python
-fig = px.line(data,
-              x="Year",
-              y="Inflation",
-              title="Inflation Trends")
-
-fig.show()
-```
-
----
-
-## Step 4 — Create GDP Growth Bar Chart
-
-```python
-fig = px.bar(data,
-             x="Year",
-             y="GDP_Growth")
-
-fig.show()
-```
-
----
-
-## Step 5 — Create Scatter Plot
-
-```python
-fig = px.scatter(data,
-                 x="Inflation",
-                 y="Exchange_Rate_Change",
-                 hover_name="Year")
-
-fig.show()
-```
-
----
-
-## Step 6 — Add Multiple Indicators
-
-```python
-fig = px.line(data,
-              x="Year",
-              y=["Inflation",
-                 "Exchange_Rate_Change"])
-
-fig.show()
-```
-
----
-
-## Step 7 — Interpretation Questions
-
-Ask students:
-
-- When did macro instability intensify?
-- Are inflation and depreciation connected?
-- Which years are outliers?
-- What policy implications emerge?
-
----
-
-# 19. Interactive Mini Quiz
-
-## Question 1
-
-```python
-answer = input("What is the main purpose of a dashboard? A/B/C/D : ")
-
-if answer.upper() == "C":
-    print("Correct! Dashboards support visual decision-making.")
-else:
-    print("Incorrect.")
-```
-
----
-
-## Question 2
-
-```python
-answer = input("Which library is mainly used this week? A/B/C/D : ")
-
-if answer.upper() == "B":
-    print("Correct! Plotly is the main library.")
-else:
-    print("Incorrect.")
-```
-
----
-
-## Question 3
-
-```python
-answer = input("What can users do in interactive graphs? A/B/C/D : ")
-
-if answer.upper() == "B":
-    print("Correct! Users can hover and zoom.")
-else:
-    print("Incorrect.")
-```
-
----
-
-# 20. Self-Assessment Activity
-
-Students should complete the following tasks.
-
----
-
-## Task 1 — Create Interactive Graphs
-
-Create:
-
-- one interactive line graph
-- one bar chart
-- one scatter plot
-
----
-
-## Task 2 — Add Improvements
-
-Add:
-
-- titles
-- labels
-- hover information
-
----
-
-## Task 3 — Create Mini Dashboard
-
-Build a dashboard using:
-
-- inflation
-- GDP growth
-- exchange rate
-
----
-
-## Task 4 — Write Interpretation
-
-Write short analytical interpretation:
+The core lesson is:
 
 ```text
-What macroeconomic story does your dashboard tell?
+Economic analysis becomes valuable when it is communicated clearly, honestly, and usefully.
 ```
 
----
-
-## Task 5 — Identify Important Events
-
-Identify:
-
-- crisis periods
-- unusual observations
-- relationships between indicators
-
----
-
-## Task 6 — Improve Dashboard Design
-
-Improve:
-
-- readability
-- structure
-- clarity
-- interpretation
-
----
-
-# 21. Submission Instructions
-
-Submit:
-
-- completed dashboard notebook
-- interactive graphs
-- interpretation paragraph
-- dashboard screenshots
-
----
-
-# File Naming Convention
-
-```text
-Week6_YourName.ipynb
-```
-
----
-
-# Submission Link
-
-The lecturer will provide the live submission link during the class session.
-
----
-
-# 22. Common Errors
-
-## Problem 1 — Too Many Charts
-
-More graphs do NOT improve analysis.
-
-Simplify.
-
----
-
-## Problem 2 — Missing Titles
-
-Every graph must explain:
-
-- what is shown
-- units
-- variables
-
----
-
-## Problem 3 — Misleading Scales
-
-Axis scaling can distort interpretation.
-
----
-
-## Problem 4 — Random Colors
-
-Colors should communicate meaning.
-
----
-
-## Problem 5 — No Interpretation
-
-A dashboard without interpretation is incomplete analysis.
-
----
-
-# 23. AI Reflection Question
-
-AI can automatically generate dashboards.
-
-However:
-
-- AI may prioritize aesthetics over analysis
-- AI may ignore economic relevance
-- AI may produce misleading visual structures
-
-Reflection question:
-
-```text
-Why must economists think critically about dashboard design even when AI tools automate visualization?
-```
-
----
-
-# 24. Key Takeaways
-
-By the end of Week 6, students should understand:
-
-- what dashboards are
-- why interactive visualization matters
-- how to use Plotly
-- how to build interactive graphs
-- dashboard design principles
-- data storytelling
-- economic dashboard interpretation
-- how economists communicate complex information visually
-
----
-
-# 25. Before Week 7
-
-Before next week, students should:
-
-- rerun all Week 6 code
-- practice Plotly graphs
-- improve dashboard readability
-- review dashboard design principles
-- complete submission
+Students should now be able to move from raw data to preparation, exploration, interpretation, and communication.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 6 — Building Interactive Economic Dashboards with Plotly – ECN 4199 - Industrial Data Analytics</title>
+<title>Week 6 — Economic Dashboards and Data Storytelling – ECN 4199 - Industrial Data Analytics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -167,97 +167,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-6-interactive-dashboards-and-data-storytelling-for-economics" id="toc-week-6-interactive-dashboards-and-data-storytelling-for-economics" class="nav-link active" data-scroll-target="#week-6-interactive-dashboards-and-data-storytelling-for-economics">Week 6 — Interactive Dashboards and Data Storytelling for Economics</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">1. Learning Objectives</a></li>
-  <li><a href="#week-6-learning-materials" id="toc-week-6-learning-materials" class="nav-link" data-scroll-target="#week-6-learning-materials">2. Week 6 Learning Materials</a></li>
-  <li><a href="#what-is-a-dashboard" id="toc-what-is-a-dashboard" class="nav-link" data-scroll-target="#what-is-a-dashboard">3. What Is a Dashboard?</a></li>
-  <li><a href="#examples-of-economic-dashboards" id="toc-examples-of-economic-dashboards" class="nav-link" data-scroll-target="#examples-of-economic-dashboards">Examples of Economic Dashboards</a></li>
-  <li><a href="#important-idea" id="toc-important-idea" class="nav-link" data-scroll-target="#important-idea">Important Idea</a></li>
-  <li><a href="#why-dashboards-matter-in-economics" id="toc-why-dashboards-matter-in-economics" class="nav-link" data-scroll-target="#why-dashboards-matter-in-economics">4. Why Dashboards Matter in Economics</a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
-  <li><a href="#critical-lesson" id="toc-critical-lesson" class="nav-link" data-scroll-target="#critical-lesson">Critical Lesson</a></li>
-  <li><a href="#static-vs-interactive-visualization" id="toc-static-vs-interactive-visualization" class="nav-link" data-scroll-target="#static-vs-interactive-visualization">5. Static vs Interactive Visualization</a></li>
-  <li><a href="#static-graph-example" id="toc-static-graph-example" class="nav-link" data-scroll-target="#static-graph-example">Static Graph Example</a></li>
-  <li><a href="#interactive-graph-example" id="toc-interactive-graph-example" class="nav-link" data-scroll-target="#interactive-graph-example">Interactive Graph Example</a></li>
-  <li><a href="#advantages-of-interactive-graphs" id="toc-advantages-of-interactive-graphs" class="nav-link" data-scroll-target="#advantages-of-interactive-graphs">Advantages of Interactive Graphs</a></li>
-  <li><a href="#introduction-to-plotly" id="toc-introduction-to-plotly" class="nav-link" data-scroll-target="#introduction-to-plotly">6. Introduction to Plotly</a></li>
-  <li><a href="#import-plotly" id="toc-import-plotly" class="nav-link" data-scroll-target="#import-plotly">Import Plotly</a></li>
-  <li><a href="#basic-interactive-line-graph" id="toc-basic-interactive-line-graph" class="nav-link" data-scroll-target="#basic-interactive-line-graph">Basic Interactive Line Graph</a></li>
-  <li><a href="#what-happens" id="toc-what-happens" class="nav-link" data-scroll-target="#what-happens">What Happens?</a></li>
-  <li><a href="#building-interactive-line-graphs" id="toc-building-interactive-line-graphs" class="nav-link" data-scroll-target="#building-interactive-line-graphs">7. Building Interactive Line Graphs</a></li>
-  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example</a></li>
-  <li><a href="#adding-multiple-variables" id="toc-adding-multiple-variables" class="nav-link" data-scroll-target="#adding-multiple-variables">Adding Multiple Variables</a></li>
-  <li><a href="#interpretation-questions" id="toc-interpretation-questions" class="nav-link" data-scroll-target="#interpretation-questions">Interpretation Questions</a></li>
-  <li><a href="#building-interactive-bar-charts" id="toc-building-interactive-bar-charts" class="nav-link" data-scroll-target="#building-interactive-bar-charts">8. Building Interactive Bar Charts</a></li>
-  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example</a></li>
-  <li><a href="#example-with-colors" id="toc-example-with-colors" class="nav-link" data-scroll-target="#example-with-colors">Example with Colors</a></li>
-  <li><a href="#important-lesson" id="toc-important-lesson" class="nav-link" data-scroll-target="#important-lesson">Important Lesson</a></li>
-  <li><a href="#interactive-scatter-plots" id="toc-interactive-scatter-plots" class="nav-link" data-scroll-target="#interactive-scatter-plots">9. Interactive Scatter Plots</a></li>
-  <li><a href="#example-3" id="toc-example-3" class="nav-link" data-scroll-target="#example-3">Example</a></li>
-  <li><a href="#adding-labels" id="toc-adding-labels" class="nav-link" data-scroll-target="#adding-labels">Adding Labels</a></li>
-  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why This Matters</a></li>
-  <li><a href="#adding-hover-information" id="toc-adding-hover-information" class="nav-link" data-scroll-target="#adding-hover-information">10. Adding Hover Information</a></li>
-  <li><a href="#example-4" id="toc-example-4" class="nav-link" data-scroll-target="#example-4">Example</a></li>
-  <li><a href="#why-hover-information-matters" id="toc-why-hover-information-matters" class="nav-link" data-scroll-target="#why-hover-information-matters">Why Hover Information Matters</a></li>
-  <li><a href="#dashboard-design-principles" id="toc-dashboard-design-principles" class="nav-link" data-scroll-target="#dashboard-design-principles">11. Dashboard Design Principles</a></li>
-  <li><a href="#good-dashboard-principles" id="toc-good-dashboard-principles" class="nav-link" data-scroll-target="#good-dashboard-principles">Good Dashboard Principles</a></li>
-  <li><a href="#important-warning" id="toc-important-warning" class="nav-link" data-scroll-target="#important-warning">Important Warning</a></li>
-  <li><a href="#multi-chart-dashboards" id="toc-multi-chart-dashboards" class="nav-link" data-scroll-target="#multi-chart-dashboards">12. Multi-Chart Dashboards</a></li>
-  <li><a href="#example-dashboard-structure" id="toc-example-dashboard-structure" class="nav-link" data-scroll-target="#example-dashboard-structure">Example Dashboard Structure</a></li>
-  <li><a href="#import-dashboard-tools" id="toc-import-dashboard-tools" class="nav-link" data-scroll-target="#import-dashboard-tools">Import Dashboard Tools</a></li>
-  <li><a href="#simple-subplot-example" id="toc-simple-subplot-example" class="nav-link" data-scroll-target="#simple-subplot-example">Simple Subplot Example</a></li>
-  <li><a href="#storytelling-with-dashboards" id="toc-storytelling-with-dashboards" class="nav-link" data-scroll-target="#storytelling-with-dashboards">13. Storytelling with Dashboards</a></li>
-  <li><a href="#weak-dashboard" id="toc-weak-dashboard" class="nav-link" data-scroll-target="#weak-dashboard">Weak Dashboard</a></li>
-  <li><a href="#strong-dashboard" id="toc-strong-dashboard" class="nav-link" data-scroll-target="#strong-dashboard">Strong Dashboard</a></li>
-  <li><a href="#example-narrative" id="toc-example-narrative" class="nav-link" data-scroll-target="#example-narrative">Example Narrative</a></li>
-  <li><a href="#critical-lesson-1" id="toc-critical-lesson-1" class="nav-link" data-scroll-target="#critical-lesson-1">Critical Lesson</a></li>
-  <li><a href="#designing-economic-dashboards" id="toc-designing-economic-dashboards" class="nav-link" data-scroll-target="#designing-economic-dashboards">14. Designing Economic Dashboards</a></li>
-  <li><a href="#suggested-indicators" id="toc-suggested-indicators" class="nav-link" data-scroll-target="#suggested-indicators">Suggested Indicators</a></li>
-  <li><a href="#suggested-structure" id="toc-suggested-structure" class="nav-link" data-scroll-target="#suggested-structure">Suggested Structure</a></li>
-  <li><a href="#important-advice" id="toc-important-advice" class="nav-link" data-scroll-target="#important-advice">Important Advice</a></li>
-  <li><a href="#open-the-week-6-live-notebook" id="toc-open-the-week-6-live-notebook" class="nav-link" data-scroll-target="#open-the-week-6-live-notebook">14. Open the Week 6 Live Notebook</a></li>
-  <li><a href="#download-dashboard-dataset" id="toc-download-dashboard-dataset" class="nav-link" data-scroll-target="#download-dashboard-dataset">15. Download Dashboard Dataset</a></li>
-  <li><a href="#plotly-cheat-sheet" id="toc-plotly-cheat-sheet" class="nav-link" data-scroll-target="#plotly-cheat-sheet">16. Plotly Cheat Sheet</a></li>
-  <li><a href="#dashboard-design-guide" id="toc-dashboard-design-guide" class="nav-link" data-scroll-target="#dashboard-design-guide">17. Dashboard Design Guide</a></li>
-  <li><a href="#live-coding-session" id="toc-live-coding-session" class="nav-link" data-scroll-target="#live-coding-session">18. Live Coding Session</a>
-  <ul class="collapse">
-  <li><a href="#step-1-import-libraries" id="toc-step-1-import-libraries" class="nav-link" data-scroll-target="#step-1-import-libraries">Step 1 — Import Libraries</a></li>
-  <li><a href="#step-2-load-dataset" id="toc-step-2-load-dataset" class="nav-link" data-scroll-target="#step-2-load-dataset">Step 2 — Load Dataset</a></li>
-  <li><a href="#step-3-create-interactive-inflation-graph" id="toc-step-3-create-interactive-inflation-graph" class="nav-link" data-scroll-target="#step-3-create-interactive-inflation-graph">Step 3 — Create Interactive Inflation Graph</a></li>
-  <li><a href="#step-4-create-gdp-growth-bar-chart" id="toc-step-4-create-gdp-growth-bar-chart" class="nav-link" data-scroll-target="#step-4-create-gdp-growth-bar-chart">Step 4 — Create GDP Growth Bar Chart</a></li>
-  <li><a href="#step-5-create-scatter-plot" id="toc-step-5-create-scatter-plot" class="nav-link" data-scroll-target="#step-5-create-scatter-plot">Step 5 — Create Scatter Plot</a></li>
-  <li><a href="#step-6-add-multiple-indicators" id="toc-step-6-add-multiple-indicators" class="nav-link" data-scroll-target="#step-6-add-multiple-indicators">Step 6 — Add Multiple Indicators</a></li>
-  <li><a href="#step-7-interpretation-questions" id="toc-step-7-interpretation-questions" class="nav-link" data-scroll-target="#step-7-interpretation-questions">Step 7 — Interpretation Questions</a></li>
-  </ul></li>
-  <li><a href="#interactive-mini-quiz" id="toc-interactive-mini-quiz" class="nav-link" data-scroll-target="#interactive-mini-quiz">19. Interactive Mini Quiz</a>
-  <ul class="collapse">
-  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
-  </ul></li>
-  <li><a href="#self-assessment-activity" id="toc-self-assessment-activity" class="nav-link" data-scroll-target="#self-assessment-activity">20. Self-Assessment Activity</a>
-  <ul class="collapse">
-  <li><a href="#task-1-create-interactive-graphs" id="toc-task-1-create-interactive-graphs" class="nav-link" data-scroll-target="#task-1-create-interactive-graphs">Task 1 — Create Interactive Graphs</a></li>
-  <li><a href="#task-2-add-improvements" id="toc-task-2-add-improvements" class="nav-link" data-scroll-target="#task-2-add-improvements">Task 2 — Add Improvements</a></li>
-  <li><a href="#task-3-create-mini-dashboard" id="toc-task-3-create-mini-dashboard" class="nav-link" data-scroll-target="#task-3-create-mini-dashboard">Task 3 — Create Mini Dashboard</a></li>
-  <li><a href="#task-4-write-interpretation" id="toc-task-4-write-interpretation" class="nav-link" data-scroll-target="#task-4-write-interpretation">Task 4 — Write Interpretation</a></li>
-  <li><a href="#task-5-identify-important-events" id="toc-task-5-identify-important-events" class="nav-link" data-scroll-target="#task-5-identify-important-events">Task 5 — Identify Important Events</a></li>
-  <li><a href="#task-6-improve-dashboard-design" id="toc-task-6-improve-dashboard-design" class="nav-link" data-scroll-target="#task-6-improve-dashboard-design">Task 6 — Improve Dashboard Design</a></li>
-  </ul></li>
-  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">21. Submission Instructions</a></li>
-  <li><a href="#file-naming-convention" id="toc-file-naming-convention" class="nav-link" data-scroll-target="#file-naming-convention">File Naming Convention</a></li>
-  <li><a href="#submission-link" id="toc-submission-link" class="nav-link" data-scroll-target="#submission-link">Submission Link</a></li>
-  <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">22. Common Errors</a>
-  <ul class="collapse">
-  <li><a href="#problem-1-too-many-charts" id="toc-problem-1-too-many-charts" class="nav-link" data-scroll-target="#problem-1-too-many-charts">Problem 1 — Too Many Charts</a></li>
-  <li><a href="#problem-2-missing-titles" id="toc-problem-2-missing-titles" class="nav-link" data-scroll-target="#problem-2-missing-titles">Problem 2 — Missing Titles</a></li>
-  <li><a href="#problem-3-misleading-scales" id="toc-problem-3-misleading-scales" class="nav-link" data-scroll-target="#problem-3-misleading-scales">Problem 3 — Misleading Scales</a></li>
-  <li><a href="#problem-4-random-colors" id="toc-problem-4-random-colors" class="nav-link" data-scroll-target="#problem-4-random-colors">Problem 4 — Random Colors</a></li>
-  <li><a href="#problem-5-no-interpretation" id="toc-problem-5-no-interpretation" class="nav-link" data-scroll-target="#problem-5-no-interpretation">Problem 5 — No Interpretation</a></li>
-  </ul></li>
-  <li><a href="#ai-reflection-question" id="toc-ai-reflection-question" class="nav-link" data-scroll-target="#ai-reflection-question">23. AI Reflection Question</a></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">24. Key Takeaways</a></li>
-  <li><a href="#before-week-7" id="toc-before-week-7" class="nav-link" data-scroll-target="#before-week-7">25. Before Week 7</a></li>
+  <li><a href="#week-6-economic-dashboards-and-data-storytelling" id="toc-week-6-economic-dashboards-and-data-storytelling" class="nav-link active" data-scroll-target="#week-6-economic-dashboards-and-data-storytelling">Week 6 — Economic Dashboards and Data Storytelling</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">1. Learning Outcomes</a></li>
+  <li><a href="#two-hour-learning-plan" id="toc-two-hour-learning-plan" class="nav-link" data-scroll-target="#two-hour-learning-plan">2. Two-Hour Learning Plan</a></li>
+  <li><a href="#week-6-learning-materials" id="toc-week-6-learning-materials" class="nav-link" data-scroll-target="#week-6-learning-materials">3. Week 6 Learning Materials</a></li>
+  <li><a href="#why-week-6-is-the-next-step" id="toc-why-week-6-is-the-next-step" class="nav-link" data-scroll-target="#why-week-6-is-the-next-step">4. Why Week 6 Is the Next Step</a></li>
+  <li><a href="#what-is-a-dashboard" id="toc-what-is-a-dashboard" class="nav-link" data-scroll-target="#what-is-a-dashboard">5. What Is a Dashboard?</a></li>
+  <li><a href="#dashboard-design-questions" id="toc-dashboard-design-questions" class="nav-link" data-scroll-target="#dashboard-design-questions">6. Dashboard Design Questions</a></li>
+  <li><a href="#chart-selection" id="toc-chart-selection" class="nav-link" data-scroll-target="#chart-selection">7. Chart Selection</a></li>
+  <li><a href="#load-the-data" id="toc-load-the-data" class="nav-link" data-scroll-target="#load-the-data">8. Load the Data</a></li>
+  <li><a href="#interactive-line-chart" id="toc-interactive-line-chart" class="nav-link" data-scroll-target="#interactive-line-chart">9. Interactive Line Chart</a></li>
+  <li><a href="#interactive-bar-chart" id="toc-interactive-bar-chart" class="nav-link" data-scroll-target="#interactive-bar-chart">10. Interactive Bar Chart</a></li>
+  <li><a href="#interactive-scatter-plot" id="toc-interactive-scatter-plot" class="nav-link" data-scroll-target="#interactive-scatter-plot">11. Interactive Scatter Plot</a></li>
+  <li><a href="#building-a-monitoring-dashboard" id="toc-building-a-monitoring-dashboard" class="nav-link" data-scroll-target="#building-a-monitoring-dashboard">12. Building a Monitoring Dashboard</a></li>
+  <li><a href="#dashboard-design-principles" id="toc-dashboard-design-principles" class="nav-link" data-scroll-target="#dashboard-design-principles">13. Dashboard Design Principles</a></li>
+  <li><a href="#data-storytelling" id="toc-data-storytelling" class="nav-link" data-scroll-target="#data-storytelling">14. Data Storytelling</a></li>
+  <li><a href="#week-6-output" id="toc-week-6-output" class="nav-link" data-scroll-target="#week-6-output">15. Week 6 Output</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">16. Summary</a></li>
   </ul>
 </nav>
     </div>
@@ -266,7 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 6 — Building Interactive Economic Dashboards with Plotly</h1>
+<h1 class="title">Week 6 — Economic Dashboards and Data Storytelling</h1>
 </div>
 
 
@@ -283,54 +209,87 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="week-6-interactive-dashboards-and-data-storytelling-for-economics" class="level1">
-<h1>Week 6 — Interactive Dashboards and Data Storytelling for Economics</h1>
-<p>Weeks 1–5 focused on:</p>
-<ul>
-<li>Python fundamentals</li>
-<li>data handling</li>
-<li>descriptive statistics</li>
-<li>visualization</li>
-</ul>
-<p>Now students move from:</p>
-<pre class="text"><code>creating graphs</code></pre>
-<p>to:</p>
-<pre class="text"><code>building analytical systems</code></pre>
-<p>This week introduces:</p>
-<ul>
-<li>interactive dashboards</li>
-<li>dynamic visualization</li>
-<li>dashboard logic</li>
-<li>user interaction</li>
-<li>exploratory analysis</li>
-<li>data storytelling</li>
-</ul>
-<p>Modern economists increasingly communicate through:</p>
-<ul>
-<li>dashboards</li>
-<li>interactive reports</li>
-<li>web applications</li>
-<li>real-time monitoring systems</li>
-</ul>
-<p>This week is a major transition.</p>
+<section id="week-6-economic-dashboards-and-data-storytelling" class="level1">
+<h1>Week 6 — Economic Dashboards and Data Storytelling</h1>
+<p>Week 4 prepared the data.</p>
+<p>Week 5 generated evidence.</p>
+<p>Week 6 asks students to communicate the evidence clearly.</p>
+<p>The central question is:</p>
+<pre class="text"><code>How can we turn analysis into a dashboard that supports understanding and decision-making?</code></pre>
+<p>This week is not about making graphs look decorative. It is about designing an analytical communication product.</p>
 <hr>
 </section>
-<section id="learning-objectives" class="level1">
-<h1>1. Learning Objectives</h1>
+<section id="learning-outcomes" class="level1">
+<h1>1. Learning Outcomes</h1>
 <p>By the end of this week, students should be able to:</p>
 <ul>
-<li>explain what dashboards are</li>
-<li>distinguish static vs interactive visualization</li>
+<li>explain the purpose of an economic dashboard</li>
+<li>select charts based on analytical questions</li>
 <li>build interactive Plotly graphs</li>
-<li>create dashboard layouts</li>
-<li>add hover information</li>
-<li>design multi-chart dashboards</li>
-<li>communicate economic insights interactively</li>
+<li>combine indicators into a coherent dashboard</li>
+<li>use titles, labels, hover information, and layout to support interpretation</li>
+<li>avoid common dashboard design mistakes</li>
+<li>write a short data story that connects evidence to economic meaning</li>
 </ul>
+<hr>
+</section>
+<section id="two-hour-learning-plan" class="level1">
+<h1>2. Two-Hour Learning Plan</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Time</th>
+<th>Section</th>
+<th>Main Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0-10 minutes</td>
+<td>Week 5 recap</td>
+<td>Main findings from exploratory analysis</td>
+</tr>
+<tr class="even">
+<td>10-25 minutes</td>
+<td>Dashboard purpose</td>
+<td>Decision support, not decoration</td>
+</tr>
+<tr class="odd">
+<td>25-45 minutes</td>
+<td>Chart selection</td>
+<td>Match chart type to question</td>
+</tr>
+<tr class="even">
+<td>45-70 minutes</td>
+<td>Interactive graphs</td>
+<td>Plotly line, bar, and scatter charts</td>
+</tr>
+<tr class="odd">
+<td>70-95 minutes</td>
+<td>Dashboard layout</td>
+<td>Build a multi-panel monitoring dashboard</td>
+</tr>
+<tr class="even">
+<td>95-115 minutes</td>
+<td>Data storytelling</td>
+<td>Claim, evidence, implication, caution</td>
+</tr>
+<tr class="odd">
+<td>115-120 minutes</td>
+<td>Assignment briefing</td>
+<td>Final dashboard submission</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
 <section id="week-6-learning-materials" class="level1">
-<h1>2. Week 6 Learning Materials</h1>
+<h1>3. Week 6 Learning Materials</h1>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -342,13 +301,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>Week 6 Live Notebook</td>
-<td>Build the interactive Plotly examples in Google Colab</td>
+<td>Build the dashboard in Google Colab</td>
 <td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week6/ECN4199_Week6_Live_Notebook.ipynb">Open Week 6 Live Notebook</a></td>
 </tr>
 <tr class="even">
 <td>Macroeconomic Dataset</td>
 <td>Download the CSV file used in class</td>
 <td><a href="../data/sri_lanka_macro.csv">Download sri_lanka_macro.csv</a></td>
+</tr>
+<tr class="odd">
+<td>Plotly Guide</td>
+<td>Reference for interactive charts</td>
+<td><a href="https://plotly.com/python/">Open Plotly Python Guide</a></td>
 </tr>
 </tbody>
 </table>
@@ -358,811 +322,291 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre class="text"><code>Week06_IndexNumber_Name.ipynb</code></pre>
 <hr>
 </section>
-<section id="what-is-a-dashboard" class="level1">
-<h1>3. What Is a Dashboard?</h1>
-<p>A dashboard is:</p>
-<pre class="text"><code>a visual interface that organizes and displays important information for decision-making</code></pre>
-<p>Dashboards combine:</p>
+<section id="why-week-6-is-the-next-step" class="level1">
+<h1>4. Why Week 6 Is the Next Step</h1>
+<p>Students have already learned how to:</p>
 <ul>
-<li>graphs</li>
-<li>indicators</li>
-<li>summaries</li>
-<li>tables</li>
-<li>filters</li>
-<li>interactive elements</li>
+<li>run Python code</li>
+<li>inspect and clean data</li>
+<li>create variables</li>
+<li>generate statistics</li>
+<li>create graphs</li>
+<li>interpret evidence</li>
 </ul>
-<hr>
-</section>
-<section id="examples-of-economic-dashboards" class="level1">
-<h1>Examples of Economic Dashboards</h1>
-<p>Economists use dashboards for:</p>
-<ul>
-<li>inflation monitoring</li>
-<li>exchange rate tracking</li>
-<li>labour market analysis</li>
-<li>trade monitoring</li>
-<li>financial market surveillance</li>
-<li>poverty mapping</li>
-</ul>
-<hr>
-</section>
-<section id="important-idea" class="level1">
-<h1>Important Idea</h1>
-<p>A dashboard is NOT:</p>
-<pre class="text"><code>many graphs on one page</code></pre>
-<p>A good dashboard:</p>
-<ul>
-<li>answers questions</li>
-<li>guides interpretation</li>
-<li>highlights patterns</li>
-<li>supports decisions</li>
-</ul>
-<hr>
-</section>
-<section id="why-dashboards-matter-in-economics" class="level1">
-<h1>4. Why Dashboards Matter in Economics</h1>
-<p>Modern economics increasingly involves:</p>
-<ul>
-<li>large datasets</li>
-<li>multiple indicators</li>
-<li>real-time information</li>
-<li>policy communication</li>
-</ul>
-<p>Dashboards help:</p>
-<ul>
-<li>policymakers</li>
-<li>researchers</li>
-<li>firms</li>
-<li>journalists</li>
-<li>the public</li>
-</ul>
-<p>understand complex information quickly.</p>
-<hr>
-</section>
-<section id="example" class="level1">
-<h1>Example</h1>
-<p>A central bank dashboard may display:</p>
-<ul>
-<li>inflation</li>
-<li>reserves</li>
-<li>exchange rates</li>
-<li>interest rates</li>
-<li>unemployment</li>
-<li>money supply</li>
-</ul>
-<p>within one integrated system.</p>
-<hr>
-</section>
-<section id="critical-lesson" class="level1">
-<h1>Critical Lesson</h1>
-<p>Visualization is NOT decoration.</p>
-<p>Visualization is:</p>
-<pre class="text"><code>economic communication</code></pre>
-<hr>
-</section>
-<section id="static-vs-interactive-visualization" class="level1">
-<h1>5. Static vs Interactive Visualization</h1>
-<p>Traditional graphs are static.</p>
-<p>Interactive graphs allow users to:</p>
-<ul>
-<li>zoom</li>
-<li>hover</li>
-<li>filter</li>
-<li>explore relationships</li>
-<li>inspect exact values</li>
-</ul>
-<hr>
-</section>
-<section id="static-graph-example" class="level1">
-<h1>Static Graph Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Year"</span>], data[<span class="st">"Inflation"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="interactive-graph-example" class="level1">
-<h1>Interactive Graph Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(data,</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>              x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span><span class="st">"Inflation"</span>)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="advantages-of-interactive-graphs" class="level1">
-<h1>Advantages of Interactive Graphs</h1>
+<p>Week 6 combines those skills into one communication workflow.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Feature</th>
-<th>Benefit</th>
+<th>Stage</th>
+<th>Student Output</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Hovering</td>
-<td>Shows exact values</td>
+<td>Week 4</td>
+<td>Clean dataset</td>
 </tr>
 <tr class="even">
-<td>Zooming</td>
-<td>Explore details</td>
+<td>Week 5</td>
+<td>Evidence and interpretation</td>
 </tr>
 <tr class="odd">
-<td>Interactivity</td>
-<td>Better exploration</td>
-</tr>
-<tr class="even">
-<td>Dynamic filtering</td>
-<td>Flexible analysis</td>
+<td>Week 6</td>
+<td>Dashboard and data story</td>
 </tr>
 </tbody>
 </table>
 <hr>
 </section>
-<section id="introduction-to-plotly" class="level1">
-<h1>6. Introduction to Plotly</h1>
-<p>Plotly is one of the most widely used interactive visualization libraries.</p>
-<p>It allows us to create:</p>
-<ul>
-<li>interactive charts</li>
-<li>dashboards</li>
-<li>web-ready visualizations</li>
-</ul>
-<hr>
-</section>
-<section id="import-plotly" class="level1">
-<h1>Import Plotly</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="basic-interactive-line-graph" class="level1">
-<h1>Basic Interactive Line Graph</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(data,</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>              x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span><span class="st">"Inflation"</span>)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="what-happens" class="level1">
-<h1>What Happens?</h1>
-<p>Students can:</p>
-<ul>
-<li>hover over values</li>
-<li>zoom into periods</li>
-<li>interact with the graph</li>
-</ul>
-<hr>
-</section>
-<section id="building-interactive-line-graphs" class="level1">
-<h1>7. Building Interactive Line Graphs</h1>
-<p>Line graphs are ideal for:</p>
+<section id="what-is-a-dashboard" class="level1">
+<h1>5. What Is a Dashboard?</h1>
+<p>A dashboard is a structured visual interface that helps users understand important information quickly.</p>
+<p>In economics, dashboards may be used to monitor:</p>
 <ul>
 <li>inflation</li>
 <li>GDP growth</li>
-<li>unemployment</li>
 <li>exchange rates</li>
 <li>reserves</li>
+<li>unemployment</li>
+<li>fiscal indicators</li>
+<li>household welfare</li>
 </ul>
+<p>A dashboard is not:</p>
+<pre class="text"><code>many charts placed on one page</code></pre>
+<p>A dashboard is:</p>
+<pre class="text"><code>a guided analytical view of a problem</code></pre>
 <hr>
 </section>
-<section id="example-1" class="level1">
-<h1>Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(data,</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>              x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span><span class="st">"Inflation"</span>,</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>              title<span class="op">=</span><span class="st">"Inflation Trends in Sri Lanka"</span>)</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="dashboard-design-questions" class="level1">
+<h1>6. Dashboard Design Questions</h1>
+<p>Before building a dashboard, answer:</p>
+<ol type="1">
+<li>Who is the audience?</li>
+<li>What question should the dashboard answer?</li>
+<li>Which indicators are most important?</li>
+<li>Which charts best communicate those indicators?</li>
+<li>What should the user notice first?</li>
+<li>What interpretation should accompany the visuals?</li>
+</ol>
+<p>For this course, the Week 6 dashboard answers:</p>
+<pre class="text"><code>How did Sri Lanka's macroeconomic conditions change across the period?</code></pre>
 <hr>
 </section>
-<section id="adding-multiple-variables" class="level1">
-<h1>Adding Multiple Variables</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(data,</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>              x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span>[<span class="st">"Inflation"</span>, <span class="st">"GDP_Growth"</span>])</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="interpretation-questions" class="level1">
-<h1>Interpretation Questions</h1>
-<p>Ask:</p>
-<ul>
-<li>Which variable is more volatile?</li>
-<li>Do variables move together?</li>
-<li>When do structural breaks occur?</li>
-</ul>
-<hr>
-</section>
-<section id="building-interactive-bar-charts" class="level1">
-<h1>8. Building Interactive Bar Charts</h1>
-<p>Bar charts are useful for:</p>
-<ul>
-<li>comparing regions</li>
-<li>comparing sectors</li>
-<li>comparing years</li>
-<li>comparing categories</li>
-</ul>
-<hr>
-</section>
-<section id="example-2" class="level1">
-<h1>Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.bar(data,</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>             x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>             y<span class="op">=</span><span class="st">"GDP_Growth"</span>)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="example-with-colors" class="level1">
-<h1>Example with Colors</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.bar(data,</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>             x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>             y<span class="op">=</span><span class="st">"GDP_Growth"</span>,</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>             color<span class="op">=</span><span class="st">"GDP_Growth"</span>)</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="important-lesson" class="level1">
-<h1>Important Lesson</h1>
-<p>Color should support interpretation.</p>
-<p>Do NOT use colors randomly.</p>
-<hr>
-</section>
-<section id="interactive-scatter-plots" class="level1">
-<h1>9. Interactive Scatter Plots</h1>
-<p>Scatter plots help explore relationships interactively.</p>
-<hr>
-</section>
-<section id="example-3" class="level1">
-<h1>Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.scatter(data,</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>                 x<span class="op">=</span><span class="st">"Inflation"</span>,</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>                 y<span class="op">=</span><span class="st">"Exchange_Rate_Change"</span>)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="adding-labels" class="level1">
-<h1>Adding Labels</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.scatter(data,</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>                 x<span class="op">=</span><span class="st">"Inflation"</span>,</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                 y<span class="op">=</span><span class="st">"Exchange_Rate_Change"</span>,</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>                 hover_name<span class="op">=</span><span class="st">"Year"</span>)</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="why-this-matters" class="level1">
-<h1>Why This Matters</h1>
-<p>Users can:</p>
-<ul>
-<li>identify outliers</li>
-<li>inspect specific years</li>
-<li>explore relationships dynamically</li>
-</ul>
-<hr>
-</section>
-<section id="adding-hover-information" class="level1">
-<h1>10. Adding Hover Information</h1>
-<p>Hover information improves analytical depth.</p>
-<hr>
-</section>
-<section id="example-4" class="level1">
-<h1>Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(data,</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>              x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span><span class="st">"Inflation"</span>,</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>              hover_data<span class="op">=</span>[<span class="st">"GDP_Growth"</span>,</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>                          <span class="st">"Exchange_Rate"</span>])</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="why-hover-information-matters" class="level1">
-<h1>Why Hover Information Matters</h1>
-<p>Users can inspect:</p>
-<ul>
-<li>exact values</li>
-<li>related indicators</li>
-<li>contextual information</li>
-</ul>
-<hr>
-</section>
-<section id="dashboard-design-principles" class="level1">
-<h1>11. Dashboard Design Principles</h1>
-<p>Most beginner dashboards are terrible.</p>
-<p>Why?</p>
-<p>Because they:</p>
-<ul>
-<li>overload information</li>
-<li>lack structure</li>
-<li>lack hierarchy</li>
-<li>prioritize appearance over analysis</li>
-</ul>
-<hr>
-</section>
-<section id="good-dashboard-principles" class="level1">
-<h1>Good Dashboard Principles</h1>
+<section id="chart-selection" class="level1">
+<h1>7. Chart Selection</h1>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Principle</th>
-<th>Meaning</th>
+<th>Question</th>
+<th>Recommended Chart</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Simplicity</td>
-<td>Avoid clutter</td>
+<td>How did a variable change over time?</td>
+<td>Line chart</td>
 </tr>
 <tr class="even">
-<td>Hierarchy</td>
-<td>Important information first</td>
-</tr>
-<tr class="odd">
-<td>Consistency</td>
-<td>Similar styles</td>
-</tr>
-<tr class="even">
-<td>Readability</td>
-<td>Clear labels</td>
-</tr>
-<tr class="odd">
-<td>Relevance</td>
-<td>Only useful graphs</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="important-warning" class="level1">
-<h1>Important Warning</h1>
-<p>More charts do NOT mean:</p>
-<pre class="text"><code>better analysis</code></pre>
-<hr>
-</section>
-<section id="multi-chart-dashboards" class="level1">
-<h1>12. Multi-Chart Dashboards</h1>
-<p>Dashboards often combine multiple visualizations.</p>
-<hr>
-</section>
-<section id="example-dashboard-structure" class="level1">
-<h1>Example Dashboard Structure</h1>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Section</th>
-<th>Content</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Top panel</td>
-<td>Key indicators</td>
-</tr>
-<tr class="even">
-<td>Middle panel</td>
-<td>Trends</td>
-</tr>
-<tr class="odd">
-<td>Bottom panel</td>
-<td>Relationships</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="import-dashboard-tools" class="level1">
-<h1>Import Dashboard Tools</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotly.subplots <span class="im">import</span> make_subplots</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="simple-subplot-example" class="level1">
-<h1>Simple Subplot Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> make_subplots(rows<span class="op">=</span><span class="dv">2</span>,</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>                    cols<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>fig.add_trace(</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    go.Scatter(x<span class="op">=</span>data[<span class="st">"Year"</span>],</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>               y<span class="op">=</span>data[<span class="st">"Inflation"</span>]),</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    row<span class="op">=</span><span class="dv">1</span>,</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    col<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>fig.add_trace(</span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    go.Scatter(x<span class="op">=</span>data[<span class="st">"Year"</span>],</span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>               y<span class="op">=</span>data[<span class="st">"GDP_Growth"</span>]),</span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>    row<span class="op">=</span><span class="dv">2</span>,</span>
-<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    col<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="storytelling-with-dashboards" class="level1">
-<h1>13. Storytelling with Dashboards</h1>
-<p>Dashboards should guide interpretation.</p>
-<p>A dashboard should answer:</p>
-<ul>
-<li>What happened?</li>
-<li>Why does it matter?</li>
-<li>What patterns exist?</li>
-<li>What should decision-makers notice?</li>
-</ul>
-<hr>
-</section>
-<section id="weak-dashboard" class="level1">
-<h1>Weak Dashboard</h1>
-<pre class="text"><code>Many disconnected graphs</code></pre>
-<hr>
-</section>
-<section id="strong-dashboard" class="level1">
-<h1>Strong Dashboard</h1>
-<pre class="text"><code>A coherent analytical story</code></pre>
-<hr>
-</section>
-<section id="example-narrative" class="level1">
-<h1>Example Narrative</h1>
-<pre class="text"><code>Inflation accelerated sharply after 2021, coinciding with severe exchange rate depreciation and negative GDP growth.</code></pre>
-<hr>
-</section>
-<section id="critical-lesson-1" class="level1">
-<h1>Critical Lesson</h1>
-<p>Data storytelling is:</p>
-<ul>
-<li>analytical</li>
-<li>strategic</li>
-<li>interpretive</li>
-</ul>
-<p>NOT decorative.</p>
-<hr>
-</section>
-<section id="designing-economic-dashboards" class="level1">
-<h1>14. Designing Economic Dashboards</h1>
-<p>This week students will build a:</p>
-<pre class="text"><code>Macroeconomic Monitoring Dashboard</code></pre>
-<hr>
-</section>
-<section id="suggested-indicators" class="level1">
-<h1>Suggested Indicators</h1>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Indicator</th>
-<th>Graph Type</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Inflation</td>
-<td>Line graph</td>
-</tr>
-<tr class="even">
-<td>GDP growth</td>
+<td>Which year had the worst outcome?</td>
 <td>Bar chart</td>
 </tr>
 <tr class="odd">
-<td>Exchange rate</td>
-<td>Line graph</td>
+<td>Do two variables move together?</td>
+<td>Scatter plot</td>
 </tr>
 <tr class="even">
-<td>Reserves</td>
-<td>Interactive line graph</td>
-</tr>
-<tr class="odd">
-<td>Unemployment</td>
-<td>Scatter or line graph</td>
+<td>Which indicators reached warning levels?</td>
+<td>Table or highlighted indicators</td>
 </tr>
 </tbody>
 </table>
+<p>The chart should follow the question.</p>
+<p>Do not choose a graph only because it looks attractive.</p>
 <hr>
 </section>
-<section id="suggested-structure" class="level1">
-<h1>Suggested Structure</h1>
+<section id="load-the-data" class="level1">
+<h1>8. Load the Data</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotly.subplots <span class="im">import</span> make_subplots</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/sri_lanka_macro.csv"</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Exchange_Rate_Change"</span>] <span class="op">=</span> data[<span class="st">"Exchange_Rate"</span>].pct_change() <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Recession"</span>] <span class="op">=</span> data[<span class="st">"GDP_Growth"</span>] <span class="op">&lt;</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="interactive-line-chart" class="level1">
+<h1>9. Interactive Line Chart</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    data,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"Year"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">"Inflation"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    markers<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"Inflation Over Time"</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use line charts for trends.</p>
+<p>Interpretation:</p>
+<pre class="text"><code>The chart helps identify when inflation began to accelerate and when it returned toward lower levels.</code></pre>
+<hr>
+</section>
+<section id="interactive-bar-chart" class="level1">
+<h1>10. Interactive Bar Chart</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.bar(</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    data,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"Year"</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">"GDP_Growth"</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">"GDP_Growth"</span>,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"GDP Growth by Year"</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use bar charts for comparisons.</p>
+<p>Add interpretation:</p>
+<ul>
+<li>Which year had the largest contraction?</li>
+<li>Did the contraction coincide with high inflation?</li>
+<li>What does this suggest about macroeconomic stress?</li>
+</ul>
+<hr>
+</section>
+<section id="interactive-scatter-plot" class="level1">
+<h1>11. Interactive Scatter Plot</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.scatter(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    data,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"Inflation"</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">"Exchange_Rate_Change"</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    hover_name<span class="op">=</span><span class="st">"Year"</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"Inflation and Exchange Rate Change"</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use scatter plots for relationships.</p>
+<p>Interpret carefully:</p>
+<pre class="text"><code>The chart can show association, but not causation.</code></pre>
+<hr>
+</section>
+<section id="building-a-monitoring-dashboard" class="level1">
+<h1>12. Building a Monitoring Dashboard</h1>
+<p>A simple dashboard can combine multiple indicators.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> make_subplots(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    rows<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    cols<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    subplot_titles<span class="op">=</span>(</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Inflation"</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">"GDP Growth"</span>,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Exchange Rate"</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>fig.add_trace(</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    go.Scatter(x<span class="op">=</span>data[<span class="st">"Year"</span>], y<span class="op">=</span>data[<span class="st">"Inflation"</span>], mode<span class="op">=</span><span class="st">"lines+markers"</span>, name<span class="op">=</span><span class="st">"Inflation"</span>),</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    row<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    col<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>fig.add_trace(</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    go.Bar(x<span class="op">=</span>data[<span class="st">"Year"</span>], y<span class="op">=</span>data[<span class="st">"GDP_Growth"</span>], name<span class="op">=</span><span class="st">"GDP Growth"</span>),</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    row<span class="op">=</span><span class="dv">2</span>,</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    col<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>fig.add_trace(</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>    go.Scatter(x<span class="op">=</span>data[<span class="st">"Year"</span>], y<span class="op">=</span>data[<span class="st">"Exchange_Rate"</span>], mode<span class="op">=</span><span class="st">"lines+markers"</span>, name<span class="op">=</span><span class="st">"Exchange Rate"</span>),</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>    row<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>    col<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>fig.update_layout(</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="dv">850</span>,</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>    title_text<span class="op">=</span><span class="st">"Macroeconomic Monitoring Dashboard"</span></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="dashboard-design-principles" class="level1">
+<h1>13. Dashboard Design Principles</h1>
+<p>Good dashboards are:</p>
+<ul>
+<li>focused</li>
+<li>readable</li>
+<li>consistent</li>
+<li>clearly labelled</li>
+<li>connected to an analytical question</li>
+<li>supported by interpretation</li>
+</ul>
+<p>Avoid:</p>
+<ul>
+<li>too many charts</li>
+<li>unclear titles</li>
+<li>missing units</li>
+<li>random colors</li>
+<li>decorative graphs without purpose</li>
+<li>conclusions that go beyond the evidence</li>
+</ul>
+<hr>
+</section>
+<section id="data-storytelling" class="level1">
+<h1>14. Data Storytelling</h1>
+<p>A dashboard should be accompanied by a short story.</p>
+<p>Use this structure:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Position</th>
-<th>Content</th>
+<th>Part</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Top</td>
-<td>Key macro indicators</td>
+<td>Claim</td>
+<td>State the main pattern</td>
 </tr>
 <tr class="even">
-<td>Middle</td>
-<td>Inflation and exchange rate trends</td>
+<td>Evidence</td>
+<td>Refer to values or charts</td>
 </tr>
 <tr class="odd">
-<td>Bottom</td>
-<td>GDP growth and unemployment</td>
+<td>Meaning</td>
+<td>Explain why it matters economically</td>
+</tr>
+<tr class="even">
+<td>Caution</td>
+<td>State what the dashboard cannot prove</td>
 </tr>
 </tbody>
 </table>
+<p>Example:</p>
+<pre class="text"><code>The dashboard suggests that 2022 was the most severe macroeconomic stress point in the period. Inflation reached its highest value while GDP growth was strongly negative and the exchange rate increased sharply. This combination signals pressure on prices, output, and external stability. However, the dashboard is descriptive and should not be treated as a causal model.</code></pre>
 <hr>
 </section>
-<section id="important-advice" class="level1">
-<h1>Important Advice</h1>
-<p>Every graph must answer:</p>
-<pre class="text"><code>Why is this graph useful?</code></pre>
-<hr>
-</section>
-<section id="open-the-week-6-live-notebook" class="level1">
-<h1>14. Open the Week 6 Live Notebook</h1>
-<p><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week6/ECN4199_Week6_Live_Notebook.ipynb">Open Week 6 Live Notebook — Save a Copy Before Editing</a></p>
-<hr>
-</section>
-<section id="download-dashboard-dataset" class="level1">
-<h1>15. Download Dashboard Dataset</h1>
-<p><a href="../data/sri_lanka_macro.csv">Download Dashboard Dataset</a></p>
-<hr>
-</section>
-<section id="plotly-cheat-sheet" class="level1">
-<h1>16. Plotly Cheat Sheet</h1>
-<p><a href="https://plotly.com/python/">Open Plotly Python Guide</a></p>
-<hr>
-</section>
-<section id="dashboard-design-guide" class="level1">
-<h1>17. Dashboard Design Guide</h1>
-<p>Use the dashboard design principles listed above when building your Week 6 dashboard.</p>
-<hr>
-</section>
-<section id="live-coding-session" class="level1">
-<h1>18. Live Coding Session</h1>
-<section id="step-1-import-libraries" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-import-libraries">Step 1 — Import Libraries</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-2-load-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-load-dataset">Step 2 — Load Dataset</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"sri_lanka_macro.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-3-create-interactive-inflation-graph" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-create-interactive-inflation-graph">Step 3 — Create Interactive Inflation Graph</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(data,</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>              x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span><span class="st">"Inflation"</span>,</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>              title<span class="op">=</span><span class="st">"Inflation Trends"</span>)</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-4-create-gdp-growth-bar-chart" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-create-gdp-growth-bar-chart">Step 4 — Create GDP Growth Bar Chart</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.bar(data,</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>             x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>             y<span class="op">=</span><span class="st">"GDP_Growth"</span>)</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-5-create-scatter-plot" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-create-scatter-plot">Step 5 — Create Scatter Plot</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.scatter(data,</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>                 x<span class="op">=</span><span class="st">"Inflation"</span>,</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>                 y<span class="op">=</span><span class="st">"Exchange_Rate_Change"</span>,</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>                 hover_name<span class="op">=</span><span class="st">"Year"</span>)</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-6-add-multiple-indicators" class="level2">
-<h2 class="anchored" data-anchor-id="step-6-add-multiple-indicators">Step 6 — Add Multiple Indicators</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(data,</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>              x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span>[<span class="st">"Inflation"</span>,</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>                 <span class="st">"Exchange_Rate_Change"</span>])</span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-7-interpretation-questions" class="level2">
-<h2 class="anchored" data-anchor-id="step-7-interpretation-questions">Step 7 — Interpretation Questions</h2>
-<p>Ask students:</p>
+<section id="week-6-output" class="level1">
+<h1>15. Week 6 Output</h1>
+<p>By the end of Week 6, students should have:</p>
 <ul>
-<li>When did macro instability intensify?</li>
-<li>Are inflation and depreciation connected?</li>
-<li>Which years are outliers?</li>
-<li>What policy implications emerge?</li>
+<li>at least three interactive charts</li>
+<li>one multi-panel dashboard</li>
+<li>clear titles, labels, and hover information</li>
+<li>a short dashboard interpretation</li>
+<li>one limitation or caution statement</li>
 </ul>
 <hr>
 </section>
-</section>
-<section id="interactive-mini-quiz" class="level1">
-<h1>19. Interactive Mini Quiz</h1>
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is the main purpose of a dashboard? A/B/C/D : "</span>)</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"C"</span>:</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! Dashboards support visual decision-making."</span>)</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Which library is mainly used this week? A/B/C/D : "</span>)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"B"</span>:</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! Plotly is the main library."</span>)</span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What can users do in interactive graphs? A/B/C/D : "</span>)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"B"</span>:</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! Users can hover and zoom."</span>)</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-</section>
-<section id="self-assessment-activity" class="level1">
-<h1>20. Self-Assessment Activity</h1>
-<p>Students should complete the following tasks.</p>
-<hr>
-<section id="task-1-create-interactive-graphs" class="level2">
-<h2 class="anchored" data-anchor-id="task-1-create-interactive-graphs">Task 1 — Create Interactive Graphs</h2>
-<p>Create:</p>
-<ul>
-<li>one interactive line graph</li>
-<li>one bar chart</li>
-<li>one scatter plot</li>
-</ul>
-<hr>
-</section>
-<section id="task-2-add-improvements" class="level2">
-<h2 class="anchored" data-anchor-id="task-2-add-improvements">Task 2 — Add Improvements</h2>
-<p>Add:</p>
-<ul>
-<li>titles</li>
-<li>labels</li>
-<li>hover information</li>
-</ul>
-<hr>
-</section>
-<section id="task-3-create-mini-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="task-3-create-mini-dashboard">Task 3 — Create Mini Dashboard</h2>
-<p>Build a dashboard using:</p>
-<ul>
-<li>inflation</li>
-<li>GDP growth</li>
-<li>exchange rate</li>
-</ul>
-<hr>
-</section>
-<section id="task-4-write-interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="task-4-write-interpretation">Task 4 — Write Interpretation</h2>
-<p>Write short analytical interpretation:</p>
-<pre class="text"><code>What macroeconomic story does your dashboard tell?</code></pre>
-<hr>
-</section>
-<section id="task-5-identify-important-events" class="level2">
-<h2 class="anchored" data-anchor-id="task-5-identify-important-events">Task 5 — Identify Important Events</h2>
-<p>Identify:</p>
-<ul>
-<li>crisis periods</li>
-<li>unusual observations</li>
-<li>relationships between indicators</li>
-</ul>
-<hr>
-</section>
-<section id="task-6-improve-dashboard-design" class="level2">
-<h2 class="anchored" data-anchor-id="task-6-improve-dashboard-design">Task 6 — Improve Dashboard Design</h2>
-<p>Improve:</p>
-<ul>
-<li>readability</li>
-<li>structure</li>
-<li>clarity</li>
-<li>interpretation</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="submission-instructions" class="level1">
-<h1>21. Submission Instructions</h1>
-<p>Submit:</p>
-<ul>
-<li>completed dashboard notebook</li>
-<li>interactive graphs</li>
-<li>interpretation paragraph</li>
-<li>dashboard screenshots</li>
-</ul>
-<hr>
-</section>
-<section id="file-naming-convention" class="level1">
-<h1>File Naming Convention</h1>
-<pre class="text"><code>Week6_YourName.ipynb</code></pre>
-<hr>
-</section>
-<section id="submission-link" class="level1">
-<h1>Submission Link</h1>
-<p>The lecturer will provide the live submission link during the class session.</p>
-<hr>
-</section>
-<section id="common-errors" class="level1">
-<h1>22. Common Errors</h1>
-<section id="problem-1-too-many-charts" class="level2">
-<h2 class="anchored" data-anchor-id="problem-1-too-many-charts">Problem 1 — Too Many Charts</h2>
-<p>More graphs do NOT improve analysis.</p>
-<p>Simplify.</p>
-<hr>
-</section>
-<section id="problem-2-missing-titles" class="level2">
-<h2 class="anchored" data-anchor-id="problem-2-missing-titles">Problem 2 — Missing Titles</h2>
-<p>Every graph must explain:</p>
-<ul>
-<li>what is shown</li>
-<li>units</li>
-<li>variables</li>
-</ul>
-<hr>
-</section>
-<section id="problem-3-misleading-scales" class="level2">
-<h2 class="anchored" data-anchor-id="problem-3-misleading-scales">Problem 3 — Misleading Scales</h2>
-<p>Axis scaling can distort interpretation.</p>
-<hr>
-</section>
-<section id="problem-4-random-colors" class="level2">
-<h2 class="anchored" data-anchor-id="problem-4-random-colors">Problem 4 — Random Colors</h2>
-<p>Colors should communicate meaning.</p>
-<hr>
-</section>
-<section id="problem-5-no-interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="problem-5-no-interpretation">Problem 5 — No Interpretation</h2>
-<p>A dashboard without interpretation is incomplete analysis.</p>
-<hr>
-</section>
-</section>
-<section id="ai-reflection-question" class="level1">
-<h1>23. AI Reflection Question</h1>
-<p>AI can automatically generate dashboards.</p>
-<p>However:</p>
-<ul>
-<li>AI may prioritize aesthetics over analysis</li>
-<li>AI may ignore economic relevance</li>
-<li>AI may produce misleading visual structures</li>
-</ul>
-<p>Reflection question:</p>
-<pre class="text"><code>Why must economists think critically about dashboard design even when AI tools automate visualization?</code></pre>
-<hr>
-</section>
-<section id="key-takeaways" class="level1">
-<h1>24. Key Takeaways</h1>
-<p>By the end of Week 6, students should understand:</p>
-<ul>
-<li>what dashboards are</li>
-<li>why interactive visualization matters</li>
-<li>how to use Plotly</li>
-<li>how to build interactive graphs</li>
-<li>dashboard design principles</li>
-<li>data storytelling</li>
-<li>economic dashboard interpretation</li>
-<li>how economists communicate complex information visually</li>
-</ul>
-<hr>
-</section>
-<section id="before-week-7" class="level1">
-<h1>25. Before Week 7</h1>
-<p>Before next week, students should:</p>
-<ul>
-<li>rerun all Week 6 code</li>
-<li>practice Plotly graphs</li>
-<li>improve dashboard readability</li>
-<li>review dashboard design principles</li>
-<li>complete submission</li>
-</ul>
+<section id="summary" class="level1">
+<h1>16. Summary</h1>
+<p>Week 6 completes the applied analytics block.</p>
+<p>The core lesson is:</p>
+<pre class="text"><code>Economic analysis becomes valuable when it is communicated clearly, honestly, and usefully.</code></pre>
+<p>Students should now be able to move from raw data to preparation, exploration, interpretation, and communication.</p>
 
 
 </section>

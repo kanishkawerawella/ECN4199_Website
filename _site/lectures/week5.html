@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 5 — Understanding Economic Data Through Statistics and Visualization – ECN 4199 - Industrial Data Analytics</title>
+<title>Week 5 — Exploratory Economic Analysis – ECN 4199 - Industrial Data Analytics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -167,105 +167,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-5-descriptive-statistics-and-data-visualization-for-economics" id="toc-week-5-descriptive-statistics-and-data-visualization-for-economics" class="nav-link active" data-scroll-target="#week-5-descriptive-statistics-and-data-visualization-for-economics">Week 5 — Descriptive Statistics and Data Visualization for Economics</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">1. Learning Objectives</a></li>
-  <li><a href="#week-5-learning-materials" id="toc-week-5-learning-materials" class="nav-link" data-scroll-target="#week-5-learning-materials">2. Week 5 Learning Materials</a></li>
-  <li><a href="#why-visualization-matters-in-economics" id="toc-why-visualization-matters-in-economics" class="nav-link" data-scroll-target="#why-visualization-matters-in-economics">3. Why Visualization Matters in Economics</a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
-  <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link" data-scroll-target="#descriptive-statistics">4. Descriptive Statistics</a></li>
-  <li><a href="#common-descriptive-statistics" id="toc-common-descriptive-statistics" class="nav-link" data-scroll-target="#common-descriptive-statistics">Common Descriptive Statistics</a></li>
-  <li><a href="#generate-descriptive-statistics" id="toc-generate-descriptive-statistics" class="nav-link" data-scroll-target="#generate-descriptive-statistics">Generate Descriptive Statistics</a></li>
-  <li><a href="#example-interpretation" id="toc-example-interpretation" class="nav-link" data-scroll-target="#example-interpretation">Example Interpretation</a></li>
-  <li><a href="#measures-of-central-tendency" id="toc-measures-of-central-tendency" class="nav-link" data-scroll-target="#measures-of-central-tendency">5. Measures of Central Tendency</a></li>
-  <li><a href="#mean" id="toc-mean" class="nav-link" data-scroll-target="#mean">Mean</a></li>
-  <li><a href="#median" id="toc-median" class="nav-link" data-scroll-target="#median">Median</a></li>
-  <li><a href="#why-mean-and-median-differ" id="toc-why-mean-and-median-differ" class="nav-link" data-scroll-target="#why-mean-and-median-differ">Why Mean and Median Differ</a></li>
-  <li><a href="#economic-example" id="toc-economic-example" class="nav-link" data-scroll-target="#economic-example">Economic Example</a></li>
-  <li><a href="#measures-of-dispersion" id="toc-measures-of-dispersion" class="nav-link" data-scroll-target="#measures-of-dispersion">6. Measures of Dispersion</a></li>
-  <li><a href="#standard-deviation" id="toc-standard-deviation" class="nav-link" data-scroll-target="#standard-deviation">Standard Deviation</a></li>
-  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
-  <li><a href="#range" id="toc-range" class="nav-link" data-scroll-target="#range">Range</a></li>
-  <li><a href="#economic-significance" id="toc-economic-significance" class="nav-link" data-scroll-target="#economic-significance">Economic Significance</a></li>
-  <li><a href="#distributions-and-histograms" id="toc-distributions-and-histograms" class="nav-link" data-scroll-target="#distributions-and-histograms">7. Distributions and Histograms</a></li>
-  <li><a href="#example-histogram" id="toc-example-histogram" class="nav-link" data-scroll-target="#example-histogram">Example Histogram</a></li>
-  <li><a href="#interpretation-questions" id="toc-interpretation-questions" class="nav-link" data-scroll-target="#interpretation-questions">Interpretation Questions</a></li>
-  <li><a href="#why-distributions-matter" id="toc-why-distributions-matter" class="nav-link" data-scroll-target="#why-distributions-matter">Why Distributions Matter</a></li>
-  <li><a href="#correlation-analysis" id="toc-correlation-analysis" class="nav-link" data-scroll-target="#correlation-analysis">8. Correlation Analysis</a></li>
-  <li><a href="#example-questions" id="toc-example-questions" class="nav-link" data-scroll-target="#example-questions">Example Questions</a></li>
-  <li><a href="#correlation-coefficient" id="toc-correlation-coefficient" class="nav-link" data-scroll-target="#correlation-coefficient">Correlation Coefficient</a></li>
-  <li><a href="#correlation-interpretation" id="toc-correlation-interpretation" class="nav-link" data-scroll-target="#correlation-interpretation">Correlation Interpretation</a></li>
-  <li><a href="#critical-warning" id="toc-critical-warning" class="nav-link" data-scroll-target="#critical-warning">Critical Warning</a></li>
-  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example</a></li>
-  <li><a href="#introduction-to-data-visualization" id="toc-introduction-to-data-visualization" class="nav-link" data-scroll-target="#introduction-to-data-visualization">9. Introduction to Data Visualization</a></li>
-  <li><a href="#import-libraries" id="toc-import-libraries" class="nav-link" data-scroll-target="#import-libraries">Import Libraries</a></li>
-  <li><a href="#common-graph-types" id="toc-common-graph-types" class="nav-link" data-scroll-target="#common-graph-types">Common Graph Types</a></li>
-  <li><a href="#important-principle" id="toc-important-principle" class="nav-link" data-scroll-target="#important-principle">Important Principle</a></li>
-  <li><a href="#line-graphs" id="toc-line-graphs" class="nav-link" data-scroll-target="#line-graphs">10. Line Graphs</a></li>
-  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example</a></li>
-  <li><a href="#add-labels" id="toc-add-labels" class="nav-link" data-scroll-target="#add-labels">Add Labels</a></li>
-  <li><a href="#interpretation-1" id="toc-interpretation-1" class="nav-link" data-scroll-target="#interpretation-1">Interpretation</a></li>
-  <li><a href="#bar-charts" id="toc-bar-charts" class="nav-link" data-scroll-target="#bar-charts">11. Bar Charts</a></li>
-  <li><a href="#example-3" id="toc-example-3" class="nav-link" data-scroll-target="#example-3">Example</a></li>
-  <li><a href="#economic-uses" id="toc-economic-uses" class="nav-link" data-scroll-target="#economic-uses">Economic Uses</a></li>
-  <li><a href="#warning" id="toc-warning" class="nav-link" data-scroll-target="#warning">Warning</a></li>
-  <li><a href="#scatter-plots" id="toc-scatter-plots" class="nav-link" data-scroll-target="#scatter-plots">12. Scatter Plots</a></li>
-  <li><a href="#example-4" id="toc-example-4" class="nav-link" data-scroll-target="#example-4">Example</a></li>
-  <li><a href="#interpretation-questions-1" id="toc-interpretation-questions-1" class="nav-link" data-scroll-target="#interpretation-questions-1">Interpretation Questions</a></li>
-  <li><a href="#add-labels-1" id="toc-add-labels-1" class="nav-link" data-scroll-target="#add-labels-1">Add Labels</a></li>
-  <li><a href="#multi-variable-visualization" id="toc-multi-variable-visualization" class="nav-link" data-scroll-target="#multi-variable-visualization">13. Multi-Variable Visualization</a></li>
-  <li><a href="#example-two-axis-graph" id="toc-example-two-axis-graph" class="nav-link" data-scroll-target="#example-two-axis-graph">Example: Two-Axis Graph</a></li>
-  <li><a href="#interpretation-2" id="toc-interpretation-2" class="nav-link" data-scroll-target="#interpretation-2">Interpretation</a></li>
-  <li><a href="#warning-1" id="toc-warning-1" class="nav-link" data-scroll-target="#warning-1">Warning</a></li>
-  <li><a href="#interactive-graphs-with-plotly" id="toc-interactive-graphs-with-plotly" class="nav-link" data-scroll-target="#interactive-graphs-with-plotly">13. Interactive Graphs with Plotly</a></li>
-  <li><a href="#example-5" id="toc-example-5" class="nav-link" data-scroll-target="#example-5">Example</a></li>
-  <li><a href="#why-interactive-graphs-matter" id="toc-why-interactive-graphs-matter" class="nav-link" data-scroll-target="#why-interactive-graphs-matter">Why Interactive Graphs Matter</a></li>
-  <li><a href="#telling-economic-stories-with-data" id="toc-telling-economic-stories-with-data" class="nav-link" data-scroll-target="#telling-economic-stories-with-data">14. Telling Economic Stories with Data</a></li>
-  <li><a href="#weak-interpretation" id="toc-weak-interpretation" class="nav-link" data-scroll-target="#weak-interpretation">Weak Interpretation</a></li>
-  <li><a href="#better-interpretation" id="toc-better-interpretation" class="nav-link" data-scroll-target="#better-interpretation">Better Interpretation</a></li>
-  <li><a href="#critical-lesson" id="toc-critical-lesson" class="nav-link" data-scroll-target="#critical-lesson">Critical Lesson</a></li>
-  <li><a href="#open-the-week-5-live-notebook" id="toc-open-the-week-5-live-notebook" class="nav-link" data-scroll-target="#open-the-week-5-live-notebook">15. Open the Week 5 Live Notebook</a></li>
-  <li><a href="#download-the-visualization-dataset" id="toc-download-the-visualization-dataset" class="nav-link" data-scroll-target="#download-the-visualization-dataset">16. Download the Visualization Dataset</a></li>
-  <li><a href="#live-coding-session" id="toc-live-coding-session" class="nav-link" data-scroll-target="#live-coding-session">17. Live Coding Session</a>
-  <ul class="collapse">
-  <li><a href="#step-1-import-libraries" id="toc-step-1-import-libraries" class="nav-link" data-scroll-target="#step-1-import-libraries">Step 1 — Import Libraries</a></li>
-  <li><a href="#step-2-load-dataset" id="toc-step-2-load-dataset" class="nav-link" data-scroll-target="#step-2-load-dataset">Step 2 — Load Dataset</a></li>
-  <li><a href="#step-3-generate-descriptive-statistics" id="toc-step-3-generate-descriptive-statistics" class="nav-link" data-scroll-target="#step-3-generate-descriptive-statistics">Step 3 — Generate Descriptive Statistics</a></li>
-  <li><a href="#step-4-calculate-average-inflation" id="toc-step-4-calculate-average-inflation" class="nav-link" data-scroll-target="#step-4-calculate-average-inflation">Step 4 — Calculate Average Inflation</a></li>
-  <li><a href="#step-5-create-histogram" id="toc-step-5-create-histogram" class="nav-link" data-scroll-target="#step-5-create-histogram">Step 5 — Create Histogram</a></li>
-  <li><a href="#step-6-create-line-graph" id="toc-step-6-create-line-graph" class="nav-link" data-scroll-target="#step-6-create-line-graph">Step 6 — Create Line Graph</a></li>
-  <li><a href="#step-7-create-scatter-plot" id="toc-step-7-create-scatter-plot" class="nav-link" data-scroll-target="#step-7-create-scatter-plot">Step 7 — Create Scatter Plot</a></li>
-  <li><a href="#step-8-create-interactive-plotly-graph" id="toc-step-8-create-interactive-plotly-graph" class="nav-link" data-scroll-target="#step-8-create-interactive-plotly-graph">Step 8 — Create Interactive Plotly Graph</a></li>
-  <li><a href="#step-9-interpretation-questions" id="toc-step-9-interpretation-questions" class="nav-link" data-scroll-target="#step-9-interpretation-questions">Step 9 — Interpretation Questions</a></li>
-  </ul></li>
-  <li><a href="#interactive-mini-quiz" id="toc-interactive-mini-quiz" class="nav-link" data-scroll-target="#interactive-mini-quiz">18. Interactive Mini Quiz</a>
-  <ul class="collapse">
-  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
-  </ul></li>
-  <li><a href="#self-assessment-activity" id="toc-self-assessment-activity" class="nav-link" data-scroll-target="#self-assessment-activity">19. Self-Assessment Activity</a>
-  <ul class="collapse">
-  <li><a href="#task-1-generate-statistics" id="toc-task-1-generate-statistics" class="nav-link" data-scroll-target="#task-1-generate-statistics">Task 1 — Generate Statistics</a></li>
-  <li><a href="#task-2-create-graphs" id="toc-task-2-create-graphs" class="nav-link" data-scroll-target="#task-2-create-graphs">Task 2 — Create Graphs</a></li>
-  <li><a href="#task-3-correlation-analysis" id="toc-task-3-correlation-analysis" class="nav-link" data-scroll-target="#task-3-correlation-analysis">Task 3 — Correlation Analysis</a></li>
-  <li><a href="#task-4-identify-key-events" id="toc-task-4-identify-key-events" class="nav-link" data-scroll-target="#task-4-identify-key-events">Task 4 — Identify Key Events</a></li>
-  <li><a href="#task-5-write-interpretation" id="toc-task-5-write-interpretation" class="nav-link" data-scroll-target="#task-5-write-interpretation">Task 5 — Write Interpretation</a></li>
-  <li><a href="#task-6-create-interactive-plotly-graph" id="toc-task-6-create-interactive-plotly-graph" class="nav-link" data-scroll-target="#task-6-create-interactive-plotly-graph">Task 6 — Create Interactive Plotly Graph</a></li>
-  </ul></li>
-  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">20. Submission Instructions</a></li>
-  <li><a href="#file-naming-convention" id="toc-file-naming-convention" class="nav-link" data-scroll-target="#file-naming-convention">File Naming Convention</a></li>
-  <li><a href="#submission-link" id="toc-submission-link" class="nav-link" data-scroll-target="#submission-link">Submission Link</a></li>
-  <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">21. Common Errors</a>
-  <ul class="collapse">
-  <li><a href="#problem-1-forgetting-labels" id="toc-problem-1-forgetting-labels" class="nav-link" data-scroll-target="#problem-1-forgetting-labels">Problem 1 — Forgetting Labels</a></li>
-  <li><a href="#problem-2-misinterpreting-correlation" id="toc-problem-2-misinterpreting-correlation" class="nav-link" data-scroll-target="#problem-2-misinterpreting-correlation">Problem 2 — Misinterpreting Correlation</a></li>
-  <li><a href="#problem-3-overcrowded-graphs" id="toc-problem-3-overcrowded-graphs" class="nav-link" data-scroll-target="#problem-3-overcrowded-graphs">Problem 3 — Overcrowded Graphs</a></li>
-  <li><a href="#problem-4-using-wrong-graph-type" id="toc-problem-4-using-wrong-graph-type" class="nav-link" data-scroll-target="#problem-4-using-wrong-graph-type">Problem 4 — Using Wrong Graph Type</a></li>
-  <li><a href="#problem-5-ignoring-outliers" id="toc-problem-5-ignoring-outliers" class="nav-link" data-scroll-target="#problem-5-ignoring-outliers">Problem 5 — Ignoring Outliers</a></li>
-  </ul></li>
-  <li><a href="#ai-reflection-question" id="toc-ai-reflection-question" class="nav-link" data-scroll-target="#ai-reflection-question">22. AI Reflection Question</a></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">23. Key Takeaways</a></li>
-  <li><a href="#before-week-6" id="toc-before-week-6" class="nav-link" data-scroll-target="#before-week-6">24. Before Week 6</a></li>
+  <li><a href="#week-5-exploratory-economic-analysis" id="toc-week-5-exploratory-economic-analysis" class="nav-link active" data-scroll-target="#week-5-exploratory-economic-analysis">Week 5 — Exploratory Economic Analysis</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">1. Learning Outcomes</a></li>
+  <li><a href="#two-hour-learning-plan" id="toc-two-hour-learning-plan" class="nav-link" data-scroll-target="#two-hour-learning-plan">2. Two-Hour Learning Plan</a></li>
+  <li><a href="#week-5-learning-materials" id="toc-week-5-learning-materials" class="nav-link" data-scroll-target="#week-5-learning-materials">3. Week 5 Learning Materials</a></li>
+  <li><a href="#why-week-5-is-not-a-repeat-of-week-4" id="toc-why-week-5-is-not-a-repeat-of-week-4" class="nav-link" data-scroll-target="#why-week-5-is-not-a-repeat-of-week-4">4. Why Week 5 Is Not a Repeat of Week 4</a></li>
+  <li><a href="#start-with-analytical-questions" id="toc-start-with-analytical-questions" class="nav-link" data-scroll-target="#start-with-analytical-questions">5. Start With Analytical Questions</a></li>
+  <li><a href="#load-and-prepare-the-dataset" id="toc-load-and-prepare-the-dataset" class="nav-link" data-scroll-target="#load-and-prepare-the-dataset">6. Load and Prepare the Dataset</a></li>
+  <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link" data-scroll-target="#descriptive-statistics">7. Descriptive Statistics</a></li>
+  <li><a href="#mean-median-and-extreme-values" id="toc-mean-median-and-extreme-values" class="nav-link" data-scroll-target="#mean-median-and-extreme-values">8. Mean, Median, and Extreme Values</a></li>
+  <li><a href="#distributions" id="toc-distributions" class="nav-link" data-scroll-target="#distributions">9. Distributions</a></li>
+  <li><a href="#trends-over-time" id="toc-trends-over-time" class="nav-link" data-scroll-target="#trends-over-time">10. Trends Over Time</a></li>
+  <li><a href="#comparisons" id="toc-comparisons" class="nav-link" data-scroll-target="#comparisons">11. Comparisons</a></li>
+  <li><a href="#relationships-between-variables" id="toc-relationships-between-variables" class="nav-link" data-scroll-target="#relationships-between-variables">12. Relationships Between Variables</a></li>
+  <li><a href="#evidence-table" id="toc-evidence-table" class="nav-link" data-scroll-target="#evidence-table">13. Evidence Table</a></li>
+  <li><a href="#writing-an-economic-interpretation" id="toc-writing-an-economic-interpretation" class="nav-link" data-scroll-target="#writing-an-economic-interpretation">14. Writing an Economic Interpretation</a></li>
+  <li><a href="#week-5-output" id="toc-week-5-output" class="nav-link" data-scroll-target="#week-5-output">15. Week 5 Output</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">16. Summary</a></li>
   </ul>
 </nav>
     </div>
@@ -274,7 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 5 — Understanding Economic Data Through Statistics and Visualization</h1>
+<h1 class="title">Week 5 — Exploratory Economic Analysis</h1>
 </div>
 
 
@@ -291,47 +209,87 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="week-5-descriptive-statistics-and-data-visualization-for-economics" class="level1">
-<h1>Week 5 — Descriptive Statistics and Data Visualization for Economics</h1>
-<p>Weeks 1–4 focused on:</p>
-<ul>
-<li>computational setup</li>
-<li>Python fundamentals</li>
-<li>programming logic</li>
-<li>data handling and cleaning</li>
-</ul>
-<p>Now students move into:</p>
-<pre class="text"><code>analytical interpretation</code></pre>
-<p>This week introduces:</p>
-<ul>
-<li>descriptive statistics</li>
-<li>distributions</li>
-<li>correlation analysis</li>
-<li>data visualization</li>
-<li>economic storytelling with graphs</li>
-</ul>
-<p>This is where students begin transforming:</p>
-<pre class="text"><code>data</code></pre>
-<p>into</p>
-<pre class="text"><code>economic insight</code></pre>
+<section id="week-5-exploratory-economic-analysis" class="level1">
+<h1>Week 5 — Exploratory Economic Analysis</h1>
+<p>Week 4 focused on preparing data.</p>
+<p>Week 5 focuses on using that prepared data to answer economic questions.</p>
+<p>The central question is:</p>
+<pre class="text"><code>What does the evidence suggest?</code></pre>
+<p>This week is not mainly about producing graphs. It is about using statistics and visualizations to develop an economic interpretation.</p>
 <hr>
 </section>
-<section id="learning-objectives" class="level1">
-<h1>1. Learning Objectives</h1>
+<section id="learning-outcomes" class="level1">
+<h1>1. Learning Outcomes</h1>
 <p>By the end of this week, students should be able to:</p>
 <ul>
-<li>generate descriptive statistics</li>
-<li>interpret averages and variation</li>
-<li>understand distributions</li>
-<li>calculate correlations</li>
-<li>create economic graphs</li>
-<li>identify patterns and anomalies</li>
-<li>communicate economic insights visually</li>
+<li>move from cleaned data to exploratory analysis</li>
+<li>generate descriptive statistics for economic variables</li>
+<li>compare averages, medians, minimums, maximums, and variation</li>
+<li>interpret distributions and outliers</li>
+<li>create graphs that match analytical questions</li>
+<li>examine relationships between variables</li>
+<li>distinguish correlation from causation</li>
+<li>write a short evidence-based economic interpretation</li>
 </ul>
+<hr>
+</section>
+<section id="two-hour-learning-plan" class="level1">
+<h1>2. Two-Hour Learning Plan</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Time</th>
+<th>Section</th>
+<th>Main Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0-10 minutes</td>
+<td>Week 4 recap</td>
+<td>What makes data analysis-ready?</td>
+</tr>
+<tr class="even">
+<td>10-30 minutes</td>
+<td>Analytical questions</td>
+<td>Turning data into economic questions</td>
+</tr>
+<tr class="odd">
+<td>30-50 minutes</td>
+<td>Descriptive statistics</td>
+<td>Level, spread, extremes</td>
+</tr>
+<tr class="even">
+<td>50-75 minutes</td>
+<td>Distributions</td>
+<td>Histograms and outliers</td>
+</tr>
+<tr class="odd">
+<td>75-100 minutes</td>
+<td>Trends and comparisons</td>
+<td>Line and bar charts</td>
+</tr>
+<tr class="even">
+<td>100-115 minutes</td>
+<td>Relationships</td>
+<td>Scatter plots and correlation</td>
+</tr>
+<tr class="odd">
+<td>115-120 minutes</td>
+<td>Assignment briefing</td>
+<td>Evidence note for Week 6 dashboard</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
 <section id="week-5-learning-materials" class="level1">
-<h1>2. Week 5 Learning Materials</h1>
+<h1>3. Week 5 Learning Materials</h1>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -343,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>Week 5 Live Notebook</td>
-<td>Run the statistics and visualization examples in Google Colab</td>
+<td>Complete exploratory analysis in Google Colab</td>
 <td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week5/ECN4199_Week5_Live_Notebook.ipynb">Open Week 5 Live Notebook</a></td>
 </tr>
 <tr class="even">
@@ -359,804 +317,239 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre class="text"><code>Week05_IndexNumber_Name.ipynb</code></pre>
 <hr>
 </section>
-<section id="why-visualization-matters-in-economics" class="level1">
-<h1>3. Why Visualization Matters in Economics</h1>
-<p>Large datasets are difficult to understand by simply reading tables.</p>
-<p>Visualization helps us:</p>
-<ul>
-<li>detect patterns</li>
-<li>identify trends</li>
-<li>communicate evidence</li>
-<li>compare variables</li>
-<li>support decisions</li>
-</ul>
-<p>Good economists do not merely calculate.</p>
-<p>They explain.</p>
-<p>Visualization is part of explanation.</p>
+<section id="why-week-5-is-not-a-repeat-of-week-4" class="level1">
+<h1>4. Why Week 5 Is Not a Repeat of Week 4</h1>
+<p>Week 4 asked:</p>
+<pre class="text"><code>Is the data ready?</code></pre>
+<p>Week 5 asks:</p>
+<pre class="text"><code>What does the data say?</code></pre>
+<p>The same dataset is used, but the purpose changes.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>Main Task</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Week 4</td>
+<td>Prepare data</td>
+<td>Clean dataset and data-quality note</td>
+</tr>
+<tr class="even">
+<td>Week 5</td>
+<td>Analyze data</td>
+<td>Evidence, graphs, interpretation</td>
+</tr>
+<tr class="odd">
+<td>Week 6</td>
+<td>Communicate analysis</td>
+<td>Interactive dashboard and story</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
-<section id="example" class="level1">
-<h1>Example</h1>
-<p>Suppose inflation rises from:</p>
+<section id="start-with-analytical-questions" class="level1">
+<h1>5. Start With Analytical Questions</h1>
+<p>Exploratory analysis should be guided by questions.</p>
+<p>Examples:</p>
 <ul>
-<li>4%</li>
-<li>to 6%</li>
-<li>to 46%</li>
+<li>When did macroeconomic instability become most visible?</li>
+<li>Which indicator shows the largest shock?</li>
+<li>Did high inflation occur together with negative growth?</li>
+<li>Did exchange rate movements coincide with inflation?</li>
+<li>Which year appears most unusual?</li>
 </ul>
-<p>A table shows numbers.</p>
-<p>A graph shows crisis.</p>
-<p>That difference matters.</p>
+<p>Good analysis does not begin with a graph type.</p>
+<p>It begins with a question.</p>
+<hr>
+</section>
+<section id="load-and-prepare-the-dataset" class="level1">
+<h1>6. Load and Prepare the Dataset</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/sri_lanka_macro.csv"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Exchange_Rate_Change"</span>] <span class="op">=</span> data[<span class="st">"Exchange_Rate"</span>].pct_change() <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Recession"</span>] <span class="op">=</span> data[<span class="st">"GDP_Growth"</span>] <span class="op">&lt;</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Check the data before analysis:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data.head()</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data.info()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>data.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="descriptive-statistics" class="level1">
-<h1>4. Descriptive Statistics</h1>
-<p>Descriptive statistics summarize the main characteristics of data.</p>
-<p>They help answer questions such as:</p>
-<ul>
-<li>What is the average?</li>
-<li>How much variation exists?</li>
-<li>Are values concentrated or spread out?</li>
-<li>Are there extreme observations?</li>
-</ul>
+<h1>7. Descriptive Statistics</h1>
+<p>Descriptive statistics summarize the dataset.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">"Inflation"</span>, <span class="st">"GDP_Growth"</span>, <span class="st">"Exchange_Rate_Change"</span>, <span class="st">"Reserves"</span>, <span class="st">"Unemployment"</span>]].describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Interpretation should go beyond reading numbers.</p>
+<p>Ask:</p>
+<ol type="1">
+<li>Which variable has the largest variation?</li>
+<li>Which variable has the most extreme value?</li>
+<li>Does the average hide important changes over time?</li>
+<li>Which statistic best supports your interpretation?</li>
+</ol>
 <hr>
 </section>
-<section id="common-descriptive-statistics" class="level1">
-<h1>Common Descriptive Statistics</h1>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Statistic</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Mean</td>
-<td>Average</td>
-</tr>
-<tr class="even">
-<td>Median</td>
-<td>Middle value</td>
-</tr>
-<tr class="odd">
-<td>Standard deviation</td>
-<td>Variation</td>
-</tr>
-<tr class="even">
-<td>Minimum</td>
-<td>Lowest value</td>
-</tr>
-<tr class="odd">
-<td>Maximum</td>
-<td>Highest value</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="generate-descriptive-statistics" class="level1">
-<h1>Generate Descriptive Statistics</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="example-interpretation" class="level1">
-<h1>Example Interpretation</h1>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Statistic</th>
-<th>Inflation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Mean</td>
-<td>12.5</td>
-</tr>
-<tr class="even">
-<td>Std</td>
-<td>15.2</td>
-</tr>
-<tr class="odd">
-<td>Max</td>
-<td>46.4</td>
-</tr>
-</tbody>
-</table>
+<section id="mean-median-and-extreme-values" class="level1">
+<h1>8. Mean, Median, and Extreme Values</h1>
+<p>The mean is useful, but it can be distorted by extreme observations.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].mean()</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].median()</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].<span class="bu">max</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Interpretation:</p>
-<ul>
-<li>Inflation averaged 12.5%</li>
-<li>Inflation varied substantially</li>
-<li>Some years experienced very high inflation</li>
-</ul>
+<pre class="text"><code>If the mean is much higher than the median, extreme inflation years may be pulling the average upward.</code></pre>
+<p>This is especially important in crisis analysis.</p>
 <hr>
 </section>
-<section id="measures-of-central-tendency" class="level1">
-<h1>5. Measures of Central Tendency</h1>
-<p>Central tendency describes the “typical” value.</p>
-<hr>
-</section>
-<section id="mean" class="level1">
-<h1>Mean</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].mean()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="median" class="level1">
-<h1>Median</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].median()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="why-mean-and-median-differ" class="level1">
-<h1>Why Mean and Median Differ</h1>
-<p>If extreme values exist:</p>
-<ul>
-<li>the mean may be distorted</li>
-<li>the median may better represent the “typical” observation</li>
-</ul>
-<hr>
-</section>
-<section id="economic-example" class="level1">
-<h1>Economic Example</h1>
-<p>If one household earns extremely high income:</p>
-<ul>
-<li>average income rises sharply</li>
-<li>median income changes little</li>
-</ul>
-<p>This matters in inequality analysis.</p>
-<hr>
-</section>
-<section id="measures-of-dispersion" class="level1">
-<h1>6. Measures of Dispersion</h1>
-<p>Dispersion measures variability.</p>
-<p>Two economies may have the same average inflation but very different stability.</p>
-<hr>
-</section>
-<section id="standard-deviation" class="level1">
-<h1>Standard Deviation</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].std()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="interpretation" class="level1">
-<h1>Interpretation</h1>
-<p>High standard deviation means:</p>
-<ul>
-<li>high volatility</li>
-<li>instability</li>
-<li>uncertainty</li>
-</ul>
-<hr>
-</section>
-<section id="range" class="level1">
-<h1>Range</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].<span class="bu">max</span>() <span class="op">-</span> data[<span class="st">"Inflation"</span>].<span class="bu">min</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="economic-significance" class="level1">
-<h1>Economic Significance</h1>
-<p>Volatility matters for:</p>
-<ul>
-<li>investment</li>
-<li>monetary policy</li>
-<li>household welfare</li>
-<li>business planning</li>
-</ul>
-<hr>
-</section>
-<section id="distributions-and-histograms" class="level1">
-<h1>7. Distributions and Histograms</h1>
+<section id="distributions" class="level1">
+<h1>9. Distributions</h1>
 <p>A distribution shows how values are spread.</p>
-<p>Histograms help visualize distributions.</p>
-<hr>
-</section>
-<section id="example-histogram" class="level1">
-<h1>Example Histogram</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>plt.hist(data[<span class="st">"Inflation"</span>])</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>plt.hist(data[<span class="st">"Inflation"</span>], bins<span class="op">=</span><span class="dv">6</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Distribution of Inflation"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Inflation Rate"</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Number of Years"</span>)</span>
 <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="interpretation-questions" class="level1">
-<h1>Interpretation Questions</h1>
 <p>Ask:</p>
 <ul>
-<li>Is inflation concentrated at low values?</li>
+<li>Are most values low, moderate, or high?</li>
 <li>Are there extreme observations?</li>
-<li>Is the distribution symmetric?</li>
+<li>Does the distribution show stability or instability?</li>
 </ul>
 <hr>
 </section>
-<section id="why-distributions-matter" class="level1">
-<h1>Why Distributions Matter</h1>
-<p>Many statistical methods assume:</p>
+<section id="trends-over-time" class="level1">
+<h1>10. Trends Over Time</h1>
+<p>Line graphs are useful for time-series questions.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Year"</span>], data[<span class="st">"Inflation"</span>], marker<span class="op">=</span><span class="st">"o"</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Inflation Over Time"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Inflation Rate"</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Interpretation should identify:</p>
 <ul>
-<li>normality</li>
-<li>symmetry</li>
-<li>absence of extreme outliers</li>
-</ul>
-<p>Economists must inspect distributions before modeling.</p>
-<hr>
-</section>
-<section id="correlation-analysis" class="level1">
-<h1>8. Correlation Analysis</h1>
-<p>Correlation measures how two variables move together.</p>
-<hr>
-</section>
-<section id="example-questions" class="level1">
-<h1>Example Questions</h1>
-<p>Do:</p>
-<ul>
-<li>inflation and exchange rate depreciation move together?</li>
-<li>unemployment and GDP growth move inversely?</li>
-</ul>
-<hr>
-</section>
-<section id="correlation-coefficient" class="level1">
-<h1>Correlation Coefficient</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].corr(data[<span class="st">"Exchange_Rate_Change"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="correlation-interpretation" class="level1">
-<h1>Correlation Interpretation</h1>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Correlation</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>+1</td>
-<td>Perfect positive relationship</td>
-</tr>
-<tr class="even">
-<td>0</td>
-<td>No relationship</td>
-</tr>
-<tr class="odd">
-<td>-1</td>
-<td>Perfect negative relationship</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="critical-warning" class="level1">
-<h1>Critical Warning</h1>
-<p>Correlation does NOT imply causation.</p>
-<p>This distinction is fundamental in economics.</p>
-<hr>
-</section>
-<section id="example-1" class="level1">
-<h1>Example</h1>
-<p>Ice cream sales and drowning deaths may rise together.</p>
-<p>This does NOT mean:</p>
-<pre class="text"><code>ice cream causes drowning</code></pre>
-<p>A third factor:</p>
-<pre class="text"><code>temperature</code></pre>
-<p>drives both.</p>
-<hr>
-</section>
-<section id="introduction-to-data-visualization" class="level1">
-<h1>9. Introduction to Data Visualization</h1>
-<p>Visualization transforms raw numbers into interpretable patterns.</p>
-<p>This week we use:</p>
-<ul>
-<li>matplotlib</li>
-<li>Plotly</li>
-</ul>
-<hr>
-</section>
-<section id="import-libraries" class="level1">
-<h1>Import Libraries</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="common-graph-types" class="level1">
-<h1>Common Graph Types</h1>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Graph</th>
-<th>Best Use</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Line graph</td>
-<td>Trends over time</td>
-</tr>
-<tr class="even">
-<td>Bar chart</td>
-<td>Comparisons</td>
-</tr>
-<tr class="odd">
-<td>Scatter plot</td>
-<td>Relationships</td>
-</tr>
-<tr class="even">
-<td>Histogram</td>
-<td>Distributions</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="important-principle" class="level1">
-<h1>Important Principle</h1>
-<p>Choose graphs based on:</p>
-<pre class="text"><code>analytical purpose</code></pre>
-<p>not appearance.</p>
-<hr>
-</section>
-<section id="line-graphs" class="level1">
-<h1>10. Line Graphs</h1>
-<p>Line graphs are ideal for time-series data.</p>
-<hr>
-</section>
-<section id="example-2" class="level1">
-<h1>Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Year"</span>], data[<span class="st">"Inflation"</span>])</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="add-labels" class="level1">
-<h1>Add Labels</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Year"</span>], data[<span class="st">"Inflation"</span>])</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Inflation in Sri Lanka"</span>)</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Inflation Rate"</span>)</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="interpretation-1" class="level1">
-<h1>Interpretation</h1>
-<p>Students should identify:</p>
-<ul>
-<li>trends</li>
-<li>spikes</li>
+<li>direction of change</li>
 <li>turning points</li>
-<li>crises</li>
+<li>crisis periods</li>
+<li>recovery periods</li>
 </ul>
+<p>Do not write:</p>
+<pre class="text"><code>The graph shows inflation.</code></pre>
+<p>Write:</p>
+<pre class="text"><code>Inflation remained relatively low before rising sharply in 2022, indicating a major macroeconomic shock.</code></pre>
 <hr>
 </section>
-<section id="bar-charts" class="level1">
-<h1>11. Bar Charts</h1>
-<p>Bar charts compare categories.</p>
-<hr>
-</section>
-<section id="example-3" class="level1">
-<h1>Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>plt.bar(data[<span class="st">"Year"</span>], data[<span class="st">"GDP_Growth"</span>])</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="economic-uses" class="level1">
-<h1>Economic Uses</h1>
-<p>Bar charts are useful for:</p>
-<ul>
-<li>regional comparisons</li>
-<li>sector comparisons</li>
-<li>unemployment by gender</li>
-<li>export composition</li>
-</ul>
-<hr>
-</section>
-<section id="warning" class="level1">
-<h1>Warning</h1>
-<p>Do not overload bar charts with too many categories.</p>
-<hr>
-</section>
-<section id="scatter-plots" class="level1">
-<h1>12. Scatter Plots</h1>
-<p>Scatter plots help analyze relationships between variables.</p>
-<hr>
-</section>
-<section id="example-4" class="level1">
-<h1>Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Inflation"</span>],</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">"Exchange_Rate_Change"</span>])</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="interpretation-questions-1" class="level1">
-<h1>Interpretation Questions</h1>
+<section id="comparisons" class="level1">
+<h1>11. Comparisons</h1>
+<p>Bar charts are useful when comparing discrete periods or categories.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>plt.bar(data[<span class="st">"Year"</span>], data[<span class="st">"GDP_Growth"</span>])</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"GDP Growth by Year"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"GDP Growth"</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"black"</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The zero line matters because it separates expansion from contraction.</p>
 <p>Ask:</p>
 <ul>
-<li>Is there positive relationship?</li>
-<li>Are there clusters?</li>
-<li>Are there outliers?</li>
+<li>Which years show recession?</li>
+<li>Was the decline mild or severe?</li>
+<li>Does the recession coincide with other instability indicators?</li>
 </ul>
 <hr>
 </section>
-<section id="add-labels-1" class="level1">
-<h1>Add Labels</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Inflation"</span>],</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">"Exchange_Rate_Change"</span>])</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Inflation"</span>)</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Exchange Rate Change"</span>)</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="relationships-between-variables" class="level1">
+<h1>12. Relationships Between Variables</h1>
+<p>Scatter plots are useful for studying relationships.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Inflation"</span>], data[<span class="st">"Exchange_Rate_Change"</span>])</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Inflation and Exchange Rate Change"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Inflation"</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Exchange Rate Change"</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then calculate correlation:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].corr(data[<span class="st">"Exchange_Rate_Change"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Important:</p>
+<pre class="text"><code>Correlation does not prove causation.</code></pre>
+<p>A good interpretation is cautious:</p>
+<pre class="text"><code>The variables appear to move together during crisis years, but this does not prove that one directly caused the other.</code></pre>
 <hr>
 </section>
-<section id="multi-variable-visualization" class="level1">
-<h1>13. Multi-Variable Visualization</h1>
-<p>Economists often compare several variables simultaneously.</p>
+<section id="evidence-table" class="level1">
+<h1>13. Evidence Table</h1>
+<p>Before writing the final interpretation, create a compact evidence table.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>evidence <span class="op">=</span> data[[</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Year"</span>,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Inflation"</span>,</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GDP_Growth"</span>,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Exchange_Rate_Change"</span>,</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Reserves"</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>]]</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>evidence</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use the table to connect claims with values.</p>
+<p>Weak claim:</p>
+<pre class="text"><code>The economy was unstable.</code></pre>
+<p>Stronger claim:</p>
+<pre class="text"><code>The economy shows strong instability in 2022, when inflation reached 46.4 percent and GDP growth was -7.8 percent.</code></pre>
 <hr>
 </section>
-<section id="example-two-axis-graph" class="level1">
-<h1>Example: Two-Axis Graph</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>fig, ax1 <span class="op">=</span> plt.subplots()</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>ax1.plot(data[<span class="st">"Year"</span>], data[<span class="st">"Inflation"</span>])</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>ax2 <span class="op">=</span> ax1.twinx()</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>ax2.plot(data[<span class="st">"Year"</span>], data[<span class="st">"Exchange_Rate"</span>])</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="interpretation-2" class="level1">
-<h1>Interpretation</h1>
-<p>Students should ask:</p>
-<ul>
-<li>Do inflation spikes coincide with depreciation?</li>
-<li>Do variables move together?</li>
-</ul>
-<hr>
-</section>
-<section id="warning-1" class="level1">
-<h1>Warning</h1>
-<p>Multi-axis graphs can be misleading.</p>
-<p>Use carefully.</p>
-<hr>
-</section>
-<section id="interactive-graphs-with-plotly" class="level1">
-<h1>13. Interactive Graphs with Plotly</h1>
-<p>Interactive visualization is increasingly important.</p>
-<p>Plotly allows:</p>
-<ul>
-<li>zooming</li>
-<li>hovering</li>
-<li>filtering</li>
-<li>interaction</li>
-</ul>
-<hr>
-</section>
-<section id="example-5" class="level1">
-<h1>Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(data,</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>              x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span><span class="st">"Inflation"</span>,</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>              title<span class="op">=</span><span class="st">"Inflation Trends"</span>)</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="why-interactive-graphs-matter" class="level1">
-<h1>Why Interactive Graphs Matter</h1>
-<p>They:</p>
-<ul>
-<li>improve exploration</li>
-<li>improve communication</li>
-<li>improve dashboards</li>
-<li>support decision-making</li>
-</ul>
-<hr>
-</section>
-<section id="telling-economic-stories-with-data" class="level1">
-<h1>14. Telling Economic Stories with Data</h1>
-<p>Good analysts do not simply create graphs.</p>
-<p>They interpret them.</p>
-<hr>
-</section>
-<section id="weak-interpretation" class="level1">
-<h1>Weak Interpretation</h1>
-<pre class="text"><code>Inflation increased.</code></pre>
-<hr>
-</section>
-<section id="better-interpretation" class="level1">
-<h1>Better Interpretation</h1>
-<pre class="text"><code>Inflation remained relatively stable until 2021 but increased sharply in 2022, suggesting severe macroeconomic instability.</code></pre>
-<hr>
-</section>
-<section id="critical-lesson" class="level1">
-<h1>Critical Lesson</h1>
-<p>Graphs without interpretation are incomplete analysis.</p>
-<hr>
-</section>
-<section id="open-the-week-5-live-notebook" class="level1">
-<h1>15. Open the Week 5 Live Notebook</h1>
-<p><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week5/ECN4199_Week5_Live_Notebook.ipynb">Open Week 5 Live Notebook — Save a Copy Before Editing</a></p>
-<hr>
-</section>
-<section id="download-the-visualization-dataset" class="level1">
-<h1>16. Download the Visualization Dataset</h1>
-<p><a href="../data/sri_lanka_macro.csv">Download Visualization Dataset</a></p>
-<hr>
-</section>
-<section id="live-coding-session" class="level1">
-<h1>17. Live Coding Session</h1>
-<section id="step-1-import-libraries" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-import-libraries">Step 1 — Import Libraries</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-2-load-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-load-dataset">Step 2 — Load Dataset</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"sri_lanka_macro.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-3-generate-descriptive-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-generate-descriptive-statistics">Step 3 — Generate Descriptive Statistics</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>data.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-4-calculate-average-inflation" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-calculate-average-inflation">Step 4 — Calculate Average Inflation</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation"</span>].mean()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-5-create-histogram" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-create-histogram">Step 5 — Create Histogram</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>plt.hist(data[<span class="st">"Inflation"</span>])</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-6-create-line-graph" class="level2">
-<h2 class="anchored" data-anchor-id="step-6-create-line-graph">Step 6 — Create Line Graph</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Year"</span>], data[<span class="st">"Inflation"</span>])</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-7-create-scatter-plot" class="level2">
-<h2 class="anchored" data-anchor-id="step-7-create-scatter-plot">Step 7 — Create Scatter Plot</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Inflation"</span>],</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">"Exchange_Rate_Change"</span>])</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-8-create-interactive-plotly-graph" class="level2">
-<h2 class="anchored" data-anchor-id="step-8-create-interactive-plotly-graph">Step 8 — Create Interactive Plotly Graph</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(data,</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>              x<span class="op">=</span><span class="st">"Year"</span>,</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span><span class="st">"Inflation"</span>)</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="step-9-interpretation-questions" class="level2">
-<h2 class="anchored" data-anchor-id="step-9-interpretation-questions">Step 9 — Interpretation Questions</h2>
-<p>Ask students:</p>
-<ul>
-<li>When did inflation accelerate?</li>
-<li>What happened during crisis periods?</li>
-<li>Are inflation and exchange rate movements related?</li>
-<li>Are there outliers?</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="interactive-mini-quiz" class="level1">
-<h1>18. Interactive Mini Quiz</h1>
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What does standard deviation measure? A/B/C/D : "</span>)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"C"</span>:</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! Standard deviation measures variation."</span>)</span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Which graph is best for time trends? A/B/C/D : "</span>)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"C"</span>:</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! Line graphs are best for trends."</span>)</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Does correlation imply causation? Yes/No : "</span>)</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.lower() <span class="op">==</span> <span class="st">"no"</span>:</span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct!"</span>)</span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-</section>
-<section id="self-assessment-activity" class="level1">
-<h1>19. Self-Assessment Activity</h1>
-<p>Students should complete the following tasks.</p>
-<hr>
-<section id="task-1-generate-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="task-1-generate-statistics">Task 1 — Generate Statistics</h2>
-<p>Generate:</p>
-<ul>
-<li>mean</li>
-<li>median</li>
-<li>standard deviation</li>
-</ul>
-<p>for:</p>
-<ul>
-<li>inflation</li>
-<li>GDP growth</li>
-<li>exchange rate changes</li>
-</ul>
-<hr>
-</section>
-<section id="task-2-create-graphs" class="level2">
-<h2 class="anchored" data-anchor-id="task-2-create-graphs">Task 2 — Create Graphs</h2>
-<p>Create:</p>
-<ul>
-<li>histogram</li>
-<li>line graph</li>
-<li>bar chart</li>
-<li>scatter plot</li>
-</ul>
-<hr>
-</section>
-<section id="task-3-correlation-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="task-3-correlation-analysis">Task 3 — Correlation Analysis</h2>
-<p>Calculate correlation between:</p>
-<ul>
-<li>inflation</li>
-<li>exchange rate changes</li>
-</ul>
-<p>Interpret result.</p>
-<hr>
-</section>
-<section id="task-4-identify-key-events" class="level2">
-<h2 class="anchored" data-anchor-id="task-4-identify-key-events">Task 4 — Identify Key Events</h2>
-<p>Identify:</p>
-<ul>
-<li>highest inflation year</li>
-<li>lowest GDP growth year</li>
-<li>largest exchange rate depreciation</li>
-</ul>
-<hr>
-</section>
-<section id="task-5-write-interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="task-5-write-interpretation">Task 5 — Write Interpretation</h2>
-<p>Write short analytical paragraph:</p>
-<pre class="text"><code>What macroeconomic patterns do you observe in the data?</code></pre>
-<hr>
-</section>
-<section id="task-6-create-interactive-plotly-graph" class="level2">
-<h2 class="anchored" data-anchor-id="task-6-create-interactive-plotly-graph">Task 6 — Create Interactive Plotly Graph</h2>
-<p>Create one interactive graph using Plotly.</p>
-<hr>
-</section>
-</section>
-<section id="submission-instructions" class="level1">
-<h1>20. Submission Instructions</h1>
-<p>Submit:</p>
-<ul>
-<li>completed notebook</li>
-<li>descriptive statistics</li>
-<li>visualizations</li>
-<li>correlation analysis</li>
-<li>interpretation paragraph</li>
-</ul>
-<hr>
-</section>
-<section id="file-naming-convention" class="level1">
-<h1>File Naming Convention</h1>
-<pre class="text"><code>Week5_YourName.ipynb</code></pre>
-<hr>
-</section>
-<section id="submission-link" class="level1">
-<h1>Submission Link</h1>
-<p>The lecturer will provide the live submission link during the class session.</p>
-<hr>
-</section>
-<section id="common-errors" class="level1">
-<h1>21. Common Errors</h1>
-<section id="problem-1-forgetting-labels" class="level2">
-<h2 class="anchored" data-anchor-id="problem-1-forgetting-labels">Problem 1 — Forgetting Labels</h2>
-<p>Graphs without:</p>
-<ul>
-<li>titles</li>
-<li>axis labels</li>
-<li>units</li>
-</ul>
-<p>are poor practice.</p>
-<hr>
-</section>
-<section id="problem-2-misinterpreting-correlation" class="level2">
-<h2 class="anchored" data-anchor-id="problem-2-misinterpreting-correlation">Problem 2 — Misinterpreting Correlation</h2>
-<p>Correlation:</p>
-<ul>
-<li>indicates association</li>
-<li>NOT causality</li>
-</ul>
-<hr>
-</section>
-<section id="problem-3-overcrowded-graphs" class="level2">
-<h2 class="anchored" data-anchor-id="problem-3-overcrowded-graphs">Problem 3 — Overcrowded Graphs</h2>
-<p>Too many variables create unreadable visualizations.</p>
-<p>Simplify.</p>
-<hr>
-</section>
-<section id="problem-4-using-wrong-graph-type" class="level2">
-<h2 class="anchored" data-anchor-id="problem-4-using-wrong-graph-type">Problem 4 — Using Wrong Graph Type</h2>
+<section id="writing-an-economic-interpretation" class="level1">
+<h1>14. Writing an Economic Interpretation</h1>
+<p>A useful interpretation has four parts:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Part</th>
+<th>Question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Claim</td>
+<td>What pattern did you find?</td>
+</tr>
+<tr class="even">
+<td>Evidence</td>
+<td>Which value, graph, or statistic supports it?</td>
+</tr>
+<tr class="odd">
+<td>Economic meaning</td>
+<td>Why does it matter?</td>
+</tr>
+<tr class="even">
+<td>Caution</td>
+<td>What can the analysis not prove?</td>
+</tr>
+</tbody>
+</table>
 <p>Example:</p>
-<p>using bar chart for continuous time trends.</p>
+<pre class="text"><code>The data suggest a severe macroeconomic shock in 2022. Inflation reached its highest value while GDP growth was strongly negative. This combination indicates pressure on household purchasing power and overall economic activity. However, the analysis is descriptive and does not prove the exact causal mechanism behind the crisis.</code></pre>
 <hr>
 </section>
-<section id="problem-5-ignoring-outliers" class="level2">
-<h2 class="anchored" data-anchor-id="problem-5-ignoring-outliers">Problem 5 — Ignoring Outliers</h2>
-<p>Extreme observations may:</p>
-<ul>
-<li>distort averages</li>
-<li>distort correlations</li>
-<li>distort conclusions</li>
-</ul>
-<p>Always inspect data visually.</p>
-<hr>
-</section>
-</section>
-<section id="ai-reflection-question" class="level1">
-<h1>22. AI Reflection Question</h1>
-<p>AI can automatically generate graphs.</p>
-<p>However:</p>
-<ul>
-<li>AI may choose misleading graph types</li>
-<li>AI may ignore economic context</li>
-<li>AI may produce visually attractive but analytically weak outputs</li>
-</ul>
-<p>Reflection question:</p>
-<pre class="text"><code>Why is economic interpretation still necessary even when AI tools generate visualizations automatically?</code></pre>
-<hr>
-</section>
-<section id="key-takeaways" class="level1">
-<h1>23. Key Takeaways</h1>
-<p>By the end of Week 5, students should understand:</p>
+<section id="week-5-output" class="level1">
+<h1>15. Week 5 Output</h1>
+<p>By the end of Week 5, students should have:</p>
 <ul>
 <li>descriptive statistics</li>
-<li>measures of central tendency</li>
-<li>measures of dispersion</li>
-<li>distributions</li>
-<li>correlation analysis</li>
-<li>data visualization principles</li>
-<li>line graphs</li>
-<li>histograms</li>
-<li>scatter plots</li>
-<li>interactive visualization</li>
-<li>economic interpretation of graphs</li>
+<li>at least three graphs</li>
+<li>one correlation result</li>
+<li>an evidence table</li>
+<li>a short economic interpretation</li>
+<li>clear findings that can be used in the Week 6 dashboard</li>
 </ul>
 <hr>
 </section>
-<section id="before-week-6" class="level1">
-<h1>24. Before Week 6</h1>
-<p>Before next week, students should:</p>
-<ul>
-<li>rerun all Week 5 code</li>
-<li>practice graph creation</li>
-<li>practice interpretation writing</li>
-<li>review correlation concepts</li>
-<li>complete submission</li>
-</ul>
+<section id="summary" class="level1">
+<h1>16. Summary</h1>
+<p>Week 5 turns prepared data into evidence.</p>
+<p>The core lesson is:</p>
+<pre class="text"><code>Graphs and statistics are useful only when they support economic interpretation.</code></pre>
+<p>In Week 6, students will convert these findings into an interactive dashboard for communication and decision support.</p>
 
 
 </section>
