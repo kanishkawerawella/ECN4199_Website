@@ -169,26 +169,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#week-4-preparing-economic-data-for-analysis" id="toc-week-4-preparing-economic-data-for-analysis" class="nav-link active" data-scroll-target="#week-4-preparing-economic-data-for-analysis">Week 4 — Preparing Economic Data for Analysis</a></li>
   <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">1. Learning Outcomes</a></li>
-  <li><a href="#two-hour-learning-plan" id="toc-two-hour-learning-plan" class="nav-link" data-scroll-target="#two-hour-learning-plan">2. Two-Hour Learning Plan</a></li>
+  <li><a href="#two-hour-lecture-plan" id="toc-two-hour-lecture-plan" class="nav-link" data-scroll-target="#two-hour-lecture-plan">2. Two-Hour Lecture Plan</a></li>
   <li><a href="#week-4-learning-materials" id="toc-week-4-learning-materials" class="nav-link" data-scroll-target="#week-4-learning-materials">3. Week 4 Learning Materials</a></li>
-  <li><a href="#why-week-4-is-not-a-repeat-of-week-2" id="toc-why-week-4-is-not-a-repeat-of-week-2" class="nav-link" data-scroll-target="#why-week-4-is-not-a-repeat-of-week-2">4. Why Week 4 Is Not a Repeat of Week 2</a></li>
-  <li><a href="#raw-data-vs-analysis-ready-data" id="toc-raw-data-vs-analysis-ready-data" class="nav-link" data-scroll-target="#raw-data-vs-analysis-ready-data">5. Raw Data vs Analysis-Ready Data</a></li>
-  <li><a href="#import-and-audit-the-dataset" id="toc-import-and-audit-the-dataset" class="nav-link" data-scroll-target="#import-and-audit-the-dataset">6. Import and Audit the Dataset</a></li>
-  <li><a href="#data-types-and-economic-meaning" id="toc-data-types-and-economic-meaning" class="nav-link" data-scroll-target="#data-types-and-economic-meaning">7. Data Types and Economic Meaning</a></li>
-  <li><a href="#missing-values" id="toc-missing-values" class="nav-link" data-scroll-target="#missing-values">8. Missing Values</a></li>
-  <li><a href="#suspicious-values-and-outliers" id="toc-suspicious-values-and-outliers" class="nav-link" data-scroll-target="#suspicious-values-and-outliers">9. Suspicious Values and Outliers</a></li>
-  <li><a href="#cleaning-column-names" id="toc-cleaning-column-names" class="nav-link" data-scroll-target="#cleaning-column-names">10. Cleaning Column Names</a></li>
-  <li><a href="#creating-new-economic-indicators" id="toc-creating-new-economic-indicators" class="nav-link" data-scroll-target="#creating-new-economic-indicators">11. Creating New Economic Indicators</a>
+  <li><a href="#why-week-4-matters" id="toc-why-week-4-matters" class="nav-link" data-scroll-target="#why-week-4-matters">4. Why Week 4 Matters</a></li>
+  <li><a href="#week-4-is-not-a-repeat-of-week-2" id="toc-week-4-is-not-a-repeat-of-week-2" class="nav-link" data-scroll-target="#week-4-is-not-a-repeat-of-week-2">5. Week 4 Is Not a Repeat of Week 2</a></li>
+  <li><a href="#raw-data-vs-analysis-ready-data" id="toc-raw-data-vs-analysis-ready-data" class="nav-link" data-scroll-target="#raw-data-vs-analysis-ready-data">6. Raw Data vs Analysis-Ready Data</a></li>
+  <li><a href="#the-data-audit-framework" id="toc-the-data-audit-framework" class="nav-link" data-scroll-target="#the-data-audit-framework">7. The Data Audit Framework</a></li>
+  <li><a href="#load-the-dataset" id="toc-load-the-dataset" class="nav-link" data-scroll-target="#load-the-dataset">8. Load the Dataset</a></li>
+  <li><a href="#understanding-the-unit-of-observation" id="toc-understanding-the-unit-of-observation" class="nav-link" data-scroll-target="#understanding-the-unit-of-observation">9. Understanding the Unit of Observation</a></li>
+  <li><a href="#inspecting-data-types" id="toc-inspecting-data-types" class="nav-link" data-scroll-target="#inspecting-data-types">10. Inspecting Data Types</a></li>
+  <li><a href="#summary-statistics-are-data-checks" id="toc-summary-statistics-are-data-checks" class="nav-link" data-scroll-target="#summary-statistics-are-data-checks">11. Summary Statistics Are Data Checks</a></li>
+  <li><a href="#missing-values" id="toc-missing-values" class="nav-link" data-scroll-target="#missing-values">12. Missing Values</a></li>
+  <li><a href="#duplicates" id="toc-duplicates" class="nav-link" data-scroll-target="#duplicates">13. Duplicates</a></li>
+  <li><a href="#suspicious-values-and-outliers" id="toc-suspicious-values-and-outliers" class="nav-link" data-scroll-target="#suspicious-values-and-outliers">14. Suspicious Values and Outliers</a></li>
+  <li><a href="#class-discussion-should-we-remove-2022" id="toc-class-discussion-should-we-remove-2022" class="nav-link" data-scroll-target="#class-discussion-should-we-remove-2022">15. Class Discussion: Should We Remove 2022?</a></li>
+  <li><a href="#cleaning-column-names" id="toc-cleaning-column-names" class="nav-link" data-scroll-target="#cleaning-column-names">16. Cleaning Column Names</a></li>
+  <li><a href="#creating-analytical-variables" id="toc-creating-analytical-variables" class="nav-link" data-scroll-target="#creating-analytical-variables">17. Creating Analytical Variables</a></li>
+  <li><a href="#exchange-rate-percentage-change" id="toc-exchange-rate-percentage-change" class="nav-link" data-scroll-target="#exchange-rate-percentage-change">18. Exchange Rate Percentage Change</a></li>
+  <li><a href="#recession-indicator" id="toc-recession-indicator" class="nav-link" data-scroll-target="#recession-indicator">19. Recession Indicator</a></li>
+  <li><a href="#low-reserves-indicator" id="toc-low-reserves-indicator" class="nav-link" data-scroll-target="#low-reserves-indicator">20. Low Reserves Indicator</a></li>
+  <li><a href="#inflation-classification" id="toc-inflation-classification" class="nav-link" data-scroll-target="#inflation-classification">21. Inflation Classification</a></li>
+  <li><a href="#boundary-testing" id="toc-boundary-testing" class="nav-link" data-scroll-target="#boundary-testing">22. Boundary Testing</a></li>
+  <li><a href="#filtering-the-prepared-dataset" id="toc-filtering-the-prepared-dataset" class="nav-link" data-scroll-target="#filtering-the-prepared-dataset">23. Filtering the Prepared Dataset</a></li>
+  <li><a href="#building-an-analysis-ready-dataset" id="toc-building-an-analysis-ready-dataset" class="nav-link" data-scroll-target="#building-an-analysis-ready-dataset">24. Building an Analysis-Ready Dataset</a></li>
+  <li><a href="#data-documentation" id="toc-data-documentation" class="nav-link" data-scroll-target="#data-documentation">25. Data Documentation</a></li>
+  <li><a href="#live-practice-activity" id="toc-live-practice-activity" class="nav-link" data-scroll-target="#live-practice-activity">26. Live Practice Activity</a>
   <ul class="collapse">
-  <li><a href="#exchange-rate-change" id="toc-exchange-rate-change" class="nav-link" data-scroll-target="#exchange-rate-change">Exchange Rate Change</a></li>
-  <li><a href="#reserve-adequacy-signal" id="toc-reserve-adequacy-signal" class="nav-link" data-scroll-target="#reserve-adequacy-signal">Reserve Adequacy Signal</a></li>
-  <li><a href="#recession-indicator" id="toc-recession-indicator" class="nav-link" data-scroll-target="#recession-indicator">Recession Indicator</a></li>
+  <li><a href="#part-a-audit" id="toc-part-a-audit" class="nav-link" data-scroll-target="#part-a-audit">Part A — Audit</a></li>
+  <li><a href="#part-b-create-variables" id="toc-part-b-create-variables" class="nav-link" data-scroll-target="#part-b-create-variables">Part B — Create Variables</a></li>
+  <li><a href="#part-c-filter" id="toc-part-c-filter" class="nav-link" data-scroll-target="#part-c-filter">Part C — Filter</a></li>
+  <li><a href="#part-d-interpret" id="toc-part-d-interpret" class="nav-link" data-scroll-target="#part-d-interpret">Part D — Interpret</a></li>
   </ul></li>
-  <li><a href="#recoding-into-categories" id="toc-recoding-into-categories" class="nav-link" data-scroll-target="#recoding-into-categories">12. Recoding Into Categories</a></li>
-  <li><a href="#quality-checklist" id="toc-quality-checklist" class="nav-link" data-scroll-target="#quality-checklist">13. Quality Checklist</a></li>
-  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">14. Documentation</a></li>
-  <li><a href="#week-4-output" id="toc-week-4-output" class="nav-link" data-scroll-target="#week-4-output">15. Week 4 Output</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">16. Summary</a></li>
+  <li><a href="#mini-quiz" id="toc-mini-quiz" class="nav-link" data-scroll-target="#mini-quiz">27. Mini Quiz</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  </ul></li>
+  <li><a href="#common-student-mistakes" id="toc-common-student-mistakes" class="nav-link" data-scroll-target="#common-student-mistakes">28. Common Student Mistakes</a></li>
+  <li><a href="#responsible-ai-use-in-week-4" id="toc-responsible-ai-use-in-week-4" class="nav-link" data-scroll-target="#responsible-ai-use-in-week-4">29. Responsible AI Use in Week 4</a></li>
+  <li><a href="#week-4-output" id="toc-week-4-output" class="nav-link" data-scroll-target="#week-4-output">30. Week 4 Output</a></li>
+  <li><a href="#bridge-to-week-5" id="toc-bridge-to-week-5" class="nav-link" data-scroll-target="#bridge-to-week-5">31. Bridge to Week 5</a></li>
+  <li><a href="#closing-message" id="toc-closing-message" class="nav-link" data-scroll-target="#closing-message">32. Closing Message</a></li>
   </ul>
 </nav>
     </div>
@@ -216,19 +238,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="week-4-preparing-economic-data-for-analysis" class="level1">
 <h1>Week 4 — Preparing Economic Data for Analysis</h1>
-<p>Weeks 1-3 built the foundation:</p>
+<p>Weeks 1-3 gave students the foundation:</p>
 <ul>
 <li>running Python code</li>
+<li>understanding variables and data types</li>
 <li>importing and inspecting data</li>
-<li>using logic, loops, and functions</li>
-<li>checking whether code matches an economic rule</li>
+<li>using conditions, loops, and functions</li>
+<li>checking whether code follows an economic rule</li>
 </ul>
-<p>Week 4 is the next step.</p>
-<p>The focus is no longer:</p>
-<pre class="text"><code>Can I run a Python command?</code></pre>
-<p>The focus is:</p>
+<p>Week 4 is where those skills become a real analytical workflow.</p>
+<p>The central question is:</p>
 <pre class="text"><code>Can I turn raw economic data into analysis-ready data?</code></pre>
-<p>This matters because most analytical mistakes happen before modelling begins. If the data are poorly prepared, the graphs, dashboards, forecasts, and machine learning models will also be unreliable.</p>
+<p>This is one of the most important skills in industrial data analytics. A model, graph, dashboard, or AI-generated result is only as reliable as the data behind it.</p>
 <hr>
 </section>
 <section id="learning-outcomes" class="level1">
@@ -236,17 +257,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>By the end of this week, students should be able to:</p>
 <ul>
 <li>explain the difference between raw data and analysis-ready data</li>
-<li>inspect a dataset for structure, data types, missing values, and suspicious values</li>
-<li>clean column names and standardize variable formats</li>
-<li>create economically meaningful variables</li>
-<li>recode numerical values into interpretable categories</li>
-<li>document data-cleaning decisions</li>
-<li>produce a clean dataset that can be used in Weeks 5 and 6</li>
+<li>conduct a structured data audit</li>
+<li>check rows, columns, data types, missing values, duplicates, and suspicious values</li>
+<li>connect technical data checks to economic meaning</li>
+<li>clean column names and standardize variables</li>
+<li>create economically meaningful indicators</li>
+<li>classify observations using economic rules</li>
+<li>test boundary values in classification rules</li>
+<li>prepare a clean dataset for Week 5 exploratory analysis</li>
+<li>document data-preparation decisions clearly</li>
 </ul>
 <hr>
 </section>
-<section id="two-hour-learning-plan" class="level1">
-<h1>2. Two-Hour Learning Plan</h1>
+<section id="two-hour-lecture-plan" class="level1">
+<h1>2. Two-Hour Lecture Plan</h1>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -256,45 +280,55 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th>Time</th>
-<th>Section</th>
-<th>Main Focus</th>
+<th>Segment</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>0-10 minutes</td>
-<td>Bridge from Week 3</td>
-<td>From rules and functions to data preparation</td>
+<td>Bridge from Weeks 1-3</td>
+<td>Show how previous skills combine into a data workflow</td>
 </tr>
 <tr class="even">
 <td>10-25 minutes</td>
 <td>Raw vs analysis-ready data</td>
-<td>Why preparation matters in economics</td>
+<td>Explain why data preparation matters</td>
 </tr>
 <tr class="odd">
-<td>25-45 minutes</td>
-<td>Data audit</td>
-<td>Structure, types, missing values, outliers</td>
+<td>25-40 minutes</td>
+<td>Data audit framework</td>
+<td>Inspect structure, variables, missing values, and duplicates</td>
 </tr>
 <tr class="even">
-<td>45-70 minutes</td>
-<td>Cleaning decisions</td>
-<td>Names, types, missing values, duplicates</td>
+<td>40-55 minutes</td>
+<td>Economic meaning of data types</td>
+<td>Link pandas output to economic interpretation</td>
 </tr>
 <tr class="odd">
-<td>70-95 minutes</td>
-<td>Variable construction</td>
-<td>Economic indicators and classifications</td>
+<td>55-70 minutes</td>
+<td>Missing values and suspicious values</td>
+<td>Decide whether to keep, drop, investigate, or document</td>
 </tr>
 <tr class="even">
-<td>95-115 minutes</td>
-<td>Quality checklist</td>
-<td>Is the dataset ready for analysis?</td>
+<td>70-90 minutes</td>
+<td>Creating analytical variables</td>
+<td>Build change rates, crisis indicators, and warning signals</td>
+</tr>
+<tr class="odd">
+<td>90-105 minutes</td>
+<td>Classification rules</td>
+<td>Apply Week 3 logic to a dataset</td>
+</tr>
+<tr class="even">
+<td>105-115 minutes</td>
+<td>Quality checklist and documentation</td>
+<td>Decide whether the dataset is ready</td>
 </tr>
 <tr class="odd">
 <td>115-120 minutes</td>
 <td>Assignment briefing</td>
-<td>Prepare the Week 5 analysis dataset</td>
+<td>Prepare the dataset for Week 5 analysis</td>
 </tr>
 </tbody>
 </table>
@@ -329,87 +363,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre class="text"><code>Week04_IndexNumber_Name.ipynb</code></pre>
 <hr>
 </section>
-<section id="why-week-4-is-not-a-repeat-of-week-2" class="level1">
-<h1>4. Why Week 4 Is Not a Repeat of Week 2</h1>
-<p>Week 2 introduced how to open and inspect data.</p>
-<p>Week 4 asks a more professional question:</p>
-<pre class="text"><code>Is this dataset reliable enough to support an economic conclusion?</code></pre>
-<p>That requires judgment.</p>
-<p>For example, after importing data, an analyst should ask:</p>
+<section id="why-week-4-matters" class="level1">
+<h1>4. Why Week 4 Matters</h1>
+<p>In real economic analysis, the data rarely arrive ready for use.</p>
+<p>Common problems include:</p>
 <ul>
-<li>Are the variables named consistently?</li>
-<li>Are numerical variables stored as numbers?</li>
-<li>Are there missing values?</li>
-<li>Are values economically plausible?</li>
-<li>Are classifications coded clearly?</li>
-<li>Can another person understand how the dataset was prepared?</li>
+<li>inconsistent variable names</li>
+<li>numbers stored as text</li>
+<li>missing observations</li>
+<li>duplicated rows</li>
+<li>extreme values</li>
+<li>unclear category labels</li>
+<li>variables that need to be constructed from raw columns</li>
 </ul>
-<p>This is the difference between basic coding and analytical practice.</p>
+<p>If these problems are ignored, the analysis becomes unreliable.</p>
+<p>Example:</p>
+<pre class="text"><code>If inflation is stored as text, Python may not calculate the average correctly.
+If a crisis year is removed as an "outlier", the analysis may erase the most important event.
+If missing data are dropped without explanation, the result may become biased.</code></pre>
+<p>Therefore, Week 4 is about professional discipline.</p>
 <hr>
 </section>
-<section id="raw-data-vs-analysis-ready-data" class="level1">
-<h1>5. Raw Data vs Analysis-Ready Data</h1>
-<p>Raw data are data as initially collected, downloaded, or received.</p>
-<p>Analysis-ready data are data that have been checked, cleaned, documented, and structured for a specific analytical purpose.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Raw Data Problem</th>
-<th>Why It Matters</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Missing values</td>
-<td>Can distort averages and comparisons</td>
-</tr>
-<tr class="even">
-<td>Incorrect data types</td>
-<td>Prevent calculations</td>
-</tr>
-<tr class="odd">
-<td>Inconsistent names</td>
-<td>Create coding errors</td>
-</tr>
-<tr class="even">
-<td>Extreme values</td>
-<td>May indicate crisis, error, or special events</td>
-</tr>
-<tr class="odd">
-<td>Undocumented categories</td>
-<td>Make interpretation unclear</td>
-</tr>
-</tbody>
-</table>
-<p>Economists should not clean data mechanically. Every cleaning decision should be linked to the purpose of the analysis.</p>
-<hr>
-</section>
-<section id="import-and-audit-the-dataset" class="level1">
-<h1>6. Import and Audit the Dataset</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/sri_lanka_macro.csv"</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(url)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>data.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Start with a simple audit:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data.shape</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data.columns</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>data.info()</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>data.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Interpretation questions:</p>
-<ol type="1">
-<li>What is one row in this dataset?</li>
-<li>What is one column in this dataset?</li>
-<li>Which variables can be used for numerical analysis?</li>
-<li>Which variables need checking before analysis?</li>
-</ol>
-<hr>
-</section>
-<section id="data-types-and-economic-meaning" class="level1">
-<h1>7. Data Types and Economic Meaning</h1>
-<p>Python only sees objects, numbers, and labels.</p>
-<p>Economists must connect those technical types to economic meaning.</p>
+<section id="week-4-is-not-a-repeat-of-week-2" class="level1">
+<h1>5. Week 4 Is Not a Repeat of Week 2</h1>
+<p>Week 2 introduced how to open data.</p>
+<p>Week 4 asks whether the data are analytically trustworthy.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -418,207 +396,715 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </colgroup>
 <thead>
 <tr class="header">
+<th>Skill</th>
+<th>Week 2</th>
+<th>Week 4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Import data</td>
+<td>Learn how to load a file</td>
+<td>Decide whether the imported data are usable</td>
+</tr>
+<tr class="even">
+<td>Inspect rows and columns</td>
+<td>Understand dataset structure</td>
+<td>Identify analytical risks</td>
+</tr>
+<tr class="odd">
+<td>Use pandas commands</td>
+<td>Run basic commands</td>
+<td>Build a reproducible data-preparation workflow</td>
+</tr>
+<tr class="even">
+<td>Interpret output</td>
+<td>Describe simple results</td>
+<td>Explain data quality and economic meaning</td>
+</tr>
+</tbody>
+</table>
+<p>The move is from:</p>
+<pre class="text"><code>basic coding</code></pre>
+<p>to:</p>
+<pre class="text"><code>analytical preparation</code></pre>
+<hr>
+</section>
+<section id="raw-data-vs-analysis-ready-data" class="level1">
+<h1>6. Raw Data vs Analysis-Ready Data</h1>
+<p>Raw data are data as received.</p>
+<p>Analysis-ready data are data that have been:</p>
+<ul>
+<li>inspected</li>
+<li>cleaned</li>
+<li>checked</li>
+<li>documented</li>
+<li>structured for a specific analytical question</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Raw Data Problem</th>
+<th>Technical Issue</th>
+<th>Economic Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Missing values</td>
+<td><code>NaN</code> values appear</td>
+<td>Averages and comparisons may be misleading</td>
+</tr>
+<tr class="even">
+<td>Wrong data type</td>
+<td>Number stored as text</td>
+<td>Calculations may fail</td>
+</tr>
+<tr class="odd">
+<td>Duplicate rows</td>
+<td>Same observation repeated</td>
+<td>Results may be double counted</td>
+</tr>
+<tr class="even">
+<td>Extreme values</td>
+<td>Very high or low values</td>
+<td>Could be error or important crisis signal</td>
+</tr>
+<tr class="odd">
+<td>Unclear categories</td>
+<td>Poor labels</td>
+<td>Interpretation becomes weak</td>
+</tr>
+</tbody>
+</table>
+<p>Key point:</p>
+<pre class="text"><code>Data cleaning is not just technical. It is analytical.</code></pre>
+<hr>
+</section>
+<section id="the-data-audit-framework" class="level1">
+<h1>7. The Data Audit Framework</h1>
+<p>A good data audit asks five questions:</p>
+<ol type="1">
+<li>What is the unit of observation?</li>
+<li>What variables are available?</li>
+<li>Are the data types correct?</li>
+<li>Are there missing, duplicated, or suspicious values?</li>
+<li>What new variables are needed for analysis?</li>
+</ol>
+<p>In pandas:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data.head()</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data.shape</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>data.columns</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>data.info()</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>data.describe()</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>data.isna().<span class="bu">sum</span>()</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>data.duplicated().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Students should not simply run these commands. They should explain what each command reveals.</p>
+<hr>
+</section>
+<section id="load-the-dataset" class="level1">
+<h1>8. Load the Dataset</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/sri_lanka_macro.csv"</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>data.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The dataset contains annual macroeconomic indicators.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
 <th>Variable</th>
-<th>Technical Type</th>
-<th>Economic Meaning</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><code>Year</code></td>
-<td>integer</td>
 <td>Time period</td>
 </tr>
 <tr class="even">
 <td><code>Inflation</code></td>
-<td>float</td>
-<td>Price instability</td>
+<td>Annual inflation rate</td>
 </tr>
 <tr class="odd">
 <td><code>GDP_Growth</code></td>
-<td>float</td>
-<td>Economic expansion or contraction</td>
+<td>Annual GDP growth rate</td>
 </tr>
 <tr class="even">
 <td><code>Exchange_Rate</code></td>
-<td>float/integer</td>
-<td>Value of domestic currency against foreign currency</td>
+<td>Exchange rate level</td>
 </tr>
 <tr class="odd">
 <td><code>Reserves</code></td>
-<td>float/integer</td>
-<td>External buffer</td>
+<td>Foreign reserves</td>
 </tr>
 <tr class="even">
 <td><code>Unemployment</code></td>
-<td>float</td>
-<td>Labour market condition</td>
+<td>Unemployment rate</td>
 </tr>
 </tbody>
 </table>
-<p>The same command may be technically correct but economically meaningless if the variable is misunderstood.</p>
 <hr>
 </section>
-<section id="missing-values" class="level1">
-<h1>8. Missing Values</h1>
-<p>Missing values are not just technical problems. They are economic information problems.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data.isna().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>If missing values exist, students should ask:</p>
+<section id="understanding-the-unit-of-observation" class="level1">
+<h1>9. Understanding the Unit of Observation</h1>
+<p>Before analysis, identify the unit of observation.</p>
+<p>In this dataset:</p>
+<pre class="text"><code>Each row represents one year.</code></pre>
+<p>This matters because interpretation depends on the unit.</p>
+<p>If one row is a person, we analyze individual differences.</p>
+<p>If one row is a year, we analyze changes over time.</p>
+<p>If one row is a district, we analyze spatial differences.</p>
+<p>Check:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data.shape</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Interpretation:</p>
+<pre class="text"><code>The dataset has a small number of annual observations, so the analysis should be descriptive and cautious.</code></pre>
+<hr>
+</section>
+<section id="inspecting-data-types" class="level1">
+<h1>10. Inspecting Data Types</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>data.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This shows:</p>
 <ul>
-<li>Is the value truly unavailable?</li>
-<li>Was it not collected?</li>
-<li>Is the missing value concentrated in a specific period?</li>
-<li>Would dropping the row remove an important crisis year?</li>
+<li>column names</li>
+<li>number of non-missing observations</li>
+<li>data types</li>
+<li>memory usage</li>
 </ul>
-<p>Common approaches:</p>
+<p>Important data types:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Approach</th>
-<th>When It May Be Reasonable</th>
+<th>pandas Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>int64</code></td>
+<td>Whole number</td>
+</tr>
+<tr class="even">
+<td><code>float64</code></td>
+<td>Decimal number</td>
+</tr>
+<tr class="odd">
+<td><code>object</code></td>
+<td>Text or mixed type</td>
+</tr>
+<tr class="even">
+<td><code>bool</code></td>
+<td>True or False</td>
+</tr>
+</tbody>
+</table>
+<p>Economic interpretation:</p>
+<pre class="text"><code>Inflation, GDP growth, reserves, unemployment, and exchange rates should be numerical because we need to calculate changes, averages, and comparisons.</code></pre>
+<hr>
+</section>
+<section id="summary-statistics-are-data-checks" class="level1">
+<h1>11. Summary Statistics Are Data Checks</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This is not yet final analysis.</p>
+<p>In Week 4, <code>describe()</code> is used as a quality check.</p>
+<p>Ask:</p>
+<ul>
+<li>Are the minimum and maximum values plausible?</li>
+<li>Does any value look impossible?</li>
+<li>Are there extreme values that need explanation?</li>
+<li>Are units clear?</li>
+</ul>
+<p>Example:</p>
+<pre class="text"><code>Very high inflation may not be an error. It may represent a crisis year.</code></pre>
+<hr>
+</section>
+<section id="missing-values" class="level1">
+<h1>12. Missing Values</h1>
+<p>Missing values are not just a coding issue.</p>
+<p>They raise economic questions:</p>
+<ul>
+<li>Was the statistic not collected?</li>
+<li>Was the value unavailable?</li>
+<li>Is the missing value concentrated in crisis years?</li>
+<li>Would removing the row change the story?</li>
+</ul>
+<p>Check:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>data.isna().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Common decisions:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Decision</th>
+<th>When It May Be Suitable</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Keep missing value</td>
-<td>When absence itself should be visible</td>
+<td>When absence should remain visible</td>
 </tr>
 <tr class="even">
-<td>Drop observation</td>
-<td>When few rows are affected and no bias is created</td>
+<td>Drop row</td>
+<td>When missingness is limited and not central</td>
 </tr>
 <tr class="odd">
-<td>Fill using a rule</td>
-<td>When the rule is defensible and documented</td>
+<td>Fill value</td>
+<td>When there is a defensible rule</td>
+</tr>
+<tr class="even">
+<td>Investigate source</td>
+<td>When the missing value affects the conclusion</td>
 </tr>
 </tbody>
 </table>
-<p>Never hide a missing-value decision.</p>
+<p>Professional rule:</p>
+<pre class="text"><code>Do not hide missing-value decisions. Document them.</code></pre>
+<hr>
+</section>
+<section id="duplicates" class="level1">
+<h1>13. Duplicates</h1>
+<p>Duplicate rows can distort results.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>data.duplicated().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If duplicates exist:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> data.drop_duplicates()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>But do not drop duplicates blindly.</p>
+<p>Ask:</p>
+<ul>
+<li>Are the rows truly duplicated?</li>
+<li>Is there a reason the same year appears twice?</li>
+<li>Does the duplicate represent a different source, region, or revision?</li>
+</ul>
 <hr>
 </section>
 <section id="suspicious-values-and-outliers" class="level1">
-<h1>9. Suspicious Values and Outliers</h1>
-<p>Extreme values may be errors, but they may also be economically important.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data.sort_values(<span class="st">"Inflation"</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data.sort_values(<span class="st">"GDP_Growth"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Example:</p>
-<pre class="text"><code>High inflation may be a crisis signal, not a data error.</code></pre>
-<p>Before removing or changing an outlier, ask:</p>
+<h1>14. Suspicious Values and Outliers</h1>
+<p>Outliers are observations that are very different from the rest.</p>
+<p>They may be:</p>
 <ul>
-<li>Is the value impossible?</li>
-<li>Is the value unusual but historically plausible?</li>
-<li>Does the value represent the event we are trying to study?</li>
+<li>data entry errors</li>
+<li>measurement problems</li>
+<li>genuine economic shocks</li>
+<li>crisis observations</li>
 </ul>
-<p>For economic analysis, deleting crisis years usually destroys the story.</p>
+<p>Find extreme values:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>data.sort_values(<span class="st">"Inflation"</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>data.sort_values(<span class="st">"GDP_Growth"</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>data.sort_values(<span class="st">"Reserves"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Important distinction:</p>
+<pre class="text"><code>Unusual does not mean wrong.</code></pre>
+<p>For this course, crisis years should usually be kept, because they are central to economic interpretation.</p>
+<hr>
+</section>
+<section id="class-discussion-should-we-remove-2022" class="level1">
+<h1>15. Class Discussion: Should We Remove 2022?</h1>
+<p>Suppose 2022 has very high inflation and negative GDP growth.</p>
+<p>Discuss:</p>
+<ol type="1">
+<li>Is this value impossible?</li>
+<li>Is this value historically meaningful?</li>
+<li>What happens if we remove it?</li>
+<li>Would removing it make the data cleaner or less truthful?</li>
+</ol>
+<p>Expected conclusion:</p>
+<pre class="text"><code>The value should normally be kept because it represents an important macroeconomic event.</code></pre>
+<p>This is why economists must think before cleaning.</p>
 <hr>
 </section>
 <section id="cleaning-column-names" class="level1">
-<h1>10. Cleaning Column Names</h1>
-<p>Clean names reduce errors.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data.columns <span class="op">=</span> (</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    data.columns</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">str</span>.strip()</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">str</span>.replace(<span class="st">" "</span>, <span class="st">"_"</span>)</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Good variable names should be:</p>
+<h1>16. Cleaning Column Names</h1>
+<p>Messy names create coding errors.</p>
+<p>Good column names are:</p>
 <ul>
 <li>short</li>
 <li>readable</li>
 <li>consistent</li>
 <li>easy to type</li>
-<li>connected to meaning</li>
+<li>meaningful</li>
+</ul>
+<p>Standardize names:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>data.columns <span class="op">=</span> (</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    data.columns</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">str</span>.strip()</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">str</span>.replace(<span class="st">" "</span>, <span class="st">"_"</span>)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Check:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>data.columns</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This pattern is useful because real datasets often contain spaces, hidden characters, and inconsistent naming.</p>
+<hr>
+</section>
+<section id="creating-analytical-variables" class="level1">
+<h1>17. Creating Analytical Variables</h1>
+<p>Raw variables are often not enough.</p>
+<p>Economists create new variables to represent analytical concepts.</p>
+<p>Examples:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Analytical Concept</th>
+<th>Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Currency pressure</td>
+<td>Exchange rate percentage change</td>
+</tr>
+<tr class="even">
+<td>Economic contraction</td>
+<td>Recession indicator</td>
+</tr>
+<tr class="odd">
+<td>External vulnerability</td>
+<td>Low reserve indicator</td>
+</tr>
+<tr class="even">
+<td>Price instability</td>
+<td>Inflation category</td>
+</tr>
+</tbody>
+</table>
+<p>This is where Week 3 logic becomes Week 4 data preparation.</p>
+<hr>
+</section>
+<section id="exchange-rate-percentage-change" class="level1">
+<h1>18. Exchange Rate Percentage Change</h1>
+<p>The exchange rate level is useful, but the change is often more informative.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Exchange_Rate_Change"</span>] <span class="op">=</span> data[<span class="st">"Exchange_Rate"</span>].pct_change() <span class="op">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Interpretation:</p>
+<pre class="text"><code>The first year will be missing because there is no previous year for comparison.</code></pre>
+<p>Ask students:</p>
+<ol type="1">
+<li>Why does the first year become missing?</li>
+<li>Should we fill it with zero?</li>
+<li>What would zero incorrectly imply?</li>
+</ol>
+<p>Recommended interpretation:</p>
+<pre class="text"><code>Do not automatically fill the first value with zero. It is missing because the calculation requires a previous year.</code></pre>
+<hr>
+</section>
+<section id="recession-indicator" class="level1">
+<h1>19. Recession Indicator</h1>
+<p>An economic rule can become a variable.</p>
+<p>Rule:</p>
+<pre class="text"><code>Negative GDP growth indicates contraction.</code></pre>
+<p>Code:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Recession"</span>] <span class="op">=</span> data[<span class="st">"GDP_Growth"</span>] <span class="op">&lt;</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This creates a Boolean variable:</p>
+<pre class="text"><code>True or False</code></pre>
+<p>Use it to identify recession years:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>data[data[<span class="st">"Recession"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="low-reserves-indicator" class="level1">
+<h1>20. Low Reserves Indicator</h1>
+<p>A simple warning indicator can be created using a threshold.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Low_Reserves"</span>] <span class="op">=</span> data[<span class="st">"Reserves"</span>] <span class="op">&lt;</span> <span class="dv">4000</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Important:</p>
+<pre class="text"><code>The threshold is a teaching rule for this exercise, not a universal policy rule.</code></pre>
+<p>Students should understand that thresholds must be justified.</p>
+<p>Ask:</p>
+<ul>
+<li>Who decides the threshold?</li>
+<li>Would another threshold change the conclusion?</li>
+<li>Should the threshold be based on theory, policy, or data?</li>
 </ul>
 <hr>
 </section>
-<section id="creating-new-economic-indicators" class="level1">
-<h1>11. Creating New Economic Indicators</h1>
-<p>Raw variables often need to be transformed into useful indicators.</p>
-<section id="exchange-rate-change" class="level2">
-<h2 class="anchored" data-anchor-id="exchange-rate-change">Exchange Rate Change</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Exchange_Rate_Change"</span>] <span class="op">=</span> data[<span class="st">"Exchange_Rate"</span>].pct_change() <span class="op">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This creates a year-to-year percentage change.</p>
-<p>Interpretation:</p>
-<pre class="text"><code>A positive value means the exchange rate increased compared with the previous year.</code></pre>
-<p>In many contexts, this may indicate currency depreciation.</p>
-</section>
-<section id="reserve-adequacy-signal" class="level2">
-<h2 class="anchored" data-anchor-id="reserve-adequacy-signal">Reserve Adequacy Signal</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Low_Reserves"</span>] <span class="op">=</span> data[<span class="st">"Reserves"</span>] <span class="op">&lt;</span> <span class="dv">4000</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This creates a simple warning indicator.</p>
-</section>
-<section id="recession-indicator" class="level2">
-<h2 class="anchored" data-anchor-id="recession-indicator">Recession Indicator</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Recession"</span>] <span class="op">=</span> data[<span class="st">"GDP_Growth"</span>] <span class="op">&lt;</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This converts an economic rule into a variable.</p>
+<section id="inflation-classification" class="level1">
+<h1>21. Inflation Classification</h1>
+<p>Use Week 3 conditional logic to classify inflation.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classify_inflation(rate):</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> rate <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Low"</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> rate <span class="op">&lt;=</span> <span class="dv">15</span>:</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Moderate"</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"High"</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation_Category"</span>] <span class="op">=</span> data[<span class="st">"Inflation"</span>].<span class="bu">apply</span>(classify_inflation)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The rule is:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Inflation Rate</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Below 5</td>
+<td>Low</td>
+</tr>
+<tr class="even">
+<td>5 to 15</td>
+<td>Moderate</td>
+</tr>
+<tr class="odd">
+<td>Above 15</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
-</section>
-<section id="recoding-into-categories" class="level1">
-<h1>12. Recoding Into Categories</h1>
-<p>Categories help communicate economic conditions.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classify_inflation(rate):</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> rate <span class="op">&lt;</span> <span class="dv">5</span>:</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Low"</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> rate <span class="op">&lt;=</span> <span class="dv">15</span>:</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Moderate"</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"High"</span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Inflation_Category"</span>] <span class="op">=</span> data[<span class="st">"Inflation"</span>].<span class="bu">apply</span>(classify_inflation)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This builds directly on Week 3.</p>
-<p>Week 3 asked:</p>
-<pre class="text"><code>Can we write the rule?</code></pre>
-<p>Week 4 asks:</p>
-<pre class="text"><code>Can we apply the rule correctly to a dataset?</code></pre>
-<hr>
-</section>
-<section id="quality-checklist" class="level1">
-<h1>13. Quality Checklist</h1>
-<p>Before using the dataset in Week 5, check:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>data.info()</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>data.isna().<span class="bu">sum</span>()</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>data.describe()</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>data.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Then answer:</p>
+<section id="boundary-testing" class="level1">
+<h1>22. Boundary Testing</h1>
+<p>Always test boundary values.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>test_values <span class="op">=</span> [<span class="fl">4.9</span>, <span class="dv">5</span>, <span class="dv">15</span>, <span class="fl">15.1</span>]</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> value <span class="kw">in</span> test_values:</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(value, <span class="st">"-&gt;"</span>, classify_inflation(value))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ask:</p>
 <ol type="1">
-<li>Are all required variables present?</li>
-<li>Are numerical variables stored as numbers?</li>
-<li>Are missing values understood?</li>
-<li>Are new variables correctly created?</li>
-<li>Are classifications consistent with the economic rule?</li>
-<li>Can another student understand your cleaning decisions?</li>
+<li>What happens at 5?</li>
+<li>What happens at 15?</li>
+<li>What happens just below and just above the threshold?</li>
+</ol>
+<p>This protects students from flawed AI-generated code such as:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> classify_inflation(inflation):</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> inflation <span class="op">&lt;</span> <span class="dv">15</span>:</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Low"</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> inflation <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"Moderate"</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">"High"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Problem:</p>
+<pre class="text"><code>The second condition can never be reached.</code></pre>
+<hr>
+</section>
+<section id="filtering-the-prepared-dataset" class="level1">
+<h1>23. Filtering the Prepared Dataset</h1>
+<p>After creating indicators, students can filter meaningful periods.</p>
+<p>High inflation years:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>data[data[<span class="st">"Inflation_Category"</span>] <span class="op">==</span> <span class="st">"High"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Recession years:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>data[data[<span class="st">"Recession"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Years with low reserves:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>data[data[<span class="st">"Low_Reserves"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Combined conditions:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>data[</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>    (data[<span class="st">"Inflation_Category"</span>] <span class="op">==</span> <span class="st">"High"</span>) <span class="op">&amp;</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>    (data[<span class="st">"Recession"</span>])</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Interpretation:</p>
+<pre class="text"><code>Combined filters help identify periods of multiple macroeconomic stress.</code></pre>
+<hr>
+</section>
+<section id="building-an-analysis-ready-dataset" class="level1">
+<h1>24. Building an Analysis-Ready Dataset</h1>
+<p>Select the variables needed for Week 5:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>prepared_data <span class="op">=</span> data[[</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Year"</span>,</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Inflation"</span>,</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Inflation_Category"</span>,</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"GDP_Growth"</span>,</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Recession"</span>,</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Exchange_Rate"</span>,</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Exchange_Rate_Change"</span>,</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Reserves"</span>,</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Low_Reserves"</span>,</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Unemployment"</span></span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a>]]</span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a>prepared_data</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This creates a focused dataset for exploratory analysis.</p>
+<p>It includes:</p>
+<ul>
+<li>original variables</li>
+<li>transformed variables</li>
+<li>classification variables</li>
+<li>warning indicators</li>
+</ul>
+<hr>
+</section>
+<section id="data-documentation" class="level1">
+<h1>25. Data Documentation</h1>
+<p>A prepared dataset must be documented.</p>
+<p>Students should write a short note explaining:</p>
+<ul>
+<li>what the dataset contains</li>
+<li>what each new variable means</li>
+<li>how missing values were handled</li>
+<li>why extreme values were kept</li>
+<li>what limitations remain</li>
+</ul>
+<p>Example:</p>
+<pre class="text"><code>I created Exchange_Rate_Change using percentage change in Exchange_Rate. The first year is missing because there is no previous year for comparison. I classified inflation as Low below 5, Moderate from 5 to 15, and High above 15. I kept 2022 because it represents an important crisis observation rather than a data error.</code></pre>
+<p>This note makes the analysis transparent.</p>
+<hr>
+</section>
+<section id="live-practice-activity" class="level1">
+<h1>26. Live Practice Activity</h1>
+<p>Students should complete this during class.</p>
+<section id="part-a-audit" class="level2">
+<h2 class="anchored" data-anchor-id="part-a-audit">Part A — Audit</h2>
+<p>Run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>data.head()</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>data.info()</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>data.describe()</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>data.isna().<span class="bu">sum</span>()</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>data.duplicated().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Write two observations about data quality.</p>
+</section>
+<section id="part-b-create-variables" class="level2">
+<h2 class="anchored" data-anchor-id="part-b-create-variables">Part B — Create Variables</h2>
+<p>Create:</p>
+<pre class="text"><code>Exchange_Rate_Change
+Recession
+Low_Reserves
+Inflation_Category</code></pre>
+</section>
+<section id="part-c-filter" class="level2">
+<h2 class="anchored" data-anchor-id="part-c-filter">Part C — Filter</h2>
+<p>Find:</p>
+<ul>
+<li>high inflation years</li>
+<li>recession years</li>
+<li>years with both high inflation and recession</li>
+</ul>
+</section>
+<section id="part-d-interpret" class="level2">
+<h2 class="anchored" data-anchor-id="part-d-interpret">Part D — Interpret</h2>
+<p>Write three sentences:</p>
+<ol type="1">
+<li>One sentence about data quality</li>
+<li>One sentence about crisis years</li>
+<li>One sentence explaining why this dataset is ready for Week 5</li>
 </ol>
 <hr>
 </section>
-<section id="documentation" class="level1">
-<h1>14. Documentation</h1>
-<p>A clean dataset is not enough. Students must document what they changed.</p>
-<p>Example:</p>
-<pre class="text"><code>I created Exchange_Rate_Change using percentage change in Exchange_Rate.
-The first year is missing because there is no previous year for comparison.
-I classified inflation as Low below 5, Moderate from 5 to 15, and High above 15.
-I did not remove 2022 because it represents an important crisis observation.</code></pre>
-<p>This kind of explanation turns code into analysis.</p>
+</section>
+<section id="mini-quiz" class="level1">
+<h1>27. Mini Quiz</h1>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<p>Why should economists inspect data before creating graphs?</p>
+<p>A. To make the notebook longer<br>
+B. To identify data quality problems before interpretation<br>
+C. To avoid using Python<br>
+D. To remove all unusual values automatically</p>
+<p>Correct answer:</p>
+<pre class="text"><code>B</code></pre>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<p>Why does <code>pct_change()</code> create a missing value in the first row?</p>
+<p>A. The data are wrong<br>
+B. Python cannot read the file<br>
+C. There is no previous period for comparison<br>
+D. Inflation is too high</p>
+<p>Correct answer:</p>
+<pre class="text"><code>C</code></pre>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<p>Should every outlier be removed?</p>
+<p>Correct answer:</p>
+<pre class="text"><code>No. Some outliers represent important economic events.</code></pre>
 <hr>
 </section>
-<section id="week-4-output" class="level1">
-<h1>15. Week 4 Output</h1>
-<p>By the end of Week 4, students should have:</p>
+</section>
+<section id="common-student-mistakes" class="level1">
+<h1>28. Common Student Mistakes</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Mistake</th>
+<th>Why It Is a Problem</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Running code without interpreting output</td>
+<td>Produces technical work without analysis</td>
+</tr>
+<tr class="even">
+<td>Dropping missing values automatically</td>
+<td>May remove important observations</td>
+</tr>
+<tr class="odd">
+<td>Removing crisis years as outliers</td>
+<td>Can erase the main economic story</td>
+</tr>
+<tr class="even">
+<td>Creating variables without explaining them</td>
+<td>Makes results hard to understand</td>
+</tr>
+<tr class="odd">
+<td>Using thresholds without testing boundaries</td>
+<td>Can create incorrect classifications</td>
+</tr>
+<tr class="even">
+<td>Trusting AI-generated code without checking logic</td>
+<td>May produce silent errors</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="responsible-ai-use-in-week-4" class="level1">
+<h1>29. Responsible AI Use in Week 4</h1>
+<p>Students may use AI tools to help understand syntax, but they must verify the result.</p>
+<p>Good AI prompt:</p>
+<pre class="text"><code>I have a pandas DataFrame with Inflation, GDP_Growth, Exchange_Rate, and Reserves. Help me create a recession indicator and explain how to test whether the logic is correct.</code></pre>
+<p>Weak AI prompt:</p>
+<pre class="text"><code>Clean my data.</code></pre>
+<p>Students must be able to explain:</p>
 <ul>
-<li>a cleaned macroeconomic dataset</li>
-<li>at least three new analytical variables</li>
-<li>one classification variable based on an economic rule</li>
-<li>a short data-quality note</li>
-<li>a notebook that can be reused in Weeks 5 and 6</li>
+<li>what the code does</li>
+<li>why the variable is created</li>
+<li>whether the output matches the economic rule</li>
+<li>what limitations remain</li>
 </ul>
 <hr>
 </section>
-<section id="summary" class="level1">
-<h1>16. Summary</h1>
-<p>Week 4 is the bridge from basic Python to real analytics.</p>
-<p>The core lesson is:</p>
-<pre class="text"><code>Good analysis begins with careful data preparation.</code></pre>
-<p>In Week 5, students will use the prepared dataset to produce descriptive statistics, graphs, and evidence-based interpretations.</p>
+<section id="week-4-output" class="level1">
+<h1>30. Week 4 Output</h1>
+<p>By the end of the two-hour lecture, students should have:</p>
+<ul>
+<li>completed a data audit</li>
+<li>checked missing values and duplicates</li>
+<li>identified suspicious values</li>
+<li>created new analytical variables</li>
+<li>tested an inflation classification rule</li>
+<li>filtered crisis-related observations</li>
+<li>produced a prepared dataset</li>
+<li>written a short data-quality note</li>
+</ul>
+<p>This output becomes the input for Week 5.</p>
+<hr>
+</section>
+<section id="bridge-to-week-5" class="level1">
+<h1>31. Bridge to Week 5</h1>
+<p>Week 5 will use the prepared dataset to answer questions such as:</p>
+<ul>
+<li>Which year shows the strongest macroeconomic stress?</li>
+<li>How volatile was inflation?</li>
+<li>Did inflation and exchange rate change move together?</li>
+<li>Did recession years coincide with other warning signals?</li>
+</ul>
+<p>Week 4 prepares the evidence.</p>
+<p>Week 5 interprets the evidence.</p>
+<p>Week 6 communicates the evidence through a dashboard.</p>
+<hr>
+</section>
+<section id="closing-message" class="level1">
+<h1>32. Closing Message</h1>
+<p>The most important lesson from Week 4 is:</p>
+<pre class="text"><code>Data preparation is analytical reasoning, not clerical cleaning.</code></pre>
+<p>A good economist does not simply run commands.</p>
+<p>A good economist asks:</p>
+<pre class="text"><code>Can this dataset support the conclusion I am about to make?</code></pre>
 
 
 </section>
