@@ -175,6 +175,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#task-3-inflation-classification" id="toc-task-3-inflation-classification" class="nav-link" data-scroll-target="#task-3-inflation-classification">Task 3 — Inflation Classification</a></li>
   <li><a href="#task-4-data-quality-note" id="toc-task-4-data-quality-note" class="nav-link" data-scroll-target="#task-4-data-quality-note">Task 4 — Data Quality Note</a></li>
   <li><a href="#task-5-prepared-dataset-preview" id="toc-task-5-prepared-dataset-preview" class="nav-link" data-scroll-target="#task-5-prepared-dataset-preview">Task 5 — Prepared Dataset Preview</a></li>
+  <li><a href="#marking-rubric" id="toc-marking-rubric" class="nav-link" data-scroll-target="#marking-rubric">Marking Rubric</a></li>
   <li><a href="#submission-checklist" id="toc-submission-checklist" class="nav-link" data-scroll-target="#submission-checklist">Submission Checklist</a></li>
   </ul>
 </nav>
@@ -239,6 +240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Purpose</h1>
 <p>This assignment checks whether you can move from raw data to analysis-ready data.</p>
 <p>The goal is not only to run pandas commands. The goal is to explain whether the dataset is ready for economic analysis and to document the preparation decisions you made.</p>
+<p>This assignment connects directly to Week 5. The dataset you prepare here will be used to create descriptive statistics, graphs, and interpretations in the next lecture.</p>
 <hr>
 </section>
 <section id="materials" class="level1">
@@ -284,6 +286,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Which variable or value needs the most careful economic interpretation?</li>
 </ol>
 <p><strong>Marks: 1</strong></p>
+<p>Expected output:</p>
+<ul>
+<li>dataset preview</li>
+<li>dataset dimensions</li>
+<li>data type summary</li>
+<li>missing-value count</li>
+<li>short interpretation</li>
+</ul>
 <hr>
 </section>
 <section id="task-2-create-analytical-variables" class="level1">
@@ -315,6 +325,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Exchange_Rate_Change"</span>] <span class="op">=</span> data[<span class="st">"Exchange_Rate"</span>].pct_change() <span class="op">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Then display the updated dataset.</p>
 <p><strong>Marks: 1</strong></p>
+<p>Expected output:</p>
+<ul>
+<li>updated dataframe</li>
+<li>correct percentage-change variable</li>
+<li>correct Boolean indicators</li>
+<li>short explanation of the first missing value in <code>Exchange_Rate_Change</code></li>
+</ul>
 <hr>
 </section>
 <section id="task-3-inflation-classification" class="level1">
@@ -353,6 +370,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Which category should 15 belong to?</li>
 </ol>
 <p><strong>Marks: 1</strong></p>
+<p>Expected output:</p>
+<ul>
+<li>function definition</li>
+<li><code>Inflation_Category</code> variable</li>
+<li>boundary test output</li>
+<li>explanation of why condition order matters</li>
+</ul>
 <hr>
 </section>
 <section id="task-4-data-quality-note" class="level1">
@@ -366,6 +390,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>how your new variables help analysis</li>
 </ul>
 <p><strong>Marks: 1</strong></p>
+<p>Assessment focus:</p>
+<ul>
+<li>clarity</li>
+<li>economic reasoning</li>
+<li>explanation of unusual values</li>
+<li>documentation of preparation decisions</li>
+</ul>
 <hr>
 </section>
 <section id="task-5-prepared-dataset-preview" class="level1">
@@ -382,6 +413,46 @@ Reserves
 Low_Reserves</code></pre>
 <p>Then write two sentences explaining how this prepared dataset will help Week 5 exploratory analysis.</p>
 <p><strong>Marks: 1</strong></p>
+<p>Expected output:</p>
+<ul>
+<li>final prepared dataset</li>
+<li>two-sentence bridge to Week 5</li>
+<li>clear explanation of how new variables support analysis</li>
+</ul>
+<hr>
+</section>
+<section id="marking-rubric" class="level1">
+<h1>Marking Rubric</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Criterion</th>
+<th style="text-align: right;">Mark</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Data audit is complete and interpreted</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td>Analytical variables are correctly created</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td>Inflation classification and boundary testing are correct</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td>Data-quality note is clear and economically meaningful</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td>Prepared dataset preview and Week 5 bridge are complete</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
 <section id="submission-checklist" class="level1">

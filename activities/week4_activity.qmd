@@ -20,6 +20,8 @@ This assignment checks whether you can move from raw data to analysis-ready data
 
 The goal is not only to run pandas commands. The goal is to explain whether the dataset is ready for economic analysis and to document the preparation decisions you made.
 
+This assignment connects directly to Week 5. The dataset you prepare here will be used to create descriptive statistics, graphs, and interpretations in the next lecture.
+
 ---
 
 # Materials
@@ -66,6 +68,14 @@ Answer briefly:
 
 **Marks: 1**
 
+Expected output:
+
+- dataset preview
+- dataset dimensions
+- data type summary
+- missing-value count
+- short interpretation
+
 ---
 
 # Task 2 — Create Analytical Variables
@@ -87,6 +97,13 @@ data["Exchange_Rate_Change"] = data["Exchange_Rate"].pct_change() * 100
 Then display the updated dataset.
 
 **Marks: 1**
+
+Expected output:
+
+- updated dataframe
+- correct percentage-change variable
+- correct Boolean indicators
+- short explanation of the first missing value in `Exchange_Rate_Change`
 
 ---
 
@@ -120,6 +137,13 @@ Answer briefly:
 
 **Marks: 1**
 
+Expected output:
+
+- function definition
+- `Inflation_Category` variable
+- boundary test output
+- explanation of why condition order matters
+
 ---
 
 # Task 4 — Data Quality Note
@@ -134,6 +158,13 @@ Your note should mention:
 - how your new variables help analysis
 
 **Marks: 1**
+
+Assessment focus:
+
+- clarity
+- economic reasoning
+- explanation of unusual values
+- documentation of preparation decisions
 
 ---
 
@@ -156,6 +187,24 @@ Low_Reserves
 Then write two sentences explaining how this prepared dataset will help Week 5 exploratory analysis.
 
 **Marks: 1**
+
+Expected output:
+
+- final prepared dataset
+- two-sentence bridge to Week 5
+- clear explanation of how new variables support analysis
+
+---
+
+# Marking Rubric
+
+| Criterion | Mark |
+|---|---:|
+| Data audit is complete and interpreted | 1 |
+| Analytical variables are correctly created | 1 |
+| Inflation classification and boundary testing are correct | 1 |
+| Data-quality note is clear and economically meaningful | 1 |
+| Prepared dataset preview and Week 5 bridge are complete | 1 |
 
 ---
 

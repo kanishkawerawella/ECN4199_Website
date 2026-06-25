@@ -11,7 +11,7 @@
     "href": "activities/week4_activity.html",
     "title": "Week 4 Assignment — Prepare an Analysis-Ready Dataset",
     "section": "",
-    "text": "Week 4 Assignment — Prepare an Analysis-Ready Dataset\n\n\n\nItem\nDetails\n\n\n\n\nWeek\nWeek 4\n\n\nTopic\nData Preparation for Economic Analysis\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nSubmission\nCompleted Google Colab notebook link\n\n\n\n\n\n\nPurpose\nThis assignment checks whether you can move from raw data to analysis-ready data.\nThe goal is not only to run pandas commands. The goal is to explain whether the dataset is ready for economic analysis and to document the preparation decisions you made.\n\n\n\nMaterials\n\n\n\nMaterial\nLink\n\n\n\n\nWeek 4 Live Notebook\nOpen in Google Colab\n\n\nDataset\nDownload sri_lanka_macro.csv\n\n\n\nBefore working:\nFile -&gt; Save a copy in Drive\nRename your notebook:\nWeek04_IndexNumber_Name.ipynb\n\n\n\nTask 1 — Data Audit\nLoad the dataset and produce a short audit.\nYour notebook must show:\ndata.head()\ndata.shape\ndata.info()\ndata.describe()\ndata.isna().sum()\nAnswer briefly:\n\nWhat does one row represent?\nWhich variables are numerical?\nAre there missing values?\nWhich variable or value needs the most careful economic interpretation?\n\nMarks: 1\n\n\n\nTask 2 — Create Analytical Variables\nCreate at least three new variables:\n\n\n\nVariable\nRule\n\n\n\n\nExchange_Rate_Change\nPercentage change in Exchange_Rate\n\n\nRecession\nGDP_Growth &lt; 0\n\n\nLow_Reserves\nReserves &lt; 4000\n\n\n\nExample:\ndata[\"Exchange_Rate_Change\"] = data[\"Exchange_Rate\"].pct_change() * 100\nThen display the updated dataset.\nMarks: 1\n\n\n\nTask 3 — Inflation Classification\nCreate a function to classify inflation.\n\n\n\nRule\nCategory\n\n\n\n\nInflation below 5\nLow\n\n\nInflation from 5 to 15\nModerate\n\n\nInflation above 15\nHigh\n\n\n\nApply the function to create:\nInflation_Category\nTest boundary values:\n4.9, 5, 15, 15.1\nAnswer briefly:\n\nWhy are boundary values important?\nWhich category should 5 belong to?\nWhich category should 15 belong to?\n\nMarks: 1\n\n\n\nTask 4 — Data Quality Note\nWrite a short data-quality note of 100-150 words.\nYour note should mention:\n\nwhether the dataset is usable for Week 5 analysis\nany missing values or unusual values\nwhether extreme values should be removed or kept\nhow your new variables help analysis\n\nMarks: 1\n\n\n\nTask 5 — Prepared Dataset Preview\nDisplay a final prepared dataset containing:\nYear\nInflation\nInflation_Category\nGDP_Growth\nRecession\nExchange_Rate\nExchange_Rate_Change\nReserves\nLow_Reserves\nThen write two sentences explaining how this prepared dataset will help Week 5 exploratory analysis.\nMarks: 1\n\n\n\nSubmission Checklist\nBefore submitting, make sure:\n\nyour notebook runs from top to bottom\nall tasks are answered\ncode outputs are visible\ninterpretation answers are written in your own words\nsharing is set to Anyone with the link -&gt; Viewer\n\nThe lecturer will provide the live submission link during the class session."
+    "text": "Week 4 Assignment — Prepare an Analysis-Ready Dataset\n\n\n\nItem\nDetails\n\n\n\n\nWeek\nWeek 4\n\n\nTopic\nData Preparation for Economic Analysis\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nSubmission\nCompleted Google Colab notebook link\n\n\n\n\n\n\nPurpose\nThis assignment checks whether you can move from raw data to analysis-ready data.\nThe goal is not only to run pandas commands. The goal is to explain whether the dataset is ready for economic analysis and to document the preparation decisions you made.\nThis assignment connects directly to Week 5. The dataset you prepare here will be used to create descriptive statistics, graphs, and interpretations in the next lecture.\n\n\n\nMaterials\n\n\n\nMaterial\nLink\n\n\n\n\nWeek 4 Live Notebook\nOpen in Google Colab\n\n\nDataset\nDownload sri_lanka_macro.csv\n\n\n\nBefore working:\nFile -&gt; Save a copy in Drive\nRename your notebook:\nWeek04_IndexNumber_Name.ipynb\n\n\n\nTask 1 — Data Audit\nLoad the dataset and produce a short audit.\nYour notebook must show:\ndata.head()\ndata.shape\ndata.info()\ndata.describe()\ndata.isna().sum()\nAnswer briefly:\n\nWhat does one row represent?\nWhich variables are numerical?\nAre there missing values?\nWhich variable or value needs the most careful economic interpretation?\n\nMarks: 1\nExpected output:\n\ndataset preview\ndataset dimensions\ndata type summary\nmissing-value count\nshort interpretation\n\n\n\n\nTask 2 — Create Analytical Variables\nCreate at least three new variables:\n\n\n\nVariable\nRule\n\n\n\n\nExchange_Rate_Change\nPercentage change in Exchange_Rate\n\n\nRecession\nGDP_Growth &lt; 0\n\n\nLow_Reserves\nReserves &lt; 4000\n\n\n\nExample:\ndata[\"Exchange_Rate_Change\"] = data[\"Exchange_Rate\"].pct_change() * 100\nThen display the updated dataset.\nMarks: 1\nExpected output:\n\nupdated dataframe\ncorrect percentage-change variable\ncorrect Boolean indicators\nshort explanation of the first missing value in Exchange_Rate_Change\n\n\n\n\nTask 3 — Inflation Classification\nCreate a function to classify inflation.\n\n\n\nRule\nCategory\n\n\n\n\nInflation below 5\nLow\n\n\nInflation from 5 to 15\nModerate\n\n\nInflation above 15\nHigh\n\n\n\nApply the function to create:\nInflation_Category\nTest boundary values:\n4.9, 5, 15, 15.1\nAnswer briefly:\n\nWhy are boundary values important?\nWhich category should 5 belong to?\nWhich category should 15 belong to?\n\nMarks: 1\nExpected output:\n\nfunction definition\nInflation_Category variable\nboundary test output\nexplanation of why condition order matters\n\n\n\n\nTask 4 — Data Quality Note\nWrite a short data-quality note of 100-150 words.\nYour note should mention:\n\nwhether the dataset is usable for Week 5 analysis\nany missing values or unusual values\nwhether extreme values should be removed or kept\nhow your new variables help analysis\n\nMarks: 1\nAssessment focus:\n\nclarity\neconomic reasoning\nexplanation of unusual values\ndocumentation of preparation decisions\n\n\n\n\nTask 5 — Prepared Dataset Preview\nDisplay a final prepared dataset containing:\nYear\nInflation\nInflation_Category\nGDP_Growth\nRecession\nExchange_Rate\nExchange_Rate_Change\nReserves\nLow_Reserves\nThen write two sentences explaining how this prepared dataset will help Week 5 exploratory analysis.\nMarks: 1\nExpected output:\n\nfinal prepared dataset\ntwo-sentence bridge to Week 5\nclear explanation of how new variables support analysis\n\n\n\n\nMarking Rubric\n\n\n\nCriterion\nMark\n\n\n\n\nData audit is complete and interpreted\n1\n\n\nAnalytical variables are correctly created\n1\n\n\nInflation classification and boundary testing are correct\n1\n\n\nData-quality note is clear and economically meaningful\n1\n\n\nPrepared dataset preview and Week 5 bridge are complete\n1\n\n\n\n\n\n\nSubmission Checklist\nBefore submitting, make sure:\n\nyour notebook runs from top to bottom\nall tasks are answered\ncode outputs are visible\ninterpretation answers are written in your own words\nsharing is set to Anyone with the link -&gt; Viewer\n\nThe lecturer will provide the live submission link during the class session."
   },
   {
     "objectID": "activities/week2_activity.html",
@@ -151,28 +151,56 @@
     "href": "lectures/week4.html",
     "title": "Week 4 — Preparing Economic Data for Analysis",
     "section": "",
-    "text": "Weeks 1-3 built the foundation:\n\nrunning Python code\nimporting and inspecting data\nusing logic, loops, and functions\nchecking whether code matches an economic rule\n\nWeek 4 is the next step.\nThe focus is no longer:\nCan I run a Python command?\nThe focus is:\nCan I turn raw economic data into analysis-ready data?\nThis matters because most analytical mistakes happen before modelling begins. If the data are poorly prepared, the graphs, dashboards, forecasts, and machine learning models will also be unreliable."
+    "text": "Weeks 1-3 gave students the foundation:\n\nrunning Python code\nunderstanding variables and data types\nimporting and inspecting data\nusing conditions, loops, and functions\nchecking whether code follows an economic rule\n\nWeek 4 is where those skills become a real analytical workflow.\nThe central question is:\nCan I turn raw economic data into analysis-ready data?\nThis is one of the most important skills in industrial data analytics. A model, graph, dashboard, or AI-generated result is only as reliable as the data behind it."
   },
   {
-    "objectID": "lectures/week4.html#exchange-rate-change",
-    "href": "lectures/week4.html#exchange-rate-change",
+    "objectID": "lectures/week4.html#part-a-audit",
+    "href": "lectures/week4.html#part-a-audit",
     "title": "Week 4 — Preparing Economic Data for Analysis",
-    "section": "Exchange Rate Change",
-    "text": "Exchange Rate Change\ndata[\"Exchange_Rate_Change\"] = data[\"Exchange_Rate\"].pct_change() * 100\nThis creates a year-to-year percentage change.\nInterpretation:\nA positive value means the exchange rate increased compared with the previous year.\nIn many contexts, this may indicate currency depreciation."
+    "section": "Part A — Audit",
+    "text": "Part A — Audit\nRun:\ndata.head()\ndata.info()\ndata.describe()\ndata.isna().sum()\ndata.duplicated().sum()\nWrite two observations about data quality."
   },
   {
-    "objectID": "lectures/week4.html#reserve-adequacy-signal",
-    "href": "lectures/week4.html#reserve-adequacy-signal",
+    "objectID": "lectures/week4.html#part-b-create-variables",
+    "href": "lectures/week4.html#part-b-create-variables",
     "title": "Week 4 — Preparing Economic Data for Analysis",
-    "section": "Reserve Adequacy Signal",
-    "text": "Reserve Adequacy Signal\ndata[\"Low_Reserves\"] = data[\"Reserves\"] &lt; 4000\nThis creates a simple warning indicator."
+    "section": "Part B — Create Variables",
+    "text": "Part B — Create Variables\nCreate:\nExchange_Rate_Change\nRecession\nLow_Reserves\nInflation_Category"
   },
   {
-    "objectID": "lectures/week4.html#recession-indicator",
-    "href": "lectures/week4.html#recession-indicator",
+    "objectID": "lectures/week4.html#part-c-filter",
+    "href": "lectures/week4.html#part-c-filter",
     "title": "Week 4 — Preparing Economic Data for Analysis",
-    "section": "Recession Indicator",
-    "text": "Recession Indicator\ndata[\"Recession\"] = data[\"GDP_Growth\"] &lt; 0\nThis converts an economic rule into a variable."
+    "section": "Part C — Filter",
+    "text": "Part C — Filter\nFind:\n\nhigh inflation years\nrecession years\nyears with both high inflation and recession"
+  },
+  {
+    "objectID": "lectures/week4.html#part-d-interpret",
+    "href": "lectures/week4.html#part-d-interpret",
+    "title": "Week 4 — Preparing Economic Data for Analysis",
+    "section": "Part D — Interpret",
+    "text": "Part D — Interpret\nWrite three sentences:\n\nOne sentence about data quality\nOne sentence about crisis years\nOne sentence explaining why this dataset is ready for Week 5"
+  },
+  {
+    "objectID": "lectures/week4.html#question-1",
+    "href": "lectures/week4.html#question-1",
+    "title": "Week 4 — Preparing Economic Data for Analysis",
+    "section": "Question 1",
+    "text": "Question 1\nWhy should economists inspect data before creating graphs?\nA. To make the notebook longer\nB. To identify data quality problems before interpretation\nC. To avoid using Python\nD. To remove all unusual values automatically\nCorrect answer:\nB"
+  },
+  {
+    "objectID": "lectures/week4.html#question-2",
+    "href": "lectures/week4.html#question-2",
+    "title": "Week 4 — Preparing Economic Data for Analysis",
+    "section": "Question 2",
+    "text": "Question 2\nWhy does pct_change() create a missing value in the first row?\nA. The data are wrong\nB. Python cannot read the file\nC. There is no previous period for comparison\nD. Inflation is too high\nCorrect answer:\nC"
+  },
+  {
+    "objectID": "lectures/week4.html#question-3",
+    "href": "lectures/week4.html#question-3",
+    "title": "Week 4 — Preparing Economic Data for Analysis",
+    "section": "Question 3",
+    "text": "Question 3\nShould every outlier be removed?\nCorrect answer:\nNo. Some outliers represent important economic events."
   },
   {
     "objectID": "lectures/week2.html",

@@ -4,28 +4,23 @@ title: "Week 4 — Preparing Economic Data for Analysis"
 
 # Week 4 — Preparing Economic Data for Analysis
 
-Weeks 1-3 built the foundation:
+Weeks 1-3 gave students the foundation:
 
 - running Python code
+- understanding variables and data types
 - importing and inspecting data
-- using logic, loops, and functions
-- checking whether code matches an economic rule
+- using conditions, loops, and functions
+- checking whether code follows an economic rule
 
-Week 4 is the next step.
+Week 4 is where those skills become a real analytical workflow.
 
-The focus is no longer:
-
-```text
-Can I run a Python command?
-```
-
-The focus is:
+The central question is:
 
 ```text
 Can I turn raw economic data into analysis-ready data?
 ```
 
-This matters because most analytical mistakes happen before modelling begins. If the data are poorly prepared, the graphs, dashboards, forecasts, and machine learning models will also be unreliable.
+This is one of the most important skills in industrial data analytics. A model, graph, dashboard, or AI-generated result is only as reliable as the data behind it.
 
 ---
 
@@ -34,26 +29,31 @@ This matters because most analytical mistakes happen before modelling begins. If
 By the end of this week, students should be able to:
 
 - explain the difference between raw data and analysis-ready data
-- inspect a dataset for structure, data types, missing values, and suspicious values
-- clean column names and standardize variable formats
-- create economically meaningful variables
-- recode numerical values into interpretable categories
-- document data-cleaning decisions
-- produce a clean dataset that can be used in Weeks 5 and 6
+- conduct a structured data audit
+- check rows, columns, data types, missing values, duplicates, and suspicious values
+- connect technical data checks to economic meaning
+- clean column names and standardize variables
+- create economically meaningful indicators
+- classify observations using economic rules
+- test boundary values in classification rules
+- prepare a clean dataset for Week 5 exploratory analysis
+- document data-preparation decisions clearly
 
 ---
 
-# 2. Two-Hour Learning Plan
+# 2. Two-Hour Lecture Plan
 
-| Time | Section | Main Focus |
+| Time | Segment | Purpose |
 |---|---|---|
-| 0-10 minutes | Bridge from Week 3 | From rules and functions to data preparation |
-| 10-25 minutes | Raw vs analysis-ready data | Why preparation matters in economics |
-| 25-45 minutes | Data audit | Structure, types, missing values, outliers |
-| 45-70 minutes | Cleaning decisions | Names, types, missing values, duplicates |
-| 70-95 minutes | Variable construction | Economic indicators and classifications |
-| 95-115 minutes | Quality checklist | Is the dataset ready for analysis? |
-| 115-120 minutes | Assignment briefing | Prepare the Week 5 analysis dataset |
+| 0-10 minutes | Bridge from Weeks 1-3 | Show how previous skills combine into a data workflow |
+| 10-25 minutes | Raw vs analysis-ready data | Explain why data preparation matters |
+| 25-40 minutes | Data audit framework | Inspect structure, variables, missing values, and duplicates |
+| 40-55 minutes | Economic meaning of data types | Link pandas output to economic interpretation |
+| 55-70 minutes | Missing values and suspicious values | Decide whether to keep, drop, investigate, or document |
+| 70-90 minutes | Creating analytical variables | Build change rates, crisis indicators, and warning signals |
+| 90-105 minutes | Classification rules | Apply Week 3 logic to a dataset |
+| 105-115 minutes | Quality checklist and documentation | Decide whether the dataset is ready |
+| 115-120 minutes | Assignment briefing | Prepare the dataset for Week 5 analysis |
 
 ---
 
@@ -78,50 +78,116 @@ Week04_IndexNumber_Name.ipynb
 
 ---
 
-# 4. Why Week 4 Is Not a Repeat of Week 2
+# 4. Why Week 4 Matters
 
-Week 2 introduced how to open and inspect data.
+In real economic analysis, the data rarely arrive ready for use.
 
-Week 4 asks a more professional question:
+Common problems include:
+
+- inconsistent variable names
+- numbers stored as text
+- missing observations
+- duplicated rows
+- extreme values
+- unclear category labels
+- variables that need to be constructed from raw columns
+
+If these problems are ignored, the analysis becomes unreliable.
+
+Example:
 
 ```text
-Is this dataset reliable enough to support an economic conclusion?
+If inflation is stored as text, Python may not calculate the average correctly.
+If a crisis year is removed as an "outlier", the analysis may erase the most important event.
+If missing data are dropped without explanation, the result may become biased.
 ```
 
-That requires judgment.
-
-For example, after importing data, an analyst should ask:
-
-- Are the variables named consistently?
-- Are numerical variables stored as numbers?
-- Are there missing values?
-- Are values economically plausible?
-- Are classifications coded clearly?
-- Can another person understand how the dataset was prepared?
-
-This is the difference between basic coding and analytical practice.
+Therefore, Week 4 is about professional discipline.
 
 ---
 
-# 5. Raw Data vs Analysis-Ready Data
+# 5. Week 4 Is Not a Repeat of Week 2
 
-Raw data are data as initially collected, downloaded, or received.
+Week 2 introduced how to open data.
 
-Analysis-ready data are data that have been checked, cleaned, documented, and structured for a specific analytical purpose.
+Week 4 asks whether the data are analytically trustworthy.
 
-| Raw Data Problem | Why It Matters |
-|---|---|
-| Missing values | Can distort averages and comparisons |
-| Incorrect data types | Prevent calculations |
-| Inconsistent names | Create coding errors |
-| Extreme values | May indicate crisis, error, or special events |
-| Undocumented categories | Make interpretation unclear |
+| Skill | Week 2 | Week 4 |
+|---|---|---|
+| Import data | Learn how to load a file | Decide whether the imported data are usable |
+| Inspect rows and columns | Understand dataset structure | Identify analytical risks |
+| Use pandas commands | Run basic commands | Build a reproducible data-preparation workflow |
+| Interpret output | Describe simple results | Explain data quality and economic meaning |
 
-Economists should not clean data mechanically. Every cleaning decision should be linked to the purpose of the analysis.
+The move is from:
+
+```text
+basic coding
+```
+
+to:
+
+```text
+analytical preparation
+```
 
 ---
 
-# 6. Import and Audit the Dataset
+# 6. Raw Data vs Analysis-Ready Data
+
+Raw data are data as received.
+
+Analysis-ready data are data that have been:
+
+- inspected
+- cleaned
+- checked
+- documented
+- structured for a specific analytical question
+
+| Raw Data Problem | Technical Issue | Economic Risk |
+|---|---|---|
+| Missing values | `NaN` values appear | Averages and comparisons may be misleading |
+| Wrong data type | Number stored as text | Calculations may fail |
+| Duplicate rows | Same observation repeated | Results may be double counted |
+| Extreme values | Very high or low values | Could be error or important crisis signal |
+| Unclear categories | Poor labels | Interpretation becomes weak |
+
+Key point:
+
+```text
+Data cleaning is not just technical. It is analytical.
+```
+
+---
+
+# 7. The Data Audit Framework
+
+A good data audit asks five questions:
+
+1. What is the unit of observation?
+2. What variables are available?
+3. Are the data types correct?
+4. Are there missing, duplicated, or suspicious values?
+5. What new variables are needed for analysis?
+
+In pandas:
+
+```python
+data.head()
+data.shape
+data.columns
+data.info()
+data.describe()
+data.isna().sum()
+data.duplicated().sum()
+```
+
+Students should not simply run these commands. They should explain what each command reveals.
+
+---
+
+# 8. Load the Dataset
 
 ```python
 import pandas as pd
@@ -132,98 +198,227 @@ data = pd.read_csv(url)
 data.head()
 ```
 
-Start with a simple audit:
+The dataset contains annual macroeconomic indicators.
+
+| Variable | Meaning |
+|---|---|
+| `Year` | Time period |
+| `Inflation` | Annual inflation rate |
+| `GDP_Growth` | Annual GDP growth rate |
+| `Exchange_Rate` | Exchange rate level |
+| `Reserves` | Foreign reserves |
+| `Unemployment` | Unemployment rate |
+
+---
+
+# 9. Understanding the Unit of Observation
+
+Before analysis, identify the unit of observation.
+
+In this dataset:
+
+```text
+Each row represents one year.
+```
+
+This matters because interpretation depends on the unit.
+
+If one row is a person, we analyze individual differences.
+
+If one row is a year, we analyze changes over time.
+
+If one row is a district, we analyze spatial differences.
+
+Check:
 
 ```python
 data.shape
-data.columns
+```
+
+Interpretation:
+
+```text
+The dataset has a small number of annual observations, so the analysis should be descriptive and cautious.
+```
+
+---
+
+# 10. Inspecting Data Types
+
+```python
 data.info()
+```
+
+This shows:
+
+- column names
+- number of non-missing observations
+- data types
+- memory usage
+
+Important data types:
+
+| pandas Type | Meaning |
+|---|---|
+| `int64` | Whole number |
+| `float64` | Decimal number |
+| `object` | Text or mixed type |
+| `bool` | True or False |
+
+Economic interpretation:
+
+```text
+Inflation, GDP growth, reserves, unemployment, and exchange rates should be numerical because we need to calculate changes, averages, and comparisons.
+```
+
+---
+
+# 11. Summary Statistics Are Data Checks
+
+```python
 data.describe()
 ```
 
-Interpretation questions:
+This is not yet final analysis.
 
-1. What is one row in this dataset?
-2. What is one column in this dataset?
-3. Which variables can be used for numerical analysis?
-4. Which variables need checking before analysis?
+In Week 4, `describe()` is used as a quality check.
 
----
+Ask:
 
-# 7. Data Types and Economic Meaning
+- Are the minimum and maximum values plausible?
+- Does any value look impossible?
+- Are there extreme values that need explanation?
+- Are units clear?
 
-Python only sees objects, numbers, and labels.
+Example:
 
-Economists must connect those technical types to economic meaning.
-
-| Variable | Technical Type | Economic Meaning |
-|---|---|---|
-| `Year` | integer | Time period |
-| `Inflation` | float | Price instability |
-| `GDP_Growth` | float | Economic expansion or contraction |
-| `Exchange_Rate` | float/integer | Value of domestic currency against foreign currency |
-| `Reserves` | float/integer | External buffer |
-| `Unemployment` | float | Labour market condition |
-
-The same command may be technically correct but economically meaningless if the variable is misunderstood.
+```text
+Very high inflation may not be an error. It may represent a crisis year.
+```
 
 ---
 
-# 8. Missing Values
+# 12. Missing Values
 
-Missing values are not just technical problems. They are economic information problems.
+Missing values are not just a coding issue.
+
+They raise economic questions:
+
+- Was the statistic not collected?
+- Was the value unavailable?
+- Is the missing value concentrated in crisis years?
+- Would removing the row change the story?
+
+Check:
 
 ```python
 data.isna().sum()
 ```
 
-If missing values exist, students should ask:
+Common decisions:
 
-- Is the value truly unavailable?
-- Was it not collected?
-- Is the missing value concentrated in a specific period?
-- Would dropping the row remove an important crisis year?
-
-Common approaches:
-
-| Approach | When It May Be Reasonable |
+| Decision | When It May Be Suitable |
 |---|---|
-| Keep missing value | When absence itself should be visible |
-| Drop observation | When few rows are affected and no bias is created |
-| Fill using a rule | When the rule is defensible and documented |
+| Keep missing value | When absence should remain visible |
+| Drop row | When missingness is limited and not central |
+| Fill value | When there is a defensible rule |
+| Investigate source | When the missing value affects the conclusion |
 
-Never hide a missing-value decision.
+Professional rule:
+
+```text
+Do not hide missing-value decisions. Document them.
+```
 
 ---
 
-# 9. Suspicious Values and Outliers
+# 13. Duplicates
 
-Extreme values may be errors, but they may also be economically important.
+Duplicate rows can distort results.
+
+```python
+data.duplicated().sum()
+```
+
+If duplicates exist:
+
+```python
+data = data.drop_duplicates()
+```
+
+But do not drop duplicates blindly.
+
+Ask:
+
+- Are the rows truly duplicated?
+- Is there a reason the same year appears twice?
+- Does the duplicate represent a different source, region, or revision?
+
+---
+
+# 14. Suspicious Values and Outliers
+
+Outliers are observations that are very different from the rest.
+
+They may be:
+
+- data entry errors
+- measurement problems
+- genuine economic shocks
+- crisis observations
+
+Find extreme values:
 
 ```python
 data.sort_values("Inflation", ascending=False)
 data.sort_values("GDP_Growth")
+data.sort_values("Reserves")
 ```
 
-Example:
+Important distinction:
 
 ```text
-High inflation may be a crisis signal, not a data error.
+Unusual does not mean wrong.
 ```
 
-Before removing or changing an outlier, ask:
-
-- Is the value impossible?
-- Is the value unusual but historically plausible?
-- Does the value represent the event we are trying to study?
-
-For economic analysis, deleting crisis years usually destroys the story.
+For this course, crisis years should usually be kept, because they are central to economic interpretation.
 
 ---
 
-# 10. Cleaning Column Names
+# 15. Class Discussion: Should We Remove 2022?
 
-Clean names reduce errors.
+Suppose 2022 has very high inflation and negative GDP growth.
+
+Discuss:
+
+1. Is this value impossible?
+2. Is this value historically meaningful?
+3. What happens if we remove it?
+4. Would removing it make the data cleaner or less truthful?
+
+Expected conclusion:
+
+```text
+The value should normally be kept because it represents an important macroeconomic event.
+```
+
+This is why economists must think before cleaning.
+
+---
+
+# 16. Cleaning Column Names
+
+Messy names create coding errors.
+
+Good column names are:
+
+- short
+- readable
+- consistent
+- easy to type
+- meaningful
+
+Standardize names:
 
 ```python
 data.columns = (
@@ -233,57 +428,120 @@ data.columns = (
 )
 ```
 
-Good variable names should be:
+Check:
 
-- short
-- readable
-- consistent
-- easy to type
-- connected to meaning
+```python
+data.columns
+```
+
+This pattern is useful because real datasets often contain spaces, hidden characters, and inconsistent naming.
 
 ---
 
-# 11. Creating New Economic Indicators
+# 17. Creating Analytical Variables
 
-Raw variables often need to be transformed into useful indicators.
+Raw variables are often not enough.
 
-## Exchange Rate Change
+Economists create new variables to represent analytical concepts.
+
+Examples:
+
+| Analytical Concept | Variable |
+|---|---|
+| Currency pressure | Exchange rate percentage change |
+| Economic contraction | Recession indicator |
+| External vulnerability | Low reserve indicator |
+| Price instability | Inflation category |
+
+This is where Week 3 logic becomes Week 4 data preparation.
+
+---
+
+# 18. Exchange Rate Percentage Change
+
+The exchange rate level is useful, but the change is often more informative.
 
 ```python
 data["Exchange_Rate_Change"] = data["Exchange_Rate"].pct_change() * 100
 ```
 
-This creates a year-to-year percentage change.
-
 Interpretation:
 
 ```text
-A positive value means the exchange rate increased compared with the previous year.
+The first year will be missing because there is no previous year for comparison.
 ```
 
-In many contexts, this may indicate currency depreciation.
+Ask students:
 
-## Reserve Adequacy Signal
+1. Why does the first year become missing?
+2. Should we fill it with zero?
+3. What would zero incorrectly imply?
 
-```python
-data["Low_Reserves"] = data["Reserves"] < 4000
+Recommended interpretation:
+
+```text
+Do not automatically fill the first value with zero. It is missing because the calculation requires a previous year.
 ```
 
-This creates a simple warning indicator.
+---
 
-## Recession Indicator
+# 19. Recession Indicator
+
+An economic rule can become a variable.
+
+Rule:
+
+```text
+Negative GDP growth indicates contraction.
+```
+
+Code:
 
 ```python
 data["Recession"] = data["GDP_Growth"] < 0
 ```
 
-This converts an economic rule into a variable.
+This creates a Boolean variable:
+
+```text
+True or False
+```
+
+Use it to identify recession years:
+
+```python
+data[data["Recession"]]
+```
 
 ---
 
-# 12. Recoding Into Categories
+# 20. Low Reserves Indicator
 
-Categories help communicate economic conditions.
+A simple warning indicator can be created using a threshold.
+
+```python
+data["Low_Reserves"] = data["Reserves"] < 4000
+```
+
+Important:
+
+```text
+The threshold is a teaching rule for this exercise, not a universal policy rule.
+```
+
+Students should understand that thresholds must be justified.
+
+Ask:
+
+- Who decides the threshold?
+- Would another threshold change the conclusion?
+- Should the threshold be based on theory, policy, or data?
+
+---
+
+# 21. Inflation Classification
+
+Use Week 3 conditional logic to classify inflation.
 
 ```python
 def classify_inflation(rate):
@@ -297,81 +555,321 @@ def classify_inflation(rate):
 data["Inflation_Category"] = data["Inflation"].apply(classify_inflation)
 ```
 
-This builds directly on Week 3.
+The rule is:
 
-Week 3 asked:
-
-```text
-Can we write the rule?
-```
-
-Week 4 asks:
-
-```text
-Can we apply the rule correctly to a dataset?
-```
+| Inflation Rate | Category |
+|---|---|
+| Below 5 | Low |
+| 5 to 15 | Moderate |
+| Above 15 | High |
 
 ---
 
-# 13. Quality Checklist
+# 22. Boundary Testing
 
-Before using the dataset in Week 5, check:
+Always test boundary values.
 
 ```python
-data.info()
-data.isna().sum()
-data.describe()
-data.head()
+test_values = [4.9, 5, 15, 15.1]
+
+for value in test_values:
+    print(value, "->", classify_inflation(value))
 ```
 
-Then answer:
+Ask:
 
-1. Are all required variables present?
-2. Are numerical variables stored as numbers?
-3. Are missing values understood?
-4. Are new variables correctly created?
-5. Are classifications consistent with the economic rule?
-6. Can another student understand your cleaning decisions?
+1. What happens at 5?
+2. What happens at 15?
+3. What happens just below and just above the threshold?
+
+This protects students from flawed AI-generated code such as:
+
+```python
+def classify_inflation(inflation):
+    if inflation < 15:
+        return "Low"
+    elif inflation < 5:
+        return "Moderate"
+    else:
+        return "High"
+```
+
+Problem:
+
+```text
+The second condition can never be reached.
+```
 
 ---
 
-# 14. Documentation
+# 23. Filtering the Prepared Dataset
 
-A clean dataset is not enough. Students must document what they changed.
+After creating indicators, students can filter meaningful periods.
+
+High inflation years:
+
+```python
+data[data["Inflation_Category"] == "High"]
+```
+
+Recession years:
+
+```python
+data[data["Recession"]]
+```
+
+Years with low reserves:
+
+```python
+data[data["Low_Reserves"]]
+```
+
+Combined conditions:
+
+```python
+data[
+    (data["Inflation_Category"] == "High") &
+    (data["Recession"])
+]
+```
+
+Interpretation:
+
+```text
+Combined filters help identify periods of multiple macroeconomic stress.
+```
+
+---
+
+# 24. Building an Analysis-Ready Dataset
+
+Select the variables needed for Week 5:
+
+```python
+prepared_data = data[[
+    "Year",
+    "Inflation",
+    "Inflation_Category",
+    "GDP_Growth",
+    "Recession",
+    "Exchange_Rate",
+    "Exchange_Rate_Change",
+    "Reserves",
+    "Low_Reserves",
+    "Unemployment"
+]]
+
+prepared_data
+```
+
+This creates a focused dataset for exploratory analysis.
+
+It includes:
+
+- original variables
+- transformed variables
+- classification variables
+- warning indicators
+
+---
+
+# 25. Data Documentation
+
+A prepared dataset must be documented.
+
+Students should write a short note explaining:
+
+- what the dataset contains
+- what each new variable means
+- how missing values were handled
+- why extreme values were kept
+- what limitations remain
 
 Example:
 
 ```text
-I created Exchange_Rate_Change using percentage change in Exchange_Rate.
-The first year is missing because there is no previous year for comparison.
-I classified inflation as Low below 5, Moderate from 5 to 15, and High above 15.
-I did not remove 2022 because it represents an important crisis observation.
+I created Exchange_Rate_Change using percentage change in Exchange_Rate. The first year is missing because there is no previous year for comparison. I classified inflation as Low below 5, Moderate from 5 to 15, and High above 15. I kept 2022 because it represents an important crisis observation rather than a data error.
 ```
 
-This kind of explanation turns code into analysis.
+This note makes the analysis transparent.
 
 ---
 
-# 15. Week 4 Output
+# 26. Live Practice Activity
 
-By the end of Week 4, students should have:
+Students should complete this during class.
 
-- a cleaned macroeconomic dataset
-- at least three new analytical variables
-- one classification variable based on an economic rule
-- a short data-quality note
-- a notebook that can be reused in Weeks 5 and 6
+## Part A — Audit
 
----
+Run:
 
-# 16. Summary
+```python
+data.head()
+data.info()
+data.describe()
+data.isna().sum()
+data.duplicated().sum()
+```
 
-Week 4 is the bridge from basic Python to real analytics.
+Write two observations about data quality.
 
-The core lesson is:
+## Part B — Create Variables
+
+Create:
 
 ```text
-Good analysis begins with careful data preparation.
+Exchange_Rate_Change
+Recession
+Low_Reserves
+Inflation_Category
 ```
 
-In Week 5, students will use the prepared dataset to produce descriptive statistics, graphs, and evidence-based interpretations.
+## Part C — Filter
+
+Find:
+
+- high inflation years
+- recession years
+- years with both high inflation and recession
+
+## Part D — Interpret
+
+Write three sentences:
+
+1. One sentence about data quality
+2. One sentence about crisis years
+3. One sentence explaining why this dataset is ready for Week 5
+
+---
+
+# 27. Mini Quiz
+
+## Question 1
+
+Why should economists inspect data before creating graphs?
+
+A. To make the notebook longer  
+B. To identify data quality problems before interpretation  
+C. To avoid using Python  
+D. To remove all unusual values automatically  
+
+Correct answer:
+
+```text
+B
+```
+
+## Question 2
+
+Why does `pct_change()` create a missing value in the first row?
+
+A. The data are wrong  
+B. Python cannot read the file  
+C. There is no previous period for comparison  
+D. Inflation is too high  
+
+Correct answer:
+
+```text
+C
+```
+
+## Question 3
+
+Should every outlier be removed?
+
+Correct answer:
+
+```text
+No. Some outliers represent important economic events.
+```
+
+---
+
+# 28. Common Student Mistakes
+
+| Mistake | Why It Is a Problem |
+|---|---|
+| Running code without interpreting output | Produces technical work without analysis |
+| Dropping missing values automatically | May remove important observations |
+| Removing crisis years as outliers | Can erase the main economic story |
+| Creating variables without explaining them | Makes results hard to understand |
+| Using thresholds without testing boundaries | Can create incorrect classifications |
+| Trusting AI-generated code without checking logic | May produce silent errors |
+
+---
+
+# 29. Responsible AI Use in Week 4
+
+Students may use AI tools to help understand syntax, but they must verify the result.
+
+Good AI prompt:
+
+```text
+I have a pandas DataFrame with Inflation, GDP_Growth, Exchange_Rate, and Reserves. Help me create a recession indicator and explain how to test whether the logic is correct.
+```
+
+Weak AI prompt:
+
+```text
+Clean my data.
+```
+
+Students must be able to explain:
+
+- what the code does
+- why the variable is created
+- whether the output matches the economic rule
+- what limitations remain
+
+---
+
+# 30. Week 4 Output
+
+By the end of the two-hour lecture, students should have:
+
+- completed a data audit
+- checked missing values and duplicates
+- identified suspicious values
+- created new analytical variables
+- tested an inflation classification rule
+- filtered crisis-related observations
+- produced a prepared dataset
+- written a short data-quality note
+
+This output becomes the input for Week 5.
+
+---
+
+# 31. Bridge to Week 5
+
+Week 5 will use the prepared dataset to answer questions such as:
+
+- Which year shows the strongest macroeconomic stress?
+- How volatile was inflation?
+- Did inflation and exchange rate change move together?
+- Did recession years coincide with other warning signals?
+
+Week 4 prepares the evidence.
+
+Week 5 interprets the evidence.
+
+Week 6 communicates the evidence through a dashboard.
+
+---
+
+# 32. Closing Message
+
+The most important lesson from Week 4 is:
+
+```text
+Data preparation is analytical reasoning, not clerical cleaning.
+```
+
+A good economist does not simply run commands.
+
+A good economist asks:
+
+```text
+Can this dataset support the conclusion I am about to make?
+```
