@@ -20,6 +20,8 @@ This assignment checks whether you can communicate economic evidence clearly usi
 
 Your dashboard should help a reader understand the main macroeconomic pattern in the dataset.
 
+This assignment builds directly from Week 5. You should use the evidence and interpretation developed in Week 5 as the foundation for your dashboard story.
+
 ---
 
 # Materials
@@ -58,6 +60,12 @@ Then identify the three indicators your dashboard will use.
 
 **Marks: 1**
 
+Expected output:
+
+- one clear dashboard question
+- three selected indicators
+- short explanation of why those indicators matter
+
 ---
 
 # Task 2 — Interactive Charts
@@ -78,6 +86,14 @@ Each chart must include:
 
 **Marks: 1**
 
+Expected output:
+
+- three working Plotly charts
+- meaningful titles
+- readable labels
+- hover information where useful
+- chart choices linked to the dashboard question
+
 ---
 
 # Task 3 — Multi-Panel Dashboard
@@ -96,6 +112,13 @@ Suggested structure:
 
 **Marks: 1**
 
+Expected output:
+
+- one multi-panel dashboard
+- at least three indicators
+- coherent ordering of panels
+- readable layout
+
 ---
 
 # Task 4 — Dashboard Design Review
@@ -111,6 +134,14 @@ Mention:
 
 **Marks: 1**
 
+Expected output:
+
+- 80-120 word design review
+- explanation of what the reader should notice first
+- justification for chart choices
+- one design improvement
+- one limitation
+
 ---
 
 # Task 5 — Data Story
@@ -125,6 +156,26 @@ Your story must include:
 - caution about interpretation
 
 **Marks: 1**
+
+Expected output:
+
+- 120-180 word dashboard story
+- clear claim
+- evidence from at least two indicators
+- economic meaning
+- caution about interpretation
+
+---
+
+# Marking Rubric
+
+| Criterion | Mark |
+|---|---:|
+| Dashboard question and indicators are clear | 1 |
+| Interactive charts are complete and purposeful | 1 |
+| Multi-panel dashboard is coherent and readable | 1 |
+| Design review is thoughtful and specific | 1 |
+| Dashboard story is evidence-based and cautious | 1 |
 
 ---
 

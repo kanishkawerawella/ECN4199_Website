@@ -8,47 +8,70 @@ Week 4 prepared the data.
 
 Week 5 generated evidence.
 
-Week 6 asks students to communicate the evidence clearly.
+Week 6 communicates the evidence.
 
 The central question is:
 
 ```text
-How can we turn analysis into a dashboard that supports understanding and decision-making?
+How can we turn economic analysis into a dashboard that supports understanding and decision-making?
 ```
 
-This week is not about making graphs look decorative. It is about designing an analytical communication product.
+This week is not about decoration. It is about analytical communication.
 
 ---
 
-# 1. Learning Outcomes
+# 1. Connection to Weeks 1-5
+
+Week 6 integrates the course so far.
+
+| Previous Week | Skill Used in Week 6 |
+|---|---|
+| Week 1 | Running Python and interpreting outputs |
+| Week 2 | Understanding observations, variables, and data |
+| Week 3 | Applying rules and logic |
+| Week 4 | Preparing analysis-ready data |
+| Week 5 | Creating evidence and interpretation |
+
+The workflow is:
+
+```text
+Prepared data -> Evidence -> Dashboard -> Story
+```
+
+---
+
+# 2. Learning Outcomes
 
 By the end of this week, students should be able to:
 
 - explain the purpose of an economic dashboard
-- select charts based on analytical questions
-- build interactive Plotly graphs
-- combine indicators into a coherent dashboard
-- use titles, labels, hover information, and layout to support interpretation
-- avoid common dashboard design mistakes
-- write a short data story that connects evidence to economic meaning
+- identify the audience and analytical question for a dashboard
+- select charts based on analytical purpose
+- build interactive Plotly line, bar, and scatter charts
+- add hover information and readable titles
+- combine several indicators into a multi-panel dashboard
+- evaluate dashboard design quality
+- write a dashboard story using claim, evidence, meaning, and caution
+- avoid decorative or misleading dashboards
 
 ---
 
-# 2. Two-Hour Learning Plan
+# 3. Two-Hour Lecture Plan
 
-| Time | Section | Main Focus |
+| Time | Segment | Purpose |
 |---|---|---|
-| 0-10 minutes | Week 5 recap | Main findings from exploratory analysis |
-| 10-25 minutes | Dashboard purpose | Decision support, not decoration |
-| 25-45 minutes | Chart selection | Match chart type to question |
-| 45-70 minutes | Interactive graphs | Plotly line, bar, and scatter charts |
-| 70-95 minutes | Dashboard layout | Build a multi-panel monitoring dashboard |
-| 95-115 minutes | Data storytelling | Claim, evidence, implication, caution |
-| 115-120 minutes | Assignment briefing | Final dashboard submission |
+| 0-10 minutes | Week 5 recap | Identify main evidence and dashboard story |
+| 10-25 minutes | Dashboard purpose | Define audience, question, and decision need |
+| 25-40 minutes | Chart selection | Match chart type to analytical question |
+| 40-60 minutes | Plotly foundations | Build interactive line and bar charts |
+| 60-75 minutes | Relationships and hover data | Build interactive scatter plots |
+| 75-95 minutes | Dashboard layout | Combine charts into a multi-panel dashboard |
+| 95-110 minutes | Dashboard storytelling | Write claim, evidence, meaning, caution |
+| 110-120 minutes | Design review and assignment | Evaluate dashboard quality |
 
 ---
 
-# 3. Week 6 Learning Materials
+# 4. Week 6 Learning Materials
 
 | Material | Purpose | Link |
 |---|---|---|
@@ -70,67 +93,51 @@ Week06_IndexNumber_Name.ipynb
 
 ---
 
-# 4. Why Week 6 Is the Next Step
+# 5. Why Dashboards Matter in Economics
 
-Students have already learned how to:
+Economists often communicate with people who need quick, reliable insight:
 
-- run Python code
-- inspect and clean data
-- create variables
-- generate statistics
-- create graphs
-- interpret evidence
+- policymakers
+- researchers
+- businesses
+- journalists
+- students
+- the public
 
-Week 6 combines those skills into one communication workflow.
+A dashboard helps users see:
 
-| Stage | Student Output |
-|---|---|
-| Week 4 | Clean dataset |
-| Week 5 | Evidence and interpretation |
-| Week 6 | Dashboard and data story |
-
----
-
-# 5. What Is a Dashboard?
-
-A dashboard is a structured visual interface that helps users understand important information quickly.
-
-In economics, dashboards may be used to monitor:
-
-- inflation
-- GDP growth
-- exchange rates
-- reserves
-- unemployment
-- fiscal indicators
-- household welfare
+- what changed
+- when it changed
+- which indicators moved together
+- where warning signs appeared
+- what needs further investigation
 
 A dashboard is not:
 
 ```text
-many charts placed on one page
+many graphs placed on one page
 ```
 
 A dashboard is:
 
 ```text
-a guided analytical view of a problem
+a guided analytical view of an economic problem
 ```
 
 ---
 
-# 6. Dashboard Design Questions
+# 6. Define the Dashboard Before Coding
 
-Before building a dashboard, answer:
+Before writing code, answer six design questions:
 
 1. Who is the audience?
 2. What question should the dashboard answer?
-3. Which indicators are most important?
-4. Which charts best communicate those indicators?
-5. What should the user notice first?
-6. What interpretation should accompany the visuals?
+3. Which indicators matter most?
+4. Which chart type fits each indicator?
+5. What should the reader notice first?
+6. What caution should accompany the dashboard?
 
-For this course, the Week 6 dashboard answers:
+For this course, the dashboard question is:
 
 ```text
 How did Sri Lanka's macroeconomic conditions change across the period?
@@ -140,20 +147,21 @@ How did Sri Lanka's macroeconomic conditions change across the period?
 
 # 7. Chart Selection
 
-| Question | Recommended Chart |
+| Analytical Question | Best Chart |
 |---|---|
-| How did a variable change over time? | Line chart |
-| Which year had the worst outcome? | Bar chart |
-| Do two variables move together? | Scatter plot |
-| Which indicators reached warning levels? | Table or highlighted indicators |
+| How did inflation change over time? | Line chart |
+| Which years had negative GDP growth? | Bar chart with zero reference |
+| Did inflation and exchange rate change move together? | Scatter plot |
+| Which year shows multiple stress signals? | Evidence table or dashboard summary |
+| What is the main story? | Multi-panel dashboard |
 
-The chart should follow the question.
+Chart choice should follow analytical purpose.
 
-Do not choose a graph only because it looks attractive.
+Do not choose charts because they look impressive.
 
 ---
 
-# 8. Load the Data
+# 8. Load Data and Prepared Variables
 
 ```python
 import pandas as pd
@@ -166,6 +174,21 @@ data = pd.read_csv(url)
 
 data["Exchange_Rate_Change"] = data["Exchange_Rate"].pct_change() * 100
 data["Recession"] = data["GDP_Growth"] < 0
+data["Low_Reserves"] = data["Reserves"] < 4000
+```
+
+Inflation category:
+
+```python
+def classify_inflation(rate):
+    if rate < 5:
+        return "Low"
+    elif rate <= 15:
+        return "Moderate"
+    else:
+        return "High"
+
+data["Inflation_Category"] = data["Inflation"].apply(classify_inflation)
 ```
 
 ---
@@ -178,19 +201,23 @@ fig = px.line(
     x="Year",
     y="Inflation",
     markers=True,
-    title="Inflation Over Time"
+    title="Inflation Over Time",
+    hover_data=["GDP_Growth", "Exchange_Rate", "Reserves"]
 )
 
 fig.show()
 ```
 
-Use line charts for trends.
-
-Interpretation:
+Teaching point:
 
 ```text
-The chart helps identify when inflation began to accelerate and when it returned toward lower levels.
+Hover information allows users to inspect context without overcrowding the chart.
 ```
+
+Ask:
+
+- What year should the reader notice first?
+- What other values help explain that year?
 
 ---
 
@@ -201,20 +228,24 @@ fig = px.bar(
     data,
     x="Year",
     y="GDP_Growth",
-    color="GDP_Growth",
-    title="GDP Growth by Year"
+    color="Recession",
+    title="GDP Growth and Recession Years"
 )
 
 fig.show()
 ```
 
-Use bar charts for comparisons.
+Interpretation:
 
-Add interpretation:
+```text
+The bar chart separates years of expansion from years of contraction.
+```
 
-- Which year had the largest contraction?
-- Did the contraction coincide with high inflation?
-- What does this suggest about macroeconomic stress?
+Design question:
+
+```text
+Does color help interpretation, or does it distract?
+```
 
 ---
 
@@ -226,25 +257,46 @@ fig = px.scatter(
     x="Inflation",
     y="Exchange_Rate_Change",
     hover_name="Year",
+    size="Unemployment",
+    color="Inflation_Category",
     title="Inflation and Exchange Rate Change"
 )
 
 fig.show()
 ```
 
-Use scatter plots for relationships.
+This chart allows users to inspect:
 
-Interpret carefully:
+- relationship between inflation and exchange rate change
+- crisis years
+- inflation category
+- unemployment context
+
+Reminder:
 
 ```text
-The chart can show association, but not causation.
+This chart suggests association, not causation.
 ```
 
 ---
 
-# 12. Building a Monitoring Dashboard
+# 12. Dashboard Summary Indicators
 
-A simple dashboard can combine multiple indicators.
+Before building charts, create simple summary values.
+
+```python
+highest_inflation_year = data.loc[data["Inflation"].idxmax(), "Year"]
+lowest_growth_year = data.loc[data["GDP_Growth"].idxmin(), "Year"]
+lowest_reserves_year = data.loc[data["Reserves"].idxmin(), "Year"]
+
+highest_inflation_year, lowest_growth_year, lowest_reserves_year
+```
+
+These values help identify what the dashboard should highlight.
+
+---
+
+# 13. Multi-Panel Monitoring Dashboard
 
 ```python
 fig = make_subplots(
@@ -277,15 +329,18 @@ fig.add_trace(
 
 fig.update_layout(
     height=850,
-    title_text="Macroeconomic Monitoring Dashboard"
+    title_text="Macroeconomic Monitoring Dashboard",
+    showlegend=False
 )
 
 fig.show()
 ```
 
+This dashboard shows price instability, output contraction, and exchange rate movement together.
+
 ---
 
-# 13. Dashboard Design Principles
+# 14. Improving Dashboard Design
 
 Good dashboards are:
 
@@ -293,21 +348,27 @@ Good dashboards are:
 - readable
 - consistent
 - clearly labelled
-- connected to an analytical question
+- connected to a question
 - supported by interpretation
 
-Avoid:
+Weak dashboards often have:
 
 - too many charts
 - unclear titles
 - missing units
 - random colors
-- decorative graphs without purpose
-- conclusions that go beyond the evidence
+- no main story
+- no caution about limitations
+
+Design principle:
+
+```text
+Every chart must earn its place.
+```
 
 ---
 
-# 14. Data Storytelling
+# 15. Dashboard Storytelling
 
 A dashboard should be accompanied by a short story.
 
@@ -323,31 +384,152 @@ Use this structure:
 Example:
 
 ```text
-The dashboard suggests that 2022 was the most severe macroeconomic stress point in the period. Inflation reached its highest value while GDP growth was strongly negative and the exchange rate increased sharply. This combination signals pressure on prices, output, and external stability. However, the dashboard is descriptive and should not be treated as a causal model.
+The dashboard suggests that 2022 was the strongest macroeconomic stress point in the period. Inflation reached 46.4 percent while GDP growth was -7.8 percent and the exchange rate increased sharply. This combination signals pressure on prices, output, and external stability. However, the dashboard is descriptive and should not be interpreted as a causal model.
 ```
 
 ---
 
-# 15. Week 6 Output
+# 16. Dashboard Design Review
 
-By the end of Week 6, students should have:
+Students should review their dashboard using this checklist:
 
-- at least three interactive charts
-- one multi-panel dashboard
-- clear titles, labels, and hover information
-- a short dashboard interpretation
-- one limitation or caution statement
+1. Is the main question clear?
+2. Are the most important indicators visible?
+3. Are titles and labels understandable?
+4. Does color help interpretation?
+5. Can the reader identify the key year or pattern quickly?
+6. Is there a written interpretation?
+7. Is there a caution about what cannot be concluded?
 
 ---
 
-# 16. Summary
+# 17. Live Practice Activity
 
-Week 6 completes the applied analytics block.
+Students should complete this during class.
 
-The core lesson is:
+## Part A — Dashboard Question
+
+Write one clear dashboard question.
+
+## Part B — Individual Charts
+
+Create:
+
+- interactive line chart
+- interactive bar chart
+- interactive scatter plot
+
+## Part C — Multi-Panel Dashboard
+
+Combine at least three indicators into one dashboard.
+
+## Part D — Story
+
+Write a 120-180 word dashboard story using:
+
+- claim
+- evidence
+- economic meaning
+- caution
+
+---
+
+# 18. Mini Quiz
+
+## Question 1
+
+What is the main purpose of a dashboard?
+
+Correct answer:
+
+```text
+To organize and communicate evidence for understanding or decision-making.
+```
+
+## Question 2
+
+Should dashboards include as many charts as possible?
+
+Correct answer:
+
+```text
+No. Dashboards should include only charts that support the analytical question.
+```
+
+## Question 3
+
+What is the danger of an interactive chart without interpretation?
+
+Correct answer:
+
+```text
+Users may explore the chart but miss the economic meaning or overstate the conclusion.
+```
+
+---
+
+# 19. Common Student Mistakes
+
+| Mistake | Why It Is a Problem |
+|---|---|
+| Creating decorative charts | Distracts from analysis |
+| Using too many colors | Makes the dashboard confusing |
+| Missing titles and labels | Reduces readability |
+| Not linking charts to a question | Produces disconnected visuals |
+| Claiming causation from dashboard patterns | Overstates descriptive evidence |
+| Forgetting a written story | Leaves the dashboard without interpretation |
+
+---
+
+# 20. Responsible AI Use in Week 6
+
+AI tools can help with Plotly syntax, but students must control the analytical story.
+
+Good AI prompt:
+
+```text
+Help me improve the readability of a Plotly dashboard that shows inflation, GDP growth, and exchange rate trends. Do not change my economic interpretation.
+```
+
+Weak AI prompt:
+
+```text
+Make a dashboard and explain everything.
+```
+
+Students must verify:
+
+- the variables used
+- the chart types
+- labels and units
+- the evidence in the story
+- the caution statement
+
+---
+
+# 21. Week 6 Output
+
+By the end of the two-hour lecture, students should have:
+
+- one dashboard question
+- three interactive charts
+- one multi-panel dashboard
+- one design review
+- one dashboard story
+- one caution about interpretation
+
+---
+
+# 22. Closing Message
+
+The main lesson of Week 6 is:
 
 ```text
 Economic analysis becomes valuable when it is communicated clearly, honestly, and usefully.
 ```
 
-Students should now be able to move from raw data to preparation, exploration, interpretation, and communication.
+Students should now be able to move through a complete applied workflow:
+
+```text
+prepare data -> analyze evidence -> communicate findings
+```

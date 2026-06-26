@@ -4,9 +4,9 @@ title: "Week 5 — Exploratory Economic Analysis"
 
 # Week 5 — Exploratory Economic Analysis
 
-Week 4 focused on preparing data.
+Week 4 prepared the dataset.
 
-Week 5 focuses on using that prepared data to answer economic questions.
+Week 5 uses that prepared dataset to answer economic questions with evidence.
 
 The central question is:
 
@@ -14,40 +14,65 @@ The central question is:
 What does the evidence suggest?
 ```
 
-This week is not mainly about producing graphs. It is about using statistics and visualizations to develop an economic interpretation.
+This week is not mainly about producing charts. It is about learning how economists move from prepared data to interpretation.
 
 ---
 
-# 1. Learning Outcomes
+# 1. Connection to Weeks 1-4
+
+Week 5 depends on everything already covered.
+
+| Previous Week | Skill Used in Week 5 |
+|---|---|
+| Week 1 | Running Python code and interpreting outputs |
+| Week 2 | Understanding variables, observations, and datasets |
+| Week 3 | Using logic to classify and test economic rules |
+| Week 4 | Preparing analysis-ready data and documenting decisions |
+
+The key progression is:
+
+```text
+Code -> Data -> Rules -> Prepared data -> Evidence
+```
+
+Week 5 begins the evidence stage.
+
+---
+
+# 2. Learning Outcomes
 
 By the end of this week, students should be able to:
 
-- move from cleaned data to exploratory analysis
-- generate descriptive statistics for economic variables
-- compare averages, medians, minimums, maximums, and variation
-- interpret distributions and outliers
-- create graphs that match analytical questions
-- examine relationships between variables
-- distinguish correlation from causation
-- write a short evidence-based economic interpretation
+- convert prepared data into economic questions
+- generate descriptive statistics for economic indicators
+- interpret mean, median, standard deviation, minimum, and maximum
+- explain why averages can hide important variation
+- identify distributions, outliers, trends, and crisis years
+- create line graphs, bar charts, histograms, and scatter plots
+- examine relationships between variables using graphs and correlation
+- distinguish association from causation
+- write an evidence-based economic interpretation
+- prepare findings that can be communicated in a Week 6 dashboard
 
 ---
 
-# 2. Two-Hour Learning Plan
+# 3. Two-Hour Lecture Plan
 
-| Time | Section | Main Focus |
+| Time | Segment | Purpose |
 |---|---|---|
-| 0-10 minutes | Week 4 recap | What makes data analysis-ready? |
-| 10-30 minutes | Analytical questions | Turning data into economic questions |
-| 30-50 minutes | Descriptive statistics | Level, spread, extremes |
-| 50-75 minutes | Distributions | Histograms and outliers |
-| 75-100 minutes | Trends and comparisons | Line and bar charts |
-| 100-115 minutes | Relationships | Scatter plots and correlation |
-| 115-120 minutes | Assignment briefing | Evidence note for Week 6 dashboard |
+| 0-10 minutes | Recap from Week 4 | Confirm prepared dataset and new variables |
+| 10-25 minutes | From data to questions | Build analytical questions before coding |
+| 25-45 minutes | Descriptive statistics | Interpret levels, spread, and extremes |
+| 45-60 minutes | Mean vs median | Show why averages are not enough |
+| 60-75 minutes | Distributions | Use histograms to identify concentration and outliers |
+| 75-90 minutes | Trends and comparisons | Use line and bar graphs for time patterns |
+| 90-105 minutes | Relationships | Scatter plots and correlation |
+| 105-115 minutes | Evidence paragraph | Claim, evidence, meaning, caution |
+| 115-120 minutes | Assignment briefing | Prepare findings for Week 6 dashboard |
 
 ---
 
-# 3. Week 5 Learning Materials
+# 4. Week 5 Learning Materials
 
 | Material | Purpose | Link |
 |---|---|---|
@@ -68,7 +93,7 @@ Week05_IndexNumber_Name.ipynb
 
 ---
 
-# 4. Why Week 5 Is Not a Repeat of Week 4
+# 5. Why Week 5 Is Not a Repeat of Week 4
 
 Week 4 asked:
 
@@ -92,25 +117,34 @@ The same dataset is used, but the purpose changes.
 
 ---
 
-# 5. Start With Analytical Questions
+# 6. Start With Analytical Questions
 
-Exploratory analysis should be guided by questions.
+Good analysis begins with a question, not a graph.
 
 Examples:
 
 - When did macroeconomic instability become most visible?
-- Which indicator shows the largest shock?
+- Which variable shows the largest shock?
 - Did high inflation occur together with negative growth?
-- Did exchange rate movements coincide with inflation?
-- Which year appears most unusual?
+- Did exchange rate changes coincide with inflation?
+- Did reserves fall during crisis years?
+- Which year appears most unusual across multiple indicators?
 
-Good analysis does not begin with a graph type.
+Weak workflow:
 
-It begins with a question.
+```text
+Make graphs first, then search for a story.
+```
+
+Strong workflow:
+
+```text
+Ask a question, choose evidence, then interpret carefully.
+```
 
 ---
 
-# 6. Load and Prepare the Dataset
+# 7. Load and Recreate the Prepared Variables
 
 ```python
 import pandas as pd
@@ -121,40 +155,59 @@ data = pd.read_csv(url)
 
 data["Exchange_Rate_Change"] = data["Exchange_Rate"].pct_change() * 100
 data["Recession"] = data["GDP_Growth"] < 0
+data["Low_Reserves"] = data["Reserves"] < 4000
 ```
 
-Check the data before analysis:
+Inflation classification from Week 4:
+
+```python
+def classify_inflation(rate):
+    if rate < 5:
+        return "Low"
+    elif rate <= 15:
+        return "Moderate"
+    else:
+        return "High"
+
+data["Inflation_Category"] = data["Inflation"].apply(classify_inflation)
+```
+
+Quick check:
 
 ```python
 data.head()
-data.info()
-data.describe()
 ```
 
 ---
 
-# 7. Descriptive Statistics
+# 8. Descriptive Statistics as Evidence
 
 Descriptive statistics summarize the dataset.
 
 ```python
-data[["Inflation", "GDP_Growth", "Exchange_Rate_Change", "Reserves", "Unemployment"]].describe()
+analysis_vars = [
+    "Inflation",
+    "GDP_Growth",
+    "Exchange_Rate_Change",
+    "Reserves",
+    "Unemployment"
+]
+
+data[analysis_vars].describe()
 ```
 
-Interpretation should go beyond reading numbers.
-
-Ask:
+Interpretation questions:
 
 1. Which variable has the largest variation?
-2. Which variable has the most extreme value?
-3. Does the average hide important changes over time?
-4. Which statistic best supports your interpretation?
+2. Which variable has the most extreme maximum or minimum?
+3. Which statistic best identifies the crisis period?
+4. Which statistic is least informative by itself?
 
 ---
 
-# 8. Mean, Median, and Extreme Values
+# 9. Mean, Median, and Why Averages Are Not Enough
 
-The mean is useful, but it can be distorted by extreme observations.
+The mean is useful, but it can be distorted by extreme values.
 
 ```python
 data["Inflation"].mean()
@@ -165,14 +218,67 @@ data["Inflation"].max()
 Interpretation:
 
 ```text
-If the mean is much higher than the median, extreme inflation years may be pulling the average upward.
+If the mean is much higher than the median, one or two extreme years may be pulling the average upward.
 ```
 
-This is especially important in crisis analysis.
+Class discussion:
+
+1. Would the average inflation rate alone describe the period well?
+2. What does the maximum inflation value add?
+3. Why might the median be more representative of a typical year?
 
 ---
 
-# 9. Distributions
+# 10. Volatility and Standard Deviation
+
+Standard deviation measures spread around the mean.
+
+```python
+data[analysis_vars].std()
+```
+
+Economic interpretation:
+
+```text
+High standard deviation suggests instability or volatility.
+```
+
+But be careful:
+
+```text
+Variables with different units should not be compared mechanically.
+```
+
+Inflation, reserves, exchange rate, and unemployment are measured differently. Interpretation requires economic judgment.
+
+---
+
+# 11. Ranking Years by Stress
+
+Sorting helps identify important observations.
+
+```python
+data.sort_values("Inflation", ascending=False)
+```
+
+```python
+data.sort_values("GDP_Growth")
+```
+
+```python
+data.sort_values("Reserves")
+```
+
+Ask:
+
+- Which year has the highest inflation?
+- Which year has the lowest GDP growth?
+- Which year has the lowest reserves?
+- Do the same years appear across multiple stress indicators?
+
+---
+
+# 12. Distribution Analysis
 
 A distribution shows how values are spread.
 
@@ -184,15 +290,28 @@ plt.ylabel("Number of Years")
 plt.show()
 ```
 
-Ask:
+Interpretation questions:
 
-- Are most values low, moderate, or high?
+- Are most inflation values low, moderate, or high?
+- Is the distribution symmetric?
 - Are there extreme observations?
-- Does the distribution show stability or instability?
+- What does the distribution suggest about stability?
+
+Weak interpretation:
+
+```text
+This is a histogram of inflation.
+```
+
+Better interpretation:
+
+```text
+Most years show relatively low inflation, but one extreme crisis year makes the distribution highly uneven.
+```
 
 ---
 
-# 10. Trends Over Time
+# 13. Trends Over Time
 
 Line graphs are useful for time-series questions.
 
@@ -204,53 +323,80 @@ plt.ylabel("Inflation Rate")
 plt.show()
 ```
 
-Interpretation should identify:
+Look for:
 
 - direction of change
 - turning points
-- crisis periods
+- spikes
 - recovery periods
+- crisis years
 
-Do not write:
-
-```text
-The graph shows inflation.
-```
-
-Write:
+Interpretation template:
 
 ```text
-Inflation remained relatively low before rising sharply in 2022, indicating a major macroeconomic shock.
+The line graph shows that [variable] was [stable/increasing/decreasing] until [year], after which [change] occurred. This suggests [economic meaning].
 ```
 
 ---
 
-# 11. Comparisons
+# 14. Comparing Expansion and Recession
 
-Bar charts are useful when comparing discrete periods or categories.
+Bar charts are useful for comparing discrete periods.
 
 ```python
 plt.bar(data["Year"], data["GDP_Growth"])
+plt.axhline(0, color="black", linewidth=1)
 plt.title("GDP Growth by Year")
 plt.xlabel("Year")
 plt.ylabel("GDP Growth")
-plt.axhline(0, color="black", linewidth=1)
 plt.show()
 ```
 
-The zero line matters because it separates expansion from contraction.
+The zero line matters.
+
+```text
+Values above zero indicate expansion. Values below zero indicate contraction.
+```
 
 Ask:
 
-- Which years show recession?
-- Was the decline mild or severe?
-- Does the recession coincide with other instability indicators?
+- Which years are recession years?
+- Which recession is most severe?
+- Do recession years coincide with inflation or exchange rate stress?
 
 ---
 
-# 12. Relationships Between Variables
+# 15. Comparing Categories
 
-Scatter plots are useful for studying relationships.
+Week 4 created `Inflation_Category`.
+
+Use it to count years by category:
+
+```python
+data["Inflation_Category"].value_counts()
+```
+
+Create a bar chart:
+
+```python
+data["Inflation_Category"].value_counts().plot(kind="bar")
+plt.title("Number of Years by Inflation Category")
+plt.xlabel("Inflation Category")
+plt.ylabel("Number of Years")
+plt.show()
+```
+
+Interpretation:
+
+```text
+Categorical summaries help communicate complex numerical data in simpler terms.
+```
+
+---
+
+# 16. Relationships Between Variables
+
+Scatter plots help explore relationships.
 
 ```python
 plt.scatter(data["Inflation"], data["Exchange_Rate_Change"])
@@ -260,11 +406,29 @@ plt.ylabel("Exchange Rate Change")
 plt.show()
 ```
 
-Then calculate correlation:
+Ask:
+
+- Do the points move upward together?
+- Is one year far away from the others?
+- Is the relationship driven by a crisis observation?
+
+---
+
+# 17. Correlation
+
+Correlation measures linear association.
 
 ```python
 data["Inflation"].corr(data["Exchange_Rate_Change"])
 ```
+
+Interpretation guide:
+
+| Correlation | Meaning |
+|---|---|
+| Close to +1 | Strong positive association |
+| Close to 0 | Weak linear association |
+| Close to -1 | Strong negative association |
 
 Important:
 
@@ -272,31 +436,34 @@ Important:
 Correlation does not prove causation.
 ```
 
-A good interpretation is cautious:
+Good interpretation:
 
 ```text
-The variables appear to move together during crisis years, but this does not prove that one directly caused the other.
+Inflation and exchange rate change appear associated in the data, especially around crisis years, but this descriptive result does not prove that one caused the other.
 ```
 
 ---
 
-# 13. Evidence Table
+# 18. Building an Evidence Table
 
-Before writing the final interpretation, create a compact evidence table.
+An evidence table helps connect claims with numbers.
 
 ```python
 evidence = data[[
     "Year",
     "Inflation",
+    "Inflation_Category",
     "GDP_Growth",
+    "Recession",
     "Exchange_Rate_Change",
-    "Reserves"
+    "Reserves",
+    "Low_Reserves"
 ]]
 
 evidence
 ```
 
-Use the table to connect claims with values.
+Use the table to support claims.
 
 Weak claim:
 
@@ -307,51 +474,165 @@ The economy was unstable.
 Stronger claim:
 
 ```text
-The economy shows strong instability in 2022, when inflation reached 46.4 percent and GDP growth was -7.8 percent.
+The economy shows severe instability in 2022, when inflation reached 46.4 percent and GDP growth was -7.8 percent.
 ```
 
 ---
 
-# 14. Writing an Economic Interpretation
+# 19. Evidence-Based Interpretation Framework
 
-A useful interpretation has four parts:
+Use this structure:
 
 | Part | Question |
 |---|---|
 | Claim | What pattern did you find? |
-| Evidence | Which value, graph, or statistic supports it? |
-| Economic meaning | Why does it matter? |
+| Evidence | Which numbers or graphs support it? |
+| Economic meaning | Why does the pattern matter? |
 | Caution | What can the analysis not prove? |
 
 Example:
 
 ```text
-The data suggest a severe macroeconomic shock in 2022. Inflation reached its highest value while GDP growth was strongly negative. This combination indicates pressure on household purchasing power and overall economic activity. However, the analysis is descriptive and does not prove the exact causal mechanism behind the crisis.
+The data suggest that 2022 was the strongest macroeconomic stress point in the period. Inflation reached 46.4 percent while GDP growth fell to -7.8 percent, showing pressure on prices and real economic activity at the same time. This combination matters because households and firms face both rising prices and weaker output conditions. However, this analysis is descriptive and does not prove the exact causes of the crisis.
 ```
 
 ---
 
-# 15. Week 5 Output
+# 20. Live Practice Activity
 
-By the end of Week 5, students should have:
+Students should complete this during class.
 
-- descriptive statistics
-- at least three graphs
-- one correlation result
-- an evidence table
-- a short economic interpretation
-- clear findings that can be used in the Week 6 dashboard
+## Part A — Questions
+
+Write three analytical questions about the dataset.
+
+## Part B — Statistics
+
+Generate descriptive statistics and identify:
+
+- highest inflation year
+- lowest GDP growth year
+- lowest reserves year
+
+## Part C — Graphs
+
+Create:
+
+- one histogram
+- one line graph
+- one bar chart
+- one scatter plot
+
+## Part D — Interpretation
+
+Write one evidence paragraph using:
+
+- one claim
+- two pieces of numerical evidence
+- one economic meaning
+- one caution
 
 ---
 
-# 16. Summary
+# 21. Mini Quiz
 
-Week 5 turns prepared data into evidence.
+## Question 1
 
-The core lesson is:
+Why is the average not enough to describe inflation during a crisis period?
+
+Correct answer:
 
 ```text
-Graphs and statistics are useful only when they support economic interpretation.
+Because the average can hide extreme values, turning points, and year-to-year instability.
 ```
 
-In Week 6, students will convert these findings into an interactive dashboard for communication and decision support.
+## Question 2
+
+Which graph is best for showing change over time?
+
+Correct answer:
+
+```text
+Line graph
+```
+
+## Question 3
+
+Does correlation prove causation?
+
+Correct answer:
+
+```text
+No. Correlation shows association, not proof of cause and effect.
+```
+
+---
+
+# 22. Common Student Mistakes
+
+| Mistake | Why It Is a Problem |
+|---|---|
+| Reporting numbers without interpretation | Does not answer the economic question |
+| Creating graphs without titles or labels | Makes evidence unclear |
+| Treating correlation as causation | Overstates the result |
+| Ignoring outliers | Misses crisis or data-quality issues |
+| Using only averages | Hides distribution and instability |
+| Making a claim without numerical evidence | Weakens the analysis |
+
+---
+
+# 23. Responsible AI Use in Week 5
+
+Students may use AI to understand syntax or improve wording, but they must verify the economic interpretation.
+
+Good AI prompt:
+
+```text
+I calculated descriptive statistics for inflation and GDP growth. Help me write a cautious interpretation that includes evidence and avoids claiming causation.
+```
+
+Weak AI prompt:
+
+```text
+Interpret this data for me.
+```
+
+Students must remain responsible for:
+
+- selecting the evidence
+- checking the numbers
+- interpreting the economic meaning
+- stating limitations clearly
+
+---
+
+# 24. Week 5 Output
+
+By the end of the two-hour lecture, students should have:
+
+- analytical questions
+- descriptive statistics
+- distribution analysis
+- trend graph
+- comparison graph
+- relationship graph
+- correlation result
+- evidence table
+- one evidence-based interpretation paragraph
+
+---
+
+# 25. Bridge to Week 6
+
+Week 6 will use Week 5 findings to build an interactive dashboard.
+
+To prepare, students should identify:
+
+1. the main story from Week 5
+2. the three most useful indicators
+3. the charts that best communicate those indicators
+4. one caution or limitation
+
+The Week 6 dashboard should not start from scratch.
+
+It should communicate the evidence developed in Week 5.

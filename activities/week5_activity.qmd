@@ -20,6 +20,8 @@ This assignment checks whether you can turn prepared data into economic evidence
 
 The goal is not to create many graphs. The goal is to use statistics and visualizations to support a clear interpretation.
 
+This assignment builds directly from Week 4. You should use the analytical variables introduced there, especially `Exchange_Rate_Change`, `Recession`, `Low_Reserves`, and `Inflation_Category`.
+
 ---
 
 # Materials
@@ -57,6 +59,12 @@ Did high inflation coincide with exchange rate depreciation?
 
 **Marks: 1**
 
+Expected output:
+
+- three clear economic questions
+- at least one relationship question
+- questions that can be answered using available variables
+
 ---
 
 # Task 2 — Descriptive Statistics
@@ -78,6 +86,13 @@ Answer briefly:
 3. Why is the average alone not enough?
 
 **Marks: 1**
+
+Expected output:
+
+- descriptive statistics table
+- identification of highest or lowest values
+- interpretation of volatility or instability
+- explanation of why averages alone are limited
 
 ---
 
@@ -101,6 +116,12 @@ After each graph, write one interpretation sentence.
 
 **Marks: 1**
 
+Expected output:
+
+- three labelled graphs
+- one interpretation sentence under each graph
+- correct match between graph type and analytical purpose
+
 ---
 
 # Task 4 — Correlation and Caution
@@ -120,6 +141,13 @@ Then answer:
 
 **Marks: 1**
 
+Expected output:
+
+- correlation calculation
+- careful interpretation of direction and strength
+- clear statement that correlation does not prove causation
+- at least one possible omitted factor or alternative explanation
+
 ---
 
 # Task 5 — Evidence-Based Interpretation
@@ -134,6 +162,26 @@ Your paragraph must include:
 - one caution or limitation
 
 **Marks: 1**
+
+Expected output:
+
+- one coherent paragraph
+- one main claim
+- at least two numerical evidence points
+- one economic implication
+- one caution or limitation
+
+---
+
+# Marking Rubric
+
+| Criterion | Mark |
+|---|---:|
+| Analytical questions are clear and relevant | 1 |
+| Descriptive statistics are generated and interpreted | 1 |
+| Visual evidence is correctly produced and explained | 1 |
+| Correlation is calculated and interpreted cautiously | 1 |
+| Evidence-based paragraph is clear and supported | 1 |
 
 ---
 
