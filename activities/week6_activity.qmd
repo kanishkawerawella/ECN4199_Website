@@ -18,9 +18,15 @@ title: "Week 6 Assignment — Build an Economic Dashboard"
 
 This assignment checks whether you can communicate economic evidence clearly using an interactive dashboard.
 
-Your dashboard should help a reader understand the main macroeconomic pattern in the dataset.
+Your dashboard should not be decorative. It should help a reader understand the main macroeconomic pattern identified in Week 5.
 
-This assignment builds directly from Week 5. You should use the evidence and interpretation developed in Week 5 as the foundation for your dashboard story.
+This assignment builds directly from:
+
+| Previous Week | Contribution to Week 6 |
+|---|---|
+| Week 4 | Prepared dataset and analytical variables |
+| Week 5 | Evidence, graphs, correlation, and interpretation |
+| Week 6 | Dashboard design and data storytelling |
 
 ---
 
@@ -46,7 +52,29 @@ Week06_IndexNumber_Name.ipynb
 
 ---
 
-# Task 1 — Dashboard Question
+# Required Setup
+
+Your notebook should load the dataset and recreate the Week 4 prepared variables:
+
+```python
+import pandas as pd
+import plotly.express as px
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
+
+url = "https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/sri_lanka_macro.csv"
+data = pd.read_csv(url)
+
+data["Exchange_Rate_Change"] = data["Exchange_Rate"].pct_change() * 100
+data["Recession"] = data["GDP_Growth"] < 0
+data["Low_Reserves"] = data["Reserves"] < 4000
+```
+
+Also recreate `Inflation_Category` using the Week 4 classification rule.
+
+---
+
+# Task 1 — Dashboard Question and Audience
 
 Write one dashboard question.
 
@@ -56,15 +84,14 @@ Example:
 How did Sri Lanka's macroeconomic conditions change across the period?
 ```
 
-Then identify the three indicators your dashboard will use.
+Then identify:
+
+1. intended audience
+2. three indicators used in the dashboard
+3. why each indicator matters
+4. what the reader should notice first
 
 **Marks: 1**
-
-Expected output:
-
-- one clear dashboard question
-- three selected indicators
-- short explanation of why those indicators matter
 
 ---
 
@@ -72,27 +99,21 @@ Expected output:
 
 Create three interactive Plotly charts:
 
-| Chart | Required Variable |
+| Chart | Required Content |
 |---|---|
-| Line chart | Inflation over time |
-| Bar chart | GDP growth by year |
-| Scatter plot | Inflation and exchange rate change |
+| Line chart | Inflation over time with useful hover data |
+| Bar chart | GDP growth by year, showing recession years |
+| Scatter plot | Inflation and exchange rate change, with year in hover information |
 
 Each chart must include:
 
 - meaningful title
-- clear variable names
+- readable labels
+- appropriate use of color
 - hover information where useful
+- one interpretation sentence
 
 **Marks: 1**
-
-Expected output:
-
-- three working Plotly charts
-- meaningful titles
-- readable labels
-- hover information where useful
-- chart choices linked to the dashboard question
 
 ---
 
@@ -100,7 +121,7 @@ Expected output:
 
 Create one multi-panel dashboard using Plotly subplots.
 
-Your dashboard should include at least three indicators.
+Your dashboard must include at least three indicators.
 
 Suggested structure:
 
@@ -110,60 +131,46 @@ Suggested structure:
 | Middle | GDP growth |
 | Bottom | Exchange rate or reserves |
 
-**Marks: 1**
+Your dashboard must include:
 
-Expected output:
-
-- one multi-panel dashboard
-- at least three indicators
-- coherent ordering of panels
+- clear title
+- coherent order of panels
 - readable layout
+- no unnecessary visual clutter
+
+**Marks: 1**
 
 ---
 
 # Task 4 — Dashboard Design Review
 
-Write 80-120 words evaluating your dashboard design.
+Write 100-150 words evaluating your dashboard design.
 
-Mention:
+Your review must mention:
 
+- the dashboard question
 - what the reader should notice first
 - why you selected these charts
-- one design improvement you made
+- how color or hover information helps interpretation
 - one limitation of the dashboard
 
 **Marks: 1**
 
-Expected output:
-
-- 80-120 word design review
-- explanation of what the reader should notice first
-- justification for chart choices
-- one design improvement
-- one limitation
-
 ---
 
-# Task 5 — Data Story
+# Task 5 — Dashboard Story
 
-Write a final dashboard story of 120-180 words.
+Write a final dashboard story of 150-220 words.
 
 Your story must include:
 
-- main claim
+- one main claim
 - evidence from at least two indicators
 - economic meaning
-- caution about interpretation
+- one caution that the dashboard is descriptive, not causal
+- one sentence identifying what should be investigated next
 
 **Marks: 1**
-
-Expected output:
-
-- 120-180 word dashboard story
-- clear claim
-- evidence from at least two indicators
-- economic meaning
-- caution about interpretation
 
 ---
 
@@ -171,11 +178,11 @@ Expected output:
 
 | Criterion | Mark |
 |---|---:|
-| Dashboard question and indicators are clear | 1 |
-| Interactive charts are complete and purposeful | 1 |
-| Multi-panel dashboard is coherent and readable | 1 |
+| Dashboard question, audience, and indicators are clear | 1 |
+| Interactive charts are complete, readable, and purposeful | 1 |
+| Multi-panel dashboard is coherent and uncluttered | 1 |
 | Design review is thoughtful and specific | 1 |
-| Dashboard story is evidence-based and cautious | 1 |
+| Dashboard story is evidence-based, cautious, and policy-relevant | 1 |
 
 ---
 
@@ -187,6 +194,8 @@ Before submitting, make sure:
 - the dashboard has a clear title
 - chart labels are readable
 - interpretation is written in your own words
+- the final story uses numerical evidence
+- the final story includes a caution statement
 - sharing is set to `Anyone with the link -> Viewer`
 
 The lecturer will provide the live submission link during the class session.

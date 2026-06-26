@@ -170,11 +170,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#week-4-assignment-prepare-an-analysis-ready-dataset" id="toc-week-4-assignment-prepare-an-analysis-ready-dataset" class="nav-link active" data-scroll-target="#week-4-assignment-prepare-an-analysis-ready-dataset">Week 4 Assignment — Prepare an Analysis-Ready Dataset</a></li>
   <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">Purpose</a></li>
   <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#required-setup" id="toc-required-setup" class="nav-link" data-scroll-target="#required-setup">Required Setup</a></li>
   <li><a href="#task-1-data-audit" id="toc-task-1-data-audit" class="nav-link" data-scroll-target="#task-1-data-audit">Task 1 — Data Audit</a></li>
-  <li><a href="#task-2-create-analytical-variables" id="toc-task-2-create-analytical-variables" class="nav-link" data-scroll-target="#task-2-create-analytical-variables">Task 2 — Create Analytical Variables</a></li>
-  <li><a href="#task-3-inflation-classification" id="toc-task-3-inflation-classification" class="nav-link" data-scroll-target="#task-3-inflation-classification">Task 3 — Inflation Classification</a></li>
-  <li><a href="#task-4-data-quality-note" id="toc-task-4-data-quality-note" class="nav-link" data-scroll-target="#task-4-data-quality-note">Task 4 — Data Quality Note</a></li>
-  <li><a href="#task-5-prepared-dataset-preview" id="toc-task-5-prepared-dataset-preview" class="nav-link" data-scroll-target="#task-5-prepared-dataset-preview">Task 5 — Prepared Dataset Preview</a></li>
+  <li><a href="#task-2-data-cleaning-and-quality-decisions" id="toc-task-2-data-cleaning-and-quality-decisions" class="nav-link" data-scroll-target="#task-2-data-cleaning-and-quality-decisions">Task 2 — Data Cleaning and Quality Decisions</a></li>
+  <li><a href="#task-3-create-analytical-variables" id="toc-task-3-create-analytical-variables" class="nav-link" data-scroll-target="#task-3-create-analytical-variables">Task 3 — Create Analytical Variables</a></li>
+  <li><a href="#task-4-inflation-classification-and-boundary-testing" id="toc-task-4-inflation-classification-and-boundary-testing" class="nav-link" data-scroll-target="#task-4-inflation-classification-and-boundary-testing">Task 4 — Inflation Classification and Boundary Testing</a></li>
+  <li><a href="#task-5-prepared-dataset-and-data-quality-note" id="toc-task-5-prepared-dataset-and-data-quality-note" class="nav-link" data-scroll-target="#task-5-prepared-dataset-and-data-quality-note">Task 5 — Prepared Dataset and Data-Quality Note</a></li>
   <li><a href="#marking-rubric" id="toc-marking-rubric" class="nav-link" data-scroll-target="#marking-rubric">Marking Rubric</a></li>
   <li><a href="#submission-checklist" id="toc-submission-checklist" class="nav-link" data-scroll-target="#submission-checklist">Submission Checklist</a></li>
   </ul>
@@ -238,9 +239,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="purpose" class="level1">
 <h1>Purpose</h1>
-<p>This assignment checks whether you can move from raw data to analysis-ready data.</p>
-<p>The goal is not only to run pandas commands. The goal is to explain whether the dataset is ready for economic analysis and to document the preparation decisions you made.</p>
-<p>This assignment connects directly to Week 5. The dataset you prepare here will be used to create descriptive statistics, graphs, and interpretations in the next lecture.</p>
+<p>This assignment checks whether you can turn raw economic data into analysis-ready data.</p>
+<p>This is the practical output of Week 4. Your task is not simply to run pandas commands. Your task is to inspect the data, create useful analytical variables, test classification rules, and document whether the dataset is ready for Week 5 exploratory analysis.</p>
+<p>This assignment builds on:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Previous Week</th>
+<th>Skill Used Here</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Week 1</td>
+<td>Running Python code and reading outputs</td>
+</tr>
+<tr class="even">
+<td>Week 2</td>
+<td>Understanding observations, variables, and datasets</td>
+</tr>
+<tr class="odd">
+<td>Week 3</td>
+<td>Applying rules, conditions, and functions</td>
+</tr>
+<tr class="even">
+<td>Week 4</td>
+<td>Auditing, preparing, and documenting data</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
 <section id="materials" class="level1">
@@ -269,36 +296,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre class="text"><code>Week04_IndexNumber_Name.ipynb</code></pre>
 <hr>
 </section>
+<section id="required-setup" class="level1">
+<h1>Required Setup</h1>
+<p>Your notebook should begin with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/sri_lanka_macro.csv"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(url)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
 <section id="task-1-data-audit" class="level1">
 <h1>Task 1 — Data Audit</h1>
-<p>Load the dataset and produce a short audit.</p>
+<p>Conduct a structured data audit.</p>
 <p>Your notebook must show:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data.head()</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data.shape</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>data.info()</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>data.describe()</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>data.isna().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data.head()</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>data.shape</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>data.columns</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>data.info()</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>data.describe()</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>data.isna().<span class="bu">sum</span>()</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>data.duplicated().<span class="bu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Answer briefly:</p>
 <ol type="1">
 <li>What does one row represent?</li>
 <li>Which variables are numerical?</li>
-<li>Are there missing values?</li>
-<li>Which variable or value needs the most careful economic interpretation?</li>
+<li>Are there missing values or duplicated rows?</li>
+<li>Which value looks most unusual?</li>
+<li>Is the unusual value likely to be a data error or an important economic event?</li>
 </ol>
 <p><strong>Marks: 1</strong></p>
-<p>Expected output:</p>
-<ul>
-<li>dataset preview</li>
-<li>dataset dimensions</li>
-<li>data type summary</li>
-<li>missing-value count</li>
-<li>short interpretation</li>
-</ul>
 <hr>
 </section>
-<section id="task-2-create-analytical-variables" class="level1">
-<h1>Task 2 — Create Analytical Variables</h1>
-<p>Create at least three new variables:</p>
+<section id="task-2-data-cleaning-and-quality-decisions" class="level1">
+<h1>Task 2 — Data Cleaning and Quality Decisions</h1>
+<p>Clean the column names and check the dataset again.</p>
+<p>Use:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data.columns <span class="op">=</span> data.columns.<span class="bu">str</span>.strip().<span class="bu">str</span>.replace(<span class="st">" "</span>, <span class="st">"_"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then answer:</p>
+<ol type="1">
+<li>Why are clean column names useful?</li>
+<li>Should extreme crisis values be removed automatically?</li>
+<li>What decision would you make about the most unusual value in this dataset?</li>
+</ol>
+<p><strong>Marks: 1</strong></p>
+<hr>
+</section>
+<section id="task-3-create-analytical-variables" class="level1">
+<h1>Task 3 — Create Analytical Variables</h1>
+<p>Create the following variables:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -321,22 +366,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>Example:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Exchange_Rate_Change"</span>] <span class="op">=</span> data[<span class="st">"Exchange_Rate"</span>].pct_change() <span class="op">*</span> <span class="dv">100</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Then display the updated dataset.</p>
+<p>Required code:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Exchange_Rate_Change"</span>] <span class="op">=</span> data[<span class="st">"Exchange_Rate"</span>].pct_change() <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Recession"</span>] <span class="op">=</span> data[<span class="st">"GDP_Growth"</span>] <span class="op">&lt;</span> <span class="dv">0</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Low_Reserves"</span>] <span class="op">=</span> data[<span class="st">"Reserves"</span>] <span class="op">&lt;</span> <span class="dv">4000</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Answer briefly:</p>
+<ol type="1">
+<li>Why is the first value of <code>Exchange_Rate_Change</code> missing?</li>
+<li>Why is <code>Recession</code> a useful variable for economic analysis?</li>
+<li>Why should a reserve threshold be interpreted carefully?</li>
+</ol>
 <p><strong>Marks: 1</strong></p>
-<p>Expected output:</p>
-<ul>
-<li>updated dataframe</li>
-<li>correct percentage-change variable</li>
-<li>correct Boolean indicators</li>
-<li>short explanation of the first missing value in <code>Exchange_Rate_Change</code></li>
-</ul>
 <hr>
 </section>
-<section id="task-3-inflation-classification" class="level1">
-<h1>Task 3 — Inflation Classification</h1>
-<p>Create a function to classify inflation.</p>
+<section id="task-4-inflation-classification-and-boundary-testing" class="level1">
+<h1>Task 4 — Inflation Classification and Boundary Testing</h1>
+<p>Create a function to classify inflation:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -359,48 +404,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p>Apply the function to create:</p>
+<p>Apply it to create:</p>
 <pre class="text"><code>Inflation_Category</code></pre>
-<p>Test boundary values:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fl">4.9</span>, <span class="dv">5</span>, <span class="dv">15</span>, <span class="fl">15.1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then test:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>test_values <span class="op">=</span> [<span class="fl">4.9</span>, <span class="dv">5</span>, <span class="dv">15</span>, <span class="fl">15.1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Answer briefly:</p>
 <ol type="1">
 <li>Why are boundary values important?</li>
 <li>Which category should 5 belong to?</li>
 <li>Which category should 15 belong to?</li>
+<li>How could badly ordered conditions create a wrong classification?</li>
 </ol>
 <p><strong>Marks: 1</strong></p>
-<p>Expected output:</p>
-<ul>
-<li>function definition</li>
-<li><code>Inflation_Category</code> variable</li>
-<li>boundary test output</li>
-<li>explanation of why condition order matters</li>
-</ul>
 <hr>
 </section>
-<section id="task-4-data-quality-note" class="level1">
-<h1>Task 4 — Data Quality Note</h1>
-<p>Write a short data-quality note of 100-150 words.</p>
-<p>Your note should mention:</p>
-<ul>
-<li>whether the dataset is usable for Week 5 analysis</li>
-<li>any missing values or unusual values</li>
-<li>whether extreme values should be removed or kept</li>
-<li>how your new variables help analysis</li>
-</ul>
-<p><strong>Marks: 1</strong></p>
-<p>Assessment focus:</p>
-<ul>
-<li>clarity</li>
-<li>economic reasoning</li>
-<li>explanation of unusual values</li>
-<li>documentation of preparation decisions</li>
-</ul>
-<hr>
-</section>
-<section id="task-5-prepared-dataset-preview" class="level1">
-<h1>Task 5 — Prepared Dataset Preview</h1>
+<section id="task-5-prepared-dataset-and-data-quality-note" class="level1">
+<h1>Task 5 — Prepared Dataset and Data-Quality Note</h1>
 <p>Display a final prepared dataset containing:</p>
 <pre class="text"><code>Year
 Inflation
@@ -410,15 +429,18 @@ Recession
 Exchange_Rate
 Exchange_Rate_Change
 Reserves
-Low_Reserves</code></pre>
-<p>Then write two sentences explaining how this prepared dataset will help Week 5 exploratory analysis.</p>
-<p><strong>Marks: 1</strong></p>
-<p>Expected output:</p>
+Low_Reserves
+Unemployment</code></pre>
+<p>Then write a data-quality note of 120-180 words.</p>
+<p>Your note must include:</p>
 <ul>
-<li>final prepared dataset</li>
-<li>two-sentence bridge to Week 5</li>
-<li>clear explanation of how new variables support analysis</li>
+<li>whether the dataset is ready for Week 5 analysis</li>
+<li>any missing values, duplicates, or unusual values</li>
+<li>whether crisis observations should be kept or removed</li>
+<li>how your new variables support analysis</li>
+<li>one remaining limitation of the dataset</li>
 </ul>
+<p><strong>Marks: 1</strong></p>
 <hr>
 </section>
 <section id="marking-rubric" class="level1">
@@ -436,19 +458,19 @@ Low_Reserves</code></pre>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
-<td>Analytical variables are correctly created</td>
+<td>Cleaning and data-quality decisions are explained</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
-<td>Inflation classification and boundary testing are correct</td>
+<td>Analytical variables are correctly created and explained</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
-<td>Data-quality note is clear and economically meaningful</td>
+<td>Inflation classification and boundary testing are correct</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
-<td>Prepared dataset preview and Week 5 bridge are complete</td>
+<td>Prepared dataset and data-quality note are complete</td>
 <td style="text-align: right;">1</td>
 </tr>
 </tbody>
@@ -459,10 +481,10 @@ Low_Reserves</code></pre>
 <h1>Submission Checklist</h1>
 <p>Before submitting, make sure:</p>
 <ul>
-<li>your notebook runs from top to bottom</li>
-<li>all tasks are answered</li>
-<li>code outputs are visible</li>
-<li>interpretation answers are written in your own words</li>
+<li>all code cells run from top to bottom</li>
+<li>all outputs are visible</li>
+<li>all interpretation questions are answered</li>
+<li>your data-quality note is written in your own words</li>
 <li>sharing is set to <code>Anyone with the link -&gt; Viewer</code></li>
 </ul>
 <p>The lecturer will provide the live submission link during the class session.</p>

@@ -16,11 +16,18 @@ title: "Week 4 Assignment — Prepare an Analysis-Ready Dataset"
 
 # Purpose
 
-This assignment checks whether you can move from raw data to analysis-ready data.
+This assignment checks whether you can turn raw economic data into analysis-ready data.
 
-The goal is not only to run pandas commands. The goal is to explain whether the dataset is ready for economic analysis and to document the preparation decisions you made.
+This is the practical output of Week 4. Your task is not simply to run pandas commands. Your task is to inspect the data, create useful analytical variables, test classification rules, and document whether the dataset is ready for Week 5 exploratory analysis.
 
-This assignment connects directly to Week 5. The dataset you prepare here will be used to create descriptive statistics, graphs, and interpretations in the next lecture.
+This assignment builds on:
+
+| Previous Week | Skill Used Here |
+|---|---|
+| Week 1 | Running Python code and reading outputs |
+| Week 2 | Understanding observations, variables, and datasets |
+| Week 3 | Applying rules, conditions, and functions |
+| Week 4 | Auditing, preparing, and documenting data |
 
 ---
 
@@ -45,42 +52,70 @@ Week04_IndexNumber_Name.ipynb
 
 ---
 
+# Required Setup
+
+Your notebook should begin with:
+
+```python
+import pandas as pd
+
+url = "https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/sri_lanka_macro.csv"
+data = pd.read_csv(url)
+```
+
+---
+
 # Task 1 — Data Audit
 
-Load the dataset and produce a short audit.
+Conduct a structured data audit.
 
 Your notebook must show:
 
 ```python
 data.head()
 data.shape
+data.columns
 data.info()
 data.describe()
 data.isna().sum()
+data.duplicated().sum()
 ```
 
 Answer briefly:
 
 1. What does one row represent?
 2. Which variables are numerical?
-3. Are there missing values?
-4. Which variable or value needs the most careful economic interpretation?
+3. Are there missing values or duplicated rows?
+4. Which value looks most unusual?
+5. Is the unusual value likely to be a data error or an important economic event?
 
 **Marks: 1**
 
-Expected output:
+---
 
-- dataset preview
-- dataset dimensions
-- data type summary
-- missing-value count
-- short interpretation
+# Task 2 — Data Cleaning and Quality Decisions
+
+Clean the column names and check the dataset again.
+
+Use:
+
+```python
+data.columns = data.columns.str.strip().str.replace(" ", "_")
+```
+
+Then answer:
+
+1. Why are clean column names useful?
+2. Should extreme crisis values be removed automatically?
+3. What decision would you make about the most unusual value in this dataset?
+
+**Marks: 1**
 
 ---
 
-# Task 2 — Create Analytical Variables
+# Task 3 — Create Analytical Variables
 
-Create at least three new variables:
+Create the following variables:
 
 | Variable | Rule |
 |---|---|
@@ -88,28 +123,27 @@ Create at least three new variables:
 | `Recession` | `GDP_Growth < 0` |
 | `Low_Reserves` | `Reserves < 4000` |
 
-Example:
+Required code:
 
 ```python
 data["Exchange_Rate_Change"] = data["Exchange_Rate"].pct_change() * 100
+data["Recession"] = data["GDP_Growth"] < 0
+data["Low_Reserves"] = data["Reserves"] < 4000
 ```
 
-Then display the updated dataset.
+Answer briefly:
+
+1. Why is the first value of `Exchange_Rate_Change` missing?
+2. Why is `Recession` a useful variable for economic analysis?
+3. Why should a reserve threshold be interpreted carefully?
 
 **Marks: 1**
 
-Expected output:
-
-- updated dataframe
-- correct percentage-change variable
-- correct Boolean indicators
-- short explanation of the first missing value in `Exchange_Rate_Change`
-
 ---
 
-# Task 3 — Inflation Classification
+# Task 4 — Inflation Classification and Boundary Testing
 
-Create a function to classify inflation.
+Create a function to classify inflation:
 
 | Rule | Category |
 |---|---|
@@ -117,16 +151,16 @@ Create a function to classify inflation.
 | Inflation from 5 to 15 | Moderate |
 | Inflation above 15 | High |
 
-Apply the function to create:
+Apply it to create:
 
 ```text
 Inflation_Category
 ```
 
-Test boundary values:
+Then test:
 
 ```python
-4.9, 5, 15, 15.1
+test_values = [4.9, 5, 15, 15.1]
 ```
 
 Answer briefly:
@@ -134,41 +168,13 @@ Answer briefly:
 1. Why are boundary values important?
 2. Which category should 5 belong to?
 3. Which category should 15 belong to?
+4. How could badly ordered conditions create a wrong classification?
 
 **Marks: 1**
 
-Expected output:
-
-- function definition
-- `Inflation_Category` variable
-- boundary test output
-- explanation of why condition order matters
-
 ---
 
-# Task 4 — Data Quality Note
-
-Write a short data-quality note of 100-150 words.
-
-Your note should mention:
-
-- whether the dataset is usable for Week 5 analysis
-- any missing values or unusual values
-- whether extreme values should be removed or kept
-- how your new variables help analysis
-
-**Marks: 1**
-
-Assessment focus:
-
-- clarity
-- economic reasoning
-- explanation of unusual values
-- documentation of preparation decisions
-
----
-
-# Task 5 — Prepared Dataset Preview
+# Task 5 — Prepared Dataset and Data-Quality Note
 
 Display a final prepared dataset containing:
 
@@ -182,17 +188,20 @@ Exchange_Rate
 Exchange_Rate_Change
 Reserves
 Low_Reserves
+Unemployment
 ```
 
-Then write two sentences explaining how this prepared dataset will help Week 5 exploratory analysis.
+Then write a data-quality note of 120-180 words.
+
+Your note must include:
+
+- whether the dataset is ready for Week 5 analysis
+- any missing values, duplicates, or unusual values
+- whether crisis observations should be kept or removed
+- how your new variables support analysis
+- one remaining limitation of the dataset
 
 **Marks: 1**
-
-Expected output:
-
-- final prepared dataset
-- two-sentence bridge to Week 5
-- clear explanation of how new variables support analysis
 
 ---
 
@@ -201,10 +210,10 @@ Expected output:
 | Criterion | Mark |
 |---|---:|
 | Data audit is complete and interpreted | 1 |
-| Analytical variables are correctly created | 1 |
+| Cleaning and data-quality decisions are explained | 1 |
+| Analytical variables are correctly created and explained | 1 |
 | Inflation classification and boundary testing are correct | 1 |
-| Data-quality note is clear and economically meaningful | 1 |
-| Prepared dataset preview and Week 5 bridge are complete | 1 |
+| Prepared dataset and data-quality note are complete | 1 |
 
 ---
 
@@ -212,10 +221,10 @@ Expected output:
 
 Before submitting, make sure:
 
-- your notebook runs from top to bottom
-- all tasks are answered
-- code outputs are visible
-- interpretation answers are written in your own words
+- all code cells run from top to bottom
+- all outputs are visible
+- all interpretation questions are answered
+- your data-quality note is written in your own words
 - sharing is set to `Anyone with the link -> Viewer`
 
 The lecturer will provide the live submission link during the class session.

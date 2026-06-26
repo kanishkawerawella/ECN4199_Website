@@ -18,9 +18,16 @@ title: "Week 5 Assignment — Exploratory Economic Analysis"
 
 This assignment checks whether you can turn prepared data into economic evidence.
 
-The goal is not to create many graphs. The goal is to use statistics and visualizations to support a clear interpretation.
+The goal is not to create many graphs. The goal is to ask good questions, generate relevant statistics and visual evidence, and write a careful interpretation supported by numbers.
 
-This assignment builds directly from Week 4. You should use the analytical variables introduced there, especially `Exchange_Rate_Change`, `Recession`, `Low_Reserves`, and `Inflation_Category`.
+This assignment builds directly from Week 4. You should use the analytical variables introduced there:
+
+```text
+Exchange_Rate_Change
+Recession
+Low_Reserves
+Inflation_Category
+```
 
 ---
 
@@ -45,11 +52,35 @@ Week05_IndexNumber_Name.ipynb
 
 ---
 
+# Required Setup
+
+Your notebook should recreate the Week 4 prepared variables:
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+url = "https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/sri_lanka_macro.csv"
+data = pd.read_csv(url)
+
+data["Exchange_Rate_Change"] = data["Exchange_Rate"].pct_change() * 100
+data["Recession"] = data["GDP_Growth"] < 0
+data["Low_Reserves"] = data["Reserves"] < 4000
+```
+
+Also recreate `Inflation_Category` using the Week 4 rule.
+
+---
+
 # Task 1 — Analytical Questions
 
 Write three economic questions that can be explored using the dataset.
 
-At least one question must involve a relationship between two variables.
+Requirements:
+
+- at least one question must involve a trend over time
+- at least one question must involve a comparison between years
+- at least one question must involve a relationship between two variables
 
 Example:
 
@@ -59,15 +90,9 @@ Did high inflation coincide with exchange rate depreciation?
 
 **Marks: 1**
 
-Expected output:
-
-- three clear economic questions
-- at least one relationship question
-- questions that can be answered using available variables
-
 ---
 
-# Task 2 — Descriptive Statistics
+# Task 2 — Descriptive Statistics and Stress Years
 
 Generate descriptive statistics for:
 
@@ -79,29 +104,30 @@ Reserves
 Unemployment
 ```
 
+Then identify:
+
+1. highest inflation year
+2. lowest GDP growth year
+3. lowest reserves year
+4. the year that appears most important across multiple indicators
+
 Answer briefly:
 
-1. Which variable appears most volatile?
-2. Which year or value seems most unusual?
-3. Why is the average alone not enough?
+```text
+Why is the average alone not enough to describe the period?
+```
 
 **Marks: 1**
-
-Expected output:
-
-- descriptive statistics table
-- identification of highest or lowest values
-- interpretation of volatility or instability
-- explanation of why averages alone are limited
 
 ---
 
 # Task 3 — Visual Evidence
 
-Create three graphs:
+Create four graphs:
 
 | Graph | Purpose |
 |---|---|
+| Histogram of inflation | Show distribution and extreme values |
 | Line graph of inflation | Show trend over time |
 | Bar chart of GDP growth | Identify expansion and contraction |
 | Scatter plot of inflation and exchange rate change | Explore relationship |
@@ -115,12 +141,6 @@ Each graph must include:
 After each graph, write one interpretation sentence.
 
 **Marks: 1**
-
-Expected output:
-
-- three labelled graphs
-- one interpretation sentence under each graph
-- correct match between graph type and analytical purpose
 
 ---
 
@@ -136,23 +156,30 @@ Exchange_Rate_Change
 Then answer:
 
 1. Is the relationship positive, negative, or weak?
-2. Does this prove causation?
-3. What other economic factors might matter?
+2. Is the relationship influenced by a crisis year?
+3. Does this prove causation?
+4. What other economic factors might matter?
 
 **Marks: 1**
-
-Expected output:
-
-- correlation calculation
-- careful interpretation of direction and strength
-- clear statement that correlation does not prove causation
-- at least one possible omitted factor or alternative explanation
 
 ---
 
 # Task 5 — Evidence-Based Interpretation
 
-Write one paragraph of 120-180 words explaining the main macroeconomic pattern in the data.
+Create an evidence table containing:
+
+```text
+Year
+Inflation
+Inflation_Category
+GDP_Growth
+Recession
+Exchange_Rate_Change
+Reserves
+Low_Reserves
+```
+
+Then write one paragraph of 150-220 words explaining the main macroeconomic pattern in the data.
 
 Your paragraph must include:
 
@@ -160,16 +187,9 @@ Your paragraph must include:
 - at least two pieces of numerical evidence
 - one economic implication
 - one caution or limitation
+- one sentence explaining how this finding can be communicated in a Week 6 dashboard
 
 **Marks: 1**
-
-Expected output:
-
-- one coherent paragraph
-- one main claim
-- at least two numerical evidence points
-- one economic implication
-- one caution or limitation
 
 ---
 
@@ -178,10 +198,10 @@ Expected output:
 | Criterion | Mark |
 |---|---:|
 | Analytical questions are clear and relevant | 1 |
-| Descriptive statistics are generated and interpreted | 1 |
+| Descriptive statistics and stress years are interpreted | 1 |
 | Visual evidence is correctly produced and explained | 1 |
 | Correlation is calculated and interpreted cautiously | 1 |
-| Evidence-based paragraph is clear and supported | 1 |
+| Evidence paragraph is clear, numerical, and dashboard-ready | 1 |
 
 ---
 
@@ -190,9 +210,10 @@ Expected output:
 Before submitting, make sure:
 
 - your notebook includes code and interpretation
-- graphs are visible
+- all four graphs are visible
 - numerical evidence is used in your paragraph
 - correlation is interpreted carefully
+- your final paragraph connects to Week 6 dashboard communication
 - sharing is set to `Anyone with the link -> Viewer`
 
 The lecturer will provide the live submission link during the class session.
