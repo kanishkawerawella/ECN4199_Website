@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -135,11 +170,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#week-6-assignment-build-an-economic-dashboard" id="toc-week-6-assignment-build-an-economic-dashboard" class="nav-link active" data-scroll-target="#week-6-assignment-build-an-economic-dashboard">Week 6 Assignment — Build an Economic Dashboard</a></li>
   <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">Purpose</a></li>
   <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#task-1-dashboard-question" id="toc-task-1-dashboard-question" class="nav-link" data-scroll-target="#task-1-dashboard-question">Task 1 — Dashboard Question</a></li>
+  <li><a href="#required-setup" id="toc-required-setup" class="nav-link" data-scroll-target="#required-setup">Required Setup</a></li>
+  <li><a href="#task-1-dashboard-question-and-audience" id="toc-task-1-dashboard-question-and-audience" class="nav-link" data-scroll-target="#task-1-dashboard-question-and-audience">Task 1 — Dashboard Question and Audience</a></li>
   <li><a href="#task-2-interactive-charts" id="toc-task-2-interactive-charts" class="nav-link" data-scroll-target="#task-2-interactive-charts">Task 2 — Interactive Charts</a></li>
   <li><a href="#task-3-multi-panel-dashboard" id="toc-task-3-multi-panel-dashboard" class="nav-link" data-scroll-target="#task-3-multi-panel-dashboard">Task 3 — Multi-Panel Dashboard</a></li>
   <li><a href="#task-4-dashboard-design-review" id="toc-task-4-dashboard-design-review" class="nav-link" data-scroll-target="#task-4-dashboard-design-review">Task 4 — Dashboard Design Review</a></li>
-  <li><a href="#task-5-data-story" id="toc-task-5-data-story" class="nav-link" data-scroll-target="#task-5-data-story">Task 5 — Data Story</a></li>
+  <li><a href="#task-5-dashboard-story" id="toc-task-5-dashboard-story" class="nav-link" data-scroll-target="#task-5-dashboard-story">Task 5 — Dashboard Story</a></li>
   <li><a href="#marking-rubric" id="toc-marking-rubric" class="nav-link" data-scroll-target="#marking-rubric">Marking Rubric</a></li>
   <li><a href="#submission-checklist" id="toc-submission-checklist" class="nav-link" data-scroll-target="#submission-checklist">Submission Checklist</a></li>
   </ul>
@@ -204,8 +240,30 @@ ul.task-list li input[type="checkbox"] {
 <section id="purpose" class="level1">
 <h1>Purpose</h1>
 <p>This assignment checks whether you can communicate economic evidence clearly using an interactive dashboard.</p>
-<p>Your dashboard should help a reader understand the main macroeconomic pattern in the dataset.</p>
-<p>This assignment builds directly from Week 5. You should use the evidence and interpretation developed in Week 5 as the foundation for your dashboard story.</p>
+<p>Your dashboard should not be decorative. It should help a reader understand the main macroeconomic pattern identified in Week 5.</p>
+<p>This assignment builds directly from:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Previous Week</th>
+<th>Contribution to Week 6</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Week 4</td>
+<td>Prepared dataset and analytical variables</td>
+</tr>
+<tr class="even">
+<td>Week 5</td>
+<td>Evidence, graphs, correlation, and interpretation</td>
+</tr>
+<tr class="odd">
+<td>Week 6</td>
+<td>Dashboard design and data storytelling</td>
+</tr>
+</tbody>
+</table>
 <hr>
 </section>
 <section id="materials" class="level1">
@@ -238,67 +296,82 @@ ul.task-list li input[type="checkbox"] {
 <pre class="text"><code>Week06_IndexNumber_Name.ipynb</code></pre>
 <hr>
 </section>
-<section id="task-1-dashboard-question" class="level1">
-<h1>Task 1 — Dashboard Question</h1>
+<section id="required-setup" class="level1">
+<h1>Required Setup</h1>
+<p>Your notebook should load the dataset and recreate the Week 4 prepared variables:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotly.subplots <span class="im">import</span> make_subplots</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.graph_objects <span class="im">as</span> go</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/sri_lanka_macro.csv"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Exchange_Rate_Change"</span>] <span class="op">=</span> data[<span class="st">"Exchange_Rate"</span>].pct_change() <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Recession"</span>] <span class="op">=</span> data[<span class="st">"GDP_Growth"</span>] <span class="op">&lt;</span> <span class="dv">0</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Low_Reserves"</span>] <span class="op">=</span> data[<span class="st">"Reserves"</span>] <span class="op">&lt;</span> <span class="dv">4000</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Also recreate <code>Inflation_Category</code> using the Week 4 classification rule.</p>
+<hr>
+</section>
+<section id="task-1-dashboard-question-and-audience" class="level1">
+<h1>Task 1 — Dashboard Question and Audience</h1>
 <p>Write one dashboard question.</p>
 <p>Example:</p>
 <pre class="text"><code>How did Sri Lanka's macroeconomic conditions change across the period?</code></pre>
-<p>Then identify the three indicators your dashboard will use.</p>
+<p>Then identify:</p>
+<ol type="1">
+<li>intended audience</li>
+<li>three indicators used in the dashboard</li>
+<li>why each indicator matters</li>
+<li>what the reader should notice first</li>
+</ol>
 <p><strong>Marks: 1</strong></p>
-<p>Expected output:</p>
-<ul>
-<li>one clear dashboard question</li>
-<li>three selected indicators</li>
-<li>short explanation of why those indicators matter</li>
-</ul>
 <hr>
 </section>
 <section id="task-2-interactive-charts" class="level1">
 <h1>Task 2 — Interactive Charts</h1>
 <p>Create three interactive Plotly charts:</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Chart</th>
-<th>Required Variable</th>
+<th>Required Content</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Line chart</td>
-<td>Inflation over time</td>
+<td>Inflation over time with useful hover data</td>
 </tr>
 <tr class="even">
 <td>Bar chart</td>
-<td>GDP growth by year</td>
+<td>GDP growth by year, showing recession years</td>
 </tr>
 <tr class="odd">
 <td>Scatter plot</td>
-<td>Inflation and exchange rate change</td>
+<td>Inflation and exchange rate change, with year in hover information</td>
 </tr>
 </tbody>
 </table>
 <p>Each chart must include:</p>
 <ul>
 <li>meaningful title</li>
-<li>clear variable names</li>
+<li>readable labels</li>
+<li>appropriate use of color</li>
 <li>hover information where useful</li>
+<li>one interpretation sentence</li>
 </ul>
 <p><strong>Marks: 1</strong></p>
-<p>Expected output:</p>
-<ul>
-<li>three working Plotly charts</li>
-<li>meaningful titles</li>
-<li>readable labels</li>
-<li>hover information where useful</li>
-<li>chart choices linked to the dashboard question</li>
-</ul>
 <hr>
 </section>
 <section id="task-3-multi-panel-dashboard" class="level1">
 <h1>Task 3 — Multi-Panel Dashboard</h1>
 <p>Create one multi-panel dashboard using Plotly subplots.</p>
-<p>Your dashboard should include at least three indicators.</p>
+<p>Your dashboard must include at least three indicators.</p>
 <p>Suggested structure:</p>
 <table class="caption-top table">
 <thead>
@@ -322,56 +395,42 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p><strong>Marks: 1</strong></p>
-<p>Expected output:</p>
+<p>Your dashboard must include:</p>
 <ul>
-<li>one multi-panel dashboard</li>
-<li>at least three indicators</li>
-<li>coherent ordering of panels</li>
+<li>clear title</li>
+<li>coherent order of panels</li>
 <li>readable layout</li>
+<li>no unnecessary visual clutter</li>
 </ul>
+<p><strong>Marks: 1</strong></p>
 <hr>
 </section>
 <section id="task-4-dashboard-design-review" class="level1">
 <h1>Task 4 — Dashboard Design Review</h1>
-<p>Write 80-120 words evaluating your dashboard design.</p>
-<p>Mention:</p>
+<p>Write 100-150 words evaluating your dashboard design.</p>
+<p>Your review must mention:</p>
 <ul>
+<li>the dashboard question</li>
 <li>what the reader should notice first</li>
 <li>why you selected these charts</li>
-<li>one design improvement you made</li>
+<li>how color or hover information helps interpretation</li>
 <li>one limitation of the dashboard</li>
 </ul>
 <p><strong>Marks: 1</strong></p>
-<p>Expected output:</p>
-<ul>
-<li>80-120 word design review</li>
-<li>explanation of what the reader should notice first</li>
-<li>justification for chart choices</li>
-<li>one design improvement</li>
-<li>one limitation</li>
-</ul>
 <hr>
 </section>
-<section id="task-5-data-story" class="level1">
-<h1>Task 5 — Data Story</h1>
-<p>Write a final dashboard story of 120-180 words.</p>
+<section id="task-5-dashboard-story" class="level1">
+<h1>Task 5 — Dashboard Story</h1>
+<p>Write a final dashboard story of 150-220 words.</p>
 <p>Your story must include:</p>
 <ul>
-<li>main claim</li>
+<li>one main claim</li>
 <li>evidence from at least two indicators</li>
 <li>economic meaning</li>
-<li>caution about interpretation</li>
+<li>one caution that the dashboard is descriptive, not causal</li>
+<li>one sentence identifying what should be investigated next</li>
 </ul>
 <p><strong>Marks: 1</strong></p>
-<p>Expected output:</p>
-<ul>
-<li>120-180 word dashboard story</li>
-<li>clear claim</li>
-<li>evidence from at least two indicators</li>
-<li>economic meaning</li>
-<li>caution about interpretation</li>
-</ul>
 <hr>
 </section>
 <section id="marking-rubric" class="level1">
@@ -385,15 +444,15 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>Dashboard question and indicators are clear</td>
+<td>Dashboard question, audience, and indicators are clear</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
-<td>Interactive charts are complete and purposeful</td>
+<td>Interactive charts are complete, readable, and purposeful</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
-<td>Multi-panel dashboard is coherent and readable</td>
+<td>Multi-panel dashboard is coherent and uncluttered</td>
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
@@ -401,7 +460,7 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: right;">1</td>
 </tr>
 <tr class="odd">
-<td>Dashboard story is evidence-based and cautious</td>
+<td>Dashboard story is evidence-based, cautious, and policy-relevant</td>
 <td style="text-align: right;">1</td>
 </tr>
 </tbody>
@@ -416,6 +475,8 @@ ul.task-list li input[type="checkbox"] {
 <li>the dashboard has a clear title</li>
 <li>chart labels are readable</li>
 <li>interpretation is written in your own words</li>
+<li>the final story uses numerical evidence</li>
+<li>the final story includes a caution statement</li>
 <li>sharing is set to <code>Anyone with the link -&gt; Viewer</code></li>
 </ul>
 <p>The lecturer will provide the live submission link during the class session.</p>
