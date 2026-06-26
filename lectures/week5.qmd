@@ -2,8 +2,6 @@
 title: "Week 5 — Exploratory Economic Analysis"
 ---
 
-# Week 5 — Exploratory Economic Analysis
-
 Week 4 prepared the dataset.
 
 Week 5 uses that prepared dataset to answer economic questions with evidence.

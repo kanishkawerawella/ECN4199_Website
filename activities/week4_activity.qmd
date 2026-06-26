@@ -2,8 +2,6 @@
 title: "Week 4 Assignment — Prepare an Analysis-Ready Dataset"
 ---
 
-# Week 4 Assignment — Prepare an Analysis-Ready Dataset
-
 | Item | Details |
 |---|---|
 | Week | Week 4 |
@@ -228,3 +226,11 @@ Before submitting, make sure:
 - sharing is set to `Anyone with the link -> Viewer`
 
 The lecturer will provide the live submission link during the class session.
+
+---
+
+# Submission
+
+Submit the completed Google Colab notebook link through the Week 4 activity in the University LMS.
+
+[Submit Week 4 Assignment](https://lms.arts.cmb.ac.lk/course/view.php?id=1572#section-5)

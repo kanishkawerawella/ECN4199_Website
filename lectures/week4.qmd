@@ -2,8 +2,6 @@
 title: "Week 4 — Preparing Economic Data for Analysis"
 ---
 
-# Week 4 — Preparing Economic Data for Analysis
-
 Weeks 1-3 gave students the foundation:
 
 - running Python code

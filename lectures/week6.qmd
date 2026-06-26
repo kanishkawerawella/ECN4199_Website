@@ -2,8 +2,6 @@
 title: "Week 6 — Economic Dashboards and Data Storytelling"
 ---
 
-# Week 6 — Economic Dashboards and Data Storytelling
-
 Week 4 prepared the data.
 
 Week 5 generated evidence.

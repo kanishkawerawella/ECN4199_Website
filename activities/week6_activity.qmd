@@ -2,7 +2,6 @@
 title: "Week 6 Assignment — Build an Economic Dashboard"
 ---
 
-# Week 6 Assignment — Build an Economic Dashboard
 
 | Item | Details |
 |---|---|
@@ -199,3 +198,11 @@ Before submitting, make sure:
 - sharing is set to `Anyone with the link -> Viewer`
 
 The lecturer will provide the live submission link during the class session.
+
+---
+
+# Submission
+
+Submit the completed Google Colab notebook link through the Week 6 activity in the University LMS.
+
+[Submit Week 6 Assignment](https://lms.arts.cmb.ac.lk/mod/assign/view.php?id=92494)
