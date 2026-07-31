@@ -18,10 +18,16 @@ title: "Week 7 In-Class Activity"
 # Instructions
 
 1. Open the Week 7 live notebook.
-2. Save a copy to your Google Drive.
-3. Complete all required tasks.
-4. Answer all interpretation questions.
-5. Submit before the activity closes.
+2. Download the Week 7 regression dataset.
+3. Save a copy of the notebook to your Google Drive.
+4. Complete all required tasks.
+5. Answer all interpretation questions.
+6. Submit before the activity closes.
+
+| Material | Link |
+|---|---|
+| Week 7 Live Notebook | [Open in Google Colab](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week7/ECN4199_Week7_Live_Notebook.ipynb) |
+| Week 7 Dataset | [Download consumption_data.csv](../data/consumption_data.csv) |
 
 ---
 
@@ -398,7 +404,7 @@ Anyone with the link → Viewer
 
 # Submission Link
 
-[Submit Week 7 Activity](PASTE_WEEK7_SUBMISSION_LINK_HERE)
+The lecturer will provide the live submission link during the class session.
 
 ---
 

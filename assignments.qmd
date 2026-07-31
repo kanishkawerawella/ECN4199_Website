@@ -175,3 +175,5 @@ Copy the notebook URL and submit it through the relevant weekly submission link.
 | Week 4 | Preparing Economic Data for Analysis | 5 | 1 hour | [Open Week 4 Assignment](activities/week4_activity.qmd) |
 | Week 5 | Exploratory Economic Analysis | 5 | 1 hour | [Open Week 5 Assignment](activities/week5_activity.qmd) |
 | Week 6 | Economic Dashboards and Data Storytelling | 5 | 1 hour | [Open Week 6 Assignment](activities/week6_activity.qmd) |
+| Week 7 | Regression Analysis and Predictive Modeling | 5 | 1 hour | [Open Week 7 Assignment](activities/week7_activity.qmd) |
+| Week 8 | Introduction to Machine Learning for Economics | 5 | 1 hour | [Open Week 8 Assignment](activities/week8_activity.qmd) |

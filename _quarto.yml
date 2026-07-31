@@ -3,11 +3,15 @@ project:
   resources:
     - data/LFS_Hypothetical_Dataset.xlsx
     - data/sri_lanka_macro.csv
+    - data/consumption_data.csv
+    - data/household_income.csv
     - notebooks/week2/ECN4199_Week2_Live_Notebook.ipynb
     - notebooks/week3/ECN4199_Week3_Live_Notebook.ipynb
     - notebooks/week4/ECN4199_Week4_Live_Notebook.ipynb
     - notebooks/week5/ECN4199_Week5_Live_Notebook.ipynb
     - notebooks/week6/ECN4199_Week6_Live_Notebook.ipynb
+    - notebooks/week7/ECN4199_Week7_Live_Notebook.ipynb
+    - notebooks/week8/ECN4199_Week8_Live_Notebook.ipynb
   render:
     - index.qmd
     - roadmap.qmd
@@ -22,12 +26,16 @@ project:
     - lectures/week4.qmd
     - lectures/week5.qmd
     - lectures/week6.qmd
+    - lectures/week7.qmd
+    - lectures/week8.qmd
     - activities/week1_activity.qmd
     - activities/week2_activity.qmd
     - activities/week3_activity.qmd
     - activities/week4_activity.qmd
     - activities/week5_activity.qmd
     - activities/week6_activity.qmd
+    - activities/week7_activity.qmd
+    - activities/week8_activity.qmd
 
 website:
   title: "ECN 4199 - Industrial Data Analytics"

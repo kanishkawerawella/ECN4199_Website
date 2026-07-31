@@ -34,6 +34,8 @@ Always save your own copy first.
 | Week 4 | Preparing Economic Data for Analysis | [Open Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week4/ECN4199_Week4_Live_Notebook.ipynb) |
 | Week 5 | Exploratory Economic Analysis | [Open Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week5/ECN4199_Week5_Live_Notebook.ipynb) |
 | Week 6 | Economic Dashboards and Data Storytelling | [Open Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week6/ECN4199_Week6_Live_Notebook.ipynb) |
+| Week 7 | Regression Analysis and Predictive Modeling | [Open Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week7/ECN4199_Week7_Live_Notebook.ipynb) |
+| Week 8 | Introduction to Machine Learning for Economics | [Open Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week8/ECN4199_Week8_Live_Notebook.ipynb) |
 
 ---
 

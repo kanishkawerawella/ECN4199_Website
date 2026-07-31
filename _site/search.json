@@ -1,5 +1,250 @@
 [
   {
+    "objectID": "activities/week8_activity.html",
+    "href": "activities/week8_activity.html",
+    "title": "Week 8 In-Class Activity",
+    "section": "",
+    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 8\n\n\nTopic\nIntroduction to Machine Learning for Economics\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
+  },
+  {
+    "objectID": "activities/week8_activity.html#objective",
+    "href": "activities/week8_activity.html#objective",
+    "title": "Week 8 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nUnderstand supervised learning structure."
+  },
+  {
+    "objectID": "activities/week8_activity.html#instructions-1",
+    "href": "activities/week8_activity.html#instructions-1",
+    "title": "Week 8 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nSuppose we want to predict household income using:\n\neducation\nage\nexperience"
+  },
+  {
+    "objectID": "activities/week8_activity.html#define",
+    "href": "activities/week8_activity.html#define",
+    "title": "Week 8 In-Class Activity",
+    "section": "Define:",
+    "text": "Define:\n\nFeatures\n\n\nTarget variable"
+  },
+  {
+    "objectID": "activities/week8_activity.html#example-structure",
+    "href": "activities/week8_activity.html#example-structure",
+    "title": "Week 8 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\nX = data[[\"Education\",\n          \"Age\",\n          \"Experience\"]]\n\ny = data[\"Income\"]"
+  },
+  {
+    "objectID": "activities/week8_activity.html#questions",
+    "href": "activities/week8_activity.html#questions",
+    "title": "Week 8 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhat is the difference between features and target variables?\n\n\n\nQuestion 2\nWhy is feature selection important?\n\n\n\nQuestion 3\nCan bad features reduce prediction quality?\nExplain briefly."
+  },
+  {
+    "objectID": "activities/week8_activity.html#objective-1",
+    "href": "activities/week8_activity.html#objective-1",
+    "title": "Week 8 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nUnderstand why ML models must be evaluated on unseen data."
+  },
+  {
+    "objectID": "activities/week8_activity.html#instructions-2",
+    "href": "activities/week8_activity.html#instructions-2",
+    "title": "Week 8 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nSplit the dataset into:\n\ntraining data\ntesting data"
+  },
+  {
+    "objectID": "activities/week8_activity.html#expected-structure",
+    "href": "activities/week8_activity.html#expected-structure",
+    "title": "Week 8 In-Class Activity",
+    "section": "Expected Structure",
+    "text": "Expected Structure\nfrom sklearn.model_selection import train_test_split\n\nX_train, X_test, y_train, y_test = train_test_split(\n    X,\n    y,\n    test_size=0.2,\n    random_state=42\n)"
+  },
+  {
+    "objectID": "activities/week8_activity.html#questions-1",
+    "href": "activities/week8_activity.html#questions-1",
+    "title": "Week 8 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhy should testing data remain separate from training data?\n\n\n\nQuestion 2\nWhat might happen if we test on training data?\n\n\n\nQuestion 3\nWhy is prediction on unseen data important?"
+  },
+  {
+    "objectID": "activities/week8_activity.html#objective-2",
+    "href": "activities/week8_activity.html#objective-2",
+    "title": "Week 8 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nTrain first ML prediction model."
+  },
+  {
+    "objectID": "activities/week8_activity.html#instructions-3",
+    "href": "activities/week8_activity.html#instructions-3",
+    "title": "Week 8 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nTrain linear regression model."
+  },
+  {
+    "objectID": "activities/week8_activity.html#expected-structure-1",
+    "href": "activities/week8_activity.html#expected-structure-1",
+    "title": "Week 8 In-Class Activity",
+    "section": "Expected Structure",
+    "text": "Expected Structure\nfrom sklearn.linear_model import LinearRegression\n\nmodel = LinearRegression()\n\nmodel.fit(X_train, y_train)"
+  },
+  {
+    "objectID": "activities/week8_activity.html#generate-predictions",
+    "href": "activities/week8_activity.html#generate-predictions",
+    "title": "Week 8 In-Class Activity",
+    "section": "Generate Predictions",
+    "text": "Generate Predictions\npredictions = model.predict(X_test)"
+  },
+  {
+    "objectID": "activities/week8_activity.html#questions-2",
+    "href": "activities/week8_activity.html#questions-2",
+    "title": "Week 8 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhat is the purpose of model training?\n\n\n\nQuestion 2\nWhat does prediction mean in machine learning?\n\n\n\nQuestion 3\nDoes accurate prediction automatically imply causality?"
+  },
+  {
+    "objectID": "activities/week8_activity.html#objective-3",
+    "href": "activities/week8_activity.html#objective-3",
+    "title": "Week 8 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nMeasure model performance."
+  },
+  {
+    "objectID": "activities/week8_activity.html#instructions-4",
+    "href": "activities/week8_activity.html#instructions-4",
+    "title": "Week 8 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nCalculate Mean Absolute Error (MAE)."
+  },
+  {
+    "objectID": "activities/week8_activity.html#example-structure-1",
+    "href": "activities/week8_activity.html#example-structure-1",
+    "title": "Week 8 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\nfrom sklearn.metrics import mean_absolute_error\n\nmean_absolute_error(y_test, predictions)"
+  },
+  {
+    "objectID": "activities/week8_activity.html#questions-3",
+    "href": "activities/week8_activity.html#questions-3",
+    "title": "Week 8 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhat does prediction error measure?\n\n\n\nQuestion 2\nDoes lower error usually imply better prediction?\n\n\n\nQuestion 3\nWhy is accuracy alone not enough for policy analysis?"
+  },
+  {
+    "objectID": "activities/week8_activity.html#objective-4",
+    "href": "activities/week8_activity.html#objective-4",
+    "title": "Week 8 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nCompare different ML models."
+  },
+  {
+    "objectID": "activities/week8_activity.html#instructions-5",
+    "href": "activities/week8_activity.html#instructions-5",
+    "title": "Week 8 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nTrain decision tree model."
+  },
+  {
+    "objectID": "activities/week8_activity.html#example-structure-2",
+    "href": "activities/week8_activity.html#example-structure-2",
+    "title": "Week 8 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\nfrom sklearn.tree import DecisionTreeRegressor\n\ntree = DecisionTreeRegressor()\n\ntree.fit(X_train, y_train)\n\ntree_predictions = tree.predict(X_test)"
+  },
+  {
+    "objectID": "activities/week8_activity.html#questions-4",
+    "href": "activities/week8_activity.html#questions-4",
+    "title": "Week 8 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhich model appears more flexible?\n\n\n\nQuestion 2\nWhich model may overfit more easily?\n\n\n\nQuestion 3\nWhy can highly complex models become dangerous?"
+  },
+  {
+    "objectID": "activities/week8_activity.html#objective-5",
+    "href": "activities/week8_activity.html#objective-5",
+    "title": "Week 8 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nCritically compare prediction systems."
+  },
+  {
+    "objectID": "activities/week8_activity.html#instructions-6",
+    "href": "activities/week8_activity.html#instructions-6",
+    "title": "Week 8 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nCompare:\n\nLinear Regression\nDecision Tree"
+  },
+  {
+    "objectID": "activities/week8_activity.html#questions-5",
+    "href": "activities/week8_activity.html#questions-5",
+    "title": "Week 8 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhich model is easier to interpret?\n\n\n\nQuestion 2\nWhich model may predict better?\n\n\n\nQuestion 3\nWhy might economists still prefer simpler models sometimes?"
+  },
+  {
+    "objectID": "activities/week8_activity.html#question-1-6",
+    "href": "activities/week8_activity.html#question-1-6",
+    "title": "Week 8 In-Class Activity",
+    "section": "Question 1",
+    "text": "Question 1\nWhat is the primary focus of machine learning?\nA. Causality only\nB. Prediction and pattern recognition\nC. Website design\nD. Manual calculation"
+  },
+  {
+    "objectID": "activities/week8_activity.html#question-2-6",
+    "href": "activities/week8_activity.html#question-2-6",
+    "title": "Week 8 In-Class Activity",
+    "section": "Question 2",
+    "text": "Question 2\nWhy do we split training and testing data?\nA. To increase internet speed\nB. To avoid data loss\nC. To evaluate prediction on unseen data\nD. To create graphs"
+  },
+  {
+    "objectID": "activities/week8_activity.html#question-3-6",
+    "href": "activities/week8_activity.html#question-3-6",
+    "title": "Week 8 In-Class Activity",
+    "section": "Question 3",
+    "text": "Question 3\nWhat is overfitting?\nA. Model memorizes training data too closely\nB. Dataset becomes smaller\nC. Predictions disappear\nD. Variables become missing"
+  },
+  {
+    "objectID": "activities/week8_activity.html#question-4",
+    "href": "activities/week8_activity.html#question-4",
+    "title": "Week 8 In-Class Activity",
+    "section": "Question 4",
+    "text": "Question 4\nDoes high prediction accuracy automatically imply good economic theory?\nA. Yes\nB. No"
+  },
+  {
+    "objectID": "activities/week8_activity.html#problem-1-data-leakage",
+    "href": "activities/week8_activity.html#problem-1-data-leakage",
+    "title": "Week 8 In-Class Activity",
+    "section": "Problem 1 — Data Leakage",
+    "text": "Problem 1 — Data Leakage\nUsing testing data during training produces misleadingly high performance."
+  },
+  {
+    "objectID": "activities/week8_activity.html#problem-2-blind-trust-in-accuracy",
+    "href": "activities/week8_activity.html#problem-2-blind-trust-in-accuracy",
+    "title": "Week 8 In-Class Activity",
+    "section": "Problem 2 — Blind Trust in Accuracy",
+    "text": "Problem 2 — Blind Trust in Accuracy\nHigh prediction accuracy does NOT automatically imply:\n\ncausality\nfairness\nrobustness"
+  },
+  {
+    "objectID": "activities/week8_activity.html#problem-3-ignoring-economic-interpretation",
+    "href": "activities/week8_activity.html#problem-3-ignoring-economic-interpretation",
+    "title": "Week 8 In-Class Activity",
+    "section": "Problem 3 — Ignoring Economic Interpretation",
+    "text": "Problem 3 — Ignoring Economic Interpretation\nMachine learning identifies patterns.\nIt does NOT automatically explain economic mechanisms."
+  },
+  {
+    "objectID": "activities/week8_activity.html#problem-4-overfitting",
+    "href": "activities/week8_activity.html#problem-4-overfitting",
+    "title": "Week 8 In-Class Activity",
+    "section": "Problem 4 — Overfitting",
+    "text": "Problem 4 — Overfitting\nVery complex models may perform well in training but fail in real-world prediction."
+  },
+  {
+    "objectID": "activities/week8_activity.html#problem-5-weak-features",
+    "href": "activities/week8_activity.html#problem-5-weak-features",
+    "title": "Week 8 In-Class Activity",
+    "section": "Problem 5 — Weak Features",
+    "text": "Problem 5 — Weak Features\nPoor input variables produce poor predictions."
+  },
+  {
     "objectID": "activities/week6_activity.html",
     "href": "activities/week6_activity.html",
     "title": "Week 6 Assignment — Build an Economic Dashboard",
@@ -138,6 +383,216 @@
     "title": "Week 2 Assignment — Working with Data in Python",
     "section": "Problem 3 — Wrong Sheet Name",
     "text": "Problem 3 — Wrong Sheet Name\nWrong:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"Data\")\nCorrect:\npd.read_excel(\"LFS_Hypothetical_Dataset.xlsx\", sheet_name=\"LFS_Data\")"
+  },
+  {
+    "objectID": "lectures/week8.html",
+    "href": "lectures/week8.html",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "",
+    "text": "Week 7 introduced:\n\nregression\npredictive modeling\nexplanatory relationships\neconometric thinking\n\nNow students transition into:\nmachine learning\nThis is one of the most dangerous weeks pedagogically.\nWhy?\nBecause students are heavily exposed online to:\n\nAI hype\nbuzzwords\nunrealistic claims\n“black-box magic”\n\nThis week is NOT about fake AI excitement.\nThis week is about:\n\nconceptual clarity\nanalytical skepticism\ncomputational understanding\n\nStudents must understand:\n\nwhat machine learning actually is\nhow it differs from econometrics\nwhy prediction matters\nwhat overfitting means\nwhy models fail\nhow ML supports economics"
+  },
+  {
+    "objectID": "lectures/week8.html#econometric-question",
+    "href": "lectures/week8.html#econometric-question",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Econometric Question",
+    "text": "Econometric Question\nDoes education causally increase wages?"
+  },
+  {
+    "objectID": "lectures/week8.html#machine-learning-question",
+    "href": "lectures/week8.html#machine-learning-question",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Machine Learning Question",
+    "text": "Machine Learning Question\nCan wages be predicted accurately using education and other variables?"
+  },
+  {
+    "objectID": "lectures/week8.html#features",
+    "href": "lectures/week8.html#features",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Features",
+    "text": "Features\n\nEducation\nAge\nExperience"
+  },
+  {
+    "objectID": "lectures/week8.html#target",
+    "href": "lectures/week8.html#target",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Target",
+    "text": "Target\n\nIncome"
+  },
+  {
+    "objectID": "lectures/week8.html#activity-title",
+    "href": "lectures/week8.html#activity-title",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Activity Title",
+    "text": "Activity Title\nPredicting Household Income Using Machine Learning"
+  },
+  {
+    "objectID": "lectures/week8.html#step-1-import-libraries",
+    "href": "lectures/week8.html#step-1-import-libraries",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Step 1 — Import Libraries",
+    "text": "Step 1 — Import Libraries\nimport pandas as pd\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.tree import DecisionTreeRegressor\nfrom sklearn.ensemble import RandomForestRegressor\nfrom sklearn.metrics import mean_absolute_error"
+  },
+  {
+    "objectID": "lectures/week8.html#step-2-load-dataset",
+    "href": "lectures/week8.html#step-2-load-dataset",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Step 2 — Load Dataset",
+    "text": "Step 2 — Load Dataset\ndata = pd.read_csv(\"household_income.csv\")"
+  },
+  {
+    "objectID": "lectures/week8.html#step-3-define-features-and-target",
+    "href": "lectures/week8.html#step-3-define-features-and-target",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Step 3 — Define Features and Target",
+    "text": "Step 3 — Define Features and Target\nX = data[[\"Education\",\n          \"Age\",\n          \"Experience\"]]\n\ny = data[\"Income\"]"
+  },
+  {
+    "objectID": "lectures/week8.html#step-4-split-data",
+    "href": "lectures/week8.html#step-4-split-data",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Step 4 — Split Data",
+    "text": "Step 4 — Split Data\nX_train, X_test, y_train, y_test = train_test_split(\n    X,\n    y,\n    test_size=0.2,\n    random_state=42\n)"
+  },
+  {
+    "objectID": "lectures/week8.html#step-5-train-linear-regression-model",
+    "href": "lectures/week8.html#step-5-train-linear-regression-model",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Step 5 — Train Linear Regression Model",
+    "text": "Step 5 — Train Linear Regression Model\nmodel = LinearRegression()\n\nmodel.fit(X_train, y_train)"
+  },
+  {
+    "objectID": "lectures/week8.html#step-6-generate-predictions",
+    "href": "lectures/week8.html#step-6-generate-predictions",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Step 6 — Generate Predictions",
+    "text": "Step 6 — Generate Predictions\npredictions = model.predict(X_test)"
+  },
+  {
+    "objectID": "lectures/week8.html#step-7-evaluate-error",
+    "href": "lectures/week8.html#step-7-evaluate-error",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Step 7 — Evaluate Error",
+    "text": "Step 7 — Evaluate Error\nmean_absolute_error(y_test, predictions)"
+  },
+  {
+    "objectID": "lectures/week8.html#step-8-train-decision-tree",
+    "href": "lectures/week8.html#step-8-train-decision-tree",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Step 8 — Train Decision Tree",
+    "text": "Step 8 — Train Decision Tree\ntree = DecisionTreeRegressor()\n\ntree.fit(X_train, y_train)"
+  },
+  {
+    "objectID": "lectures/week8.html#step-9-compare-models",
+    "href": "lectures/week8.html#step-9-compare-models",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Step 9 — Compare Models",
+    "text": "Step 9 — Compare Models\nAsk students:\n\nWhich predicts best?\nWhich is easier to interpret?\nWhich may overfit?\nWhich aligns better with economics?"
+  },
+  {
+    "objectID": "lectures/week8.html#question-1",
+    "href": "lectures/week8.html#question-1",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Question 1",
+    "text": "Question 1\nanswer = input(\"What is the primary focus of machine learning? A/B/C/D : \")\n\nif answer.upper() == \"B\":\n    print(\"Correct! ML mainly focuses on prediction.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week8.html#question-2",
+    "href": "lectures/week8.html#question-2",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Question 2",
+    "text": "Question 2\nanswer = input(\"What is overfitting? A/B/C/D : \")\n\nif answer.upper() == \"B\":\n    print(\"Correct! Overfitting memorizes training data too closely.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week8.html#question-3",
+    "href": "lectures/week8.html#question-3",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Question 3",
+    "text": "Question 3\nanswer = input(\"Why do we split training and testing data? A/B/C/D : \")\n\nif answer.upper() == \"C\":\n    print(\"Correct! Testing data evaluates unseen prediction performance.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week8.html#task-1-define-features-and-target",
+    "href": "lectures/week8.html#task-1-define-features-and-target",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Task 1 — Define Features and Target",
+    "text": "Task 1 — Define Features and Target\nDefine:\n\nfeatures\ntarget variable"
+  },
+  {
+    "objectID": "lectures/week8.html#task-2-split-data",
+    "href": "lectures/week8.html#task-2-split-data",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Task 2 — Split Data",
+    "text": "Task 2 — Split Data\nCreate:\n\ntraining set\ntesting set"
+  },
+  {
+    "objectID": "lectures/week8.html#task-3-train-models",
+    "href": "lectures/week8.html#task-3-train-models",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Task 3 — Train Models",
+    "text": "Task 3 — Train Models\nTrain:\n\nlinear regression\ndecision tree"
+  },
+  {
+    "objectID": "lectures/week8.html#task-4-generate-predictions",
+    "href": "lectures/week8.html#task-4-generate-predictions",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Task 4 — Generate Predictions",
+    "text": "Task 4 — Generate Predictions\nGenerate predictions using both models."
+  },
+  {
+    "objectID": "lectures/week8.html#task-5-calculate-prediction-error",
+    "href": "lectures/week8.html#task-5-calculate-prediction-error",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Task 5 — Calculate Prediction Error",
+    "text": "Task 5 — Calculate Prediction Error\nEvaluate model performance."
+  },
+  {
+    "objectID": "lectures/week8.html#task-6-compare-models",
+    "href": "lectures/week8.html#task-6-compare-models",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Task 6 — Compare Models",
+    "text": "Task 6 — Compare Models\nCompare:\n\nprediction quality\ninterpretability\noverfitting risk"
+  },
+  {
+    "objectID": "lectures/week8.html#task-7-analytical-reflection",
+    "href": "lectures/week8.html#task-7-analytical-reflection",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Task 7 — Analytical Reflection",
+    "text": "Task 7 — Analytical Reflection\nWrite short paragraph:\nWhat are the strengths and limitations of machine learning models in economics?"
+  },
+  {
+    "objectID": "lectures/week8.html#problem-1-data-leakage",
+    "href": "lectures/week8.html#problem-1-data-leakage",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Problem 1 — Data Leakage",
+    "text": "Problem 1 — Data Leakage\nStudents accidentally use testing data during training.\nThis produces misleadingly high performance."
+  },
+  {
+    "objectID": "lectures/week8.html#problem-2-overfitting",
+    "href": "lectures/week8.html#problem-2-overfitting",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Problem 2 — Overfitting",
+    "text": "Problem 2 — Overfitting\nComplex models may perform well in training but poorly in reality."
+  },
+  {
+    "objectID": "lectures/week8.html#problem-3-blind-trust-in-accuracy",
+    "href": "lectures/week8.html#problem-3-blind-trust-in-accuracy",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Problem 3 — Blind Trust in Accuracy",
+    "text": "Problem 3 — Blind Trust in Accuracy\nHigh prediction accuracy does NOT imply:\n\ncausality\nfairness\nrobustness"
+  },
+  {
+    "objectID": "lectures/week8.html#problem-4-ignoring-economic-reasoning",
+    "href": "lectures/week8.html#problem-4-ignoring-economic-reasoning",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Problem 4 — Ignoring Economic Reasoning",
+    "text": "Problem 4 — Ignoring Economic Reasoning\nPrediction alone does not replace economic understanding."
+  },
+  {
+    "objectID": "lectures/week8.html#problem-5-feature-misuse",
+    "href": "lectures/week8.html#problem-5-feature-misuse",
+    "title": "Week 8 — Introduction to Machine Learning for Economics",
+    "section": "Problem 5 — Feature Misuse",
+    "text": "Problem 5 — Feature Misuse\nBad or irrelevant features produce weak predictions."
   },
   {
     "objectID": "lectures/week6.html",
@@ -586,6 +1041,20 @@
     "title": "Course Roadmap",
     "section": "Week 6 — Economic Dashboards and Data Storytelling",
     "text": "Week 6 — Economic Dashboards and Data Storytelling\nOpen Week 6 Lecture Material"
+  },
+  {
+    "objectID": "roadmap.html#week-7-regression-analysis-and-predictive-modeling-for-economics",
+    "href": "roadmap.html#week-7-regression-analysis-and-predictive-modeling-for-economics",
+    "title": "Course Roadmap",
+    "section": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "text": "Week 7 — Regression Analysis and Predictive Modeling for Economics\nOpen Week 7 Lecture Material"
+  },
+  {
+    "objectID": "roadmap.html#week-8-introduction-to-machine-learning-for-economics",
+    "href": "roadmap.html#week-8-introduction-to-machine-learning-for-economics",
+    "title": "Course Roadmap",
+    "section": "Week 8 — Introduction to Machine Learning for Economics",
+    "text": "Week 8 — Introduction to Machine Learning for Economics\nOpen Week 8 Lecture Material"
   },
   {
     "objectID": "notebooks.html",
@@ -1050,6 +1519,181 @@
     "text": "Question 3\nDoes correlation prove causation?\nCorrect answer:\nNo. Correlation shows association, not proof of cause and effect."
   },
   {
+    "objectID": "lectures/week7.html",
+    "href": "lectures/week7.html",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "",
+    "text": "Weeks 1–6 focused on:\n\nprogramming foundations\ndata handling\nvisualization\ndashboards\n\nNow students enter one of the most important areas in economics:\nregression analysis\nThis week is a major intellectual transition.\nStudents move from:\ndescribing data\nto:\nmodeling relationships\nThis week introduces:\n\nregression intuition\nprediction\nexplanatory modeling\ndependent and independent variables\nmodel estimation\ncoefficient interpretation\nprediction errors\nfitted regression lines"
+  },
+  {
+    "objectID": "lectures/week7.html#activity-title",
+    "href": "lectures/week7.html#activity-title",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Activity Title",
+    "text": "Activity Title\nModeling Consumption and Income Relationships"
+  },
+  {
+    "objectID": "lectures/week7.html#step-1-import-libraries",
+    "href": "lectures/week7.html#step-1-import-libraries",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Step 1 — Import Libraries",
+    "text": "Step 1 — Import Libraries\nimport pandas as pd\nimport statsmodels.api as sm\nimport matplotlib.pyplot as plt"
+  },
+  {
+    "objectID": "lectures/week7.html#step-2-load-dataset",
+    "href": "lectures/week7.html#step-2-load-dataset",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Step 2 — Load Dataset",
+    "text": "Step 2 — Load Dataset\ndata = pd.read_csv(\"consumption_data.csv\")"
+  },
+  {
+    "objectID": "lectures/week7.html#step-3-visualize-relationship",
+    "href": "lectures/week7.html#step-3-visualize-relationship",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Step 3 — Visualize Relationship",
+    "text": "Step 3 — Visualize Relationship\nplt.scatter(data[\"Income\"],\n            data[\"Consumption\"])\n\nplt.show()"
+  },
+  {
+    "objectID": "lectures/week7.html#step-4-estimate-regression",
+    "href": "lectures/week7.html#step-4-estimate-regression",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Step 4 — Estimate Regression",
+    "text": "Step 4 — Estimate Regression\nX = sm.add_constant(data[\"Income\"])\n\nY = data[\"Consumption\"]\n\nmodel = sm.OLS(Y, X).fit()"
+  },
+  {
+    "objectID": "lectures/week7.html#step-5-display-results",
+    "href": "lectures/week7.html#step-5-display-results",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Step 5 — Display Results",
+    "text": "Step 5 — Display Results\nprint(model.summary())"
+  },
+  {
+    "objectID": "lectures/week7.html#step-6-visualize-fitted-line",
+    "href": "lectures/week7.html#step-6-visualize-fitted-line",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Step 6 — Visualize Fitted Line",
+    "text": "Step 6 — Visualize Fitted Line\nplt.scatter(data[\"Income\"],\n            data[\"Consumption\"])\n\nplt.plot(data[\"Income\"],\n         model.predict(X),\n         color=\"red\")\n\nplt.show()"
+  },
+  {
+    "objectID": "lectures/week7.html#step-7-generate-predictions",
+    "href": "lectures/week7.html#step-7-generate-predictions",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Step 7 — Generate Predictions",
+    "text": "Step 7 — Generate Predictions\ndata[\"Predicted_Consumption\"] = model.predict(X)"
+  },
+  {
+    "objectID": "lectures/week7.html#step-8-interpretation-questions",
+    "href": "lectures/week7.html#step-8-interpretation-questions",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Step 8 — Interpretation Questions",
+    "text": "Step 8 — Interpretation Questions\nAsk students:\n\nIs relationship positive?\nIs relationship strong?\nAre there outliers?\nDoes model predict well?\nWhy are predictions imperfect?"
+  },
+  {
+    "objectID": "lectures/week7.html#question-1",
+    "href": "lectures/week7.html#question-1",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Question 1",
+    "text": "Question 1\nanswer = input(\"What is the main purpose of regression? A/B/C/D : \")\n\nif answer.upper() == \"B\":\n    print(\"Correct! Regression estimates relationships.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week7.html#question-2",
+    "href": "lectures/week7.html#question-2",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Question 2",
+    "text": "Question 2\nanswer = input(\"What is the dependent variable? A/B/C/D : \")\n\nif answer.upper() == \"B\":\n    print(\"Correct! The dependent variable is the outcome variable.\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week7.html#question-3",
+    "href": "lectures/week7.html#question-3",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Question 3",
+    "text": "Question 3\nanswer = input(\"Does regression automatically prove causality? Yes/No : \")\n\nif answer.lower() == \"no\":\n    print(\"Correct!\")\nelse:\n    print(\"Incorrect.\")"
+  },
+  {
+    "objectID": "lectures/week7.html#task-1-estimate-regression",
+    "href": "lectures/week7.html#task-1-estimate-regression",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Task 1 — Estimate Regression",
+    "text": "Task 1 — Estimate Regression\nEstimate regression between:\n\nincome\nconsumption"
+  },
+  {
+    "objectID": "lectures/week7.html#task-2-interpret-coefficient",
+    "href": "lectures/week7.html#task-2-interpret-coefficient",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Task 2 — Interpret Coefficient",
+    "text": "Task 2 — Interpret Coefficient\nInterpret the income coefficient carefully."
+  },
+  {
+    "objectID": "lectures/week7.html#task-3-create-visualizations",
+    "href": "lectures/week7.html#task-3-create-visualizations",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Task 3 — Create Visualizations",
+    "text": "Task 3 — Create Visualizations\nCreate:\n\nscatter plot\nfitted regression line"
+  },
+  {
+    "objectID": "lectures/week7.html#task-4-generate-predictions",
+    "href": "lectures/week7.html#task-4-generate-predictions",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Task 4 — Generate Predictions",
+    "text": "Task 4 — Generate Predictions\nGenerate predicted values using model predictions."
+  },
+  {
+    "objectID": "lectures/week7.html#task-5-compare-actual-vs-predicted",
+    "href": "lectures/week7.html#task-5-compare-actual-vs-predicted",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Task 5 — Compare Actual vs Predicted",
+    "text": "Task 5 — Compare Actual vs Predicted\nCompare:\n\nactual values\npredicted values"
+  },
+  {
+    "objectID": "lectures/week7.html#task-6-analytical-interpretation",
+    "href": "lectures/week7.html#task-6-analytical-interpretation",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Task 6 — Analytical Interpretation",
+    "text": "Task 6 — Analytical Interpretation\nWrite short analytical paragraph:\nWhat does the regression model suggest about the relationship between income and consumption?"
+  },
+  {
+    "objectID": "lectures/week7.html#task-7-identify-model-problems",
+    "href": "lectures/week7.html#task-7-identify-model-problems",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Task 7 — Identify Model Problems",
+    "text": "Task 7 — Identify Model Problems\nIdentify:\n\noutliers\nprediction errors\npossible model limitations"
+  },
+  {
+    "objectID": "lectures/week7.html#problem-1-forgetting-constant",
+    "href": "lectures/week7.html#problem-1-forgetting-constant",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Problem 1 — Forgetting Constant",
+    "text": "Problem 1 — Forgetting Constant\nWrong:\nmodel = sm.OLS(Y, X).fit()\nwithout adding constant.\nCorrect:\nX = sm.add_constant(X)"
+  },
+  {
+    "objectID": "lectures/week7.html#problem-2-misinterpreting-coefficients",
+    "href": "lectures/week7.html#problem-2-misinterpreting-coefficients",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Problem 2 — Misinterpreting Coefficients",
+    "text": "Problem 2 — Misinterpreting Coefficients\nInterpretation depends on:\n\nunits\nscale\nvariable definitions"
+  },
+  {
+    "objectID": "lectures/week7.html#problem-3-confusing-prediction-and-causality",
+    "href": "lectures/week7.html#problem-3-confusing-prediction-and-causality",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Problem 3 — Confusing Prediction and Causality",
+    "text": "Problem 3 — Confusing Prediction and Causality\nRegression can predict well without proving causal relationships."
+  },
+  {
+    "objectID": "lectures/week7.html#problem-4-ignoring-outliers",
+    "href": "lectures/week7.html#problem-4-ignoring-outliers",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Problem 4 — Ignoring Outliers",
+    "text": "Problem 4 — Ignoring Outliers\nExtreme observations may strongly influence regression lines."
+  },
+  {
+    "objectID": "lectures/week7.html#problem-5-blindly-trusting-r-squared",
+    "href": "lectures/week7.html#problem-5-blindly-trusting-r-squared",
+    "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
+    "section": "Problem 5 — Blindly Trusting R-Squared",
+    "text": "Problem 5 — Blindly Trusting R-Squared\nHigh R-squared does NOT automatically imply:\n\ngood theory\ncausality\ncorrect specification"
+  },
+  {
     "objectID": "activities/week1_activity.html",
     "href": "activities/week1_activity.html",
     "title": "Week 1 In-Class Activity",
@@ -1244,5 +1888,222 @@
     "title": "Week 5 Assignment — Exploratory Economic Analysis",
     "section": "",
     "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 5\n\n\nTopic\nDescriptive Statistics, Visualization, and Interpretation\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nSubmission\nCompleted Google Colab notebook link\n\n\n\n\n\nPurpose\nThis assignment checks whether you can turn prepared data into economic evidence.\nThe goal is not to create many graphs. The goal is to ask good questions, generate relevant statistics and visual evidence, and write a careful interpretation supported by numbers.\nThis assignment builds directly from Week 4. You should use the analytical variables introduced there:\nExchange_Rate_Change\nRecession\nLow_Reserves\nInflation_Category\n\n\n\nMaterials\n\n\n\nMaterial\nLink\n\n\n\n\nWeek 5 Live Notebook\nOpen in Google Colab\n\n\nDataset\nDownload sri_lanka_macro.csv\n\n\n\nBefore working:\nFile -&gt; Save a copy in Drive\nRename your notebook:\nWeek05_IndexNumber_Name.ipynb\n\n\n\nRequired Setup\nYour notebook should recreate the Week 4 prepared variables:\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nurl = \"https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/sri_lanka_macro.csv\"\ndata = pd.read_csv(url)\n\ndata[\"Exchange_Rate_Change\"] = data[\"Exchange_Rate\"].pct_change() * 100\ndata[\"Recession\"] = data[\"GDP_Growth\"] &lt; 0\ndata[\"Low_Reserves\"] = data[\"Reserves\"] &lt; 4000\nAlso recreate Inflation_Category using the Week 4 rule.\n\n\n\nTask 1 — Analytical Questions\nWrite three economic questions that can be explored using the dataset.\nRequirements:\n\nat least one question must involve a trend over time\nat least one question must involve a comparison between years\nat least one question must involve a relationship between two variables\n\nExample:\nDid high inflation coincide with exchange rate depreciation?\nMarks: 1\n\n\n\nTask 2 — Descriptive Statistics and Stress Years\nGenerate descriptive statistics for:\nInflation\nGDP_Growth\nExchange_Rate_Change\nReserves\nUnemployment\nThen identify:\n\nhighest inflation year\nlowest GDP growth year\nlowest reserves year\nthe year that appears most important across multiple indicators\n\nAnswer briefly:\nWhy is the average alone not enough to describe the period?\nMarks: 1\n\n\n\nTask 3 — Visual Evidence\nCreate four graphs:\n\n\n\n\n\n\n\nGraph\nPurpose\n\n\n\n\nHistogram of inflation\nShow distribution and extreme values\n\n\nLine graph of inflation\nShow trend over time\n\n\nBar chart of GDP growth\nIdentify expansion and contraction\n\n\nScatter plot of inflation and exchange rate change\nExplore relationship\n\n\n\nEach graph must include:\n\ntitle\nx-axis label\ny-axis label\n\nAfter each graph, write one interpretation sentence.\nMarks: 1\n\n\n\nTask 4 — Correlation and Caution\nCalculate the correlation between:\nInflation\nExchange_Rate_Change\nThen answer:\n\nIs the relationship positive, negative, or weak?\nIs the relationship influenced by a crisis year?\nDoes this prove causation?\nWhat other economic factors might matter?\n\nMarks: 1\n\n\n\nTask 5 — Evidence-Based Interpretation\nCreate an evidence table containing:\nYear\nInflation\nInflation_Category\nGDP_Growth\nRecession\nExchange_Rate_Change\nReserves\nLow_Reserves\nThen write one paragraph of 150-220 words explaining the main macroeconomic pattern in the data.\nYour paragraph must include:\n\none clear claim\nat least two pieces of numerical evidence\none economic implication\none caution or limitation\none sentence explaining how this finding can be communicated in a Week 6 dashboard\n\nMarks: 1\n\n\n\nMarking Rubric\n\n\n\nCriterion\nMark\n\n\n\n\nAnalytical questions are clear and relevant\n1\n\n\nDescriptive statistics and stress years are interpreted\n1\n\n\nVisual evidence is correctly produced and explained\n1\n\n\nCorrelation is calculated and interpreted cautiously\n1\n\n\nEvidence paragraph is clear, numerical, and dashboard-ready\n1\n\n\n\n\n\n\nSubmission Checklist\nBefore submitting, make sure:\n\nyour notebook includes code and interpretation\nall four graphs are visible\nnumerical evidence is used in your paragraph\ncorrelation is interpreted carefully\nyour final paragraph connects to Week 6 dashboard communication\nsharing is set to Anyone with the link -&gt; Viewer\n\nThe lecturer will provide the live submission link during the class session.\n\n\n\nSubmission\nSubmit the completed Google Colab notebook link through the Week 5 activity in the University LMS.\nSubmit Week 5 Assignment"
+  },
+  {
+    "objectID": "activities/week7_activity.html",
+    "href": "activities/week7_activity.html",
+    "title": "Week 7 In-Class Activity",
+    "section": "",
+    "text": "Item\nDetails\n\n\n\n\nWeek\nWeek 7\n\n\nTopic\nRegression Analysis and Predictive Modeling\n\n\nMarks\n5 Marks\n\n\nDuration\n1 Hour\n\n\nAttempts\nOne Attempt Only\n\n\nAccess\nLecturer Passcode Required"
+  },
+  {
+    "objectID": "activities/week7_activity.html#objective",
+    "href": "activities/week7_activity.html#objective",
+    "title": "Week 7 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nUnderstand dependent and independent variables."
+  },
+  {
+    "objectID": "activities/week7_activity.html#instructions-1",
+    "href": "activities/week7_activity.html#instructions-1",
+    "title": "Week 7 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nSuppose we study:\nConsumption = f(Income)"
+  },
+  {
+    "objectID": "activities/week7_activity.html#questions",
+    "href": "activities/week7_activity.html#questions",
+    "title": "Week 7 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhich variable is the dependent variable?\n\n\n\nQuestion 2\nWhich variable is the independent variable?\n\n\n\nQuestion 3\nWhy might higher income be associated with higher consumption?\nWrite short explanation."
+  },
+  {
+    "objectID": "activities/week7_activity.html#objective-1",
+    "href": "activities/week7_activity.html#objective-1",
+    "title": "Week 7 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nVisualize the relationship between income and consumption."
+  },
+  {
+    "objectID": "activities/week7_activity.html#instructions-2",
+    "href": "activities/week7_activity.html#instructions-2",
+    "title": "Week 7 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nLoad the dataset and create scatter plot."
+  },
+  {
+    "objectID": "activities/week7_activity.html#expected-structure",
+    "href": "activities/week7_activity.html#expected-structure",
+    "title": "Week 7 In-Class Activity",
+    "section": "Expected Structure",
+    "text": "Expected Structure\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\ndata = pd.read_csv(\"consumption_data.csv\")\n\nplt.scatter(data[\"Income\"],\n            data[\"Consumption\"])\n\nplt.xlabel(\"Income\")\nplt.ylabel(\"Consumption\")\n\nplt.show()"
+  },
+  {
+    "objectID": "activities/week7_activity.html#questions-1",
+    "href": "activities/week7_activity.html#questions-1",
+    "title": "Week 7 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nDoes the relationship appear positive or negative?\n\n\n\nQuestion 2\nAre there outliers?\n\n\n\nQuestion 3\nWhy are scatter plots useful before estimating regressions?"
+  },
+  {
+    "objectID": "activities/week7_activity.html#objective-2",
+    "href": "activities/week7_activity.html#objective-2",
+    "title": "Week 7 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nEstimate simple linear regression."
+  },
+  {
+    "objectID": "activities/week7_activity.html#instructions-3",
+    "href": "activities/week7_activity.html#instructions-3",
+    "title": "Week 7 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nEstimate regression using statsmodels."
+  },
+  {
+    "objectID": "activities/week7_activity.html#expected-structure-1",
+    "href": "activities/week7_activity.html#expected-structure-1",
+    "title": "Week 7 In-Class Activity",
+    "section": "Expected Structure",
+    "text": "Expected Structure\nimport statsmodels.api as sm\n\nX = data[\"Income\"]\n\nX = sm.add_constant(X)\n\nY = data[\"Consumption\"]\n\nmodel = sm.OLS(Y, X).fit()\n\nprint(model.summary())"
+  },
+  {
+    "objectID": "activities/week7_activity.html#questions-2",
+    "href": "activities/week7_activity.html#questions-2",
+    "title": "Week 7 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nWhat is the estimated coefficient on income?\n\n\n\nQuestion 2\nIs the relationship positive or negative?\n\n\n\nQuestion 3\nInterpret the coefficient economically."
+  },
+  {
+    "objectID": "activities/week7_activity.html#objective-3",
+    "href": "activities/week7_activity.html#objective-3",
+    "title": "Week 7 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nUnderstand fitted regression lines visually."
+  },
+  {
+    "objectID": "activities/week7_activity.html#instructions-4",
+    "href": "activities/week7_activity.html#instructions-4",
+    "title": "Week 7 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nCreate scatter plot with fitted regression line."
+  },
+  {
+    "objectID": "activities/week7_activity.html#example-structure",
+    "href": "activities/week7_activity.html#example-structure",
+    "title": "Week 7 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\nplt.scatter(data[\"Income\"],\n            data[\"Consumption\"])\n\nplt.plot(data[\"Income\"],\n         model.predict(X),\n         color=\"red\")\n\nplt.show()"
+  },
+  {
+    "objectID": "activities/week7_activity.html#questions-3",
+    "href": "activities/week7_activity.html#questions-3",
+    "title": "Week 7 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nDoes the regression line fit all points perfectly?\n\n\n\nQuestion 2\nWhy do prediction errors occur?\n\n\n\nQuestion 3\nWhat might explain observations far from the fitted line?"
+  },
+  {
+    "objectID": "activities/week7_activity.html#objective-4",
+    "href": "activities/week7_activity.html#objective-4",
+    "title": "Week 7 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nGenerate predicted values."
+  },
+  {
+    "objectID": "activities/week7_activity.html#instructions-5",
+    "href": "activities/week7_activity.html#instructions-5",
+    "title": "Week 7 In-Class Activity",
+    "section": "Instructions",
+    "text": "Instructions\nCreate predicted consumption values."
+  },
+  {
+    "objectID": "activities/week7_activity.html#example-structure-1",
+    "href": "activities/week7_activity.html#example-structure-1",
+    "title": "Week 7 In-Class Activity",
+    "section": "Example Structure",
+    "text": "Example Structure\ndata[\"Predicted_Consumption\"] = model.predict(X)"
+  },
+  {
+    "objectID": "activities/week7_activity.html#questions-4",
+    "href": "activities/week7_activity.html#questions-4",
+    "title": "Week 7 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nCompare actual and predicted values.\nDo they match perfectly?\n\n\n\nQuestion 2\nWhy are regression predictions imperfect?\n\n\n\nQuestion 3\nWhat real-world factors might affect consumption besides income?"
+  },
+  {
+    "objectID": "activities/week7_activity.html#objective-5",
+    "href": "activities/week7_activity.html#objective-5",
+    "title": "Week 7 In-Class Activity",
+    "section": "Objective",
+    "text": "Objective\nUnderstand the critical difference between prediction and causality."
+  },
+  {
+    "objectID": "activities/week7_activity.html#questions-5",
+    "href": "activities/week7_activity.html#questions-5",
+    "title": "Week 7 In-Class Activity",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nDoes regression automatically prove causality?\n\n\n\nQuestion 2\nCan a model predict well but still fail to prove causation?\nExplain briefly.\n\n\n\nQuestion 3\nWhy is this distinction important in economics and policy analysis?"
+  },
+  {
+    "objectID": "activities/week7_activity.html#question-1-6",
+    "href": "activities/week7_activity.html#question-1-6",
+    "title": "Week 7 In-Class Activity",
+    "section": "Question 1",
+    "text": "Question 1\nWhat is regression mainly used for?\nA. Deleting data\nB. Estimating relationships\nC. Installing libraries\nD. Creating websites"
+  },
+  {
+    "objectID": "activities/week7_activity.html#question-2-6",
+    "href": "activities/week7_activity.html#question-2-6",
+    "title": "Week 7 In-Class Activity",
+    "section": "Question 2",
+    "text": "Question 2\nWhich variable is the outcome variable?\nA. Independent variable\nB. Dependent variable\nC. Error term\nD. Constant"
+  },
+  {
+    "objectID": "activities/week7_activity.html#question-3-6",
+    "href": "activities/week7_activity.html#question-3-6",
+    "title": "Week 7 In-Class Activity",
+    "section": "Question 3",
+    "text": "Question 3\nDoes regression automatically prove causality?\nA. Yes\nB. No"
+  },
+  {
+    "objectID": "activities/week7_activity.html#question-4",
+    "href": "activities/week7_activity.html#question-4",
+    "title": "Week 7 In-Class Activity",
+    "section": "Question 4",
+    "text": "Question 4\nWhy do regression models have prediction errors?\nA. Real-world relationships are noisy\nB. Python is broken\nC. Graphs are incorrect\nD. Dataframes fail automatically"
+  },
+  {
+    "objectID": "activities/week7_activity.html#problem-1-forgetting-constant",
+    "href": "activities/week7_activity.html#problem-1-forgetting-constant",
+    "title": "Week 7 In-Class Activity",
+    "section": "Problem 1 — Forgetting Constant",
+    "text": "Problem 1 — Forgetting Constant\nWrong:\nmodel = sm.OLS(Y, X).fit()\nwithout adding constant.\nCorrect:\nX = sm.add_constant(X)"
+  },
+  {
+    "objectID": "activities/week7_activity.html#problem-2-confusing-correlation-and-causality",
+    "href": "activities/week7_activity.html#problem-2-confusing-correlation-and-causality",
+    "title": "Week 7 In-Class Activity",
+    "section": "Problem 2 — Confusing Correlation and Causality",
+    "text": "Problem 2 — Confusing Correlation and Causality\nAssociation alone does NOT prove causal relationships."
+  },
+  {
+    "objectID": "activities/week7_activity.html#problem-3-misinterpreting-coefficients",
+    "href": "activities/week7_activity.html#problem-3-misinterpreting-coefficients",
+    "title": "Week 7 In-Class Activity",
+    "section": "Problem 3 — Misinterpreting Coefficients",
+    "text": "Problem 3 — Misinterpreting Coefficients\nInterpretation depends on:\n\nunits\nscale\ncontext"
+  },
+  {
+    "objectID": "activities/week7_activity.html#problem-4-blindly-trusting-high-r-squared",
+    "href": "activities/week7_activity.html#problem-4-blindly-trusting-high-r-squared",
+    "title": "Week 7 In-Class Activity",
+    "section": "Problem 4 — Blindly Trusting High R-Squared",
+    "text": "Problem 4 — Blindly Trusting High R-Squared\nA high R-squared does NOT automatically imply:\n\ncorrect theory\ncausality\ngood specification"
+  },
+  {
+    "objectID": "activities/week7_activity.html#problem-5-ignoring-outliers",
+    "href": "activities/week7_activity.html#problem-5-ignoring-outliers",
+    "title": "Week 7 In-Class Activity",
+    "section": "Problem 5 — Ignoring Outliers",
+    "text": "Problem 5 — Ignoring Outliers\nExtreme observations can strongly affect regression estimates."
   }
 ]

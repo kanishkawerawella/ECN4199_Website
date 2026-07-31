@@ -737,33 +737,25 @@ Ask:
 
 # 17. Open the Week 8 Live Notebook
 
-Replace placeholder below:
-
-[Open Week 8 Live Notebook — Save a Copy Before Editing](PASTE_WEEK8_COLAB_LINK_HERE)
+[Open Week 8 Live Notebook — Save a Copy Before Editing](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week8/ECN4199_Week8_Live_Notebook.ipynb)
 
 ---
 
 # 18. Download ML Dataset
 
-Replace placeholder below:
-
-[Download ML Dataset](PASTE_DATASET_LINK_HERE)
+[Download ML Dataset](../data/household_income.csv)
 
 ---
 
 # 19. Machine Learning Cheat Sheet
 
-Replace placeholder below:
-
-[Open Machine Learning Cheat Sheet](PASTE_ML_GUIDE_LINK_HERE)
+Use the prediction, training/testing, and overfitting notes in this lecture as the main guide.
 
 ---
 
 # 20. scikit-learn Beginner Guide
 
-Replace placeholder below:
-
-[Open scikit-learn Beginner Guide](PASTE_SKLEARN_GUIDE_LINK_HERE)
+[Open scikit-learn Supervised Learning Guide](https://scikit-learn.org/stable/supervised_learning.html)
 
 ---
 
@@ -999,9 +991,7 @@ Week8_YourName.ipynb
 
 # Submission Link
 
-Replace placeholder below:
-
-[Submit Week 8 Work](PASTE_SUBMISSION_LINK_HERE)
+The lecturer will provide the live submission link during the class session.
 
 ---
 

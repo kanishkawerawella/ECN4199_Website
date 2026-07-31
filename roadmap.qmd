@@ -30,6 +30,16 @@ This course is organized into two major learning phases.
 
 ---
 
+# Phase II — Predictive Analytics and Machine Learning
+
+## Week 7 — Regression Analysis and Predictive Modeling for Economics
+[Open Week 7 Lecture Material](lectures/week7.qmd)
+
+## Week 8 — Introduction to Machine Learning for Economics
+[Open Week 8 Lecture Material](lectures/week8.qmd)
+
+---
+
 # Final Goal of the Course
 
 By the end of the semester, students should be able to:
