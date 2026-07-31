@@ -86,7 +86,51 @@ By the end of this week, students should be able to:
 
 ---
 
-# 2. What Is Regression?
+# 2. Week 7 Learning Materials
+
+Use these materials throughout the two-hour lecture session.
+
+| Material | Purpose | Link |
+|---|---|---|
+| Week 7 Live Notebook | Complete the regression workflow in Google Colab | [Open Week 7 Live Notebook](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week7/ECN4199_Week7_Live_Notebook.ipynb) |
+| Household Consumption Dataset | Use the same household data throughout the session | [Download consumption_data.csv](../data/consumption_data.csv) |
+
+Inside Google Colab, save a copy of the notebook before editing.
+
+---
+
+# 3. Import the Week 7 Dataset
+
+Run this code once at the beginning of the session:
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import statsmodels.api as sm
+
+url = "https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/consumption_data.csv"
+data = pd.read_csv(url)
+
+data.head()
+```
+
+Each row represents one hypothetical household.
+
+| Variable | Meaning | Use During Week 7 |
+|---|---|---|
+| `Household` | Household identifier | Track observations |
+| `Income` | Monthly household income | Main independent variable |
+| `Consumption` | Monthly household consumption | Main dependent variable |
+| `Savings` | Income minus consumption | Alternative outcome |
+| `Household_Size` | Number of household members | Additional explanatory variable |
+| `Urban` | 1 if urban, 0 if rural | Group comparison |
+| `Region` | Rural or Urban label | Descriptive comparison |
+
+Every example below continues with this same `data` DataFrame. Do not import the dataset again unless the Colab runtime restarts.
+
+---
+
+# 4. What Is Regression?
 
 Regression is a statistical method used to estimate relationships between variables.
 
@@ -131,7 +175,7 @@ That distinction matters enormously.
 
 ---
 
-# 3. Why Economists Use Regression
+# 5. Why Economists Use Regression
 
 Economists use regression because real-world relationships are complicated.
 
@@ -170,7 +214,7 @@ Regression helps estimate that relationship.
 
 ---
 
-# 4. Dependent and Independent Variables
+# 6. Dependent and Independent Variables
 
 Regression involves:
 
@@ -219,7 +263,7 @@ Consumption = β0 + β1(Income)
 
 ---
 
-# 5. Regression Intuition
+# 7. Regression Intuition
 
 Suppose richer households generally consume more.
 
@@ -257,7 +301,7 @@ Because:
 
 ---
 
-# 6. Correlation vs Regression
+# 8. Correlation vs Regression
 
 Correlation measures association.
 
@@ -297,7 +341,7 @@ Regression:
 
 ---
 
-# 7. Prediction vs Causality
+# 9. Prediction vs Causality
 
 This is one of the most important ideas in economics.
 
@@ -356,7 +400,7 @@ Regression alone does NOT automatically prove causality.
 
 ---
 
-# 8. Introduction to Linear Regression
+# 10. Introduction to Linear Regression
 
 The simplest regression model is:
 
@@ -396,66 +440,9 @@ higher income is associated with higher consumption.
 
 ---
 
-# 9. Estimating a Regression Model
+# 11. Estimating a Regression Model
 
-We now estimate our first regression model using Python.
-
----
-
-# Week 7 Dataset
-
-For the live coding session, students will use:
-
-```text
-consumption_data.csv
-```
-
-This dataset is built for the Week 7 regression lesson. Each row represents one hypothetical household.
-
-| Variable | Meaning | Example Use |
-|---|---|---|
-| Household | Household identifier | Tracking observations |
-| Income | Monthly household income | Independent variable |
-| Consumption | Monthly household consumption | Dependent variable |
-| Savings | Income minus consumption | Alternative outcome |
-| Household_Size | Number of household members | Control variable discussion |
-| Urban | 1 if urban, 0 if rural | Group/context discussion |
-| Region | Rural or Urban label | Descriptive comparison |
-
-Students can either download the CSV file or import it directly inside Google Colab using the raw GitHub URL.
-
----
-
-# Direct Colab Data Import
-
-Use this code in Google Colab:
-
-```python
-url = "https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/consumption_data.csv"
-
-data = pd.read_csv(url)
-```
-
-This is easier than uploading the file manually because the notebook always reads the course dataset directly.
-
----
-
-# Import Libraries
-
-```python
-import pandas as pd
-import statsmodels.api as sm
-```
-
----
-
-# Load Dataset
-
-```python
-url = "https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/consumption_data.csv"
-
-data = pd.read_csv(url)
-```
+We now estimate our first regression model using the `data` DataFrame imported at the beginning of the session.
 
 ---
 
@@ -493,7 +480,7 @@ print(model.summary())
 
 ---
 
-# 10. Interpreting Coefficients
+# 12. Interpreting Coefficients
 
 Suppose regression output gives:
 
@@ -534,7 +521,7 @@ then interpretation changes.
 
 ---
 
-# 11. Visualizing Regression Lines
+# 13. Visualizing Regression Lines
 
 Regression becomes easier to understand visually.
 
@@ -568,7 +555,7 @@ Students should observe:
 
 ---
 
-# 12. Model Fit and Prediction Errors
+# 14. Model Fit and Prediction Errors
 
 Regression models are imperfect.
 
@@ -610,7 +597,7 @@ Errors reveal:
 
 ---
 
-# 13. Actual vs Predicted Values
+# 15. Actual vs Predicted Values
 
 We compare:
 
@@ -662,7 +649,7 @@ Ask:
 
 ---
 
-# 14. Extending the Example: Household Size
+# 16. Extending the Example: Household Size
 
 Simple regression uses one independent variable:
 
@@ -710,7 +697,7 @@ holding other variables constant
 
 ---
 
-# 15. Introduction to statsmodels
+# 17. Introduction to statsmodels
 
 statsmodels is widely used for econometrics.
 
@@ -747,7 +734,7 @@ This gives:
 
 ---
 
-# 16. Introduction to scikit-learn
+# 18. Introduction to scikit-learn
 
 scikit-learn is widely used in machine learning.
 
@@ -776,31 +763,31 @@ from sklearn.linear_model import LinearRegression
 
 ---
 
-# 17. Open the Week 7 Live Notebook
+# 19. Open the Week 7 Live Notebook
 
 [Open Week 7 Live Notebook — Save a Copy Before Editing](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week7/ECN4199_Week7_Live_Notebook.ipynb)
 
 ---
 
-# 18. Download Regression Dataset
+# 20. Download Regression Dataset
 
 [Download Regression Dataset](../data/consumption_data.csv)
 
 ---
 
-# 19. Regression Cheat Sheet
+# 21. Regression Cheat Sheet
 
 Use the regression interpretation notes in this lecture as the main guide.
 
 ---
 
-# 20. statsmodels Guide
+# 22. statsmodels Guide
 
 [Open statsmodels OLS Documentation](https://www.statsmodels.org/stable/regression.html)
 
 ---
 
-# 21. Live Coding Session
+# 23. Live Coding Session
 
 ## Activity Title
 
@@ -812,20 +799,14 @@ Modeling Consumption and Income Relationships
 
 ## Step 1 — Import Libraries
 
-```python
-import pandas as pd
-import statsmodels.api as sm
-import matplotlib.pyplot as plt
-```
+Use the libraries and dataset imported at the beginning of the session.
 
 ---
 
-## Step 2 — Load Dataset
+## Step 2 — Inspect the Dataset
 
 ```python
-url = "https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/consumption_data.csv"
-
-data = pd.read_csv(url)
+data.head()
 ```
 
 ---
@@ -896,7 +877,7 @@ Ask students:
 
 ---
 
-# 22. Interactive Mini Quiz
+# 24. Interactive Mini Quiz
 
 ## Question 1
 
@@ -937,7 +918,7 @@ else:
 
 ---
 
-# 23. Self-Assessment Activity
+# 25. Self-Assessment Activity
 
 Students should complete the following tasks.
 
@@ -1002,7 +983,7 @@ Identify:
 
 ---
 
-# 24. Submission Instructions
+# 26. Submission Instructions
 
 Submit:
 
@@ -1028,7 +1009,7 @@ The lecturer will provide the live submission link during the class session.
 
 ---
 
-# 25. Common Errors
+# 27. Common Errors
 
 ## Problem 1 — Forgetting Constant
 
@@ -1080,7 +1061,7 @@ High R-squared does NOT automatically imply:
 
 ---
 
-# 26. AI Reflection Question
+# 28. AI Reflection Question
 
 AI can automatically generate regression code.
 
@@ -1098,7 +1079,7 @@ Why must economists understand regression logic even when AI tools generate mode
 
 ---
 
-# 27. Key Takeaways
+# 29. Key Takeaways
 
 By the end of Week 7, students should understand:
 
@@ -1115,7 +1096,7 @@ By the end of Week 7, students should understand:
 
 ---
 
-# 28. Before Week 8
+# 30. Before Week 8
 
 Before next week, students should:
 
