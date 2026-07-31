@@ -1544,7 +1544,7 @@
     "href": "lectures/week7.html#step-2-load-dataset",
     "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
     "section": "Step 2 — Load Dataset",
-    "text": "Step 2 — Load Dataset\ndata = pd.read_csv(\"consumption_data.csv\")"
+    "text": "Step 2 — Load Dataset\nurl = \"https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/consumption_data.csv\"\n\ndata = pd.read_csv(url)"
   },
   {
     "objectID": "lectures/week7.html#step-3-visualize-relationship",

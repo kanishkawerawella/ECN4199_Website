@@ -196,6 +196,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#meaning-of-components" id="toc-meaning-of-components" class="nav-link" data-scroll-target="#meaning-of-components">Meaning of Components</a></li>
   <li><a href="#economic-interpretation" id="toc-economic-interpretation" class="nav-link" data-scroll-target="#economic-interpretation">Economic Interpretation</a></li>
   <li><a href="#estimating-a-regression-model" id="toc-estimating-a-regression-model" class="nav-link" data-scroll-target="#estimating-a-regression-model">9. Estimating a Regression Model</a></li>
+  <li><a href="#week-7-dataset" id="toc-week-7-dataset" class="nav-link" data-scroll-target="#week-7-dataset">Week 7 Dataset</a></li>
+  <li><a href="#direct-colab-data-import" id="toc-direct-colab-data-import" class="nav-link" data-scroll-target="#direct-colab-data-import">Direct Colab Data Import</a></li>
   <li><a href="#import-libraries" id="toc-import-libraries" class="nav-link" data-scroll-target="#import-libraries">Import Libraries</a></li>
   <li><a href="#load-dataset" id="toc-load-dataset" class="nav-link" data-scroll-target="#load-dataset">Load Dataset</a></li>
   <li><a href="#define-variables" id="toc-define-variables" class="nav-link" data-scroll-target="#define-variables">Define Variables</a></li>
@@ -217,17 +219,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#display-comparison" id="toc-display-comparison" class="nav-link" data-scroll-target="#display-comparison">Display Comparison</a></li>
   <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization">Visualization</a></li>
   <li><a href="#interpretation-questions-1" id="toc-interpretation-questions-1" class="nav-link" data-scroll-target="#interpretation-questions-1">Interpretation Questions</a></li>
-  <li><a href="#introduction-to-statsmodels" id="toc-introduction-to-statsmodels" class="nav-link" data-scroll-target="#introduction-to-statsmodels">14. Introduction to statsmodels</a></li>
+  <li><a href="#extending-the-example-household-size" id="toc-extending-the-example-household-size" class="nav-link" data-scroll-target="#extending-the-example-household-size">14. Extending the Example: Household Size</a></li>
+  <li><a href="#multiple-regression-example" id="toc-multiple-regression-example" class="nav-link" data-scroll-target="#multiple-regression-example">Multiple Regression Example</a></li>
+  <li><a href="#interpretation-lesson" id="toc-interpretation-lesson" class="nav-link" data-scroll-target="#interpretation-lesson">Interpretation Lesson</a></li>
+  <li><a href="#introduction-to-statsmodels" id="toc-introduction-to-statsmodels" class="nav-link" data-scroll-target="#introduction-to-statsmodels">15. Introduction to statsmodels</a></li>
   <li><a href="#key-advantage" id="toc-key-advantage" class="nav-link" data-scroll-target="#key-advantage">Key Advantage</a></li>
   <li><a href="#example-3" id="toc-example-3" class="nav-link" data-scroll-target="#example-3">Example</a></li>
-  <li><a href="#introduction-to-scikit-learn" id="toc-introduction-to-scikit-learn" class="nav-link" data-scroll-target="#introduction-to-scikit-learn">15. Introduction to scikit-learn</a></li>
+  <li><a href="#introduction-to-scikit-learn" id="toc-introduction-to-scikit-learn" class="nav-link" data-scroll-target="#introduction-to-scikit-learn">16. Introduction to scikit-learn</a></li>
   <li><a href="#example-import" id="toc-example-import" class="nav-link" data-scroll-target="#example-import">Example Import</a></li>
   <li><a href="#important-distinction" id="toc-important-distinction" class="nav-link" data-scroll-target="#important-distinction">Important Distinction</a></li>
-  <li><a href="#open-the-week-7-live-notebook" id="toc-open-the-week-7-live-notebook" class="nav-link" data-scroll-target="#open-the-week-7-live-notebook">16. Open the Week 7 Live Notebook</a></li>
-  <li><a href="#download-regression-dataset" id="toc-download-regression-dataset" class="nav-link" data-scroll-target="#download-regression-dataset">17. Download Regression Dataset</a></li>
-  <li><a href="#regression-cheat-sheet" id="toc-regression-cheat-sheet" class="nav-link" data-scroll-target="#regression-cheat-sheet">18. Regression Cheat Sheet</a></li>
-  <li><a href="#statsmodels-guide" id="toc-statsmodels-guide" class="nav-link" data-scroll-target="#statsmodels-guide">19. statsmodels Guide</a></li>
-  <li><a href="#live-coding-session" id="toc-live-coding-session" class="nav-link" data-scroll-target="#live-coding-session">20. Live Coding Session</a>
+  <li><a href="#open-the-week-7-live-notebook" id="toc-open-the-week-7-live-notebook" class="nav-link" data-scroll-target="#open-the-week-7-live-notebook">17. Open the Week 7 Live Notebook</a></li>
+  <li><a href="#download-regression-dataset" id="toc-download-regression-dataset" class="nav-link" data-scroll-target="#download-regression-dataset">18. Download Regression Dataset</a></li>
+  <li><a href="#regression-cheat-sheet" id="toc-regression-cheat-sheet" class="nav-link" data-scroll-target="#regression-cheat-sheet">19. Regression Cheat Sheet</a></li>
+  <li><a href="#statsmodels-guide" id="toc-statsmodels-guide" class="nav-link" data-scroll-target="#statsmodels-guide">20. statsmodels Guide</a></li>
+  <li><a href="#live-coding-session" id="toc-live-coding-session" class="nav-link" data-scroll-target="#live-coding-session">21. Live Coding Session</a>
   <ul class="collapse">
   <li><a href="#activity-title" id="toc-activity-title" class="nav-link" data-scroll-target="#activity-title">Activity Title</a></li>
   <li><a href="#step-1-import-libraries" id="toc-step-1-import-libraries" class="nav-link" data-scroll-target="#step-1-import-libraries">Step 1 — Import Libraries</a></li>
@@ -239,13 +244,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-7-generate-predictions" id="toc-step-7-generate-predictions" class="nav-link" data-scroll-target="#step-7-generate-predictions">Step 7 — Generate Predictions</a></li>
   <li><a href="#step-8-interpretation-questions" id="toc-step-8-interpretation-questions" class="nav-link" data-scroll-target="#step-8-interpretation-questions">Step 8 — Interpretation Questions</a></li>
   </ul></li>
-  <li><a href="#interactive-mini-quiz" id="toc-interactive-mini-quiz" class="nav-link" data-scroll-target="#interactive-mini-quiz">21. Interactive Mini Quiz</a>
+  <li><a href="#interactive-mini-quiz" id="toc-interactive-mini-quiz" class="nav-link" data-scroll-target="#interactive-mini-quiz">22. Interactive Mini Quiz</a>
   <ul class="collapse">
   <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
   <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
   <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
   </ul></li>
-  <li><a href="#self-assessment-activity" id="toc-self-assessment-activity" class="nav-link" data-scroll-target="#self-assessment-activity">22. Self-Assessment Activity</a>
+  <li><a href="#self-assessment-activity" id="toc-self-assessment-activity" class="nav-link" data-scroll-target="#self-assessment-activity">23. Self-Assessment Activity</a>
   <ul class="collapse">
   <li><a href="#task-1-estimate-regression" id="toc-task-1-estimate-regression" class="nav-link" data-scroll-target="#task-1-estimate-regression">Task 1 — Estimate Regression</a></li>
   <li><a href="#task-2-interpret-coefficient" id="toc-task-2-interpret-coefficient" class="nav-link" data-scroll-target="#task-2-interpret-coefficient">Task 2 — Interpret Coefficient</a></li>
@@ -255,10 +260,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#task-6-analytical-interpretation" id="toc-task-6-analytical-interpretation" class="nav-link" data-scroll-target="#task-6-analytical-interpretation">Task 6 — Analytical Interpretation</a></li>
   <li><a href="#task-7-identify-model-problems" id="toc-task-7-identify-model-problems" class="nav-link" data-scroll-target="#task-7-identify-model-problems">Task 7 — Identify Model Problems</a></li>
   </ul></li>
-  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">23. Submission Instructions</a></li>
+  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">24. Submission Instructions</a></li>
   <li><a href="#file-naming-convention" id="toc-file-naming-convention" class="nav-link" data-scroll-target="#file-naming-convention">File Naming Convention</a></li>
   <li><a href="#submission-link" id="toc-submission-link" class="nav-link" data-scroll-target="#submission-link">Submission Link</a></li>
-  <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">24. Common Errors</a>
+  <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">25. Common Errors</a>
   <ul class="collapse">
   <li><a href="#problem-1-forgetting-constant" id="toc-problem-1-forgetting-constant" class="nav-link" data-scroll-target="#problem-1-forgetting-constant">Problem 1 — Forgetting Constant</a></li>
   <li><a href="#problem-2-misinterpreting-coefficients" id="toc-problem-2-misinterpreting-coefficients" class="nav-link" data-scroll-target="#problem-2-misinterpreting-coefficients">Problem 2 — Misinterpreting Coefficients</a></li>
@@ -266,9 +271,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#problem-4-ignoring-outliers" id="toc-problem-4-ignoring-outliers" class="nav-link" data-scroll-target="#problem-4-ignoring-outliers">Problem 4 — Ignoring Outliers</a></li>
   <li><a href="#problem-5-blindly-trusting-r-squared" id="toc-problem-5-blindly-trusting-r-squared" class="nav-link" data-scroll-target="#problem-5-blindly-trusting-r-squared">Problem 5 — Blindly Trusting R-Squared</a></li>
   </ul></li>
-  <li><a href="#ai-reflection-question" id="toc-ai-reflection-question" class="nav-link" data-scroll-target="#ai-reflection-question">25. AI Reflection Question</a></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">26. Key Takeaways</a></li>
-  <li><a href="#before-week-8" id="toc-before-week-8" class="nav-link" data-scroll-target="#before-week-8">27. Before Week 8</a></li>
+  <li><a href="#ai-reflection-question" id="toc-ai-reflection-question" class="nav-link" data-scroll-target="#ai-reflection-question">26. AI Reflection Question</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">27. Key Takeaways</a></li>
+  <li><a href="#before-week-8" id="toc-before-week-8" class="nav-link" data-scroll-target="#before-week-8">28. Before Week 8</a></li>
   </ul>
 </nav>
     </div>
@@ -634,37 +639,107 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We now estimate our first regression model using Python.</p>
 <hr>
 </section>
+<section id="week-7-dataset" class="level1">
+<h1>Week 7 Dataset</h1>
+<p>For the live coding session, students will use:</p>
+<pre class="text"><code>consumption_data.csv</code></pre>
+<p>This dataset is built for the Week 7 regression lesson. Each row represents one hypothetical household.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Meaning</th>
+<th>Example Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Household</td>
+<td>Household identifier</td>
+<td>Tracking observations</td>
+</tr>
+<tr class="even">
+<td>Income</td>
+<td>Monthly household income</td>
+<td>Independent variable</td>
+</tr>
+<tr class="odd">
+<td>Consumption</td>
+<td>Monthly household consumption</td>
+<td>Dependent variable</td>
+</tr>
+<tr class="even">
+<td>Savings</td>
+<td>Income minus consumption</td>
+<td>Alternative outcome</td>
+</tr>
+<tr class="odd">
+<td>Household_Size</td>
+<td>Number of household members</td>
+<td>Control variable discussion</td>
+</tr>
+<tr class="even">
+<td>Urban</td>
+<td>1 if urban, 0 if rural</td>
+<td>Group/context discussion</td>
+</tr>
+<tr class="odd">
+<td>Region</td>
+<td>Rural or Urban label</td>
+<td>Descriptive comparison</td>
+</tr>
+</tbody>
+</table>
+<p>Students can either download the CSV file or import it directly inside Google Colab using the raw GitHub URL.</p>
+<hr>
+</section>
+<section id="direct-colab-data-import" class="level1">
+<h1>Direct Colab Data Import</h1>
+<p>Use this code in Google Colab:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/consumption_data.csv"</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(url)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This is easier than uploading the file manually because the notebook always reads the course dataset directly.</p>
+<hr>
+</section>
 <section id="import-libraries" class="level1">
 <h1>Import Libraries</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="load-dataset" class="level1">
 <h1>Load Dataset</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"consumption_data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/consumption_data.csv"</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(url)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="define-variables" class="level1">
 <h1>Define Variables</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> data[<span class="st">"Income"</span>]</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> data[<span class="st">"Consumption"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> data[<span class="st">"Income"</span>]</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> data[<span class="st">"Consumption"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="add-constant" class="level1">
 <h1>Add Constant</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="estimate-model" class="level1">
 <h1>Estimate Model</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(Y, X).fit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(Y, X).fit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="display-results" class="level1">
 <h1>Display Results</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model.summary())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model.summary())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="interpreting-coefficients" class="level1">
@@ -714,16 +789,16 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 </section>
 <section id="example-1" class="level1">
 <h1>Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Income"</span>],</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">"Consumption"</span>])</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Income"</span>],</span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>         model.predict(X),</span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>         color<span class="op">=</span><span class="st">"red"</span>)</span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Income"</span>],</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">"Consumption"</span>])</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Income"</span>],</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>         model.predict(X),</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>         color<span class="op">=</span><span class="st">"red"</span>)</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="interpretation-questions" class="level1">
@@ -781,26 +856,26 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 </section>
 <section id="generate-predictions" class="level1">
 <h1>Generate Predictions</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Predicted_Consumption"</span>] <span class="op">=</span> model.predict(X)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Predicted_Consumption"</span>] <span class="op">=</span> model.predict(X)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="display-comparison" class="level1">
 <h1>Display Comparison</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">"Consumption"</span>,</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Predicted_Consumption"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">"Consumption"</span>,</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Predicted_Consumption"</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="visualization" class="level1">
 <h1>Visualization</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Consumption"</span>],</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">"Actual"</span>)</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Predicted_Consumption"</span>],</span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">"Predicted"</span>)</span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Consumption"</span>],</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">"Actual"</span>)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Predicted_Consumption"</span>],</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">"Predicted"</span>)</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="interpretation-questions-1" class="level1">
@@ -813,8 +888,39 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 </ul>
 <hr>
 </section>
+<section id="extending-the-example-household-size" class="level1">
+<h1>14. Extending the Example: Household Size</h1>
+<p>Simple regression uses one independent variable:</p>
+<pre class="text"><code>Consumption = β0 + β1(Income) + ε</code></pre>
+<p>But economic behavior may also depend on household size.</p>
+<p>Larger households may consume more even when income is similar.</p>
+<hr>
+</section>
+<section id="multiple-regression-example" class="level1">
+<h1>Multiple Regression Example</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>X_multi <span class="op">=</span> data[[<span class="st">"Income"</span>,</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Household_Size"</span>]]</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>X_multi <span class="op">=</span> sm.add_constant(X_multi)</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> data[<span class="st">"Consumption"</span>]</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>model_multi <span class="op">=</span> sm.OLS(Y, X_multi).fit()</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model_multi.summary())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="interpretation-lesson" class="level1">
+<h1>Interpretation Lesson</h1>
+<p>The income coefficient in the multiple regression means:</p>
+<pre class="text"><code>the predicted change in consumption when income changes,
+holding household size constant</code></pre>
+<p>This phrase is extremely important:</p>
+<pre class="text"><code>holding other variables constant</code></pre>
+<hr>
+</section>
 <section id="introduction-to-statsmodels" class="level1">
-<h1>14. Introduction to statsmodels</h1>
+<h1>15. Introduction to statsmodels</h1>
 <p>statsmodels is widely used for econometrics.</p>
 <p>It provides:</p>
 <ul>
@@ -836,7 +942,7 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 </section>
 <section id="example-3" class="level1">
 <h1>Example</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>model.summary()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>model.summary()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This gives:</p>
 <ul>
 <li>coefficients</li>
@@ -847,7 +953,7 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 <hr>
 </section>
 <section id="introduction-to-scikit-learn" class="level1">
-<h1>15. Introduction to scikit-learn</h1>
+<h1>16. Introduction to scikit-learn</h1>
 <p>scikit-learn is widely used in machine learning.</p>
 <p>It focuses more on:</p>
 <ul>
@@ -859,7 +965,7 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 </section>
 <section id="example-import" class="level1">
 <h1>Example Import</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="important-distinction" class="level1">
@@ -885,27 +991,27 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 <hr>
 </section>
 <section id="open-the-week-7-live-notebook" class="level1">
-<h1>16. Open the Week 7 Live Notebook</h1>
+<h1>17. Open the Week 7 Live Notebook</h1>
 <p><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week7/ECN4199_Week7_Live_Notebook.ipynb">Open Week 7 Live Notebook — Save a Copy Before Editing</a></p>
 <hr>
 </section>
 <section id="download-regression-dataset" class="level1">
-<h1>17. Download Regression Dataset</h1>
+<h1>18. Download Regression Dataset</h1>
 <p><a href="../data/consumption_data.csv">Download Regression Dataset</a></p>
 <hr>
 </section>
 <section id="regression-cheat-sheet" class="level1">
-<h1>18. Regression Cheat Sheet</h1>
+<h1>19. Regression Cheat Sheet</h1>
 <p>Use the regression interpretation notes in this lecture as the main guide.</p>
 <hr>
 </section>
 <section id="statsmodels-guide" class="level1">
-<h1>19. statsmodels Guide</h1>
+<h1>20. statsmodels Guide</h1>
 <p><a href="https://www.statsmodels.org/stable/regression.html">Open statsmodels OLS Documentation</a></p>
 <hr>
 </section>
 <section id="live-coding-session" class="level1">
-<h1>20. Live Coding Session</h1>
+<h1>21. Live Coding Session</h1>
 <section id="activity-title" class="level2">
 <h2 class="anchored" data-anchor-id="activity-title">Activity Title</h2>
 <pre class="text"><code>Modeling Consumption and Income Relationships</code></pre>
@@ -913,53 +1019,55 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 </section>
 <section id="step-1-import-libraries" class="level2">
 <h2 class="anchored" data-anchor-id="step-1-import-libraries">Step 1 — Import Libraries</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="step-2-load-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-load-dataset">Step 2 — Load Dataset</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"consumption_data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/consumption_data.csv"</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(url)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="step-3-visualize-relationship" class="level2">
 <h2 class="anchored" data-anchor-id="step-3-visualize-relationship">Step 3 — Visualize Relationship</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Income"</span>],</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">"Consumption"</span>])</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Income"</span>],</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">"Consumption"</span>])</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="step-4-estimate-regression" class="level2">
 <h2 class="anchored" data-anchor-id="step-4-estimate-regression">Step 4 — Estimate Regression</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(data[<span class="st">"Income"</span>])</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> data[<span class="st">"Consumption"</span>]</span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(Y, X).fit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(data[<span class="st">"Income"</span>])</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> data[<span class="st">"Consumption"</span>]</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(Y, X).fit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="step-5-display-results" class="level2">
 <h2 class="anchored" data-anchor-id="step-5-display-results">Step 5 — Display Results</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model.summary())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model.summary())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="step-6-visualize-fitted-line" class="level2">
 <h2 class="anchored" data-anchor-id="step-6-visualize-fitted-line">Step 6 — Visualize Fitted Line</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Income"</span>],</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">"Consumption"</span>])</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Income"</span>],</span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>         model.predict(X),</span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>         color<span class="op">=</span><span class="st">"red"</span>)</span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">"Income"</span>],</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>            data[<span class="st">"Consumption"</span>])</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Income"</span>],</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>         model.predict(X),</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>         color<span class="op">=</span><span class="st">"red"</span>)</span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="step-7-generate-predictions" class="level2">
 <h2 class="anchored" data-anchor-id="step-7-generate-predictions">Step 7 — Generate Predictions</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Predicted_Consumption"</span>] <span class="op">=</span> model.predict(X)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Predicted_Consumption"</span>] <span class="op">=</span> model.predict(X)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="step-8-interpretation-questions" class="level2">
@@ -976,40 +1084,40 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 </section>
 </section>
 <section id="interactive-mini-quiz" class="level1">
-<h1>21. Interactive Mini Quiz</h1>
+<h1>22. Interactive Mini Quiz</h1>
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is the main purpose of regression? A/B/C/D : "</span>)</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"B"</span>:</span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! Regression estimates relationships."</span>)</span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is the main purpose of regression? A/B/C/D : "</span>)</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"B"</span>:</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! Regression estimates relationships."</span>)</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="question-2" class="level2">
 <h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is the dependent variable? A/B/C/D : "</span>)</span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"B"</span>:</span>
-<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! The dependent variable is the outcome variable."</span>)</span>
-<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is the dependent variable? A/B/C/D : "</span>)</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"B"</span>:</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! The dependent variable is the outcome variable."</span>)</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="question-3" class="level2">
 <h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Does regression automatically prove causality? Yes/No : "</span>)</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.lower() <span class="op">==</span> <span class="st">"no"</span>:</span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct!"</span>)</span>
-<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Does regression automatically prove causality? Yes/No : "</span>)</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.lower() <span class="op">==</span> <span class="st">"no"</span>:</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct!"</span>)</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 </section>
 <section id="self-assessment-activity" class="level1">
-<h1>22. Self-Assessment Activity</h1>
+<h1>23. Self-Assessment Activity</h1>
 <p>Students should complete the following tasks.</p>
 <hr>
 <section id="task-1-estimate-regression" class="level2">
@@ -1067,7 +1175,7 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 </section>
 </section>
 <section id="submission-instructions" class="level1">
-<h1>23. Submission Instructions</h1>
+<h1>24. Submission Instructions</h1>
 <p>Submit:</p>
 <ul>
 <li>regression notebook</li>
@@ -1089,14 +1197,14 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 <hr>
 </section>
 <section id="common-errors" class="level1">
-<h1>24. Common Errors</h1>
+<h1>25. Common Errors</h1>
 <section id="problem-1-forgetting-constant" class="level2">
 <h2 class="anchored" data-anchor-id="problem-1-forgetting-constant">Problem 1 — Forgetting Constant</h2>
 <p>Wrong:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(Y, X).fit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(Y, X).fit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>without adding constant.</p>
 <p>Correct:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="problem-2-misinterpreting-coefficients" class="level2">
@@ -1131,7 +1239,7 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 </section>
 </section>
 <section id="ai-reflection-question" class="level1">
-<h1>25. AI Reflection Question</h1>
+<h1>26. AI Reflection Question</h1>
 <p>AI can automatically generate regression code.</p>
 <p>However:</p>
 <ul>
@@ -1144,7 +1252,7 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 <hr>
 </section>
 <section id="key-takeaways" class="level1">
-<h1>26. Key Takeaways</h1>
+<h1>27. Key Takeaways</h1>
 <p>By the end of Week 7, students should understand:</p>
 <ul>
 <li>what regression is</li>
@@ -1161,7 +1269,7 @@ consumption increases by approximately 0.75 units on average.</code></pre>
 <hr>
 </section>
 <section id="before-week-8" class="level1">
-<h1>27. Before Week 8</h1>
+<h1>28. Before Week 8</h1>
 <p>Before next week, students should:</p>
 <ul>
 <li>rerun all Week 7 code</li>
@@ -1248,7 +1356,7 @@ consumption increases by approximately 0.75 units on average.</code></pre>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/kanishkawerawella\.github\.io\/ECN4199_Website\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
