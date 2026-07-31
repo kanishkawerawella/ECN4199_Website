@@ -402,6 +402,44 @@ We now estimate our first regression model using Python.
 
 ---
 
+# Week 7 Dataset
+
+For the live coding session, students will use:
+
+```text
+consumption_data.csv
+```
+
+This dataset is built for the Week 7 regression lesson. Each row represents one hypothetical household.
+
+| Variable | Meaning | Example Use |
+|---|---|---|
+| Household | Household identifier | Tracking observations |
+| Income | Monthly household income | Independent variable |
+| Consumption | Monthly household consumption | Dependent variable |
+| Savings | Income minus consumption | Alternative outcome |
+| Household_Size | Number of household members | Control variable discussion |
+| Urban | 1 if urban, 0 if rural | Group/context discussion |
+| Region | Rural or Urban label | Descriptive comparison |
+
+Students can either download the CSV file or import it directly inside Google Colab using the raw GitHub URL.
+
+---
+
+# Direct Colab Data Import
+
+Use this code in Google Colab:
+
+```python
+url = "https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/consumption_data.csv"
+
+data = pd.read_csv(url)
+```
+
+This is easier than uploading the file manually because the notebook always reads the course dataset directly.
+
+---
+
 # Import Libraries
 
 ```python
@@ -414,7 +452,9 @@ import statsmodels.api as sm
 # Load Dataset
 
 ```python
-data = pd.read_csv("consumption_data.csv")
+url = "https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/consumption_data.csv"
+
+data = pd.read_csv(url)
 ```
 
 ---
@@ -622,7 +662,55 @@ Ask:
 
 ---
 
-# 14. Introduction to statsmodels
+# 14. Extending the Example: Household Size
+
+Simple regression uses one independent variable:
+
+```text
+Consumption = β0 + β1(Income) + ε
+```
+
+But economic behavior may also depend on household size.
+
+Larger households may consume more even when income is similar.
+
+---
+
+# Multiple Regression Example
+
+```python
+X_multi = data[["Income",
+                "Household_Size"]]
+
+X_multi = sm.add_constant(X_multi)
+
+Y = data["Consumption"]
+
+model_multi = sm.OLS(Y, X_multi).fit()
+
+print(model_multi.summary())
+```
+
+---
+
+# Interpretation Lesson
+
+The income coefficient in the multiple regression means:
+
+```text
+the predicted change in consumption when income changes,
+holding household size constant
+```
+
+This phrase is extremely important:
+
+```text
+holding other variables constant
+```
+
+---
+
+# 15. Introduction to statsmodels
 
 statsmodels is widely used for econometrics.
 
@@ -659,7 +747,7 @@ This gives:
 
 ---
 
-# 15. Introduction to scikit-learn
+# 16. Introduction to scikit-learn
 
 scikit-learn is widely used in machine learning.
 
@@ -688,31 +776,31 @@ from sklearn.linear_model import LinearRegression
 
 ---
 
-# 16. Open the Week 7 Live Notebook
+# 17. Open the Week 7 Live Notebook
 
 [Open Week 7 Live Notebook — Save a Copy Before Editing](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week7/ECN4199_Week7_Live_Notebook.ipynb)
 
 ---
 
-# 17. Download Regression Dataset
+# 18. Download Regression Dataset
 
 [Download Regression Dataset](../data/consumption_data.csv)
 
 ---
 
-# 18. Regression Cheat Sheet
+# 19. Regression Cheat Sheet
 
 Use the regression interpretation notes in this lecture as the main guide.
 
 ---
 
-# 19. statsmodels Guide
+# 20. statsmodels Guide
 
 [Open statsmodels OLS Documentation](https://www.statsmodels.org/stable/regression.html)
 
 ---
 
-# 20. Live Coding Session
+# 21. Live Coding Session
 
 ## Activity Title
 
@@ -735,7 +823,9 @@ import matplotlib.pyplot as plt
 ## Step 2 — Load Dataset
 
 ```python
-data = pd.read_csv("consumption_data.csv")
+url = "https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/consumption_data.csv"
+
+data = pd.read_csv(url)
 ```
 
 ---
@@ -806,7 +896,7 @@ Ask students:
 
 ---
 
-# 21. Interactive Mini Quiz
+# 22. Interactive Mini Quiz
 
 ## Question 1
 
@@ -847,7 +937,7 @@ else:
 
 ---
 
-# 22. Self-Assessment Activity
+# 23. Self-Assessment Activity
 
 Students should complete the following tasks.
 
@@ -912,7 +1002,7 @@ Identify:
 
 ---
 
-# 23. Submission Instructions
+# 24. Submission Instructions
 
 Submit:
 
@@ -938,7 +1028,7 @@ The lecturer will provide the live submission link during the class session.
 
 ---
 
-# 24. Common Errors
+# 25. Common Errors
 
 ## Problem 1 — Forgetting Constant
 
@@ -990,7 +1080,7 @@ High R-squared does NOT automatically imply:
 
 ---
 
-# 25. AI Reflection Question
+# 26. AI Reflection Question
 
 AI can automatically generate regression code.
 
@@ -1008,7 +1098,7 @@ Why must economists understand regression logic even when AI tools generate mode
 
 ---
 
-# 26. Key Takeaways
+# 27. Key Takeaways
 
 By the end of Week 7, students should understand:
 
@@ -1025,7 +1115,7 @@ By the end of Week 7, students should understand:
 
 ---
 
-# 27. Before Week 8
+# 28. Before Week 8
 
 Before next week, students should:
 
