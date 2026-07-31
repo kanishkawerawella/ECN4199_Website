@@ -1537,14 +1537,14 @@
     "href": "lectures/week7.html#step-1-import-libraries",
     "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
     "section": "Step 1 — Import Libraries",
-    "text": "Step 1 — Import Libraries\nimport pandas as pd\nimport statsmodels.api as sm\nimport matplotlib.pyplot as plt"
+    "text": "Step 1 — Import Libraries\nUse the libraries and dataset imported at the beginning of the session."
   },
   {
-    "objectID": "lectures/week7.html#step-2-load-dataset",
-    "href": "lectures/week7.html#step-2-load-dataset",
+    "objectID": "lectures/week7.html#step-2-inspect-the-dataset",
+    "href": "lectures/week7.html#step-2-inspect-the-dataset",
     "title": "Week 7 — Regression Analysis and Predictive Modeling for Economics",
-    "section": "Step 2 — Load Dataset",
-    "text": "Step 2 — Load Dataset\nurl = \"https://raw.githubusercontent.com/kanishkawerawella/ECN4199_Website/main/data/consumption_data.csv\"\n\ndata = pd.read_csv(url)"
+    "section": "Step 2 — Inspect the Dataset",
+    "text": "Step 2 — Inspect the Dataset\ndata.head()"
   },
   {
     "objectID": "lectures/week7.html#step-3-visualize-relationship",
