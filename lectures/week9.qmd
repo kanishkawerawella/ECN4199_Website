@@ -762,33 +762,25 @@ Model choice involves trade-offs.
 
 # 17. Open the Week 9 Live Notebook
 
-Replace placeholder below:
-
-[Open Week 9 Live Notebook — Save a Copy Before Editing](PASTE_WEEK9_COLAB_LINK_HERE)
+[Open Week 9 Live Notebook — Save a Copy Before Editing](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week9/ECN4199_Week9_Live_Notebook.ipynb)
 
 ---
 
 # 18. Download Classification Dataset
 
-Replace placeholder below:
-
-[Download Classification Dataset](PASTE_DATASET_LINK_HERE)
+[Download Classification Dataset](../data/credit_risk_classification.csv)
 
 ---
 
 # 19. Classification Cheat Sheet
 
-Replace placeholder below:
-
-[Open Classification Cheat Sheet](PASTE_CLASSIFICATION_GUIDE_LINK_HERE)
+[Open Classification Cheat Sheet](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression)
 
 ---
 
 # 20. Logistic Regression Guide
 
-Replace placeholder below:
-
-[Open Logistic Regression Guide](PASTE_LOGISTIC_GUIDE_LINK_HERE)
+[Open Logistic Regression Guide](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression)
 
 ---
 
@@ -1029,9 +1021,7 @@ Week9_YourName.ipynb
 
 # Submission Link
 
-Replace placeholder below:
-
-[Submit Week 9 Work](PASTE_SUBMISSION_LINK_HERE)
+[Submit Week 9 Work](The lecturer will provide the live submission link during the class session.)
 
 ---
 

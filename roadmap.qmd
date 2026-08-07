@@ -38,7 +38,26 @@ This course is organized into two major learning phases.
 ## Week 8 — Introduction to Machine Learning for Economics
 [Open Week 8 Lecture Material](lectures/week8.qmd)
 
+## Week 9 — Classification Models and Economic Decision Systems
+[Open Week 9 Lecture Material](lectures/week9.qmd)
+
+## Week 10 — Clustering, Segmentation, and Unsupervised Learning for Economics
+[Open Week 10 Lecture Material](lectures/week10.qmd)
+
+## Week 11 — Forecasting Economic and Business Trends Using Time Series Data
+[Open Week 11 Lecture Material](lectures/week11.qmd)
+
+## Week 12 — Text Data, AI, and Economic Analysis
+[Open Week 12 Lecture Material](lectures/week12.qmd)
+
+## Week 13 — Capstone Integration: From Data to Economic Intelligence
+[Open Week 13 Lecture Material](lectures/week13.qmd)
+
 ---
+
+# Phase III — Integration, Communication, and Responsible AI
+
+By the final phase, students combine programming, data handling, modelling, communication, and AI-supported reasoning into end-to-end economic analytics work.
 
 # Final Goal of the Course
 

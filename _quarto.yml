@@ -5,6 +5,11 @@ project:
     - data/sri_lanka_macro.csv
     - data/consumption_data.csv
     - data/household_income.csv
+    - data/credit_risk_classification.csv
+    - data/household_segments.csv
+    - data/macro_forecast.csv
+    - data/policy_texts.csv
+    - data/economic_intelligence_project.csv
     - notebooks/week2/ECN4199_Week2_Live_Notebook.ipynb
     - notebooks/week3/ECN4199_Week3_Live_Notebook.ipynb
     - notebooks/week4/ECN4199_Week4_Live_Notebook.ipynb
@@ -12,6 +17,11 @@ project:
     - notebooks/week6/ECN4199_Week6_Live_Notebook.ipynb
     - notebooks/week7/ECN4199_Week7_Live_Notebook.ipynb
     - notebooks/week8/ECN4199_Week8_Live_Notebook.ipynb
+    - notebooks/week9/ECN4199_Week9_Live_Notebook.ipynb
+    - notebooks/week10/ECN4199_Week10_Live_Notebook.ipynb
+    - notebooks/week11/ECN4199_Week11_Live_Notebook.ipynb
+    - notebooks/week12/ECN4199_Week12_Live_Notebook.ipynb
+    - notebooks/week13/ECN4199_Week13_Live_Notebook.ipynb
   render:
     - index.qmd
     - roadmap.qmd
@@ -28,6 +38,11 @@ project:
     - lectures/week6.qmd
     - lectures/week7.qmd
     - lectures/week8.qmd
+    - lectures/week9.qmd
+    - lectures/week10.qmd
+    - lectures/week11.qmd
+    - lectures/week12.qmd
+    - lectures/week13.qmd
     - activities/week1_activity.qmd
     - activities/week2_activity.qmd
     - activities/week3_activity.qmd
@@ -36,6 +51,11 @@ project:
     - activities/week6_activity.qmd
     - activities/week7_activity.qmd
     - activities/week8_activity.qmd
+    - activities/week9_activity.qmd
+    - activities/week10_activity.qmd
+    - activities/week11_activity.qmd
+    - activities/week12_activity.qmd
+    - activities/week13_activity.qmd
 
 website:
   title: "ECN 4199 - Industrial Data Analytics"

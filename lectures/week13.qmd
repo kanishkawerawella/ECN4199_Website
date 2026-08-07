@@ -681,33 +681,25 @@ unnecessary technical complexity
 
 # 16. Open the Week 13 Live Notebook
 
-Replace placeholder below:
-
-[Open Week 13 Live Notebook — Save a Copy Before Editing](PASTE_WEEK13_COLAB_LINK_HERE)
+[Open Week 13 Live Notebook — Save a Copy Before Editing](https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week13/ECN4199_Week13_Live_Notebook.ipynb)
 
 ---
 
 # 17. Download Final Project Dataset
 
-Replace placeholder below:
-
-[Download Final Project Dataset](PASTE_DATASET_LINK_HERE)
+[Download Final Project Dataset](../data/economic_intelligence_project.csv)
 
 ---
 
 # 18. Analytics Workflow Guide
 
-Replace placeholder below:
-
-[Open Analytics Workflow Guide](PASTE_WORKFLOW_GUIDE_LINK_HERE)
+[Open Analytics Workflow Guide](Use the capstone workflow, ethics checklist, and communication notes in this lecture as the main guide.)
 
 ---
 
 # 19. AI Ethics Checklist
 
-Replace placeholder below:
-
-[Open AI Ethics Checklist](PASTE_ETHICS_GUIDE_LINK_HERE)
+[Open AI Ethics Checklist](Use the capstone workflow, ethics checklist, and communication notes in this lecture as the main guide.)
 
 ---
 

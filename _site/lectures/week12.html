@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Week 12 — Text Data, AI, and Economic Analysis: Introduction to NLP and Generative AI – ECN 4199 - Industrial Data Analytics</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-89fc109efc47e76c8a3852ba5571bf68.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">ECN 4199 - Industrial Data Analytics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../roadmap.html"> 
+<span class="menu-text">Course Roadmap</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../assignments.html"> 
+<span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../notebooks.html"> 
+<span class="menu-text">Live Notebooks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../project.html"> 
+<span class="menu-text">Final Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#week-12-natural-language-processing-nlp-text-analytics-and-generative-ai-for-economics" id="toc-week-12-natural-language-processing-nlp-text-analytics-and-generative-ai-for-economics" class="nav-link active" data-scroll-target="#week-12-natural-language-processing-nlp-text-analytics-and-generative-ai-for-economics">Week 12 — Natural Language Processing (NLP), Text Analytics, and Generative AI for Economics</a></li>
+  <li><a href="#critical-conceptual-goal" id="toc-critical-conceptual-goal" class="nav-link" data-scroll-target="#critical-conceptual-goal">Critical Conceptual Goal</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">1. Learning Objectives</a></li>
+  <li><a href="#what-is-nlp" id="toc-what-is-nlp" class="nav-link" data-scroll-target="#what-is-nlp">2. What Is NLP?</a></li>
+  <li><a href="#examples-of-nlp-applications" id="toc-examples-of-nlp-applications" class="nav-link" data-scroll-target="#examples-of-nlp-applications">Examples of NLP Applications</a></li>
+  <li><a href="#economic-applications" id="toc-economic-applications" class="nav-link" data-scroll-target="#economic-applications">Economic Applications</a></li>
+  <li><a href="#important-lesson" id="toc-important-lesson" class="nav-link" data-scroll-target="#important-lesson">Important Lesson</a></li>
+  <li><a href="#why-text-data-matters-in-economics" id="toc-why-text-data-matters-in-economics" class="nav-link" data-scroll-target="#why-text-data-matters-in-economics">3. Why Text Data Matters in Economics</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#important-lesson-1" id="toc-important-lesson-1" class="nav-link" data-scroll-target="#important-lesson-1">Important Lesson</a></li>
+  <li><a href="#structured-vs-unstructured-data" id="toc-structured-vs-unstructured-data" class="nav-link" data-scroll-target="#structured-vs-unstructured-data">4. Structured vs Unstructured Data</a>
+  <ul class="collapse">
+  <li><a href="#structured-data" id="toc-structured-data" class="nav-link" data-scroll-target="#structured-data">Structured Data</a></li>
+  <li><a href="#unstructured-data" id="toc-unstructured-data" class="nav-link" data-scroll-target="#unstructured-data">Unstructured Data</a></li>
+  </ul></li>
+  <li><a href="#important-distinction" id="toc-important-distinction" class="nav-link" data-scroll-target="#important-distinction">Important Distinction</a></li>
+  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example</a></li>
+  <li><a href="#text-as-economic-data" id="toc-text-as-economic-data" class="nav-link" data-scroll-target="#text-as-economic-data">5. Text as Economic Data</a></li>
+  <li><a href="#example-applications" id="toc-example-applications" class="nav-link" data-scroll-target="#example-applications">Example Applications</a></li>
+  <li><a href="#important-lesson-2" id="toc-important-lesson-2" class="nav-link" data-scroll-target="#important-lesson-2">Important Lesson</a></li>
+  <li><a href="#cleaning-text-data" id="toc-cleaning-text-data" class="nav-link" data-scroll-target="#cleaning-text-data">6. Cleaning Text Data</a></li>
+  <li><a href="#example-text" id="toc-example-text" class="nav-link" data-scroll-target="#example-text">Example Text</a></li>
+  <li><a href="#cleaning-may-involve" id="toc-cleaning-may-involve" class="nav-link" data-scroll-target="#cleaning-may-involve">Cleaning May Involve</a></li>
+  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example</a></li>
+  <li><a href="#remove-punctuation" id="toc-remove-punctuation" class="nav-link" data-scroll-target="#remove-punctuation">Remove Punctuation</a></li>
+  <li><a href="#important-lesson-3" id="toc-important-lesson-3" class="nav-link" data-scroll-target="#important-lesson-3">Important Lesson</a></li>
+  <li><a href="#tokenization" id="toc-tokenization" class="nav-link" data-scroll-target="#tokenization">7. Tokenization</a></li>
+  <li><a href="#example-3" id="toc-example-3" class="nav-link" data-scroll-target="#example-3">Example</a></li>
+  <li><a href="#python-example" id="toc-python-example" class="nav-link" data-scroll-target="#python-example">Python Example</a></li>
+  <li><a href="#why-important" id="toc-why-important" class="nav-link" data-scroll-target="#why-important">Why Important?</a></li>
+  <li><a href="#stopwords-and-preprocessing" id="toc-stopwords-and-preprocessing" class="nav-link" data-scroll-target="#stopwords-and-preprocessing">8. Stopwords and Preprocessing</a></li>
+  <li><a href="#example-4" id="toc-example-4" class="nav-link" data-scroll-target="#example-4">Example</a></li>
+  <li><a href="#remove-stopwords" id="toc-remove-stopwords" class="nav-link" data-scroll-target="#remove-stopwords">Remove Stopwords</a></li>
+  <li><a href="#important-lesson-4" id="toc-important-lesson-4" class="nav-link" data-scroll-target="#important-lesson-4">Important Lesson</a></li>
+  <li><a href="#critical-warning" id="toc-critical-warning" class="nav-link" data-scroll-target="#critical-warning">Critical Warning</a></li>
+  <li><a href="#word-frequencies" id="toc-word-frequencies" class="nav-link" data-scroll-target="#word-frequencies">9. Word Frequencies</a></li>
+  <li><a href="#example-questions" id="toc-example-questions" class="nav-link" data-scroll-target="#example-questions">Example Questions</a></li>
+  <li><a href="#example-code" id="toc-example-code" class="nav-link" data-scroll-target="#example-code">Example Code</a></li>
+  <li><a href="#count-words" id="toc-count-words" class="nav-link" data-scroll-target="#count-words">Count Words</a></li>
+  <li><a href="#economic-interpretation" id="toc-economic-interpretation" class="nav-link" data-scroll-target="#economic-interpretation">Economic Interpretation</a></li>
+  <li><a href="#important-warning" id="toc-important-warning" class="nav-link" data-scroll-target="#important-warning">Important Warning</a></li>
+  <li><a href="#sentiment-analysis" id="toc-sentiment-analysis" class="nav-link" data-scroll-target="#sentiment-analysis">10. Sentiment Analysis</a></li>
+  <li><a href="#economic-applications-1" id="toc-economic-applications-1" class="nav-link" data-scroll-target="#economic-applications-1">Economic Applications</a></li>
+  <li><a href="#example-5" id="toc-example-5" class="nav-link" data-scroll-target="#example-5">Example</a></li>
+  <li><a href="#python-example-1" id="toc-python-example-1" class="nav-link" data-scroll-target="#python-example-1">Python Example</a></li>
+  <li><a href="#estimate-sentiment" id="toc-estimate-sentiment" class="nav-link" data-scroll-target="#estimate-sentiment">Estimate Sentiment</a></li>
+  <li><a href="#important-warning-1" id="toc-important-warning-1" class="nav-link" data-scroll-target="#important-warning-1">Important Warning</a></li>
+  <li><a href="#topic-exploration" id="toc-topic-exploration" class="nav-link" data-scroll-target="#topic-exploration">11. Topic Exploration</a></li>
+  <li><a href="#example-6" id="toc-example-6" class="nav-link" data-scroll-target="#example-6">Example</a></li>
+  <li><a href="#important-lesson-5" id="toc-important-lesson-5" class="nav-link" data-scroll-target="#important-lesson-5">Important Lesson</a></li>
+  <li><a href="#example-application" id="toc-example-application" class="nav-link" data-scroll-target="#example-application">Example Application</a></li>
+  <li><a href="#introduction-to-generative-ai" id="toc-introduction-to-generative-ai" class="nav-link" data-scroll-target="#introduction-to-generative-ai">12. Introduction to Generative AI</a></li>
+  <li><a href="#examples-1" id="toc-examples-1" class="nav-link" data-scroll-target="#examples-1">Examples</a></li>
+  <li><a href="#important-idea" id="toc-important-idea" class="nav-link" data-scroll-target="#important-idea">Important Idea</a></li>
+  <li><a href="#critical-lesson" id="toc-critical-lesson" class="nav-link" data-scroll-target="#critical-lesson">Critical Lesson</a></li>
+  <li><a href="#what-are-large-language-models" id="toc-what-are-large-language-models" class="nav-link" data-scroll-target="#what-are-large-language-models">13. What Are Large Language Models?</a></li>
+  <li><a href="#examples-of-tasks" id="toc-examples-of-tasks" class="nav-link" data-scroll-target="#examples-of-tasks">Examples of Tasks</a></li>
+  <li><a href="#important-warning-2" id="toc-important-warning-2" class="nav-link" data-scroll-target="#important-warning-2">Important Warning</a></li>
+  <li><a href="#critical-lesson-1" id="toc-critical-lesson-1" class="nav-link" data-scroll-target="#critical-lesson-1">Critical Lesson</a></li>
+  <li><a href="#prompt-engineering-for-economists" id="toc-prompt-engineering-for-economists" class="nav-link" data-scroll-target="#prompt-engineering-for-economists">14. Prompt Engineering for Economists</a></li>
+  <li><a href="#weak-prompt" id="toc-weak-prompt" class="nav-link" data-scroll-target="#weak-prompt">Weak Prompt</a></li>
+  <li><a href="#better-prompt" id="toc-better-prompt" class="nav-link" data-scroll-target="#better-prompt">Better Prompt</a></li>
+  <li><a href="#important-lesson-6" id="toc-important-lesson-6" class="nav-link" data-scroll-target="#important-lesson-6">Important Lesson</a></li>
+  <li><a href="#example-applications-1" id="toc-example-applications-1" class="nav-link" data-scroll-target="#example-applications-1">Example Applications</a></li>
+  <li><a href="#ai-hallucinations-and-bias" id="toc-ai-hallucinations-and-bias" class="nav-link" data-scroll-target="#ai-hallucinations-and-bias">15. AI Hallucinations and Bias</a></li>
+  <li><a href="#example-7" id="toc-example-7" class="nav-link" data-scroll-target="#example-7">Example</a></li>
+  <li><a href="#important-lesson-7" id="toc-important-lesson-7" class="nav-link" data-scroll-target="#important-lesson-7">Important Lesson</a></li>
+  <li><a href="#critical-warning-1" id="toc-critical-warning-1" class="nav-link" data-scroll-target="#critical-warning-1">Critical Warning</a></li>
+  <li><a href="#ethical-issues-in-generative-ai" id="toc-ethical-issues-in-generative-ai" class="nav-link" data-scroll-target="#ethical-issues-in-generative-ai">16. Ethical Issues in Generative AI</a></li>
+  <li><a href="#important-issues" id="toc-important-issues" class="nav-link" data-scroll-target="#important-issues">Important Issues</a></li>
+  <li><a href="#critical-lesson-2" id="toc-critical-lesson-2" class="nav-link" data-scroll-target="#critical-lesson-2">Critical Lesson</a></li>
+  <li><a href="#open-the-week-12-live-notebook" id="toc-open-the-week-12-live-notebook" class="nav-link" data-scroll-target="#open-the-week-12-live-notebook">17. Open the Week 12 Live Notebook</a></li>
+  <li><a href="#download-nlp-dataset" id="toc-download-nlp-dataset" class="nav-link" data-scroll-target="#download-nlp-dataset">18. Download NLP Dataset</a></li>
+  <li><a href="#nlp-cheat-sheet" id="toc-nlp-cheat-sheet" class="nav-link" data-scroll-target="#nlp-cheat-sheet">19. NLP Cheat Sheet</a></li>
+  <li><a href="#generative-ai-guide" id="toc-generative-ai-guide" class="nav-link" data-scroll-target="#generative-ai-guide">20. Generative AI Guide</a></li>
+  <li><a href="#live-coding-session" id="toc-live-coding-session" class="nav-link" data-scroll-target="#live-coding-session">21. Live Coding Session</a>
+  <ul class="collapse">
+  <li><a href="#activity-title" id="toc-activity-title" class="nav-link" data-scroll-target="#activity-title">Activity Title</a></li>
+  <li><a href="#step-1-import-libraries" id="toc-step-1-import-libraries" class="nav-link" data-scroll-target="#step-1-import-libraries">Step 1 — Import Libraries</a></li>
+  <li><a href="#step-2-load-text-dataset" id="toc-step-2-load-text-dataset" class="nav-link" data-scroll-target="#step-2-load-text-dataset">Step 2 — Load Text Dataset</a></li>
+  <li><a href="#step-3-convert-text-to-lowercase" id="toc-step-3-convert-text-to-lowercase" class="nav-link" data-scroll-target="#step-3-convert-text-to-lowercase">Step 3 — Convert Text to Lowercase</a></li>
+  <li><a href="#step-4-remove-punctuation" id="toc-step-4-remove-punctuation" class="nav-link" data-scroll-target="#step-4-remove-punctuation">Step 4 — Remove Punctuation</a></li>
+  <li><a href="#step-5-tokenize-text" id="toc-step-5-tokenize-text" class="nav-link" data-scroll-target="#step-5-tokenize-text">Step 5 — Tokenize Text</a></li>
+  <li><a href="#step-6-count-word-frequencies" id="toc-step-6-count-word-frequencies" class="nav-link" data-scroll-target="#step-6-count-word-frequencies">Step 6 — Count Word Frequencies</a></li>
+  <li><a href="#step-7-perform-sentiment-analysis" id="toc-step-7-perform-sentiment-analysis" class="nav-link" data-scroll-target="#step-7-perform-sentiment-analysis">Step 7 — Perform Sentiment Analysis</a></li>
+  <li><a href="#step-8-interpretation-questions" id="toc-step-8-interpretation-questions" class="nav-link" data-scroll-target="#step-8-interpretation-questions">Step 8 — Interpretation Questions</a></li>
+  </ul></li>
+  <li><a href="#interactive-mini-quiz" id="toc-interactive-mini-quiz" class="nav-link" data-scroll-target="#interactive-mini-quiz">22. Interactive Mini Quiz</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  </ul></li>
+  <li><a href="#self-assessment-activity" id="toc-self-assessment-activity" class="nav-link" data-scroll-target="#self-assessment-activity">23. Self-Assessment Activity</a>
+  <ul class="collapse">
+  <li><a href="#activity-title-1" id="toc-activity-title-1" class="nav-link" data-scroll-target="#activity-title-1">Activity Title</a></li>
+  <li><a href="#task-1-clean-text-dataset" id="toc-task-1-clean-text-dataset" class="nav-link" data-scroll-target="#task-1-clean-text-dataset">Task 1 — Clean Text Dataset</a></li>
+  <li><a href="#task-2-tokenize-text" id="toc-task-2-tokenize-text" class="nav-link" data-scroll-target="#task-2-tokenize-text">Task 2 — Tokenize Text</a></li>
+  <li><a href="#task-3-calculate-word-frequencies" id="toc-task-3-calculate-word-frequencies" class="nav-link" data-scroll-target="#task-3-calculate-word-frequencies">Task 3 — Calculate Word Frequencies</a></li>
+  <li><a href="#task-4-perform-sentiment-analysis" id="toc-task-4-perform-sentiment-analysis" class="nav-link" data-scroll-target="#task-4-perform-sentiment-analysis">Task 4 — Perform Sentiment Analysis</a></li>
+  <li><a href="#task-5-interpret-themes" id="toc-task-5-interpret-themes" class="nav-link" data-scroll-target="#task-5-interpret-themes">Task 5 — Interpret Themes</a></li>
+  <li><a href="#task-6-experiment-with-ai-prompting" id="toc-task-6-experiment-with-ai-prompting" class="nav-link" data-scroll-target="#task-6-experiment-with-ai-prompting">Task 6 — Experiment with AI Prompting</a></li>
+  <li><a href="#task-7-analytical-reflection" id="toc-task-7-analytical-reflection" class="nav-link" data-scroll-target="#task-7-analytical-reflection">Task 7 — Analytical Reflection</a></li>
+  </ul></li>
+  <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">24. Submission Instructions</a></li>
+  <li><a href="#file-naming-convention" id="toc-file-naming-convention" class="nav-link" data-scroll-target="#file-naming-convention">File Naming Convention</a></li>
+  <li><a href="#submission-method" id="toc-submission-method" class="nav-link" data-scroll-target="#submission-method">Submission Method</a></li>
+  <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">25. Common Errors</a>
+  <ul class="collapse">
+  <li><a href="#problem-1-blind-trust-in-ai-outputs" id="toc-problem-1-blind-trust-in-ai-outputs" class="nav-link" data-scroll-target="#problem-1-blind-trust-in-ai-outputs">Problem 1 — Blind Trust in AI Outputs</a></li>
+  <li><a href="#problem-2-over-cleaning-text" id="toc-problem-2-over-cleaning-text" class="nav-link" data-scroll-target="#problem-2-over-cleaning-text">Problem 2 — Over-Cleaning Text</a></li>
+  <li><a href="#problem-3-misinterpreting-sentiment-analysis" id="toc-problem-3-misinterpreting-sentiment-analysis" class="nav-link" data-scroll-target="#problem-3-misinterpreting-sentiment-analysis">Problem 3 — Misinterpreting Sentiment Analysis</a></li>
+  <li><a href="#problem-4-treating-word-frequency-as-meaning" id="toc-problem-4-treating-word-frequency-as-meaning" class="nav-link" data-scroll-target="#problem-4-treating-word-frequency-as-meaning">Problem 4 — Treating Word Frequency as Meaning</a></li>
+  <li><a href="#problem-5-ignoring-ethical-issues" id="toc-problem-5-ignoring-ethical-issues" class="nav-link" data-scroll-target="#problem-5-ignoring-ethical-issues">Problem 5 — Ignoring Ethical Issues</a></li>
+  </ul></li>
+  <li><a href="#ai-reflection-question" id="toc-ai-reflection-question" class="nav-link" data-scroll-target="#ai-reflection-question">26. AI Reflection Question</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">27. Key Takeaways</a></li>
+  <li><a href="#before-week-13" id="toc-before-week-13" class="nav-link" data-scroll-target="#before-week-13">28. Before Week 13</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Week 12 — Text Data, AI, and Economic Analysis: Introduction to NLP and Generative AI</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="week-12-natural-language-processing-nlp-text-analytics-and-generative-ai-for-economics" class="level1">
+<h1>Week 12 — Natural Language Processing (NLP), Text Analytics, and Generative AI for Economics</h1>
+<p>Weeks 7–11 focused primarily on:</p>
+<ul>
+<li>numerical data</li>
+<li>prediction</li>
+<li>forecasting</li>
+<li>machine learning models</li>
+</ul>
+<p>This week introduces:</p>
+<pre class="text"><code>text as data</code></pre>
+<p>This is one of the most important shifts in modern analytics.</p>
+<p>Economists increasingly analyze:</p>
+<ul>
+<li>news articles</li>
+<li>policy reports</li>
+<li>social media</li>
+<li>company filings</li>
+<li>speeches</li>
+<li>parliamentary debates</li>
+<li>survey responses</li>
+<li>customer reviews</li>
+</ul>
+<p>This week introduces:</p>
+<ul>
+<li>Natural Language Processing (NLP)</li>
+<li>text cleaning</li>
+<li>sentiment analysis</li>
+<li>keyword analysis</li>
+<li>topic exploration</li>
+<li>generative AI systems</li>
+<li>large language models (LLMs)</li>
+</ul>
+<hr>
+</section>
+<section id="critical-conceptual-goal" class="level1">
+<h1>Critical Conceptual Goal</h1>
+<p>Students must understand:</p>
+<pre class="text"><code>Language data is messy, ambiguous, contextual, and political.</code></pre>
+<p>Generative AI systems:</p>
+<ul>
+<li>do not “understand” like humans</li>
+<li>do not automatically produce truth</li>
+<li>may hallucinate</li>
+<li>inherit bias from training data</li>
+<li>can still be extremely powerful analytical tools</li>
+</ul>
+<p>This week is NOT about:</p>
+<pre class="text"><code>blindly trusting AI outputs</code></pre>
+<p>This week is about:</p>
+<pre class="text"><code>learning how economists can critically use AI systems</code></pre>
+<hr>
+</section>
+<section id="learning-objectives" class="level1">
+<h1>1. Learning Objectives</h1>
+<p>By the end of this week, students should be able to:</p>
+<ul>
+<li>explain what NLP is</li>
+<li>explain why text data matters in economics</li>
+<li>distinguish structured and unstructured data</li>
+<li>clean and preprocess text data</li>
+<li>tokenize text</li>
+<li>remove stopwords</li>
+<li>calculate word frequencies</li>
+<li>perform basic sentiment analysis</li>
+<li>explain topic exploration intuition</li>
+<li>explain how generative AI systems work</li>
+<li>understand prompt engineering basics</li>
+<li>critically evaluate AI hallucinations and bias</li>
+<li>discuss ethical issues in generative AI</li>
+</ul>
+<hr>
+</section>
+<section id="what-is-nlp" class="level1">
+<h1>2. What Is NLP?</h1>
+<p>NLP stands for:</p>
+<pre class="text"><code>Natural Language Processing</code></pre>
+<p>NLP combines:</p>
+<ul>
+<li>linguistics</li>
+<li>statistics</li>
+<li>machine learning</li>
+<li>computer science</li>
+</ul>
+<p>Its goal is to help computers process human language.</p>
+<hr>
+</section>
+<section id="examples-of-nlp-applications" class="level1">
+<h1>Examples of NLP Applications</h1>
+<ul>
+<li>translation</li>
+<li>chatbots</li>
+<li>sentiment analysis</li>
+<li>spam filtering</li>
+<li>document classification</li>
+<li>AI assistants</li>
+</ul>
+<hr>
+</section>
+<section id="economic-applications" class="level1">
+<h1>Economic Applications</h1>
+<p>Economists use NLP for:</p>
+<ul>
+<li>policy analysis</li>
+<li>financial sentiment</li>
+<li>media analysis</li>
+<li>labor market analysis</li>
+<li>political economy research</li>
+</ul>
+<hr>
+</section>
+<section id="important-lesson" class="level1">
+<h1>Important Lesson</h1>
+<p>Human language is:</p>
+<ul>
+<li>ambiguous</li>
+<li>contextual</li>
+<li>emotional</li>
+<li>imperfect</li>
+</ul>
+<p>That makes NLP difficult.</p>
+<hr>
+</section>
+<section id="why-text-data-matters-in-economics" class="level1">
+<h1>3. Why Text Data Matters in Economics</h1>
+<p>A huge amount of economic information exists as text.</p>
+<hr>
+</section>
+<section id="examples" class="level1">
+<h1>Examples</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Economic Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Central bank speeches</td>
+<td>Monetary policy signals</td>
+</tr>
+<tr class="even">
+<td>News articles</td>
+<td>Economic sentiment</td>
+</tr>
+<tr class="odd">
+<td>Company reports</td>
+<td>Business expectations</td>
+</tr>
+<tr class="even">
+<td>Social media</td>
+<td>Consumer confidence</td>
+</tr>
+<tr class="odd">
+<td>Survey responses</td>
+<td>Household experiences</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="example" class="level1">
+<h1>Example</h1>
+<p>A central bank speech may influence:</p>
+<ul>
+<li>inflation expectations</li>
+<li>financial markets</li>
+<li>exchange rates</li>
+</ul>
+<hr>
+</section>
+<section id="important-lesson-1" class="level1">
+<h1>Important Lesson</h1>
+<p>Text data contains:</p>
+<ul>
+<li>narratives</li>
+<li>expectations</li>
+<li>uncertainty</li>
+<li>beliefs</li>
+</ul>
+<p>Economics increasingly studies these factors.</p>
+<hr>
+</section>
+<section id="structured-vs-unstructured-data" class="level1">
+<h1>4. Structured vs Unstructured Data</h1>
+<section id="structured-data" class="level2">
+<h2 class="anchored" data-anchor-id="structured-data">Structured Data</h2>
+<p>Structured data consists of:</p>
+<ul>
+<li>organized tables</li>
+<li>rows and columns</li>
+</ul>
+<p>Example:</p>
+<pre class="text"><code>Inflation datasets</code></pre>
+<hr>
+</section>
+<section id="unstructured-data" class="level2">
+<h2 class="anchored" data-anchor-id="unstructured-data">Unstructured Data</h2>
+<p>Unstructured data consists of:</p>
+<ul>
+<li>free text</li>
+<li>documents</li>
+<li>speeches</li>
+<li>articles</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="important-distinction" class="level1">
+<h1>Important Distinction</h1>
+<p>Text data is much harder to analyze because:</p>
+<ul>
+<li>meaning depends on context</li>
+<li>words are ambiguous</li>
+<li>language evolves</li>
+</ul>
+<hr>
+</section>
+<section id="example-1" class="level1">
+<h1>Example</h1>
+<p>The word:</p>
+<pre class="text"><code>inflation</code></pre>
+<p>may appear:</p>
+<ul>
+<li>positively</li>
+<li>negatively</li>
+<li>neutrally</li>
+</ul>
+<p>depending on context.</p>
+<hr>
+</section>
+<section id="text-as-economic-data" class="level1">
+<h1>5. Text as Economic Data</h1>
+<p>Economists increasingly treat text as measurable information.</p>
+<hr>
+</section>
+<section id="example-applications" class="level1">
+<h1>Example Applications</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Text Source</th>
+<th>Possible Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>News articles</td>
+<td>Economic uncertainty</td>
+</tr>
+<tr class="even">
+<td>Firm reports</td>
+<td>Business optimism</td>
+</tr>
+<tr class="odd">
+<td>Survey responses</td>
+<td>Labor market stress</td>
+</tr>
+<tr class="even">
+<td>Parliamentary speeches</td>
+<td>Policy preferences</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="important-lesson-2" class="level1">
+<h1>Important Lesson</h1>
+<p>Text reflects:</p>
+<ul>
+<li>beliefs</li>
+<li>narratives</li>
+<li>institutions</li>
+<li>expectations</li>
+</ul>
+<p>These matter enormously in economics.</p>
+<hr>
+</section>
+<section id="cleaning-text-data" class="level1">
+<h1>6. Cleaning Text Data</h1>
+<p>Raw text is messy.</p>
+<p>Before analysis, text usually requires preprocessing.</p>
+<hr>
+</section>
+<section id="example-text" class="level1">
+<h1>Example Text</h1>
+<pre class="text"><code>"Inflation in Sri Lanka increased sharply in 2022!"</code></pre>
+<hr>
+</section>
+<section id="cleaning-may-involve" class="level1">
+<h1>Cleaning May Involve</h1>
+<ul>
+<li>lowercase conversion</li>
+<li>punctuation removal</li>
+<li>removing extra spaces</li>
+<li>removing numbers</li>
+</ul>
+<hr>
+</section>
+<section id="example-2" class="level1">
+<h1>Example</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> text.lower()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="remove-punctuation" class="level1">
+<h1>Remove Punctuation</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> re.sub(<span class="vs">r"</span><span class="pp">[^</span><span class="dv">\w\s</span><span class="pp">]</span><span class="vs">"</span>, <span class="st">""</span>, text)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="important-lesson-3" class="level1">
+<h1>Important Lesson</h1>
+<p>Text preprocessing strongly affects results.</p>
+<hr>
+</section>
+<section id="tokenization" class="level1">
+<h1>7. Tokenization</h1>
+<p>Tokenization means splitting text into words or units.</p>
+<hr>
+</section>
+<section id="example-3" class="level1">
+<h1>Example</h1>
+<p>Sentence:</p>
+<pre class="text"><code>Inflation increased sharply</code></pre>
+<p>Tokens:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">"Inflation"</span>, <span class="st">"increased"</span>, <span class="st">"sharply"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="python-example" class="level1">
+<h1>Python Example</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>text.split()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="why-important" class="level1">
+<h1>Why Important?</h1>
+<p>Most NLP models operate on:</p>
+<pre class="text"><code>tokens</code></pre>
+<p>not entire paragraphs directly.</p>
+<hr>
+</section>
+<section id="stopwords-and-preprocessing" class="level1">
+<h1>8. Stopwords and Preprocessing</h1>
+<p>Some words appear frequently but contain little analytical meaning.</p>
+<p>Examples:</p>
+<ul>
+<li>the</li>
+<li>and</li>
+<li>is</li>
+<li>of</li>
+</ul>
+<p>These are called:</p>
+<pre class="text"><code>stopwords</code></pre>
+<hr>
+</section>
+<section id="example-4" class="level1">
+<h1>Example</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.corpus <span class="im">import</span> stopwords</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="remove-stopwords" class="level1">
+<h1>Remove Stopwords</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>stop_words <span class="op">=</span> <span class="bu">set</span>(stopwords.words(<span class="st">"english"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="important-lesson-4" class="level1">
+<h1>Important Lesson</h1>
+<p>Preprocessing choices shape:</p>
+<ul>
+<li>interpretation</li>
+<li>sentiment</li>
+<li>topic identification</li>
+</ul>
+<hr>
+</section>
+<section id="critical-warning" class="level1">
+<h1>Critical Warning</h1>
+<p>Aggressive preprocessing may remove meaningful context.</p>
+<hr>
+</section>
+<section id="word-frequencies" class="level1">
+<h1>9. Word Frequencies</h1>
+<p>One simple NLP technique:</p>
+<pre class="text"><code>counting word frequency</code></pre>
+<hr>
+</section>
+<section id="example-questions" class="level1">
+<h1>Example Questions</h1>
+<p>Which words appear most often in:</p>
+<ul>
+<li>policy speeches</li>
+<li>economic reports</li>
+<li>survey responses</li>
+</ul>
+<hr>
+</section>
+<section id="example-code" class="level1">
+<h1>Example Code</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="count-words" class="level1">
+<h1>Count Words</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>Counter(tokens)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="economic-interpretation" class="level1">
+<h1>Economic Interpretation</h1>
+<p>Frequent words may reveal:</p>
+<ul>
+<li>dominant concerns</li>
+<li>narratives</li>
+<li>policy focus</li>
+</ul>
+<hr>
+</section>
+<section id="important-warning" class="level1">
+<h1>Important Warning</h1>
+<p>Frequency alone does NOT capture meaning.</p>
+<hr>
+</section>
+<section id="sentiment-analysis" class="level1">
+<h1>10. Sentiment Analysis</h1>
+<p>Sentiment analysis estimates:</p>
+<ul>
+<li>positive tone</li>
+<li>negative tone</li>
+<li>neutral tone</li>
+</ul>
+<hr>
+</section>
+<section id="economic-applications-1" class="level1">
+<h1>Economic Applications</h1>
+<p>Sentiment analysis is used for:</p>
+<ul>
+<li>financial markets</li>
+<li>consumer confidence</li>
+<li>policy communication</li>
+<li>political economy</li>
+</ul>
+<hr>
+</section>
+<section id="example-5" class="level1">
+<h1>Example</h1>
+<p>Sentence:</p>
+<pre class="text"><code>"The economy faces severe instability and uncertainty."</code></pre>
+<p>Likely negative sentiment.</p>
+<hr>
+</section>
+<section id="python-example-1" class="level1">
+<h1>Python Example</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textblob <span class="im">import</span> TextBlob</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="estimate-sentiment" class="level1">
+<h1>Estimate Sentiment</h1>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>blob <span class="op">=</span> TextBlob(text)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>blob.sentiment</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="important-warning-1" class="level1">
+<h1>Important Warning</h1>
+<p>Sentiment models are imperfect.</p>
+<p>Language is:</p>
+<ul>
+<li>contextual</li>
+<li>sarcastic</li>
+<li>culturally dependent</li>
+</ul>
+<hr>
+</section>
+<section id="topic-exploration" class="level1">
+<h1>11. Topic Exploration</h1>
+<p>Topic analysis attempts to identify:</p>
+<ul>
+<li>recurring themes</li>
+<li>hidden discussion structures</li>
+</ul>
+<hr>
+</section>
+<section id="example-6" class="level1">
+<h1>Example</h1>
+<p>A collection of articles may contain topics such as:</p>
+<ul>
+<li>inflation</li>
+<li>unemployment</li>
+<li>political instability</li>
+<li>trade</li>
+</ul>
+<hr>
+</section>
+<section id="important-lesson-5" class="level1">
+<h1>Important Lesson</h1>
+<p>Topics are:</p>
+<pre class="text"><code>statistical groupings</code></pre>
+<p>not:</p>
+<pre class="text"><code>objectively discovered truths</code></pre>
+<hr>
+</section>
+<section id="example-application" class="level1">
+<h1>Example Application</h1>
+<p>Economists may study:</p>
+<pre class="text"><code>how media attention shifts over time</code></pre>
+<hr>
+</section>
+<section id="introduction-to-generative-ai" class="level1">
+<h1>12. Introduction to Generative AI</h1>
+<p>Generative AI systems create:</p>
+<ul>
+<li>text</li>
+<li>images</li>
+<li>code</li>
+<li>summaries</li>
+<li>predictions</li>
+</ul>
+<hr>
+</section>
+<section id="examples-1" class="level1">
+<h1>Examples</h1>
+<ul>
+<li>ChatGPT</li>
+<li>Claude</li>
+<li>Gemini</li>
+<li>Copilot</li>
+</ul>
+<hr>
+</section>
+<section id="important-idea" class="level1">
+<h1>Important Idea</h1>
+<p>Generative AI predicts:</p>
+<pre class="text"><code>likely next tokens</code></pre>
+<p>It does NOT:</p>
+<ul>
+<li>think like humans</li>
+<li>possess consciousness</li>
+<li>automatically understand truth</li>
+</ul>
+<hr>
+</section>
+<section id="critical-lesson" class="level1">
+<h1>Critical Lesson</h1>
+<p>Generative AI systems are:</p>
+<pre class="text"><code>probabilistic language systems</code></pre>
+<hr>
+</section>
+<section id="what-are-large-language-models" class="level1">
+<h1>13. What Are Large Language Models?</h1>
+<p>Large Language Models (LLMs) are trained on massive text datasets.</p>
+<p>They learn:</p>
+<ul>
+<li>language structure</li>
+<li>statistical patterns</li>
+<li>contextual relationships</li>
+</ul>
+<hr>
+</section>
+<section id="examples-of-tasks" class="level1">
+<h1>Examples of Tasks</h1>
+<p>LLMs can:</p>
+<ul>
+<li>summarize reports</li>
+<li>generate code</li>
+<li>answer questions</li>
+<li>explain concepts</li>
+<li>draft policy memos</li>
+</ul>
+<hr>
+</section>
+<section id="important-warning-2" class="level1">
+<h1>Important Warning</h1>
+<p>LLMs may:</p>
+<ul>
+<li>hallucinate</li>
+<li>invent citations</li>
+<li>produce false information confidently</li>
+</ul>
+<hr>
+</section>
+<section id="critical-lesson-1" class="level1">
+<h1>Critical Lesson</h1>
+<p>AI outputs require:</p>
+<ul>
+<li>verification</li>
+<li>skepticism</li>
+<li>critical evaluation</li>
+</ul>
+<hr>
+</section>
+<section id="prompt-engineering-for-economists" class="level1">
+<h1>14. Prompt Engineering for Economists</h1>
+<p>AI output quality depends heavily on prompts.</p>
+<hr>
+</section>
+<section id="weak-prompt" class="level1">
+<h1>Weak Prompt</h1>
+<pre class="text"><code>Explain inflation.</code></pre>
+<hr>
+</section>
+<section id="better-prompt" class="level1">
+<h1>Better Prompt</h1>
+<pre class="text"><code>Explain inflation in Sri Lanka after 2021 using monetary and external sector factors in simple language for undergraduate economics students.</code></pre>
+<hr>
+</section>
+<section id="important-lesson-6" class="level1">
+<h1>Important Lesson</h1>
+<p>Good prompts:</p>
+<ul>
+<li>provide context</li>
+<li>specify audience</li>
+<li>define scope</li>
+<li>clarify expectations</li>
+</ul>
+<hr>
+</section>
+<section id="example-applications-1" class="level1">
+<h1>Example Applications</h1>
+<p>Economists may use prompts to:</p>
+<ul>
+<li>summarize reports</li>
+<li>generate coding assistance</li>
+<li>brainstorm hypotheses</li>
+<li>explain theory</li>
+<li>organize literature</li>
+</ul>
+<hr>
+</section>
+<section id="ai-hallucinations-and-bias" class="level1">
+<h1>15. AI Hallucinations and Bias</h1>
+<p>Generative AI systems may:</p>
+<ul>
+<li>fabricate information</li>
+<li>invent references</li>
+<li>reproduce social bias</li>
+<li>reinforce stereotypes</li>
+</ul>
+<hr>
+</section>
+<section id="example-7" class="level1">
+<h1>Example</h1>
+<p>An AI system may:</p>
+<pre class="text"><code>confidently generate nonexistent academic citations</code></pre>
+<hr>
+</section>
+<section id="important-lesson-7" class="level1">
+<h1>Important Lesson</h1>
+<p>Confidence does NOT imply correctness.</p>
+<hr>
+</section>
+<section id="critical-warning-1" class="level1">
+<h1>Critical Warning</h1>
+<p>Students must NEVER:</p>
+<ul>
+<li>blindly trust AI outputs</li>
+<li>submit unverified AI-generated analysis</li>
+</ul>
+<hr>
+</section>
+<section id="ethical-issues-in-generative-ai" class="level1">
+<h1>16. Ethical Issues in Generative AI</h1>
+<p>Generative AI raises major ethical concerns.</p>
+<hr>
+</section>
+<section id="important-issues" class="level1">
+<h1>Important Issues</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Issue</th>
+<th>Concern</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bias</td>
+<td>Reinforcing inequality</td>
+</tr>
+<tr class="even">
+<td>Misinformation</td>
+<td>False content generation</td>
+</tr>
+<tr class="odd">
+<td>Privacy</td>
+<td>Data misuse</td>
+</tr>
+<tr class="even">
+<td>Labor</td>
+<td>Automation effects</td>
+</tr>
+<tr class="odd">
+<td>Academic integrity</td>
+<td>Plagiarism</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="critical-lesson-2" class="level1">
+<h1>Critical Lesson</h1>
+<p>AI systems are:</p>
+<ul>
+<li>technological</li>
+<li>economic</li>
+<li>political</li>
+<li>ethical systems</li>
+</ul>
+<hr>
+</section>
+<section id="open-the-week-12-live-notebook" class="level1">
+<h1>17. Open the Week 12 Live Notebook</h1>
+<p><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week12/ECN4199_Week12_Live_Notebook.ipynb">Open Week 12 Live Notebook — Save a Copy Before Editing</a></p>
+<hr>
+</section>
+<section id="download-nlp-dataset" class="level1">
+<h1>18. Download NLP Dataset</h1>
+<p><a href="../data/policy_texts.csv">Download NLP Dataset</a></p>
+<hr>
+</section>
+<section id="nlp-cheat-sheet" class="level1">
+<h1>19. NLP Cheat Sheet</h1>
+<p><a href="https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction">Open NLP Cheat Sheet</a></p>
+<hr>
+</section>
+<section id="generative-ai-guide" class="level1">
+<h1>20. Generative AI Guide</h1>
+<p><a href="https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction">Open Generative AI Guide</a></p>
+<hr>
+</section>
+<section id="live-coding-session" class="level1">
+<h1>21. Live Coding Session</h1>
+<section id="activity-title" class="level2">
+<h2 class="anchored" data-anchor-id="activity-title">Activity Title</h2>
+<pre class="text"><code>Analyzing Economic News Articles Using NLP</code></pre>
+<hr>
+</section>
+<section id="step-1-import-libraries" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-import-libraries">Step 1 — Import Libraries</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textblob <span class="im">import</span> TextBlob</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-2-load-text-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-load-text-dataset">Step 2 — Load Text Dataset</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"economic_news.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-3-convert-text-to-lowercase" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-convert-text-to-lowercase">Step 3 — Convert Text to Lowercase</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Clean_Text"</span>] <span class="op">=</span> data[<span class="st">"Article"</span>].<span class="bu">str</span>.lower()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-4-remove-punctuation" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-remove-punctuation">Step 4 — Remove Punctuation</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Clean_Text"</span>] <span class="op">=</span> data[<span class="st">"Clean_Text"</span>].<span class="bu">apply</span>(</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">lambda</span> x: re.sub(<span class="vs">r"</span><span class="pp">[^</span><span class="dv">\w\s</span><span class="pp">]</span><span class="vs">"</span>, <span class="st">""</span>, x)</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-5-tokenize-text" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-tokenize-text">Step 5 — Tokenize Text</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>tokens <span class="op">=</span> data[<span class="st">"Clean_Text"</span>][<span class="dv">0</span>].split()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-6-count-word-frequencies" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-count-word-frequencies">Step 6 — Count Word Frequencies</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>Counter(tokens).most_common(<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-7-perform-sentiment-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-perform-sentiment-analysis">Step 7 — Perform Sentiment Analysis</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>blob <span class="op">=</span> TextBlob(data[<span class="st">"Clean_Text"</span>][<span class="dv">0</span>])</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>blob.sentiment</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="step-8-interpretation-questions" class="level2">
+<h2 class="anchored" data-anchor-id="step-8-interpretation-questions">Step 8 — Interpretation Questions</h2>
+<p>Ask students:</p>
+<ul>
+<li>What themes dominate?</li>
+<li>Does sentiment appear positive or negative?</li>
+<li>What are limitations of automated sentiment analysis?</li>
+<li>Could AI misinterpret context?</li>
+<li>Should economists trust AI-generated summaries blindly?</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="interactive-mini-quiz" class="level1">
+<h1>22. Interactive Mini Quiz</h1>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What does NLP stand for? A/B/C/D : "</span>)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"B"</span>:</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! NLP stands for Natural Language Processing."</span>)</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is tokenization? A/B/C/D : "</span>)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.upper() <span class="op">==</span> <span class="st">"B"</span>:</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct! Tokenization splits text into units."</span>)</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Can generative AI hallucinate? Yes/No : "</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.lower() <span class="op">==</span> <span class="st">"yes"</span>:</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct!"</span>)</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="question-4" class="level2">
+<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Should AI-generated outputs always be verified? Yes/No : "</span>)</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> answer.lower() <span class="op">==</span> <span class="st">"yes"</span>:</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Correct!"</span>)</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Incorrect."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="self-assessment-activity" class="level1">
+<h1>23. Self-Assessment Activity</h1>
+<section id="activity-title-1" class="level2">
+<h2 class="anchored" data-anchor-id="activity-title-1">Activity Title</h2>
+<pre class="text"><code>Week 12 Self-Assessment: NLP and Generative AI for Economics</code></pre>
+<hr>
+</section>
+<section id="task-1-clean-text-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="task-1-clean-text-dataset">Task 1 — Clean Text Dataset</h2>
+<p>Perform text preprocessing.</p>
+<hr>
+</section>
+<section id="task-2-tokenize-text" class="level2">
+<h2 class="anchored" data-anchor-id="task-2-tokenize-text">Task 2 — Tokenize Text</h2>
+<p>Split text into tokens.</p>
+<hr>
+</section>
+<section id="task-3-calculate-word-frequencies" class="level2">
+<h2 class="anchored" data-anchor-id="task-3-calculate-word-frequencies">Task 3 — Calculate Word Frequencies</h2>
+<p>Identify most common words.</p>
+<hr>
+</section>
+<section id="task-4-perform-sentiment-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="task-4-perform-sentiment-analysis">Task 4 — Perform Sentiment Analysis</h2>
+<p>Estimate sentiment of selected articles.</p>
+<hr>
+</section>
+<section id="task-5-interpret-themes" class="level2">
+<h2 class="anchored" data-anchor-id="task-5-interpret-themes">Task 5 — Interpret Themes</h2>
+<p>Interpret:</p>
+<ul>
+<li>dominant themes</li>
+<li>sentiment patterns</li>
+<li>narrative structures</li>
+</ul>
+<hr>
+</section>
+<section id="task-6-experiment-with-ai-prompting" class="level2">
+<h2 class="anchored" data-anchor-id="task-6-experiment-with-ai-prompting">Task 6 — Experiment with AI Prompting</h2>
+<p>Try multiple prompts and compare outputs.</p>
+<hr>
+</section>
+<section id="task-7-analytical-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="task-7-analytical-reflection">Task 7 — Analytical Reflection</h2>
+<p>Write short paragraph:</p>
+<pre class="text"><code>What are the opportunities and dangers of generative AI in economics and policy analysis?</code></pre>
+<hr>
+</section>
+</section>
+<section id="submission-instructions" class="level1">
+<h1>24. Submission Instructions</h1>
+<p>Submit:</p>
+<ul>
+<li>NLP notebook</li>
+<li>text preprocessing outputs</li>
+<li>sentiment analysis results</li>
+<li>word frequency analysis</li>
+<li>analytical reflection</li>
+</ul>
+<hr>
+</section>
+<section id="file-naming-convention" class="level1">
+<h1>File Naming Convention</h1>
+<pre class="text"><code>Week12_YourName.ipynb</code></pre>
+<hr>
+</section>
+<section id="submission-method" class="level1">
+<h1>Submission Method</h1>
+<p>Submit your Colab notebook link through the LMS.</p>
+<hr>
+</section>
+<section id="common-errors" class="level1">
+<h1>25. Common Errors</h1>
+<section id="problem-1-blind-trust-in-ai-outputs" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1-blind-trust-in-ai-outputs">Problem 1 — Blind Trust in AI Outputs</h2>
+<p>Generative AI may confidently produce false information.</p>
+<hr>
+</section>
+<section id="problem-2-over-cleaning-text" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2-over-cleaning-text">Problem 2 — Over-Cleaning Text</h2>
+<p>Excessive preprocessing may remove meaning.</p>
+<hr>
+</section>
+<section id="problem-3-misinterpreting-sentiment-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3-misinterpreting-sentiment-analysis">Problem 3 — Misinterpreting Sentiment Analysis</h2>
+<p>Sentiment tools often fail with:</p>
+<ul>
+<li>sarcasm</li>
+<li>context</li>
+<li>nuanced language</li>
+</ul>
+<hr>
+</section>
+<section id="problem-4-treating-word-frequency-as-meaning" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4-treating-word-frequency-as-meaning">Problem 4 — Treating Word Frequency as Meaning</h2>
+<p>Frequent words do not automatically imply importance.</p>
+<hr>
+</section>
+<section id="problem-5-ignoring-ethical-issues" class="level2">
+<h2 class="anchored" data-anchor-id="problem-5-ignoring-ethical-issues">Problem 5 — Ignoring Ethical Issues</h2>
+<p>AI systems affect:</p>
+<ul>
+<li>inequality</li>
+<li>labor</li>
+<li>misinformation</li>
+<li>academic integrity</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="ai-reflection-question" class="level1">
+<h1>26. AI Reflection Question</h1>
+<p>Generative AI systems can produce:</p>
+<ul>
+<li>summaries</li>
+<li>explanations</li>
+<li>code</li>
+<li>economic interpretations</li>
+</ul>
+<p>However:</p>
+<ul>
+<li>AI may hallucinate</li>
+<li>AI may inherit social bias</li>
+<li>AI may sound confident while being wrong</li>
+</ul>
+<p>Reflection question:</p>
+<pre class="text"><code>Why should economists critically evaluate AI-generated outputs instead of treating them as objective truth?</code></pre>
+<hr>
+</section>
+<section id="key-takeaways" class="level1">
+<h1>27. Key Takeaways</h1>
+<p>By the end of Week 12, students should understand:</p>
+<ul>
+<li>what NLP is</li>
+<li>structured vs unstructured data</li>
+<li>text preprocessing</li>
+<li>tokenization</li>
+<li>stopwords</li>
+<li>word frequency analysis</li>
+<li>sentiment analysis</li>
+<li>generative AI foundations</li>
+<li>LLM intuition</li>
+<li>prompt engineering</li>
+<li>AI hallucinations and bias</li>
+<li>ethical issues in AI systems</li>
+</ul>
+<hr>
+</section>
+<section id="before-week-13" class="level1">
+<h1>28. Before Week 13</h1>
+<p>Before next week, students should:</p>
+<ul>
+<li>rerun all Week 12 code</li>
+<li>experiment with prompts carefully</li>
+<li>think critically about AI outputs</li>
+<li>review NLP preprocessing</li>
+<li>complete submission</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Developed and maintained by Kanishka Werawella<br>
+Department of Economics, University of Colombo</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>ECN 4199 — Industrial Data Analytics<br>
+Academic Year 2026/27</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

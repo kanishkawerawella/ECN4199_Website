@@ -177,3 +177,8 @@ Copy the notebook URL and submit it through the relevant weekly submission link.
 | Week 6 | Economic Dashboards and Data Storytelling | 5 | 1 hour | [Open Week 6 Assignment](activities/week6_activity.qmd) |
 | Week 7 | Regression Analysis and Predictive Modeling | 5 | 1 hour | [Open Week 7 Assignment](activities/week7_activity.qmd) |
 | Week 8 | Introduction to Machine Learning for Economics | 5 | 1 hour | [Open Week 8 Assignment](activities/week8_activity.qmd) |
+| Week 9 | Classification Models and Economic Decision Systems | 5 | 1 hour | [Open Week 9 Assignment](activities/week9_activity.qmd) |
+| Week 10 | Clustering, Segmentation, and Unsupervised Learning | 5 | 1 hour | [Open Week 10 Assignment](activities/week10_activity.qmd) |
+| Week 11 | Forecasting Economic and Business Trends | 5 | 1 hour | [Open Week 11 Assignment](activities/week11_activity.qmd) |
+| Week 12 | Text Analytics, NLP, and Generative AI | 5 | 1 hour | [Open Week 12 Assignment](activities/week12_activity.qmd) |
+| Week 13 | Capstone Integration and Economic Intelligence | 5 | 1 hour | [Open Week 13 Assignment](activities/week13_activity.qmd) |

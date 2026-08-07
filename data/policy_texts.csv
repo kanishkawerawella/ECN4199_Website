@@ -1,0 +1,21 @@
+Document_ID,Text,Topic,Sentiment_Label
+1,Central bank signals tighter policy to control inflation expectations,Monetary Policy,Negative
+2,Export firms report stronger orders after currency stabilization,Trade,Positive
+3,Households face pressure from food and transport prices,Cost of Living,Negative
+4,Tourism operators expect higher arrivals during the next quarter,Tourism,Positive
+5,Small businesses request credit support during slow demand period,Credit,Negative
+6,New digital payment system improves access for rural consumers,Digital Economy,Positive
+7,Youth unemployment remains a concern despite recovery in services,Labour Market,Negative
+8,Agricultural output improves after better rainfall and fertilizer supply,Agriculture,Positive
+9,Import restrictions ease as foreign reserves strengthen,Trade,Positive
+10,Manufacturing confidence weakens because of energy cost uncertainty,Industry,Negative
+11,Public transport fare revision raises household budget concerns,Cost of Living,Negative
+12,Government announces skills programme for unemployed graduates,Labour Market,Positive
+13,Banks expand lending to small enterprises with risk monitoring,Credit,Positive
+14,Headline inflation falls but core prices remain sticky,Monetary Policy,Mixed
+15,Tourism revenue supports external sector recovery,Tourism,Positive
+16,Rural households report improved market access through mobile platforms,Digital Economy,Positive
+17,Flood damage affects vegetable supply and raises short term prices,Agriculture,Negative
+18,Exporters warn that weak global demand could affect factory jobs,Trade,Negative
+19,Energy price volatility complicates industrial planning,Industry,Negative
+20,Consumer sentiment improves as inflation moderates,Cost of Living,Positive
