@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 8 In-Class Activity – ECN 4199 - Industrial Data Analytics</title>
+<title>Week 9 In-Class Activity – ECN 4199 - Industrial Data Analytics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -170,16 +170,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#activity-information" id="toc-activity-information" class="nav-link active" data-scroll-target="#activity-information">Activity Information</a></li>
   <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
   <li><a href="#important-reminder" id="toc-important-reminder" class="nav-link" data-scroll-target="#important-reminder">Important Reminder</a></li>
-  <li><a href="#task-1-features-and-target-variables" id="toc-task-1-features-and-target-variables" class="nav-link" data-scroll-target="#task-1-features-and-target-variables">Task 1 — Features and Target Variables</a>
+  <li><a href="#task-1-understanding-classification-problems" id="toc-task-1-understanding-classification-problems" class="nav-link" data-scroll-target="#task-1-understanding-classification-problems">Task 1 — Understanding Classification Problems</a>
   <ul class="collapse">
   <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective">Objective</a></li>
-  <li><a href="#instructions-1" id="toc-instructions-1" class="nav-link" data-scroll-target="#instructions-1">Instructions</a></li>
-  <li><a href="#define" id="toc-define" class="nav-link" data-scroll-target="#define">Define:</a>
-  <ul class="collapse">
-  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
-  <li><a href="#target-variable" id="toc-target-variable" class="nav-link" data-scroll-target="#target-variable">Target variable</a></li>
-  </ul></li>
-  <li><a href="#example-structure" id="toc-example-structure" class="nav-link" data-scroll-target="#example-structure">Example Structure</a></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
   <ul class="collapse">
   <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
@@ -187,10 +180,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#task-2-split-training-and-testing-data" id="toc-task-2-split-training-and-testing-data" class="nav-link" data-scroll-target="#task-2-split-training-and-testing-data">Task 2 — Split Training and Testing Data</a>
+  <li><a href="#task-2-load-dataset-and-define-variables" id="toc-task-2-load-dataset-and-define-variables" class="nav-link" data-scroll-target="#task-2-load-dataset-and-define-variables">Task 2 — Load Dataset and Define Variables</a>
   <ul class="collapse">
   <li><a href="#objective-1" id="toc-objective-1" class="nav-link" data-scroll-target="#objective-1">Objective</a></li>
-  <li><a href="#instructions-2" id="toc-instructions-2" class="nav-link" data-scroll-target="#instructions-2">Instructions</a></li>
+  <li><a href="#instructions-1" id="toc-instructions-1" class="nav-link" data-scroll-target="#instructions-1">Instructions</a></li>
   <li><a href="#expected-structure" id="toc-expected-structure" class="nav-link" data-scroll-target="#expected-structure">Expected Structure</a></li>
   <li><a href="#questions-1" id="toc-questions-1" class="nav-link" data-scroll-target="#questions-1">Questions</a>
   <ul class="collapse">
@@ -199,12 +192,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-3-1" id="toc-question-3-1" class="nav-link" data-scroll-target="#question-3-1">Question 3</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#task-3-train-linear-regression-model" id="toc-task-3-train-linear-regression-model" class="nav-link" data-scroll-target="#task-3-train-linear-regression-model">Task 3 — Train Linear Regression Model</a>
+  <li><a href="#task-3-train-logistic-regression-model" id="toc-task-3-train-logistic-regression-model" class="nav-link" data-scroll-target="#task-3-train-logistic-regression-model">Task 3 — Train Logistic Regression Model</a>
   <ul class="collapse">
   <li><a href="#objective-2" id="toc-objective-2" class="nav-link" data-scroll-target="#objective-2">Objective</a></li>
-  <li><a href="#instructions-3" id="toc-instructions-3" class="nav-link" data-scroll-target="#instructions-3">Instructions</a></li>
-  <li><a href="#expected-structure-1" id="toc-expected-structure-1" class="nav-link" data-scroll-target="#expected-structure-1">Expected Structure</a></li>
+  <li><a href="#instructions-2" id="toc-instructions-2" class="nav-link" data-scroll-target="#instructions-2">Instructions</a></li>
+  <li><a href="#example-structure" id="toc-example-structure" class="nav-link" data-scroll-target="#example-structure">Example Structure</a></li>
   <li><a href="#generate-predictions" id="toc-generate-predictions" class="nav-link" data-scroll-target="#generate-predictions">Generate Predictions</a></li>
+  <li><a href="#generate-probabilities" id="toc-generate-probabilities" class="nav-link" data-scroll-target="#generate-probabilities">Generate Probabilities</a></li>
   <li><a href="#questions-2" id="toc-questions-2" class="nav-link" data-scroll-target="#questions-2">Questions</a>
   <ul class="collapse">
   <li><a href="#question-1-2" id="toc-question-1-2" class="nav-link" data-scroll-target="#question-1-2">Question 1</a></li>
@@ -212,10 +206,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-3-2" id="toc-question-3-2" class="nav-link" data-scroll-target="#question-3-2">Question 3</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#task-4-evaluate-prediction-error" id="toc-task-4-evaluate-prediction-error" class="nav-link" data-scroll-target="#task-4-evaluate-prediction-error">Task 4 — Evaluate Prediction Error</a>
+  <li><a href="#task-4-confusion-matrix" id="toc-task-4-confusion-matrix" class="nav-link" data-scroll-target="#task-4-confusion-matrix">Task 4 — Confusion Matrix</a>
   <ul class="collapse">
   <li><a href="#objective-3" id="toc-objective-3" class="nav-link" data-scroll-target="#objective-3">Objective</a></li>
-  <li><a href="#instructions-4" id="toc-instructions-4" class="nav-link" data-scroll-target="#instructions-4">Instructions</a></li>
+  <li><a href="#instructions-3" id="toc-instructions-3" class="nav-link" data-scroll-target="#instructions-3">Instructions</a></li>
   <li><a href="#example-structure-1" id="toc-example-structure-1" class="nav-link" data-scroll-target="#example-structure-1">Example Structure</a></li>
   <li><a href="#questions-3" id="toc-questions-3" class="nav-link" data-scroll-target="#questions-3">Questions</a>
   <ul class="collapse">
@@ -224,11 +218,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-3-3" id="toc-question-3-3" class="nav-link" data-scroll-target="#question-3-3">Question 3</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#task-5-decision-tree-model" id="toc-task-5-decision-tree-model" class="nav-link" data-scroll-target="#task-5-decision-tree-model">Task 5 — Decision Tree Model</a>
+  <li><a href="#task-5-accuracy-precision-and-recall" id="toc-task-5-accuracy-precision-and-recall" class="nav-link" data-scroll-target="#task-5-accuracy-precision-and-recall">Task 5 — Accuracy, Precision, and Recall</a>
   <ul class="collapse">
   <li><a href="#objective-4" id="toc-objective-4" class="nav-link" data-scroll-target="#objective-4">Objective</a></li>
-  <li><a href="#instructions-5" id="toc-instructions-5" class="nav-link" data-scroll-target="#instructions-5">Instructions</a></li>
-  <li><a href="#example-structure-2" id="toc-example-structure-2" class="nav-link" data-scroll-target="#example-structure-2">Example Structure</a></li>
+  <li><a href="#instructions-4" id="toc-instructions-4" class="nav-link" data-scroll-target="#instructions-4">Instructions</a></li>
   <li><a href="#questions-4" id="toc-questions-4" class="nav-link" data-scroll-target="#questions-4">Questions</a>
   <ul class="collapse">
   <li><a href="#question-1-4" id="toc-question-1-4" class="nav-link" data-scroll-target="#question-1-4">Question 1</a></li>
@@ -236,10 +229,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-3-4" id="toc-question-3-4" class="nav-link" data-scroll-target="#question-3-4">Question 3</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#task-6-compare-models" id="toc-task-6-compare-models" class="nav-link" data-scroll-target="#task-6-compare-models">Task 6 — Compare Models</a>
+  <li><a href="#task-6-decision-tree-classification" id="toc-task-6-decision-tree-classification" class="nav-link" data-scroll-target="#task-6-decision-tree-classification">Task 6 — Decision Tree Classification</a>
   <ul class="collapse">
   <li><a href="#objective-5" id="toc-objective-5" class="nav-link" data-scroll-target="#objective-5">Objective</a></li>
-  <li><a href="#instructions-6" id="toc-instructions-6" class="nav-link" data-scroll-target="#instructions-6">Instructions</a></li>
+  <li><a href="#instructions-5" id="toc-instructions-5" class="nav-link" data-scroll-target="#instructions-5">Instructions</a></li>
+  <li><a href="#example-structure-2" id="toc-example-structure-2" class="nav-link" data-scroll-target="#example-structure-2">Example Structure</a></li>
   <li><a href="#questions-5" id="toc-questions-5" class="nav-link" data-scroll-target="#questions-5">Questions</a>
   <ul class="collapse">
   <li><a href="#question-1-5" id="toc-question-1-5" class="nav-link" data-scroll-target="#question-1-5">Question 1</a></li>
@@ -260,11 +254,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#passcode-access" id="toc-passcode-access" class="nav-link" data-scroll-target="#passcode-access">Passcode Access</a></li>
   <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">Common Errors</a>
   <ul class="collapse">
-  <li><a href="#problem-1-data-leakage" id="toc-problem-1-data-leakage" class="nav-link" data-scroll-target="#problem-1-data-leakage">Problem 1 — Data Leakage</a></li>
+  <li><a href="#problem-1-treating-probabilities-as-certainty" id="toc-problem-1-treating-probabilities-as-certainty" class="nav-link" data-scroll-target="#problem-1-treating-probabilities-as-certainty">Problem 1 — Treating Probabilities as Certainty</a></li>
   <li><a href="#problem-2-blind-trust-in-accuracy" id="toc-problem-2-blind-trust-in-accuracy" class="nav-link" data-scroll-target="#problem-2-blind-trust-in-accuracy">Problem 2 — Blind Trust in Accuracy</a></li>
-  <li><a href="#problem-3-ignoring-economic-interpretation" id="toc-problem-3-ignoring-economic-interpretation" class="nav-link" data-scroll-target="#problem-3-ignoring-economic-interpretation">Problem 3 — Ignoring Economic Interpretation</a></li>
-  <li><a href="#problem-4-overfitting" id="toc-problem-4-overfitting" class="nav-link" data-scroll-target="#problem-4-overfitting">Problem 4 — Overfitting</a></li>
-  <li><a href="#problem-5-weak-features" id="toc-problem-5-weak-features" class="nav-link" data-scroll-target="#problem-5-weak-features">Problem 5 — Weak Features</a></li>
+  <li><a href="#problem-3-ignoring-ethical-consequences" id="toc-problem-3-ignoring-ethical-consequences" class="nav-link" data-scroll-target="#problem-3-ignoring-ethical-consequences">Problem 3 — Ignoring Ethical Consequences</a></li>
+  <li><a href="#problem-4-overfitting-classification-trees" id="toc-problem-4-overfitting-classification-trees" class="nav-link" data-scroll-target="#problem-4-overfitting-classification-trees">Problem 4 — Overfitting Classification Trees</a></li>
+  <li><a href="#problem-5-confusing-prediction-with-fairness" id="toc-problem-5-confusing-prediction-with-fairness" class="nav-link" data-scroll-target="#problem-5-confusing-prediction-with-fairness">Problem 5 — Confusing Prediction with Fairness</a></li>
   </ul></li>
   <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity">Academic Integrity</a></li>
   </ul>
@@ -275,7 +269,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 8 In-Class Activity</h1>
+<h1 class="title">Week 9 In-Class Activity</h1>
 </div>
 
 
@@ -304,11 +298,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>Week</td>
-<td>Week 8</td>
+<td>Week 9</td>
 </tr>
 <tr class="even">
 <td>Topic</td>
-<td>Introduction to Machine Learning for Economics</td>
+<td>Classification Models and Economic Decision Systems</td>
 </tr>
 <tr class="odd">
 <td>Marks</td>
@@ -333,308 +327,288 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="instructions" class="level1">
 <h1>Instructions</h1>
 <ol type="1">
-<li>Open the Week 8 live notebook.</li>
-<li>Download the Week 8 machine learning dataset.</li>
-<li>Save a copy of the notebook to your Google Drive.</li>
+<li>Open the Week 9 live notebook.</li>
+<li>Save a copy to your Google Drive.</li>
 <li>Complete all required tasks.</li>
 <li>Answer all interpretation questions.</li>
 <li>Submit before the activity closes.</li>
 </ol>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Material</th>
-<th>Link</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Week 8 Live Notebook</td>
-<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week8/ECN4199_Week8_Live_Notebook.ipynb">Open in Google Colab</a></td>
-</tr>
-<tr class="even">
-<td>Week 8 Dataset</td>
-<td><a href="../data/household_income.csv">Download household_income.csv</a></td>
-</tr>
-</tbody>
-</table>
 <hr>
 </section>
 <section id="important-reminder" class="level1">
 <h1>Important Reminder</h1>
 <p>This activity tests:</p>
 <ul>
-<li>machine learning intuition</li>
-<li>supervised learning</li>
-<li>prediction workflows</li>
-<li>training/testing split</li>
-<li>overfitting understanding</li>
-<li>model evaluation</li>
-<li>economic interpretation</li>
+<li>classification intuition</li>
+<li>logistic regression</li>
+<li>probability interpretation</li>
+<li>confusion matrices</li>
+<li>false positives and false negatives</li>
+<li>classification evaluation</li>
+<li>ethical reasoning</li>
 </ul>
-<p>This week is NOT about AI hype.</p>
-<p>This week is about understanding how predictive systems actually work.</p>
+<p>This week is NOT about blindly maximizing accuracy.</p>
+<p>This week is about understanding how classification systems affect real-world decisions.</p>
 <hr>
 </section>
-<section id="task-1-features-and-target-variables" class="level1">
-<h1>Task 1 — Features and Target Variables</h1>
+<section id="task-1-understanding-classification-problems" class="level1">
+<h1>Task 1 — Understanding Classification Problems</h1>
 <section id="objective" class="level2">
 <h2 class="anchored" data-anchor-id="objective">Objective</h2>
-<p>Understand supervised learning structure.</p>
-<hr>
-</section>
-<section id="instructions-1" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-1">Instructions</h2>
-<p>Suppose we want to predict household income using:</p>
-<ul>
-<li>education</li>
-<li>age</li>
-<li>experience</li>
-</ul>
-<hr>
-</section>
-<section id="define" class="level2">
-<h2 class="anchored" data-anchor-id="define">Define:</h2>
-<section id="features" class="level3">
-<h3 class="anchored" data-anchor-id="features">Features</h3>
-</section>
-<section id="target-variable" class="level3">
-<h3 class="anchored" data-anchor-id="target-variable">Target variable</h3>
-<hr>
-</section>
-</section>
-<section id="example-structure" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> data[[<span class="st">"Education"</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Age"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Experience"</span>]]</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> data[<span class="st">"Income"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Distinguish regression and classification problems.</p>
 <hr>
 </section>
 <section id="questions" class="level2">
 <h2 class="anchored" data-anchor-id="questions">Questions</h2>
 <section id="question-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
-<p>What is the difference between features and target variables?</p>
+<p>Which of the following is a classification problem?</p>
+<ol type="A">
+<li></li>
+</ol>
+<pre class="text"><code>Predict inflation rate</code></pre>
+<ol start="2" type="A">
+<li></li>
+</ol>
+<pre class="text"><code>Predict whether a household is poor</code></pre>
 <hr>
 </section>
 <section id="question-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
-<p>Why is feature selection important?</p>
+<p>Why is poverty prediction a classification problem?</p>
 <hr>
 </section>
 <section id="question-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
-<p>Can bad features reduce prediction quality?</p>
-<p>Explain briefly.</p>
+<p>Give one example of a classification problem in economics or public policy.</p>
 <hr>
 </section>
 </section>
 </section>
-<section id="task-2-split-training-and-testing-data" class="level1">
-<h1>Task 2 — Split Training and Testing Data</h1>
+<section id="task-2-load-dataset-and-define-variables" class="level1">
+<h1>Task 2 — Load Dataset and Define Variables</h1>
 <section id="objective-1" class="level2">
 <h2 class="anchored" data-anchor-id="objective-1">Objective</h2>
-<p>Understand why ML models must be evaluated on unseen data.</p>
+<p>Prepare data for classification modeling.</p>
 <hr>
 </section>
-<section id="instructions-2" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-2">Instructions</h2>
-<p>Split the dataset into:</p>
+<section id="instructions-1" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-1">Instructions</h2>
+<p>Load the dataset and define:</p>
 <ul>
-<li>training data</li>
-<li>testing data</li>
+<li>features</li>
+<li>target variable</li>
 </ul>
 <hr>
 </section>
 <section id="expected-structure" class="level2">
 <h2 class="anchored" data-anchor-id="expected-structure">Expected Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    X,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    y,</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    test_size<span class="op">=</span><span class="fl">0.2</span>,</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">42</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"poverty_data.csv"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> data[[<span class="st">"Education"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Income"</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Household_Size"</span>]]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> data[<span class="st">"Poor"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="questions-1" class="level2">
 <h2 class="anchored" data-anchor-id="questions-1">Questions</h2>
 <section id="question-1-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-1-1">Question 1</h3>
-<p>Why should testing data remain separate from training data?</p>
+<p>What is the target variable?</p>
 <hr>
 </section>
 <section id="question-2-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-2-1">Question 2</h3>
-<p>What might happen if we test on training data?</p>
+<p>Why are education and income useful predictors of poverty?</p>
 <hr>
 </section>
 <section id="question-3-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-3-1">Question 3</h3>
-<p>Why is prediction on unseen data important?</p>
+<p>Can poor feature selection reduce classification quality?</p>
+<p>Explain briefly.</p>
 <hr>
 </section>
 </section>
 </section>
-<section id="task-3-train-linear-regression-model" class="level1">
-<h1>Task 3 — Train Linear Regression Model</h1>
+<section id="task-3-train-logistic-regression-model" class="level1">
+<h1>Task 3 — Train Logistic Regression Model</h1>
 <section id="objective-2" class="level2">
 <h2 class="anchored" data-anchor-id="objective-2">Objective</h2>
-<p>Train first ML prediction model.</p>
+<p>Train first classification model.</p>
 <hr>
 </section>
-<section id="instructions-3" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-3">Instructions</h2>
-<p>Train linear regression model.</p>
+<section id="instructions-2" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-2">Instructions</h2>
+<p>Split the data and estimate logistic regression.</p>
 <hr>
 </section>
-<section id="expected-structure-1" class="level2">
-<h2 class="anchored" data-anchor-id="expected-structure-1">Expected Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearRegression()</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>model.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="example-structure" class="level2">
+<h2 class="anchored" data-anchor-id="example-structure">Example Structure</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    X,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    y,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    test_size<span class="op">=</span><span class="fl">0.2</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">42</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LogisticRegression()</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>model.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="generate-predictions" class="level2">
 <h2 class="anchored" data-anchor-id="generate-predictions">Generate Predictions</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>predictions <span class="op">=</span> model.predict(X_test)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>predictions <span class="op">=</span> model.predict(X_test)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="generate-probabilities" class="level2">
+<h2 class="anchored" data-anchor-id="generate-probabilities">Generate Probabilities</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>probabilities <span class="op">=</span> model.predict_proba(X_test)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="questions-2" class="level2">
 <h2 class="anchored" data-anchor-id="questions-2">Questions</h2>
 <section id="question-1-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-1-2">Question 1</h3>
-<p>What is the purpose of model training?</p>
+<p>What is the difference between:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>predict()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>and</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>predict_proba()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>?</p>
 <hr>
 </section>
 <section id="question-2-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2-2">Question 2</h3>
-<p>What does prediction mean in machine learning?</p>
+<p>Why are probabilities often more informative than simple categories?</p>
 <hr>
 </section>
 <section id="question-3-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-3-2">Question 3</h3>
-<p>Does accurate prediction automatically imply causality?</p>
+<p>Does classification produce certainty?</p>
+<p>Explain briefly.</p>
 <hr>
 </section>
 </section>
 </section>
-<section id="task-4-evaluate-prediction-error" class="level1">
-<h1>Task 4 — Evaluate Prediction Error</h1>
+<section id="task-4-confusion-matrix" class="level1">
+<h1>Task 4 — Confusion Matrix</h1>
 <section id="objective-3" class="level2">
 <h2 class="anchored" data-anchor-id="objective-3">Objective</h2>
-<p>Measure model performance.</p>
+<p>Evaluate classification performance.</p>
 <hr>
 </section>
-<section id="instructions-4" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-4">Instructions</h2>
-<p>Calculate Mean Absolute Error (MAE).</p>
+<section id="instructions-3" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-3">Instructions</h2>
+<p>Generate confusion matrix.</p>
 <hr>
 </section>
 <section id="example-structure-1" class="level2">
 <h2 class="anchored" data-anchor-id="example-structure-1">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_absolute_error</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>mean_absolute_error(y_test, predictions)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> confusion_matrix</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>confusion_matrix(y_test, predictions)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="questions-3" class="level2">
 <h2 class="anchored" data-anchor-id="questions-3">Questions</h2>
 <section id="question-1-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-1-3">Question 1</h3>
-<p>What does prediction error measure?</p>
+<p>What is a false positive?</p>
 <hr>
 </section>
 <section id="question-2-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-2-3">Question 2</h3>
-<p>Does lower error usually imply better prediction?</p>
+<p>What is a false negative?</p>
 <hr>
 </section>
 <section id="question-3-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-3-3">Question 3</h3>
-<p>Why is accuracy alone not enough for policy analysis?</p>
+<p>Which error may be more serious in poverty targeting systems?</p>
+<p>Explain briefly.</p>
 <hr>
 </section>
 </section>
 </section>
-<section id="task-5-decision-tree-model" class="level1">
-<h1>Task 5 — Decision Tree Model</h1>
+<section id="task-5-accuracy-precision-and-recall" class="level1">
+<h1>Task 5 — Accuracy, Precision, and Recall</h1>
 <section id="objective-4" class="level2">
 <h2 class="anchored" data-anchor-id="objective-4">Objective</h2>
-<p>Compare different ML models.</p>
+<p>Evaluate model quality critically.</p>
 <hr>
 </section>
-<section id="instructions-5" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-5">Instructions</h2>
-<p>Train decision tree model.</p>
-<hr>
-</section>
-<section id="example-structure-2" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure-2">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.tree <span class="im">import</span> DecisionTreeRegressor</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>tree <span class="op">=</span> DecisionTreeRegressor()</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>tree.fit(X_train, y_train)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>tree_predictions <span class="op">=</span> tree.predict(X_test)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="instructions-4" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-4">Instructions</h2>
+<p>Calculate:</p>
+<ul>
+<li>accuracy</li>
+<li>precision</li>
+<li>recall</li>
+</ul>
 <hr>
 </section>
 <section id="questions-4" class="level2">
 <h2 class="anchored" data-anchor-id="questions-4">Questions</h2>
 <section id="question-1-4" class="level3">
 <h3 class="anchored" data-anchor-id="question-1-4">Question 1</h3>
-<p>Which model appears more flexible?</p>
+<p>Why can accuracy alone be misleading?</p>
 <hr>
 </section>
 <section id="question-2-4" class="level3">
 <h3 class="anchored" data-anchor-id="question-2-4">Question 2</h3>
-<p>Which model may overfit more easily?</p>
+<p>Why might recall matter more than accuracy in welfare targeting?</p>
 <hr>
 </section>
 <section id="question-3-4" class="level3">
 <h3 class="anchored" data-anchor-id="question-3-4">Question 3</h3>
-<p>Why can highly complex models become dangerous?</p>
+<p>Can highly accurate models still be unfair?</p>
+<p>Explain briefly.</p>
 <hr>
 </section>
 </section>
 </section>
-<section id="task-6-compare-models" class="level1">
-<h1>Task 6 — Compare Models</h1>
+<section id="task-6-decision-tree-classification" class="level1">
+<h1>Task 6 — Decision Tree Classification</h1>
 <section id="objective-5" class="level2">
 <h2 class="anchored" data-anchor-id="objective-5">Objective</h2>
-<p>Critically compare prediction systems.</p>
+<p>Compare different classification approaches.</p>
 <hr>
 </section>
-<section id="instructions-6" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-6">Instructions</h2>
-<p>Compare:</p>
-<ul>
-<li>Linear Regression</li>
-<li>Decision Tree</li>
-</ul>
+<section id="instructions-5" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-5">Instructions</h2>
+<p>Train classification tree.</p>
+<hr>
+</section>
+<section id="example-structure-2" class="level2">
+<h2 class="anchored" data-anchor-id="example-structure-2">Example Structure</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.tree <span class="im">import</span> DecisionTreeClassifier</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>tree <span class="op">=</span> DecisionTreeClassifier()</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>tree.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="questions-5" class="level2">
 <h2 class="anchored" data-anchor-id="questions-5">Questions</h2>
 <section id="question-1-5" class="level3">
 <h3 class="anchored" data-anchor-id="question-1-5">Question 1</h3>
-<p>Which model is easier to interpret?</p>
+<p>Which model appears easier to interpret?</p>
 <hr>
 </section>
 <section id="question-2-5" class="level3">
 <h3 class="anchored" data-anchor-id="question-2-5">Question 2</h3>
-<p>Which model may predict better?</p>
+<p>Which model may overfit more easily?</p>
 <hr>
 </section>
 <section id="question-3-5" class="level3">
 <h3 class="anchored" data-anchor-id="question-3-5">Question 3</h3>
-<p>Why might economists still prefer simpler models sometimes?</p>
+<p>Why can complex classification systems become dangerous in policy settings?</p>
 <hr>
 </section>
 </section>
@@ -642,14 +616,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="reflection-question" class="level1">
 <h1>Reflection Question</h1>
 <p>Write a short paragraph answering:</p>
-<pre class="text"><code>Why should economists remain skeptical even when machine learning models achieve high prediction accuracy?</code></pre>
+<pre class="text"><code>Why should economists critically evaluate classification systems even when prediction accuracy appears high?</code></pre>
 <p>Your answer should include:</p>
 <ul>
-<li>overfitting</li>
-<li>interpretability</li>
-<li>causality</li>
+<li>fairness</li>
+<li>uncertainty</li>
+<li>false negatives</li>
+<li>policy consequences</li>
 <li>ethical concerns</li>
-<li>limitations of prediction</li>
 </ul>
 <hr>
 </section>
@@ -657,34 +631,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Mini Quiz</h1>
 <section id="question-1-6" class="level2">
 <h2 class="anchored" data-anchor-id="question-1-6">Question 1</h2>
-<p>What is the primary focus of machine learning?</p>
-<p>A. Causality only<br>
-B. Prediction and pattern recognition<br>
-C. Website design<br>
-D. Manual calculation</p>
+<p>What does classification predict?</p>
+<p>A. Continuous values<br>
+B. Categories<br>
+C. Graph colors<br>
+D. Missing values</p>
 <hr>
 </section>
 <section id="question-2-6" class="level2">
 <h2 class="anchored" data-anchor-id="question-2-6">Question 2</h2>
-<p>Why do we split training and testing data?</p>
-<p>A. To increase internet speed<br>
-B. To avoid data loss<br>
-C. To evaluate prediction on unseen data<br>
-D. To create graphs</p>
+<p>What does logistic regression mainly estimate?</p>
+<p>A. Exact certainty<br>
+B. Probabilities<br>
+C. Website layouts<br>
+D. Histograms</p>
 <hr>
 </section>
 <section id="question-3-6" class="level2">
 <h2 class="anchored" data-anchor-id="question-3-6">Question 3</h2>
-<p>What is overfitting?</p>
-<p>A. Model memorizes training data too closely<br>
-B. Dataset becomes smaller<br>
-C. Predictions disappear<br>
-D. Variables become missing</p>
+<p>What is a false negative?</p>
+<p>A. Predict positive when actually negative<br>
+B. Predict negative when actually positive<br>
+C. Perfect prediction<br>
+D. Prediction error equal to zero</p>
 <hr>
 </section>
 <section id="question-4" class="level2">
 <h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
-<p>Does high prediction accuracy automatically imply good economic theory?</p>
+<p>Can accurate models still produce unfair outcomes?</p>
 <p>A. Yes<br>
 B. No</p>
 <hr>
@@ -697,9 +671,9 @@ B. No</p>
 <li>Save notebook properly.</li>
 <li>Rename notebook using:</li>
 </ol>
-<pre class="text"><code>Week08_IndexNumber_Name.ipynb</code></pre>
+<pre class="text"><code>Week09_IndexNumber_Name.ipynb</code></pre>
 <p>Example:</p>
-<pre class="text"><code>Week08_2024BA12345_Perera.ipynb</code></pre>
+<pre class="text"><code>Week09_2024BA12345_Perera.ipynb</code></pre>
 <ol start="3" type="1">
 <li>Set notebook sharing to:</li>
 </ol>
@@ -719,35 +693,42 @@ B. No</p>
 </section>
 <section id="common-errors" class="level1">
 <h1>Common Errors</h1>
-<section id="problem-1-data-leakage" class="level2">
-<h2 class="anchored" data-anchor-id="problem-1-data-leakage">Problem 1 — Data Leakage</h2>
-<p>Using testing data during training produces misleadingly high performance.</p>
+<section id="problem-1-treating-probabilities-as-certainty" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1-treating-probabilities-as-certainty">Problem 1 — Treating Probabilities as Certainty</h2>
+<p>A probability of:</p>
+<pre class="text"><code>0.51</code></pre>
+<p>does NOT imply certainty.</p>
 <hr>
 </section>
 <section id="problem-2-blind-trust-in-accuracy" class="level2">
 <h2 class="anchored" data-anchor-id="problem-2-blind-trust-in-accuracy">Problem 2 — Blind Trust in Accuracy</h2>
-<p>High prediction accuracy does NOT automatically imply:</p>
+<p>High accuracy may still hide:</p>
 <ul>
-<li>causality</li>
-<li>fairness</li>
-<li>robustness</li>
+<li>unfair predictions</li>
+<li>poor recall</li>
+<li>harmful exclusion</li>
 </ul>
 <hr>
 </section>
-<section id="problem-3-ignoring-economic-interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="problem-3-ignoring-economic-interpretation">Problem 3 — Ignoring Economic Interpretation</h2>
-<p>Machine learning identifies patterns.</p>
-<p>It does NOT automatically explain economic mechanisms.</p>
+<section id="problem-3-ignoring-ethical-consequences" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3-ignoring-ethical-consequences">Problem 3 — Ignoring Ethical Consequences</h2>
+<p>Classification systems affect:</p>
+<ul>
+<li>welfare access</li>
+<li>loans</li>
+<li>employment</li>
+<li>policy targeting</li>
+</ul>
 <hr>
 </section>
-<section id="problem-4-overfitting" class="level2">
-<h2 class="anchored" data-anchor-id="problem-4-overfitting">Problem 4 — Overfitting</h2>
-<p>Very complex models may perform well in training but fail in real-world prediction.</p>
+<section id="problem-4-overfitting-classification-trees" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4-overfitting-classification-trees">Problem 4 — Overfitting Classification Trees</h2>
+<p>Very complex trees may memorize training data instead of learning general patterns.</p>
 <hr>
 </section>
-<section id="problem-5-weak-features" class="level2">
-<h2 class="anchored" data-anchor-id="problem-5-weak-features">Problem 5 — Weak Features</h2>
-<p>Poor input variables produce poor predictions.</p>
+<section id="problem-5-confusing-prediction-with-fairness" class="level2">
+<h2 class="anchored" data-anchor-id="problem-5-confusing-prediction-with-fairness">Problem 5 — Confusing Prediction with Fairness</h2>
+<p>Accurate predictions do NOT automatically imply fair decisions.</p>
 <hr>
 </section>
 </section>

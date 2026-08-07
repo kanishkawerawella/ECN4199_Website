@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 8 In-Class Activity – ECN 4199 - Industrial Data Analytics</title>
+<title>Week 11 In-Class Activity – ECN 4199 - Industrial Data Analytics</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -170,16 +170,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#activity-information" id="toc-activity-information" class="nav-link active" data-scroll-target="#activity-information">Activity Information</a></li>
   <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
   <li><a href="#important-reminder" id="toc-important-reminder" class="nav-link" data-scroll-target="#important-reminder">Important Reminder</a></li>
-  <li><a href="#task-1-features-and-target-variables" id="toc-task-1-features-and-target-variables" class="nav-link" data-scroll-target="#task-1-features-and-target-variables">Task 1 — Features and Target Variables</a>
+  <li><a href="#task-1-understanding-time-series-data" id="toc-task-1-understanding-time-series-data" class="nav-link" data-scroll-target="#task-1-understanding-time-series-data">Task 1 — Understanding Time Series Data</a>
   <ul class="collapse">
   <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective">Objective</a></li>
-  <li><a href="#instructions-1" id="toc-instructions-1" class="nav-link" data-scroll-target="#instructions-1">Instructions</a></li>
-  <li><a href="#define" id="toc-define" class="nav-link" data-scroll-target="#define">Define:</a>
-  <ul class="collapse">
-  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
-  <li><a href="#target-variable" id="toc-target-variable" class="nav-link" data-scroll-target="#target-variable">Target variable</a></li>
-  </ul></li>
-  <li><a href="#example-structure" id="toc-example-structure" class="nav-link" data-scroll-target="#example-structure">Example Structure</a></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
   <ul class="collapse">
   <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
@@ -187,10 +180,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#task-2-split-training-and-testing-data" id="toc-task-2-split-training-and-testing-data" class="nav-link" data-scroll-target="#task-2-split-training-and-testing-data">Task 2 — Split Training and Testing Data</a>
+  <li><a href="#task-2-load-and-visualize-time-series-data" id="toc-task-2-load-and-visualize-time-series-data" class="nav-link" data-scroll-target="#task-2-load-and-visualize-time-series-data">Task 2 — Load and Visualize Time Series Data</a>
   <ul class="collapse">
   <li><a href="#objective-1" id="toc-objective-1" class="nav-link" data-scroll-target="#objective-1">Objective</a></li>
-  <li><a href="#instructions-2" id="toc-instructions-2" class="nav-link" data-scroll-target="#instructions-2">Instructions</a></li>
+  <li><a href="#instructions-1" id="toc-instructions-1" class="nav-link" data-scroll-target="#instructions-1">Instructions</a></li>
   <li><a href="#expected-structure" id="toc-expected-structure" class="nav-link" data-scroll-target="#expected-structure">Expected Structure</a></li>
   <li><a href="#questions-1" id="toc-questions-1" class="nav-link" data-scroll-target="#questions-1">Questions</a>
   <ul class="collapse">
@@ -199,12 +192,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-3-1" id="toc-question-3-1" class="nav-link" data-scroll-target="#question-3-1">Question 3</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#task-3-train-linear-regression-model" id="toc-task-3-train-linear-regression-model" class="nav-link" data-scroll-target="#task-3-train-linear-regression-model">Task 3 — Train Linear Regression Model</a>
+  <li><a href="#task-3-create-moving-average" id="toc-task-3-create-moving-average" class="nav-link" data-scroll-target="#task-3-create-moving-average">Task 3 — Create Moving Average</a>
   <ul class="collapse">
   <li><a href="#objective-2" id="toc-objective-2" class="nav-link" data-scroll-target="#objective-2">Objective</a></li>
-  <li><a href="#instructions-3" id="toc-instructions-3" class="nav-link" data-scroll-target="#instructions-3">Instructions</a></li>
-  <li><a href="#expected-structure-1" id="toc-expected-structure-1" class="nav-link" data-scroll-target="#expected-structure-1">Expected Structure</a></li>
-  <li><a href="#generate-predictions" id="toc-generate-predictions" class="nav-link" data-scroll-target="#generate-predictions">Generate Predictions</a></li>
+  <li><a href="#instructions-2" id="toc-instructions-2" class="nav-link" data-scroll-target="#instructions-2">Instructions</a></li>
+  <li><a href="#example-structure" id="toc-example-structure" class="nav-link" data-scroll-target="#example-structure">Example Structure</a></li>
+  <li><a href="#visualize-actual-and-moving-average" id="toc-visualize-actual-and-moving-average" class="nav-link" data-scroll-target="#visualize-actual-and-moving-average">Visualize Actual and Moving Average</a></li>
   <li><a href="#questions-2" id="toc-questions-2" class="nav-link" data-scroll-target="#questions-2">Questions</a>
   <ul class="collapse">
   <li><a href="#question-1-2" id="toc-question-1-2" class="nav-link" data-scroll-target="#question-1-2">Question 1</a></li>
@@ -212,10 +205,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-3-2" id="toc-question-3-2" class="nav-link" data-scroll-target="#question-3-2">Question 3</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#task-4-evaluate-prediction-error" id="toc-task-4-evaluate-prediction-error" class="nav-link" data-scroll-target="#task-4-evaluate-prediction-error">Task 4 — Evaluate Prediction Error</a>
+  <li><a href="#task-4-traintest-split-for-forecasting" id="toc-task-4-traintest-split-for-forecasting" class="nav-link" data-scroll-target="#task-4-traintest-split-for-forecasting">Task 4 — Train/Test Split for Forecasting</a>
   <ul class="collapse">
   <li><a href="#objective-3" id="toc-objective-3" class="nav-link" data-scroll-target="#objective-3">Objective</a></li>
-  <li><a href="#instructions-4" id="toc-instructions-4" class="nav-link" data-scroll-target="#instructions-4">Instructions</a></li>
+  <li><a href="#instructions-3" id="toc-instructions-3" class="nav-link" data-scroll-target="#instructions-3">Instructions</a></li>
   <li><a href="#example-structure-1" id="toc-example-structure-1" class="nav-link" data-scroll-target="#example-structure-1">Example Structure</a></li>
   <li><a href="#questions-3" id="toc-questions-3" class="nav-link" data-scroll-target="#questions-3">Questions</a>
   <ul class="collapse">
@@ -224,11 +217,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-3-3" id="toc-question-3-3" class="nav-link" data-scroll-target="#question-3-3">Question 3</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#task-5-decision-tree-model" id="toc-task-5-decision-tree-model" class="nav-link" data-scroll-target="#task-5-decision-tree-model">Task 5 — Decision Tree Model</a>
+  <li><a href="#task-5-estimate-forecasting-model" id="toc-task-5-estimate-forecasting-model" class="nav-link" data-scroll-target="#task-5-estimate-forecasting-model">Task 5 — Estimate Forecasting Model</a>
   <ul class="collapse">
   <li><a href="#objective-4" id="toc-objective-4" class="nav-link" data-scroll-target="#objective-4">Objective</a></li>
-  <li><a href="#instructions-5" id="toc-instructions-5" class="nav-link" data-scroll-target="#instructions-5">Instructions</a></li>
+  <li><a href="#instructions-4" id="toc-instructions-4" class="nav-link" data-scroll-target="#instructions-4">Instructions</a></li>
   <li><a href="#example-structure-2" id="toc-example-structure-2" class="nav-link" data-scroll-target="#example-structure-2">Example Structure</a></li>
+  <li><a href="#generate-forecast" id="toc-generate-forecast" class="nav-link" data-scroll-target="#generate-forecast">Generate Forecast</a></li>
   <li><a href="#questions-4" id="toc-questions-4" class="nav-link" data-scroll-target="#questions-4">Questions</a>
   <ul class="collapse">
   <li><a href="#question-1-4" id="toc-question-1-4" class="nav-link" data-scroll-target="#question-1-4">Question 1</a></li>
@@ -236,10 +230,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-3-4" id="toc-question-3-4" class="nav-link" data-scroll-target="#question-3-4">Question 3</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#task-6-compare-models" id="toc-task-6-compare-models" class="nav-link" data-scroll-target="#task-6-compare-models">Task 6 — Compare Models</a>
+  <li><a href="#task-6-evaluate-forecast-accuracy" id="toc-task-6-evaluate-forecast-accuracy" class="nav-link" data-scroll-target="#task-6-evaluate-forecast-accuracy">Task 6 — Evaluate Forecast Accuracy</a>
   <ul class="collapse">
   <li><a href="#objective-5" id="toc-objective-5" class="nav-link" data-scroll-target="#objective-5">Objective</a></li>
-  <li><a href="#instructions-6" id="toc-instructions-6" class="nav-link" data-scroll-target="#instructions-6">Instructions</a></li>
+  <li><a href="#instructions-5" id="toc-instructions-5" class="nav-link" data-scroll-target="#instructions-5">Instructions</a></li>
+  <li><a href="#example-structure-3" id="toc-example-structure-3" class="nav-link" data-scroll-target="#example-structure-3">Example Structure</a></li>
   <li><a href="#questions-5" id="toc-questions-5" class="nav-link" data-scroll-target="#questions-5">Questions</a>
   <ul class="collapse">
   <li><a href="#question-1-5" id="toc-question-1-5" class="nav-link" data-scroll-target="#question-1-5">Question 1</a></li>
@@ -247,12 +242,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-3-5" id="toc-question-3-5" class="nav-link" data-scroll-target="#question-3-5">Question 3</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#reflection-question" id="toc-reflection-question" class="nav-link" data-scroll-target="#reflection-question">Reflection Question</a></li>
-  <li><a href="#mini-quiz" id="toc-mini-quiz" class="nav-link" data-scroll-target="#mini-quiz">Mini Quiz</a>
+  <li><a href="#task-7-visualize-actual-vs-forecast" id="toc-task-7-visualize-actual-vs-forecast" class="nav-link" data-scroll-target="#task-7-visualize-actual-vs-forecast">Task 7 — Visualize Actual vs Forecast</a>
+  <ul class="collapse">
+  <li><a href="#objective-6" id="toc-objective-6" class="nav-link" data-scroll-target="#objective-6">Objective</a></li>
+  <li><a href="#instructions-6" id="toc-instructions-6" class="nav-link" data-scroll-target="#instructions-6">Instructions</a></li>
+  <li><a href="#example-structure-4" id="toc-example-structure-4" class="nav-link" data-scroll-target="#example-structure-4">Example Structure</a></li>
+  <li><a href="#questions-6" id="toc-questions-6" class="nav-link" data-scroll-target="#questions-6">Questions</a>
   <ul class="collapse">
   <li><a href="#question-1-6" id="toc-question-1-6" class="nav-link" data-scroll-target="#question-1-6">Question 1</a></li>
   <li><a href="#question-2-6" id="toc-question-2-6" class="nav-link" data-scroll-target="#question-2-6">Question 2</a></li>
   <li><a href="#question-3-6" id="toc-question-3-6" class="nav-link" data-scroll-target="#question-3-6">Question 3</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#reflection-question" id="toc-reflection-question" class="nav-link" data-scroll-target="#reflection-question">Reflection Question</a></li>
+  <li><a href="#mini-quiz" id="toc-mini-quiz" class="nav-link" data-scroll-target="#mini-quiz">Mini Quiz</a>
+  <ul class="collapse">
+  <li><a href="#question-1-7" id="toc-question-1-7" class="nav-link" data-scroll-target="#question-1-7">Question 1</a></li>
+  <li><a href="#question-2-7" id="toc-question-2-7" class="nav-link" data-scroll-target="#question-2-7">Question 2</a></li>
+  <li><a href="#question-3-7" id="toc-question-3-7" class="nav-link" data-scroll-target="#question-3-7">Question 3</a></li>
   <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
   </ul></li>
   <li><a href="#submission-instructions" id="toc-submission-instructions" class="nav-link" data-scroll-target="#submission-instructions">Submission Instructions</a></li>
@@ -260,11 +267,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#passcode-access" id="toc-passcode-access" class="nav-link" data-scroll-target="#passcode-access">Passcode Access</a></li>
   <li><a href="#common-errors" id="toc-common-errors" class="nav-link" data-scroll-target="#common-errors">Common Errors</a>
   <ul class="collapse">
-  <li><a href="#problem-1-data-leakage" id="toc-problem-1-data-leakage" class="nav-link" data-scroll-target="#problem-1-data-leakage">Problem 1 — Data Leakage</a></li>
-  <li><a href="#problem-2-blind-trust-in-accuracy" id="toc-problem-2-blind-trust-in-accuracy" class="nav-link" data-scroll-target="#problem-2-blind-trust-in-accuracy">Problem 2 — Blind Trust in Accuracy</a></li>
-  <li><a href="#problem-3-ignoring-economic-interpretation" id="toc-problem-3-ignoring-economic-interpretation" class="nav-link" data-scroll-target="#problem-3-ignoring-economic-interpretation">Problem 3 — Ignoring Economic Interpretation</a></li>
-  <li><a href="#problem-4-overfitting" id="toc-problem-4-overfitting" class="nav-link" data-scroll-target="#problem-4-overfitting">Problem 4 — Overfitting</a></li>
-  <li><a href="#problem-5-weak-features" id="toc-problem-5-weak-features" class="nav-link" data-scroll-target="#problem-5-weak-features">Problem 5 — Weak Features</a></li>
+  <li><a href="#problem-1-random-train-test-splits" id="toc-problem-1-random-train-test-splits" class="nav-link" data-scroll-target="#problem-1-random-train-test-splits">Problem 1 — Random Train-Test Splits</a></li>
+  <li><a href="#problem-2-blind-trust-in-forecasts" id="toc-problem-2-blind-trust-in-forecasts" class="nav-link" data-scroll-target="#problem-2-blind-trust-in-forecasts">Problem 2 — Blind Trust in Forecasts</a></li>
+  <li><a href="#problem-3-ignoring-structural-breaks" id="toc-problem-3-ignoring-structural-breaks" class="nav-link" data-scroll-target="#problem-3-ignoring-structural-breaks">Problem 3 — Ignoring Structural Breaks</a></li>
+  <li><a href="#problem-4-overcomplicated-models" id="toc-problem-4-overcomplicated-models" class="nav-link" data-scroll-target="#problem-4-overcomplicated-models">Problem 4 — Overcomplicated Models</a></li>
+  <li><a href="#problem-5-misinterpreting-low-forecast-error" id="toc-problem-5-misinterpreting-low-forecast-error" class="nav-link" data-scroll-target="#problem-5-misinterpreting-low-forecast-error">Problem 5 — Misinterpreting Low Forecast Error</a></li>
   </ul></li>
   <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity">Academic Integrity</a></li>
   </ul>
@@ -275,7 +282,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 8 In-Class Activity</h1>
+<h1 class="title">Week 11 In-Class Activity</h1>
 </div>
 
 
@@ -304,11 +311,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>Week</td>
-<td>Week 8</td>
+<td>Week 11</td>
 </tr>
 <tr class="even">
 <td>Topic</td>
-<td>Introduction to Machine Learning for Economics</td>
+<td>Forecasting and Time Series Analytics</td>
 </tr>
 <tr class="odd">
 <td>Marks</td>
@@ -333,308 +340,334 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="instructions" class="level1">
 <h1>Instructions</h1>
 <ol type="1">
-<li>Open the Week 8 live notebook.</li>
-<li>Download the Week 8 machine learning dataset.</li>
-<li>Save a copy of the notebook to your Google Drive.</li>
+<li>Open the Week 11 live notebook.</li>
+<li>Save a copy to your Google Drive.</li>
 <li>Complete all required tasks.</li>
 <li>Answer all interpretation questions.</li>
 <li>Submit before the activity closes.</li>
 </ol>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Material</th>
-<th>Link</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Week 8 Live Notebook</td>
-<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week8/ECN4199_Week8_Live_Notebook.ipynb">Open in Google Colab</a></td>
-</tr>
-<tr class="even">
-<td>Week 8 Dataset</td>
-<td><a href="../data/household_income.csv">Download household_income.csv</a></td>
-</tr>
-</tbody>
-</table>
 <hr>
 </section>
 <section id="important-reminder" class="level1">
 <h1>Important Reminder</h1>
 <p>This activity tests:</p>
 <ul>
-<li>machine learning intuition</li>
-<li>supervised learning</li>
-<li>prediction workflows</li>
-<li>training/testing split</li>
-<li>overfitting understanding</li>
-<li>model evaluation</li>
-<li>economic interpretation</li>
+<li>time series thinking</li>
+<li>forecasting intuition</li>
+<li>moving averages</li>
+<li>train/test forecasting logic</li>
+<li>forecast evaluation</li>
+<li>ARIMA intuition</li>
+<li>interpretation of uncertainty</li>
 </ul>
-<p>This week is NOT about AI hype.</p>
-<p>This week is about understanding how predictive systems actually work.</p>
+<p>This week is NOT about predicting the future perfectly.</p>
+<p>This week is about disciplined forecasting under uncertainty.</p>
 <hr>
 </section>
-<section id="task-1-features-and-target-variables" class="level1">
-<h1>Task 1 — Features and Target Variables</h1>
+<section id="task-1-understanding-time-series-data" class="level1">
+<h1>Task 1 — Understanding Time Series Data</h1>
 <section id="objective" class="level2">
 <h2 class="anchored" data-anchor-id="objective">Objective</h2>
-<p>Understand supervised learning structure.</p>
-<hr>
-</section>
-<section id="instructions-1" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-1">Instructions</h2>
-<p>Suppose we want to predict household income using:</p>
-<ul>
-<li>education</li>
-<li>age</li>
-<li>experience</li>
-</ul>
-<hr>
-</section>
-<section id="define" class="level2">
-<h2 class="anchored" data-anchor-id="define">Define:</h2>
-<section id="features" class="level3">
-<h3 class="anchored" data-anchor-id="features">Features</h3>
-</section>
-<section id="target-variable" class="level3">
-<h3 class="anchored" data-anchor-id="target-variable">Target variable</h3>
-<hr>
-</section>
-</section>
-<section id="example-structure" class="level2">
-<h2 class="anchored" data-anchor-id="example-structure">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> data[[<span class="st">"Education"</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Age"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Experience"</span>]]</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> data[<span class="st">"Income"</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Understand time series structure.</p>
 <hr>
 </section>
 <section id="questions" class="level2">
 <h2 class="anchored" data-anchor-id="questions">Questions</h2>
 <section id="question-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
-<p>What is the difference between features and target variables?</p>
+<p>What is the difference between:</p>
+<ul>
+<li>cross-sectional data</li>
+<li>time series data</li>
+</ul>
+<p>?</p>
 <hr>
 </section>
 <section id="question-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
-<p>Why is feature selection important?</p>
+<p>Give one example of time series data in economics.</p>
 <hr>
 </section>
 <section id="question-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
-<p>Can bad features reduce prediction quality?</p>
-<p>Explain briefly.</p>
+<p>Why does time ordering matter in forecasting?</p>
 <hr>
 </section>
 </section>
 </section>
-<section id="task-2-split-training-and-testing-data" class="level1">
-<h1>Task 2 — Split Training and Testing Data</h1>
+<section id="task-2-load-and-visualize-time-series-data" class="level1">
+<h1>Task 2 — Load and Visualize Time Series Data</h1>
 <section id="objective-1" class="level2">
 <h2 class="anchored" data-anchor-id="objective-1">Objective</h2>
-<p>Understand why ML models must be evaluated on unseen data.</p>
+<p>Visualize inflation over time.</p>
 <hr>
 </section>
-<section id="instructions-2" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-2">Instructions</h2>
-<p>Split the dataset into:</p>
-<ul>
-<li>training data</li>
-<li>testing data</li>
-</ul>
+<section id="instructions-1" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-1">Instructions</h2>
+<p>Load the dataset and create line graph.</p>
 <hr>
 </section>
 <section id="expected-structure" class="level2">
 <h2 class="anchored" data-anchor-id="expected-structure">Expected Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    X,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    y,</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    test_size<span class="op">=</span><span class="fl">0.2</span>,</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">42</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"inflation_timeseries.csv"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">5</span>))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Date"</span>],</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>         data[<span class="st">"Inflation"</span>])</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Inflation Over Time"</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Date"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Inflation"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="questions-1" class="level2">
 <h2 class="anchored" data-anchor-id="questions-1">Questions</h2>
 <section id="question-1-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-1-1">Question 1</h3>
-<p>Why should testing data remain separate from training data?</p>
+<p>Does the series show an upward or downward trend?</p>
 <hr>
 </section>
 <section id="question-2-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-2-1">Question 2</h3>
-<p>What might happen if we test on training data?</p>
+<p>Are there crisis periods or sharp spikes?</p>
 <hr>
 </section>
 <section id="question-3-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-3-1">Question 3</h3>
-<p>Why is prediction on unseen data important?</p>
+<p>Why is visualization important before forecasting?</p>
 <hr>
 </section>
 </section>
 </section>
-<section id="task-3-train-linear-regression-model" class="level1">
-<h1>Task 3 — Train Linear Regression Model</h1>
+<section id="task-3-create-moving-average" class="level1">
+<h1>Task 3 — Create Moving Average</h1>
 <section id="objective-2" class="level2">
 <h2 class="anchored" data-anchor-id="objective-2">Objective</h2>
-<p>Train first ML prediction model.</p>
+<p>Smooth short-run fluctuations.</p>
 <hr>
 </section>
-<section id="instructions-3" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-3">Instructions</h2>
-<p>Train linear regression model.</p>
+<section id="instructions-2" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-2">Instructions</h2>
+<p>Create a 3-period moving average.</p>
 <hr>
 </section>
-<section id="expected-structure-1" class="level2">
-<h2 class="anchored" data-anchor-id="expected-structure-1">Expected Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LinearRegression()</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>model.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="example-structure" class="level2">
+<h2 class="anchored" data-anchor-id="example-structure">Example Structure</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"MA_3"</span>] <span class="op">=</span> data[<span class="st">"Inflation"</span>].rolling(window<span class="op">=</span><span class="dv">3</span>).mean()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
-<section id="generate-predictions" class="level2">
-<h2 class="anchored" data-anchor-id="generate-predictions">Generate Predictions</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>predictions <span class="op">=</span> model.predict(X_test)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="visualize-actual-and-moving-average" class="level2">
+<h2 class="anchored" data-anchor-id="visualize-actual-and-moving-average">Visualize Actual and Moving Average</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"Inflation"</span>],</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">"Actual"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.plot(data[<span class="st">"MA_3"</span>],</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">"Moving Average"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="questions-2" class="level2">
 <h2 class="anchored" data-anchor-id="questions-2">Questions</h2>
 <section id="question-1-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-1-2">Question 1</h3>
-<p>What is the purpose of model training?</p>
+<p>What does the moving average do?</p>
 <hr>
 </section>
 <section id="question-2-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2-2">Question 2</h3>
-<p>What does prediction mean in machine learning?</p>
+<p>Does smoothing help identify long-run trends?</p>
 <hr>
 </section>
 <section id="question-3-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-3-2">Question 3</h3>
-<p>Does accurate prediction automatically imply causality?</p>
+<p>Can smoothing hide important crisis signals?</p>
+<p>Explain briefly.</p>
 <hr>
 </section>
 </section>
 </section>
-<section id="task-4-evaluate-prediction-error" class="level1">
-<h1>Task 4 — Evaluate Prediction Error</h1>
+<section id="task-4-traintest-split-for-forecasting" class="level1">
+<h1>Task 4 — Train/Test Split for Forecasting</h1>
 <section id="objective-3" class="level2">
 <h2 class="anchored" data-anchor-id="objective-3">Objective</h2>
-<p>Measure model performance.</p>
+<p>Understand proper forecasting evaluation.</p>
 <hr>
 </section>
-<section id="instructions-4" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-4">Instructions</h2>
-<p>Calculate Mean Absolute Error (MAE).</p>
+<section id="instructions-3" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-3">Instructions</h2>
+<p>Split dataset into:</p>
+<ul>
+<li>training data</li>
+<li>testing data</li>
+</ul>
 <hr>
 </section>
 <section id="example-structure-1" class="level2">
 <h2 class="anchored" data-anchor-id="example-structure-1">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_absolute_error</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>mean_absolute_error(y_test, predictions)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>train <span class="op">=</span> data.iloc[:<span class="op">-</span><span class="dv">12</span>]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>test <span class="op">=</span> data.iloc[<span class="op">-</span><span class="dv">12</span>:]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="questions-3" class="level2">
 <h2 class="anchored" data-anchor-id="questions-3">Questions</h2>
 <section id="question-1-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-1-3">Question 1</h3>
-<p>What does prediction error measure?</p>
+<p>Why should forecasting models train on earlier periods only?</p>
 <hr>
 </section>
 <section id="question-2-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-2-3">Question 2</h3>
-<p>Does lower error usually imply better prediction?</p>
+<p>Why is random train-test splitting dangerous for time series forecasting?</p>
 <hr>
 </section>
 <section id="question-3-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-3-3">Question 3</h3>
-<p>Why is accuracy alone not enough for policy analysis?</p>
+<p>Can future information influence past training?</p>
 <hr>
 </section>
 </section>
 </section>
-<section id="task-5-decision-tree-model" class="level1">
-<h1>Task 5 — Decision Tree Model</h1>
+<section id="task-5-estimate-forecasting-model" class="level1">
+<h1>Task 5 — Estimate Forecasting Model</h1>
 <section id="objective-4" class="level2">
 <h2 class="anchored" data-anchor-id="objective-4">Objective</h2>
-<p>Compare different ML models.</p>
+<p>Estimate simple ARIMA model.</p>
 <hr>
 </section>
-<section id="instructions-5" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-5">Instructions</h2>
-<p>Train decision tree model.</p>
+<section id="instructions-4" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-4">Instructions</h2>
+<p>Estimate ARIMA forecasting model.</p>
 <hr>
 </section>
 <section id="example-structure-2" class="level2">
 <h2 class="anchored" data-anchor-id="example-structure-2">Example Structure</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.tree <span class="im">import</span> DecisionTreeRegressor</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>tree <span class="op">=</span> DecisionTreeRegressor()</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>tree.fit(X_train, y_train)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>tree_predictions <span class="op">=</span> tree.predict(X_test)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.tsa.arima.model <span class="im">import</span> ARIMA</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> ARIMA(train[<span class="st">"Inflation"</span>],</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>              order<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>model_fit <span class="op">=</span> model.fit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="generate-forecast" class="level2">
+<h2 class="anchored" data-anchor-id="generate-forecast">Generate Forecast</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>forecast <span class="op">=</span> model_fit.forecast(steps<span class="op">=</span><span class="dv">12</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="questions-4" class="level2">
 <h2 class="anchored" data-anchor-id="questions-4">Questions</h2>
 <section id="question-1-4" class="level3">
 <h3 class="anchored" data-anchor-id="question-1-4">Question 1</h3>
-<p>Which model appears more flexible?</p>
+<p>What is forecasting trying to estimate?</p>
 <hr>
 </section>
 <section id="question-2-4" class="level3">
 <h3 class="anchored" data-anchor-id="question-2-4">Question 2</h3>
-<p>Which model may overfit more easily?</p>
+<p>Does forecasting produce certainty?</p>
 <hr>
 </section>
 <section id="question-3-4" class="level3">
 <h3 class="anchored" data-anchor-id="question-3-4">Question 3</h3>
-<p>Why can highly complex models become dangerous?</p>
+<p>Why might forecasts fail during crises?</p>
 <hr>
 </section>
 </section>
 </section>
-<section id="task-6-compare-models" class="level1">
-<h1>Task 6 — Compare Models</h1>
+<section id="task-6-evaluate-forecast-accuracy" class="level1">
+<h1>Task 6 — Evaluate Forecast Accuracy</h1>
 <section id="objective-5" class="level2">
 <h2 class="anchored" data-anchor-id="objective-5">Objective</h2>
-<p>Critically compare prediction systems.</p>
+<p>Measure forecast error.</p>
 <hr>
 </section>
-<section id="instructions-6" class="level2">
-<h2 class="anchored" data-anchor-id="instructions-6">Instructions</h2>
-<p>Compare:</p>
-<ul>
-<li>Linear Regression</li>
-<li>Decision Tree</li>
-</ul>
+<section id="instructions-5" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-5">Instructions</h2>
+<p>Calculate Mean Absolute Error (MAE).</p>
+<hr>
+</section>
+<section id="example-structure-3" class="level2">
+<h2 class="anchored" data-anchor-id="example-structure-3">Example Structure</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_absolute_error</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>mean_absolute_error(test[<span class="st">"Inflation"</span>],</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                    forecast)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <hr>
 </section>
 <section id="questions-5" class="level2">
 <h2 class="anchored" data-anchor-id="questions-5">Questions</h2>
 <section id="question-1-5" class="level3">
 <h3 class="anchored" data-anchor-id="question-1-5">Question 1</h3>
-<p>Which model is easier to interpret?</p>
+<p>What does forecast error measure?</p>
 <hr>
 </section>
 <section id="question-2-5" class="level3">
 <h3 class="anchored" data-anchor-id="question-2-5">Question 2</h3>
-<p>Which model may predict better?</p>
+<p>Does low error guarantee future forecasting success?</p>
 <hr>
 </section>
 <section id="question-3-5" class="level3">
 <h3 class="anchored" data-anchor-id="question-3-5">Question 3</h3>
-<p>Why might economists still prefer simpler models sometimes?</p>
+<p>Why should policymakers remain cautious even with historically accurate forecasts?</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="task-7-visualize-actual-vs-forecast" class="level1">
+<h1>Task 7 — Visualize Actual vs Forecast</h1>
+<section id="objective-6" class="level2">
+<h2 class="anchored" data-anchor-id="objective-6">Objective</h2>
+<p>Compare predictions with reality.</p>
+<hr>
+</section>
+<section id="instructions-6" class="level2">
+<h2 class="anchored" data-anchor-id="instructions-6">Instructions</h2>
+<p>Create graph comparing:</p>
+<ul>
+<li>actual inflation</li>
+<li>forecast inflation</li>
+</ul>
+<hr>
+</section>
+<section id="example-structure-4" class="level2">
+<h2 class="anchored" data-anchor-id="example-structure-4">Example Structure</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">5</span>))</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.plot(test[<span class="st">"Inflation"</span>].values,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">"Actual"</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>plt.plot(forecast.values,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>         label<span class="op">=</span><span class="st">"Forecast"</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="questions-6" class="level2">
+<h2 class="anchored" data-anchor-id="questions-6">Questions</h2>
+<section id="question-1-6" class="level3">
+<h3 class="anchored" data-anchor-id="question-1-6">Question 1</h3>
+<p>Did the forecast capture the overall trend?</p>
+<hr>
+</section>
+<section id="question-2-6" class="level3">
+<h3 class="anchored" data-anchor-id="question-2-6">Question 2</h3>
+<p>Did the forecast miss shocks or turning points?</p>
+<hr>
+</section>
+<section id="question-3-6" class="level3">
+<h3 class="anchored" data-anchor-id="question-3-6">Question 3</h3>
+<p>Why is perfect forecasting impossible?</p>
 <hr>
 </section>
 </section>
@@ -642,49 +675,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="reflection-question" class="level1">
 <h1>Reflection Question</h1>
 <p>Write a short paragraph answering:</p>
-<pre class="text"><code>Why should economists remain skeptical even when machine learning models achieve high prediction accuracy?</code></pre>
+<pre class="text"><code>Why should economists remain cautious even when forecasting models appear highly accurate historically?</code></pre>
 <p>Your answer should include:</p>
 <ul>
-<li>overfitting</li>
-<li>interpretability</li>
-<li>causality</li>
-<li>ethical concerns</li>
-<li>limitations of prediction</li>
+<li>uncertainty</li>
+<li>structural breaks</li>
+<li>crises</li>
+<li>limitations of historical data</li>
+<li>false confidence</li>
 </ul>
 <hr>
 </section>
 <section id="mini-quiz" class="level1">
 <h1>Mini Quiz</h1>
-<section id="question-1-6" class="level2">
-<h2 class="anchored" data-anchor-id="question-1-6">Question 1</h2>
-<p>What is the primary focus of machine learning?</p>
-<p>A. Causality only<br>
-B. Prediction and pattern recognition<br>
-C. Website design<br>
-D. Manual calculation</p>
+<section id="question-1-7" class="level2">
+<h2 class="anchored" data-anchor-id="question-1-7">Question 1</h2>
+<p>What is forecasting?</p>
+<p>A. Discovering objective truth<br>
+B. Estimating future values<br>
+C. Deleting time series<br>
+D. Installing models</p>
 <hr>
 </section>
-<section id="question-2-6" class="level2">
-<h2 class="anchored" data-anchor-id="question-2-6">Question 2</h2>
-<p>Why do we split training and testing data?</p>
-<p>A. To increase internet speed<br>
-B. To avoid data loss<br>
-C. To evaluate prediction on unseen data<br>
-D. To create graphs</p>
+<section id="question-2-7" class="level2">
+<h2 class="anchored" data-anchor-id="question-2-7">Question 2</h2>
+<p>What does a moving average mainly do?</p>
+<p>A. Increases volatility<br>
+B. Smooths fluctuations<br>
+C. Deletes variables<br>
+D. Creates clusters</p>
 <hr>
 </section>
-<section id="question-3-6" class="level2">
-<h2 class="anchored" data-anchor-id="question-3-6">Question 3</h2>
-<p>What is overfitting?</p>
-<p>A. Model memorizes training data too closely<br>
-B. Dataset becomes smaller<br>
-C. Predictions disappear<br>
-D. Variables become missing</p>
+<section id="question-3-7" class="level2">
+<h2 class="anchored" data-anchor-id="question-3-7">Question 3</h2>
+<p>Should future data influence model training?</p>
+<p>A. Yes<br>
+B. No</p>
 <hr>
 </section>
 <section id="question-4" class="level2">
 <h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
-<p>Does high prediction accuracy automatically imply good economic theory?</p>
+<p>Do forecasts produce certainty?</p>
 <p>A. Yes<br>
 B. No</p>
 <hr>
@@ -697,9 +728,9 @@ B. No</p>
 <li>Save notebook properly.</li>
 <li>Rename notebook using:</li>
 </ol>
-<pre class="text"><code>Week08_IndexNumber_Name.ipynb</code></pre>
+<pre class="text"><code>Week11_IndexNumber_Name.ipynb</code></pre>
 <p>Example:</p>
-<pre class="text"><code>Week08_2024BA12345_Perera.ipynb</code></pre>
+<pre class="text"><code>Week11_2024BA12345_Perera.ipynb</code></pre>
 <ol start="3" type="1">
 <li>Set notebook sharing to:</li>
 </ol>
@@ -719,35 +750,35 @@ B. No</p>
 </section>
 <section id="common-errors" class="level1">
 <h1>Common Errors</h1>
-<section id="problem-1-data-leakage" class="level2">
-<h2 class="anchored" data-anchor-id="problem-1-data-leakage">Problem 1 — Data Leakage</h2>
-<p>Using testing data during training produces misleadingly high performance.</p>
+<section id="problem-1-random-train-test-splits" class="level2">
+<h2 class="anchored" data-anchor-id="problem-1-random-train-test-splits">Problem 1 — Random Train-Test Splits</h2>
+<p>Time series forecasting must preserve chronological order.</p>
 <hr>
 </section>
-<section id="problem-2-blind-trust-in-accuracy" class="level2">
-<h2 class="anchored" data-anchor-id="problem-2-blind-trust-in-accuracy">Problem 2 — Blind Trust in Accuracy</h2>
-<p>High prediction accuracy does NOT automatically imply:</p>
+<section id="problem-2-blind-trust-in-forecasts" class="level2">
+<h2 class="anchored" data-anchor-id="problem-2-blind-trust-in-forecasts">Problem 2 — Blind Trust in Forecasts</h2>
+<p>Forecasts are uncertain estimates, not certainty.</p>
+<hr>
+</section>
+<section id="problem-3-ignoring-structural-breaks" class="level2">
+<h2 class="anchored" data-anchor-id="problem-3-ignoring-structural-breaks">Problem 3 — Ignoring Structural Breaks</h2>
+<p>Forecasting models often fail during:</p>
 <ul>
-<li>causality</li>
-<li>fairness</li>
-<li>robustness</li>
+<li>crises</li>
+<li>wars</li>
+<li>pandemics</li>
+<li>policy regime changes</li>
 </ul>
 <hr>
 </section>
-<section id="problem-3-ignoring-economic-interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="problem-3-ignoring-economic-interpretation">Problem 3 — Ignoring Economic Interpretation</h2>
-<p>Machine learning identifies patterns.</p>
-<p>It does NOT automatically explain economic mechanisms.</p>
+<section id="problem-4-overcomplicated-models" class="level2">
+<h2 class="anchored" data-anchor-id="problem-4-overcomplicated-models">Problem 4 — Overcomplicated Models</h2>
+<p>Complex models may overfit historical patterns.</p>
 <hr>
 </section>
-<section id="problem-4-overfitting" class="level2">
-<h2 class="anchored" data-anchor-id="problem-4-overfitting">Problem 4 — Overfitting</h2>
-<p>Very complex models may perform well in training but fail in real-world prediction.</p>
-<hr>
-</section>
-<section id="problem-5-weak-features" class="level2">
-<h2 class="anchored" data-anchor-id="problem-5-weak-features">Problem 5 — Weak Features</h2>
-<p>Poor input variables produce poor predictions.</p>
+<section id="problem-5-misinterpreting-low-forecast-error" class="level2">
+<h2 class="anchored" data-anchor-id="problem-5-misinterpreting-low-forecast-error">Problem 5 — Misinterpreting Low Forecast Error</h2>
+<p>Good historical performance does NOT guarantee future success.</p>
 <hr>
 </section>
 </section>

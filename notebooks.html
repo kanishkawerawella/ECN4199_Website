@@ -239,6 +239,31 @@ ul.task-list li input[type="checkbox"] {
 <td>Introduction to Machine Learning for Economics</td>
 <td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week8/ECN4199_Week8_Live_Notebook.ipynb">Open Notebook</a></td>
 </tr>
+<tr class="odd">
+<td>Week 9</td>
+<td>Classification Models and Economic Decision Systems</td>
+<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week9/ECN4199_Week9_Live_Notebook.ipynb">Open Notebook</a></td>
+</tr>
+<tr class="even">
+<td>Week 10</td>
+<td>Clustering, Segmentation, and Unsupervised Learning</td>
+<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week10/ECN4199_Week10_Live_Notebook.ipynb">Open Notebook</a></td>
+</tr>
+<tr class="odd">
+<td>Week 11</td>
+<td>Forecasting Economic and Business Trends</td>
+<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week11/ECN4199_Week11_Live_Notebook.ipynb">Open Notebook</a></td>
+</tr>
+<tr class="even">
+<td>Week 12</td>
+<td>Text Analytics, NLP, and Generative AI</td>
+<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week12/ECN4199_Week12_Live_Notebook.ipynb">Open Notebook</a></td>
+</tr>
+<tr class="odd">
+<td>Week 13</td>
+<td>Capstone Integration and Economic Intelligence</td>
+<td><a href="https://colab.research.google.com/github/kanishkawerawella/ECN4199_Website/blob/main/notebooks/week13/ECN4199_Week13_Live_Notebook.ipynb">Open Notebook</a></td>
+</tr>
 </tbody>
 </table>
 <hr>
@@ -369,7 +394,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/kanishkawerawella\.github\.io\/ECN4199_Website\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
